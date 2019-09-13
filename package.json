@@ -1,0 +1,26 @@
+{
+  "name": "@platform-coop-toolkit/styleguide",
+  "version": "1.0.0",
+  "description": "Styleguide and pattern library for the Platform Cooperativism Consortium and the Platform Co-op Resource Library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platform-coop-toolkit/styleguide.git"
+  },
+  "keywords": [
+    "styleguide",
+    "pattern-library"
+  ],
+  "author": "OCAD University",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/platform-coop-toolkit/styleguide/issues"
+  },
+  "homepage": "https://github.com/platform-coop-toolkit/styleguide#readme",
+  "dependencies": {
+    "@frctl/fractal": "^1.2.0"
+  }
+}
