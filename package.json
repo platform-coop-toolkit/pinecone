@@ -44,6 +44,9 @@
       "eslint"
     ]
   },
+  "engines": {
+    "node": ">=10.16.3"
+  },
   "dependencies": {
     "@frctl/fractal": "^1.2.0"
   },
