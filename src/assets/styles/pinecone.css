@@ -1,6 +1,4 @@
-:root {
-	--font-family-sans: "Noto Sans", sans-serif;
-}
+@import "common/_properties.css";
 
 body {
 	font-family: var(--font-family-sans);
