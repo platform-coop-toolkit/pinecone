@@ -1,3 +1,9 @@
 :root {
 	--font-family-sans: "Noto Sans", sans-serif;
+	--font-family-serif: "Noto Serif", sans-serif;
+	--font-size-base: 1rem;
+
+	--line-height-base: calc(26 / 16);
+
+	--spacing-30: calc(30 / 16 * 1rem);
 }
