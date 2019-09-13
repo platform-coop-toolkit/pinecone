@@ -4,6 +4,8 @@
   "description": "Styleguide and pattern library for the Platform Cooperativism Consortium and the Platform Co-op Resource Library.",
   "main": "index.js",
   "scripts": {
+    "build": "fractal build",
+    "start": "fractal start --sync",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +24,8 @@
   "homepage": "https://github.com/platform-coop-toolkit/styleguide#readme",
   "dependencies": {
     "@frctl/fractal": "^1.2.0"
+  },
+  "devDependencies": {
+    "laravel-mix": "^4.1.4"
   }
 }
