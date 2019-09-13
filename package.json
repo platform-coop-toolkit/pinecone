@@ -12,7 +12,10 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build": "fractal build",
     "start": "fractal start --sync",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:css": "stylelint src/assets/styles",
+    "lint:js": "eslint src/assets/scripts",
+    "lint": "npm run lint:css && npm run lint:js",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -28,10 +31,35 @@
     "url": "https://github.com/platform-coop-toolkit/styleguide/issues"
   },
   "homepage": "https://github.com/platform-coop-toolkit/styleguide#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/assets/styles/**/*.css": [
+      "stylelint"
+    ],
+    "src/assets/scripts/**/*.js": [
+      "eslint"
+    ]
+  },
   "dependencies": {
-    "@frctl/fractal": "^1.2.0",
+    "@frctl/fractal": "^1.2.0"
+  },
+  "devDependencies": {
+    "@10up/eslint-config": "^1.0.9",
+    "@10up/stylelint-config": "^1.0.7",
+    "babel-eslint": "^10.0.3",
     "cross-env": "^5.2.1",
+    "eslint": "^6.3.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.3",
     "laravel-mix": "^4.1.4",
+    "stylelint": "^10.1.0",
+    "stylelint-config-wordpress": "^14.0.0",
+    "stylelint-declaration-use-variable": "^1.7.0",
+    "stylelint-order": "^3.1.0",
     "vue-template-compiler": "^2.6.10"
   }
 }
