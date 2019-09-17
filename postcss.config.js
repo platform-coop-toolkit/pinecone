@@ -8,6 +8,7 @@ module.exports = {
 			preserve: false,
 		},
 		'postcss-calc': {},
+		'postcss-nested': {},
 		autoprefixer: true
 	}
 };
