@@ -89,3 +89,11 @@
 .has-off-white-background {
 	background: var(--off-white);
 }
+
+/*
+@each color in colors {
+	.has-#{color}-background {
+		background: var(--#{color});
+	}
+}
+*/
