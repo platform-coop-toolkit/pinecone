@@ -1,0 +1,39 @@
+<style>
+	.color {
+		display: inline-block;
+		height: 6rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		margin-bottom: 2rem;
+		width: 6rem;
+		border-radius: 50%;
+	}
+
+</style>
+<div class="colors">
+	<div>
+		{{#each colors.blues}}
+		<div class="color has-{{ this }}-background"></div>
+		{{/each}}
+	</div>
+	<div>
+		{{#each colors.greens}}
+		<div class="color has-{{ this }}-background"></div>
+		{{/each}}
+	</div>
+	<div>
+		{{#each colors.reds}}
+		<div class="color has-{{ this }}-background"></div>
+		{{/each}}
+	</div>
+	<div>
+		{{#each colors.yellows}}
+		<div class="color has-{{ this }}-background"></div>
+		{{/each}}
+	</div>
+	<div>
+		{{#each colors.shades}}
+		<div class="color has-{{ this }}-background"></div>
+		{{/each}}
+	</div>
+</div>

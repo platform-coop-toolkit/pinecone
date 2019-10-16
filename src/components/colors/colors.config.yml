@@ -1,0 +1,32 @@
+title: Colors
+status: wip
+context:
+  colors:
+    blues:
+      - primary
+      - pale-blue
+      - blue-1
+      - blue-2
+      - blue-3
+      - blue-4
+    greens:
+      - green-1
+      - green-2
+      - green-3
+      - green-4
+    reds:
+      - red-1
+      - red-2
+      - red-3
+      - red-4
+    yellows:
+      - yellow-1
+      - yellow-2
+    shades:
+      - dark-mint-1
+      - dark-mint-2
+      - grey-1
+      - grey-2
+      - grey-3
+      - grey-4
+      - off-white

@@ -1,0 +1,91 @@
+.has-primary-background {
+	background: var(--primary);
+}
+
+.has-pale-blue-background {
+	background: var(--pale-blue);
+}
+
+.has-blue-1-background {
+	background: var(--blue-1);
+}
+
+.has-blue-2-background {
+	background: var(--blue-2);
+}
+
+.has-blue-3-background {
+	background: var(--blue-3);
+}
+
+.has-blue-4-background {
+	background: var(--blue-4);
+}
+
+.has-green-1-background {
+	background: var(--green-1);
+}
+
+.has-green-2-background {
+	background: var(--green-2);
+}
+
+.has-green-3-background {
+	background: var(--green-3);
+}
+
+.has-green-4-background {
+	background: var(--green-4);
+}
+
+.has-red-1-background {
+	background: var(--red-1);
+}
+
+.has-red-2-background {
+	background: var(--red-2);
+}
+
+.has-red-3-background {
+	background: var(--red-3);
+}
+
+.has-red-4-background {
+	background: var(--red-4);
+}
+
+.has-yellow-1-background {
+	background: var(--yellow-1);
+}
+
+.has-yellow-2-background {
+	background: var(--yellow-2);
+}
+
+.has-dark-mint-1-background {
+	background: var(--dark-mint-1);
+}
+
+.has-dark-mint-2-background {
+	background: var(--dark-mint-2);
+}
+
+.has-grey-1-background {
+	background: var(--grey-1);
+}
+
+.has-grey-2-background {
+	background: var(--grey-2);
+}
+
+.has-grey-3-background {
+	background: var(--grey-3);
+}
+
+.has-grey-4-background {
+	background: var(--grey-4);
+}
+
+.has-off-white-background {
+	background: var(--off-white);
+}

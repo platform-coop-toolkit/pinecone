@@ -10,4 +10,29 @@
 
 	/* Spacing */
 	--spacing-30: calc(30 / 16 * 1rem);
+
+	/* Colors */
+	--primary: #16605d;
+	--pale-blue: #e3eae8;
+	--blue-1: #c5fdf9;
+	--blue-2: #30cfc9;
+	--blue-3: #1d7c79;
+	--blue-4: #18514f;
+	--green-1: #076431;
+	--green-2: #0b8441;
+	--green-3: #45d385;
+	--green-4: #c9f8db;
+	--red-1: #973102;
+	--red-2: #ff621a;
+	--red-3: #ffa47a;
+	--red-4: #fdc2a7;
+	--yellow-1: #face00;
+	--yellow-2: #fceeb0;
+	--dark-mint-1: #203131;
+	--dark-mint-2: #294040;
+	--grey-1: #585850;
+	--grey-2: #b2b2a7;
+	--grey-3: #d5d5cf;
+	--grey-4: #f0efef;
+	--off-white: #f9f9f7;
 }
