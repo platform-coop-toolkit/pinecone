@@ -39,3 +39,20 @@
 	--white: #fff;
 	--black: #000;
 }
+
+$colors-light: blue-300, blue-200, blue-100, green-300, green-200, red-400,
+	red-300, red-200, yellow-500, yellow-400, grey-400, grey-300, grey-200,
+	off-white;
+$colors-dark: blue-700, blue-600, blue-500, blue-400, green-500, green-400,
+	red-500, dark-mint-500, dark-mint-400, grey-500;
+
+// Responsive Breakpoints, shamelessy cribbed from Bootstrap.
+// @see https://github.com/twbs/bootstrap/blob/master/scss/mixins/_breakpoints.scss
+
+$breakpoints: (
+	xs: 0,
+	sm: 600px,
+	md: 960px,
+	lg: 1280px,
+	xl: 1920px
+);
