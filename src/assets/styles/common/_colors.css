@@ -1,97 +1,125 @@
-.has-primary-background {
-	background: var(--primary);
+.has-blue-500-background {
+	background: var(--blue-500);
+	color: var(--white);
 }
 
-.has-pale-blue-background {
-	background: var(--pale-blue);
+.has-blue-700-background {
+	background: var(--blue-700);
+	color: var(--white);
 }
 
-.has-blue-1-background {
-	background: var(--blue-1);
+.has-blue-600-background {
+	background: var(--blue-600);
+	color: var(--white);
 }
 
-.has-blue-2-background {
-	background: var(--blue-2);
+.has-blue-400-background {
+	background: var(--blue-400);
+	color: var(--white);
 }
 
-.has-blue-3-background {
-	background: var(--blue-3);
+.has-blue-300-background {
+	background: var(--blue-300);
+	color: var(--black);
 }
 
-.has-blue-4-background {
-	background: var(--blue-4);
+.has-blue-200-background {
+	background: var(--blue-200);
+	color: var(--black);
 }
 
-.has-green-1-background {
-	background: var(--green-1);
+.has-blue-100-background {
+	background: var(--blue-100);
+	color: var(--black);
 }
 
-.has-green-2-background {
-	background: var(--green-2);
+.has-green-500-background {
+	background: var(--green-500);
+	color: var(--white);
 }
 
-.has-green-3-background {
-	background: var(--green-3);
+.has-green-400-background {
+	background: var(--green-400);
+	color: var(--white);
 }
 
-.has-green-4-background {
-	background: var(--green-4);
+.has-green-300-background {
+	background: var(--green-300);
+	color: var(--black);
 }
 
-.has-red-1-background {
-	background: var(--red-1);
+.has-green-200-background {
+	background: var(--green-200);
+	color: var(--black);
 }
 
-.has-red-2-background {
-	background: var(--red-2);
+.has-red-500-background {
+	background: var(--red-500);
+	color: var(--white);
 }
 
-.has-red-3-background {
-	background: var(--red-3);
+.has-red-400-background {
+	background: var(--red-400);
+	color: var(--black);
 }
 
-.has-red-4-background {
-	background: var(--red-4);
+.has-red-300-background {
+	background: var(--red-300);
+	color: var(--black);
 }
 
-.has-yellow-1-background {
-	background: var(--yellow-1);
+.has-red-200-background {
+	background: var(--red-200);
+	color: var(--black);
 }
 
-.has-yellow-2-background {
-	background: var(--yellow-2);
+.has-yellow-500-background {
+	background: var(--yellow-500);
+	color: var(--black);
 }
 
-.has-dark-mint-1-background {
-	background: var(--dark-mint-1);
+.has-yellow-400-background {
+	background: var(--yellow-400);
+	color: var(--black);
 }
 
-.has-dark-mint-2-background {
-	background: var(--dark-mint-2);
+.has-dark-mint-500-background {
+	background: var(--dark-mint-500);
+	color: var(--white);
 }
 
-.has-grey-1-background {
-	background: var(--grey-1);
+.has-dark-mint-400-background {
+	background: var(--dark-mint-400);
+	color: var(--white);
 }
 
-.has-grey-2-background {
-	background: var(--grey-2);
+.has-grey-500-background {
+	background: var(--grey-500);
+	color: var(--white);
 }
 
-.has-grey-3-background {
-	background: var(--grey-3);
+.has-grey-400-background {
+	background: var(--grey-400);
+	color: var(--black);
 }
 
-.has-grey-4-background {
-	background: var(--grey-4);
+.has-grey-300-background {
+	background: var(--grey-300);
+	color: var(--black);
+}
+
+.has-grey-200-background {
+	background: var(--grey-200);
+	color: var(--black);
 }
 
 .has-off-white-background {
 	background: var(--off-white);
+	color: var(--black);
 }
 
 /*
-@each color in colors {
+@each $color in $colors {
 	.has-#{color}-background {
 		background: var(--#{color});
 	}

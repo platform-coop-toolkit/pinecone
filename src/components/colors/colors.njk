@@ -1,0 +1,128 @@
+<style>
+	.colors > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.colors h2 {
+		text-align: center;
+	}
+
+	.colors > div + div {
+		margin-top: 1.5rem;
+	}
+
+	.color {
+		align-items: center;
+		display: inline-flex;
+		height: 6rem;
+		justify-content: center;
+		margin-right: 0;
+		margin-bottom: 5rem;
+		position: relative;
+		width: 6rem;
+		border-radius: 50%;
+	}
+
+	.contrast {
+		font-family: "Noto Sans", sans-serif;
+		text-transform: uppercase;
+	}
+
+	.caption {
+		color: black;
+		font-family: "Noto Sans", sans-serif;
+		font-size: 0.75rem;
+		position: absolute;
+		bottom: -4rem;
+	}
+
+	@media screen and (min-width: 40rem) {
+		.colors > div {
+			display: block;
+		}
+
+		.colors h2 {
+			text-align: left;
+		}
+
+		.color {
+			margin-right: 2rem;
+		}
+	}
+</style>
+<div class="colors">
+	<div>
+		<h2>Brand</h2>
+		{% for this in colors.brand %}
+			<div class="color has-{{ this.color }}-background">
+				<span class="contrast">{{ this.contrast }}</span>
+				<p class="caption">
+					<strong>{{ this.color | replace("-", " ") | capitalize }}</strong><br/>
+					{{ this.hex }}
+				</p>
+			</div>
+		{% endfor %}
+	</div>
+	<div>
+		<h2>Blues</h2>
+		{% for this in colors.blues %}
+			<div class="color has-{{ this.color }}-background">
+				<span class="contrast">{{ this.contrast }}</span>
+				<p class="caption">
+					<strong>{{ this.color | replace("-", " ") | capitalize }}</strong><br/>
+					{{ this.hex }}
+				</p>
+			</div>
+		{% endfor %}
+	</div>
+	<div>
+		<h2>Greens</h2>
+		{% for this in colors.greens %}
+			<div class="color has-{{ this.color }}-background">
+				<span class="contrast">{{ this.contrast }}</span>
+				<p class="caption">
+					<strong>{{ this.color | replace("-", " ") | capitalize }}</strong><br/>
+					{{ this.hex }}
+				</p>
+			</div>
+		{% endfor %}
+	</div>
+	<div>
+		<h2>Reds</h2>
+		{% for this in colors.reds %}
+			<div class="color has-{{ this.color }}-background">
+				<span class="contrast">{{ this.contrast }}</span>
+				<p class="caption">
+					<strong>{{ this.color | replace("-", " ") | capitalize }}</strong><br/>
+					{{ this.hex }}
+				</p>
+			</div>
+		{% endfor %}
+	</div>
+	<div>
+		<h2>Yellows</h2>
+		{% for this in colors.yellows %}
+			<div class="color has-{{ this.color }}-background">
+				<span class="contrast">{{ this.contrast }}</span>
+				<p class="caption">
+					<strong>{{ this.color | replace("-", " ") | capitalize }}</strong><br/>
+					{{ this.hex }}
+				</p>
+			</div>
+		{% endfor %}
+	</div>
+	<div>
+		<h2>Shades</h2>
+		{% for this in colors.shades %}
+			<div class="color has-{{ this.color }}-background">
+				<span class="contrast">{{ this.contrast }}</span>
+				<p class="caption">
+					<strong>{{ this.color | replace("-", " ") | capitalize }}</strong><br/>
+					{{ this.hex }}
+				</p>
+			</div>
+		{% endfor %}
+	</div>
+</div>

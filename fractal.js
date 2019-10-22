@@ -9,7 +9,6 @@ const path = require( 'path' );
  * Require the Fractal module
  */
 const fractal = module.exports = require( '@frctl/fractal' ).create();
-
 /*
  * Give your project a title.
  */
@@ -20,6 +19,8 @@ fractal.set( 'project.author', 'OCAD University' );
 /*
  * Tell Fractal where to look for components.
  */
+fractal.components.engine( '@frctl/nunjucks' );
+fractal.components.set( 'ext', '.njk' );
 fractal.components.set( 'path', path.join( __dirname, 'src/components' ) );
 
 /*
