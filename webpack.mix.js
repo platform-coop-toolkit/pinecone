@@ -1,7 +1,5 @@
 const mix = require( 'laravel-mix' );
-require( 'laravel-mix-postcss-config' );
 
 mix.setPublicPath( 'public' )
-	.postCss( 'src/assets/styles/pinecone.css', 'public/styles/pinecone.css' )
-	.postCssConfig()
+	.sass( 'src/assets/styles/pinecone.scss', 'public/styles/' )
 	.js( 'src/assets/scripts/pinecone.js', 'public/scripts/pinecone.js' );

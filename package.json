@@ -12,9 +12,9 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build": "fractal build",
     "start": "fractal start --sync",
-    "lint:css": "stylelint src/assets/styles",
+    "lint:styles": "stylelint src/assets/styles",
     "lint:js": "eslint *.js src/assets/scripts",
-    "lint": "npm run lint:css && npm run lint:js",
+    "lint": "npm run lint:styles && npm run lint:js",
     "test": "npm run lint"
   },
   "repository": {
@@ -37,7 +37,7 @@
     }
   },
   "lint-staged": {
-    "src/assets/styles/**/*.css": [
+    "src/assets/styles/**/*.scss": [
       "stylelint"
     ],
     "src/assets/scripts/**/*.js": [
@@ -53,21 +53,15 @@
   },
   "devDependencies": {
     "@10up/eslint-config": "^1.0.9",
-    "@10up/stylelint-config": "^1.0.7",
     "babel-eslint": "^10.0.3",
     "cross-env": "^6.0.3",
     "eslint": "^6.5.1",
     "husky": "^3.0.9",
     "laravel-mix": "^4.1.4",
-    "laravel-mix-postcss-config": "^1.0.2",
     "lint-staged": "^9.4.2",
-    "postcss-calc": "^7.0.1",
-    "postcss-custom-media": "^7.0.8",
-    "postcss-custom-properties": "^9.0.2",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.1.2",
-    "postcss-partial-import": "^4.1.0",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.23.0",
+    "sass-loader": "^7.3.1",
     "stylelint": "^11.1.1",
     "stylelint-config-wordpress": "^15.0.0",
     "stylelint-declaration-use-variable": "^1.7.0",
