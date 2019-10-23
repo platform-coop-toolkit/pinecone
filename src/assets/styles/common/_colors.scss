@@ -1,4 +1,4 @@
-.has-blue-500-background {
+/* .has-blue-500-background {
 	background: var(--blue-500);
 	color: var(--white);
 }
@@ -116,12 +116,24 @@
 .has-off-white-background {
 	background: var(--off-white);
 	color: var(--black);
-}
+} */
 
-/*
-@each $color in $colors {
-	.has-#{color}-background {
-		background: var(--#{color});
+$colors-light: blue-300, blue-200, blue-100, green-300, green-200, red-400,
+	red-300, red-200, yellow-500, yellow-400, grey-400, grey-300, grey-200,
+	off-white;
+$colors-dark: blue-700, blue-600, blue-500, blue-400, green-500, green-400,
+	red-500, dark-mint-500, dark-mint-400, grey-500;
+
+@each $color in $colors-light {
+	.has-#{$color}-background {
+		background: var(--#{$color});
+		color: var(--black);
 	}
 }
-*/
+
+@each $color in $colors-dark {
+	.has-#{$color}-background {
+		background: var(--#{$color});
+		color: var(--white);
+	}
+}
