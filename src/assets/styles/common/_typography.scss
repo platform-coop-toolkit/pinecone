@@ -1,8 +1,11 @@
+// Headings
+
 h1,
 h2,
 h3,
 h4 {
 	margin-bottom: 0;
+	margin-top: 0;
 }
 
 h1 {
@@ -37,8 +40,83 @@ h4 strong {
 	font-weight: 600;
 }
 
+// Paragraphs
+
 p {
 	line-height: (24 / 16);
+}
+
+p strong {
+	font-weight: 600;
+}
+
+p small {
+	font-size: rem(14);
+	line-height: (20 / 14);
+}
+
+// Blockquotes
+
+blockquote {
+	font-family: var(--font-family-sans);
+	font-size: rem(20);
+	font-style: italic;
+	font-weight: 600;
+	margin-left: rem(48);
+	margin-right: rem(48);
+}
+
+blockquote::before {
+	color: var(--blue-400);
+	content: "“";
+	font-family: var(--font-family-serif);
+	font-size: rem(64);
+	margin-left: rem(-48);
+	margin-top: rem(-12);
+	position: absolute;
+}
+
+blockquote cite {
+	font-style: normal;
+}
+
+blockquote cite::before {
+	content: "— ";
+}
+
+// Lists
+
+ol,
+ul {
+	counter-reset: list-counter;
+	padding-left: 0;
+}
+
+li {
+	counter-increment: list-counter;
+	margin-bottom: 0;
+}
+
+li::marker {
+	color: var(--grey-500);
+}
+
+// Vertical Spacing
+
+* + h1 {
+	margin-top: rem(128);
+}
+
+* + h2 {
+	margin-top: rem(96);
+}
+
+* + h3 {
+	margin-top: rem(56);
+}
+
+* + h4 {
+	margin-top: rem(48);
 }
 
 h1 + h2 {
@@ -53,6 +131,10 @@ h3 + h4 {
 	margin-top: rem(28);
 }
 
+h1 + * {
+	margin-top: rem(24);
+}
+
 * + p,
 * + ul,
 * + ol {
@@ -60,12 +142,14 @@ h3 + h4 {
 	margin-top: rem(24);
 }
 
+h1 + *,
 h1 + p,
 h1 + ul,
 h1 + ol {
 	margin-top: rem(56);
 }
 
+h2 + *,
 h2 + p,
 h2 + ul,
 h2 + ol {
@@ -82,15 +166,13 @@ blockquote + ol {
 	margin-top: rem(48);
 }
 
-li {
-	margin-bottom: 0;
-}
-
 li + li {
 	margin-top: rem(24);
 }
 
 @include breakpoint-up(sm) {
+	// Headings
+
 	h1 {
 		font-size: rem(48);
 		line-height: (60 / 48);
@@ -113,6 +195,8 @@ li + li {
 }
 
 @include breakpoint-up(md) {
+	// Headings
+
 	h1 {
 		font-size: rem(60);
 		line-height: (72 / 60);

@@ -1,5 +1,10 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	align-items: center;
+	color: var(--black);
 	display: flex;
 	flex-direction: column;
 	font-family: var(--font-family-serif);
@@ -8,7 +13,13 @@ body {
 }
 
 main {
-	max-width: calc(1160 / 16 * 1rem);
-	padding-left: var(--spacing-30);
-	padding-right: var(--spacing-30);
+	max-width: rem(1160);
+	width: 100%;
+}
+
+.content {
+	margin: 0 auto;
+	max-width: rem(768);
+	padding: rem(30);
+	width: 100%;
 }
