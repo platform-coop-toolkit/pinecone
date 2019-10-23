@@ -1,14 +1,14 @@
 <h1>{{ orderedHeading }}</h1>
 <p>{{ introText }}</p>
 <ol>
-	{% for listItems as listItem %}
+	{% for listItem in listItems %}
 		<li>{{ listItem }}</li>
 	{% endfor %}
 </ol>
 <h1>{{ unorderedHeading }}</h1>
 <p>{{ introText }}</p>
 <ul>
-	{% for listItems as listItem %}
+	{% for listItem in listItems %}
 		<li>{{ listItem }}</li>
 	{% endfor %}
 </ul>
