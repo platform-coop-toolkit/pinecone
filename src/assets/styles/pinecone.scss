@@ -1,6 +1,7 @@
 @import "variables";
-@import "functions";
-@import "mixins";
+@import "functions/calc";
+@import "functions/breakpoints";
+@import "mixins/breakpoints";
 @import "common/global";
 @import "common/colors";
 @import "common/typography";
