@@ -1,0 +1,127 @@
+.has-blue-500-background {
+	background: var(--blue-500);
+	color: var(--white);
+}
+
+.has-blue-700-background {
+	background: var(--blue-700);
+	color: var(--white);
+}
+
+.has-blue-600-background {
+	background: var(--blue-600);
+	color: var(--white);
+}
+
+.has-blue-400-background {
+	background: var(--blue-400);
+	color: var(--white);
+}
+
+.has-blue-300-background {
+	background: var(--blue-300);
+	color: var(--black);
+}
+
+.has-blue-200-background {
+	background: var(--blue-200);
+	color: var(--black);
+}
+
+.has-blue-100-background {
+	background: var(--blue-100);
+	color: var(--black);
+}
+
+.has-green-500-background {
+	background: var(--green-500);
+	color: var(--white);
+}
+
+.has-green-400-background {
+	background: var(--green-400);
+	color: var(--white);
+}
+
+.has-green-300-background {
+	background: var(--green-300);
+	color: var(--black);
+}
+
+.has-green-200-background {
+	background: var(--green-200);
+	color: var(--black);
+}
+
+.has-red-500-background {
+	background: var(--red-500);
+	color: var(--white);
+}
+
+.has-red-400-background {
+	background: var(--red-400);
+	color: var(--black);
+}
+
+.has-red-300-background {
+	background: var(--red-300);
+	color: var(--black);
+}
+
+.has-red-200-background {
+	background: var(--red-200);
+	color: var(--black);
+}
+
+.has-yellow-500-background {
+	background: var(--yellow-500);
+	color: var(--black);
+}
+
+.has-yellow-400-background {
+	background: var(--yellow-400);
+	color: var(--black);
+}
+
+.has-dark-mint-500-background {
+	background: var(--dark-mint-500);
+	color: var(--white);
+}
+
+.has-dark-mint-400-background {
+	background: var(--dark-mint-400);
+	color: var(--white);
+}
+
+.has-grey-500-background {
+	background: var(--grey-500);
+	color: var(--white);
+}
+
+.has-grey-400-background {
+	background: var(--grey-400);
+	color: var(--black);
+}
+
+.has-grey-300-background {
+	background: var(--grey-300);
+	color: var(--black);
+}
+
+.has-grey-200-background {
+	background: var(--grey-200);
+	color: var(--black);
+}
+
+.has-off-white-background {
+	background: var(--off-white);
+	color: var(--black);
+}
+
+/*
+@each $color in $colors {
+	.has-#{color}-background {
+		background: var(--#{color});
+	}
+}
+*/

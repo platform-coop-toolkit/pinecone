@@ -48,7 +48,8 @@
     "node": ">=10.16.3"
   },
   "dependencies": {
-    "@frctl/fractal": "^1.2.0"
+    "@frctl/fractal": "^1.2.0",
+    "@frctl/nunjucks": "^2.0.1"
   },
   "devDependencies": {
     "@10up/eslint-config": "^1.0.9",
