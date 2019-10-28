@@ -4,10 +4,6 @@
 	--font-family-sans: "Noto Sans", sans-serif;
 	--font-family-display: "Noto Sans Display", sans-serif;
 	--font-family-serif: "Noto Serif", sans-serif;
-	--font-weight-normal: 400;
-	--font-weight-semibold: 600;
-	--font-weight-bold: 700;
-	--font-weight-black: 900;
 
 	/* Spacing */
 	--spacing-30: calc(30 / 16 * 1rem);
@@ -40,6 +36,11 @@
 	--white: #fff;
 	--black: var(--dark-mint-500);
 }
+
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
 
 $colors-light: blue-300, blue-200, blue-100, green-300, green-200, red-400,
 	red-300, red-200, yellow-500, yellow-400, grey-400, grey-300, grey-200,
