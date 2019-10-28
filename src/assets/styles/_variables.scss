@@ -2,6 +2,7 @@
 
 	/* Typography */
 	--font-family-sans: "Noto Sans", sans-serif;
+	--font-family-display: "Noto Sans Display", sans-serif;
 	--font-family-serif: "Noto Serif", sans-serif;
 	--font-size-base: 1rem;
 
@@ -37,7 +38,7 @@
 	--grey-200: #f0efef;
 	--off-white: #f9f9f7;
 	--white: #fff;
-	--black: #000;
+	--black: var(--dark-mint-500);
 }
 
 $colors-light: blue-300, blue-200, blue-100, green-300, green-200, red-400,
