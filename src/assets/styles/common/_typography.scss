@@ -167,7 +167,7 @@ blockquote + ol {
 }
 
 li + li {
-	margin-top: rem(24);
+	margin-top: rem(16);
 }
 
 @include breakpoint-up(sm) {
