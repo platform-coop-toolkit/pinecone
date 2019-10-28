@@ -32,12 +32,8 @@ h3 {
 h4 {
 	font-family: var(--font-family-sans);
 	font-size: rem(20);
-	font-weight: 400;
-	line-height: (32 / 20);
-}
-
-h4 strong {
 	font-weight: 600;
+	line-height: (32 / 20);
 }
 
 // Paragraphs
