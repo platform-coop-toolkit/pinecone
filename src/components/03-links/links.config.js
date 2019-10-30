@@ -38,6 +38,7 @@ module.exports = {
 				label: 'White Call to Action',
 				class: 'is-style-white'
 			}
-		]
+		],
+		anchorText: 'Here is the anchor linked from above.'
 	}
 };

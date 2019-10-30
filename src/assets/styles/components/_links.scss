@@ -81,3 +81,7 @@ a:not([class]) {
 		}
 	}
 }
+
+a:empty::after {
+	display: none;
+}
