@@ -8,9 +8,28 @@ a:not([class]) {
 	padding-top: rem(4);
 	text-decoration: none;
 
+	@supports (mask: url("icon.svg")) {
+		&::after {
+			background: var(--blue-500);
+			content: "";
+			display: inline-block;
+			height: 1em;
+			margin-bottom: rem(-3);
+			margin-left: rem(2);
+			mask: url("../../images/chevron-e.svg") no-repeat center;
+			width: 0.6em;
+		}
+	}
+
 	&:visited {
 		border-bottom-color: var(--green-400);
 		color: var(--green-400);
+
+		@supports (mask: url("icon.svg")) {
+			&::after {
+				background: var(--green-400);
+			}
+		}
 	}
 
 	&:hover {
@@ -22,6 +41,12 @@ a:not([class]) {
 		border-bottom-color: var(--blue-400);
 		border-bottom-width: 1px;
 		color: var(--blue-400);
+
+		@supports (mask: url("icon.svg")) {
+			&::after {
+				background: var(--blue-400);
+			}
+		}
 	}
 
 	&:focus {
@@ -30,5 +55,29 @@ a:not([class]) {
 		border-bottom-width: 1px;
 		color: var(--white);
 		outline: none;
+
+		@supports (mask: url("icon.svg")) {
+			&::after {
+				background: var(--white);
+			}
+		}
+	}
+
+	@supports (mask: url("icon.svg")) {
+		&[rel="external"] {
+			&::after {
+				mask-image: url("../../images/arrow-s.svg");
+
+				width: 1em;
+			}
+		}
+
+		&[href^="#"] {
+			&::after {
+				mask-image: url("../../images/arrow-ne.svg");
+
+				width: 1em;
+			}
+		}
 	}
 }

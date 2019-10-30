@@ -1,0 +1,109 @@
+.wp-block-button__link,
+[type="submit"] {
+	background: var(--blue-500);
+	border: solid 1px transparent;
+	border-radius: rem(3);
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	font-family: var(--font-family-sans);
+	font-weight: $font-weight-semibold;
+	height: rem(38);
+	justify-content: center;
+	max-width: rem(266);
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+
+	&:visited {
+		background: var(--green-400);
+	}
+
+	&:hover {
+		background: var(--blue-700);
+	}
+
+	&:active {
+		background: var(--blue-400);
+	}
+
+	&:focus {
+		background: var(--blue-700);
+		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-700);
+		outline: none;
+	}
+}
+
+.is-style-secondary .wp-block-button__link {
+	background: var(--yellow-500);
+	color: var(--dark-mint-500);
+
+	&:visited {
+		background: var(--yellow-400);
+	}
+
+	&:hover {
+		background: var(--yellow-600);
+	}
+
+	&:active {
+		background: var(--yellow-400);
+	}
+
+	&:focus {
+		background: var(--yellow-600);
+		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--yellow-600);
+	}
+}
+
+/* stylelint-disable no-descending-specificity */
+.is-style-off-white .wp-block-button__link {
+	/* stylelint-enable */
+	background: var(--off-white);
+	border-color: var(--blue-500);
+	color: var(--blue-500);
+
+	&:visited {
+		border-color: var(--green-400);
+	}
+
+	&:hover {
+		background: var(--grey-200);
+	}
+
+	&:active {
+		background: var(--white);
+	}
+
+	&:focus {
+		background: var(--grey-200);
+		border-width: 2px;
+		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-500);
+	}
+}
+
+/* stylelint-disable no-descending-specificity */
+.is-style-white .wp-block-button__link {
+	/* stylelint-enable */
+	background: var(--white);
+	border-color: var(--blue-500);
+	color: var(--blue-500);
+
+	&:visited {
+		border-color: var(--green-400);
+	}
+
+	&:hover {
+		background: var(--grey-200);
+	}
+
+	&:active {
+		background: var(--white);
+	}
+
+	&:focus {
+		background: var(--grey-200);
+		border-width: 2px;
+		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-500);
+	}
+}

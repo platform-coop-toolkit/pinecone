@@ -88,6 +88,11 @@ module.exports = {
 			],
 			yellows: [
 				{
+					color: 'yellow-600',
+					contrast: 'aa',
+					hex: '#e8aa00'
+				},
+				{
 					color: 'yellow-500',
 					contrast: 'aaa',
 					hex: '#face00'
