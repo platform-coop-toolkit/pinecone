@@ -1,11 +1,12 @@
 .wp-block-button__link,
 [type="submit"] {
+	align-items: center;
 	background: var(--blue-500);
 	border: solid 1px transparent;
 	border-radius: rem(3);
 	color: var(--white);
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	font-family: var(--font-family-sans);
 	font-weight: $font-weight-semibold;
 	height: rem(38);
@@ -31,6 +32,14 @@
 		background: var(--blue-700);
 		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-700);
 		outline: none;
+	}
+
+	.icon {
+		margin-left: rem(4);
+
+		path {
+			fill: currentColor;
+		}
 	}
 }
 

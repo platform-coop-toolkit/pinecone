@@ -39,6 +39,24 @@ module.exports = {
 				class: 'is-style-white'
 			}
 		],
+		ctaIconTitle: 'Calls to Action with Icons',
+		ctaIconVariants: [
+			{
+				label: 'Primary Call to Action'
+			},
+			{
+				label: 'Secondary Call to Action',
+				class: 'is-style-secondary'
+			},
+			{
+				label: 'Off White Call to Action',
+				class: 'is-style-off-white'
+			},
+			{
+				label: 'White Call to Action',
+				class: 'is-style-white'
+			}
+		],
 		anchorText: 'Here is the anchor linked from above.'
 	}
 };

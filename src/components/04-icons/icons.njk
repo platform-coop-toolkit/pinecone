@@ -1,0 +1,44 @@
+<style>
+	.icons {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 0.75rem;
+	}
+
+	.icon {
+		margin: 0.75rem;
+	}
+
+	.icons.has-blue-500-color .icon path {
+		fill: var(--blue-500);
+	}
+
+	.icons.has-dark-mint-500-background-color .icon path {
+		fill: var(--white);
+	}
+</style>
+<h1>{{ iconsTitle }}</h1>
+<div class="icons">
+	{% for icon in icons %}
+		<svg class="icon icon--{{ icon }}">
+			<use xlink:href="/images/{{ icon }}.svg"/>
+		</svg>
+	{% endfor %}
+</div>
+<div class="icons has-blue-500-color">
+	{% for icon in icons %}
+		<svg class="icon icon--{{ icon }}">
+			<use xlink:href="/images/{{ icon }}.svg"/>
+		</svg>
+	{% endfor %}
+</div>
+
+<div class="icons has-dark-mint-500-background-color">
+	{% for icon in icons %}
+		<svg class="icon icon--{{ icon }}">
+			<use xlink:href="/images/{{ icon }}.svg"/>
+		</svg>
+	{% endfor %}
+</div>
