@@ -1,4 +1,5 @@
 a:not([class]) {
+	// TODO: Use text-decoration properties
 	border-bottom: solid 1px var(--blue-500);
 	color: var(--blue-500);
 	display: inline-block;
