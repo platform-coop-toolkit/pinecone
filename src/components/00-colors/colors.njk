@@ -1,0 +1,81 @@
+<style>
+	.colors {
+		width: 100%;
+	}
+
+	.colors h1 {
+		text-align: center;
+	}
+
+	.group + .group {
+		margin-top: 1.5rem;
+	}
+
+	.color {
+		align-items: center;
+		border-radius: 50%;
+		display: inline-flex;
+		height: 0;
+		justify-content: center;
+		margin-right: 0;
+		margin-bottom: 5rem;
+		padding-top: 100%;
+		position: relative;
+		width: 100%;
+	}
+
+	.contrast {
+		font-family: "Noto Sans", sans-serif;
+		text-transform: uppercase;
+		margin-top: -100%;
+	}
+
+	.caption {
+		color: black;
+		font-family: "Noto Sans", sans-serif;
+		font-size: 0.75rem;
+		position: absolute;
+		bottom: -3rem;
+	}
+
+	.caption strong {
+		text-transform: capitalize;
+	}
+
+	@media screen and (min-width: 37.5rem) {
+		.colors h1 {
+			text-align: left;
+		}
+
+		.palette {
+			display: grid;
+			column-gap: 1.5rem;
+			grid-template-columns: repeat(4, 1fr);
+		}
+</style>
+<div class="colors">
+	{% set colorGroups = [
+		'brand',
+		'blues',
+		'greens',
+		'reds',
+		'yellows',
+		'shades'
+	] %}
+	{% for key in colorGroups %}
+		<div class="group group--{{ key }}">
+			<h1>{{ key | capitalize }}</h1>
+			<div class="palette">
+				{% for this in colors[key] %}
+					<div class="color has-{{ this.color }}-background-color">
+						<span class="contrast">{{ this.contrast }}</span>
+						<p class="caption">
+							<strong>{{ this.color | replace("-", " ") }}</strong><br/>
+							{{ this.hex }}
+						</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endfor %}
+</div>

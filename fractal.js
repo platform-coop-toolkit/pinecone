@@ -28,6 +28,18 @@ fractal.components.set( 'path', path.join( __dirname, 'src/components' ) );
  */
 fractal.docs.set( 'path', path.join( __dirname, 'src/docs' ) );
 
+const mandelbrot = require( '@frctl/mandelbrot' );
+
+// create a new instance with custom config options
+const pineconeTheme = mandelbrot( {
+	styles: [
+		'default',
+		'/styles/mandelbrot.css'
+	]
+} );
+
+fractal.web.theme( pineconeTheme );
+
 /*
  * Tell the Fractal web preview plugin where to look for static assets.
  */

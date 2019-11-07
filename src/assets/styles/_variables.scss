@@ -2,11 +2,8 @@
 
 	/* Typography */
 	--font-family-sans: "Noto Sans", sans-serif;
+	--font-family-display: "Noto Sans Display", sans-serif;
 	--font-family-serif: "Noto Serif", sans-serif;
-	--font-size-base: 1rem;
-
-	/* Line Height */
-	--line-height-base: calc(26 / 16);
 
 	/* Spacing */
 	--spacing-30: calc(30 / 16 * 1rem);
@@ -37,8 +34,13 @@
 	--grey-200: #f0efef;
 	--off-white: #f9f9f7;
 	--white: #fff;
-	--black: #000;
+	--black: var(--dark-mint-500);
 }
+
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
 
 $colors-light: blue-300, blue-200, blue-100, green-300, green-200, red-400,
 	red-300, red-200, yellow-500, yellow-400, grey-400, grey-300, grey-200,
@@ -51,8 +53,8 @@ $colors-dark: blue-700, blue-600, blue-500, blue-400, green-500, green-400,
 
 $breakpoints: (
 	xs: 0,
-	sm: 600px,
-	md: 960px,
-	lg: 1280px,
-	xl: 1920px
+	sm: 600,
+	md: 960,
+	lg: 1280,
+	xl: 1920
 );

@@ -1,8 +1,8 @@
-@mixin breakpoint-up($name, $breakpoints: $gbreakpoints) {
+@mixin breakpoint-up($name, $breakpoints: $breakpoints) {
 	$min: breakpoint-min($name, $breakpoints);
 
 	@if $min {
-		@media (min-width: $min) {
+		@media (min-width: rem($min)) {
 			@content;
 		}
 	} @else {
@@ -14,7 +14,7 @@
 	$max: breakpoint-max($name, $breakpoints);
 
 	@if $max {
-		@media (max-width: $max) {
+		@media (max-width: rem($max)) {
 			@content;
 		}
 	} @else {
@@ -27,7 +27,7 @@
 	$max: breakpoint-max($upper, $breakpoints);
 
 	@if $min != null and $max != null {
-		@media (min-width: $min) and (max-width: $max) {
+		@media (min-width: rem($min)) and (max-width: rem($max)) {
 			@content;
 		}
 	} @else if $max == null {
@@ -46,7 +46,7 @@
 	$max: breakpoint-max($name, $breakpoints);
 
 	@if $min != null and $max != null {
-		@media (min-width: $min) and (max-width: $max) {
+		@media (min-width: rem($min)) and (max-width: rem($max)) {
 			@content;
 		}
 	} @else if $max == null {
