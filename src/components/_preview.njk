@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<link rel="shortcut icon" href="/themes/mandelbrot/favicon.ico" type="image/ico">
 		<link media="all" rel="stylesheet" href="{{ '/styles/pinecone.css' | path }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | path }}">
+		<link rel="icon" type="image/ico" href="{{ '/themes/mandelbrot/favicon.ico' | path }}" >
 		<title>Preview Layout</title>
 	</head>
-
 	<body>
-
 		<main>
 			<div class="content">
 				{{ yield | safe }}
 			</div>
 		</main>
-
 	</body>
-
 </html>

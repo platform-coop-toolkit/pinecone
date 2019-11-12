@@ -1,5 +1,4 @@
 // Headings
-
 h1,
 h2,
 h3,
@@ -38,7 +37,6 @@ h4 {
 }
 
 // Paragraphs
-
 p {
 	line-height: (24 / 16);
 }
@@ -53,7 +51,6 @@ p small {
 }
 
 // Blockquotes
-
 blockquote {
 	margin-left: rem(48);
 	margin-right: rem(48);
@@ -88,7 +85,6 @@ blockquote cite::before {
 }
 
 // Lists
-
 ol,
 ul {
 	counter-reset: list-counter;
@@ -105,7 +101,6 @@ li::marker {
 }
 
 // Vertical Spacing
-
 * + h1 {
 	margin-top: rem(128);
 }
@@ -175,7 +170,6 @@ li + li {
 
 @include breakpoint-up(sm) {
 	// Headings
-
 	h1 {
 		font-size: rem(48);
 		line-height: (60 / 48);
@@ -199,7 +193,6 @@ li + li {
 
 @include breakpoint-up(md) {
 	// Headings
-
 	h1 {
 		font-size: rem(60);
 		line-height: (72 / 60);
