@@ -1,12 +1,14 @@
 a:not([class]) {
-	border-bottom: solid 1px var(--blue-500);
 	color: var(--blue-500);
 	display: inline-block;
 	font-family: var(--font-family-sans);
 	font-weight: $font-weight-semibold;
 	line-height: 1;
 	padding-top: rem(4);
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-color: var(--blue-500);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
 
 	@supports (mask: url("icon.svg")) {
 		&::after {
@@ -17,13 +19,14 @@ a:not([class]) {
 			margin-bottom: rem(-3);
 			margin-left: rem(2);
 			mask: url("../../images/chevron-e.svg") no-repeat center;
+			text-decoration: underline;
 			width: 0.6em;
 		}
 	}
 
 	&:visited {
-		border-bottom-color: var(--green-400);
 		color: var(--green-400);
+		text-decoration-color: var(--green-400);
 
 		@supports (mask: url("icon.svg")) {
 			&::after {
@@ -33,14 +36,13 @@ a:not([class]) {
 	}
 
 	&:hover {
-		border-bottom-color: var(--blue-300);
-		border-bottom-width: 2px;
+		text-decoration-color: var(--blue-300);
+		text-decoration-thickness: 2px;
 	}
 
 	&:active {
-		border-bottom-color: var(--blue-400);
-		border-bottom-width: 1px;
 		color: var(--blue-400);
+		text-decoration-color: var(--blue-400);
 
 		@supports (mask: url("icon.svg")) {
 			&::after {
@@ -51,10 +53,9 @@ a:not([class]) {
 
 	&:focus {
 		background: var(--blue-500);
-		border-bottom-color: var(--blue-500);
-		border-bottom-width: 1px;
 		color: var(--white);
 		outline: none;
+		text-decoration: none;
 
 		@supports (mask: url("icon.svg")) {
 			&::after {
@@ -66,16 +67,14 @@ a:not([class]) {
 	@supports (mask: url("icon.svg")) {
 		&[rel="external"] {
 			&::after {
-				mask-image: url("../../images/arrow-s.svg");
-
+				mask-image: url("../../images/arrow-ne.svg");
 				width: 1em;
 			}
 		}
 
 		&[href^="#"] {
 			&::after {
-				mask-image: url("../../images/arrow-ne.svg");
-
+				mask-image: url("../../images/arrow-s.svg");
 				width: 1em;
 			}
 		}

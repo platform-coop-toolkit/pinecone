@@ -13,8 +13,8 @@ module.exports = {
 				class: 'is-style-grey-400-hairline'
 			},
 			{
-				name: 'Grey 400 Thick',
-				class: 'is-style-grey-400-thick'
+				name: 'Grey 200 Thick',
+				class: 'is-style-grey-200-thick'
 			},
 			{
 				name: 'Blue 500 Hairline',

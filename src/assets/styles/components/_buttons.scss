@@ -1,17 +1,15 @@
 .wp-block-button__link,
 [type="submit"] {
-	align-items: center;
 	background: var(--blue-500);
 	border: solid 1px transparent;
 	border-radius: rem(3);
 	color: var(--white);
-	display: flex;
-	flex-direction: row;
+	display: block;
 	font-family: var(--font-family-sans);
 	font-weight: $font-weight-semibold;
 	height: rem(38);
-	justify-content: center;
 	max-width: rem(266);
+	padding: rem(7) rem(6) rem(3.5);
 	text-align: center;
 	text-decoration: none;
 	width: 100%;
@@ -86,8 +84,10 @@
 
 	&:focus {
 		background: var(--grey-200);
-		border-width: 2px;
-		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-500);
+		box-shadow:
+			0 0 0 rem(1) var(--blue-500) inset,
+			0 0 0 rem(2) var(--white),
+			0 0 0 rem(4) var(--blue-500);
 	}
 }
 
@@ -112,7 +112,9 @@
 
 	&:focus {
 		background: var(--grey-200);
-		border-width: 2px;
-		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-500);
+		box-shadow:
+			0 0 0 rem(1) var(--blue-500) inset,
+			0 0 0 rem(2) var(--white),
+			0 0 0 rem(4) var(--blue-500);
 	}
 }
