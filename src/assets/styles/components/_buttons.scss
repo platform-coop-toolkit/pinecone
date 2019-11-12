@@ -76,8 +76,10 @@
 
 	&:focus {
 		background: var(--grey-200);
-		border-width: 2px;
-		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-500);
+		box-shadow:
+			0 0 0 rem(1) var(--blue-500) inset,
+			0 0 0 rem(2) var(--white),
+			0 0 0 rem(4) var(--blue-500);
 	}
 }
 
@@ -102,7 +104,9 @@
 
 	&:focus {
 		background: var(--grey-200);
-		border-width: 2px;
-		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-500);
+		box-shadow:
+			0 0 0 rem(1) var(--blue-500) inset,
+			0 0 0 rem(2) var(--white),
+			0 0 0 rem(4) var(--blue-500);
 	}
 }
