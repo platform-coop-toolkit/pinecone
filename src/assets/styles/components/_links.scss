@@ -43,7 +43,6 @@ a:not([class]) {
 	&:active {
 		color: var(--blue-400);
 		text-decoration-color: var(--blue-400);
-		text-decoration-thickness: 1px;
 
 		@supports (mask: url("icon.svg")) {
 			&::after {
