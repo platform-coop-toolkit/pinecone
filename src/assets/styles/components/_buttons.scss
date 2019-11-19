@@ -31,6 +31,14 @@
 		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-700);
 		outline: none;
 	}
+
+	.icon {
+		margin-left: rem(4);
+
+		path {
+			fill: currentColor;
+		}
+	}
 }
 
 .is-style-secondary .wp-block-button__link {
