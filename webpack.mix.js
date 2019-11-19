@@ -5,3 +5,7 @@ mix.setPublicPath( 'public' )
 	.copy( 'src/assets/styles/mandelbrot.css', 'public/styles/' )
 	.sass( 'src/assets/styles/pinecone.scss', 'public/styles/' )
 	.js( 'src/assets/scripts/pinecone.js', 'public/scripts/pinecone.js' );
+
+mix.options( {
+	processCssUrls: false,
+} );

@@ -1,5 +1,3 @@
-$pinecone-images-path: "../../images";
-
 a:not([class]) {
 	color: var(--blue-500);
 	display: inline-block;
@@ -12,7 +10,7 @@ a:not([class]) {
 	text-decoration-thickness: 1px;
 	text-underline-offset: 2px;
 
-	@supports (mask: url("#{$pinecone-images-path}/add.svg")) {
+	@supports (mask: url("../images/add.svg")) {
 		&::after {
 			background: var(--blue-500);
 			content: "";
@@ -20,7 +18,7 @@ a:not([class]) {
 			height: 1em;
 			margin-bottom: rem(-3);
 			margin-left: rem(2);
-			mask: url("#{$pinecone-images-path}/chevron-e.svg") no-repeat center;
+			mask: url("../images/chevron-e.svg") no-repeat center;
 			text-decoration: underline;
 			width: 0.6em;
 		}
@@ -30,7 +28,7 @@ a:not([class]) {
 		color: var(--green-400);
 		text-decoration-color: var(--green-400);
 
-		@supports (mask: url("#{$pinecone-images-path}/add.svg")) {
+		@supports (mask: url("../images/add.svg")) {
 			&::after {
 				background: var(--green-400);
 			}
@@ -46,7 +44,7 @@ a:not([class]) {
 		color: var(--blue-400);
 		text-decoration-color: var(--blue-400);
 
-		@supports (mask: url("#{$pinecone-images-path}/add.svg")) {
+		@supports (mask: url("../images/add.svg")) {
 			&::after {
 				background: var(--blue-400);
 			}
@@ -59,24 +57,24 @@ a:not([class]) {
 		outline: none;
 		text-decoration: none;
 
-		@supports (mask: url("#{$pinecone-images-path}/add.svg")) {
+		@supports (mask: url("../images/add.svg")) {
 			&::after {
 				background: var(--white);
 			}
 		}
 	}
 
-	@supports (mask: url("#{$pinecone-images-path}/add.svg")) {
+	@supports (mask: url("../images/add.svg")) {
 		&[rel="external"] {
 			&::after {
-				mask-image: url("#{$pinecone-images-path}/arrow-ne.svg");
+				mask-image: url("../images/arrow-ne.svg");
 				width: 1em;
 			}
 		}
 
 		&[href^="#"] {
 			&::after {
-				mask-image: url("#{$pinecone-images-path}/arrow-s.svg");
+				mask-image: url("../images/arrow-s.svg");
 				width: 1em;
 			}
 		}
