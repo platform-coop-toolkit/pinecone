@@ -1,11 +1,13 @@
+$pinecone-fonts-path: "../fonts";
+
 @font-face {
 	font-display: swap;
 	font-family: "Noto Sans";
 	font-style: normal;
 	font-weight: 700;
 	src:
-		url("../fonts/notosans-bold.woff2") format("woff2"),
-		url("../fonts/notosans-bold.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosans-bold.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosans-bold.woff") format("woff");
 }
 
 @font-face {
@@ -14,8 +16,8 @@
 	font-style: italic;
 	font-weight: 700;
 	src:
-		url("../fonts/notosans-bolditalic.woff2") format("woff2"),
-		url("../fonts/notosans-bolditalic.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosans-bolditalic.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosans-bolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -24,8 +26,8 @@
 	font-style: normal;
 	font-weight: 600;
 	src:
-		url("../fonts/notosans-semibold.woff2") format("woff2"),
-		url("../fonts/notosans-semibold.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosans-semibold.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosans-semibold.woff") format("woff");
 }
 
 @font-face {
@@ -34,8 +36,8 @@
 	font-style: italic;
 	font-weight: 600;
 	src:
-		url("../fonts/notosans-semibolditalic.woff2") format("woff2"),
-		url("../fonts/notosans-semibolditalic.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosans-semibolditalic.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosans-semibolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -44,8 +46,8 @@
 	font-style: normal;
 	font-weight: 400;
 	src:
-		url("../fonts/notosans-regular.woff2") format("woff2"),
-		url("../fonts/notosans-regular.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosans-regular.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosans-regular.woff") format("woff");
 }
 
 @font-face {
@@ -54,8 +56,8 @@
 	font-style: italic;
 	font-weight: 400;
 	src:
-		url("../fonts/notosans-italic.woff2") format("woff2"),
-		url("../fonts/notosans-italic.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosans-italic.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosans-italic.woff") format("woff");
 }
 
 @font-face {
@@ -64,8 +66,8 @@
 	font-style: normal;
 	font-weight: 700;
 	src:
-		url("../fonts/notosansdisplay-bold.woff2") format("woff2"),
-		url("../fonts/notosansdisplay-bold.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosansdisplay-bold.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosansdisplay-bold.woff") format("woff");
 }
 
 @font-face {
@@ -74,8 +76,8 @@
 	font-style: italic;
 	font-weight: 700;
 	src:
-		url("../fonts/notosansdisplay-bolditalic.woff2") format("woff2"),
-		url("../fonts/notosansdisplay-bolditalic.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosansdisplay-bolditalic.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosansdisplay-bolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -84,8 +86,8 @@
 	font-style: normal;
 	font-weight: 600;
 	src:
-		url("../fonts/notosansdisplay-semibold.woff2") format("woff2"),
-		url("../fonts/notosansdisplay-semibold.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosansdisplay-semibold.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosansdisplay-semibold.woff") format("woff");
 }
 
 @font-face {
@@ -94,8 +96,8 @@
 	font-style: italic;
 	font-weight: 600;
 	src:
-		url("../fonts/notosansdisplay-semibolditalic.woff2") format("woff2"),
-		url("../fonts/notosansdisplay-semibolditalic.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosansdisplay-semibolditalic.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosansdisplay-semibolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -104,8 +106,8 @@
 	font-style: normal;
 	font-weight: 400;
 	src:
-		url("../fonts/notosansdisplay-regular.woff2") format("woff2"),
-		url("../fonts/notosansdisplay-regular.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosansdisplay-regular.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosansdisplay-regular.woff") format("woff");
 }
 
 @font-face {
@@ -114,8 +116,8 @@
 	font-style: italic;
 	font-weight: 400;
 	src:
-		url("../fonts/notosansdisplay-italic.woff2") format("woff2"),
-		url("../fonts/notosansdisplay-italic.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notosansdisplay-italic.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notosansdisplay-italic.woff") format("woff");
 }
 
 @font-face {
@@ -124,8 +126,8 @@
 	font-style: normal;
 	font-weight: 900;
 	src:
-		url("../fonts/notoserif-black.woff2") format("woff2"),
-		url("../fonts/notoserif-black.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notoserif-black.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notoserif-black.woff") format("woff");
 }
 
 @font-face {
@@ -134,8 +136,8 @@
 	font-style: italic;
 	font-weight: 900;
 	src:
-		url("../fonts/notoserif-blackitalic.woff2") format("woff2"),
-		url("../fonts/notoserif-blackitalic.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notoserif-blackitalic.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notoserif-blackitalic.woff") format("woff");
 }
 
 @font-face {
@@ -144,8 +146,8 @@
 	font-style: normal;
 	font-weight: 700;
 	src:
-		url("../fonts/notoserif-bold.woff2") format("woff2"),
-		url("../fonts/notoserif-bold.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notoserif-bold.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notoserif-bold.woff") format("woff");
 }
 
 @font-face {
@@ -154,8 +156,8 @@
 	font-style: italic;
 	font-weight: 700;
 	src:
-		url("../fonts/notoserif-bolditalic.woff2") format("woff2"),
-		url("../fonts/notoserif-bolditalic.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notoserif-bolditalic.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notoserif-bolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -164,8 +166,8 @@
 	font-style: normal;
 	font-weight: 400;
 	src:
-		url("../fonts/notoserif-regular.woff2") format("woff2"),
-		url("../fonts/notoserif-regular.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notoserif-regular.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notoserif-regular.woff") format("woff");
 }
 
 @font-face {
@@ -174,6 +176,6 @@
 	font-style: italic;
 	font-weight: 400;
 	src:
-		url("../fonts/notoserif-italic.woff2") format("woff2"),
-		url("../fonts/notoserif-italic.woff") format("woff");
+		url("#{$pinecone-fonts-path}/notoserif-italic.woff2") format("woff2"),
+		url("#{$pinecone-fonts-path}/notoserif-italic.woff") format("woff");
 }
