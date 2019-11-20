@@ -3,9 +3,9 @@
   "version": "1.0.0-alpha.0",
   "description": "Styleguide and pattern library for the Platform Cooperativism Consortium and the Platform Co-op Resource Library.",
   "scripts": {
-    "build:assets": "npm run production",
     "build:components": "fractal build",
-    "build": "npm-run-all build:*",
+    "build:assets": "npm run production",
+    "build": "run-s build:*",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "lint:js": "eslint *.js src/assets/scripts",
