@@ -2,15 +2,13 @@
 <div class="cards">
 	{% for key, card in cards %}
 	<div class="card card--{{ key }} ">
-		<span class="card__format">{{ card.format }}</span>
-		{% if card.externalLink %}
-		<a class="card__external-link" rel="external" href="{{ card.externalLink }}"><span class="screen-reader-text">Visit {{ card.title | safe }}</span><svg class="icon icon--arrow-ne"><use xlink:href="/images/arrow-ne.svg"/></svg></a>
-		{% endif %}
 		<header>
+			<span class="card__format">{{ card.format }}</span>
 			{% if card.link %}
-			<h2 class="card__title"><a href="{{ card.link }}">{{ card.title | safe }}</a></h2>
-			{% else %}
-			<h2 class="card__title">{{ card.title | safe }}</h2>
+			<h2 id="{{ key }}-{{ card.id }}" class="card__title"><a href="{{ card.link }}">{{ card.title | safe }}</a></h2>
+			{% elseif card.externalLink %}
+			<a aria-labelledby="{{ key }}-{{ card.id }}" class="card__external-link" rel="external" href="{{ card.externalLink }}"><svg class="icon icon--arrow-ne"><use xlink:href="/images/arrow-ne.svg"/></svg></a>
+			<h2 id="{{ key }}-{{ card.id }}" class="card__title">{{ card.title | safe }}</h2>
 			{% endif %}
 		</header>
 		{% if card.date %}
@@ -37,7 +35,7 @@
 		<ul class="card__tags tags">
 			{% for tag in card.topics %}
 				<li class="tag">
-					<a class="tag__link" href="{{ tag }}">{{ tag }}</a>
+					<a class="tag__link" href="{{ tag }}"><span class="screen-reader-text">Topic: </span>{{ tag }}</a>
 				</li>
 			{% endfor %}
 		</ul>
