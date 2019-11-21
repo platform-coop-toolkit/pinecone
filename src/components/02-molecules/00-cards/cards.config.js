@@ -5,10 +5,11 @@ module.exports = {
 		cardsTitle: 'Cards',
 		cards: {
 			resource: {
+				format: 'Article',
 				title: 'Data as a common in the sharing economy',
 				publisher: 'CEPN',
 				region: 'France',
-				topics: ['Commons', 'Platform Cooperativism', 'Policy']
+				topics: ['Commons', 'Policy']
 			}
 		},
 	}

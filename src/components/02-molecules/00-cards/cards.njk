@@ -1,0 +1,21 @@
+<h1>{{ cardsTitle }}</h1>
+<div class="cards">
+	{% for key, card in cards %}
+	<div class="card card--{{ key }} ">
+		<span class="card__format">{{ card.format }}</span>
+		<hr class="is-style-grey-500-hairline" />
+		<header>
+			<h2 class="card__title">{{ card.title }}</h2>
+		</header>
+		<p class="card__byline">By <a href="https://example.com/" rel="external">{{ card.publisher }}</a></p>
+		<p class="card__region"><svg class="icon icon--location"><use xlink:href="/images/location.svg"/></svg> {{ card.region }}</p>
+		<ul class="card__tags tags">
+			{% for tag in card.topics %}
+				<li class="tag">
+					<a class="tag__link" href="{{ tag }}">{{ tag }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% endfor %}
+</div>

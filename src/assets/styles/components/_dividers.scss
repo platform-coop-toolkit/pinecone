@@ -4,6 +4,11 @@ hr {
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
 
+	&.is-style-grey-500-hairline {
+		border-bottom-color: var(--grey-500);
+		border-bottom-width: 1px;
+	}
+
 	&.is-style-grey-400-hairline {
 		border-bottom-color: var(--grey-400);
 		border-bottom-width: 1px;
