@@ -40,12 +40,14 @@
 .card__external-link {
 	align-items: center;
 	background: var(--grey-200);
+	border-bottom: solid 3px transparent;
 	border-bottom-left-radius: 2px;
+	border-left: solid 3px transparent;
+	border-right: solid 3px transparent;
 	color: var(--blue-500);
 	display: flex;
 	height: rem(50);
 	justify-content: center;
-	padding-right: rem(2);
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -56,15 +58,32 @@
 	fill: currentColor;
 }
 
+.card__external-link:hover {
+	border-color: var(--blue-500);
+	color: var(--blue-400);
+	padding-right: 0;
+}
+
+.card__external-link:active {
+	background: var(--blue-500);
+	border-color: var(--blue-500);
+	color: var(--white);
+	outline: none;
+}
+
 .card__external-link:focus {
 	background: var(--blue-500);
 	color: var(--white);
 	outline: none;
-	padding-right: 0;
+	right: -3px;
 }
 
 .card:focus-within .card__external-link {
 	width: rem(50);
+}
+
+.card:focus-within .card__external-link:active {
+	border-right-width: 0;
 }
 
 .card header {
@@ -74,6 +93,15 @@
 .card__title {
 	font-size: rem(20);
 	line-height: (30 / 20);
+}
+
+.card__title a {
+	font-weight: $font-weight-bold;
+	line-height: inherit;
+	margin-left: rem(-22);
+	margin-right: rem(-22);
+	padding-left: rem(22);
+	padding-right: rem(22);
 }
 
 .card__title a::after {
@@ -135,6 +163,10 @@
 	width: rem(52);
 }
 
+.card--resource .card__title a:focus {
+	background: var(--red-400);
+}
+
 .card--resource .card__byline {
 	font-size: rem(16);
 }
@@ -146,11 +178,15 @@
 .card--blog:focus-within {
 	border-color: var(--red-300);
 	box-shadow: 0 0 25px rgba(255, 164, 122, 0.25);
-
 }
 
 .card--blog .card__format {
 	background: var(--red-300);
+}
+
+.card--blog .card__title a:focus {
+	background: var(--red-300);
+	color: var(--black);
 }
 
 .card--news {
@@ -192,6 +228,10 @@
 	color: var(--white);
 }
 
+.card--publication .card__title a:focus {
+	background: var(--green-400);
+}
+
 .card--event {
 	border-top-color: var(--blue-300);
 }
@@ -204,6 +244,11 @@
 
 .card--event .card__format {
 	background: var(--blue-300);
+}
+
+.card--event .card__title a:focus {
+	background: var(--blue-300);
+	color: var(--black);
 }
 
 .card--event .card__date svg path {
@@ -231,6 +276,16 @@
 
 .card--platformcoop .card__format {
 	background: var(--green-300);
+}
+
+.card--platformcoop .card__external-link:hover {
+	border-color: var(--green-300);
+}
+
+.card--platformcoop .card__external-link:active {
+	background: var(--green-300);
+	border-color: var(--green-300);
+	color: var(--black);
 }
 
 .card--platformcoop .card__external-link:focus {
