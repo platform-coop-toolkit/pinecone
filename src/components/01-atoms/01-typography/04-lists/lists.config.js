@@ -1,6 +1,5 @@
 module.exports = {
 	title: 'Lists',
-	status: 'wip',
 	context: {
 		orderedHeading: 'Ordered Lists',
 		unorderedHeading: 'Unordered Lists',
