@@ -3,12 +3,37 @@
 	{% for key, card in cards %}
 	<div class="card card--{{ key }} ">
 		<span class="card__format">{{ card.format }}</span>
-		<hr class="is-style-grey-500-hairline" />
+		{% if card.externalLink %}
+		<a class="card__external-link" rel="external" href="{{ card.externalLink }}"><span class="screen-reader-text">Visit {{ card.title | safe }}</span><svg class="icon icon--arrow-ne"><use xlink:href="/images/arrow-ne.svg"/></svg></a>
+		{% endif %}
 		<header>
-			<h2 class="card__title">{{ card.title }}</h2>
+			{% if card.link %}
+			<h2 class="card__title"><a href="{{ card.link }}">{{ card.title | safe }}</a></h2>
+			{% else %}
+			<h2 class="card__title">{{ card.title | safe }}</h2>
+			{% endif %}
 		</header>
-		<p class="card__byline">By <a href="https://example.com/" rel="external">{{ card.publisher }}</a></p>
-		<p class="card__region"><svg class="icon icon--location"><use xlink:href="/images/location.svg"/></svg> {{ card.region }}</p>
+		{% if card.date %}
+		<p class="card__date">
+			{% if key === 'event' %}
+			<svg class="icon icon--calendar"><use xlink:href="/images/calendar.svg"/></svg>{{ card.date }}
+			{% else %}
+			{{ card.date }}
+			{% endif %}
+		</p>
+		{% endif %}
+		{% if card.byline %}
+			<p class="card__byline">
+				{% if card.bylineLink %}
+				By <a href="https://example.com/" rel="external">{{ card.byline }}</a>
+				{% else %}
+				By {{ card.byline }}
+				{% endif %}
+			</p>
+		{% endif %}
+		{% if card.locality %}
+		<p class="card__locality"><svg class="icon icon--location"><use xlink:href="/images/location.svg"/></svg> {{ card.locality }}</p>
+		{% endif %}
 		<ul class="card__tags tags">
 			{% for tag in card.topics %}
 				<li class="tag">

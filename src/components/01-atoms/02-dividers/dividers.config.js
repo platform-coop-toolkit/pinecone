@@ -8,10 +8,6 @@ module.exports = {
 				class: ''
 			},
 			{
-				name: 'Grey 500 Hairline',
-				class: 'is-style-grey-500-hairline'
-			},
-			{
 				name: 'Grey 400 Hairline',
 				class: 'is-style-grey-400-hairline'
 			},
