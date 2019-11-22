@@ -1,7 +1,7 @@
 <h1>{{ cardsTitle }}</h1>
-<div class="cards">
+<ul class="cards">
 	{% for key, card in cards %}
-	<div class="card card--{{ card.type }} ">
+	<li class="card card--{{ card.type }} ">
 		{% if card.image %}
 		<figure class="card__image">
 			<img src="{{ card.image }}" alt="Image for this {{ card.type }}." />
@@ -12,7 +12,7 @@
 			<span class="card__format">{{ card.format }}</span>
 			{% endif %}
 			{% if card.link %}
-			<h2 id="{{ card.type }}-{{ card.id }}" class="card__title"><a {% if card.externalLink %}rel="external" {% endif %}href="{{ card.link }}">{{ card.title | safe }}</a></h2>
+			<h2 id="{{ card.type }}-{{ card.id }}" class="card__title" ><a {% if card.externalLink %}rel="external" {% endif %}href="{{ card.link }}">{{ card.title | safe }}</a></h2>
 			{% endif %}
 		</header>
 		{% if card.date %}
@@ -49,6 +49,6 @@
 			<p>+{{ card.topicCount - 2 }} more</p>
 		</div>
 		{% endif %}
-	</div>
+	</li>
 	{% endfor %}
-</div>
+</ul>

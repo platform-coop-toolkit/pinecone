@@ -1,5 +1,6 @@
 .cards {
 	display: grid;
+	list-style: none;
 }
 
 .card {
@@ -138,6 +139,10 @@
 	}
 }
 
+.card--project {
+	@include card($red-400, $black);
+}
+
 .card--blog {
 	@include card($red-300, $black);
 }
@@ -152,6 +157,10 @@
 
 .card--platformcoop {
 	@include card($green-300, $black);
+}
+
+.card--story {
+	@include card($yellow-500, $black);
 }
 
 @include breakpoint-up(md) {

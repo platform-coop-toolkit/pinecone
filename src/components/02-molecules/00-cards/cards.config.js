@@ -57,6 +57,23 @@ module.exports = {
 				description: 'Founding Director, Institute for the Cooperative Digital Economy',
 				link: 'person',
 				image: '/images/person.jpg'
+			},
+			story: {
+				type: 'story',
+				id: 7,
+				format: 'Worker Story',
+				title: 'SEWA Federation',
+				locality: 'Gujarat, India',
+				link: 'story',
+				image: '/images/story.jpg'
+			},
+			project: {
+				type: 'project',
+				id: 8,
+				format: 'Project',
+				link: 'https://github/platform-coop-toolkit',
+				title: 'Platform Cooperative Development Kit',
+				description: 'An open source toolkit of software to support platform cooperatives.',
 			}
 		},
 	}
