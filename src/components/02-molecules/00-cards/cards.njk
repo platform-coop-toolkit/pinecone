@@ -8,7 +8,9 @@
 		</figure>
 		{% endif %}
 		<header>
+			{% if card.format %}
 			<span class="card__format">{{ card.format }}</span>
+			{% endif %}
 			{% if card.link %}
 			<h2 id="{{ card.type }}-{{ card.id }}" class="card__title"><a href="{{ card.link }}">{{ card.title | safe }}</a></h2>
 			{% elseif card.externalLink %}
@@ -32,6 +34,11 @@
 				{% else %}
 				By {{ card.byline }}
 				{% endif %}
+			</p>
+		{% endif %}
+		{% if card.description %}
+			<p class="card__description">
+				{{ card.description }}
 			</p>
 		{% endif %}
 		{% if card.locality %}

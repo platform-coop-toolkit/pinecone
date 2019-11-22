@@ -66,6 +66,14 @@ module.exports = {
 				link: 'blog',
 				image: 'https://platform.coop/wp-content/uploads/2019/11/5J6A6919-2-367x165.jpg'
 			},
+			person: {
+				type: 'person',
+				id: 8,
+				title: 'Esteban Kelly',
+				description: 'Executive Director, US Federation of Worker Cooperatives',
+				link: 'person',
+				image: 'https://platform.coop/wp-content/uploads/2019/09/Headshot-Esteban-Kelly-367x250.jpg'
+			}
 		},
 	}
 };

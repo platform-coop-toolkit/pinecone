@@ -190,6 +190,25 @@
 	}
 }
 
+.card--person {
+	border-top-color: $blue-500;
+
+	&:focus-within {
+		border-color: $blue-500;
+		box-shadow: 0 0 25px transparentize($blue-500, 0.75);
+	}
+
+	.card__format {
+		background: $blue-500;
+	}
+
+	.card__title a:focus {
+		background: $blue-500;
+		color: $white;
+	}
+}
+
+
 .card--news {
 	border-top-color: $blue-500;
 
