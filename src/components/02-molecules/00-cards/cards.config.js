@@ -50,22 +50,22 @@ module.exports = {
 				link: 'blog',
 				image: '/images/blog.jpg'
 			},
-			person: {
-				type: 'person',
-				id: 6,
-				title: 'Trebor Scholz',
-				description: 'Founding Director, Institute for the Cooperative Digital Economy',
-				link: 'person',
-				image: '/images/person.jpg'
-			},
 			story: {
 				type: 'story',
-				id: 7,
+				id: 6,
 				format: 'Worker Story',
 				title: 'SEWA Federation',
 				locality: 'Gujarat, India',
 				link: 'story',
 				image: '/images/story.jpg'
+			},
+			person: {
+				type: 'person',
+				id: 7,
+				title: 'Trebor Scholz',
+				description: 'Founding Director, Institute for the Cooperative Digital Economy',
+				link: 'person',
+				image: '/images/person.jpg'
 			},
 			project: {
 				type: 'project',
