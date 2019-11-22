@@ -1,11 +1,11 @@
 .wp-block-button__link,
 [type="submit"] {
-	background: var(--blue-500);
+	background: $blue-500;
 	border: solid 1px transparent;
 	border-radius: rem(3);
-	color: var(--white);
+	color: $white;
 	display: block;
-	font-family: var(--font-family-sans);
+	font-family: $font-family-sans;
 	font-weight: $font-weight-semibold;
 	height: rem(38);
 	max-width: rem(266);
@@ -15,20 +15,20 @@
 	width: 100%;
 
 	&:visited {
-		background: var(--green-400);
+		background: $green-400;
 	}
 
 	&:hover {
-		background: var(--blue-700);
+		background: $blue-700;
 	}
 
 	&:active {
-		background: var(--blue-400);
+		background: $blue-400;
 	}
 
 	&:focus {
-		background: var(--blue-700);
-		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--blue-700);
+		background: $blue-700;
+		box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
 		outline: none;
 	}
 
@@ -42,79 +42,81 @@
 }
 
 .is-style-secondary .wp-block-button__link {
-	background: var(--yellow-500);
-	color: var(--dark-mint-500);
+	background: $yellow-500;
+	color: $dark-mint-500;
 
 	&:visited {
-		background: var(--yellow-400);
+		background: $yellow-400;
 	}
 
 	&:hover {
-		background: var(--yellow-600);
+		background: $yellow-600;
 	}
 
 	&:active {
-		background: var(--yellow-400);
+		background: $yellow-400;
 	}
 
 	&:focus {
-		background: var(--yellow-600);
-		box-shadow: 0 0 0 rem(2) var(--white), 0 0 0 rem(4) var(--yellow-600);
+		background: $yellow-600;
+		box-shadow:
+			0 0 0 rem(2) $white,
+			0 0 0 rem(4) $yellow-600;
 	}
 }
 
 /* stylelint-disable no-descending-specificity */
 .is-style-off-white .wp-block-button__link {
 	/* stylelint-enable */
-	background: var(--off-white);
-	border-color: var(--blue-500);
-	color: var(--blue-500);
+	background: $off-white;
+	border-color: $blue-500;
+	color: $blue-500;
 
 	&:visited {
-		border-color: var(--green-400);
+		border-color: $green-400;
 	}
 
 	&:hover {
-		background: var(--grey-200);
+		background: $grey-200;
 	}
 
 	&:active {
-		background: var(--white);
+		background: $white;
 	}
 
 	&:focus {
-		background: var(--grey-200);
+		background: $grey-200;
 		box-shadow:
-			0 0 0 rem(1) var(--blue-500) inset,
-			0 0 0 rem(2) var(--white),
-			0 0 0 rem(4) var(--blue-500);
+			0 0 0 rem(1) $blue-500 inset,
+			0 0 0 rem(2) $white,
+			0 0 0 rem(4) $blue-500;
 	}
 }
 
 /* stylelint-disable no-descending-specificity */
 .is-style-white .wp-block-button__link {
 	/* stylelint-enable */
-	background: var(--white);
-	border-color: var(--blue-500);
-	color: var(--blue-500);
+	background: $white;
+	border-color: $blue-500;
+	color: $blue-500;
 
 	&:visited {
-		border-color: var(--green-400);
+		border-color: $green-400;
 	}
 
 	&:hover {
-		background: var(--grey-200);
+		background: $grey-200;
 	}
 
 	&:active {
-		background: var(--white);
+		background: $white;
 	}
 
 	&:focus {
-		background: var(--grey-200);
+		background: $grey-200;
 		box-shadow:
-			0 0 0 rem(1) var(--blue-500) inset,
-			0 0 0 rem(2) var(--white),
-			0 0 0 rem(4) var(--blue-500);
+			0 0 0 rem(1) $blue-500 inset,
+			0 0 0 rem(2) $white,
+			0 0 0 rem(4) $blue-500;
 	}
 }

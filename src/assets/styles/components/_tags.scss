@@ -14,12 +14,12 @@
 }
 
 .tag__link {
-	background: var(--white);
-	border: solid 1px var(--blue-500);
+	background: $white;
+	border: solid 1px $blue-500;
 	border-radius: rem(3);
-	color: var(--blue-500);
+	color: $blue-500;
 	display: inline-block;
-	font-family: var(--font-family-sans);
+	font-family: $font-family-sans;
 	font-size: rem(14);
 	font-weight: $font-weight-semibold;
 	height: rem(30);
@@ -30,23 +30,23 @@
 	width: auto;
 
 	&:visited {
-		border-color: var(--green-400);
+		border-color: $green-400;
 	}
 
 	&:hover {
-		background: var(--grey-200);
+		background: $grey-200;
 	}
 
 	&:active {
-		background: var(--white);
+		background: $white;
 	}
 
 	&:focus {
-		background: var(--grey-200);
+		background: $grey-200;
 		box-shadow:
-			0 0 0 rem(1) var(--blue-500) inset,
-			0 0 0 rem(2) var(--white),
-			0 0 0 rem(4) var(--blue-500);
+			0 0 0 rem(1) $blue-500 inset,
+			0 0 0 rem(2) $white,
+			0 0 0 rem(4) $blue-500;
 		outline: none;
 	}
 }

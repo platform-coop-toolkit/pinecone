@@ -1,36 +1,36 @@
 hr {
 	border: 0;
-	border-bottom-color: var(--blue-500);
+	border-bottom-color: $blue-500;
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
 
 	&.is-style-grey-400-hairline {
-		border-bottom-color: var(--grey-400);
+		border-bottom-color: $grey-400;
 		border-bottom-width: 1px;
 	}
 
 	&.is-style-grey-200-thick {
-		border-bottom-color: var(--grey-200);
+		border-bottom-color: $grey-200;
 		border-bottom-width: rem(16);
 	}
 
 	&.is-style-blue-500-hairline {
-		border-bottom-color: var(--blue-500);
+		border-bottom-color: $blue-500;
 		border-bottom-width: 1px;
 	}
 
 	&.is-style-blue-500-medium {
-		border-bottom-color: var(--blue-500);
+		border-bottom-color: $blue-500;
 		border-bottom-width: 3px;
 	}
 
 	&.is-style-blue-600-hairline {
-		border-bottom-color: var(--blue-600);
+		border-bottom-color: $blue-600;
 		border-bottom-width: 1px;
 	}
 
 	&.is-style-dark-mint-500-hairline {
-		border-bottom-color: var(--dark-mint-500);
+		border-bottom-color: $dark-mint-500;
 		border-bottom-width: 1px;
 	}
 }

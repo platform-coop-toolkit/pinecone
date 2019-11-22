@@ -6,21 +6,21 @@
 }
 
 a {
-	color: var(--blue-500);
+	color: $blue-500;
 }
 
 a:hover {
-	color: var(--white);
+	color: $white;
 }
 
 .Tree-entityLink:hover {
-	background: var(--blue-500);
+	background: $blue-500;
 }
 
 .Header {
-	background-color: var(--blue-500);
+	background-color: $blue-500;
 }
 
 .Pen-previewLink svg {
-	fill: var(--blue-400);
+	fill: $blue-400;
 }

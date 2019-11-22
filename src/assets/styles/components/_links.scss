@@ -1,18 +1,18 @@
 a:not([class]) {
-	color: var(--blue-500);
+	color: $blue-500;
 	display: inline-block;
-	font-family: var(--font-family-sans);
+	font-family: $font-family-sans;
 	font-weight: $font-weight-semibold;
 	line-height: 1;
 	padding-top: rem(4);
 	text-decoration: underline;
-	text-decoration-color: var(--blue-500);
+	text-decoration-color: $blue-500;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 2px;
 
 	@supports (mask: url("../images/add.svg")) {
 		&::after {
-			background: var(--blue-500);
+			background: $blue-500;
 			content: "";
 			display: inline-block;
 			height: 1em;
@@ -25,41 +25,41 @@ a:not([class]) {
 	}
 
 	&:visited {
-		color: var(--green-400);
-		text-decoration-color: var(--green-400);
+		color: $green-400;
+		text-decoration-color: $green-400;
 
 		@supports (mask: url("../images/add.svg")) {
 			&::after {
-				background: var(--green-400);
+				background: $green-400;
 			}
 		}
 	}
 
 	&:hover {
-		text-decoration-color: var(--blue-300);
+		text-decoration-color: $blue-300;
 		text-decoration-thickness: 2px;
 	}
 
 	&:active {
-		color: var(--blue-400);
-		text-decoration-color: var(--blue-400);
+		color: $blue-400;
+		text-decoration-color: $blue-400;
 
 		@supports (mask: url("../images/add.svg")) {
 			&::after {
-				background: var(--blue-400);
+				background: $blue-400;
 			}
 		}
 	}
 
 	&:focus {
-		background: var(--blue-500);
-		color: var(--white);
+		background: $blue-500;
+		color: $white;
 		outline: none;
 		text-decoration: none;
 
 		@supports (mask: url("../images/add.svg")) {
 			&::after {
-				background: var(--white);
+				background: $white;
 			}
 		}
 	}
