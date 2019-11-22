@@ -23,26 +23,9 @@ module.exports = {
 				date: 'Apr 13, 2019',
 				link: 'blog'
 			},
-			news: {
-				type: 'news',
-				id: 3,
-				format: 'News',
-				title: 'Platform co-ops: &lsquo;Something new is taking off&rsquo;',
-				byline: 'Co-operative News',
-				date: 'Aug 26, 2018',
-				externalLink: 'https://example.com/news'
-			},
-			publication: {
-				type: 'publication',
-				id: 4,
-				format: 'Publication',
-				title: 'Perspectives on Harmful Speech Online',
-				date: 'Jun 27, 2017',
-				link: 'publication'
-			},
 			event: {
 				type: 'event',
-				id: 5,
+				id: 3,
 				format: 'Community Event',
 				title: 'Toronto Platform Coop Meetup',
 				date: 'Feb 23, 2019, 6:30-8:30PM',
@@ -51,28 +34,29 @@ module.exports = {
 			},
 			platformcoop: {
 				type: 'platformcoop',
-				id: 6,
+				id: 4,
 				format: 'Platform Co-op',
 				title: 'Aarhus Makers',
 				locality: 'Aarhus, Denmark',
-				externalLink: 'https://example.com/platformcoop'
+				link: 'https://example.com/platformcoop',
+				externalLink: true
 			},
 			blogWithImage: {
 				type: 'blog',
-				id: 7,
+				id: 5,
 				format: 'Blog',
 				title: 'Who Owns the World?',
 				date: 'Nov 12, 2019',
 				link: 'blog',
-				image: 'https://platform.coop/wp-content/uploads/2019/11/5J6A6919-2-367x165.jpg'
+				image: '/images/blog.jpg'
 			},
 			person: {
 				type: 'person',
-				id: 8,
-				title: 'Esteban Kelly',
-				description: 'Executive Director, US Federation of Worker Cooperatives',
+				id: 6,
+				title: 'Trebor Scholz',
+				description: 'Founding Director, Institute for the Cooperative Digital Economy',
 				link: 'person',
-				image: 'https://platform.coop/wp-content/uploads/2019/09/Headshot-Esteban-Kelly-367x250.jpg'
+				image: '/images/person.jpg'
 			}
 		},
 	}

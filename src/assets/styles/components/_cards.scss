@@ -110,7 +110,7 @@
 		padding-left: rem(22);
 		padding-right: rem(22);
 
-		&::after {
+		&:not([rel="external"])::after {
 			content: "";
 			display: none;
 		}
@@ -154,23 +154,10 @@
 	.card__format {
 		background: unset;
 		color: $black;
-		font-family: $font-family-serif;
-		font-weight: $font-weight-normal;
 		padding: 0;
 	}
 
 	.card__title {
-		&::before {
-			background: $grey-500;
-			content: "";
-			display: block;
-			height: 1px;
-			margin-bottom: rem(16);
-			margin-left: 0;
-			margin-top: rem(14);
-			width: rem(52);
-		}
-
 		a:focus {
 			background: $red-400;
 		}
@@ -214,53 +201,6 @@
 	.card__title a:focus {
 		background: $blue-500;
 		color: $white;
-	}
-}
-
-
-.card--news {
-	border-top-color: $blue-500;
-
-	&:focus-within {
-		border-color: $blue-500;
-		box-shadow: 0 0 25px transparentize($blue-500, 0.75);
-	}
-
-	.card__format {
-		background: $blue-500;
-		color: $white;
-	}
-
-	.card__date {
-		display: inline-block;
-	}
-
-	.card__byline {
-		display: inline-block;
-
-		&::before {
-			content: " \00b7 ";
-		}
-	}
-}
-
-
-.card--publication {
-	border-top-color: $green-400;
-
-	&:focus-within {
-		border-color: $green-400;
-		box-shadow: 0 0 25px transparentize($green-400, 0.75);
-
-	}
-
-	.card__format {
-		background: $green-400;
-		color: $white;
-	}
-
-	.card__title a:focus {
-		background: $green-400;
 	}
 }
 

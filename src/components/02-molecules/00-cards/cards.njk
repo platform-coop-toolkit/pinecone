@@ -12,10 +12,7 @@
 			<span class="card__format">{{ card.format }}</span>
 			{% endif %}
 			{% if card.link %}
-			<h2 id="{{ card.type }}-{{ card.id }}" class="card__title"><a href="{{ card.link }}">{{ card.title | safe }}</a></h2>
-			{% elseif card.externalLink %}
-			<a aria-labelledby="{{ card.type }}-{{ card.id }}" class="card__external-link" rel="external" href="{{ card.externalLink }}"><svg class="icon icon--arrow-ne"><use xlink:href="/images/arrow-ne.svg"/></svg></a>
-			<h2 id="{{ card.type }}-{{ card.id }}" class="card__title">{{ card.title | safe }}</h2>
+			<h2 id="{{ card.type }}-{{ card.id }}" class="card__title"><a {% if card.externalLink %}rel="external" {% endif %}href="{{ card.link }}">{{ card.title | safe }}</a></h2>
 			{% endif %}
 		</header>
 		{% if card.date %}
