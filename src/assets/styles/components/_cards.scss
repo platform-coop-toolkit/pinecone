@@ -31,10 +31,18 @@
 }
 
 .card__image {
-	margin: 0;
 	margin-bottom: rem(22);
 	margin-left: rem(-22);
+	margin-right: rem(-22);
 	margin-top: rem(-22);
+	padding: 0;
+}
+
+
+.card__image img {
+	display: block;
+	height: auto;
+	width: 100%;
 }
 
 .card__format {
