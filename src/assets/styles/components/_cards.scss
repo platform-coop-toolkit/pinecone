@@ -248,20 +248,12 @@
 		background: $green-300;
 	}
 
-	.card__external-link {
-		&:hover {
-			border-color: $green-300;
-		}
+	.card__title a:focus {
+		background: $green-300;
+		color: $black;
 
-		&:active {
-			background: $green-300;
-			border-color: $green-300;
-			color: $black;
-		}
-
-		&:focus {
-			background: $green-300;
-			color: $black;
+		&::after {
+			background-color: $black;
 		}
 	}
 
