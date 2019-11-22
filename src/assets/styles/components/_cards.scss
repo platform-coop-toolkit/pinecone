@@ -83,6 +83,10 @@
 		padding-right: rem(22);
 		text-decoration: none;
 
+		&:visited {
+			color: $black;
+		}
+
 		&::after {
 			background-color: $black;
 		}
