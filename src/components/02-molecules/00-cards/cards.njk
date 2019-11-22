@@ -1,14 +1,19 @@
 <h1>{{ cardsTitle }}</h1>
 <div class="cards">
 	{% for key, card in cards %}
-	<div class="card card--{{ key }} ">
+	<div class="card card--{{ card.type }} ">
+		{% if card.image %}
+		<figure class="card__image">
+			<img src="{{ card.image }}" alt="Image for this {{ card.type }}." />
+		</figure>
+		{% endif %}
 		<header>
 			<span class="card__format">{{ card.format }}</span>
 			{% if card.link %}
-			<h2 id="{{ key }}-{{ card.id }}" class="card__title"><a href="{{ card.link }}">{{ card.title | safe }}</a></h2>
+			<h2 id="{{ card.type }}-{{ card.id }}" class="card__title"><a href="{{ card.link }}">{{ card.title | safe }}</a></h2>
 			{% elseif card.externalLink %}
-			<a aria-labelledby="{{ key }}-{{ card.id }}" class="card__external-link" rel="external" href="{{ card.externalLink }}"><svg class="icon icon--arrow-ne"><use xlink:href="/images/arrow-ne.svg"/></svg></a>
-			<h2 id="{{ key }}-{{ card.id }}" class="card__title">{{ card.title | safe }}</h2>
+			<a aria-labelledby="{{ card.type }}-{{ card.id }}" class="card__external-link" rel="external" href="{{ card.externalLink }}"><svg class="icon icon--arrow-ne"><use xlink:href="/images/arrow-ne.svg"/></svg></a>
+			<h2 id="{{ card.type }}-{{ card.id }}" class="card__title">{{ card.title | safe }}</h2>
 			{% endif %}
 		</header>
 		{% if card.date %}

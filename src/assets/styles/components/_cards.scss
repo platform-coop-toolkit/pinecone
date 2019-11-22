@@ -30,6 +30,13 @@
 	margin-top: rem(40);
 }
 
+.card__image {
+	margin: 0;
+	margin-bottom: rem(22);
+	margin-left: rem(-22);
+	margin-top: rem(-22);
+}
+
 .card__format {
 	font-family: $font-family-sans;
 	font-size: rem(14);

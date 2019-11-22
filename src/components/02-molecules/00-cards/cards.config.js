@@ -5,6 +5,7 @@ module.exports = {
 		cardsTitle: 'Cards',
 		cards: {
 			resource: {
+				type: 'resource',
 				id: 1,
 				format: 'Article',
 				title: 'Data as a common in the sharing economy',
@@ -15,6 +16,7 @@ module.exports = {
 				link: 'resource'
 			},
 			blog: {
+				type: 'blog',
 				id: 2,
 				format: 'Blog',
 				title: 'Researching Worker-Owned Platforms',
@@ -22,6 +24,7 @@ module.exports = {
 				link: 'blog'
 			},
 			news: {
+				type: 'news',
 				id: 3,
 				format: 'News',
 				title: 'Platform co-ops: &lsquo;Something new is taking off&rsquo;',
@@ -30,6 +33,7 @@ module.exports = {
 				externalLink: 'https://example.com/news'
 			},
 			publication: {
+				type: 'publication',
 				id: 4,
 				format: 'Publication',
 				title: 'Perspectives on Harmful Speech Online',
@@ -37,6 +41,7 @@ module.exports = {
 				link: 'publication'
 			},
 			event: {
+				type: 'event',
 				id: 5,
 				format: 'Community Event',
 				title: 'Toronto Platform Coop Meetup',
@@ -45,12 +50,22 @@ module.exports = {
 				link: 'event'
 			},
 			platformcoop: {
+				type: 'platformcoop',
 				id: 6,
 				format: 'Platform Co-op',
 				title: 'Aarhus Makers',
 				locality: 'Aarhus, Denmark',
 				externalLink: 'https://example.com/platformcoop'
-			}
+			},
+			blogWithImage: {
+				type: 'blog',
+				id: 7,
+				format: 'Blog',
+				title: 'Who Owns the World?',
+				date: 'Nov 12, 2019',
+				link: 'blog',
+				image: 'https://platform.coop/wp-content/uploads/2019/11/5J6A6919-2-367x165.jpg'
+			},
 		},
 	}
 };
