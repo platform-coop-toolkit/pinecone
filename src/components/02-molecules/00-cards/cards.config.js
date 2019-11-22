@@ -9,10 +9,10 @@ module.exports = {
 				id: 1,
 				format: 'Article',
 				title: 'Data as a common in the sharing economy',
-				byline: 'CEPN',
-				bylineLink: 'https://example.com/byline',
+				byline: 'Centre d&rsquo;économie Paris Nord',
 				locality: 'France',
 				topics: ['Commons', 'Policy'],
+				topicCount: 4,
 				link: 'resource'
 			},
 			blog: {

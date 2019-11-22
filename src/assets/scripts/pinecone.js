@@ -1,3 +1,5 @@
+// Props Chris Coyier (https://css-tricks.com/inline-svg-cached/)
+
 const icons = document.querySelectorAll( 'svg.icon' );
 
 icons.forEach( icon => {
@@ -15,4 +17,21 @@ icons.forEach( icon => {
 			while ( newEl.firstChild ) parent.insertBefore( newEl.firstChild, newEl );
 			parent.removeChild( newEl );
 		} );
+} );
+
+// Props Heydon Pickering (https://inclusive-components.design/cards/)
+
+const cards = document.querySelectorAll( '.card' );
+
+Array.prototype.forEach.call( cards, card => {
+	const link = card.querySelector( 'h2 a' );
+	let down, up;
+	card.style.cursor = 'pointer';
+	card.onmousedown = () => down = +new Date();
+	card.onmouseup = () => {
+		up = +new Date();
+		if ( 200 > ( up - down ) ) {
+			link.click();
+		}
+	};
 } );

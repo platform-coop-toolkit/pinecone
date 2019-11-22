@@ -26,11 +26,7 @@
 		{% endif %}
 		{% if card.byline %}
 			<p class="card__byline">
-				{% if card.bylineLink %}
-				By <a href="https://example.com/" rel="external">{{ card.byline }}</a>
-				{% else %}
-				By {{ card.byline }}
-				{% endif %}
+				By {{ card.byline | safe }}
 			</p>
 		{% endif %}
 		{% if card.description %}
@@ -41,13 +37,18 @@
 		{% if card.locality %}
 		<p class="card__locality"><svg class="icon icon--location"><use xlink:href="/images/location.svg"/></svg> {{ card.locality }}</p>
 		{% endif %}
-		<ul class="card__tags tags">
-			{% for tag in card.topics %}
-				<li class="tag">
-					<a class="tag__link" href="{{ tag }}"><span class="screen-reader-text">Topic: </span>{{ tag }}</a>
-				</li>
-			{% endfor %}
-		</ul>
+		{% if card.topics %}
+		<div class="card__tags">
+			<ul class="tags" >
+				{% for tag in card.topics %}
+					<li class="tag">
+						<div class="tag__token"><span class="screen-reader-text">Topic: </span>{{ tag }}</div>
+					</li>
+				{% endfor %}
+			</ul>
+			<p>+{{ card.topicCount - 2 }} more</p>
+		</div>
+		{% endif %}
 	</div>
 	{% endfor %}
 </div>

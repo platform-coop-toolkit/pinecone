@@ -3,8 +3,8 @@
 }
 
 .card {
-	border-top: 3px solid transparent;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+	border-top: rem(3) solid transparent;
+	box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.16);
 	max-width: rem(367);
 	padding: rem(22);
 	position: relative;
@@ -15,13 +15,12 @@
 	}
 
 	&:hover {
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+		box-shadow: 0 0 rem(20) rgba(0, 0, 0, 0.25);
 	}
 
 	&:focus-within {
-		border: solid 3px transparent;
-		border-radius: 2px;
-		box-shadow: 0 0 25px rgba(255, 98, 26, 0.25);
+		border: solid rem(3) transparent;
+		border-radius: rem(2);
 		padding: rem(22) rem(19) rem(19);
 	}
 }
@@ -31,18 +30,28 @@
 }
 
 .card__image {
-	margin-bottom: rem(22);
+	border-left: solid rem(3) transparent;
+	border-right: solid rem(3) transparent;
+	margin-bottom: 0;
 	margin-left: rem(-22);
 	margin-right: rem(-22);
 	margin-top: rem(-22);
 	padding: 0;
+
+	img {
+		display: block;
+		height: auto;
+		margin: 0 rem(-3);
+		width: calc(100% + #{rem(6)});
+	}
 }
 
+.card:focus-within .card__image {
+	overflow: hidden;
+}
 
-.card__image img {
-	display: block;
-	height: auto;
-	width: 100%;
+.card__image + * {
+	margin-top: rem(16);
 }
 
 .card__format {
@@ -52,63 +61,30 @@
 	padding: rem(2) rem(10);
 }
 
-.card__external-link {
-	align-items: center;
-	background: $grey-200;
-	border-bottom: solid 3px transparent;
-	border-bottom-left-radius: 2px;
-	border-left: solid 3px transparent;
-	border-right: solid 3px transparent;
-	color: $blue-500;
-	display: flex;
-	height: rem(50);
-	justify-content: center;
-	position: absolute;
-	right: rem(-22);
-	top: rem(-22);
-	width: rem(52);
-
-	svg path {
-		fill: currentColor;
-	}
-
-	&:hover {
-		border-color: $blue-500;
-		color: $blue-400;
-		padding-right: 0;
-	}
-
-	&:active {
-		background: $blue-500;
-		border-color: $blue-500;
-		color: $white;
-		outline: none;
-	}
-
-	&:focus {
-		background: $blue-500;
-		color: $white;
-		outline: none;
-	}
-}
-
 .card header {
 	position: relative;
 }
 
 .card__title {
 	font-size: rem(20);
+	font-weight: $font-weight-bold;
 	line-height: (30 / 20);
 	margin-top: rem(12);
 
 	a {
-		font-weight: $font-weight-bold;
+		color: $black;
 		line-height: inherit;
 		margin-left: rem(-22);
 		margin-right: rem(-22);
 		min-width: calc(100% + #{rem(44)});
+		padding-bottom: rem(2);
 		padding-left: rem(22);
 		padding-right: rem(22);
+		text-decoration: none;
+
+		&::after {
+			background-color: $black;
+		}
 
 		&:not([rel="external"])::after {
 			content: "";
@@ -118,15 +94,17 @@
 }
 
 .card__date,
-.card__byline {
+.card__byline,
+.card__locality,
+.card__description,
+.card__tags {
 	color: $grey-500;
 	font-size: rem(14);
 	margin-top: rem(6);
 }
 
+.card__date,
 .card__locality {
-	margin-top: rem(6);
-
 	svg {
 		height: 0.8em;
 
@@ -141,130 +119,39 @@
 }
 
 .card__tags {
-	margin-top: rem(15);
+	margin-top: rem(20);
+
+	* {
+		display: inline;
+	}
+
+	p {
+		margin-left: rem(8);
+	}
 }
 
 .card--resource {
-	border-top-color: $red-400;
-
-	&:focus-within {
-		border-color: $red-400;
-	}
+	@include card($red-400, $black, false);
 
 	.card__format {
-		background: unset;
-		color: $black;
 		padding: 0;
-	}
-
-	.card__title {
-		a:focus {
-			background: $red-400;
-		}
-	}
-
-	.card__byline {
-		font-size: rem(16);
 	}
 }
 
 .card--blog {
-	border-top-color: $red-300;
-
-	&:focus-within {
-		border-color: $red-300;
-		box-shadow: 0 0 25px transparentize($red-300, 0.75);
-	}
-
-	.card__format {
-		background: $red-300;
-	}
-
-	.card__title a:focus {
-		background: $red-300;
-		color: $black;
-	}
+	@include card($red-300, $black);
 }
 
 .card--person {
-	border-top-color: $blue-500;
-
-	&:focus-within {
-		border-color: $blue-500;
-		box-shadow: 0 0 25px transparentize($blue-500, 0.75);
-	}
-
-	.card__format {
-		background: $blue-500;
-	}
-
-	.card__title a:focus {
-		background: $blue-500;
-		color: $white;
-	}
+	@include card($blue-500, $white);
 }
 
 .card--event {
-	border-top-color: $blue-300;
-
-	&:focus-within {
-		border-color: $blue-300;
-		box-shadow: 0 0 25px transparentize($blue-300, 0.75);
-
-	}
-
-	.card__format {
-		background: $blue-300;
-	}
-
-	.card__title a:focus {
-		background: $blue-300;
-		color: $black;
-	}
-
-	.card__date svg path {
-		fill: $grey-500;
-	}
-
-	.card__locality {
-		color: $grey-500;
-		font-size: rem(14);
-
-		svg path {
-			fill: $black;
-		}
-	}
+	@include card($blue-300, $black);
 }
 
 .card--platformcoop {
-	border-top-color: $green-300;
-
-	&:focus-within {
-		border-color: $green-300;
-		box-shadow: 0 0 25px rgba(11, 132, 65, 0.25);
-	}
-
-	.card__format {
-		background: $green-300;
-	}
-
-	.card__title a:focus {
-		background: $green-300;
-		color: $black;
-
-		&::after {
-			background-color: $black;
-		}
-	}
-
-	.card__locality {
-		color: $grey-500;
-		font-size: rem(14);
-
-		svg path {
-			fill: $black;
-		}
-	}
+	@include card($green-300, $black);
 }
 
 @include breakpoint-up(md) {
