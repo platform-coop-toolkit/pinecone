@@ -98,6 +98,7 @@
 		line-height: inherit;
 		margin-left: rem(-22);
 		margin-right: rem(-22);
+		min-width: calc(100% + #{rem(44)});
 		padding-left: rem(22);
 		padding-right: rem(22);
 
