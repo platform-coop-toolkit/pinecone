@@ -8,7 +8,7 @@ h4 {
 }
 
 h1 {
-	font-family: var(--font-family-serif);
+	font-family: $font-family-serif;
 	font-size: rem(36);
 	font-weight: $font-weight-black;
 	letter-spacing: rem(-0.16);
@@ -16,21 +16,21 @@ h1 {
 }
 
 h2 {
-	font-family: var(--font-family-display);
+	font-family: $font-family-display;
 	font-size: rem(28);
 	font-weight: $font-weight-bold;
 	line-height: (36 / 28);
 }
 
 h3 {
-	font-family: var(--font-family-display);
+	font-family: $font-family-display;
 	font-size: rem(24);
 	font-weight: $font-weight-semibold;
 	line-height: (32 / 24);
 }
 
 h4 {
-	font-family: var(--font-family-sans);
+	font-family: $font-family-sans;
 	font-size: rem(20);
 	font-weight: $font-weight-semibold;
 	line-height: (32 / 20);
@@ -57,9 +57,9 @@ blockquote {
 }
 
 blockquote::before {
-	color: var(--blue-400);
+	color: $blue-400;
 	content: "“";
-	font-family: var(--font-family-serif);
+	font-family: $font-family-serif;
 	font-size: rem(64);
 	margin-left: rem(-48);
 	margin-top: rem(-18);
@@ -67,7 +67,7 @@ blockquote::before {
 }
 
 blockquote * {
-	font-family: var(--font-family-sans);
+	font-family: $font-family-sans;
 	font-size: rem(20);
 	font-style: italic;
 	font-weight: $font-weight-semibold;
@@ -97,7 +97,7 @@ li {
 }
 
 li::marker {
-	color: var(--grey-500);
+	color: $grey-500;
 }
 
 // Vertical Spacing
