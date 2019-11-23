@@ -15,7 +15,7 @@
 
 .tag__link {
 	background: $white;
-	border: solid 1px $blue-500;
+	border: solid rem(1) $blue-500;
 	border-radius: rem(3);
 	color: $blue-500;
 	display: inline-block;
