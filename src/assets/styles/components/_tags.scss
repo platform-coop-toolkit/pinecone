@@ -13,27 +13,22 @@
 	margin-top: rem(12);
 }
 
-.tag__link,
-.tag__token {
+.tag__link {
+	background: $white;
 	border: solid rem(1);
+	border: solid 1px $blue-500;
 	border-radius: rem(3);
+	color: $blue-500;
 	display: inline-block;
 	font-family: $font-family-sans;
 	font-size: rem(14);
+	font-weight: $font-weight-semibold;
 	height: rem(30);
 	max-width: rem(266);
 	padding: rem(4) rem(12) rem(2);
 	text-align: center;
 	text-decoration: none;
 	width: auto;
-}
-
-// Tags as links
-.tag__link {
-	background: $white;
-	border: solid 1px $blue-500;
-	color: $blue-500;
-	font-weight: $font-weight-semibold;
 
 
 	&:visited {
@@ -57,12 +52,3 @@
 		outline: none;
 	}
 }
-
-// Tags as tokens
-.tag__token {
-	background: $grey-200;
-	border: solid rem(1) $grey-200;
-	color: $grey-500;
-}
-
-// TODO: Tags as buttons
