@@ -1,8 +1,21 @@
 <h1>{{ menuTitle }}</h1>
 
+<ul class="menu">
+	<li><a aria-current="page" class="menu__item" href="">Menu Item 1</a></li>
+	<li><a class="menu__item" href="#menu-item">Menu Item 2</a></li>
+	<li><a class="menu__item" href="#menu-item">Menu Item 3</a></li>
+	<li>
+		<a class="menu__item" href="#menu-item">Menu Item 4</a>
+		<ul class="menu__submenu">
+			<li><a class="menu__item" href="">Submenu Item 1</a></li>
+			<li><a class="menu__item" href="#menu-item">Submenu Item 2</a></li>
+			<li><a class="menu__item" href="#menu-item">Submenu Item 3</a></li>
+		</ul>
+	</li>
+</ul>
 
 
-<nav id="site-navigation">
+{# <nav id="site-navigation">
 	<button class="menu-toggle" aria-expanded="false">
 		<svg class="open" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="12"><path d="M1 1h13.22M1 5.249h13.22M1 9.499h13.22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
 		<svg aria-hidden="true" class="icon icon--close"><use xlink:href="/images/close.svg"/></svg>
@@ -35,4 +48,4 @@
 		<li><a href="https://platform.coop/events/conference-2019/">2019 Conference</a></li>
 		<li><a href="https://platform.coop/contact-us/">Contact Us</a></li>
 	</ul>
-</nav>
+</nav> #}

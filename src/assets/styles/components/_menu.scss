@@ -1,5 +1,125 @@
-@include breakpoint-up("md") {
-	.menu-toggle {
-		display: none;
+.menu {
+	background: $dark-mint-400;
+	list-style: none;
+	padding-left: 0;
+
+	> li + li {
+		border-top: solid rem(1) $dark-mint-500;
+		margin: 0;
+	}
+}
+
+.menu__item {
+	border-bottom: 0;
+	border-left: solid rem(3) transparent;
+	border-radius: 0;
+	border-right: 0;
+	border-top: 0;
+	color: $off-white;
+	display: block;
+	font-family: $font-family-sans;
+	font-size: 1rem;
+	font-weight: $font-weight-bold;
+	line-height: 1.75;
+	margin: 0;
+	max-width: 100%;
+	min-height: rem(60);
+	padding: rem(16) rem(16) rem(14);
+	position: relative;
+	text-decoration: none;
+
+	&:hover {
+		background-color: $dark-mint-500;
+		border-left: solid rem(3) $red-400;
+	}
+
+	&:active {
+		background-color: $dark-mint-500;
+	}
+
+	&:focus {
+		background-color: $dark-mint-500;
+		border-left: solid rem(3) $red-400;
+		outline: 0;
+	}
+}
+
+@include breakpoint-up(lg) {
+	.menu {
+		align-items: flex-end;
+		background-color: transparent;
+		display: flex;
+		flex-direction: row;
+		float: right;
+		height: rem(109.5);
+		justify-content: flex-end;
+		padding-top: 0;
+		position: relative;
+		width: auto;
+
+		> li + li {
+			border-top: 0;
+		}
+	}
+
+	.menu__item {
+		background: $white;
+		color: $blue-500;
+		font-size: 1rem;
+		font-weight: $font-weight-normal;
+		min-height: 0;
+		padding: rem(17) rem(16);
+
+		&::after {
+			background: transparent;
+			bottom: 0;
+			content: "";
+			height: rem(3);
+			left: 0;
+			margin-left: 1rem;
+			position: absolute;
+			width: calc(100% - 2rem);
+		}
+
+		&:hover {
+			background: $white;
+			border-left-color: transparent;
+
+			&::after {
+				background: $blue-500;
+			}
+		}
+
+		&:focus {
+			background-color: $blue-500;
+			border-left-color: transparent;
+			color: $off-white;
+			outline: 0;
+		}
+
+		&[aria-current] {
+			background-color: $white;
+			border-left-color: transparent;
+			color: $dark-mint-500;
+
+			&::after {
+				background-color: $red-400;
+			}
+
+			&:hover {
+				&::after {
+					background-color: $blue-500;
+				}
+			}
+
+			&:focus {
+				background-color: $blue-500;
+				color: $off-white;
+
+				&::after {
+					background-color: $blue-500;
+				}
+			}
+		}
 	}
 }
