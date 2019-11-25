@@ -16,7 +16,8 @@ module.exports = {
 			'languages',
 			'location',
 			'calendar',
-			'search'
+			'search',
+			'toolbox'
 		],
 	}
 };

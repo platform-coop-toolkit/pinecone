@@ -59,7 +59,16 @@
 	font-family: $font-family-sans;
 	font-size: rem(14);
 	font-weight: $font-weight-semibold;
-	padding: rem(2) rem(10);
+	padding: rem(2) rem(6);
+
+	svg {
+		margin-right: rem(3);
+		width: 1em;
+
+		path {
+			fill: $red-400;
+		}
+	}
 }
 
 .card header {
@@ -87,7 +96,7 @@
 			color: $black;
 		}
 
-		&::after {
+		&[rel="external"]::after {
 			background-color: $black;
 		}
 
@@ -112,6 +121,7 @@
 .card__locality {
 	svg {
 		height: 0.8em;
+		margin-right: rem(2);
 
 		path {
 			fill: currentColor;
