@@ -1,51 +1,24 @@
-<h1>{{ menuTitle }}</h1>
-
-<ul class="menu">
-	<li><a aria-current="page" class="menu__item" href="">Menu Item 1</a></li>
-	<li><a class="menu__item" href="#menu-item">Menu Item 2</a></li>
-	<li><a class="menu__item" href="#menu-item">Menu Item 3</a></li>
-	<li>
-		<a class="menu__item" href="#menu-item">Menu Item 4</a>
-		<ul class="menu__submenu">
-			<li><a class="menu__item" href="">Submenu Item 1</a></li>
-			<li><a class="menu__item" href="#menu-item">Submenu Item 2</a></li>
-			<li><a class="menu__item" href="#menu-item">Submenu Item 3</a></li>
-		</ul>
-	</li>
-</ul>
-
-
-{# <nav id="site-navigation">
+<nav aria-labelledby="menu-primary-label">
 	<button class="menu-toggle" aria-expanded="false">
-		<svg class="open" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="12"><path d="M1 1h13.22M1 5.249h13.22M1 9.499h13.22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
-		<svg aria-hidden="true" class="icon icon--close"><use xlink:href="/images/close.svg"/></svg>
-		<span class="label">Menu</span>
+		<svg class="icon icon--open" aria-hidden="true">
+			<use xlink:href="/images/hamburger.svg"/>
+		</svg>
+		<svg class="icon icon--close" aria-hidden="true">
+			<use xlink:href="/images/close.svg"/>
+		</svg>
+		<span id="menu-primary-label" class="menu-toggle__label">Menu</span>
 	</button>
-    <ul class="nav">
-		<li>
-			<a href="https://platform.coop/about/">About</a>
-			<ul class="sub-menu">
-				<li><a href="https://platform.coop/about/vision-and-advantages/">Vision &amp; Advantages</a></li>
-				<li><a href="https://platform.coop/about/benefits/">How Platform Co-ops Can Benefit You</a></li>
+	<ul class="menu">
+		<li><a class="menu__item" href="#menu-item-1">Menu Item 1</a></li>
+		<li><a aria-current="page" class="menu__item" href="#menu-item-2">Menu Item 2</a></li>
+		<li><a class="menu__item" href="#menu-item-3">Menu Item 3</a></li>
+		<li class="menu__submenu-wrapper">
+			<a class="menu__item" href="#menu-item-4">Menu Item 4</a>
+			<ul class="menu__submenu">
+				<li><a class="menu__item" href="#submenu-item-1">Submenu Item 1</a></li>
+				<li><a class="menu__item" href="#submenu-item-2">Submenu Item 2</a></li>
+				<li><a class="menu__item" href="#submenu-item-3">Submenu Item 3</a></li>
 			</ul>
 		</li>
-		<li>
-			<a href="https://platform.coop/voices/">Community Voices</a>
-			<ul class="sub-menu">
-				<li><a href="https://platform.coop/voices/blog/">Blog</a></li>
-				<li><a href="https://platform.coop/voices/stories/">Community Stories</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="https://platform.coop/who-we-are/">Who We Are</a>
-			<ul class="sub-menu">
-				<li><a href="https://platform.coop/who-we-are/pcc/">The Platform Cooperativism Consortium</a></li>
-				<li><a href="https://platform.coop/who-we-are/icde/">Institute for the Cooperative Digital Economy</a></li>
-				<li><a href="https://platform.coop/who-we-are/circle-of-cooperators/">PCC Circle of Cooperators</a></li>
-				<li><a href="https://platform.coop/who-we-are/people/">People</a></li>
-			</ul>
-		</li>
-		<li><a href="https://platform.coop/events/conference-2019/">2019 Conference</a></li>
-		<li><a href="https://platform.coop/contact-us/">Contact Us</a></li>
 	</ul>
-</nav> #}
+</nav>

@@ -8,11 +8,11 @@
 		<title>{{ _target.title }} | Pinecone</title>
 	</head>
 	<body>
-		<header></header>
+		<header>
+			{{ yield | safe }}
+		</header>
 		<main>
-			<div class="content">
-				{{ yield | safe }}
-			</div>
+			<div class="content"></div>
 		</main>
 		<footer></footer>
 		<script src="{{ '/scripts/pinecone.js' | path }}"></script>

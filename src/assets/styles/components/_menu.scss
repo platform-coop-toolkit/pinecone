@@ -1,12 +1,75 @@
+nav {
+	height: rem(70);
+}
+
+.menu-toggle {
+	align-items: center;
+	background: transparent;
+	border: solid rem(3) transparent;
+	border-radius: 0;
+	color: $blue-500;
+	display: flex;
+	flex-direction: row;
+	font-family: $font-family-display;
+	font-size: rem(14);
+	font-weight: $font-weight-semibold;
+	height: rem(40);
+	margin: rem(16) rem(30) rem(14) 0;
+	padding: 0 rem(10);
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	svg {
+		margin-right: rem(12);
+
+		path {
+			fill: currentColor;
+		}
+	}
+
+	&:focus {
+		border-color: $blue-400;
+		color: $blue-400;
+	}
+
+	&[aria-expanded="true"] {
+		color: $white;
+		margin-right: rem(6);
+		padding: 0 rem(12);
+
+
+		svg {
+			margin-right: 0;
+		}
+	}
+}
+
 .menu {
 	background: $dark-mint-400;
+	display: block;
 	list-style: none;
+	margin: 0;
 	padding-left: 0;
+	padding-top: rem(70);
 
-	> li + li {
+	li {
 		border-top: solid rem(1) $dark-mint-500;
 		margin: 0;
 	}
+}
+
+[aria-expanded="false"] .icon--close {
+	display: none;
+}
+
+[aria-expanded="false"] + * {
+	display: none;
+}
+
+[aria-expanded="true"] .icon--open,
+[aria-expanded="true"] .menu-toggle__label {
+	display: none;
 }
 
 .menu__item {
@@ -23,7 +86,6 @@
 	line-height: 1.75;
 	margin: 0;
 	max-width: 100%;
-	min-height: rem(60);
 	padding: rem(16) rem(16) rem(14);
 	position: relative;
 	text-decoration: none;
@@ -42,24 +104,59 @@
 		border-left: solid rem(3) $red-400;
 		outline: 0;
 	}
+
+	&[aria-current] {
+		background-color: $blue-400;
+		border-left-color: $off-white;
+
+		&:hover {
+			background-color: $dark-mint-500;
+			border-left: solid rem(3) $red-400;
+		}
+
+		&:focus {
+			background-color: $dark-mint-500;
+			border-left: solid rem(3) $red-400;
+		}
+	}
 }
 
-@include breakpoint-up(lg) {
+.menu__submenu {
+	border-top: solid rem(1) $dark-mint-500;
+	list-style: none;
+	margin-top: 0;
+}
+
+.menu__submenu .menu__item {
+	font-weight: $font-weight-normal;
+	padding-left: rem(40);
+}
+
+@include breakpoint-up(md) {
+	nav {
+		height: rem(109.5);
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
 	.menu {
 		align-items: flex-end;
 		background-color: transparent;
 		display: flex;
 		flex-direction: row;
-		float: right;
 		height: rem(109.5);
-		justify-content: flex-end;
 		padding-top: 0;
 		position: relative;
-		width: auto;
 
-		> li + li {
+		li {
 			border-top: 0;
 		}
+	}
+
+	[aria-expanded="false"] + .menu {
+		display: flex;
 	}
 
 	.menu__item {
@@ -107,6 +204,9 @@
 			}
 
 			&:hover {
+				background: $white;
+				border-left-color: transparent;
+
 				&::after {
 					background-color: $blue-500;
 				}
@@ -114,6 +214,7 @@
 
 			&:focus {
 				background-color: $blue-500;
+				border-left-color: transparent;
 				color: $off-white;
 
 				&::after {
@@ -121,5 +222,9 @@
 				}
 			}
 		}
+	}
+
+	.menu__submenu {
+		position: absolute;
 	}
 }

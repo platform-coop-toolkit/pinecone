@@ -19,6 +19,47 @@ icons.forEach( icon => {
 		} );
 } );
 
+const menuToggle = document.querySelector( '.menu-toggle' );
+const primaryMenu = document.querySelector( '.menu' );
+const topLevelMenuItems = document.querySelectorAll( '.menu > li > *' );
+const parentMenus = primaryMenu.querySelectorAll( '.menu__submenu-wrapper' );
+
+menuToggle.onclick = () => {
+	const currentState = menuToggle.getAttribute( 'aria-expanded' );
+	const newState = ( 'true' !== currentState );
+	menuToggle.setAttribute( 'aria-expanded', newState );
+};
+
+Array.prototype.forEach.call( parentMenus, parentMenu => {
+	const linkEl = parentMenu.querySelector( 'a' );
+	const menuButton = document.createElement( 'button' );
+	menuButton.className = 'menu__item';
+	menuButton.setAttribute( 'aria-expanded', false );
+	menuButton.innerHTML = linkEl.innerHTML;
+	parentMenu.insertBefore( menuButton, parentMenu.firstChild );
+	parentMenu.removeChild( linkEl );
+	menuButton.addEventListener( 'click', () => {
+		const currentState = menuButton.getAttribute( 'aria-expanded' );
+		const newState = ( 'true' !== currentState );
+		menuButton.setAttribute( 'aria-expanded', newState );
+	} );
+	document.addEventListener( 'click', event => {
+		if ( ! parentMenu.contains( event.target ) ) {
+			menuButton.setAttribute( 'aria-expanded', false );
+		}
+	} );
+} );
+
+Array.prototype.forEach.call( topLevelMenuItems, topLevelMenuItem => {
+	topLevelMenuItem.addEventListener( 'focus', () => {
+		const openDropDown = primaryMenu.querySelector( '[aria-expanded="true"]' );
+		if ( ! openDropDown ) {
+			return;
+		}
+		openDropDown.setAttribute( 'aria-expanded', false );
+	} );
+} );
+
 // Props Heydon Pickering (https://inclusive-components.design/cards/)
 
 const cards = document.querySelectorAll( '.card' );
