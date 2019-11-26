@@ -76,6 +76,7 @@ nav {
 }
 
 .menu__item {
+	align-items: center;
 	background: $dark-mint-400;
 	border-bottom: 0;
 	border-left: solid rem(3) transparent;
@@ -83,10 +84,12 @@ nav {
 	border-right: 0;
 	border-top: 0;
 	color: $off-white;
-	display: block;
+	display: flex;
+	flex-direction: row;
 	font-family: $font-family-sans;
 	font-size: 1rem;
 	font-weight: $font-weight-bold;
+	justify-content: space-between;
 	line-height: 1.75;
 	margin: 0;
 	max-width: 100%;
@@ -95,6 +98,20 @@ nav {
 	text-align: left;
 	text-decoration: none;
 	width: 100%;
+
+	/* stylelint-disable no-descending-specificity */
+	svg { /* stylelint-enable */
+		transition: transform 0.5s;
+
+		path {
+			fill: currentColor;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			transition: none;
+		}
+
+	}
 
 	&:hover {
 		background-color: $dark-mint-500;
@@ -124,6 +141,10 @@ nav {
 			background-color: $dark-mint-500;
 			border-left: solid rem(3) $red-400;
 		}
+	}
+
+	&[aria-expanded="true"] svg {
+		transform: rotate(180deg);
 	}
 }
 
@@ -219,6 +240,10 @@ nav {
 			border-left-color: transparent;
 			color: $off-white;
 			outline: 0;
+		}
+
+		svg {
+			margin-left: rem(12);
 		}
 
 		&[aria-current] {

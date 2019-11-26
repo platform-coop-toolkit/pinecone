@@ -35,7 +35,8 @@ Array.prototype.forEach.call( parentMenus, parentMenu => {
 	const menuButton = document.createElement( 'button' );
 	menuButton.className = 'menu__item';
 	menuButton.setAttribute( 'aria-expanded', false );
-	menuButton.innerHTML = linkEl.innerHTML;
+	menuButton.innerHTML = `${linkEl.innerHTML}<svg class="icon icon--chevron-s" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9.8" height="5.886" viewBox="0 0 9.8 5.886"><path d="M15.3,10.3a1,1,0,0,1,1.4,1.4l-4,4a1,1,0,0,1-1.4,0l-4-4a1,1,0,0,1,1.4-1.4L12,13.59l3.3-3.3Z" transform="translate(-7.1 -10.1)" fill="currentColor" fill-rule="evenodd"/></svg>
+	`;
 	parentMenu.insertBefore( menuButton, parentMenu.firstChild );
 	parentMenu.removeChild( linkEl );
 	menuButton.addEventListener( 'click', () => {
