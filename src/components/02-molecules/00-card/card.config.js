@@ -49,6 +49,7 @@ module.exports = {
 		},
 		{
 			name: 'Platform Co-op',
+			label: 'Platform Co-op',
 			context: {
 				modifier: 'platformcoop',
 				id: 4,
