@@ -2,6 +2,7 @@ module.exports = {
 	title: 'Text Input',
 	status: 'wip',
 	context: {
+		inputTitle: 'Text Inputs',
 		label: 'Text Input',
 		name: 'text',
 		placeholder: 'Example input',
