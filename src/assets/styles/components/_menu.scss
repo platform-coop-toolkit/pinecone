@@ -67,12 +67,16 @@ nav {
 	display: none;
 }
 
-[aria-expanded="true"] .icon--open,
-[aria-expanded="true"] .menu-toggle__label {
+[aria-expanded="true"] .icon--open {
 	display: none;
 }
 
+[aria-expanded="true"] .menu-toggle__label {
+	@include visually-hidden();
+}
+
 .menu__item {
+	background: $dark-mint-400;
 	border-bottom: 0;
 	border-left: solid rem(3) transparent;
 	border-radius: 0;
@@ -88,7 +92,9 @@ nav {
 	max-width: 100%;
 	padding: rem(16) rem(16) rem(14);
 	position: relative;
+	text-align: left;
 	text-decoration: none;
+	width: 100%;
 
 	&:hover {
 		background-color: $dark-mint-500;
@@ -125,6 +131,10 @@ nav {
 	border-top: solid rem(1) $dark-mint-500;
 	list-style: none;
 	margin-top: 0;
+
+	li:first-child {
+		border-top: 0;
+	}
 }
 
 .menu__submenu .menu__item {
@@ -225,6 +235,72 @@ nav {
 	}
 
 	.menu__submenu {
+		border:
+			1px solid
+			$white;
+		border-bottom-left-radius: rem(3);
+		border-bottom-right-radius: rem(3);
+		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 		position: absolute;
+
+		.menu__item {
+			padding-left: rem(16);
+
+			&::after {
+				display: none;
+			}
+
+			&:hover {
+				background-color: $blue-500;
+				color: $off-white;
+			}
+
+			&[aria-current="page"] {
+				border-left: solid rem(3) $red-400;
+
+				&:focus {
+					background-color: $blue-500;
+					border-left-color: transparent;
+					color: $off-white;
+				}
+
+				&:hover {
+					background-color: $blue-500;
+					border-left-color: transparent;
+					color: $off-white;
+				}
+			}
+		}
+	}
+
+	.menu__submenu-wrapper.current_page_item > .menu__item,
+	.menu__submenu-wrapper.current_page_ancestor > .menu__item,
+	.menu__submenu-wrapper.current-menu-ancestor > .menu__item {
+		background-color: $white;
+		border-left-color: transparent;
+		color: $dark-mint-500;
+
+		&::after {
+			background-color: $red-400;
+		}
+
+		&:hover {
+			background: $white;
+			border-left-color: transparent;
+
+			&::after {
+				background-color: $blue-500;
+			}
+		}
+
+		&:focus {
+			background-color: $blue-500;
+			border-left-color: transparent;
+			color: $off-white;
+
+			&::after {
+				background-color: $blue-500;
+			}
+		}
 	}
 }
