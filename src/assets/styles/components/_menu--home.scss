@@ -1,0 +1,79 @@
+@include breakpoint-up(md) {
+	.menu--home {
+		background-color: $blue-500;
+	}
+
+	.menu--home .menu__item {
+		color: $off-white;
+
+		&:hover {
+			&::after {
+				background: $off-white;
+			}
+		}
+
+		&:focus {
+			background-color: $off-white;
+			color: $blue-500;
+		}
+
+		&[aria-current] {
+			color: $white;
+		}
+	}
+
+	.menu--home .menu__submenu {
+		background: $blue-500;
+		border-color: $blue-600;
+		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+
+		.menu__item {
+			padding-left: rem(16);
+
+			&::after {
+				display: none;
+			}
+
+			&:hover {
+				background-color: $off-white;
+				color: $blue-500;
+			}
+
+			&[aria-current="page"] {
+				&:hover {
+					background-color: $off-white;
+					color: $blue-500;
+				}
+
+				&:focus {
+					background-color: $off-white;
+					border-left-color: transparent;
+					color: $blue-500;
+				}
+			}
+		}
+	}
+
+	.menu--home .menu__submenu-wrapper.current_page_item > .menu__item,
+	.menu--home .menu__submenu-wrapper.current_page_ancestor > .menu__item,
+	.menu--home .menu__submenu-wrapper.current-menu-ancestor > .menu__item {
+		color: $white;
+
+		&:hover {
+			background: transparent;
+
+			&::after {
+				background-color: $white;
+			}
+		}
+
+		&:focus {
+			background-color: $off-white;
+			color: $blue-500;
+
+			&::after {
+				background-color: transparent;
+			}
+		}
+	}
+}

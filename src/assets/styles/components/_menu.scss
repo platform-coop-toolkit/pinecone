@@ -191,7 +191,7 @@ nav {
 
 	.menu {
 		align-items: flex-end;
-		background-color: transparent;
+		background: $white;
 		display: flex;
 		flex-direction: row;
 		height: rem(109.5);
@@ -208,7 +208,7 @@ nav {
 	}
 
 	.menu__item {
-		background: $white;
+		background: transparent;
 		color: $blue-500;
 		font-size: 1rem;
 		font-weight: $font-weight-normal;
@@ -227,7 +227,7 @@ nav {
 		}
 
 		&:hover {
-			background: $white;
+			background: transparent;
 			border-left-color: transparent;
 
 			&::after {
@@ -247,7 +247,7 @@ nav {
 		}
 
 		&[aria-current] {
-			background-color: $white;
+			background: transparent;
 			border-left-color: transparent;
 			color: $dark-mint-500;
 
@@ -318,7 +318,7 @@ nav {
 	.menu__submenu-wrapper.current_page_item > .menu__item,
 	.menu__submenu-wrapper.current_page_ancestor > .menu__item,
 	.menu__submenu-wrapper.current-menu-ancestor > .menu__item {
-		background-color: $white;
+		background: transparent;
 		border-left-color: transparent;
 		color: $dark-mint-500;
 

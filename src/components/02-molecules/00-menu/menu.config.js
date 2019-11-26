@@ -30,5 +30,13 @@ module.exports = {
 				}
 			},
 		},
-	}
+	},
+	variants: [
+		{
+			'name': 'home',
+			'context': {
+				modifier: 'home'
+			}
+		}
+	]
 };
