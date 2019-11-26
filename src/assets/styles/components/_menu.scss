@@ -142,6 +142,23 @@ nav {
 	padding-left: rem(40);
 }
 
+.menu__submenu-wrapper.current_page_item > .menu__item,
+.menu__submenu-wrapper.current_page_ancestor > .menu__item,
+.menu__submenu-wrapper.current-menu-ancestor > .menu__item {
+	background-color: $blue-400;
+	border-left-color: $off-white;
+
+	&:hover {
+		background-color: $dark-mint-500;
+		border-left: solid rem(3) $red-400;
+	}
+
+	&:focus {
+		background-color: $dark-mint-500;
+		border-left: solid rem(3) $red-400;
+	}
+}
+
 @include breakpoint-up(md) {
 	nav {
 		height: rem(109.5);
