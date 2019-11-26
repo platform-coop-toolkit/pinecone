@@ -1,0 +1,57 @@
+<h1>{{ cardTitle }}: {% if name %}{{ name }}{% else %}{{ format }}{% endif %}</h1>
+<ul class="cards">
+	<li class="card card--{{ modifier }}">
+		{% if image %}
+		<figure class="card__image">
+			<img src="{{ image }}" alt="Image for this {{ modifier }}." />
+		</figure>
+		{% endif %}
+		<header>
+			{% if format %}
+			<span class="card__format">
+				{% if modifier === 'resource' %}
+				<svg aria-hidden="true" class="icon icon--toolbox"><use xlink:href="/images/toolbox.svg"/></svg>
+				{% endif %}
+				{{ format }}
+			</span>
+			{% endif %}
+			{% if link %}
+			<h2 id="{{ modifier }}-{{ id }}" class="card__title" ><a {% if externalLink %}rel="external" {% endif %}href="{{ link }}">{{ title | safe }}</a></h2>
+			{% endif %}
+		</header>
+		{% if date %}
+		<p class="card__date">
+			{% if key === 'event' %}
+			<svg aria-hidden="true" class="icon icon--calendar"><use xlink:href="/images/calendar.svg"/></svg>{{ date }}
+			{% else %}
+			{{ date }}
+			{% endif %}
+		</p>
+		{% endif %}
+		{% if byline %}
+			<p class="card__byline">
+				By {{ byline | safe }}
+			</p>
+		{% endif %}
+		{% if description %}
+			<p class="card__description">
+				{{ description }}
+			</p>
+		{% endif %}
+		{% if locality %}
+		<p class="card__locality"><svg aria-hidden="true" class="icon icon--location"><use xlink:href="/images/location.svg"/></svg>{{ locality }}</p>
+		{% endif %}
+		{% if topics %}
+		<div class="card__tags">
+			<ul class="badges" >
+				{% for tag in topics %}
+					<li class="badge">
+						<span class="screen-reader-text">Topic: </span>{{ tag }}
+					</li>
+				{% endfor %}
+			</ul>
+			<p>+{{ topicCount - 2 }} more</p>
+		</div>
+		{% endif %}
+	</li>
+</ul>
