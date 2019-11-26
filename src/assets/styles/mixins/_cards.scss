@@ -15,7 +15,7 @@
 		}
 	}
 
-	&:focus-within a:focus {
+	&:focus-within .card__title a:focus {
 		background: unset;
 		color: $black;
 	}
@@ -24,6 +24,11 @@
 		.card__format {
 			background: $accent;
 			color: $accent-contrast;
+		}
+	} @else {
+		.card__format {
+			background: unset;
+			color: $black;
 		}
 	}
 }
