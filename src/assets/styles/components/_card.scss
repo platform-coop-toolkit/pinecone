@@ -76,10 +76,6 @@
 
 .card header {
 	position: relative;
-
-	+ * {
-		margin-top: rem(6);
-	}
 }
 
 .card__title {
@@ -146,6 +142,10 @@
 	p {
 		margin-left: rem(8);
 	}
+}
+
+.card header + * {
+	margin-top: rem(6);
 }
 
 .card--resource {
