@@ -6,9 +6,9 @@ a:not([class]) {
 	line-height: 1;
 	padding-top: rem(4);
 	text-decoration: underline;
-	text-decoration-color: $blue-500;
+	text-decoration-color: $blue-400;
 	text-decoration-thickness: 1px;
-	text-underline-offset: 2px;
+	text-underline-offset: 3px;
 
 	@supports (mask: url("../images/add.svg")) {
 		&::after {

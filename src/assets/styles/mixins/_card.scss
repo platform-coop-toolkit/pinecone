@@ -1,0 +1,34 @@
+@mixin card($accent, $accent-contrast, $format: true) {
+	border-top-color: $accent;
+
+	&:focus-within {
+		border-color: $accent;
+		box-shadow: 0 0 rem(25) transparentize($accent, 0.75);
+	}
+
+	.card__title a:focus {
+		background: $accent;
+		color: $accent-contrast;
+
+		&::after {
+			background-color: $accent-contrast;
+		}
+	}
+
+	&:focus-within .card__title a:focus {
+		background: unset;
+		color: $black;
+	}
+
+	@if $format {
+		.card__format {
+			background: $accent;
+			color: $accent-contrast;
+		}
+	} @else {
+		.card__format {
+			background: unset;
+			color: $black;
+		}
+	}
+}
