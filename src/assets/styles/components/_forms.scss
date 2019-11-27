@@ -114,8 +114,11 @@ select { /* stylelint-enable */
 
 	&:focus {
 		box-shadow: 0 0 0 rem(1) $red-500 inset;
-
 	}
+}
+
+.input-group--error label {
+	color: $red-500;
 }
 
 .input-group__error {
@@ -140,5 +143,6 @@ select { /* stylelint-enable */
 			fill: $off-white;
 		}
 	}
+
 }
 

@@ -2,19 +2,20 @@
 
 <div class="input-group">
 	<label for="{{ name }}">{{ label }}</label>
-	<p class="input-group__description">{{ description }}</p>
 	<textarea id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}"></textarea>
+	<p class="input-group__description">{{ description }}</p>
 </div>
 
 <div class="input-group input-group--error">
 	<label for="{{ name }}">{{ label }} (Error)</label>
-	<p class="input-group__error"><svg class="icon icon--error"><use xlink:href="/images/error.svg"/></svg>{{ error | safe }}</p>
 	<textarea id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}">{{ badValue }}</textarea>
+	<p class="input-group__error"><svg class="icon icon--error"><use xlink:href="/images/error.svg"/></svg>{{ error | safe }}</p>
+	<p class="input-group__description">{{ description }}</p>
 </div>
 
 
 <div class="input-group">
 	<label for="{{ name }}">{{ label }} (Disabled)</label>
-	<p class="input-group__description">{{ description }}</p>
 	<textarea id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}" disabled></textarea>
+	<p class="input-group__description">{{ description }}</p>
 </div>

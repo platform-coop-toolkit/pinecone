@@ -10,6 +10,7 @@
 	<label for="{{ name }}-2">{{ label }} (Error)</label>
 	<input id="{{ name }}" name="{{ name }}-2" placeholder="{{ placeholder }}" type="text" value="{{ badValue }}" />
 	<p class="input-group__error"><svg class="icon icon--error"><use xlink:href="/images/error.svg"/></svg>{{ error | safe }}</p>
+	<p class="input-group__description">{{ description }}</p>
 </div>
 
 <div class="input-group">
