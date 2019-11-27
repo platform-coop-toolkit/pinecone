@@ -81,6 +81,7 @@ input[type="search"] { /* stylelint-enable */
 		background-image: url("../images/close.svg");
 		background-position: center;
 		background-repeat: no-repeat;
+		background-size: rem(10) rem(10);
 		border-radius: 50%;
 		height: rem(24);
 		position: absolute;
