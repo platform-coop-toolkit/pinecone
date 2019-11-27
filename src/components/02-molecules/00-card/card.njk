@@ -23,7 +23,7 @@
 		</header>
 		{% if date %}
 			<p class="card__date">
-				{% if key === 'event' %}
+				{% if modifier === 'event' %}
 					<svg aria-hidden="true" class="icon icon--calendar"><use xlink:href="/images/calendar.svg"/></svg>{{ date }}
 				{% else %}
 					{{ date }}
