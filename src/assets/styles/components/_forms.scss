@@ -110,8 +110,12 @@ select { /* stylelint-enable */
 .input-group--error input[type="password"],
 .input-group--error textarea {
 	border-color: $red-500;
-	box-shadow: 0 0 0 rem(1) $red-500 inset;
 	color: $red-500;
+
+	&:focus {
+		box-shadow: 0 0 0 rem(1) $red-500 inset;
+
+	}
 }
 
 .input-group__error {
