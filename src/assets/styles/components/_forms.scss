@@ -75,6 +75,8 @@ input[type="search"] { /* stylelint-enable */
 	padding-left: rem(40);
 }
 
+// See: https://www.filamentgroup.com/lab/select-css.html
+
 /* stylelint-disable no-descending-specificity */
 select { /* stylelint-enable */
 	background-image: url("../images/chevron-s.svg");
