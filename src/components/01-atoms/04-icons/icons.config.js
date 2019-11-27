@@ -13,6 +13,7 @@ module.exports = {
 			'arrow-s',
 			'close',
 			'add',
+			'languages',
 			'location',
 			'calendar',
 			'search',

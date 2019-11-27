@@ -1,0 +1,348 @@
+nav {
+	height: rem(70);
+}
+
+.menu-toggle {
+	align-items: center;
+	background: transparent;
+	border: solid rem(3) transparent;
+	border-radius: 0;
+	color: $blue-500;
+	display: flex;
+	flex-direction: row;
+	font-family: $font-family-display;
+	font-size: rem(14);
+	font-weight: $font-weight-semibold;
+	height: rem(40);
+	margin: rem(16) rem(30) rem(14) 0;
+	padding: 0 rem(10);
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	svg {
+		margin-right: rem(12);
+
+		path {
+			fill: currentColor;
+		}
+	}
+
+	&:focus {
+		border-color: $blue-400;
+		color: $blue-400;
+	}
+
+	&[aria-expanded="true"] {
+		color: $white;
+		margin-right: rem(6);
+		padding: 0 rem(12);
+
+
+		svg {
+			margin-right: 0;
+		}
+	}
+}
+
+.menu {
+	background: $dark-mint-400;
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	padding-top: rem(70);
+
+	li {
+		border-top: solid rem(1) $dark-mint-500;
+		margin: 0;
+	}
+}
+
+[aria-expanded="false"] .icon--close {
+	display: none;
+}
+
+[aria-expanded="false"] + * {
+	display: none;
+}
+
+[aria-expanded="true"] .icon--open {
+	display: none;
+}
+
+[aria-expanded="true"] .menu-toggle__label {
+	@include visually-hidden();
+}
+
+.menu__item {
+	align-items: center;
+	background: $dark-mint-400;
+	border-bottom: 0;
+	border-left: solid rem(3) transparent;
+	border-radius: 0;
+	border-right: 0;
+	border-top: 0;
+	color: $off-white;
+	display: flex;
+	flex-direction: row;
+	font-family: $font-family-sans;
+	font-size: 1rem;
+	font-weight: $font-weight-bold;
+	justify-content: space-between;
+	line-height: 1.75;
+	margin: 0;
+	max-width: 100%;
+	padding: rem(16) rem(16) rem(14);
+	position: relative;
+	text-align: left;
+	text-decoration: none;
+	width: 100%;
+
+	/* stylelint-disable no-descending-specificity */
+	svg { /* stylelint-enable */
+		transition: transform 0.5s;
+
+		path {
+			fill: currentColor;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			transition: none;
+		}
+
+	}
+
+	&:hover {
+		background-color: $dark-mint-500;
+		border-left: solid rem(3) $red-400;
+	}
+
+	&:active {
+		background-color: $dark-mint-500;
+	}
+
+	&:focus {
+		background-color: $dark-mint-500;
+		border-left: solid rem(3) $red-400;
+		outline: 0;
+	}
+
+	&[aria-current] {
+		background-color: $blue-400;
+		border-left-color: $off-white;
+
+		&:hover {
+			background-color: $dark-mint-500;
+			border-left: solid rem(3) $red-400;
+		}
+
+		&:focus {
+			background-color: $dark-mint-500;
+			border-left: solid rem(3) $red-400;
+		}
+	}
+
+	&[aria-expanded="true"] svg {
+		transform: rotate(180deg);
+	}
+}
+
+.menu__submenu {
+	border-top: solid rem(1) $dark-mint-500;
+	list-style: none;
+	margin-top: 0;
+
+	li:first-child {
+		border-top: 0;
+	}
+}
+
+.menu__submenu .menu__item {
+	font-weight: $font-weight-normal;
+	padding-left: rem(40);
+}
+
+.menu__submenu-wrapper.current_page_item > .menu__item,
+.menu__submenu-wrapper.current_page_ancestor > .menu__item,
+.menu__submenu-wrapper.current-menu-ancestor > .menu__item {
+	background-color: $blue-400;
+	border-left-color: $off-white;
+
+	&:hover {
+		background-color: $dark-mint-500;
+		border-left: solid rem(3) $red-400;
+	}
+
+	&:focus {
+		background-color: $dark-mint-500;
+		border-left: solid rem(3) $red-400;
+	}
+}
+
+@include breakpoint-up(md) {
+	nav {
+		height: rem(109.5);
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.menu {
+		align-items: flex-end;
+		background: $white;
+		display: flex;
+		flex-direction: row;
+		height: rem(109.5);
+		padding-top: 0;
+		position: relative;
+
+		li {
+			border-top: 0;
+		}
+	}
+
+	[aria-expanded="false"] + .menu {
+		display: flex;
+	}
+
+	.menu__item {
+		background: transparent;
+		color: $blue-500;
+		font-size: 1rem;
+		font-weight: $font-weight-normal;
+		min-height: 0;
+		padding: rem(17) rem(16);
+
+		&::after {
+			background: transparent;
+			bottom: 0;
+			content: "";
+			height: rem(3);
+			left: 0;
+			margin-left: 1rem;
+			position: absolute;
+			width: calc(100% - 2rem);
+		}
+
+		&:hover {
+			background: transparent;
+			border-left-color: transparent;
+
+			&::after {
+				background: $blue-500;
+			}
+		}
+
+		&:focus {
+			background-color: $blue-500;
+			border-left-color: transparent;
+			color: $off-white;
+			outline: 0;
+		}
+
+		svg {
+			margin-left: rem(12);
+		}
+
+		&[aria-current] {
+			background: transparent;
+			border-left-color: transparent;
+			color: $dark-mint-500;
+
+			&::after {
+				background-color: $red-400;
+			}
+
+			&:hover {
+				background: $white;
+				border-left-color: transparent;
+
+				&::after {
+					background-color: $blue-500;
+				}
+			}
+
+			&:focus {
+				background-color: $blue-500;
+				border-left-color: transparent;
+				color: $off-white;
+
+				&::after {
+					background-color: $blue-500;
+				}
+			}
+		}
+	}
+
+	.menu__submenu {
+		border:
+			1px solid
+			$white;
+		border-bottom-left-radius: rem(3);
+		border-bottom-right-radius: rem(3);
+		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+		position: absolute;
+
+		.menu__item {
+			padding-left: rem(16);
+
+			&::after {
+				display: none;
+			}
+
+			&:hover {
+				background-color: $blue-500;
+				color: $off-white;
+			}
+
+			&[aria-current="page"] {
+				border-left: solid rem(3) $red-400;
+
+				&:focus {
+					background-color: $blue-500;
+					border-left-color: transparent;
+					color: $off-white;
+				}
+
+				&:hover {
+					background-color: $blue-500;
+					border-left-color: transparent;
+					color: $off-white;
+				}
+			}
+		}
+	}
+
+	.menu__submenu-wrapper.current_page_item > .menu__item,
+	.menu__submenu-wrapper.current_page_ancestor > .menu__item,
+	.menu__submenu-wrapper.current-menu-ancestor > .menu__item {
+		background: transparent;
+		border-left-color: transparent;
+		color: $dark-mint-500;
+
+		&::after {
+			background-color: $red-400;
+		}
+
+		&:hover {
+			background: $white;
+			border-left-color: transparent;
+
+			&::after {
+				background-color: $blue-500;
+			}
+		}
+
+		&:focus {
+			background-color: $blue-500;
+			border-left-color: transparent;
+			color: $off-white;
+
+			&::after {
+				background-color: $blue-500;
+			}
+		}
+	}
+}
