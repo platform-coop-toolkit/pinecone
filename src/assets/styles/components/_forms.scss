@@ -21,7 +21,8 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="search"] {
+input[type="search"],
+select {
 	height: rem(40);
 	max-width: rem(268);
 }
@@ -36,8 +37,11 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="search"],
-textarea {
+textarea,
+select {
+	-moz-appearance: none;
 	-webkit-appearance: none;
+	appearance: none;
 	border: solid rem(1) $grey-500;
 	border-radius: rem(3);
 	display: block;
@@ -54,7 +58,7 @@ textarea {
 	&:focus {
 		border-color: $blue-500;
 		box-shadow: 0 0 0 rem(1) $blue-500 inset;
-		outline: 0;
+		outline: none;
 	}
 
 	&[disabled] {
@@ -69,6 +73,28 @@ input[type="search"] { /* stylelint-enable */
 	background-position: rem(14) center;
 	background-repeat: no-repeat;
 	padding-left: rem(40);
+}
+
+/* stylelint-disable no-descending-specificity */
+select { /* stylelint-enable */
+	background-image: url("../images/chevron-s.svg");
+	background-position: calc(100% - #{rem(16)}) center;
+	background-repeat: no-repeat;
+	padding: rem(8) rem(40) rem(6) rem(10);
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+	}
+
+	/* stylelint-disable no-descending-specificity */
+	&::-moz-focus-inner { /* stylelint-enable */
+		outline: none;
+	}
 }
 
 .input-group__description {

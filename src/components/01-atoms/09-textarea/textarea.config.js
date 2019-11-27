@@ -1,5 +1,6 @@
 module.exports = {
 	title: 'Text Area',
+	label: 'Text Area',
 	status: 'wip',
 	context: {
 		inputTitle: 'Text Areas',
