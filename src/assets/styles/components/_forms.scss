@@ -1,12 +1,14 @@
 .input-group {
 	display: block;
+	position: relative;
+	width: auto;
 }
 
 .input-group + .input-group {
 	margin-top: rem(60);
 }
 
-.input-group * + * {
+.input-group > * + * {
 	margin-top: rem(12);
 }
 
@@ -18,7 +20,8 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="search"] {
 	height: rem(40);
 	max-width: rem(268);
 }
@@ -32,7 +35,9 @@ textarea {
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="search"],
 textarea {
+	-webkit-appearance: none;
 	border: solid rem(1) $grey-500;
 	border-radius: rem(3);
 	display: block;
@@ -49,12 +54,21 @@ textarea {
 	&:focus {
 		border-color: $blue-500;
 		box-shadow: 0 0 0 rem(1) $blue-500 inset;
+		outline: 0;
 	}
 
 	&[disabled] {
 		background-color: $grey-200;
 		border-color: $grey-400;
 	}
+}
+
+/* stylelint-disable no-descending-specificity */
+input[type="search"] { /* stylelint-enable */
+	background-image: url("../images/search.svg");
+	background-position: rem(14) center;
+	background-repeat: no-repeat;
+	padding-left: rem(40);
 }
 
 .input-group__description {
