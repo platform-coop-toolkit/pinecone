@@ -1,6 +1,5 @@
 module.exports = {
 	title: 'Colors',
-	status: 'wip',
 	context: {
 		colors: {
 			brand: [

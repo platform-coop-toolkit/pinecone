@@ -1,0 +1,8 @@
+<h1>{{ tagsTitle }}</h1>
+<ul class="tags">
+	{% for tag in tags %}
+	<li class="tag">
+		<a class="tag__link" href="#{{ tag }}">{{ tag }}</a>
+	</li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,52 @@
+.tags {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	margin-left: rem(-6);
+	margin-right: rem(-6);
+}
+
+.tag {
+	margin-left: rem(6);
+	margin-right: rem(6);
+	margin-top: rem(12);
+}
+
+.tag__link {
+	background: $white;
+	border: solid rem(1) $blue-500;
+	border-radius: rem(3);
+	color: $blue-500;
+	display: inline-block;
+	font-family: $font-family-sans;
+	font-size: rem(14);
+	font-weight: $font-weight-semibold;
+	height: rem(30);
+	max-width: rem(266);
+	padding: rem(4) rem(8) rem(2);
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+
+	&:visited {
+		border-color: $green-400;
+	}
+
+	&:hover {
+		background: $grey-200;
+	}
+
+	&:active {
+		background: $white;
+	}
+
+	&:focus {
+		background: $grey-200;
+		box-shadow:
+			0 0 0 rem(1) $blue-500 inset,
+			0 0 0 rem(2) $white,
+			0 0 0 rem(4) $blue-500;
+		outline: none;
+	}
+}

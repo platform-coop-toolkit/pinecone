@@ -1,6 +1,5 @@
 module.exports = {
 	title: 'Paragraphs',
-	status: 'wip',
 	context: {
 		normalHeading: 'Standard Paragraphs',
 		greyHeading: 'Alternate Paragraphs',
