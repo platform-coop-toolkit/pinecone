@@ -76,6 +76,10 @@
 
 .card header {
 	position: relative;
+
+	+ * {
+		margin-top: rem(6);
+	}
 }
 
 .card__title {
@@ -117,7 +121,7 @@
 .card__tags {
 	color: $grey-500;
 	font-size: rem(14);
-	margin-top: rem(6);
+	margin-top: rem(2);
 }
 
 .card__date,
@@ -130,10 +134,6 @@
 			fill: currentColor;
 		}
 	}
-}
-
-.card__byline + .card__locality {
-	margin-top: rem(6);
 }
 
 .card__tags {
