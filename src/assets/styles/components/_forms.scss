@@ -73,6 +73,21 @@ input[type="search"] { /* stylelint-enable */
 	background-position: rem(14) center;
 	background-repeat: no-repeat;
 	padding-left: rem(40);
+	position: relative;
+
+	&::-webkit-search-cancel-button {
+		-webkit-appearance: none;
+		background: $grey-300;
+		background-image: url("../images/close.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		height: rem(24);
+		position: absolute;
+		right: rem(10);
+		top: rem(7);
+		width: rem(24);
+	}
 }
 
 // See: https://www.filamentgroup.com/lab/select-css.html
