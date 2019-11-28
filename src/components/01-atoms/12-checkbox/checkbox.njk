@@ -1,7 +1,6 @@
 <h1>{{ inputTitle }}</h1>
 <div class="input-group">
 	{% for value, label in checkboxes %}
-	<p><input id="{{ value }}" type="checkbox" name="checkbox[{{ value }}]" /><label for="{{ value }}">{{ label }}</label></p>
+	<p><input id="{{ value }}" type="checkbox" name="checkbox[{{ value }}]"{% if value === '1' %} checked{% elseif value=== '4' %} disabled{% endif %} /><label for="{{ value }}">{{ label }}</label></p>
 	{% endfor %}
-	<p><input id="4" type="checkbox" name="checkbox[4]" disabled /><label for="4">Option 4</label></p>
 </div>
