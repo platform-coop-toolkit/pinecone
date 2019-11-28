@@ -6,6 +6,7 @@
 	color: $white;
 	display: block;
 	font-family: $font-family-sans;
+	font-size: 1rem;
 	font-weight: $font-weight-semibold;
 	height: rem(38);
 	max-width: rem(266);
@@ -38,6 +39,18 @@
 		path {
 			fill: currentColor;
 		}
+	}
+}
+
+[type="submit"] {
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 $white;
+	}
+
+	/* stylelint-disable no-descending-specificity */
+	&::-moz-focus-inner { /* stylelint-enable */
+		outline: none;
 	}
 }
 

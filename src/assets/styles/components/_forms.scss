@@ -1,0 +1,261 @@
+.input-group {
+	display: block;
+	position: relative;
+	width: auto;
+}
+
+.input-group + .input-group {
+	margin-top: rem(60);
+}
+
+.input-group > * + * {
+	margin-top: rem(12);
+}
+
+label {
+	font-family: $font-family-serif;
+	font-weight: $font-weight-bold;
+	line-height: (24 / 16);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	@include visually-hidden();
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+	font-weight: $font-weight-normal;
+	padding-left: rem(8);
+}
+
+input[type="radio"] + label::before,
+input[type="checkbox"] + label::before {
+	border: rem(1) solid $grey-500;
+	border-radius: rem(3);
+	content: "";
+	display: block;
+	float: left;
+	height: rem(18);
+	margin-top: rem(1);
+	transition: border 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
+	width: rem(18);
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}
+
+input[type="radio"] + label::before {
+	border-radius: 100%;
+}
+
+input[type="radio"]:hover + label::before,
+input[type="checkbox"]:hover + label::before {
+	border-color: $blue-400;
+	box-shadow: 0 0 0 rem(1) $blue-400 inset;
+}
+
+input[type="radio"]:focus + label::before,
+input[type="checkbox"]:focus + label::before {
+	border-color: $blue-400;
+	box-shadow:
+		0 0 0 rem(2) $white,
+		0 0 0 rem(4) $blue-400,
+		0 0 0 rem(1) $blue-400 inset;
+}
+
+input[type="radio"]:checked + label::before {
+	background: $blue-400;
+	border-color: $blue-400;
+	box-shadow:
+		0 0 0 rem(1) $blue-400 inset,
+		0 0 0 rem(3) $white inset;
+}
+
+input[type="checkbox"]:checked + label::before {
+	background: $blue-400;
+	background-image: url("../images/check.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	border-color: $blue-400;
+	box-shadow: none;
+}
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+	+ label {
+		color: $grey-400;
+
+		&::before {
+			border-color: $grey-400;
+		}
+	}
+
+	&:hover {
+		+ label::before {
+			box-shadow: none;
+		}
+	}
+}
+
+input[type="radio"]:checked:focus + label::before,
+input[type="checkbox"]:checked:focus + label::before {
+	box-shadow:
+		0 0 0 rem(2) $white,
+		0 0 0 rem(4) $blue-400,
+		0 0 0 rem(1) $blue-400 inset,
+		0 0 0 rem(3) $white inset;
+}
+
+input[type="checkbox"]:checked:focus + label::before {
+	box-shadow:
+		0 0 0 rem(2) $white,
+		0 0 0 rem(4) $blue-400;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select {
+	height: rem(40);
+	max-width: rem(268);
+}
+
+textarea {
+	height: rem(118);
+	max-width: rem(367);
+	resize: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: solid rem(1) $grey-500;
+	border-radius: rem(3);
+	display: block;
+	font-family: $font-family-serif;
+	font-size: rem(16);
+	line-height: (24 / 16);
+	padding: rem(10) rem(10) rem(7);
+	width: 100%;
+
+	&:hover {
+		border-color: $blue-400;
+	}
+
+	&:focus {
+		border-color: $blue-500;
+		box-shadow: 0 0 0 rem(1) $blue-500 inset;
+		outline: none;
+	}
+
+	&[disabled] {
+		background-color: $grey-200;
+		border-color: $grey-400;
+	}
+}
+
+/* stylelint-disable no-descending-specificity */
+input[type="search"] { /* stylelint-enable */
+	background-image: url("../images/search.svg");
+	background-position: rem(14) center;
+	background-repeat: no-repeat;
+	padding-left: rem(40);
+	position: relative;
+
+	&::-webkit-search-cancel-button {
+		-webkit-appearance: none;
+		background: $grey-300;
+		background-image: url("../images/close.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: rem(10) rem(10);
+		border-radius: 50%;
+		height: rem(24);
+		position: absolute;
+		right: rem(10);
+		top: rem(7);
+		width: rem(24);
+	}
+}
+
+// See: https://www.filamentgroup.com/lab/select-css.html
+
+/* stylelint-disable no-descending-specificity */
+select { /* stylelint-enable */
+	background: $white;
+	background-image: url("../images/chevron-s.svg");
+	background-position: calc(100% - #{rem(16)}) center;
+	background-repeat: no-repeat;
+	padding: rem(8) rem(40) rem(6) rem(10);
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+	}
+
+	/* stylelint-disable no-descending-specificity */
+	&::-moz-focus-inner { /* stylelint-enable */
+		outline: none;
+	}
+}
+
+.input-group__description {
+	font-size: rem(14);
+	font-style: italic;
+	line-height: (24 / 14);
+}
+
+.input-group--error input[type="text"],
+.input-group--error input[type="email"],
+.input-group--error input[type="password"],
+.input-group--error textarea {
+	border-color: $red-500;
+	color: $red-500;
+
+	&:focus {
+		box-shadow: 0 0 0 rem(1) $red-500 inset;
+	}
+}
+
+.input-group--error label {
+	color: $red-500;
+}
+
+.input-group__error {
+	color: $red-500;
+	display: flex;
+	flex-direction: row;
+	font-family: $font-family-sans;
+	font-size: rem(14);
+	font-weight: $font-weight-semibold;
+	line-height: (20 / 14);
+
+	svg {
+		height: 1rem;
+		margin-right: rem(6);
+
+		.triangle {
+			fill: currentColor;
+			stroke: currentColor;
+		}
+
+		.exclamation {
+			fill: $off-white;
+		}
+	}
+
+}
+
