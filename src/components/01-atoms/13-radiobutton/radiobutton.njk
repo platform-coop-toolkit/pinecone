@@ -1,0 +1,7 @@
+<h1>{{ inputTitle }}</h1>
+<div class="input-group">
+	{% for value, label in radioButtons %}
+	<p><input id="{{ value }}" type="radio" name="radio" value="{{ value }}" /><label for="{{ value }}">{{ label }}</label></p>
+	{% endfor %}
+	<p><input id="4" type="radio" name="radio" value="4" disabled /><label for="4">Option 4</label></p>
+</div>

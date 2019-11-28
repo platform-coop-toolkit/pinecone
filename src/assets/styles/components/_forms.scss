@@ -18,6 +18,102 @@ label {
 	line-height: (24 / 16);
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+	@include visually-hidden();
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+	font-weight: $font-weight-normal;
+	padding-left: rem(8);
+}
+
+input[type="radio"] + label::before,
+input[type="checkbox"] + label::before {
+	border: rem(1) solid $grey-500;
+	border-radius: rem(3);
+	content: "";
+	display: block;
+	float: left;
+	height: rem(18);
+	margin-top: rem(1);
+	transition: border 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
+	width: rem(18);
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}
+
+input[type="radio"] + label::before {
+	border-radius: 100%;
+}
+
+input[type="radio"]:hover + label::before,
+input[type="checkbox"]:hover + label::before {
+	border-color: $blue-400;
+	box-shadow: 0 0 0 rem(1) $blue-400 inset;
+}
+
+input[type="radio"]:focus + label::before,
+input[type="checkbox"]:focus + label::before {
+	border-color: $blue-400;
+	box-shadow:
+		0 0 0 rem(2) $white,
+		0 0 0 rem(4) $blue-400,
+		0 0 0 rem(1) $blue-400 inset;
+}
+
+input[type="radio"]:checked + label::before {
+	background: $blue-400;
+	border-color: $blue-400;
+	box-shadow:
+		0 0 0 rem(1) $blue-400 inset,
+		0 0 0 rem(3) $white inset;
+}
+
+input[type="checkbox"]:checked + label::before {
+	background: $blue-400;
+	background-image: url("../images/check.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	border-color: $blue-400;
+	box-shadow: none;
+}
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+	+ label {
+		color: $grey-400;
+
+		&::before {
+			border-color: $grey-400;
+		}
+	}
+
+	&:hover {
+		+ label::before {
+			box-shadow: none;
+		}
+	}
+}
+
+input[type="radio"]:checked:focus + label::before,
+input[type="checkbox"]:checked:focus + label::before {
+	box-shadow:
+		0 0 0 rem(2) $white,
+		0 0 0 rem(4) $blue-400,
+		0 0 0 rem(1) $blue-400 inset,
+		0 0 0 rem(3) $white inset;
+}
+
+input[type="checkbox"]:checked:focus + label::before {
+	box-shadow:
+		0 0 0 rem(2) $white,
+		0 0 0 rem(4) $blue-400;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],

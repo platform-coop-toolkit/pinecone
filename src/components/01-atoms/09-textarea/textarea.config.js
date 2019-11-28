@@ -3,7 +3,7 @@ module.exports = {
 	label: 'Text Area',
 	status: 'wip',
 	context: {
-		inputTitle: 'Text Areas',
+		inputTitle: 'Text Area',
 		label: 'Text Area',
 		name: 'text',
 		placeholder: 'Content goes here.',
