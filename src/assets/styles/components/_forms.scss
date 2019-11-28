@@ -191,6 +191,7 @@ input[type="search"] { /* stylelint-enable */
 
 /* stylelint-disable no-descending-specificity */
 select { /* stylelint-enable */
+	background: $white;
 	background-image: url("../images/chevron-s.svg");
 	background-position: calc(100% - #{rem(16)}) center;
 	background-repeat: no-repeat;
