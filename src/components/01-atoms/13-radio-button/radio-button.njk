@@ -1,6 +1,6 @@
 <h1>{{ inputTitle }}</h1>
-<div class="input-group">
+<ul class="input-group">
 	{% for value, label in radioButtons %}
-	<p><input id="{{ value }}" type="radio" name="radio" value="{{ value }}"{% if value === '1' %} checked{% elseif value=== '4' %} disabled{% endif %} /><label for="{{ value }}">{{ label }}</label></p>
+	<li><input id="{{ value }}" type="radio" name="radio" value="{{ value }}"{% if value === '1' %} checked{% elseif value=== '4' %} disabled{% endif %} /><label for="{{ value }}">{{ label }}</label></li>
 	{% endfor %}
-</div>
+</ul>
