@@ -7,7 +7,7 @@
 		<link rel="icon" type="image/ico" href="{{ '/themes/mandelbrot/favicon.ico' | path }}" >
 		<title>{{ _target.title }} | Pinecone</title>
 	</head>
-	<body>
+	<body{% if _target.context.modifier %} class="{{ _target.context.modifier }}"{% endif %}>
 		<header role="banner"></header>
 		<main>
 			<div class="content">

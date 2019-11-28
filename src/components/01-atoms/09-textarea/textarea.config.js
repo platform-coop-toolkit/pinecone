@@ -10,5 +10,13 @@ module.exports = {
 		description: 'Description for this text area.',
 		badValue: 'Incorrect input!',
 		error: 'Sorry, that appears to be incorrect.'
-	}
+	},
+	variants: [
+		{
+			name: 'Light on Dark',
+			context: {
+				modifier: 'has-dark-mint-500-background-color'
+			}
+		}
+	]
 };

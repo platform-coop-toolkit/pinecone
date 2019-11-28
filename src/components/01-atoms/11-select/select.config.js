@@ -11,5 +11,13 @@ module.exports = {
 			2: 'Option Two',
 			3: 'Option Three'
 		}
-	}
+	},
+	variants: [
+		{
+			name: 'Light on Dark',
+			context: {
+				modifier: 'has-dark-mint-500-background-color'
+			}
+		}
+	]
 };

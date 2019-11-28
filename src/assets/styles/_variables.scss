@@ -19,7 +19,8 @@ $yellow-500: #face00;
 $yellow-400: #fceeb0;
 $dark-mint-500: #203131;
 $dark-mint-400: #294040;
-$grey-500: #585850;
+$grey-600: #585850;
+$grey-500: #707070;
 $grey-400: #b2b2a7;
 $grey-300: #d5d5cf;
 $grey-200: #f0efef;
@@ -55,7 +56,9 @@ $colors-dark: (
 	"red-500": $red-500,
 	"dark-mint-500": $dark-mint-500,
 	"dark-mint-400": $dark-mint-400,
-	"grey-500": $grey-500
+	"grey-500": $grey-500,
+	"grey-600": $grey-600
+
 );
 
 /* Typography */
