@@ -8,7 +8,7 @@ module.exports = {
 	variants: [
 		{
 			name: 'Light on Dark',
-			config: {
+			context: {
 				modifier: 'has-dark-mint-500-background-color'
 			}
 		}

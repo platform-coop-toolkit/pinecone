@@ -34,8 +34,8 @@
 	svg {
 		height: 1em;
 
-		rect {
-			fill: $blue-500;
+		line {
+			stroke: currentColor;
 		}
 	}
 }
@@ -45,16 +45,22 @@
 	border: solid rem(3) $blue-500;
 	color: $white;
 
-	svg rect {
-		fill: $white;
+	svg {
+		line {
+			stroke: $white;
+		}
+
+		#vert {
+			display: none;
+		}
 	}
 }
 
 .accordion__control:hover {
 	color: $blue-400;
 
-	svg rect {
-		fill: $blue-300;
+	svg line {
+		stroke: $blue-300;
 	}
 
 	&::before {
@@ -68,16 +74,16 @@
 	box-shadow: 0 0 0 rem(3) $white inset;
 	color: $white;
 
-	svg rect {
-		fill: $white;
+	svg line {
+		stroke: currentColor;
 	}
 }
 
 .accordion__control[aria-expanded="true"]:hover {
 	color: $white;
 
-	svg rect {
-		fill: $white;
+	svg line {
+		stroke: currentColor;
 	}
 
 	&::before {
@@ -86,13 +92,58 @@
 }
 
 .accordion__control:focus:hover {
-	svg rect {
-		fill: $white;
-	}
+	color: $white;
 
 	&::before {
 		display: none;
 	}
+}
+
+.has-dark-mint-500-background-color {
+	.accordion__heading {
+		color: $off-white;
+
+		&::before {
+			background: $off-white;
+		}
+	}
+
+	.accordion__control[aria-expanded="true"] {
+		background: $blue-200;
+		border-color: $blue-200;
+		color: $dark-mint-500;
+
+		svg line {
+			stroke: currentColor;
+		}
+
+		&::before {
+			background: $blue-200;
+		}
+	}
+
+	.accordion__control:hover::before {
+		background-color: $blue-300;
+	}
+
+	.accordion__control:focus {
+		background: $blue-200;
+		border-color: $blue-200;
+		box-shadow: 0 0 0 rem(3) $dark-mint-500 inset;
+		color: $dark-mint-500;
+
+		svg line {
+			stroke: $dark-mint-500;
+		}
+
+		&::before {
+			background: $blue-200;
+		}
+	}
+}
+
+.accordion--expanded + .accordion .accordion__control::before {
+	display: none;
 }
 
 .accordion:focus-within + .accordion .accordion__heading::before,
@@ -112,4 +163,9 @@
 	margin-top: 0;
 	padding: rem(12) rem(12) rem(14);
 	width: calc(100% + #{rem(24)});
+}
+
+.has-dark-mint-500-background-color .accordion__control[aria-expanded="true"] + .accordion__content {
+	background: $blue-200;
+	color: $dark-mint-500;
 }

@@ -86,31 +86,43 @@ Array.prototype.forEach.call( cards, card => {
 // Props Heydon Pickering (https://inclusive-components.design/collapsible-sections/)
 
 ( function() {
-	// Get all the <h2> headings
-	const headings = document.querySelectorAll( '.accordion__heading' );
+	const accordionGroups = document.querySelectorAll( '.accordions' );
+	Array.prototype.forEach.call( accordionGroups, accordionGroup => {
+		const accordions = accordionGroup.querySelectorAll( '.accordion' );
+		const headings = accordionGroup.querySelectorAll( '.accordion__heading' );
 
-	Array.prototype.forEach.call( headings, heading => {
-		const contents = heading.nextElementSibling;
-		const btn = document.createElement( 'button' );
-		btn.setAttribute( 'class', 'accordion__control' );
-		btn.setAttribute( 'aria-expanded', 'false' );
-		btn.innerHTML = `
-			${heading.textContent}
-			<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M17,11a1,1,0,0,1,0,2H13v4a1,1,0,0,1-2,0V13H7a1,1,0,0,1,0-2h4V7a1,1,0,0,1,2,0v4Z" transform="translate(-6 -6)" fill="currentColor" fill-rule="evenodd"/></svg>
-		`;
-		heading.parentNode.insertBefore( btn, heading.nextElementSibling );
-		heading.parentNode.removeChild( heading );
+		Array.prototype.forEach.call( headings, heading => {
+			const accordion = heading.parentNode;
+			const contents = heading.nextElementSibling;
+			const btn = document.createElement( 'button' );
+			btn.setAttribute( 'class', 'accordion__control' );
+			btn.setAttribute( 'aria-expanded', 'false' );
+			btn.innerHTML = `
+				${heading.textContent}
+				<svg aria-hidden="true" width="13" height="13" viewBox="0 0 13 13"><g transform="translate(-5721 -543)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"><line x2="10" transform="translate(5722.5 549.5)"/><line id="vert" y2="10" transform="translate(5727.5 544.5)"/></g></svg>
+			`;
+			heading.parentNode.insertBefore( btn, heading.nextElementSibling );
+			heading.parentNode.removeChild( heading );
 
-		contents.hidden = true;
+			contents.hidden = true;
 
-		btn.onclick = () => {
-			// Cast the state as a boolean
-			const expanded = 'true' === btn.getAttribute( 'aria-expanded' ) || false;
-
-			// Switch the state
-			btn.setAttribute( 'aria-expanded', !expanded );
-			// Switch the content's visibility
-			contents.hidden = expanded;
-		};
+			btn.onclick = () => {
+				const expanded = 'true' === btn.getAttribute( 'aria-expanded' ) || false;
+				Array.prototype.forEach.call( accordions, accordion => {
+					const contents = accordion.querySelector( '.accordion__content' );
+					const btn = accordion.querySelector( '.accordion__control' );
+					accordion.classList.remove( 'accordion--expanded' );
+					contents.hidden = true;
+					btn.setAttribute( 'aria-expanded', false );
+				} );
+				btn.setAttribute( 'aria-expanded', !expanded );
+				if ( expanded ) {
+					accordion.classList.remove( 'accordion--expanded' );
+				} else {
+					accordion.classList.add( 'accordion--expanded' );
+				}
+				contents.hidden = expanded;
+			};
+		} );
 	} );
 } )();
