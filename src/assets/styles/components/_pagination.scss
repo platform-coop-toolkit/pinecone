@@ -1,0 +1,104 @@
+.pagination {
+	margin-top: rem(60);
+	padding-bottom: rem(80);
+	text-align: center;
+}
+
+.pagination .page-numbers {
+	align-items: center;
+	border: solid rem(2) transparent;
+	border-radius: 50%;
+	color: $blue-500;
+	display: inline-block;
+	display: inline-flex;
+	font-family: $font-family-sans;
+	font-weight: $font-weight-normal;
+	height: rem(40);
+	height: rem(39.25);
+	justify-content: center;
+	margin: 0;
+	padding: rem(6) 0;
+	text-underline-offset: rem(8);
+	width: rem(39.25);
+
+	&:focus {
+		background-color: $off-white;
+		border-color: $blue-500;
+		box-shadow:
+			0 0 0 rem(2) $white inset,
+			0 0 0 rem(4) $blue-500 inset;
+		font-weight: $font-weight-bold;
+		outline: 0;
+		text-decoration: none;
+	}
+
+	&:hover {
+		font-weight: $font-weight-bold;
+		text-decoration-color: $red-400;
+		text-decoration-thickness: rem(2);
+	}
+
+	&:active {
+		color: $blue-400;
+		text-decoration-color: $blue-400;
+	}
+
+	&:visited {
+		color: $green-400;
+		text-decoration-color: $green-300;
+	}
+
+	&.current {
+		background: $blue-500;
+		color: $white;
+
+		&:hover {
+			font-weight: $font-weight-normal;
+		}
+	}
+
+	&.dots:hover {
+		font-weight: $font-weight-normal;
+	}
+
+	svg * {
+		fill: currentColor;
+	}
+
+	+ .page-numbers {
+		margin-left: rem(3);
+	}
+}
+
+.has-dark-mint-500-background-color {
+	.pagination .page-numbers {
+		color: $off-white;
+
+		&:focus {
+			background-color: $black;
+			border-color: $off-white;
+			box-shadow:
+				0 0 0 rem(2) $black inset,
+				0 0 0 rem(4) $off-white inset;
+		}
+
+		&:hover {
+			text-decoration-color: $red-400;
+		}
+
+		&:active {
+			color: $blue-200;
+			text-decoration-color: $blue-200;
+		}
+
+		&:visited {
+			color: $green-200;
+			text-decoration-color: $green-300;
+		}
+
+		&.current {
+			background: $off-white;
+			color: $black;
+		}
+	}
+}
