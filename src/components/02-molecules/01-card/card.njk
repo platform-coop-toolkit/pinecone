@@ -15,6 +15,10 @@
 					{% if modifier === 'resource' %}
 						<svg aria-hidden="true" class="icon icon--toolbox"><use xlink:href="/images/toolbox.svg"/></svg>
 					{% endif %}{{ format }}</span>{% endif %}
+			{% if language %}
+			<span class="card__sep"> &middot; </span>
+			<span class="card__language">{{ language }}</span>
+			{% endif %}
 			{% if link %}
 				<h2 id="{{ modifier }}-{{ id }}" class="card__title" >
 					<a {% if externalLink %}rel="external" {% endif %}href="{{ link }}">{{ title | safe }}</a>

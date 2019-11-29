@@ -20,7 +20,8 @@ module.exports = {
 				locality: 'France',
 				topics: ['Commons', 'Policy'],
 				topicCount: 4,
-				link: 'resource'
+				link: 'resource',
+				language: 'English'
 			}
 		},
 		{
