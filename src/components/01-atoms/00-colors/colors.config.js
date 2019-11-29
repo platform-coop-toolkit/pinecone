@@ -36,6 +36,11 @@ module.exports = {
 					hex: '#c5fdf9'
 				},
 				{
+					color: 'blue-150',
+					contrast: 'aaa',
+					hex: '#c5d1ce'
+				},
+				{
 					color: 'blue-100',
 					contrast: 'aaa',
 					hex: '#e3eae8'
@@ -103,6 +108,11 @@ module.exports = {
 				},
 			],
 			shades: [
+				{
+					color: 'true-black',
+					contrast: 'aaa',
+					hex: '#000'
+				},
 				{
 					color: 'dark-mint-500',
 					contrast: 'aaa',
