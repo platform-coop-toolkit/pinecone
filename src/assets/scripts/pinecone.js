@@ -96,10 +96,7 @@ Array.prototype.forEach.call( cards, card => {
 		btn.setAttribute( 'aria-expanded', 'false' );
 		btn.innerHTML = `
 			${heading.textContent}
-		  	<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-				<rect class="vert" height="8" width="2" y="1" x="4"/>
-				<rect height="2" width="8" y="4" x="1"/>
-		  	</svg>
+			<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M17,11a1,1,0,0,1,0,2H13v4a1,1,0,0,1-2,0V13H7a1,1,0,0,1,0-2h4V7a1,1,0,0,1,2,0v4Z" transform="translate(-6 -6)" fill="currentColor" fill-rule="evenodd"/></svg>
 		`;
 		heading.parentNode.insertBefore( btn, heading.nextElementSibling );
 		heading.parentNode.removeChild( heading );
