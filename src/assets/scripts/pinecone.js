@@ -99,7 +99,7 @@ Array.prototype.forEach.call( cards, card => {
 			btn.setAttribute( 'aria-expanded', 'false' );
 			btn.innerHTML = `
 				${heading.textContent}
-				<svg aria-hidden="true" width="13" height="13" viewBox="0 0 13 13"><g transform="translate(-5721 -543)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"><line x2="10" transform="translate(5722.5 549.5)"/><line id="vert" y2="10" transform="translate(5727.5 544.5)"/></g></svg>
+				<svg aria-hidden="true" width="13" height="13" viewBox="0 0 13 13"><g transform="translate(-5721 -543)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"><line x2="10" transform="translate(5722.5 549.5)"/><line class="vert" y2="10" transform="translate(5727.5 544.5)"/></g></svg>
 			`;
 			heading.parentNode.insertBefore( btn, heading.nextElementSibling );
 			heading.parentNode.removeChild( heading );
