@@ -12,11 +12,6 @@ jobs:
         with:
           urls: |
             https://deploy-preview-$PR_NUMBER--pinecone.netlify.com/components/preview/menu--default.html
-          temporaryPublicStorage: true
+          temporaryPublicStorage: 'true'
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
-      - name: Save results
-        uses: actions/upload-artifact@v1
-        with:
-          name: lighthouse-results
-          path: '.lighthouseci'
