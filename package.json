@@ -44,6 +44,7 @@
       "eslint"
     ]
   },
+  "main": "src/assets/scripts/Pinecone/index.js",
   "engines": {
     "node": ">=10.16.3"
   },
