@@ -16,5 +16,8 @@
 		</main>
 		<footer></footer>
 		<script src="{{ '/scripts/pinecone.js' | path }}"></script>
+		{% if _target.context.scriptCall %}
+		<script>{{ _target.context.scriptCall }}</script>
+		{% endif %}
 	</body>
 </html>

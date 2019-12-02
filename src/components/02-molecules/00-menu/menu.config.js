@@ -2,6 +2,7 @@ module.exports = {
 	title: 'Menus',
 	status: 'wip',
 	context: {
+		scriptCall: 'window.pinecone.menu();',
 		menuTitle: 'Menu',
 		menuItems:  {
 			'menu-item-1': {

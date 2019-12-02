@@ -44,15 +44,15 @@
       "eslint"
     ]
   },
+  "main": "src/assets/scripts/Pinecone/index.js",
   "engines": {
     "node": ">=10.16.3"
   },
-  "dependencies": {
-    "@frctl/fractal": "^1.2.0",
-    "@frctl/nunjucks": "^2.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@10up/eslint-config": "^1.0.9",
+    "@frctl/fractal": "^1.2.0",
+    "@frctl/nunjucks": "^2.0.1",
     "babel-eslint": "^10.0.3",
     "cross-env": "^6.0.3",
     "eslint": "^6.7.2",
