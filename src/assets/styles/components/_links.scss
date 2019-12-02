@@ -7,8 +7,8 @@ a:not([class]) {
 	padding-top: rem(4);
 	text-decoration: underline;
 	text-decoration-color: $blue-400;
-	text-decoration-thickness: 1px;
-	text-underline-offset: 3px;
+	text-decoration-thickness: rem(1);
+	text-underline-offset: rem(3);
 
 	@supports (mask: url("../images/add.svg")) {
 		&::after {
@@ -37,7 +37,7 @@ a:not([class]) {
 
 	&:hover {
 		text-decoration-color: $blue-300;
-		text-decoration-thickness: 2px;
+		text-decoration-thickness: rem(2);
 	}
 
 	&:active {
