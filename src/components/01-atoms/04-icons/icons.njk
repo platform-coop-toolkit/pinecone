@@ -19,26 +19,27 @@
 		fill: #fff;
 	}
 </style>
+{% macro inlineSVG(slug, width, height) %}
+<svg aria-hidden="true" viewbox="0 0 {{ width }} {{ height }}"><use xlink:href="/images/{{ slug }}.svg#{{ slug }}" /></svg>
+{% endmacro %}
 <h1>{{ iconsTitle }}</h1>
 <div class="icons">
 	{% for icon in icons %}
-		<svg class="icon icon--{{ icon }}">
-			<use xlink:href="/images/{{ icon }}.svg"/>
-		</svg>
+		{{ inlineSVG(icon, 12, 12) }}
 	{% endfor %}
 </div>
 <div class="icons has-blue-500-color">
 	{% for icon in icons %}
-		<svg class="icon icon--{{ icon }}">
-			<use xlink:href="/images/{{ icon }}.svg"/>
+		<svg aria-hidden="true" class="icon icon--{{ icon }}">
+			<use xlink:href="/images/icons.svg#{{ icon }}"/>
 		</svg>
 	{% endfor %}
 </div>
 
 <div class="icons has-dark-mint-500-background-color">
 	{% for icon in icons %}
-		<svg class="icon icon--{{ icon }}">
-			<use xlink:href="/images/{{ icon }}.svg"/>
+		<svg aria-hidden="true" class="icon icon--{{ icon }}">
+			<use xlink:href="/images/icons.svg#{{ icon }}"/>
 		</svg>
 	{% endfor %}
 </div>

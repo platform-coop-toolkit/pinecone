@@ -4,20 +4,20 @@ module.exports = {
 	context: {
 		iconsTitle: 'Icons',
 		icons: [
-			'chevron-s',
-			'chevron-w',
-			'chevron-e',
-			'chevron-n',
-			'arrow-ne',
-			'arrow-n',
-			'arrow-s',
-			'close',
 			'add',
-			'languages',
-			'location',
-			'calendar',
+			'arrow-n',
+			// 'arrow-ne',
+			// 'arrow-s',
+			// 'calendar',
+			// 'chevron-e',
+			// 'chevron-n',
+			// 'chevron-s',
+			// 'chevron-w',
+			// 'close',
+			// 'languages',
+			// 'location',
 			'search',
-			'toolbox'
+			// 'toolbox',
 		],
 	}
 };
