@@ -5,47 +5,39 @@
 		background: $white;
 	}
 
-	main {
+	.content {
 		margin-bottom: rem(64);
 		margin-top: rem(108);
-		max-width: rem(564);
 	}
 
-	.content {
-		// TODO
+	@supports (display: grid) {
+		.content {
+			grid-column: 1 / 5;
+		}
 	}
 }
 
 @include breakpoint-up(sm) {
 	.page {
-		main {
+		.content {
 			margin-bottom: rem(118);
 			margin-top: rem(154);
+			width: 75%;
 		}
 
-		.content {
-			// TODO
+		@supports (display: grid) {
+			.content {
+				grid-column: 2 / 8;
+				width: 100%;
+			}
 		}
 	}
 }
 
 @include breakpoint-up(md) {
-	[role="banner"] {
-		padding-left: rem(30);
-		padding-right: rem(120);
-	}
-
-	.menu {
-		float: right;
-	}
-
 	.page {
-		main {
-			margin-top: rem(140);
-		}
-
 		.content {
-			// TODO
+			margin-top: rem(140);
 		}
 	}
 }
@@ -57,12 +49,15 @@
 	}
 
 	.page {
-		main {
-			// TODO
+		.content {
+			width: 50%;
 		}
 
-		.content {
-			// TODO
+		@supports (display: grid) {
+			.content {
+				grid-column: 4 / 10;
+				width: 100%;
+			}
 		}
 	}
 }
@@ -74,12 +69,15 @@
 	}
 
 	.page {
-		main {
+		.content {
 			margin-bottom: rem(144);
 		}
 
-		.content {
-			// TODO
+		@supports (display: grid) {
+			.content {
+				grid-column: 6 / 12;
+				width: 100%;
+			}
 		}
 	}
 }

@@ -2,3 +2,10 @@
 	box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	width: 100vw;
 }
+
+@include breakpoint-up(md) {
+	[role="banner"] {
+		padding-left: rem(30);
+		padding-right: rem(120);
+	}
+}
