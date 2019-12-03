@@ -30,6 +30,10 @@ main {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 	}
+
+	.content {
+		grid-column: 1 / 5;
+	}
 }
 
 .screen-reader-text {
@@ -40,6 +44,10 @@ main {
 	@supports (display: grid) {
 		main {
 			grid-template-columns: repeat(8, 1fr);
+		}
+
+		.content {
+			grid-column: 1 / 9;
 		}
 	}
 }
@@ -55,6 +63,10 @@ main {
 		main {
 			grid-template-columns: repeat(12, 1fr);
 		}
+
+		.content {
+			grid-column: 1 / 13;
+		}
 	}
 }
 
@@ -66,6 +78,10 @@ main {
 	@supports (display: grid) {
 		main {
 			grid-template-columns: repeat(16, 1fr);
+		}
+
+		.content {
+			grid-column: 1 / 17;
 		}
 	}
 }
