@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./build"
+      "staticDistDir": "./build/components/preview"
     },
     "assert": {
       "preset": "lighthouse:no-pwa"

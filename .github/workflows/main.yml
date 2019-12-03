@@ -19,13 +19,8 @@ jobs:
         npm test
       env:
         CI: 'true'
-    - name: Set components list
-      run : |
-        echo ::set-env name=PATHS::$(ls -lrt -d -1 GITHUB_WORKSPACE/build/components/preview/*)
     - name: Audit URLs using Lighthouse
       uses: treosh/lighthouse-ci-action@v2
       with:
         configPath: '.github/lighthouse/.lighthouserc.json'
-        urls: |
-          PATHS
         temporaryPublicStorage: 'true'
