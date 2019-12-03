@@ -1,5 +1,6 @@
 module.exports = {
 	title: 'Headings',
+	status: 'wip',
 	context: {
 		h1: 'h1. Platform Co-ops',
 		h2: 'h2. How platform co-ops benefit you',
