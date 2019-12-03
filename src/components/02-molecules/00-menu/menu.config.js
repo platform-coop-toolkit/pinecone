@@ -2,6 +2,7 @@ module.exports = {
 	title: 'Menus',
 	status: 'wip',
 	context: {
+		inBanner: true,
 		scriptCall: 'window.pinecone.menu();',
 		menuTitle: 'Menu',
 		menuItems:  {
@@ -36,7 +37,7 @@ module.exports = {
 		{
 			'name': 'home',
 			'context': {
-				modifier: 'home'
+				bodyClass: 'home'
 			}
 		}
 	]

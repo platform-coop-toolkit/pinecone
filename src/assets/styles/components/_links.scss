@@ -10,6 +10,13 @@ a:not([class]) {
 	text-decoration-thickness: rem(1);
 	text-underline-offset: rem(3);
 
+	h1 &,
+	h2 &,
+	h3 &,
+	h4 & {
+		text-decoration: none;
+	}
+
 	@supports (mask: url("../images/add.svg")) {
 		&::after {
 			background: $blue-500;
