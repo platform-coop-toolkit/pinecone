@@ -11,7 +11,7 @@
 	<ul class="menu{% if modifier %} menu--{{ modifier }}{% endif %}">
 		{% for id, menuItem in menuItems %}
 		<li{% if menuItem.submenuItems %} class="menu__submenu-wrapper{% if menuItem.current %} current_page_ancestor current-menu-ancestor{% endif %}"{% endif %}>
-			<a class="menu__item" href="#{{ id }}">{{ menuItem.label }}</a>
+			<a class="menu__item" {% if menuItem.current %}aria-current="page" {% endif %}href="#{{ id }}">{{ menuItem.label }}</a>
 			{% if menuItem.submenuItems %}
 			<ul class="menu__submenu">
 				{% for id, submenuItem in menuItem.submenuItems %}

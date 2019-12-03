@@ -1,36 +1,17 @@
 hr {
+	background-color: $blue-500;
 	border: 0;
-	border-bottom-color: $blue-500;
-	border-bottom-style: solid;
-	border-bottom-width: 2px;
+	height: rem(2);
 
-	&.is-style-grey-400-hairline {
-		border-bottom-color: $grey-400;
-		border-bottom-width: 1px;
+	&.is-style-hairline {
+		height: rem(1);
 	}
 
-	&.is-style-grey-200-thick {
-		border-bottom-color: $grey-200;
-		border-bottom-width: rem(16);
+	&.is-style-medium {
+		height: rem(3);
 	}
 
-	&.is-style-blue-500-hairline {
-		border-bottom-color: $blue-500;
-		border-bottom-width: 1px;
-	}
-
-	&.is-style-blue-500-medium {
-		border-bottom-color: $blue-500;
-		border-bottom-width: 3px;
-	}
-
-	&.is-style-blue-600-hairline {
-		border-bottom-color: $blue-600;
-		border-bottom-width: 1px;
-	}
-
-	&.is-style-dark-mint-500-hairline {
-		border-bottom-color: $dark-mint-500;
-		border-bottom-width: 1px;
+	&.is-style-thick {
+		height: rem(16);
 	}
 }

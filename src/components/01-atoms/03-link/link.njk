@@ -1,0 +1,6 @@
+<h1>{{ title }}</h1>
+{% for variant in inlineVariants %}
+	<p>{{ inlinePrefix }}
+		<a{% if variant.rel %} rel="{{ variant.rel }}"{% endif %} href="{{ variant.href }}">{{ variant.label }}</a>{{ inlineSuffix }}</p>
+{% endfor %}
+<a id="#anchor"></a>

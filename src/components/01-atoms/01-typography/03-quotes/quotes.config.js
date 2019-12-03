@@ -1,4 +1,5 @@
 module.exports = {
+	status: 'wip',
 	title: 'Quotes',
 	context: {
 		attributedHeading: 'Attributed Quote',

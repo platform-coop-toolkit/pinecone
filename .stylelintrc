@@ -10,7 +10,6 @@
 		"function-url-quotes": "always",
 		"selector-class-pattern": null,
 		"no-eol-whitespace": null,
-	    "selector-nested-pattern": "^(?!&__|&--).*$",
 		"no-descending-specificity": [true, { "severity": "warning" }],
 		"rule-empty-line-before":[ "always", {"except": ["after-single-line-comment", "first-nested"]} ],
 		"at-rule-empty-line-before":[ "always", {"except": ["first-nested", "blockless-after-blockless"], "ignoreAtRules": ["else"]} ]
