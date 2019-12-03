@@ -1,4 +1,5 @@
 module.exports = {
+	status: 'wip',
 	title: 'Dividers',
 	context: {
 		dividersTitle: 'Dividers',
