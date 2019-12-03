@@ -286,6 +286,7 @@ nav {
 		position: absolute;
 
 		.menu__item {
+			background-color: $white;
 			padding-left: rem(16);
 
 			&::after {

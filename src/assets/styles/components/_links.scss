@@ -26,8 +26,10 @@ a:not([class]) {
 			margin-bottom: rem(-3);
 			margin-left: rem(2);
 			mask: url("../images/chevron-e.svg") no-repeat center;
+			position: relative;
 			text-decoration: underline;
 			width: 0.6em;
+			z-index: -1;
 		}
 	}
 
