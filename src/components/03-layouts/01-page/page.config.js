@@ -1,5 +1,5 @@
 module.exports = {
-	title: 'Menus',
+	title: 'Page',
 	status: 'wip',
 	context: {
 		bodyClass: 'page',
