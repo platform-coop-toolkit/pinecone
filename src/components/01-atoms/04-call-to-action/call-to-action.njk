@@ -1,11 +1,4 @@
-<h1>{{ title }}</h1>
-<h2>{{ inlineTitle }}</h2>
-{% for variant in inlineVariants %}
-	<p>{{ inlinePrefix }}
-		<a{% if variant.rel %} rel="{{ variant.rel }}"{% endif %} href="{{ variant.href }}">{{ variant.label }}</a>{{ inlineSuffix }}</p>
-{% endfor %}
-<h2>
-	<a id="#anchor"></a>{{ ctaTitle }}</h2>
+<h1>{{ ctaTitle }}</h1>
 {% for variant in ctaVariants %}
 	<p class="wp-block-button{%if variant.class %} {{ variant.class }}{% endif %}">
 		<a href="https://example.com/call-to-action" class="wp-block-button__link">{{ variant.label }}</a>
