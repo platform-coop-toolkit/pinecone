@@ -17,7 +17,8 @@ module.exports = {
 			'location',
 			'calendar',
 			'search',
-			'toolbox'
+			'toolbox',
+			'filter'
 		],
 	}
 };
