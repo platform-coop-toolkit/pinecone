@@ -1,5 +1,6 @@
 .cards {
 	list-style: none;
+	margin-top: rem(30);
 	width: 100%;
 
 	@supports (display: grid) {
@@ -11,6 +12,7 @@
 }
 
 .card {
+	background-color: $white;
 	border-top: rem(3) solid $blue-500;
 	box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.16);
 	padding: rem(22);

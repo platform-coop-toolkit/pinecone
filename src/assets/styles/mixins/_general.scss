@@ -10,3 +10,17 @@
 	width: 1px;
 	word-wrap: normal !important;
 }
+
+@mixin full-width-background($color: $white) {
+	&::before {
+		background: $white;
+		content: "";
+		display: block;
+		height: 100%;
+		left: calc(-1 * ((100vw - 100%) / 2));
+		position: absolute;
+		top: 0;
+		width: 100vw;
+		z-index: -1;
+	}
+}

@@ -1,37 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 	<head>
 		<meta charset="utf-8">
-		<link media="all" rel="stylesheet" href="{{ '/styles/pinecone.css' | path }}">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+		<link rel="stylesheet" href="{{ '/styles/pinecone.css' | path }}">
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | path }}">
 		<link rel="icon" type="image/ico" href="{{ '/themes/mandelbrot/favicon.ico' | path }}" >
 		<title>{{ _target.title }} | Pinecone</title>
 	</head>
 	<body{% if _target.context.bodyClass %} class="{{ _target.context.bodyClass }}"{% endif %}>
 		<header role="banner">
-			{% if _target.context.inBanner %}{{ yield | safe }}{% endif %}
-			{% if _target.context.hasMenu %}{% render '@menu', {
-			menuItems: {
-				'menu-item-1': {
-					current: true
-				},
-				'menu-item-4': {
-					current: false,
-					submenuItems: {
-						'submenu-item-1': {
-							current: false
+			<div class="container">
+				{% if _target.context.inBanner %}{{ yield | safe }}{% endif %}
+				{% if _target.context.hasMenu %}
+				{# <a class="brand" href="/">Pinecone</a> #}
+				{% render '@menu', {
+					menuItems: {
+						'menu-item-1': {
+							current: true
+						},
+						'menu-item-4': {
+							current: false,
+							submenuItems: {
+								'submenu-item-1': {
+									current: false
+								}
+							}
 						}
 					}
-				}
-			}
-		}, true %}{% endif %}
-		</header>
-		<main>
-			<div class="content">
-				{% if not _target.context.inBanner %}{{ yield | safe }}{% endif %}
+				}, true %}{% endif %}
 			</div>
-		</main>
-		<footer></footer>
+		</header>
+		<div class="wrap container" role="document">
+      		<div class="content">
+				<main>
+				{% if not _target.context.inBanner %}{{ yield | safe }}{% endif %}
+				</main>
+				{% if _target.context.hasSidebar %}
+				<aside class="sidebar">
+				</aside>
+				{% endif %}
+			</div>
+		</div>
+		<footer class="content-info">
+  			<div class="container"></div>
+  		</footer>
 		<script src="{{ '/scripts/pinecone.js' | path }}"></script>
 		{% if _target.context.scriptCall or _target.context.hasMenu %}
 		<script>

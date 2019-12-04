@@ -2,6 +2,13 @@
 	{% render '@breadcrumb-link', {label: 'Home', href: '/'} %}
 	<h1>{{ title }}</h1>
 </div>
+<div class="filter-sort">
+	<div class="filter-sort__filters">
+		{% render '@accordion', {title: false, accordions: accordions}, true %}
+	</div>
+	<div class="filter-sort__sorts">
+	</div>
+</div>
 <ul class="cards">
 {% for i in range(0, 12) %}
   {% render '@card--resource', {title: false, withWrapper: false}, true %}

@@ -5,13 +5,17 @@
 		background: $white;
 	}
 
-	.content {
-		margin-bottom: rem(64);
-		margin-top: rem(108);
+	main {
+		padding-bottom: rem(64);
+	}
+
+	.page-header {
+		padding-bottom: rem(88);
+		padding-top: rem(108);
 	}
 
 	@supports (display: grid) {
-		.content {
+		main {
 			grid-column: 1 / 5;
 		}
 	}
@@ -19,14 +23,18 @@
 
 @include breakpoint-up(sm) {
 	.page {
-		.content {
-			margin-bottom: rem(118);
-			margin-top: rem(154);
+		main {
+			padding-bottom: rem(118);
 			width: 75%;
 		}
 
+		.page-header {
+			padding-bottom: rem(154);
+			padding-top: rem(154);
+		}
+
 		@supports (display: grid) {
-			.content {
+			main {
 				grid-column: 2 / 8;
 				width: 100%;
 			}
@@ -36,20 +44,21 @@
 
 @include breakpoint-up(md) {
 	.page {
-		.content {
-			margin-top: rem(140);
+		.page-header {
+			padding-bottom: rem(96);
+			padding-top: rem(140);
 		}
 	}
 }
 
 @include breakpoint-up(lg) {
 	.page {
-		.content {
+		main {
 			width: 50%;
 		}
 
 		@supports (display: grid) {
-			.content {
+			main {
 				grid-column: 4 / 10;
 				width: 100%;
 			}
@@ -59,12 +68,12 @@
 
 @include breakpoint-up(xl) {
 	.page {
-		.content {
-			margin-bottom: rem(144);
+		main {
+			padding-bottom: rem(144);
 		}
 
 		@supports (display: grid) {
-			.content {
+			main {
 				grid-column: 6 / 12;
 				width: 100%;
 			}

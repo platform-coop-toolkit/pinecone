@@ -5,6 +5,7 @@ module.exports = {
 		headings: '@headings',
 		paragraphs: '@paragraphs',
 		quotes: '@quotes',
-		lists: '@lists'
+		lists: '@lists',
+		title: true
 	}
 };

@@ -1,21 +1,11 @@
-<h1>{{ accordionTitle }}</h1>
+{% if title %}<h1>{{ title }}</h1>{% endif %}
 <div class="accordions">
+	{% for accordion in accordions %}
 	<div class="accordion">
-		<p class="accordion__heading">{{ accordionLabel }}</p>
+		<p class="accordion__heading">{{ accordion.accordionLabel }}</p>
 		<div class="accordion__content">
-			<p>{{ accordionContent }}</p>
+			<p>{{ accordion.accordionContent }}</p>
 		</div>
 	</div>
-	<div class="accordion">
-		<p class="accordion__heading">{{ accordionLabel }}</p>
-		<div class="accordion__content">
-			<p>{{ accordionContent }}</p>
-		</div>
-	</div>
-	<div class="accordion">
-		<p class="accordion__heading">{{ accordionLabel }}</p>
-		<div class="accordion__content">
-			<p>{{ accordionContent }}</p>
-		</div>
-	</div>
+	{% endfor %}
 </div>

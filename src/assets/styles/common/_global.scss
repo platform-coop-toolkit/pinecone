@@ -13,25 +13,25 @@ body {
 	padding: 0;
 }
 
-main {
+.content {
 	max-width: rem(1630);
 	padding: 0 rem(30);
 	width: 100%;
 }
 
-.content {
+main {
 	margin: 0 auto;
 	width: 100%;
 }
 
 @supports (display: grid) {
-	main {
+	.content {
 		column-gap: rem(30);
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	.content {
+	main {
 		grid-column: 1 / 5;
 	}
 }
@@ -42,11 +42,11 @@ main {
 
 @include breakpoint-up(sm) {
 	@supports (display: grid) {
-		main {
+		.content {
 			grid-template-columns: repeat(8, 1fr);
 		}
 
-		.content {
+		main {
 			grid-column: 1 / 9;
 		}
 	}
@@ -54,33 +54,33 @@ main {
 
 
 @include breakpoint-up(lg) {
-	main {
+	.content {
 		max-width: rem(1160);
 		padding: 0;
 	}
 
 	@supports (display: grid) {
-		main {
+		.content {
 			grid-template-columns: repeat(12, 1fr);
 		}
 
-		.content {
+		main {
 			grid-column: 1 / 13;
 		}
 	}
 }
 
 @include breakpoint-up(xl) {
-	main {
+	.content {
 		max-width: rem(1570);
 	}
 
 	@supports (display: grid) {
-		main {
+		.content {
 			grid-template-columns: repeat(16, 1fr);
 		}
 
-		.content {
+		main {
 			grid-column: 1 / 17;
 		}
 	}

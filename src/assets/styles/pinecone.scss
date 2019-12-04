@@ -6,9 +6,7 @@
 @import "mixins/breakpoints";
 @import "mixins/card";
 @import "common/todo";
-
-// @import "common/grid";
-
+@import "common/grid";
 @import "common/global";
 @import "common/colors";
 @import "common/typography";
@@ -24,9 +22,10 @@
 @import "components/tag-buttons";
 @import "components/pagination";
 @import "components/filter-button";
+@import "components/filter-sort";
 @import "components/card";
 @import "components/menu";
 @import "components/menu--home";
 @import "layouts/header";
 @import "layouts/page";
-@import "layouts/browse";
+@import "layouts/archive";

@@ -1,0 +1,61 @@
+.filter-sort {
+	padding: rem(20) 0 rem(24);
+	position: relative;
+	width: 100%;
+
+	@include full-width-background($white);
+
+	@supports (display: grid) {
+		grid-column: 1 / 5;
+		width: 100%;
+	}
+}
+
+.filter-sort__filters,
+.filter-sort__sorts {
+	display: none;
+}
+
+@include breakpoint-up(sm) {
+	.filter-sort {
+		width: 100%;
+
+		@supports (display: grid) {
+			grid-column: 1 / 9;
+			width: 100%;
+		}
+	}
+}
+
+@include breakpoint-up(lg) {
+	.filter-sort {
+		padding-top: rem(30);
+		width: calc(100% / 3);
+
+		&::before {
+			display: none;
+		}
+
+		@supports (display: grid) {
+			grid-column: 1 / 4;
+			width: 100%;
+		}
+	}
+
+	.filter-sort__filters,
+	.filter-sort__sorts {
+		display: block;
+	}
+}
+
+
+@include breakpoint-up(xl) {
+	.filter-sort {
+		width: calc(100% * 3 / 16);
+
+		@supports (display: grid) {
+			grid-column: 1 / 4;
+			width: 100%;
+		}
+	}
+}

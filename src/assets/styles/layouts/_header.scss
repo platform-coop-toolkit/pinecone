@@ -4,6 +4,7 @@
 }
 
 .page-header {
+	position: relative;
 	width: 100%;
 
 	@supports (display: grid) {
