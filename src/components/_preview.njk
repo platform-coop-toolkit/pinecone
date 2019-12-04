@@ -7,17 +7,37 @@
 		<link rel="icon" type="image/ico" href="{{ '/themes/mandelbrot/favicon.ico' | path }}" >
 		<title>{{ _target.title }} | Pinecone</title>
 	</head>
-	<body{% if _target.context.modifier %} class="{{ _target.context.modifier }}"{% endif %}>
-		<header role="banner"></header>
+	<body{% if _target.context.bodyClass %} class="{{ _target.context.bodyClass }}"{% endif %}>
+		<header role="banner">
+			{% if _target.context.inBanner %}{{ yield | safe }}{% endif %}
+			{% if _target.context.hasMenu %}{% render '@menu', {
+			menuItems: {
+				'menu-item-1': {
+					current: true
+				},
+				'menu-item-4': {
+					current: false,
+					submenuItems: {
+						'submenu-item-1': {
+							current: false
+						}
+					}
+				}
+			}
+		}, true %}{% endif %}
+		</header>
 		<main>
 			<div class="content">
-				{{ yield | safe }}
+				{% if not _target.context.inBanner %}{{ yield | safe }}{% endif %}
 			</div>
 		</main>
 		<footer></footer>
 		<script src="{{ '/scripts/pinecone.js' | path }}"></script>
-		{% if _target.context.scriptCall %}
-		<script>{{ _target.context.scriptCall }}</script>
+		{% if _target.context.scriptCall or _target.context.hasMenu %}
+		<script>
+			{% if _target.context.scriptCall %}{{ _target.context.scriptCall }}{% endif %}
+			{% if _target.context.hasMenu %}window.pinecone.menu();{% endif %}
+		</script>
 		{% endif %}
 	</body>
 </html>

@@ -14,23 +14,74 @@ body {
 }
 
 main {
-	max-width: rem(1160);
+	max-width: rem(1630);
+	padding: 0 rem(30);
 	width: 100%;
 }
 
 .content {
 	margin: 0 auto;
-	max-width: rem(768);
-	padding: rem(30);
 	width: 100%;
+}
+
+@supports (display: grid) {
+	main {
+		column-gap: rem(30);
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.content {
+		grid-column: 1 / 5;
+	}
 }
 
 .screen-reader-text {
 	@include visually-hidden();
 }
 
+@include breakpoint-up(sm) {
+	@supports (display: grid) {
+		main {
+			grid-template-columns: repeat(8, 1fr);
+		}
+
+		.content {
+			grid-column: 1 / 9;
+		}
+	}
+}
+
+
 @include breakpoint-up(lg) {
-	.content {
+	main {
 		max-width: rem(1160);
+		padding: 0;
+	}
+
+	@supports (display: grid) {
+		main {
+			grid-template-columns: repeat(12, 1fr);
+		}
+
+		.content {
+			grid-column: 1 / 13;
+		}
+	}
+}
+
+@include breakpoint-up(xl) {
+	main {
+		max-width: rem(1570);
+	}
+
+	@supports (display: grid) {
+		main {
+			grid-template-columns: repeat(16, 1fr);
+		}
+
+		.content {
+			grid-column: 1 / 17;
+		}
 	}
 }

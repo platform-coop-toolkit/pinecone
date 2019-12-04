@@ -19,6 +19,7 @@ nav {
 	position: absolute;
 	right: 0;
 	top: 0;
+	z-index: 2;
 
 	svg {
 		margin-right: rem(12);
@@ -52,6 +53,8 @@ nav {
 	margin: 0;
 	padding-left: 0;
 	padding-top: rem(70);
+	position: relative;
+	z-index: 1;
 
 	li {
 		border-top: solid rem(1) $dark-mint-500;
@@ -194,6 +197,7 @@ nav {
 		background: $white;
 		display: flex;
 		flex-direction: row;
+		float: right;
 		height: rem(109.5);
 		padding-top: 0;
 		position: relative;
@@ -286,6 +290,7 @@ nav {
 		position: absolute;
 
 		.menu__item {
+			background-color: $white;
 			padding-left: rem(16);
 
 			&::after {

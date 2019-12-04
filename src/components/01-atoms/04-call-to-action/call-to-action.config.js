@@ -1,27 +1,8 @@
 module.exports = {
-	title: 'Links',
+	title: 'Call to Action',
 	status: 'wip',
 	context: {
-		title: 'Links',
-		inlineTitle: 'Inline Links',
-		inlinePrefix: 'Here is ',
-		inlineSuffix: ' within a paragraph.',
-		inlineVariants: [
-			{
-				href: '/components',
-				label: 'an internal link'
-			},
-			{
-				href: 'https://example.com',
-				label: 'an external link',
-				rel: 'external'
-			},
-			{
-				href: '#anchor',
-				label: 'a relative link'
-			}
-		],
-		ctaTitle: 'Calls to Action',
+		ctaTitle: 'Call to Action',
 		ctaVariants: [
 			{
 				label: 'Primary Call to Action'
@@ -39,7 +20,7 @@ module.exports = {
 				class: 'is-style-white'
 			}
 		],
-		ctaIconTitle: 'Calls to Action with Icons',
+		ctaIconTitle: 'Call to Action with Icon',
 		ctaIconVariants: [
 			{
 				label: 'Primary Call to Action'
@@ -57,6 +38,5 @@ module.exports = {
 				class: 'is-style-white'
 			}
 		],
-		anchorText: 'Here is the anchor linked from above.'
 	}
 };
