@@ -2,6 +2,10 @@
 	margin-top: rem(60);
 	padding-bottom: rem(80);
 	text-align: center;
+
+	@supports (display: grid) {
+		grid-column: 1 / 9;
+	}
 }
 
 .pagination .page-numbers {
@@ -99,6 +103,22 @@
 		&.current {
 			background: $off-white;
 			color: $black;
+		}
+	}
+}
+
+@include breakpoint-up(lg) {
+	.pagination {
+		@supports (display: grid) {
+			grid-column: 5 / 13;
+		}
+	}
+}
+
+@include breakpoint-up(xl) {
+	.pagination {
+		@supports (display: grid) {
+			grid-column: 5 / 17;
 		}
 	}
 }

@@ -1,8 +1,10 @@
-<h1>{{ cardTitle }}: {% if name %}{{ name }}
+{% if title %}<h1>{{ title }}: {% if name %}{{ name }}
 	{% else %}{{ format }}
 	{% endif %}
-</h1>
+</h1>{% endif %}
+{% if withWrapper %}
 <ul class="cards">
+{% endif %}
 	<li class="card card--{{ modifier }}">
 		{% if image %}
 			<figure class="card__image">
@@ -21,7 +23,7 @@
 			{% endif %}
 			{% if link %}
 				<h2 id="{{ modifier }}-{{ id }}" class="card__title" >
-					<a {% if externalLink %}rel="external" {% endif %}href="{{ link }}">{{ title | safe }}</a>
+					<a {% if externalLink %}rel="external" {% endif %}href="{{ link }}">{{ cardTitle | safe }}</a>
 				</h2>
 			{% endif %}
 		</header>
@@ -56,4 +58,6 @@
 				</div>
 			{% endif %}
 		</li>
+	{% if withWrapper %}
 	</ul>
+	{% endif %}

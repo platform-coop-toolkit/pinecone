@@ -43,11 +43,6 @@
 }
 
 @include breakpoint-up(lg) {
-	[role="banner"] {
-		padding-left: rem(110);
-		padding-right: rem(175);
-	}
-
 	.page {
 		.content {
 			width: 50%;
@@ -63,11 +58,6 @@
 }
 
 @include breakpoint-up(xl) {
-	[role="banner"] {
-		padding-left: rem(110);
-		padding-right: rem(175);
-	}
-
 	.page {
 		.content {
 			margin-bottom: rem(144);

@@ -1,0 +1,41 @@
+@include breakpoint-up(sm) {
+	.archive.post-type-archive-lc_resource .content {
+		display: grid;
+		gap: rem(30);
+		grid-template-columns: repeat(8, 1fr);
+
+		.page-header {
+			grid-column: 1 / 9;
+		}
+	}
+}
+
+@include breakpoint-up(md) {
+	.archive.post-type-archive-lc_resource .content {
+		grid-template-columns: repeat(8, 1fr);
+
+		.page-header {
+			grid-column: 1 / 9;
+		}
+	}
+}
+
+@include breakpoint-up(lg) {
+	.archive.post-type-archive-lc_resource .content {
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	.archive.post-type-archive-lc_resource .page-header {
+		grid-column: 1 / 13;
+	}
+}
+
+@include breakpoint-up(xl) {
+	.archive.post-type-archive-lc_resource .content {
+		grid-template-columns: repeat(16, 1fr);
+	}
+
+	.archive.post-type-archive-lc_resource .page-header {
+		grid-column: 1 / 17;
+	}
+}
