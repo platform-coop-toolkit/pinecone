@@ -1,6 +1,6 @@
 <style>
 	:root {
-		--sizer: calc(1.25rem * 2);
+		--sizer: 1.25rem;
 	}
 
 	.icons {
@@ -13,6 +13,10 @@
 
 	.row {
 		width: 100%;
+	}
+
+	.row + .row {
+		margin-top: 1rem;
 	}
 
 	.icon {
@@ -29,7 +33,7 @@
 	{% for group in icons %}
 	<div class="row">
 		{% for icon in group %}
-			{% render '@icon', {icon: icon} %}
+			{% render '@svg', icon %}
 		{% endfor %}
 	</div>
 	{% endfor %}
@@ -38,7 +42,7 @@
 	{% for group in icons %}
 	<div class="row">
 		{% for icon in group %}
-			{% render '@icon', {icon: icon} %}
+			{% render '@svg', icon %}
 		{% endfor %}
 	</div>
 	{% endfor %}
@@ -48,7 +52,7 @@
 	{% for group in icons %}
 	<div class="row">
 		{% for icon in group %}
-			{% render '@icon', {icon: icon} %}
+			{% render '@svg', icon %}
 		{% endfor %}
 	</div>
 	{% endfor %}

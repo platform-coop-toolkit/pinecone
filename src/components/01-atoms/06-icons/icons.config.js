@@ -5,49 +5,137 @@ module.exports = {
 		iconsTitle: 'Icons',
 		icons: [
 			[
-				'favourite',
-				'share',
-				'edit',
-				'warning',
-				'error',
-				'location',
-				'broken-link',
-				'menu',
-				'filter',
-				'tag',
-				'delete',
-				'settings',
-				'export',
-				'external',],[
-				'chevron-left',
-				'chevron-right',
-				'chevron-up',
-				'chevron-down',
-				'scroll-up',
-				'scroll-down',
-				'close',
-				'add',
-				'calendar',
-				'search',
+				{
+					svg: 'favourite',
+				},
+				{
+					svg: 'share',
+				},
+				{
+					svg: 'edit',
+				},
+				{
+					svg: 'warning',
+				},
+				{
+					svg: 'error',
+				},
+				{
+					svg: 'location',
+				},
+				{
+					svg: 'broken-link',
+				},
+				{
+					svg: 'menu',
+				},
+				{
+					svg: 'filter',
+				},
+				{
+					svg: 'tag',
+				},
+				{
+					svg: 'delete',
+				},
+				{
+					svg: 'settings',
+				},
+				{
+					svg: 'export',
+				},
+				{
+					svg: 'external',
+				},
 			],
 			[
-				'audio',
-				'case-study',
-				'toolkit',
-				'educational-curriculum',
-				'video',
-				'article',
-				'book',
-				'academic-paper',
-				'report',
-				'presentation',
-				'online-training',
+				{
+					svg: 'chevron-left',
+				},
+				{
+					svg: 'chevron-right',
+				},
+				{
+					svg: 'chevron-up',
+				},
+				{
+					svg: 'chevron-down',
+				},
+				{
+					svg: 'scroll-up',
+				},
+				{
+					svg: 'scroll-down',
+				},
+				{
+					svg: 'close',
+				},
+				{
+					svg: 'add',
+				},
+				{
+					svg: 'calendar',
+				},
+				{
+					svg: 'search',
+				},
 			],
 			[
-				// 'topic',
-				// 'goal',
-				// 'sector',
-				// 'format',
+				{
+					svg: 'audio',
+				},
+				{
+					svg: 'case-study',
+				},
+				{
+					svg: 'toolkit',
+				},
+				{
+					svg: 'educational-curriculum',
+				},
+				{
+					svg: 'video',
+				},
+				{
+					svg: 'article',
+				},
+				{
+					svg: 'book',
+				},
+				{
+					svg: 'academic-paper',
+				},
+				{
+					svg: 'report',
+				},
+				{
+					svg: 'presentation',
+				},
+				{
+					svg: 'online-training',
+				},
+			],
+			[
+				{
+					svg: 'topic',
+					class: 'topic icon--large',
+					viewBox: '0 0 24 24',
+				},
+				{
+					svg: 'goal',
+					class: 'goal icon--large',
+					viewBox: '0 0 24 24',
+				},
+				{
+					svg: 'sector',
+					class: 'sector icon--large',
+					viewBox: '0 0 24 24',
+				},
+				{
+					svg: 'format',
+					class: 'format icon--large',
+					viewBox: '0 0 24 24',
+				},
 			]
 		],
 	}

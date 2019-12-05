@@ -9,7 +9,7 @@
 {% for variant in ctaIconVariants %}
 	<p class="wp-block-button{%if variant.class %} {{ variant.class }}{% endif %}">
 		<a href="https://example.com/call-to-action" class="wp-block-button__link">{{ variant.label }}
-			{% render '@icon', {icon: 'external'} %}
+			{% render '@svg', {icon: 'external'} %}
 		</a>
 	</p>
 {% endfor %}

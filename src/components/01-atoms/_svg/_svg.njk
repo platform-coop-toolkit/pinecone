@@ -1,0 +1,7 @@
+<svg
+	class="icon icon-{{ class if class else svg }}"
+	{% for attribute, value in attributes %}
+	{{ attribute }}="{{ value }}"
+	{% endfor %}>
+	<use xlink:href="/images/{{ svg }}.svg"/>
+</svg>

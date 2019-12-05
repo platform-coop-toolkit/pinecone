@@ -56,7 +56,7 @@ export function menu() {
 			const menuButton = document.createElement( 'button' );
 			menuButton.className = 'menu__item';
 			menuButton.setAttribute( 'aria-expanded', false );
-			menuButton.innerHTML = `${linkEl.innerHTML}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon--chevron-down"><path d="m15 9-5 5-5-5" fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"></path></svg>`;
+			menuButton.innerHTML = `${linkEl.innerHTML}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-chevron-down"><path d="m15 9-5 5-5-5" fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"></path></svg>`;
 			parentMenu.insertBefore( menuButton, parentMenu.firstChild );
 			parentMenu.removeChild( linkEl );
 			menuButton.addEventListener( 'click', () => {
