@@ -1,0 +1,97 @@
+.link-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.link-list__item {
+	margin-top: 0;
+}
+
+.link-list__item a {
+	border-bottom: solid rem(1) $black;
+	color: $black;
+	display: block;
+	font-weight: $font-weight-normal;
+	height: rem(44);
+	line-height: 1.5;
+	padding: rem(11) 0 rem(10);
+	text-decoration: none;
+	width: 100%;
+
+	@supports (mask: url("../images/add.svg")) {
+		&::after {
+			background-color: $black;
+			float: right;
+			margin-bottom: 0;
+			margin-top: rem(4);
+		}
+	}
+
+	&:visited {
+		border-bottom-color: $green-400;
+	}
+
+	&:hover {
+		border-bottom: solid rem(3) $blue-300;
+	}
+
+	&:active {
+		border-bottom-color: $blue-400;
+	}
+
+	&:focus {
+		border-bottom-color: $blue-500;
+	}
+}
+
+.has-dark-mint-500-background-color {
+	.link-list__item a {
+		border-bottom-color: $off-white;
+		color: $off-white;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background-color: $off-white;
+			}
+		}
+
+		&:visited,
+		&.visited {
+			border-bottom-color: $green-200;
+			color: $green-200;
+
+			@supports (mask: url("../images/add.svg")) {
+				&::after {
+					background-color: $green-200;
+				}
+			}
+		}
+
+		&:hover {
+			border-bottom-color: $blue-300;
+		}
+
+		&:active {
+			border-bottom-color: $blue-200;
+			color: $blue-200;
+
+			@supports (mask: url("../images/add.svg")) {
+				&::after {
+					background-color: $blue-200;
+				}
+			}
+		}
+
+		&:focus {
+			background-color: $blue-200;
+			border-bottom-color: $blue-200;
+			color: $black;
+
+			@supports (mask: url("../images/add.svg")) {
+				&::after {
+					background-color: $black;
+				}
+			}
+		}
+	}
+}
