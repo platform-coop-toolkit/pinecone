@@ -28,23 +28,17 @@
 <h1>{{ iconsTitle }}</h1>
 <div class="icons">
 	{% for icon in icons %}
-		<svg class="icon icon--{{ icon }}" viewBox="0 0 20 20">
-			<use xlink:href="/images/{{ icon }}.svg"/>
-		</svg>
+		{% render '@icon', {icon: icon} %}
 	{% endfor %}
 </div>
 <div class="icons has-blue-500-color">
 	{% for icon in icons %}
-		<svg class="icon icon--{{ icon }}" viewBox="0 0 20 20">
-			<use xlink:href="/images/{{ icon }}.svg"/>
-		</svg>
+			{% render '@icon', {icon: icon} %}
 	{% endfor %}
 </div>
 
 <div class="icons has-dark-mint-500-background-color">
 	{% for icon in icons %}
-		<svg class="icon icon--{{ icon }}" viewBox="0 0 20 20">
-			<use xlink:href="/images/{{ icon }}.svg"/>
-		</svg>
+		{% render '@icon', {icon: icon} %}
 	{% endfor %}
 </div>

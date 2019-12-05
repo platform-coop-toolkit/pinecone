@@ -14,11 +14,12 @@ module.exports = {
 			// 'chevron-s',
 			// 'chevron-w',
 			// 'close',
+			'filter',
 			// 'languages',
 			// 'location',
+			'menu',
 			'search',
-			// 'toolbox',
-			'filter'
+			// 'toolbox'
 		],
 	}
 };
