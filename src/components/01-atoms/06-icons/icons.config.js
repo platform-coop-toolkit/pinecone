@@ -14,6 +14,7 @@ module.exports = {
 			'close',
 			'add',
 			'languages',
+			'menu',
 			'location',
 			'calendar',
 			'search',

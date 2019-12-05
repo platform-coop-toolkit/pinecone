@@ -2,7 +2,7 @@
 		fill: none;
 		stroke: currentColor;
 		stroke-linecap: round;
-		stroke-miterlimit: 10;
+		stroke-linejoin: round;
 		stroke-width: 0.125em;
 	}
-</style></defs><path class="line" d="M5 15L15 5M15 15L5 5"/></svg>
+</style></defs><path class="line" d="M3 4h14M3 10h14M3 16h14"/></svg>

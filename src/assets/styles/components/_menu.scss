@@ -22,7 +22,10 @@ nav {
 	z-index: 2;
 
 	svg {
+		font-size: 1rem;
+		height: rem(20);
 		margin-right: rem(12);
+		width: rem(20);
 
 		path {
 			fill: currentColor;
@@ -37,7 +40,7 @@ nav {
 	&[aria-expanded="true"] {
 		color: $white;
 		margin-right: rem(6);
-		padding: 0 rem(12);
+		padding: 0 rem(7.5);
 
 
 		svg {

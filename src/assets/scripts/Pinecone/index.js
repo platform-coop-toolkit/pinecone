@@ -8,6 +8,8 @@ export function icons() {
 
 	icons.forEach( icon => {
 		const iconClasses = icon.classList;
+		const ariaHidden = icon.getAttribute( 'aria-hidden' );
+		const viewBox = icon.getAttribute( 'viewBox' );
 		const url = ( icon.querySelector( 'use' ) ) ? icon.querySelector( 'use' ).getAttribute( 'xlink:href' ) : false;
 		if ( url ) {
 			fetch( url )
@@ -16,6 +18,10 @@ export function icons() {
 					const newEl = document.createElement( 'span' );
 					newEl.innerHTML = data;
 					newEl.firstChild.setAttribute( 'class', iconClasses );
+					if ( ariaHidden )
+						newEl.firstChild.setAttribute( 'aria-hidden', true );
+					if ( viewBox )
+						newEl.firstChild.setAttribute( 'viewBox', viewBox );
 					icon.parentNode.replaceChild( newEl, icon );
 
 					const parent = newEl.parentNode;
