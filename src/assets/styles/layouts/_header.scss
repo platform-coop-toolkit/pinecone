@@ -3,6 +3,10 @@
 	width: 100vw;
 }
 
+.home [role="banner"] {
+	background: $blue-500;
+}
+
 @include breakpoint-up(md) {
 	[role="banner"] {
 		padding-left: rem(30);

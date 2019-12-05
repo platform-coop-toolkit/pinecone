@@ -297,6 +297,10 @@ nav {
 				display: none;
 			}
 
+			&:focus {
+				background-color: $blue-500;
+			}
+
 			&:hover {
 				background-color: $blue-500;
 				color: $off-white;
