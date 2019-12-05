@@ -1,6 +1,6 @@
 <style>
 	:root {
-		--sizer: calc(1.25rem * 1);
+		--sizer: calc(1.25rem * 2);
 	}
 
 	.icons {
@@ -11,26 +11,45 @@
 		padding: 0.75rem;
 	}
 
+	.row {
+		width: 100%;
+	}
+
 	.icon {
 		height: var(--sizer);
-		margin: 0.75rem;
 		width: var(--sizer);
+	}
+
+	.icon + .icon {
+		margin-left: 0.5rem;
 	}
 </style>
 <h1>{{ iconsTitle }}</h1>
 <div class="icons">
-	{% for icon in icons %}
-		{% render '@icon', {icon: icon} %}
+	{% for group in icons %}
+	<div class="row">
+		{% for icon in group %}
+			{% render '@icon', {icon: icon} %}
+		{% endfor %}
+	</div>
 	{% endfor %}
 </div>
 <div class="icons has-blue-500-color">
-	{% for icon in icons %}
+	{% for group in icons %}
+	<div class="row">
+		{% for icon in group %}
 			{% render '@icon', {icon: icon} %}
+		{% endfor %}
+	</div>
 	{% endfor %}
 </div>
 
 <div class="icons has-dark-mint-500-background-color">
-	{% for icon in icons %}
-		{% render '@icon', {icon: icon} %}
+	{% for group in icons %}
+	<div class="row">
+		{% for icon in group %}
+			{% render '@icon', {icon: icon} %}
+		{% endfor %}
+	</div>
 	{% endfor %}
 </div>

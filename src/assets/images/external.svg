@@ -1,8 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-</style></defs><title>External</title><polyline class="cls-1" points="7.09 5 15.09 5 15.09 13"/><line class="cls-1" x1="15.09" y1="5" x2="4.97" y2="15.12"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"><path d="m7.09 5h8v8"/><path d="m15.09 5-10.12 10.12"/></g></svg>

@@ -1,16 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1,
-	.cls-2 {
-		fill: none;
-		stroke: currentColor;
-		stroke-width: 2px;
-	}
-
-	.cls-1 {
-		stroke-linecap: round;
-		stroke-linejoin: round;
-	}
-
-	.cls-2 {
-		stroke-miterlimit: 10;
-	}
-</style></defs><title>Book</title><path class="cls-1" d="M17,4a19.86,19.86,0,0,0-7,1.3A19.86,19.86,0,0,0,3,4H2V15.7H3.69a15.8,15.8,0,0,1,5.62,1L10,17l.69-.26a15.8,15.8,0,0,1,5.62-1H18V4Z"/><line class="cls-2" x1="10.12" y1="4.28" x2="10.12" y2="17"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke="#203131" class="stroke" stroke-width="2"><path d="m17 4a19.86 19.86 0 0 0 -7 1.3 19.86 19.86 0 0 0 -7-1.3h-1v11.7h1.69a15.8 15.8 0 0 1 5.62 1l.69.3.69-.26a15.8 15.8 0 0 1 5.62-1h1.69v-11.74z" stroke-linecap="round" stroke-linejoin="round"/><path d="m10.12 4.28v12.72" stroke-miterlimit="10"/></g></svg>

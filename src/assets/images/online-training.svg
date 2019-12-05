@@ -1,11 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-miterlimit: 10;
-		stroke-width: 2px;
-	}
-
-	.cls-2 {
-		fill: #231f20;
-	}
-</style></defs><title>Online Training</title><path class="cls-1" d="M4.48,4H15.29a1,1,0,0,1,1,1v7a0,0,0,0,1,0,0H3.48a0,0,0,0,1,0,0V5A1,1,0,0,1,4.48,4Z"/><path class="cls-1" d="M16.7,16H3.07a1.12,1.12,0,0,1-1-1.62L3.48,12H16.29l1.36,2.38A1.12,1.12,0,0,1,16.7,16Z"/><circle class="cls-2" cx="9.93" cy="7.18" r="1.58"/><path class="cls-2" d="M6.78,12.54a3.16,3.16,0,0,1,6.31,0"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="m4.48 4h10.81a1 1 0 0 1 1 1v7a0 0 0 0 1 0 0h-12.81a0 0 0 0 1 0 0v-7a1 1 0 0 1 1-1z" fill="none" stroke="#203131" stroke-miterlimit="10" class="stroke" stroke-width="2"/><path d="m16.7 16h-13.63a1.12 1.12 0 0 1 -1-1.62l1.41-2.38h12.81l1.36 2.38a1.12 1.12 0 0 1 -.95 1.62z" fill="none" stroke="#203131" stroke-miterlimit="10" class="stroke" stroke-width="2"/><g fill="currentColor"><circle cx="9.93" cy="7.18" r="1.58"/><path d="m6.78 12.54a3.16 3.16 0 0 1 6.31 0"/></g></svg>

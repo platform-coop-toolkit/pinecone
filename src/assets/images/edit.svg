@@ -1,8 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-</style></defs><title>Edit</title><polygon class="cls-1" points="8.43 16.95 3.07 16.95 3.07 11.6 12.89 1.78 18.25 7.13 8.43 16.95"/><line class="cls-1" x1="9.85" y1="4.83" x2="15.2" y2="10.18"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"><path d="m8.43 16.95h-5.36v-5.35l9.82-9.82 5.36 5.35z"/><path d="m9.85 4.83 5.35 5.35"/></g></svg>

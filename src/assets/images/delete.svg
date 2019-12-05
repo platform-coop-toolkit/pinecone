@@ -1,8 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-</style></defs><title>Delete</title><polygon class="cls-1" points="15 18 5 18 4 5 16 5 15 18"/><line class="cls-1" x1="3" y1="5" x2="17" y2="5"/><path class="cls-1" d="M13,5V4.14A2.14,2.14,0,0,0,10.86,2H9.14A2.14,2.14,0,0,0,7,4.14V5"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"><path d="m15 18h-10l-1-13h12z"/><path d="m3 5h14"/><path d="m13 5v-.86a2.14 2.14 0 0 0 -2.14-2.14h-1.72a2.14 2.14 0 0 0 -2.14 2.14v.86"/></g></svg>

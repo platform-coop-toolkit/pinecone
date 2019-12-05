@@ -1,11 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-miterlimit: 10;
-		stroke-width: 2px;
-	}
-
-	.cls-2 {
-		fill: #231f20;
-	}
-</style></defs><title>Toolkit</title><path class="cls-1" d="M4,6H16a1,1,0,0,1,1,1v9a0,0,0,0,1,0,0H3a0,0,0,0,1,0,0V7A1,1,0,0,1,4,6Z"/><path class="cls-1" d="M6.89,5.5V4.08A1,1,0,0,1,7.76,3h4.48a1,1,0,0,1,.87,1.08V5.5"/><rect class="cls-2" x="4" y="9.64" width="12" height="2"/><rect class="cls-2" x="6" y="8.64" width="2" height="4"/><rect class="cls-2" x="12" y="8.64" width="2" height="4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="m4 6h12a1 1 0 0 1 1 1v9a0 0 0 0 1 0 0h-14a0 0 0 0 1 0 0v-9a1 1 0 0 1 1-1z" fill="none" stroke="#203131" stroke-miterlimit="10" class="stroke" stroke-width="2"/><path d="m6.89 5.5v-1.42a1 1 0 0 1 .87-1.08h4.48a1 1 0 0 1 .87 1.08v1.42" fill="none" stroke="#203131" stroke-miterlimit="10" class="stroke" stroke-width="2"/><g fill="currentColor"><path d="m4 9.64h12v2h-12z"/><path d="m6 8.64h2v4h-2z"/><path d="m12 8.64h2v4h-2z"/></g></svg>

@@ -1,7 +1,10 @@
-.icon path {
-	// fill: none;
-	// stroke: currentColor;
-	// stroke-linecap: round;
-	// stroke-miterlimit: 10;
-	// stroke-width: 0.125em;
+.icon {
+	height: 1.25em;
+	margin-bottom: -0.25em;
+	width: 1.25em;
+}
+
+.icon .stroke {
+	stroke: currentColor;
+	stroke-width: 0.125em;
 }

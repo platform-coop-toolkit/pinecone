@@ -1,8 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-</style></defs><title>Scroll Up</title><polyline class="cls-1" points="15 10 10 5 5 10"/><line class="cls-1" x1="10" y1="5" x2="10" y2="15"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"><path d="m15 10-5-5-5 5"/><path d="m10 5v10"/></g></svg>

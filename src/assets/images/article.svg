@@ -1,8 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-</style></defs><title>Article</title><rect class="cls-1" x="3" y="4" width="5" height="4"/><line class="cls-1" x1="12" y1="4" x2="17" y2="4"/><line class="cls-1" x1="12" y1="8" x2="17" y2="8"/><line class="cls-1" x1="3" y1="12" x2="17" y2="12"/><line class="cls-1" x1="3" y1="16" x2="17" y2="16"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"><path d="m3 4h5v4h-5z"/><path d="m12 4h5"/><path d="m12 8h5"/><path d="m3 12h14"/><path d="m3 16h14"/></g></svg>

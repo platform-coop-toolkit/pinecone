@@ -1,8 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-</style></defs><title>Favourite</title><path class="cls-1" d="M6.6,3.82A4.16,4.16,0,0,0,2.49,7.87c0,4,4.49,7.62,7.66,10,3.16-2.33,7.65-6,7.65-9.95a4.16,4.16,0,0,0-4.11-4.05C12.27,3.82,11.06,5,10.15,6,9.23,5,8,3.82,6.6,3.82Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="m6.6 3.82a4.16 4.16 0 0 0 -4.11 4.05c0 4 4.49 7.62 7.66 10 3.16-2.33 7.65-6 7.65-9.95a4.16 4.16 0 0 0 -4.11-4.05c-1.42-.05-2.63 1.13-3.54 2.13-.92-1-2.15-2.18-3.55-2.18z" fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>

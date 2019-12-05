@@ -1,8 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-</style></defs><title>Calendar</title><rect class="cls-1" x="3" y="5.6" width="14" height="10.4"/><line class="cls-1" x1="5" y1="3" x2="5" y2="5.6"/><line class="cls-1" x1="15" y1="3" x2="15" y2="5.6"/><line class="cls-1" x1="4" y1="9.5" x2="16" y2="9.5"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"><path d="m3 5.6h14v10.4h-14z"/><path d="m5 3v2.6"/><path d="m15 3v2.6"/><path d="m4 9.5h12"/></g></svg>

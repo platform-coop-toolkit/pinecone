@@ -1,12 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-
-	.cls-2 {
-		fill: #231f20;
-	}
-</style></defs><title>Location</title><path class="cls-1" d="M15.44,12.7a6.64,6.64,0,1,0-10.53,0h0l.31.37a5.92,5.92,0,0,0,.56.56L10.17,18l4.19-4.19a7.56,7.56,0,0,0,1-1l.1-.13Z"/><path class="cls-2" d="M10.18,10.79a2.13,2.13,0,1,1,2.13-2.13A2.13,2.13,0,0,1,10.18,10.79Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="m15.44 12.7a6.64 6.64 0 1 0 -10.53 0l.31.37a5.92 5.92 0 0 0 .56.56l4.39 4.37 4.19-4.19a7.56 7.56 0 0 0 1-1l.1-.13z" fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"/><path d="m10.18 10.79a2.13 2.13 0 1 1 2.13-2.13 2.13 2.13 0 0 1 -2.13 2.13z" fill="currentColor"/></svg>

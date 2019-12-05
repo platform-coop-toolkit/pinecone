@@ -1,12 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1,
-	.cls-2 {
-		fill: none;
-		stroke: currentColor;
-		stroke-miterlimit: 10;
-		stroke-width: 2px;
-	}
-
-	.cls-2 {
-		stroke-linecap: round;
-	}
-</style></defs><title>Error</title><path class="cls-1" d="M10.09,18a8,8,0,1,1,8-8A8,8,0,0,1,10.09,18Z"/><line class="cls-2" x1="8.04" y1="12" x2="12.14" y2="7.89"/><line class="cls-2" x1="12.14" y1="12" x2="8.04" y2="7.89"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke="#203131" stroke-miterlimit="10" class="stroke" stroke-width="2"><path d="m10.09 18a8 8 0 1 1 8-8 8 8 0 0 1 -8 8z"/><g stroke-linecap="round"><path d="m8.04 12 4.1-4.11"/><path d="m12.14 12-4.1-4.11"/></g></g></svg>

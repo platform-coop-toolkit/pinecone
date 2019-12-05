@@ -1,16 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1,
-	.cls-2 {
-		fill: none;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-
-	.cls-1 {
-		stroke: #010101;
-	}
-
-	.cls-2 {
-		stroke: currentColor;
-	}
-</style></defs><title>Export</title><polyline class="cls-1" points="14 9 17 9 17 17 3 17 3 9 6 9"/><polyline class="cls-2" points="6.6 5.4 10 2 13.4 5.4"/><line class="cls-2" x1="10" y1="2" x2="10" y2="11"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"><path d="m14 9h3v8h-14v-8h3" stroke="#203131"/><g stroke="#203131"><path d="m6.6 5.4 3.4-3.4 3.4 3.4"/><path d="m10 2v9"/></g></g></svg>

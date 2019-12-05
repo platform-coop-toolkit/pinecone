@@ -1,12 +1,1 @@
-<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-	}
-
-	.cls-2 {
-		fill: #231f20;
-	}
-</style></defs><title>Tag</title><polygon class="cls-1" points="10.44 3 17 3 17 9.56 8.56 18 2 11.44 10.44 3"/><circle class="cls-2" cx="13.28" cy="6.78" r="1.1"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="m10.44 3h6.56v6.56l-8.44 8.44-6.56-6.56z" fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"/><circle cx="13.28" cy="6.78" fill="currentColor" r="1.1"/></svg>
