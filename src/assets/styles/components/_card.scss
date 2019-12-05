@@ -74,12 +74,9 @@
 	padding: rem(2) rem(6);
 
 	svg {
-		margin-right: rem(3);
-		width: 1em;
-
-		path {
-			fill: $red-400;
-		}
+		color: $red-400;
+		margin-right: rem(4);
+		width: 1.25em;
 	}
 }
 
@@ -138,12 +135,9 @@
 .card__date,
 .card__locality {
 	svg {
-		height: 0.8em;
+		height: 1em;
+		margin-bottom: rem(-2);
 		margin-right: rem(2);
-
-		path {
-			fill: currentColor;
-		}
 	}
 }
 

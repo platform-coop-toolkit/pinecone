@@ -11,34 +11,49 @@
 		padding: 0.75rem;
 	}
 
+	.row {
+		width: 100%;
+	}
+
+	.row + .row {
+		margin-top: 1rem;
+	}
+
 	.icon {
 		height: var(--sizer);
-		margin: 0.75rem;
 		width: var(--sizer);
 	}
 
-	.icons.has-blue-500-color .icon path {
-		fill: #16605d;
-	}
-
-	.icons.has-dark-mint-500-background-color .icon path {
-		fill: #fff;
+	.icon + .icon {
+		margin-left: 0.5rem;
 	}
 </style>
 <h1>{{ iconsTitle }}</h1>
 <div class="icons">
-	{% for icon in icons %}
-		{% render '@icon', {icon: icon} %}
+	{% for group in icons %}
+	<div class="row">
+		{% for icon in group %}
+			{% render '@svg', icon %}
+		{% endfor %}
+	</div>
 	{% endfor %}
 </div>
 <div class="icons has-blue-500-color">
-	{% for icon in icons %}
-			{% render '@icon', {icon: icon} %}
+	{% for group in icons %}
+	<div class="row">
+		{% for icon in group %}
+			{% render '@svg', icon %}
+		{% endfor %}
+	</div>
 	{% endfor %}
 </div>
 
 <div class="icons has-dark-mint-500-background-color">
-	{% for icon in icons %}
-		{% render '@icon', {icon: icon} %}
+	{% for group in icons %}
+	<div class="row">
+		{% for icon in group %}
+			{% render '@svg', icon %}
+		{% endfor %}
+	</div>
 	{% endfor %}
 </div>

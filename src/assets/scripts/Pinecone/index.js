@@ -56,7 +56,7 @@ export function menu() {
 			const menuButton = document.createElement( 'button' );
 			menuButton.className = 'menu__item';
 			menuButton.setAttribute( 'aria-expanded', false );
-			menuButton.innerHTML = `${linkEl.innerHTML}<svg class="icon icon--chevron-s" width="9.8" height="5.886" viewBox="0 0 9.8 5.886"><path d="M15.3,10.3a1,1,0,0,1,1.4,1.4l-4,4a1,1,0,0,1-1.4,0l-4-4a1,1,0,0,1,1.4-1.4L12,13.59l3.3-3.3Z" transform="translate(-7.1 -10.1)" fill="currentColor" fill-rule="evenodd"/></svg>`;
+			menuButton.innerHTML = `${linkEl.innerHTML}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-chevron-down"><path d="m15 9-5 5-5-5" fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"></path></svg>`;
 			parentMenu.insertBefore( menuButton, parentMenu.firstChild );
 			parentMenu.removeChild( linkEl );
 			menuButton.addEventListener( 'click', () => {
@@ -135,7 +135,7 @@ export function accordions() {
 			btn.setAttribute( 'aria-expanded', 'false' );
 			btn.innerHTML = `
 					${heading.textContent}
-					<svg aria-hidden="true" width="13" height="13" viewBox="0 0 13 13"><g transform="translate(-5721 -543)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"><line x2="10" transform="translate(5722.5 549.5)"/><line class="vert" y2="10" transform="translate(5727.5 544.5)"/></g></svg>
+					<svg aria-hidden="true" width="13" height="13" viewBox="0 0 13 13"><g transform="translate(-5721 -543)" fill="none" stroke="#203131" stroke-linecap="round" stroke-width="3"><line x2="10" transform="translate(5722.5 549.5)"/><line class="vert" y2="10" transform="translate(5727.5 544.5)"/></g></svg>
 				`;
 			heading.parentNode.insertBefore( btn, heading.nextElementSibling );
 			heading.parentNode.removeChild( heading );

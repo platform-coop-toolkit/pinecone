@@ -8,6 +8,13 @@
 	}
 }
 
+.pagination .nav-links {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 .pagination .page-numbers {
 	align-items: center;
 	border: solid rem(2) transparent;
@@ -67,8 +74,10 @@
 		}
 	}
 
-	svg * {
-		fill: currentColor;
+	svg {
+		height: rem(20);
+		margin-bottom: 0;
+		width: rem(20);
 	}
 
 	+ .page-numbers {

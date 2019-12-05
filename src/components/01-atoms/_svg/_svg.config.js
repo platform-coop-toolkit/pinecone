@@ -4,6 +4,9 @@ module.exports = {
 	context: {
 		icon: 'filter',
 		class: false,
-		ariaHidden: true
+		attributes: {
+			ariaHidden: true,
+			viewBox: '0 0 20 20'
+		}
 	}
 };

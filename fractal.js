@@ -19,7 +19,10 @@ fractal.set( 'project.author', 'OCAD University' );
 /*
  * Tell Fractal where to look for components.
  */
-fractal.components.engine( '@frctl/nunjucks' );
+const nunj = require( '@frctl/nunjucks' )( {
+	paths: ['/src/assets']
+} );
+fractal.components.engine( nunj );
 fractal.components.set( 'ext', '.njk' );
 fractal.components.set( 'path', path.join( __dirname, 'src/components' ) );
 

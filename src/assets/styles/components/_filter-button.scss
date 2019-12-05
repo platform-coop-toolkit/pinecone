@@ -13,10 +13,6 @@
 	text-underline-offset: rem(8);
 	width: rem(34);
 
-	svg * {
-		fill: currentColor;
-	}
-
 	&:hover {
 		background: $blue-150;
 	}
