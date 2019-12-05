@@ -69,6 +69,18 @@ export function menu() {
 					menuButton.setAttribute( 'aria-expanded', false );
 				}
 			} );
+			document.onkeydown = function( evt ) {
+				evt = evt || window.event;
+				let isEscape = false;
+				if ( 'key' in evt ) {
+					isEscape = 'Escape' == evt.key || 'Esc' == evt.key;
+				} else {
+					isEscape = 27 == evt.keyCode;
+				}
+				if ( isEscape ) {
+					menuButton.setAttribute( 'aria-expanded', false );
+				}
+			};
 		} );
 
 		Array.prototype.forEach.call( topLevelMenuItems, topLevelMenuItem => {

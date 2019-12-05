@@ -1,0 +1,9 @@
+{% if title %}
+<h1>{{ title }}</h1>
+{% endif %}
+
+<ul class="link-list">
+	{% for link in linkData %}
+	<li class="link-list__item"><a href="{{ link.href }}">{{ link.label | capitalize }}</a></li>
+	{% endfor %}
+</ul>
