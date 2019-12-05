@@ -1,0 +1,12 @@
+<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1,
+	.cls-2 {
+		fill: none;
+		stroke: currentColor;
+		stroke-miterlimit: 10;
+		stroke-width: 2px;
+	}
+
+	.cls-2 {
+		stroke-linecap: round;
+	}
+</style></defs><title>Presentation</title><rect class="cls-1" x="4.43" y="4.29" width="11.43" height="8"/><line class="cls-2" x1="10.14" y1="18" x2="10.14" y2="12.29"/><line class="cls-2" x1="3.29" y1="4.29" x2="17" y2="4.29"/><line class="cls-2" x1="3.29" y1="12.29" x2="17" y2="12.29"/><line class="cls-2" x1="10.14" y1="4.29" x2="10.14" y2="2"/><line class="cls-2" x1="5.57" y1="16.86" x2="9.57" y2="12.86"/><line class="cls-2" x1="14.71" y1="16.86" x2="10.14" y2="12.29"/></svg>

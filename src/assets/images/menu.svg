@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.line {
+<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
 		fill: none;
 		stroke: currentColor;
 		stroke-linecap: round;
 		stroke-linejoin: round;
-		stroke-width: 0.125em;
+		stroke-width: 2px;
 	}
-</style></defs><path class="line" d="M3 4h14M3 10h14M3 16h14"/></svg>
+</style></defs><title>Menu</title><line class="cls-1" x1="3" y1="4" x2="17" y2="4"/><line class="cls-1" x1="3" y1="10" x2="17" y2="10"/><line class="cls-1" x1="3" y1="16" x2="17" y2="16"/></svg>

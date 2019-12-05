@@ -5,4 +5,4 @@
 		stroke-linejoin: round;
 		stroke-width: 2px;
 	}
-</style></defs><title>Filter</title><line class="cls-1" x1="3" y1="4" x2="17" y2="4"/><line class="cls-1" x1="6" y1="10" x2="14" y2="10"/><line class="cls-1" x1="9" y1="16" x2="11" y2="16"/></svg>
+</style></defs><title>Chevron Left</title><polyline class="cls-1" points="11.75 6.5 8.25 10 11.75 13.5"/></svg>

@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.line {
+<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
 		fill: none;
 		stroke: currentColor;
 		stroke-linecap: round;
 		stroke-miterlimit: 10;
-		stroke-width: 0.125em;
+		stroke-width: 2px;
 	}
-</style></defs><path class="line" d="M5 15L15 5M15 15L5 5"/></svg>
+</style></defs><title>Close</title><line class="cls-1" x1="5" y1="15" x2="15" y2="5"/><line class="cls-1" x1="15" y1="15" x2="5" y2="5"/></svg>

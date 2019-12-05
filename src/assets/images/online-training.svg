@@ -1,0 +1,11 @@
+<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
+		fill: none;
+		stroke: currentColor;
+		stroke-miterlimit: 10;
+		stroke-width: 2px;
+	}
+
+	.cls-2 {
+		fill: #231f20;
+	}
+</style></defs><title>Online Training</title><path class="cls-1" d="M4.48,4H15.29a1,1,0,0,1,1,1v7a0,0,0,0,1,0,0H3.48a0,0,0,0,1,0,0V5A1,1,0,0,1,4.48,4Z"/><path class="cls-1" d="M16.7,16H3.07a1.12,1.12,0,0,1-1-1.62L3.48,12H16.29l1.36,2.38A1.12,1.12,0,0,1,16.7,16Z"/><circle class="cls-2" cx="9.93" cy="7.18" r="1.58"/><path class="cls-2" d="M6.78,12.54a3.16,3.16,0,0,1,6.31,0"/></svg>

@@ -1,0 +1,11 @@
+<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.11 18.11"><defs><style>.cls-1 {
+		fill: none;
+		stroke: currentColor;
+		stroke-miterlimit: 10;
+		stroke-width: 2px;
+	}
+
+	.cls-2 {
+		fill: #231f20;
+	}
+</style></defs><title>Warning</title><path class="cls-1" d="M9.05,17.11a8.06,8.06,0,1,1,8.06-8.06A8.07,8.07,0,0,1,9.05,17.11Z"/><rect class="cls-2" x="8.14" y="4.64" width="2" height="6" rx="1"/><rect class="cls-2" x="8.18" y="11.66" width="1.97" height="1.97" rx="0.98"/></svg>

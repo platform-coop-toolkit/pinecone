@@ -1,0 +1,16 @@
+<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1,
+	.cls-2 {
+		fill: none;
+		stroke: currentColor;
+		stroke-linecap: round;
+		stroke-width: 2px;
+	}
+
+	.cls-1 {
+		stroke-linejoin: round;
+	}
+
+	.cls-2 {
+		stroke-miterlimit: 10;
+	}
+</style></defs><title>Report</title><polyline class="cls-1" points="13.6 4 16 4 16 18 4 18 4 4 6.4 4"/><rect class="cls-1" x="7" y="3" width="6" height="3"/><rect class="cls-1" x="9" y="2" width="2" height="1"/><line class="cls-2" x1="7" y1="10" x2="13" y2="10"/><line class="cls-2" x1="7" y1="14" x2="13" y2="14"/></svg>

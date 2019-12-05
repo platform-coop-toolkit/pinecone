@@ -4,22 +4,12 @@ module.exports = {
 	context: {
 		iconsTitle: 'Icons',
 		icons: [
+			'academic-paper',
 			'add',
-			'arrow-n',
-			// 'arrow-ne',
-			// 'arrow-s',
-			// 'calendar',
-			// 'chevron-e',
-			// 'chevron-n',
-			// 'chevron-s',
-			// 'chevron-w',
-			// 'close',
-			'filter',
-			// 'languages',
-			// 'location',
-			'menu',
-			'search',
-			// 'toolbox'
+			'article',
+			'audio',
+			'book',
+			'broken-link'
 		],
 	}
 };

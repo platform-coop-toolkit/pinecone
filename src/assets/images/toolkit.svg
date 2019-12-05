@@ -1,0 +1,11 @@
+<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
+		fill: none;
+		stroke: currentColor;
+		stroke-miterlimit: 10;
+		stroke-width: 2px;
+	}
+
+	.cls-2 {
+		fill: #231f20;
+	}
+</style></defs><title>Toolkit</title><path class="cls-1" d="M4,6H16a1,1,0,0,1,1,1v9a0,0,0,0,1,0,0H3a0,0,0,0,1,0,0V7A1,1,0,0,1,4,6Z"/><path class="cls-1" d="M6.89,5.5V4.08A1,1,0,0,1,7.76,3h4.48a1,1,0,0,1,.87,1.08V5.5"/><rect class="cls-2" x="4" y="9.64" width="12" height="2"/><rect class="cls-2" x="6" y="8.64" width="2" height="4"/><rect class="cls-2" x="12" y="8.64" width="2" height="4"/></svg>

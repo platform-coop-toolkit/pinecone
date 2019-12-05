@@ -1,0 +1,11 @@
+<svg id="Designs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1 {
+		fill: none;
+		stroke: currentColor;
+		stroke-miterlimit: 10;
+		stroke-width: 2px;
+	}
+
+	.cls-2 {
+		fill: #231f20;
+	}
+</style></defs><title>Video</title><rect class="cls-1" x="2" y="4" width="16" height="12" rx="1"/><path class="cls-2" d="M13.17,9.6,8.07,6.87a.5.5,0,0,0-.74.44v5.46a.51.51,0,0,0,.74.44l5.1-2.73A.49.49,0,0,0,13.17,9.6Z"/></svg>
