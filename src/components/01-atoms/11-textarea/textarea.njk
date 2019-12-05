@@ -9,7 +9,7 @@
 <div class="input-group input-group--error">
 	<label for="{{ name }}">{{ label }} (Error)</label>
 	<textarea id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}">{{ badValue }}</textarea>
-	<p class="input-group__error">{% render '@svg', {icon:'error'} %}{{ error | safe }}</p>
+	<p class="input-group__error">{% render '@svg', {svg:'error'} %}{{ error | safe }}</p>
 	<p class="input-group__description">{{ description }}</p>
 </div>
 

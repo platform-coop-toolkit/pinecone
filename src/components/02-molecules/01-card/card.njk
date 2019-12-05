@@ -30,7 +30,7 @@
 		{% if date %}
 			<p class="card__date">
 				{% if modifier === 'event' %}
-					{% render '@svg', {icon:'calendar'}, true %}{{ date }}
+					{% render '@svg', {svg:'calendar'}, true %}{{ date }}
 				{% else %}
 					{{ date }}
 				{% endif %}
