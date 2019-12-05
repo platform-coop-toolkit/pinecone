@@ -1,4 +1,8 @@
 <style>
+	:root {
+		--sizer: 1.25rem;
+	}
+
 	.icons {
 		align-items: center;
 		display: flex;
@@ -8,7 +12,9 @@
 	}
 
 	.icon {
+		height: var(--sizer);
 		margin: 0.75rem;
+		width: var(--sizer);
 	}
 
 	.icons.has-blue-500-color .icon path {
@@ -19,27 +25,26 @@
 		fill: #fff;
 	}
 </style>
-{% macro inlineSVG(slug, width, height) %}
-<svg aria-hidden="true" viewbox="0 0 {{ width }} {{ height }}"><use xlink:href="/images/{{ slug }}.svg#{{ slug }}" /></svg>
-{% endmacro %}
 <h1>{{ iconsTitle }}</h1>
 <div class="icons">
 	{% for icon in icons %}
-		{{ inlineSVG(icon, 12, 12) }}
+		<svg class="icon icon--{{ icon }}" viewBox="0 0 20 20">
+			<use xlink:href="/images/{{ icon }}.svg"/>
+		</svg>
 	{% endfor %}
 </div>
 <div class="icons has-blue-500-color">
 	{% for icon in icons %}
-		<svg aria-hidden="true" class="icon icon--{{ icon }}">
-			<use xlink:href="/images/icons.svg#{{ icon }}"/>
+		<svg class="icon icon--{{ icon }}" viewBox="0 0 20 20">
+			<use xlink:href="/images/{{ icon }}.svg"/>
 		</svg>
 	{% endfor %}
 </div>
 
 <div class="icons has-dark-mint-500-background-color">
 	{% for icon in icons %}
-		<svg aria-hidden="true" class="icon icon--{{ icon }}">
-			<use xlink:href="/images/icons.svg#{{ icon }}"/>
+		<svg class="icon icon--{{ icon }}" viewBox="0 0 20 20">
+			<use xlink:href="/images/{{ icon }}.svg"/>
 		</svg>
 	{% endfor %}
 </div>
