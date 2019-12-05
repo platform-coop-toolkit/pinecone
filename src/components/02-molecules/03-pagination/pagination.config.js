@@ -8,7 +8,7 @@ module.exports = {
 		{
 			name: 'Light on Dark',
 			context: {
-				modifier: 'has-dark-mint-500-background-color'
+				bodyClass: 'has-dark-mint-500-background-color'
 			}
 		}
 	]

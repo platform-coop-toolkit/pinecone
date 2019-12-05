@@ -1,3 +1,11 @@
+.home .menu-toggle {
+	color: $off-white;
+
+	&:focus {
+		border-color: $off-white;
+	}
+}
+
 @include breakpoint-up(md) {
 	.menu--home {
 		background-color: $blue-500;
@@ -28,10 +36,15 @@
 		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 
 		.menu__item {
+			background-color: $blue-500;
 			padding-left: rem(16);
 
 			&::after {
 				display: none;
+			}
+
+			&:focus {
+				background-color: $off-white;
 			}
 
 			&:hover {
