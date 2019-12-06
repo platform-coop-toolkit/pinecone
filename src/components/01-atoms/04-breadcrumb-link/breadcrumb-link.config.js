@@ -3,7 +3,7 @@ module.exports = {
 	status: 'wip',
 	context: {
 		title: 'Breadcrumb Links',
-		href: '/',
+		href: '/breadcrumb',
 		label: 'Home'
 	}
 };
