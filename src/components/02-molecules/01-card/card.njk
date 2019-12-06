@@ -15,8 +15,8 @@
 			{% if format %}
 				<span class="card__format">
 					{% if modifier === 'resource' %}
-						{% render '@svg', {svg:format} %}
-					{% endif %}{{ format | capitalize }}</span>{% endif %}
+						{% render '@svg', {svg:formatIcon} %}
+					{% endif %}{{ format }}</span>{% endif %}
 			{% if language %}
 			<span class="card__sep"> &middot; </span>
 			<span class="card__language">{{ language }}</span>
@@ -50,11 +50,13 @@
 					<ul class="badges" >
 						{% for tag in topics %}
 							<li class="badge">
-								<span class="screen-reader-text">Topic: </span>{{ tag }}
+								<span class="screen-reader-text">Topic: </span>{{ tag | replace('-', ' ') }}
 							</li>
 						{% endfor %}
 					</ul>
+					{% if topicCount > 2 %}
 					<p>+{{ topicCount - 2 }} more</p>
+					{% endif %}
 				</div>
 			{% endif %}
 		</li>

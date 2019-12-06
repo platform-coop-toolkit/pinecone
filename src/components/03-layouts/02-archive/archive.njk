@@ -11,7 +11,7 @@
 </div>
 <ul class="cards">
 {% for card in cards %}
-  {% render '@card--resource', card, true %}
+  {% render '@card--resource', card %}
 {% endfor %}
 </ul>
 {% render '@pagination', {title: false}, true %}
