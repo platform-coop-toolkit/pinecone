@@ -1,8 +1,9 @@
 <div class="page-header">
-	{% render '@breadcrumb-link', {label: 'Home', href: '/'} %}
+	{% render '@breadcrumb-link', {label: 'Home', href: '/home'} %}
 	<h1>{{ title }}</h1>
 </div>
 <div class="filter-sort">
+	{% render '@button', {title: false}, true %}
 	<div class="filter-sort__filters">
 		{% render '@accordion', {title: false, accordions: accordions}, true %}
 	</div>

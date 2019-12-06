@@ -129,3 +129,34 @@
 			0 0 0 rem(4) $blue-500;
 	}
 }
+
+button:not([class]) {
+	background-color: $white;
+	border: solid rem(3) transparent;
+	color: $blue-500;
+	font-family: $font-family-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-semibold;
+	height: rem(40);
+	margin-left: rem(-15);
+	padding: 0 rem(12);
+
+	svg {
+		margin-right: 0.25em;
+	}
+
+	&:hover {
+		background-color: $off-white;
+		border-color: $blue-100;
+		color: $blue-600;
+	}
+
+	&:active {
+		border-color: $blue-400;
+		color: $blue-400;
+	}
+
+	&:focus {
+		border-color: $blue-500;
+	}
+}
