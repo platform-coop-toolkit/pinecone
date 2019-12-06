@@ -1,6 +1,12 @@
 .breadcrumb {
 	a {
 		font-size: rem(14);
+		margin-left: rem(-8);
+		padding: rem(6) rem(8);
+
+		&:not(:hover) {
+			text-decoration: none;
+		}
 	}
 }
 
