@@ -13,27 +13,27 @@ body {
 	padding: 0;
 }
 
+.container {
+	width: 100%;
+}
+
 .content {
+	margin: 0 auto;
 	max-width: rem(1630);
 	padding: 0 rem(30);
 	width: 100%;
-}
 
-main {
-	margin: 0 auto;
-	width: 100%;
-}
-
-@supports (display: grid) {
-	.content {
+	@supports (display: $grid) {
 		column-gap: rem(30);
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 	}
+}
 
-	main {
-		grid-column: 1 / 5;
-	}
+main {
+	margin: 0 auto;
+
+	@include grid-column-span(4, 4, 1);
 }
 
 .screen-reader-text {
@@ -41,14 +41,14 @@ main {
 }
 
 @include breakpoint-up(sm) {
-	@supports (display: grid) {
+	@supports (display: $grid) {
 		.content {
 			grid-template-columns: repeat(8, 1fr);
 		}
+	}
 
-		main {
-			grid-column: 1 / 9;
-		}
+	main {
+		@include grid-column-span(8, 8, 1);
 	}
 }
 
@@ -57,31 +57,27 @@ main {
 	.content {
 		max-width: rem(1160);
 		padding: 0;
-	}
 
-	@supports (display: grid) {
-		.content {
+		@supports (display: $grid) {
 			grid-template-columns: repeat(12, 1fr);
 		}
+	}
 
-		main {
-			grid-column: 1 / 13;
-		}
+	main {
+		@include grid-column-span(12, 12, 1);
 	}
 }
 
 @include breakpoint-up(xl) {
 	.content {
 		max-width: rem(1570);
-	}
 
-	@supports (display: grid) {
-		.content {
+		@supports (display: $grid) {
 			grid-template-columns: repeat(16, 1fr);
 		}
+	}
 
-		main {
-			grid-column: 1 / 17;
-		}
+	main {
+		@include grid-column-span(16, 16, 1);
 	}
 }

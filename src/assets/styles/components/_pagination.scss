@@ -3,9 +3,7 @@
 	padding-bottom: rem(80);
 	text-align: center;
 
-	@supports (display: grid) {
-		grid-column: 1 / 9;
-	}
+	@include grid-column-span(8, 8);
 }
 
 .pagination .nav-links {
@@ -118,16 +116,16 @@
 
 @include breakpoint-up(lg) {
 	.pagination {
-		@supports (display: grid) {
-			grid-column: 5 / 13;
-		}
+		margin-left: calc((100% - 11 * #{rem(30)}) * 4 / 12 + (5 * #{rem(30)})); // TODO: Make mixin.
+
+		@include grid-column-span(8, 12, 5);
 	}
 }
 
 @include breakpoint-up(xl) {
 	.pagination {
-		@supports (display: grid) {
-			grid-column: 5 / 17;
-		}
+		margin-left: calc((100% - 15 * #{rem(30)}) * 4 / 16 + (5 * #{rem(30)})); // TODO: Make mixin.
+
+		@include grid-column-span(12, 16, 5);
 	}
 }

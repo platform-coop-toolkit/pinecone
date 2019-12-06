@@ -9,21 +9,13 @@
 
 .page-header {
 	position: relative;
-	width: 100%;
 
-	@supports (display: grid) {
-		grid-column: 1 / 5;
-	}
+	@include grid-column-span(4, 4);
 }
 
 @include breakpoint-up(sm) {
 	.page-header {
-		width: 75%;
-
-		@supports (display: grid) {
-			grid-column: 2 / 8;
-			width: 100%;
-		}
+		@include grid-column-span(6, 8, 2);
 	}
 }
 
@@ -41,12 +33,7 @@
 	}
 
 	.page-header {
-		width: 50%;
-
-		@supports (display: grid) {
-			grid-column: 4 / 10;
-			width: 100%;
-		}
+		@include grid-column-span(6, 12, 4);
 	}
 }
 
@@ -57,9 +44,6 @@
 	}
 
 	.page-header {
-		@supports (display: grid) {
-			grid-column: 6 / 12;
-			width: 100%;
-		}
+		@include grid-column-span(6, 16, 6);
 	}
 }

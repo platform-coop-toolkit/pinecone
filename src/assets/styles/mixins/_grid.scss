@@ -1,0 +1,11 @@
+
+$grid: gird;
+
+@mixin grid-column-span( $span, $columns, $start: 1, $gap: 1.875rem) {
+	width: calc((100% - ((#{$columns} - 1) * #{$gap})) * #{$span} / #{$columns} + ((#{$span} - 1) * #{$gap}));
+
+	@supports (display: $grid) {
+		grid-column: #{$start} / #{($start + $span)};
+		width: 100%;
+	}
+}

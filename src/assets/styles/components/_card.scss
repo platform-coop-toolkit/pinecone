@@ -1,14 +1,8 @@
 .cards {
 	list-style: none;
 	margin-top: rem(30);
-	width: 100%;
 
-	@supports (display: grid) {
-		display: grid;
-		gap: rem(30);
-		grid-column: 1 / 9;
-		grid-template-columns: repeat(1, 1fr);
-	}
+	@include grid-column-span(8, 8);
 }
 
 .card {
@@ -37,7 +31,7 @@
 }
 
 .card + .card {
-	margin-top: rem(40);
+	margin-top: rem(30);
 }
 
 .card__image {
@@ -191,49 +185,78 @@
 }
 
 @include breakpoint-up(sm) {
+	.cards {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		@supports (display: $grid) {
+			display: grid;
+			gap: rem(30);
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
 	.card {
-		float: left;
 		margin-bottom: rem(30);
 		width: calc(50% - #{rem(30)} / 2);
+
+		@supports (display: $grid) {
+			margin-bottom: 0;
+			width: 100%;
+		}
 	}
 
 	.card:nth-child(even) {
 		margin-left: rem(30);
+
+		@supports (display: $grid) {
+			margin-left: 0;
+		}
 	}
 
 	.card + .card {
 		margin-top: 0;
 	}
-
-	@supports (display: grid) {
-		.cards {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		.card {
-			float: none;
-			margin-bottom: 0;
-			width: 100%;
-		}
-
-		.card:nth-child(even) {
-			margin-left: 0;
-		}
-	}
 }
 
 @include breakpoint-up(lg) {
 	.cards {
-		grid-column: 5 / 13;
+		@include grid-column-span(8, 12, 5);
 	}
 }
 
 
 @include breakpoint-up(xl) {
 	.cards {
-		grid-column: 5 / 17;
-		grid-template-columns: repeat(3, 1fr);
+		@supports (display: $grid) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include grid-column-span(12, 16, 5);
 	}
 
+	.card {
+		margin-bottom: rem(30);
+		margin-left: rem(30);
+		width: calc((100% - (#{rem(30)} * 2)) / 3);
 
+		@supports (display: $grid) {
+			margin-bottom: 0;
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
+	.card:nth-child(even) {
+		margin-left: rem(30);
+
+		@supports (display: $grid) {
+			margin-left: 0;
+		}
+	}
+
+	.card:nth-child(3n + 1) {
+		margin-left: 0;
+	}
 }
