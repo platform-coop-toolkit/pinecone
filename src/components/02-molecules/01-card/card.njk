@@ -15,8 +15,8 @@
 			{% if format %}
 				<span class="card__format">
 					{% if modifier === 'resource' %}
-						{% render '@svg', {svg:'article'} %}
-					{% endif %}{{ format }}</span>{% endif %}
+						{% render '@svg', {svg:format} %}
+					{% endif %}{{ format | capitalize }}</span>{% endif %}
 			{% if language %}
 			<span class="card__sep"> &middot; </span>
 			<span class="card__language">{{ language }}</span>

@@ -15,7 +15,7 @@ module.exports = {
 			context: {
 				modifier: 'resource',
 				id: 1,
-				format: 'Article',
+				format: 'article',
 				name: 'Resource',
 				cardTitle: 'Data as a common in the sharing economy',
 				byline: 'Centre d&rsquo;économie Paris Nord',

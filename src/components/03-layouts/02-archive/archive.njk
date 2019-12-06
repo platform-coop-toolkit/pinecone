@@ -10,8 +10,8 @@
 	</div>
 </div>
 <ul class="cards">
-{% for i in range(0, 12) %}
-  {% render '@card--resource', {title: false, withWrapper: false}, true %}
+{% for card in cards %}
+  {% render '@card--resource', card, true %}
 {% endfor %}
 </ul>
 {% render '@pagination', {title: false}, true %}
