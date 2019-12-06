@@ -10,7 +10,7 @@ export function icons() {
 		const iconClasses = icon.classList;
 		const ariaHidden = icon.getAttribute( 'aria-hidden' );
 		const viewBox = icon.getAttribute( 'viewBox' );
-		const url = ( icon.querySelector( 'use' ) ) ? icon.querySelector( 'use' ).getAttribute( 'xlink:href' ) : false;
+		const url = ( icon.querySelector( 'use' ) ) ? icon.querySelector( 'use' ).getAttribute( 'href' ) : false;
 		if ( url ) {
 			fetch( url )
 				.then( response => response.text() )
