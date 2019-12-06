@@ -6,12 +6,17 @@
 	color: $blue-500;
 	display: inline-block;
 	display: inline-flex;
+	font-size: rem(16);
 	height: rem(34);
 	justify-content: center;
 	margin: 0;
 	padding: rem(6) 0;
 	text-underline-offset: rem(8);
 	width: rem(34);
+
+	svg {
+		margin-bottom: 0;
+	}
 
 	&:hover {
 		background: $blue-150;
