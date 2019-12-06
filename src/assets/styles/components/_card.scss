@@ -220,9 +220,21 @@
 	}
 }
 
+// @include breakpoint-up(md) {
+// 	.cards {
+// 		@supports (display: $grid) {
+// 			grid-template-columns: repeat(3, 1fr);
+// 		}
+// 	}
+// }
+
 @include breakpoint-up(lg) {
 	.cards {
 		@include grid-column-span(8, 12, 5);
+
+		@supports (display: $grid) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 }
 

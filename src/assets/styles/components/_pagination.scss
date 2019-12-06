@@ -116,16 +116,14 @@
 
 @include breakpoint-up(lg) {
 	.pagination {
-		margin-left: calc((100% - 11 * #{rem(30)}) * 4 / 12 + (5 * #{rem(30)})); // TODO: Make mixin.
-
+		@include grid-margin-left(4, 12);
 		@include grid-column-span(8, 12, 5);
 	}
 }
 
 @include breakpoint-up(xl) {
 	.pagination {
-		margin-left: calc((100% - 15 * #{rem(30)}) * 4 / 16 + (5 * #{rem(30)})); // TODO: Make mixin.
-
+		@include grid-margin-left(4, 16);
 		@include grid-column-span(12, 16, 5);
 	}
 }

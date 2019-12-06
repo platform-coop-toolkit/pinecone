@@ -19,7 +19,8 @@
 
 @include breakpoint-up(lg) {
 	.filter-sort {
-		margin-right: calc((100% - 11 * #{rem(30)}) * 1 / 12 + (2 * #{rem(30)})); // TODO: Make mixin.
+		@include grid-margin-right(1, 12);
+
 		padding-top: rem(30);
 
 		&::before {
@@ -42,8 +43,7 @@
 
 @include breakpoint-up(xl) {
 	.filter-sort {
-		margin-right: calc((100% - 15 * #{rem(30)}) * 1 / 16 + (2 * #{rem(30)})); // TODO: Make mixin.
-
+		@include grid-margin-right(1, 16);
 		@include grid-column-span(3, 16);
 	}
 }
