@@ -1,9 +1,9 @@
 module.exports = {
 	title: 'Filter Button',
-	label: 'Filter Button',
 	status: 'wip',
 	context: {
-		inputTitle: 'Filter Button',
+		label: 'Show',
+		standAlone: false
 	},
 	variants: [
 		{

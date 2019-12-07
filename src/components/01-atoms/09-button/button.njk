@@ -1,2 +1,2 @@
-{% if title %}<h1>{{ title }}</h1>{% endif %}
+{% if not standAlone %}<div class="spacer"></div>{% endif %}
 <button>{% render '@svg', {svg:icon} %}{{ label }}</button>

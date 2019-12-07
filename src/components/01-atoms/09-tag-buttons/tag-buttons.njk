@@ -1,8 +1,0 @@
-<h1>{{ tagbuttonsTitle }}</h1>
-<ul class="tag-buttons">
-	{% for tag in tagbuttons %}
-	<li class="tag-button">
-		<button class="tag-button__button"><span class="screen-reader-text">Remove </span>{{ tag }} {% render '@svg', {svg: 'close'}, true %}</a>
-	</li>
-	{% endfor %}
-</ul>
