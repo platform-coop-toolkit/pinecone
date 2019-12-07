@@ -50,7 +50,8 @@
 	}
 }
 
-.is-style-secondary .wp-block-button__link {
+.is-style-secondary .wp-block-button__link,
+.has-dark-mint-500-background-color [type="submit"] {
 	background: $yellow-500;
 	color: $dark-mint-500;
 

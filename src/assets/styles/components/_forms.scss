@@ -23,7 +23,7 @@ label {
 	color: $red-500;
 }
 
-input,
+input:not([type="submit"]),
 select,
 textarea {
 	-moz-appearance: none;
@@ -88,13 +88,13 @@ select {
 	}
 }
 
-input:hover,
+input:not([type="submit"]):hover,
 textarea:hover,
 select:hover {
 	border-color: $blue-400;
 }
 
-input:focus,
+input:not([type="submit"]):focus,
 textarea:focus,
 select:focus {
 	border-color: $blue-500;
@@ -102,7 +102,7 @@ select:focus {
 	outline: none;
 }
 
-input[disabled],
+input:not([type="submit"])[disabled],
 textarea[disabled],
 select[disabled] {
 	background-color: $grey-200;
@@ -268,20 +268,20 @@ input[type="checkbox"]:checked:focus + label::before {
 		0 0 0 rem(4) $blue-300;
 }
 
-.input-group--error input,
+.input-group--error input:not([type="submit"]),
 .input-group--error select,
 .input-group--error textarea {
 	border-color: $red-500;
 	color: $red-500;
 }
 
-.has-dark-mint-500-background-color input:hover,
+.has-dark-mint-500-background-color input:not([type="submit"]):hover,
 .has-dark-mint-500-background-color textarea:hover,
 .has-dark-mint-500-background-color select:hover {
 	border-color: $blue-300;
 }
 
-.has-dark-mint-500-background-color input:focus,
+.has-dark-mint-500-background-color input:not([type="submit"]):focus,
 .has-dark-mint-500-background-color textarea:focus,
 .has-dark-mint-500-background-color select:focus {
 	border-color: $blue-300;
@@ -309,20 +309,20 @@ input[type="search"]::-webkit-search-cancel-button {
 	line-height: (24 / 14);
 }
 
-.input-group--error input:hover,
+.input-group--error input:not([type="submit"]):hover,
 .input-group--error select:hover,
 .input-group--error textarea:hover {
 	border-color: $red-500;
 }
 
-.input-group--error input:focus,
+.input-group--error input:not([type="submit"]):focus,
 .input-group--error select:focus,
 .input-group--error textarea:focus {
 	border-color: $red-500;
 	box-shadow: 0 0 0 rem(1) $red-500 inset;
 }
 
-.has-dark-mint-500-background-color .input-group--error input,
+.has-dark-mint-500-background-color .input-group--error input:not([type="submit"]),
 .has-dark-mint-500-background-color .input-group--error select,
 .has-dark-mint-500-background-color .input-group--error textarea {
 	border-color: $red-200;

@@ -1,30 +1,46 @@
-const faker = require( 'faker' );
-
-const checkboxCount = 4;
-const checkboxData = [];
-
-for ( let i = 0; i < checkboxCount; i++ ) {
-	checkboxData.push( {
-		name: 'region',
-		value: faker.address.countryCode(),
-		label: faker.address.country(),
-		checked: faker.random.boolean(),
-		disabled: faker.random.boolean()
-	} );
-}
-
 module.exports = {
 	title: 'Checkbox',
 	status: 'wip',
 	context: {
-		title: 'Checkbox',
-		checkboxes: checkboxData
+		label: 'Checkbox',
+		value: 'checkbox',
+		name: 'name',
+		standAlone: false
 	},
 	variants: [
 		{
-			name: 'Light on Dark',
+			name: 'Checked',
+			context: {
+				checked: true
+			}
+		},
+		{
+			name: 'Disabled',
+			context: {
+				disabled: true
+			}
+		},
+		{
+			name: 'Default (Light on Dark)',
+			label: 'Default (Light on Dark)',
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color'
+			}
+		},
+		{
+			name: 'Checked (Light on Dark)',
+			label: 'Checked (Light on Dark)',
+			context: {
+				bodyClass: 'has-dark-mint-500-background-color',
+				checked: true
+			}
+		},
+		{
+			name: 'Disabled (Light on Dark)',
+			label: 'Disabled (Light on Dark)',
+			context: {
+				bodyClass: 'has-dark-mint-500-background-color',
+				disabled: true
 			}
 		}
 	]

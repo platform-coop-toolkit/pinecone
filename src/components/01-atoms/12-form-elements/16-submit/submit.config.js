@@ -3,7 +3,16 @@ module.exports = {
 	label: 'Submit Button',
 	status: 'wip',
 	context: {
-		inputTitle: 'Submit Button',
-		buttonLabel: 'Submit'
-	}
+		label: 'Submit',
+		standAlone: false
+	},
+	'variants': [
+		{
+			name: 'Default (Light on Dark)',
+			label: 'Default (Light on Dark)',
+			context: {
+				bodyClass: 'has-dark-mint-500-background-color'
+			}
+		}
+	]
 };

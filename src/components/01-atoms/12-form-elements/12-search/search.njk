@@ -1,6 +1,4 @@
-<h1>{{ title }}</h1>
+{% if not standAlone %}<div class="spacer"></div>{% endif %}
 <div class="input-group">
-	<label for="{{ name }}">{{ label }}</label>
-	<input id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}" type="search" />
-	<p class="input-group__description">{{ description }}</p>
+	<input id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}" aria-label="{{ label }}" type="search"{% if disabled %} disabled{% endif %} />
 </div>

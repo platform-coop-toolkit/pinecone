@@ -3,19 +3,45 @@ module.exports = {
 	label: 'Radio Button',
 	status: 'wip',
 	context: {
-		inputTitle: 'Radio Button',
-		radioButtons: {
-			1: 'Option 1',
-			2: 'Option 2',
-			3: 'Option 3',
-			4: 'Option 4'
-		}
+		label: 'Radio Button',
+		value: 'radio',
+		name: 'name',
+		standAlone: false
 	},
 	variants: [
 		{
-			name: 'Light on Dark',
+			name: 'Selected',
+			context: {
+				checked: true
+			}
+		},
+		{
+			name: 'Disabled',
+			context: {
+				disabled: true
+			}
+		},
+		{
+			name: 'Default (Light on Dark)',
+			label: 'Default (Light on Dark)',
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color'
+			}
+		},
+		{
+			name: 'Selected (Light on Dark)',
+			label: 'Selected (Light on Dark)',
+			context: {
+				bodyClass: 'has-dark-mint-500-background-color',
+				checked: true
+			}
+		},
+		{
+			name: 'Disabled (Light on Dark)',
+			label: 'Disabled (Light on Dark)',
+			context: {
+				bodyClass: 'has-dark-mint-500-background-color',
+				disabled: true
 			}
 		}
 	]

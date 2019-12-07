@@ -2,17 +2,31 @@ module.exports = {
 	title: 'Search Input',
 	status: 'wip',
 	context: {
-		title: 'Search Input',
-		label: 'Search Input',
+		label: 'Search',
 		name: 's',
-		placeholder: 'Example input',
-		description: 'Description for this search input.'
+		placeholder: 'Example search',
+		standAlone: false
 	},
 	variants: [
 		{
-			name: 'Light on Dark',
+			name: 'Disabled',
+			context: {
+				disabled: true
+			}
+		},
+		{
+			name: 'Default (Light on Dark)',
+			label: 'Default (Light on Dark)',
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color'
+			}
+		},
+		{
+			name: 'Disabled (Light on Dark)',
+			label: 'Disabled (Light on Dark)',
+			context: {
+				bodyClass: 'has-dark-mint-500-background-color',
+				disabled: true
 			}
 		}
 	]

@@ -3,11 +3,11 @@ module.exports = {
 	status: 'wip',
 	context: {
 		scriptCall: 'window.pinecone.cards();',
-		cardTitle: 'Card',
+		title: 'Card',
 		format: 'Card',
 		name: 'Generic Card',
-		link: 'https://example.com',
-		withWrapper: true
+		href: 'https://example.com',
+		standAlone: false
 	},
 	variants: [
 		{
@@ -18,12 +18,12 @@ module.exports = {
 				format: 'Article',
 				formatIcon: 'article',
 				name: 'Resource',
-				cardTitle: 'Data as a common in the sharing economy',
+				title: 'Data as a common in the sharing economy',
 				byline: 'Centre d&rsquo;économie Paris Nord',
 				locality: 'France',
 				topics: ['Commons', 'Policy'],
 				topicCount: 4,
-				link: 'resource',
+				href: 'resource',
 				language: 'English'
 			}
 		},
@@ -33,9 +33,9 @@ module.exports = {
 				modifier: 'blog',
 				id: 2,
 				format: 'Blog',
-				cardTitle: 'Researching Worker-Owned Platforms',
+				title: 'Researching Worker-Owned Platforms',
 				date: 'Apr 13, 2019',
-				link: 'blog'
+				href: 'blog'
 			}
 		},
 		{
@@ -45,10 +45,10 @@ module.exports = {
 				id: 3,
 				format: 'Community Event',
 				name: 'Event',
-				cardTitle: 'Toronto Platform Coop Meetup',
+				title: 'Toronto Platform Coop Meetup',
 				date: 'Feb 23, 2019, 6:30-8:30PM',
 				locality: 'OCAD University, 100 McCaul Street',
-				link: 'event'
+				href: 'event'
 			}
 		},
 		{
@@ -58,9 +58,9 @@ module.exports = {
 				modifier: 'platformcoop',
 				id: 4,
 				format: 'Platform Co-op',
-				cardTitle: 'Aarhus Makers',
+				title: 'Aarhus Makers',
 				locality: 'Aarhus, Denmark',
-				link: 'https://example.com/platformcoop',
+				href: 'https://example.com/platformcoop',
 				externalLink: true
 			}
 		},
@@ -71,9 +71,9 @@ module.exports = {
 				id: 5,
 				format: 'Blog',
 				name: 'Blog with Image',
-				cardTitle: 'Who Owns the World?',
+				title: 'Who Owns the World?',
 				date: 'Nov 12, 2019',
-				link: 'blog',
+				href: 'blog',
 				image: '/images/blog.jpg'
 			}
 		},
@@ -84,9 +84,9 @@ module.exports = {
 				id: 6,
 				name: 'Story',
 				format: 'Worker Story',
-				cardTitle: 'SEWA Federation',
+				title: 'SEWA Federation',
 				locality: 'Gujarat, India',
-				link: 'story',
+				href: 'story',
 				image: '/images/story.jpg'
 			}
 		},
@@ -96,9 +96,9 @@ module.exports = {
 				modifier: 'person',
 				id: 7,
 				name: 'Person',
-				cardTitle: 'Trebor Scholz',
+				title: 'Trebor Scholz',
 				description: 'Founding Director, Institute for the Cooperative Digital Economy',
-				link: 'person',
+				href: 'person',
 				image: '/images/person.jpg'
 			}
 		},
@@ -108,8 +108,8 @@ module.exports = {
 				modifier: 'project',
 				id: 8,
 				format: 'Project',
-				link: 'https://github/platform-coop-toolkit',
-				cardTitle: 'Platform Cooperative Development Kit',
+				href: 'https://github/platform-coop-toolkit',
+				title: 'Platform Cooperative Development Kit',
 				description: 'An open source toolkit of software to support platform cooperatives.',
 			}
 		}

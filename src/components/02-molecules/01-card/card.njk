@@ -1,8 +1,4 @@
-{% if title %}<h1>{{ title }}: {% if name %}{{ name }}
-	{% else %}{{ format }}
-	{% endif %}
-</h1>{% endif %}
-{% if withWrapper %}
+{% if not standAlone %}
 <ul class="cards">
 {% endif %}
 	<li class="card card--{{ modifier }}">
@@ -21,9 +17,9 @@
 			<span class="card__sep"> &middot; </span>
 			<span class="card__language">{{ language }}</span>
 			{% endif %}
-			{% if link %}
+			{% if href %}
 				<h2 id="{{ modifier }}-{{ id }}" class="card__title" >
-					<a {% if externalLink %}rel="external" {% endif %}href="{{ link }}">{{ cardTitle | safe }}</a>
+					<a {% if externalLink %}rel="external" {% endif %}href="{{ href }}">{{ title | safe }}</a>
 				</h2>
 			{% endif %}
 		</header>
@@ -60,6 +56,6 @@
 				</div>
 			{% endif %}
 		</li>
-	{% if withWrapper %}
+	{% if not standAlone %}
 	</ul>
 	{% endif %}

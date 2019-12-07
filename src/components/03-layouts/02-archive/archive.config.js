@@ -63,14 +63,13 @@ for ( let i = 0; i < resourceCount; i++ ) {
 		format: thisFormat.label,
 		formatIcon: thisFormat.svg,
 		name: 'Resource',
-		cardTitle: title( faker.lorem.words( faker.random.number( { min: 4, max: 12 } ) ) ),
+		title: title( faker.lorem.words( faker.random.number( { min: 4, max: 12 } ) ) ),
 		byline: title( faker.lorem.words( faker.random.number( { min: 2, max: 4 } ) ) ),
 		locality: faker.address.country(),
 		topics: [title( faker.company.catchPhraseNoun() ), title( faker.company.catchPhraseNoun() )],
 		topicCount: faker.random.number( { min: 3, max: 7 } ),
-		link: 'resource',
-		title: false,
-		withWrapper: false,
+		href: 'resource',
+		standAlone: true,
 	} );
 }
 
