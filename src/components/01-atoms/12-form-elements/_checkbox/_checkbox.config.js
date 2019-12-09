@@ -7,5 +7,7 @@ module.exports = {
 		name: 'name',
 		checked: false,
 		disabled: false,
+		standAlone: true,
+		className: false
 	}
 };

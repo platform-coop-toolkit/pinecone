@@ -1,0 +1,27 @@
+#invoke-dialog + * {
+	display: none;
+}
+
+[role="dialog"] {
+	background-color: $blue-500;
+	color: $off-white;
+	left: 50%;
+	max-height: 50vh;
+	max-width: 60ch;
+	overflow-y: auto;
+	padding: $gutter;
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+[role="dialog"] h1 {
+	margin-top: rem(92);
+}
+
+[role="dialog"] #dialog__close {
+	position: absolute;
+	right: $gutter;
+	top: $gutter;
+}

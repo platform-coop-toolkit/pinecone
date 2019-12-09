@@ -1,2 +1,4 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
-<button>{% render '@svg', {svg:icon} %}{{ label }}</button>
+<button id="{{ id }}"{% if className %} class="{{ className }}"{% endif %}>
+	{% if icon and iconPosition === 'start' %}{% render '@svg', {svg:icon} %}{% endif %}<span class="button__label">{{ label }}</span>{% if icon and iconPosition === 'end' %}{% render '@svg', {svg:icon} %}{% endif %}
+</button>

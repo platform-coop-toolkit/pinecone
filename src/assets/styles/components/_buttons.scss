@@ -15,39 +15,40 @@
 	text-decoration: none;
 	width: 100%;
 
-	&:visited {
-		background: $green-400;
-	}
-
-	&:hover {
-		background: $blue-700;
-	}
-
-	&:active {
-		background: $blue-400;
-	}
-
-	&:focus {
-		background: $blue-700;
-		box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
-		outline: none;
-	}
-
 	.icon {
 		margin-left: rem(4);
 	}
 }
 
-[type="submit"] {
-	&:-moz-focusring {
-		color: transparent;
-		text-shadow: 0 0 0 $white;
-	}
+[type="submit"]::-moz-focus-inner {
+	outline: none;
+}
 
-	/* stylelint-disable no-descending-specificity */
-	&::-moz-focus-inner { /* stylelint-enable */
-		outline: none;
-	}
+[type="submit"]:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 $white;
+}
+
+.wp-block-button__link:visited,
+[type="submit"]:visited {
+	background: $green-400;
+}
+
+.wp-block-button__link:hover,
+[type="submit"]:hover {
+	background: $blue-700;
+}
+
+.wp-block-button__link:active,
+[type="submit"]:active {
+	background: $blue-400;
+}
+
+.wp-block-button__link:focus,
+[type="submit"]:focus {
+	background: $blue-700;
+	box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
+	outline: none;
 }
 
 .is-style-secondary .wp-block-button__link,
@@ -142,8 +143,12 @@ button:not([class]) {
 	margin-left: rem(-15);
 	padding: 0 rem(12);
 
-	svg {
+	svg + * {
 		margin-right: 0.25em;
+	}
+
+	* + svg {
+		margin-left: 0.25em;
 	}
 
 	&:hover {

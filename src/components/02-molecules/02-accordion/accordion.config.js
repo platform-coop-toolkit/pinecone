@@ -1,11 +1,12 @@
 const faker = require( 'faker' );
+const title = require( 'title' );
 
 const accordionCount = 6;
 const accordionData = [];
 
 for ( let i = 0; i < accordionCount; i++ ) {
 	accordionData.push( {
-		accordionLabel: faker.lorem.words( 3 ),
+		accordionLabel: title( faker.lorem.words( 3 ) ),
 		accordionContent: faker.lorem.paragraph()
 	} );
 }
@@ -15,14 +16,31 @@ module.exports = {
 	status: 'wip',
 	context: {
 		scriptCall: 'window.pinecone.accordions();',
-		title: 'Accordions',
-		accordions: accordionData
+		accordions: accordionData,
+		standAlone: false
 	},
 	variants: [
 		{
-			name: 'Light on Dark',
+			name: 'Default (Light on Dark)',
+			label: 'Default (Light on Dark)',
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color'
+			}
+		},
+		{
+			name: 'Checkbox',
+			context: {
+				accordions: [
+					{
+						accordionLabel: title( faker.lorem.words( 3 ) ),
+						checkbox: {
+							value: 'checkbox',
+							name: 'name',
+						}
+					},
+					accordionData[0],
+					accordionData[1]
+				]
 			}
 		}
 	]

@@ -5,19 +5,23 @@ module.exports = {
 		standAlone: false,
 		checkboxes: [
 			{
-				name: 'checkbox'
+				name: 'checkbox',
+				standAlone: false
 			},
 			{
 				name: 'checkbox',
-				checked: true
+				checked: true,
+				standAlone: false
 			},
 			{
 				name: 'checkbox',
 				value: 'indeterminate',
+				standAlone: false
 			},
 			{
 				name: 'checkbox',
-				disabled: true
+				disabled: true,
+				standAlone: false
 			}
 		]
 	},

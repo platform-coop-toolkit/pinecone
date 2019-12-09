@@ -1,3 +1,5 @@
+import 'wicg-inert';
+
 /**
  * Icon Handler.
  */
@@ -124,6 +126,10 @@ export function accordions() {
 	const accordionGroups = document.querySelectorAll( '.accordions' );
 
 	Array.prototype.forEach.call( accordionGroups, accordionGroup => {
+		if ( null === accordionGroup.offsetParent ) {
+			return;
+		}
+
 		const accordions = accordionGroup.querySelectorAll( '.accordion' );
 		const headings = accordionGroup.querySelectorAll( '.accordion__heading' );
 
@@ -132,13 +138,25 @@ export function accordions() {
 			const contents = heading.nextElementSibling;
 			const btn = document.createElement( 'button' );
 			btn.setAttribute( 'class', 'accordion__control' );
+			if ( accordion.classList.contains( 'accordion--checkbox' ) ) {
+				btn.classList.add( 'filter-button' );
+			}
 			btn.setAttribute( 'aria-expanded', 'false' );
-			btn.innerHTML = `
+			if ( accordion.classList.contains( 'accordion--checkbox' ) ) {
+				btn.innerHTML = `
+					<span class="screen-reader-text">${heading.textContent}</span>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-add" aria-hidden="true"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-miterlimit="10" class="stroke" stroke-width="2"><path class="vert" d="m10 5v10"></path><path d="m5 10h10"></path></g></svg>
+				`;
+			} else {
+				btn.innerHTML = `
 					${heading.textContent}
 					<svg aria-hidden="true" width="13" height="13" viewBox="0 0 13 13"><g transform="translate(-5721 -543)" fill="none" stroke="#203131" stroke-linecap="round" stroke-width="3"><line x2="10" transform="translate(5722.5 549.5)"/><line class="vert" y2="10" transform="translate(5727.5 544.5)"/></g></svg>
 				`;
+			}
 			heading.parentNode.insertBefore( btn, heading.nextElementSibling );
-			heading.parentNode.removeChild( heading );
+			if ( !accordion.classList.contains( 'accordion--checkbox' ) ) {
+				heading.parentNode.removeChild( heading );
+			}
 
 			contents.hidden = true;
 
@@ -163,3 +181,67 @@ export function accordions() {
 	} );
 }
 
+/**
+ * Dialog Handler.
+ */
+export function dialogs() {
+	const invokeButton = document.getElementById( 'invoke-dialog' );
+	if ( null === invokeButton.offsetParent ) {
+		return;
+	}
+	const elems = document.querySelectorAll( 'body > *' );
+	const dialogSource = invokeButton.nextElementSibling;
+	const dialogTitle = dialogSource.firstElementChild;
+	const dialogContent = dialogTitle.nextElementSibling;
+
+	invokeButton.onclick = () => {
+		Array.prototype.forEach.call( elems, elem => {
+			elem.setAttribute( 'inert', 'inert' );
+		} );
+		const unique = +new Date();
+		const dialog = document.createElement( 'article' );
+		dialog.classList.add( 'has-dark-mint-500-background-color' );
+		dialog.setAttribute( 'role', 'dialog' );
+		dialog.setAttribute( 'aria-labelledby', `h-${unique}` );
+		dialog.innerHTML = `
+			<button id="dialog__close"><span class="button__label">Close</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-close"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-miterlimit="10" class="stroke" stroke-width="2"><path d="m5 15 10-10"></path><path d="m15 15-10-10"></path></g></svg></button>
+			<h1 class="dialog__header" id="h-${unique}">${ dialogTitle.innerHTML }</h1>
+			<div class="dialog__content ${ dialogContent.classList }">${ dialogContent.innerHTML }</div>
+		`;
+		document.body.appendChild( dialog );
+		if ( dialogContent.classList.contains( 'accordions' ) ) {
+			accordions();
+		}
+
+		/**
+		 * Close the dialog.
+		 */
+		const close = () => {
+			Array.prototype.forEach.call( elems, elem => {
+				if ( elem !== dialog ) {
+					elem.removeAttribute( 'inert' );
+				}
+			} );
+			dialog.parentNode.removeChild( dialog );
+			invokeButton.focus();
+		};
+
+		const closeButton = document.getElementById( 'dialog__close' );
+		closeButton.onclick = () => {
+			close();
+		};
+
+		document.onkeydown = function( evt ) {
+			evt = evt || window.event;
+			let isEscape = false;
+			if ( 'key' in evt ) {
+				isEscape = 'Escape' == evt.key || 'Esc' == evt.key;
+			} else {
+				isEscape = 27 == evt.keyCode;
+			}
+			if ( isEscape ) {
+				close();
+			}
+		};
+	};
+}

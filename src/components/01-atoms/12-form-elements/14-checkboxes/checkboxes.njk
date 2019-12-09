@@ -1,6 +1,6 @@
-<ul class="input-group">
+<ul class="input-group {{ className if className }}">
 	{% for checkbox in checkboxes %}
-	{% render '@checkbox', checkbox, true %}
+	<li>{% render '@checkbox', checkbox, true %}</li>
 	{% endfor %}
 </ul>
 <script type="text/javascript">

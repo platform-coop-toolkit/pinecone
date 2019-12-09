@@ -1,6 +1,6 @@
 .accordion {
-
 	margin-bottom: 0;
+	position: relative;
 }
 
 .accordion__heading {
@@ -28,6 +28,10 @@
 	}
 }
 
+.accordion--checkbox .accordion__heading {
+	font-size: unset;
+}
+
 .accordion__control {
 	@extend .accordion__heading;
 	align-items: center;
@@ -44,6 +48,16 @@
 		line {
 			stroke: currentColor;
 		}
+	}
+}
+
+.accordion--checkbox .accordion__control {
+	position: absolute;
+	right: rem(3);
+	top: rem(6);
+
+	&::before {
+		display: none;
 	}
 }
 
@@ -154,8 +168,8 @@
 	display: none;
 }
 
-.accordion:focus-within + .accordion .accordion__heading::before,
-.accordion:focus-within + .accordion .accordion__control::before {
+.accordion:not(.accordion--checkbox):focus-within + .accordion .accordion__heading::before,
+.accordion:not(.accordion--checkbox):focus-within + .accordion .accordion__control::before {
 	display: none;
 }
 
