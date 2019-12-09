@@ -1,0 +1,8 @@
+<ul class="input-group">
+	{% for checkbox in checkboxes %}
+	{% render '@checkbox', checkbox, true %}
+	{% endfor %}
+</ul>
+<script type="text/javascript">
+	document.getElementById('indeterminate').indeterminate = true;
+</script>

@@ -1,4 +1,3 @@
-{% if not standAlone %}<div class="spacer"></div>{% endif %}
 <div class="input-group {% if error %} input-group--error{% endif %}">
 	<label for="{{ name }}">{{ label }}{% if error %} (Error){% elseif disabled %} (Disabled){% endif %}</label>
 	<textarea id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}"{% if disabled %} disabled{% endif %}>{% if value %}{{ value | safe }}{% endif %}</textarea>

@@ -1,18 +1,20 @@
 module.exports = {
-	title: 'Radio Button',
-	label: 'Radio Button',
+	title: 'Text Input',
 	status: 'wip',
 	context: {
-		label: 'Radio Button',
-		value: 'radio',
-		name: 'name',
-		standAlone: false
+		label: 'Text Input',
+		name: 'text',
+		description: 'Description for this text input.',
+		placeholder: 'Example input',
+		error: false,
+		disabled: false
 	},
 	variants: [
 		{
-			name: 'Selected',
+			name: 'Error',
 			context: {
-				checked: true
+				value: 'Incorrect input',
+				error: 'Sorry, that appears to be incorrect.'
 			}
 		},
 		{
@@ -29,11 +31,12 @@ module.exports = {
 			}
 		},
 		{
-			name: 'Selected (Light on Dark)',
-			label: 'Selected (Light on Dark)',
+			name: 'Error (Light on Dark)',
+			label: 'Error (Light on Dark)',
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color',
-				checked: true
+				value: 'Incorrect input',
+				error: 'Sorry, that appears to be incorrect.'
 			}
 		},
 		{
