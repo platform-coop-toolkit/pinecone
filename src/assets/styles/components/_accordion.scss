@@ -10,7 +10,8 @@
 	font-family: $font-family-sans;
 	font-size: rem(20);
 	font-weight: $font-weight-bold;
-	line-height: (32 / 20);
+	height: rem(49);
+	// line-height: (32 / 20);
 	margin-left: rem(-12);
 	margin-right: rem(-12);
 	padding: rem(5) rem(12) rem(2);
@@ -43,7 +44,14 @@
 	width: calc(100% + #{rem(24)});
 
 	svg {
-		height: 1em;
+		height: rem(20);
+		margin-bottom: 0;
+		margin-right: rem(10);
+		width: rem(20);
+
+		.stroke {
+			stroke-width: 0.125rem;
+		}
 
 		line {
 			stroke: currentColor;
@@ -53,11 +61,15 @@
 
 .accordion--checkbox .accordion__control {
 	position: absolute;
-	right: rem(3);
-	top: rem(6);
+	right: rem(6);
+	top: rem(9);
 
 	&::before {
 		display: none;
+	}
+
+	svg {
+		margin-right: 0;
 	}
 }
 

@@ -8,7 +8,42 @@
 
 .filter-sort__filters,
 .filter-sort__sorts {
-	display: none;
+	// display: none;
+}
+
+.filter-sort__filters {
+	.accordion__content > .input-group > li {
+		padding: rem(14) 0;
+		position: relative;
+	}
+
+	.accordion__content > .input-group > li + li {
+		border-top: rem(1) solid transparentize($grey-300, 0.3);
+	}
+
+	.accordion__content > .input-group button {
+		position: absolute;
+		right: 0;
+		top: rem(9);
+	}
+
+	.accordion__content > .input-group li ul {
+		margin-top: rem(12);
+		padding-left: rem(40);
+		width: 100%;
+	}
+
+	.accordion__content > .input-group li [aria-expanded="false"] + ul {
+		display: none;
+	}
+
+	.accordion__content > .input-group li + li {
+		margin-top: 0;
+	}
+
+	.accordion__content > .input-group ul li {
+		padding: rem(12) 0;
+	}
 }
 
 @include breakpoint-up(sm) {
@@ -32,10 +67,6 @@
 		}
 
 		@include grid-column-span(3, 12);
-	}
-
-	#invoke-dialog {
-		display: none;
 	}
 
 	.filter-sort__filters,
