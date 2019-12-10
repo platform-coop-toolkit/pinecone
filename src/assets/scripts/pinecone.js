@@ -45,7 +45,8 @@ Array.prototype.forEach.call( descendantFilters, filter => {
 			if ( checkedSiblingFilters.length === siblingFilters.length ) {
 				parentFilter.indeterminate = false;
 				parentFilter.checked = true;
-			} else {			parentFilter.indeterminate = true;
+			} else {
+				parentFilter.indeterminate = true;
 			}
 		} else {
 			if ( 0 < checkedSiblingFilters.length ) {
@@ -54,7 +55,6 @@ Array.prototype.forEach.call( descendantFilters, filter => {
 				parentFilter.indeterminate = false;
 				parentFilter.checked = false;
 			}
-
 		}
 	} );
 } );
