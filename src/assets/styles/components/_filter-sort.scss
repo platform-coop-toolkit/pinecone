@@ -12,8 +12,12 @@
 }
 
 .filter-sort__filters {
+	.accordions {
+		margin-top: 0;
+	}
+
 	.accordion__control svg {
-		margin-right: rem(3);
+		margin-right: rem(4);
 	}
 
 	.accordion__content > .input-group {

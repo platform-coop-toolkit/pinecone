@@ -6,12 +6,12 @@
 		<div class="accordion">
 			<p class="accordion__heading">{{ label }}</p>
 			<div class="accordion__content">
-				<ul class="input-group {{ label | slugify }}">
+				<ul class="input-group input-group__parent {{ label | slugify }}">
 					{% for term in terms %}
 					<li>
 						<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}">{{ term.label }}</label>
 						{% render '@filter-button', {standAlone: true} %}
-						<ul class="input-group">
+						<ul class="input-group input-group__descendant">
 							{% if term.childrenCount %}
 								{% for i in range(1, term.childrenCount) %}
 								<li><input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}-{{ i }}" value="{{ term.label | slugify }}-{{ i }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}-{{ i }}">{{ term.label }} {{ i }}</label></li>
