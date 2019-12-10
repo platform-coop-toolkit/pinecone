@@ -8,16 +8,19 @@
 		<h2 class="screen-reader-text">Filters</h2>
 		<div class="accordions">
 		{% for filterList in filterLists %}
-			{% render '@filter-list', {standAlone: true, label: filterList.label}, true %}
+			{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
 		{% endfor %}
 		</div>
+		{% render '@button', {icon: false, label: 'Apply filters', id: 'apply'} %}
 	</div>
 	<div class="filter-sort__sorts">
 	</div>
 </div>
+<div class="resource-list">
 <ul class="cards">
 {% for card in cards %}
   {% render '@card--resource', card %}
 {% endfor %}
 </ul>
+</div>
 {% render '@pagination', {title: false}, true %}

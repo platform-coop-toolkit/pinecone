@@ -1,7 +1,7 @@
 {% if not standAlone %}
 <ul class="cards">
 {% endif %}
-	<li class="card card--{{ modifier }}">
+	<li class="card card--{{ modifier }}" data-format="{{ format | slugify }}">
 		{% if image %}
 			<figure class="card__image">
 				<img src="{{ image }}" alt="Image for this {{ modifier }}."/>

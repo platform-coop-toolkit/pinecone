@@ -1,8 +1,10 @@
+.resource-list {
+	@include grid-column-span(8, 8);
+}
+
 .cards {
 	list-style: none;
 	margin-top: rem(30);
-
-	@include grid-column-span(8, 8);
 }
 
 .card {
@@ -229,9 +231,11 @@
 // }
 
 @include breakpoint-up(lg) {
-	.cards {
+	.resource-list {
 		@include grid-column-span(8, 12, 5);
+	}
 
+	.cards {
 		@supports (display: $grid) {
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -240,12 +244,14 @@
 
 
 @include breakpoint-up(xl) {
+	.resource-list {
+		@include grid-column-span(12, 16, 5);
+	}
+
 	.cards {
 		@supports (display: $grid) {
 			grid-template-columns: repeat(3, 1fr);
 		}
-
-		@include grid-column-span(12, 16, 5);
 	}
 
 	.card {

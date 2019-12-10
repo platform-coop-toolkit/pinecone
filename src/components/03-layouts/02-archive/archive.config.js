@@ -84,18 +84,253 @@ module.exports = {
 		filterLists: [
 			{
 				label: 'Location of Relevance',
+				terms: [
+					{label:'Bangladesh'},
+					{label:'Brazil'},
+					{label:'Canada'},
+					{label:'France'},
+					{label:'Germany'},
+					{label:'Hong Kong'},
+					{label:'India'},
+					{label:'Indonesia'},
+					{label:'Italy'},
+					{label:'Japan'},
+					{label:'Netherlands'},
+					{label:'South Africa'},
+					{label:'Spain'},
+					{label:'Sweden'},
+					{label:'United Kingdom'},
+					{label:'United States'}
+				]
 			},
 			{
 				label: 'Goals',
+				terms: [
+					{
+						label: 'Learn the basics of platform cooperativism'
+					},
+					{
+						label: 'Build a co-op',
+						children: [
+							'General build a co-op resources',
+							'Write bylaws',
+							'Build a business model',
+							'Establish a governance structure',
+							'Incorporate a co-op',
+							'Build a marketing plan',
+							'Pick a co-op type',
+							'Make decisions collaboratively'
+						]
+					},
+					{
+						label: 'Build a platform',
+						children: [
+							'General build a platform resources',
+							'Understand the design process',
+							'Design for privacy',
+							'Design for inclusion',
+							'Build accessible digital tools',
+							'Build open source software'
+						]
+					},
+					{
+						label: 'Transition to a co-op',
+					},
+					{
+						label: 'Advocate for policy change',
+					},
+				]
 			},
 			{
 				label: 'Topics',
+				terms: [
+					{
+						label: 'Cooperative essentials',
+						children: [
+							'Governance',
+							'Ownership',
+							'Cooperative best practices',
+							'Diversity and inclusion',
+							'Bylaws',
+						]
+					},
+					{
+						label: 'Business operations',
+						children: [
+							'Human resources',
+							'Marketing',
+							'Social media',
+							'Incorporation',
+							'Business model',
+							'Income, benefits, and compensation'
+						]
+					},
+					{
+						label: 'Technology & Platforms',
+						children: [
+							'Software development',
+							'Platforms',
+							'Design',
+							'Free software',
+							'Data',
+							'Algorithms',
+							'Automation',
+							'Blockchain',
+							'Search engines'
+						]
+					},
+					{
+						label: 'Law & Policy',
+						children: [
+							'Anti-trust',
+							'Labor law',
+							'Policy',
+							'Co-op law'
+						]
+					},
+					{
+						label: 'Fair labour',
+						children: [
+							'Unions',
+							'Workplace safety',
+							'Social security',
+						]
+					},
+					{
+						label: 'Platform co-op theory',
+						children: [
+							'Platform cooperativism',
+							'Platform capitalism',
+							'Gig economy',
+							'Sharing economy',
+							'Solidarity economy',
+							'Information economy',
+							'Peer-to-peer'
+						]
+					},
+				]
 			},
 			{
 				label: 'Format',
+				terms: [
+					{label: 'Academic Paper'},
+					{label: 'Article'},
+					{label: 'Audio'},
+					{label: 'Book'},
+					{label: 'Case Study'},
+					{label: 'Educational Curriculum'},
+					{label: 'Online Training'},
+					{label: 'Podcast'},
+					{label: 'Presentation Slides'},
+					{label: 'Report'},
+					{label: 'Toolkit'},
+					{label: 'Video'}
+				]
 			},
 			{
 				label: 'Sector',
+				terms: [
+					{
+						label:'Agriculture'
+					},
+					{
+						label:'Art, fashion, design'
+					},
+					{
+						label:'Accounting and Finance'
+					},
+					{
+						label:'Advertising and marketing'
+					},
+					{
+						label:'Consulting'
+					},
+					{
+						label:'Co-op development'
+					},
+					{
+						label:'Community organizing'
+					},
+					{
+						label:'Construction'
+					},
+					{
+						label:'Environment'
+					},
+					{
+						label:'Education'
+					},
+					{
+						label:'Energy and mining'
+					},
+					{
+						label:'Entertainment'
+					},
+					{
+						label:'Food'
+					},
+					{
+						label:'Healthcare'
+					},
+					{
+						label:'Hospitality and tourism'
+					},
+					{
+						label:'Legal'
+					},
+					{
+						label:'Manufacturing'
+					},
+					{
+						label:'Media and communications'
+					},
+					{
+						label:'Maintenance and repair'
+					},
+					{
+						label:'Protective services and defense'
+					},
+					{
+						label:'Personal care and services'
+					},
+					{
+						label:'Public and social services'
+					},
+					{
+						label:'Property and real estate'
+					},
+					{
+						label:'Recycling and waste management'
+					},
+					{
+						label:'Sales and retail'
+					},
+					{
+						label:'Science and engineering'
+					},
+					{
+						label:'Sports fitness and recreation'
+					},
+					{
+						label:'Technology',
+						children: [
+							'Electronics and computer manufacturing',
+							'Software and hardware enginereeing',
+							'Web service providers',
+							'Data processing',
+							'Misc technology'
+						]
+					},
+					{
+						label:'Transportation and logistics'
+					},
+					{
+						label:'Translation'
+					},
+					{
+						label:'Utilities'
+					}
+				]
 			},
 		],
 		cards: resourceData
