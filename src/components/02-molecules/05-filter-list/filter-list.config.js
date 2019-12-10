@@ -38,7 +38,7 @@ module.exports = {
 				childrenCount: 5
 			}
 		],
-		scriptCall: 'window.pinecone.accordions()',
+		scriptCall: 'window.pinecone.accordions(); window.pinecone.filterList();',
 		standAlone: false,
 	}
 };

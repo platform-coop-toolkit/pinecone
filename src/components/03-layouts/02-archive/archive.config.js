@@ -80,7 +80,7 @@ module.exports = {
 		bodyClass: 'archive',
 		hasMenu: true,
 		title: 'Browse all',
-		scriptCall: 'window.pinecone.cards(); window.pinecone.accordions();',
+		scriptCall: 'window.pinecone.cards(); window.pinecone.accordions(); window.pinecone.filterList();',
 		filterLists: [
 			{
 				label: 'Location of Relevance',
