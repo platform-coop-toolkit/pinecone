@@ -80,22 +80,22 @@ module.exports = {
 		bodyClass: 'archive',
 		hasMenu: true,
 		title: 'Browse all',
-		scriptCall: 'window.pinecone.cards(); window.pinecone.dialogs(); window.pinecone.accordions();',
-		accordions: [
+		scriptCall: 'window.pinecone.cards(); window.pinecone.accordions();',
+		filterLists: [
 			{
-				accordionLabel: 'Location of Relevance',
+				label: 'Location of Relevance',
 			},
 			{
-				accordionLabel: 'Goals',
+				label: 'Goals',
 			},
 			{
-				accordionLabel: 'Topics',
+				label: 'Topics',
 			},
 			{
-				accordionLabel: 'Format',
+				label: 'Format',
 			},
 			{
-				accordionLabel: 'Sector',
+				label: 'Sector',
 			},
 		],
 		cards: resourceData

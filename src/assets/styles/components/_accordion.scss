@@ -180,8 +180,8 @@
 	display: none;
 }
 
-.accordion:not(.accordion--checkbox):focus-within + .accordion .accordion__heading::before,
-.accordion:not(.accordion--checkbox):focus-within + .accordion .accordion__control::before {
+.accordion:focus-within + .accordion .accordion__heading::before,
+.accordion:focus-within + .accordion .accordion__control::before {
 	display: none;
 }
 

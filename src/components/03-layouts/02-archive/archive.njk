@@ -6,7 +6,11 @@
 	{# {% render '@button', {standAlone: true, id: 'invoke-dialog'}, true %} #}
 	<div class="filter-sort__filters">
 		<h2 class="screen-reader-text">Filters</h2>
-		{# {% render '@accordion', {accordions: accordions, standAlone: true}, true %} #}
+		<div class="accordions">
+		{% for filterList in filterLists %}
+			{% render '@filter-list', {standAlone: true, label: filterList.label}, true %}
+		{% endfor %}
+		</div>
 	</div>
 	<div class="filter-sort__sorts">
 	</div>
