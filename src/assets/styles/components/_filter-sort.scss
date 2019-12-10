@@ -12,6 +12,14 @@
 }
 
 .filter-sort__filters {
+	.accordion__control svg {
+		margin-right: rem(3);
+	}
+
+	.accordion__content > .input-group {
+		margin-top: 0;
+	}
+
 	.accordion__content > .input-group > li {
 		padding: rem(14) 0;
 		position: relative;
