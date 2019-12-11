@@ -3,9 +3,10 @@
 	<h1>{{ title }}</h1>
 </div>
 <div class="filter-sort">
-	{# {% render '@button', {standAlone: true, id: 'invoke-dialog'}, true %} #}
+	{% render '@button', {standAlone: true, id: 'show-filters'}, true %}
 	<div class="filter-sort__filters">
-		<h2 class="screen-reader-text">Filters</h2>
+		<button id="hide-filters"><span class="button__label">Close</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-close"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-miterlimit="10" class="stroke" stroke-width="2"><path d="m5 15 10-10"></path><path d="m15 15-10-10"></path></g></svg></button>
+		<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
 		<div class="accordions">
 		{% for filterList in filterLists %}
 			{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}

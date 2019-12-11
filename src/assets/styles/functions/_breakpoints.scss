@@ -25,5 +25,5 @@
 @function breakpoint-max($name, $breakpoints: $breakpoints) {
 	$next: breakpoint-next($name, $breakpoints);
 
-	@return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+	@return if($next, breakpoint-min($next, $breakpoints) - 1, null);
 }

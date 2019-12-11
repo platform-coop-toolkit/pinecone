@@ -1,6 +1,5 @@
 .filter-sort {
 	padding: rem(20) 0 rem(24);
-	position: relative;
 
 	@include full-width-background($white);
 	@include grid-column-span(4, 4);
@@ -12,10 +11,6 @@
 }
 
 .filter-sort__filters {
-	.accordions {
-		margin-top: 0;
-	}
-
 	.accordion__control svg {
 		margin-right: rem(7);
 	}
@@ -70,6 +65,32 @@
 	}
 }
 
+@include breakpoint-down(md) {
+	.filter-sort__filters {
+		background-color: $white;
+		height: 100%;
+		left: 0;
+		overflow: scroll;
+		padding: $gutter;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 99;
+
+		h2:focus {
+			outline: none;
+		}
+
+		#hide-filters {
+			float: right;
+		}
+
+		.accordions {
+			margin-top: rem(24);
+		}
+	}
+}
+
 @include breakpoint-up(lg) {
 	.filter-sort {
 		@include grid-margin-right(1, 12);
@@ -85,6 +106,21 @@
 		}
 
 		@include grid-column-span(3, 12);
+	}
+
+	.filter-sort__filters {
+		h2 {
+			@include visually-hidden();
+		}
+
+		.accordions {
+			margin-top: 0;
+		}
+	}
+
+	#show-filters,
+	#hide-filters {
+		display: none;
 	}
 
 	.filter-sort__filters,

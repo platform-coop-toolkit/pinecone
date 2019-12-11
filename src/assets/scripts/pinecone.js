@@ -56,3 +56,32 @@ const showResults = function() {
 
 const applyButton = document.getElementById( 'apply' );
 applyButton.addEventListener( 'click', showResults );
+
+// const elems = document.querySelectorAll( 'body > *' );
+
+const showFilters = document.getElementById( 'show-filters' );
+showFilters.addEventListener( 'click', ( event ) => {
+	// TODO: Ensure that focus is trapped in container.
+	// Array.prototype.forEach.call( elems, elem => {
+	// 	elem.setAttribute( 'inert', 'inert' );
+	// } );
+	const filters = event.currentTarget.nextElementSibling;
+	filters.style.display = 'block';
+	const heading = filters.querySelector( 'h2' );
+	heading.classList.remove( 'screen-reader-text' );
+	heading.focus();
+	window.pinecone.accordions();
+} );
+
+const closeFilters = document.getElementById( 'hide-filters' );
+closeFilters.addEventListener( 'click', ( event ) => {
+	// TODO: Restore focus to main document.
+	// Array.prototype.forEach.call( elems, elem => {
+	// 	elem.removeAttribute( 'inert' );
+	// } );
+	const heading = event.currentTarget.nextElementSibling;
+	heading.classList.add( 'screen-reader-text' );
+	const filters = event.currentTarget.parentNode;
+	filters.style.display = 'none';
+	showFilters.focus();
+} );
