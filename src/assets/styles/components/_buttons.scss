@@ -164,5 +164,6 @@ button:not([class]) {
 
 	&:focus {
 		border-color: $blue-500;
+		outline: none;
 	}
 }

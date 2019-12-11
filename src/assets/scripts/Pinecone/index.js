@@ -285,7 +285,7 @@ export function filterList() {
 	const descendantFilters = document.querySelectorAll( '.input-group__descendant > li > [type="checkbox"]' );
 	Array.prototype.forEach.call( descendantFilters, filter => {
 		filter.addEventListener( 'change', ( event ) => {
-			const parentFilter = event.currentTarget.parentNode.parentNode.parentNode.parentNode.querySelector( '.input-group__parent > li > [type="checkbox"]' );
+			const parentFilter = event.currentTarget.parentNode.parentNode.parentNode.querySelector( '.input-group__parent > li > [type="checkbox"]' );
 			const siblingFilters = event.currentTarget.parentNode.parentNode.querySelectorAll( '[type="checkbox"]' );
 			const checkedSiblingFilters = event.currentTarget.parentNode.parentNode.querySelectorAll( '[type="checkbox"]:checked' );
 			if ( event.currentTarget.checked ) {

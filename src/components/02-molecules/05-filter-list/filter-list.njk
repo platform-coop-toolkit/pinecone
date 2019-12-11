@@ -11,7 +11,7 @@
 					<li>
 						<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}">{{ term.label }}</label>
 						{% if term.childrenCount or term.children %}
-						{% render '@filter-button', {standAlone: true} %}
+						{% render '@filter-button', {standAlone: true, label: term.label+' children' } %}
 						<ul class="input-group input-group__descendant">
 							{% if term.childrenCount %}
 								{% for i in range(1, term.childrenCount) %}

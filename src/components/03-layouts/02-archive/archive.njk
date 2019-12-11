@@ -3,16 +3,16 @@
 	<h1>{{ title }}</h1>
 </div>
 <div class="filter-sort">
-	{% render '@button', {standAlone: true, id: 'show-filters'}, true %}
 	<div class="filter-sort__filters">
-		<button id="hide-filters"><span class="button__label">Close</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-close"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-miterlimit="10" class="stroke" stroke-width="2"><path d="m5 15 10-10"></path><path d="m15 15-10-10"></path></g></svg></button>
+		{% render '@button', {standAlone: true, id: 'show-filters'}, true %}
+		{% render '@button', {standAlone: true, id: 'hide-filters', icon: 'close', iconPosition: 'end', label: 'Close'}, true %}
 		<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
 		<div class="accordions">
 		{% for filterList in filterLists %}
 			{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
 		{% endfor %}
 		</div>
-		{% render '@button', {icon: false, label: 'Apply filters', id: 'apply'} %}
+		{% render '@button', {icon: false, label: 'Apply filters', id: 'apply-filters'} %}
 	</div>
 	<div class="filter-sort__sorts">
 	</div>

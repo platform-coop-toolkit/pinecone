@@ -5,7 +5,7 @@
 	@include grid-column-span(4, 4);
 }
 
-.filter-sort__filters,
+.filter-sort__filters .accordions,
 .filter-sort__sorts {
 	display: none;
 }
@@ -57,6 +57,11 @@
 		background: transparent;
 		color: $black;
 	}
+
+	#hide-filters,
+	#apply-filters {
+		display: none;
+	}
 }
 
 @include breakpoint-up(sm) {
@@ -66,19 +71,28 @@
 }
 
 @include breakpoint-down(md) {
-	.filter-sort__filters {
+	.filter-sort__filters.expanded {
 		background-color: $white;
 		height: 100%;
 		left: 0;
 		overflow: scroll;
 		padding: $gutter;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 99;
 
 		h2:focus {
 			outline: none;
+		}
+
+		#show-filters {
+			display: none;
+		}
+
+		#hide-filters,
+		#apply-filters {
+			display: block;
 		}
 
 		#hide-filters {
@@ -114,13 +128,18 @@
 		}
 
 		.accordions {
+			display: block;
 			margin-top: 0;
 		}
-	}
 
-	#show-filters,
-	#hide-filters {
-		display: none;
+		#apply-filters {
+			display: block;
+		}
+
+		#show-filters,
+		#hide-filters {
+			display: none;
+		}
 	}
 
 	.filter-sort__filters,

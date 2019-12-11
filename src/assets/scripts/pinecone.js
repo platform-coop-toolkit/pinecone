@@ -54,7 +54,7 @@ const showResults = function() {
 	}
 };
 
-const applyButton = document.getElementById( 'apply' );
+const applyButton = document.getElementById( 'apply-filters' );
 applyButton.addEventListener( 'click', showResults );
 
 // const elems = document.querySelectorAll( 'body > *' );
@@ -65,11 +65,15 @@ showFilters.addEventListener( 'click', ( event ) => {
 	// Array.prototype.forEach.call( elems, elem => {
 	// 	elem.setAttribute( 'inert', 'inert' );
 	// } );
-	const filters = event.currentTarget.nextElementSibling;
-	filters.style.display = 'block';
-	const heading = filters.querySelector( 'h2' );
+	document.body.style.position = 'fixed';
+	document.body.style.overflow = 'hidden';
+	const filterContainer = event.currentTarget.parentNode;
+	const heading = filterContainer.querySelector( 'h2' );
+	const accordions = filterContainer.querySelector( '.accordions' );
+	filterContainer.classList.add( 'expanded' );
 	heading.classList.remove( 'screen-reader-text' );
 	heading.focus();
+	accordions.style.display = 'block';
 	window.pinecone.accordions();
 } );
 
@@ -79,9 +83,11 @@ closeFilters.addEventListener( 'click', ( event ) => {
 	// Array.prototype.forEach.call( elems, elem => {
 	// 	elem.removeAttribute( 'inert' );
 	// } );
-	const heading = event.currentTarget.nextElementSibling;
+	const filterContainer = event.currentTarget.parentNode;
+	const heading = filterContainer.querySelector( 'h2' );
+	const accordions = filterContainer.querySelector( '.accordions' );
+	filterContainer.classList.remove( 'expanded' );
 	heading.classList.add( 'screen-reader-text' );
-	const filters = event.currentTarget.parentNode;
-	filters.style.display = 'none';
+	accordions.style.display = 'none';
 	showFilters.focus();
 } );
