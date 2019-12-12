@@ -138,25 +138,13 @@ export function accordions() {
 			const contents = heading.nextElementSibling;
 			const btn = document.createElement( 'button' );
 			btn.setAttribute( 'class', 'accordion__control' );
-			if ( accordion.classList.contains( 'accordion--checkbox' ) ) {
-				btn.classList.add( 'filter-button' );
-			}
 			btn.setAttribute( 'aria-expanded', 'false' );
-			if ( accordion.classList.contains( 'accordion--checkbox' ) ) {
-				btn.innerHTML = `
-					<span class="screen-reader-text">${heading.textContent}</span>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-add" aria-hidden="true"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-miterlimit="10" class="stroke" stroke-width="2"><path class="vert" d="m10 5v10"></path><path d="m5 10h10"></path></g></svg>
-				`;
-			} else {
-				btn.innerHTML = `
+			btn.innerHTML = `
 					${heading.textContent}
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-add" aria-hidden="true"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-miterlimit="10" class="stroke" stroke-width="2"><path class="vert" d="m10 5v10"></path><path d="m5 10h10"></path></g></svg>
 				`;
-			}
 			heading.parentNode.insertBefore( btn, heading.nextElementSibling );
-			if ( !accordion.classList.contains( 'accordion--checkbox' ) ) {
-				heading.parentNode.removeChild( heading );
-			}
+			heading.parentNode.removeChild( heading );
 
 			contents.hidden = true;
 

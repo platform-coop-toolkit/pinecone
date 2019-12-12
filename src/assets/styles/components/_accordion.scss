@@ -29,10 +29,6 @@
 	}
 }
 
-.accordion--checkbox .accordion__heading {
-	font-size: unset;
-}
-
 .accordion__control {
 	@extend .accordion__heading;
 	align-items: center;
@@ -56,20 +52,6 @@
 		line {
 			stroke: currentColor;
 		}
-	}
-}
-
-.accordion--checkbox .accordion__control {
-	position: absolute;
-	right: rem(6);
-	top: rem(9);
-
-	&::before {
-		display: none;
-	}
-
-	svg {
-		margin-right: 0;
 	}
 }
 
@@ -192,11 +174,11 @@
 .accordion__control[aria-expanded="true"] + .accordion__content {
 	background: $blue-500;
 	color: $white;
-	margin-left: rem(-12);
-	margin-right: rem(-12);
+	margin-left: rem(-15);
+	margin-right: rem(-15);
 	margin-top: 0;
-	padding: rem(12) rem(12) rem(14);
-	width: calc(100% + #{rem(24)});
+	padding: rem(15) rem(15) rem(14);
+	width: calc(100% + #{rem(30)});
 }
 
 .has-dark-mint-500-background-color .accordion__control[aria-expanded="true"] + .accordion__content {

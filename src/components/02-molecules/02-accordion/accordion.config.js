@@ -26,22 +26,6 @@ module.exports = {
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color'
 			}
-		},
-		{
-			name: 'Checkbox',
-			context: {
-				accordions: [
-					{
-						accordionLabel: title( faker.lorem.words( 3 ) ),
-						checkbox: {
-							value: 'checkbox',
-							name: 'name',
-						}
-					},
-					accordionData[0],
-					accordionData[1]
-				]
-			}
 		}
 	]
 };
