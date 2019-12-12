@@ -103,12 +103,12 @@ showFilters.addEventListener( 'click', handleFilterOverlay );
 const handleResize = function() {
 	let timeout;
 	const overlay = document.querySelector( '.filter-sort__filters.expanded' );
+	const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 	if ( overlay ) {
 		if ( !timeout ) {
 			timeout = setTimeout( function() {
 				timeout = null;
 
-				const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 				if ( 1279 < viewportWidth ) {
 					const elems = document.querySelectorAll( 'body > *' );
 					Array.prototype.forEach.call( elems, elem => {
@@ -119,8 +119,15 @@ const handleResize = function() {
 					overlay.parentNode.removeChild( overlay );
 					showFilters.parentNode.insertBefore( overlay, showFilters.nextSibling );
 					document.body.classList.remove( 'has-modal' );
+					Pinecone.accordions();
 				}
 			}, 66 );
+		}
+	} else {
+		// Make sure accordions work.
+		if ( 1279 < viewportWidth ) {
+			Pinecone.accordions();
+			Pinecone.filterList();
 		}
 	}
 } ;

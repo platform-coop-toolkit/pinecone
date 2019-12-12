@@ -241,10 +241,10 @@ export function dialogs() {
 export function filterList() {
 	const controls = document.querySelectorAll( '.input-group [aria-expanded]' );
 	Array.prototype.forEach.call( controls, control => {
-		control.addEventListener( 'click', function ( event ) {
-			const expanded = 'true' === event.target.getAttribute( 'aria-expanded' ) || false;
-			event.target.setAttribute( 'aria-expanded', !expanded );
-		} );
+		control.onclick = () => {
+			const expanded = 'true' === control.getAttribute( 'aria-expanded' ) || false;
+			control.setAttribute( 'aria-expanded', !expanded );
+		};
 	} );
 
 	const parentFilters = document.querySelectorAll( '.input-group__parent > li > [type="checkbox"]' );
