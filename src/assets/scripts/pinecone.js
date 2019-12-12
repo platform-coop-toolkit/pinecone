@@ -133,3 +133,46 @@ const handleResize = function() {
 } ;
 
 window.addEventListener( 'resize', handleResize, false );
+
+/**
+ * Handler for mixed checkboxes.
+ *
+ */
+const toggleCheckboxState = function( control ) {
+	const input = control.nextElementSibling;
+	const state = 'true' === control.getAttribute( 'aria-checked' ) || false;
+	control.setAttribute( 'aria-checked', !state );
+	input.setAttribute( 'checked', !state );
+	control.focus();
+};
+
+
+document.addEventListener( 'click', function( event ) {
+	if ( 'checkbox' !== event.target.getAttribute( 'role' ) ) {
+		return;
+	}
+	toggleCheckboxState( event.target );
+} );
+
+document.addEventListener( 'keydown', function( event ) {
+	if ( 'checkbox' !== event.target.getAttribute( 'role' ) ) {
+		return;
+	}
+
+	let flag = false;
+
+	switch ( event.keyCode ) {
+			case 32:
+				toggleCheckboxState( event.target );
+				flag = true;
+				break;
+
+			default:
+				break;
+	}
+
+	if ( flag ) {
+		event.stopPropagation();
+		event.preventDefault();
+	}
+} );
