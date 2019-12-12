@@ -9,9 +9,21 @@
 				<ul class="input-group input-group__parent {{ label | slugify }}">
 					{% for term in terms %}
 					<li>
-						<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}">{{ term.label }}</label>
 						{% if term.childrenCount or term.children %}
-						{% render '@filter-button', {standAlone: true, label: term.label+' children' } %}
+							{% if term.childrenCount %}
+							{% set count = term.childrenCount %}
+							{% else %}
+							{% set count = term.children.length %}
+							{% endif %}
+						{% endif %}
+						<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}">{{ term.label }}{% if count %}<span class="screen-reader-text"> and {{ count }} subtopics</span>{% endif %}</label>
+						{% if term.childrenCount or term.children %}
+							{% if term.childrenCount %}
+							{% set count = term.childrenCount %}
+							{% else %}
+							{% set count = term.children.length %}
+							{% endif %}
+						{% render '@filter-button', {standAlone: true, label: 'Show '+count+' subtopics for "'+term.label+'"' } %}
 						<ul class="input-group input-group__descendant">
 							{% if term.childrenCount %}
 								{% for i in range(1, term.childrenCount) %}
