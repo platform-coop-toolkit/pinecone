@@ -139,6 +139,7 @@ export function accordions() {
 			const btn = document.createElement( 'button' );
 			btn.setAttribute( 'class', 'accordion__control' );
 			btn.setAttribute( 'aria-expanded', 'false' );
+			btn.setAttribute( 'type', 'button' );
 			btn.innerHTML = `
 					${heading.textContent}
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-add" aria-hidden="true"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-miterlimit="10" class="stroke" stroke-width="2"><path class="vert" d="m10 5v10"></path><path d="m5 10h10"></path></g></svg>

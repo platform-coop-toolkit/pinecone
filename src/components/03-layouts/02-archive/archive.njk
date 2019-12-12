@@ -4,18 +4,20 @@
 </div>
 <div class="filter-sort">
 	{% render '@button', {standAlone: true, id: 'show-filters'}, true %}
-	<div class="filter-sort__filters">
-		{% render '@button', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
-		<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
-		<div class="accordions">
-		{% for filterList in filterLists %}
-			{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
-		{% endfor %}
+		<div class="filter-sort__filters">
+			{% render '@button', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
+			<form action="/">
+			<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
+			<div class="accordions">
+			{% for filterList in filterLists %}
+				{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
+			{% endfor %}
+			</div>
+			{% render '@submit', {standAlone: true, value: 'Apply filters', id: 'apply-filters'} %}
+			</form>
 		</div>
-		{% render '@button', {standAlone: true, icon: false, label: 'Apply filters', id: 'apply-filters'} %}
-	</div>
-	<div class="filter-sort__sorts">
-	</div>
+		<div class="filter-sort__sorts">
+		</div>
 </div>
 <div class="resource-list">
 <ul class="cards">

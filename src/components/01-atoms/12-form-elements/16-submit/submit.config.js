@@ -3,7 +3,8 @@ module.exports = {
 	label: 'Submit Button',
 	status: 'wip',
 	context: {
-		label: 'Submit',
+		value: 'Submit',
+		id: 'submit',
 		standAlone: false
 	},
 	'variants': [
