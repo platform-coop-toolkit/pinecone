@@ -6,17 +6,31 @@ module.exports = {
 		terms: [
 			{
 				label: 'Cooperative essentials',
-				childrenCount: 5
+				children: [
+					'Governance',
+					'Ownership',
+					'Cooperative best practices',
+					'Diversity and inclusion',
+					'Bylaws',
+				]
 			},
 			{
 				label: 'Business operations',
-				childrenCount: 5
+				children: [
+					'Human resources',
+					'Marketing',
+					'Social media',
+					'Incorporation',
+					'Business model',
+					'Income, benefits, and compensation'
+				]
 			},
 			{
-				label: 'Technology & platforms',
+				label: 'Technology & Platforms',
 				children: [
 					'Software development',
-					'Platforms design',
+					'Platforms',
+					'Design',
 					'Free software',
 					'Data',
 					'Algorithms',
@@ -26,17 +40,34 @@ module.exports = {
 				]
 			},
 			{
-				label: 'Law & policy',
-				childrenCount: 5
+				label: 'Law & Policy',
+				children: [
+					'Anti-trust',
+					'Labor law',
+					'Policy',
+					'Co-op law'
+				]
 			},
 			{
 				label: 'Fair labour',
-				childrenCount: 5
+				children: [
+					'Unions',
+					'Workplace safety',
+					'Social security',
+				]
 			},
 			{
 				label: 'Platform co-op theory',
-				childrenCount: 5
-			}
+				children: [
+					'Platform cooperativism',
+					'Platform capitalism',
+					'Gig economy',
+					'Sharing economy',
+					'Solidarity economy',
+					'Information economy',
+					'Peer-to-peer'
+				]
+			},
 		],
 		scriptCall: 'window.pinecone.accordions(); window.pinecone.filterList();',
 		standAlone: false,
