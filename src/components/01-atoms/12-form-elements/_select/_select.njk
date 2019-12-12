@@ -1,0 +1,9 @@
+<div class="input-group">
+	<label for="{{ name }}">{{ label }}</label>
+	<select id="{{ name }}" name="{{ name }}"{% if disabled %} disabled{% endif %}>
+		{% for value, label in options %}
+		<option val="{{ value }}">{{ label }}</option>
+		{% endfor %}
+	</select>
+	<p class="input-group__description">{{ description }}</p>
+</div>

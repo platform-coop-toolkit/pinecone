@@ -2,7 +2,7 @@ module.exports = {
 	title: 'Pagination',
 	status: 'wip',
 	context: {
-		paginationTitle: 'Pagination'
+		title: 'Pagination'
 	},
 	variants: [
 		{

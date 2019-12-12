@@ -1,0 +1,5 @@
+{% if not standalone %}<ul class="input-group">{% endif %}
+{% for radioButton in radioButtons %}
+{% render '@radio-button', radioButton, true %}
+{% endfor %}
+{% if not standalone %}</ul>{% endif %}

@@ -1,3 +1,5 @@
+import 'wicg-inert';
+
 /**
  * Icon Handler.
  */
@@ -124,6 +126,10 @@ export function accordions() {
 	const accordionGroups = document.querySelectorAll( '.accordions' );
 
 	Array.prototype.forEach.call( accordionGroups, accordionGroup => {
+		if ( null === accordionGroup.offsetParent ) {
+			return;
+		}
+
 		const accordions = accordionGroup.querySelectorAll( '.accordion' );
 		const headings = accordionGroup.querySelectorAll( '.accordion__heading' );
 
@@ -133,9 +139,10 @@ export function accordions() {
 			const btn = document.createElement( 'button' );
 			btn.setAttribute( 'class', 'accordion__control' );
 			btn.setAttribute( 'aria-expanded', 'false' );
+			btn.setAttribute( 'type', 'button' );
 			btn.innerHTML = `
 					${heading.textContent}
-					<svg aria-hidden="true" width="13" height="13" viewBox="0 0 13 13"><g transform="translate(-5721 -543)" fill="none" stroke="#203131" stroke-linecap="round" stroke-width="3"><line x2="10" transform="translate(5722.5 549.5)"/><line class="vert" y2="10" transform="translate(5727.5 544.5)"/></g></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-add" aria-hidden="true"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-miterlimit="10" class="stroke" stroke-width="2"><path class="vert" d="m10 5v10"></path><path d="m5 10h10"></path></g></svg>
 				`;
 			heading.parentNode.insertBefore( btn, heading.nextElementSibling );
 			heading.parentNode.removeChild( heading );
@@ -163,3 +170,123 @@ export function accordions() {
 	} );
 }
 
+/**
+ * Dialog Handler.
+ */
+export function dialogs() {
+	const invokeButton = document.getElementById( 'invoke-dialog' );
+	if ( null === invokeButton.offsetParent ) {
+		return;
+	}
+	const elems = document.querySelectorAll( 'body > *' );
+	const dialogSource = invokeButton.nextElementSibling;
+	const dialogTitle = dialogSource.firstElementChild;
+	const dialogContent = dialogTitle.nextElementSibling;
+
+	invokeButton.onclick = () => {
+		Array.prototype.forEach.call( elems, elem => {
+			elem.setAttribute( 'inert', 'inert' );
+		} );
+		const unique = +new Date();
+		const dialog = document.createElement( 'article' );
+		dialog.classList.add( 'has-dark-mint-500-background-color' );
+		dialog.setAttribute( 'role', 'dialog' );
+		dialog.setAttribute( 'aria-labelledby', `h-${unique}` );
+		dialog.innerHTML = `
+			<button id="dialog__close"><span class="button__label">Close</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-close"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-miterlimit="10" class="stroke" stroke-width="2"><path d="m5 15 10-10"></path><path d="m15 15-10-10"></path></g></svg></button>
+			<h1 class="dialog__header" id="h-${unique}">${ dialogTitle.innerHTML }</h1>
+			<div class="dialog__content ${ dialogContent.classList }">${ dialogContent.innerHTML }</div>
+		`;
+		document.body.appendChild( dialog );
+		if ( dialogContent.classList.contains( 'accordions' ) ) {
+			accordions();
+		}
+
+		/**
+		 * Close the dialog.
+		 */
+		const close = () => {
+			Array.prototype.forEach.call( elems, elem => {
+				if ( elem !== dialog ) {
+					elem.removeAttribute( 'inert' );
+				}
+			} );
+			dialog.parentNode.removeChild( dialog );
+			invokeButton.focus();
+		};
+
+		const closeButton = document.getElementById( 'dialog__close' );
+		closeButton.onclick = () => {
+			close();
+		};
+
+		document.onkeydown = function( evt ) {
+			evt = evt || window.event;
+			let isEscape = false;
+			if ( 'key' in evt ) {
+				isEscape = 'Escape' == evt.key || 'Esc' == evt.key;
+			} else {
+				isEscape = 27 == evt.keyCode;
+			}
+			if ( isEscape ) {
+				close();
+			}
+		};
+	};
+}
+
+/**
+ * Filter List Handler.
+ */
+export function filterList() {
+	const controls = document.querySelectorAll( '.input-group [aria-expanded]' );
+	Array.prototype.forEach.call( controls, control => {
+		control.onclick = () => {
+			const expanded = 'true' === control.getAttribute( 'aria-expanded' ) || false;
+			control.setAttribute( 'aria-expanded', !expanded );
+		};
+	} );
+
+	const parentFilters = document.querySelectorAll( '.input-group__parent > li > [role="checkbox"]' );
+	Array.prototype.forEach.call( parentFilters, filter => {
+		filter.addEventListener( 'click', function( event ) {
+			let childFilters = false;
+			const subList = event.target.parentNode.querySelector( '.input-group__descendant' );
+			if ( subList ) {
+				childFilters = subList.querySelectorAll( '[type="checkbox"]' );
+				if ( childFilters ) {
+					Array.prototype.forEach.call( childFilters, childFilter => {
+						childFilter.checked = 'false' === event.target.getAttribute( 'aria-checked' ) || false;
+					} );
+				}
+			}
+		} );
+	} );
+
+	const descendantFilters = document.querySelectorAll( '.input-group__descendant > li > [type="checkbox"]' );
+	Array.prototype.forEach.call( descendantFilters, filter => {
+		filter.addEventListener( 'change', ( event ) => {
+			const parentFilter = event.currentTarget.parentNode.parentNode.parentNode.querySelector( '.input-group__parent > li > [role="checkbox"]' );
+			const parentInput = event.currentTarget.parentNode.parentNode.parentNode.querySelector( '.input-group__parent > li > [type="checkbox"]' );
+			const siblingFilters = event.currentTarget.parentNode.parentNode.querySelectorAll( '[type="checkbox"]' );
+			const checkedSiblingFilters = event.currentTarget.parentNode.parentNode.querySelectorAll( '[type="checkbox"]:checked' );
+			if ( event.currentTarget.checked ) {
+				if ( checkedSiblingFilters.length === siblingFilters.length ) {
+					parentFilter.setAttribute( 'aria-checked', 'true' );
+					parentInput.checked = true;
+				} else {
+					parentFilter.setAttribute( 'aria-checked', 'mixed' );
+					parentInput.checked = false;
+				}
+			} else {
+				if ( 0 < checkedSiblingFilters.length ) {
+					parentFilter.setAttribute( 'aria-checked', 'mixed' );
+					parentInput.checked = false;
+				} else {
+					parentFilter.setAttribute( 'aria-checked', 'false' );
+					parentInput.checked = false;
+				}
+			}
+		} );
+	} );
+}

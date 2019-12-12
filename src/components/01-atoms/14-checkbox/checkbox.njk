@@ -1,6 +1,0 @@
-{% if title %}<h1>{{ title }}</h1>{% endif %}
-<ul class="input-group">
-	{% for checkbox in checkboxes %}
-	<li><input id="{{ checkbox.value }}" type="checkbox" name="{{ checkbox.name }}[{{ checkbox.value }}]"{% if checkbox.checked %} checked{% endif %}{% if checkbox.disabled %} disabled{% endif %} /><label for="{{ checkbox.value }}">{{ checkbox.label }}</label></li>
-	{% endfor %}
-</ul>

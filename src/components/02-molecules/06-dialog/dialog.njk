@@ -1,0 +1,6 @@
+{% if not standAlone %}<div class="spacer"></div>{% endif %}
+{% render '@button', {label: 'Invoke Dialog', icon: 'external', iconPosition: 'end', standAlone: true, className: false, id:'invoke-dialog'} %}
+<div>
+	<span>{{ dialogTitle | safe }}</span>
+	<div>{{ dialogContent | safe }}</div>
+</div>

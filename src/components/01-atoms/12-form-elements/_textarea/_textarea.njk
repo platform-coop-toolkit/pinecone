@@ -1,0 +1,6 @@
+<div class="input-group {% if error %} input-group--error{% endif %}">
+	<label for="{{ name }}">{{ label }}{% if error %} (Error){% elseif disabled %} (Disabled){% endif %}</label>
+	<textarea id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}"{% if disabled %} disabled{% endif %}>{% if value %}{{ value | safe }}{% endif %}</textarea>
+	{% if error %}<p class="input-group__error">{% render '@svg', {svg:'error'} %}{{ error | safe }}</p>{% endif %}
+	<p class="input-group__description">{{ description }}</p>
+</div>

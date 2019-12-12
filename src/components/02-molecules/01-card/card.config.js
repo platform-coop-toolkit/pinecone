@@ -3,10 +3,11 @@ module.exports = {
 	status: 'wip',
 	context: {
 		scriptCall: 'window.pinecone.cards();',
-		cardTitle: 'Card',
+		title: 'Card',
 		format: 'Card',
-		title: 'Generic Card',
-		link: 'https://example.com'
+		name: 'Generic Card',
+		href: 'https://example.com',
+		standAlone: false
 	},
 	variants: [
 		{
@@ -15,13 +16,14 @@ module.exports = {
 				modifier: 'resource',
 				id: 1,
 				format: 'Article',
+				formatIcon: 'article',
 				name: 'Resource',
 				title: 'Data as a common in the sharing economy',
 				byline: 'Centre d&rsquo;économie Paris Nord',
 				locality: 'France',
 				topics: ['Commons', 'Policy'],
 				topicCount: 4,
-				link: 'resource',
+				href: 'resource',
 				language: 'English'
 			}
 		},
@@ -33,7 +35,7 @@ module.exports = {
 				format: 'Blog',
 				title: 'Researching Worker-Owned Platforms',
 				date: 'Apr 13, 2019',
-				link: 'blog'
+				href: 'blog'
 			}
 		},
 		{
@@ -46,7 +48,7 @@ module.exports = {
 				title: 'Toronto Platform Coop Meetup',
 				date: 'Feb 23, 2019, 6:30-8:30PM',
 				locality: 'OCAD University, 100 McCaul Street',
-				link: 'event'
+				href: 'event'
 			}
 		},
 		{
@@ -58,7 +60,7 @@ module.exports = {
 				format: 'Platform Co-op',
 				title: 'Aarhus Makers',
 				locality: 'Aarhus, Denmark',
-				link: 'https://example.com/platformcoop',
+				href: 'https://example.com/platformcoop',
 				externalLink: true
 			}
 		},
@@ -71,7 +73,7 @@ module.exports = {
 				name: 'Blog with Image',
 				title: 'Who Owns the World?',
 				date: 'Nov 12, 2019',
-				link: 'blog',
+				href: 'blog',
 				image: '/images/blog.jpg'
 			}
 		},
@@ -84,7 +86,7 @@ module.exports = {
 				format: 'Worker Story',
 				title: 'SEWA Federation',
 				locality: 'Gujarat, India',
-				link: 'story',
+				href: 'story',
 				image: '/images/story.jpg'
 			}
 		},
@@ -96,7 +98,7 @@ module.exports = {
 				name: 'Person',
 				title: 'Trebor Scholz',
 				description: 'Founding Director, Institute for the Cooperative Digital Economy',
-				link: 'person',
+				href: 'person',
 				image: '/images/person.jpg'
 			}
 		},
@@ -106,7 +108,7 @@ module.exports = {
 				modifier: 'project',
 				id: 8,
 				format: 'Project',
-				link: 'https://github/platform-coop-toolkit',
+				href: 'https://github/platform-coop-toolkit',
 				title: 'Platform Cooperative Development Kit',
 				description: 'An open source toolkit of software to support platform cooperatives.',
 			}

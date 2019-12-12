@@ -1,9 +1,7 @@
-<h1>{{ cardTitle }}: {% if name %}{{ name }}
-	{% else %}{{ format }}
-	{% endif %}
-</h1>
+{% if not standAlone %}
 <ul class="cards">
-	<li class="card card--{{ modifier }}">
+{% endif %}
+	<li class="card card--{{ modifier }}" data-format="{{ format | slugify }}">
 		{% if image %}
 			<figure class="card__image">
 				<img src="{{ image }}" alt="Image for this {{ modifier }}."/>
@@ -13,15 +11,15 @@
 			{% if format %}
 				<span class="card__format">
 					{% if modifier === 'resource' %}
-						{% render '@svg', {svg:'article'}, true %}
+						{% render '@svg', {svg:formatIcon} %}
 					{% endif %}{{ format }}</span>{% endif %}
 			{% if language %}
 			<span class="card__sep"> &middot; </span>
 			<span class="card__language">{{ language }}</span>
 			{% endif %}
-			{% if link %}
+			{% if href %}
 				<h2 id="{{ modifier }}-{{ id }}" class="card__title" >
-					<a {% if externalLink %}rel="external" {% endif %}href="{{ link }}">{{ title | safe }}</a>
+					<a {% if externalLink %}rel="external" {% endif %}href="{{ href }}">{{ title | safe }}</a>
 				</h2>
 			{% endif %}
 		</header>
@@ -41,19 +39,23 @@
 			<p class="card__description">{{ description }}</p>{% endif %}
 			{% if locality %}
 				<p class="card__locality">
-					{% render '@svg', {svg:'location'}, true %}{{ locality }}</p>
+					{% render '@svg', {svg:'location'} %}{{ locality }}</p>
 			{% endif %}
 			{% if topics %}
 				<div class="card__tags">
 					<ul class="badges" >
 						{% for tag in topics %}
 							<li class="badge">
-								<span class="screen-reader-text">Topic: </span>{{ tag }}
+								<span class="screen-reader-text">Topic: </span>{{ tag | replace('-', ' ') }}
 							</li>
 						{% endfor %}
 					</ul>
+					{% if topicCount > 2 %}
 					<p>+{{ topicCount - 2 }} more</p>
+					{% endif %}
 				</div>
 			{% endif %}
 		</li>
+	{% if not standAlone %}
 	</ul>
+	{% endif %}

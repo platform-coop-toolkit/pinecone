@@ -1,2 +1,5 @@
-{% render '@breadcrumb-link', {label: 'Home', href: '/'} %}
-{% render '@repertoire' %}
+<div class="page-header">
+	{% render '@breadcrumb-link', {label: 'Home', href: '/'} %}
+	<h1>Page Title</h1>
+</div>
+{% render '@repertoire', {title: false}, true %}

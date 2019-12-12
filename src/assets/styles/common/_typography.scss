@@ -7,7 +7,8 @@ h4 {
 	margin-top: 0;
 }
 
-h1 {
+h1,
+.h1 {
 	font-family: $font-family-serif;
 	font-size: rem(36);
 	font-weight: $font-weight-black;
@@ -15,21 +16,24 @@ h1 {
 	line-height: (44 / 36);
 }
 
-h2 {
+h2,
+.h2 {
 	font-family: $font-family-display;
 	font-size: rem(28);
 	font-weight: $font-weight-bold;
 	line-height: (36 / 28);
 }
 
-h3 {
+h3,
+.h3 {
 	font-family: $font-family-display;
 	font-size: rem(24);
 	font-weight: $font-weight-semibold;
 	line-height: (32 / 24);
 }
 
-h4 {
+h4,
+.h4 {
 	font-family: $font-family-sans;
 	font-size: rem(20);
 	font-weight: $font-weight-semibold;

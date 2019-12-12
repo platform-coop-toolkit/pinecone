@@ -15,42 +15,44 @@
 	text-decoration: none;
 	width: 100%;
 
-	&:visited {
-		background: $green-400;
-	}
-
-	&:hover {
-		background: $blue-700;
-	}
-
-	&:active {
-		background: $blue-400;
-	}
-
-	&:focus {
-		background: $blue-700;
-		box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
-		outline: none;
-	}
-
 	.icon {
 		margin-left: rem(4);
 	}
 }
 
-[type="submit"] {
-	&:-moz-focusring {
-		color: transparent;
-		text-shadow: 0 0 0 $white;
-	}
-
-	/* stylelint-disable no-descending-specificity */
-	&::-moz-focus-inner { /* stylelint-enable */
-		outline: none;
-	}
+[type="submit"]::-moz-focus-inner {
+	outline: none;
 }
 
-.is-style-secondary .wp-block-button__link {
+[type="submit"]:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 $white;
+}
+
+.wp-block-button__link:visited,
+[type="submit"]:visited {
+	background: $green-400;
+}
+
+.wp-block-button__link:hover,
+[type="submit"]:hover {
+	background: $blue-700;
+}
+
+.wp-block-button__link:active,
+[type="submit"]:active {
+	background: $blue-400;
+}
+
+.wp-block-button__link:focus,
+[type="submit"]:focus {
+	background: $blue-700;
+	box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
+	outline: none;
+}
+
+.is-style-secondary .wp-block-button__link,
+.has-dark-mint-500-background-color [type="submit"] {
 	background: $yellow-500;
 	color: $dark-mint-500;
 
@@ -127,5 +129,41 @@
 			0 0 0 rem(1) $blue-500 inset,
 			0 0 0 rem(2) $white,
 			0 0 0 rem(4) $blue-500;
+	}
+}
+
+button:not([class]) {
+	background-color: $white;
+	border: solid rem(3) transparent;
+	color: $blue-500;
+	font-family: $font-family-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-semibold;
+	height: rem(40);
+	margin-left: rem(-15);
+	padding: 0 rem(12);
+
+	svg + * {
+		margin-right: 0.25em;
+	}
+
+	* + svg {
+		margin-left: 0.25em;
+	}
+
+	&:hover {
+		background-color: $off-white;
+		border-color: $blue-100;
+		color: $blue-600;
+	}
+
+	&:active {
+		border-color: $blue-400;
+		color: $blue-400;
+	}
+
+	&:focus {
+		border-color: $blue-500;
+		outline: none;
 	}
 }

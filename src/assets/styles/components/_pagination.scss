@@ -2,6 +2,8 @@
 	margin-top: rem(60);
 	padding-bottom: rem(80);
 	text-align: center;
+
+	@include grid-column-span(8, 8);
 }
 
 .pagination .nav-links {
@@ -109,5 +111,19 @@
 			background: $off-white;
 			color: $black;
 		}
+	}
+}
+
+@include breakpoint-up(lg) {
+	.pagination {
+		@include grid-margin-left(4, 12);
+		@include grid-column-span(8, 12, 5);
+	}
+}
+
+@include breakpoint-up(xl) {
+	.pagination {
+		@include grid-margin-left(4, 16);
+		@include grid-column-span(12, 16, 5);
 	}
 }

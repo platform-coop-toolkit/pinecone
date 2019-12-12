@@ -7,9 +7,43 @@
 	background: $blue-500;
 }
 
+.page-header {
+	position: relative;
+
+	@include grid-column-span(4, 4);
+}
+
+@include breakpoint-up(sm) {
+	.page-header {
+		@include grid-column-span(6, 8, 2);
+	}
+}
+
 @include breakpoint-up(md) {
 	[role="banner"] {
 		padding-left: rem(30);
 		padding-right: rem(120);
+	}
+}
+
+@include breakpoint-up(lg) {
+	[role="banner"] {
+		padding-left: rem(110);
+		padding-right: rem(175);
+	}
+
+	.page-header {
+		@include grid-column-span(6, 12, 4);
+	}
+}
+
+@include breakpoint-up(xl) {
+	[role="banner"] {
+		padding-left: rem(110);
+		padding-right: rem(175);
+	}
+
+	.page-header {
+		@include grid-column-span(6, 16, 6);
 	}
 }

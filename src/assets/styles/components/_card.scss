@@ -1,15 +1,20 @@
+.resource-list {
+	@include grid-column-span(8, 8);
+}
+
 .cards {
-	display: grid;
 	list-style: none;
+	margin-top: rem(30);
 }
 
 .card {
+	background-color: $white;
 	border-top: rem(3) solid $blue-500;
 	box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.16);
-	max-width: rem(367);
 	padding: rem(22);
 	position: relative;
 	transition: box-shadow 0.1s;
+	width: 100%;
 
 	@media (prefers-reduced-motion: reduce) {
 		transition: none;
@@ -28,7 +33,7 @@
 }
 
 .card + .card {
-	margin-top: rem(40);
+	margin-top: rem(30);
 }
 
 .card__image {
@@ -135,7 +140,12 @@
 .card__tags {
 	margin-top: rem(20);
 
+	.badges {
+		display: inline-flex;
+	}
+
 	p {
+		display: inline;
 		margin-left: rem(8);
 	}
 }
@@ -176,11 +186,35 @@
 	@include card($yellow-500, $black);
 }
 
-@include breakpoint-up(md) {
+@include breakpoint-up(sm) {
 	.cards {
-		display: grid;
-		gap: rem(30);
-		grid-template-columns: repeat(2, 1fr);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		@supports (display: $grid) {
+			display: grid;
+			gap: rem(30);
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.card {
+		margin-bottom: rem(30);
+		width: calc(50% - #{rem(30)} / 2);
+
+		@supports (display: $grid) {
+			margin-bottom: 0;
+			width: 100%;
+		}
+	}
+
+	.card:nth-child(even) {
+		margin-left: rem(30);
+
+		@supports (display: $grid) {
+			margin-left: 0;
+		}
 	}
 
 	.card + .card {
@@ -188,8 +222,59 @@
 	}
 }
 
+// @include breakpoint-up(md) {
+// 	.cards {
+// 		@supports (display: $grid) {
+// 			grid-template-columns: repeat(3, 1fr);
+// 		}
+// 	}
+// }
+
 @include breakpoint-up(lg) {
+	.resource-list {
+		@include grid-column-span(8, 12, 5);
+	}
+
 	.cards {
-		grid-template-columns: repeat(3, 1fr);
+		@supports (display: $grid) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+
+@include breakpoint-up(xl) {
+	.resource-list {
+		@include grid-column-span(12, 16, 5);
+	}
+
+	.cards {
+		@supports (display: $grid) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.card {
+		margin-bottom: rem(30);
+		margin-left: rem(30);
+		width: calc((100% - (#{rem(30)} * 2)) / 3);
+
+		@supports (display: $grid) {
+			margin-bottom: 0;
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
+	.card:nth-child(even) {
+		margin-left: rem(30);
+
+		@supports (display: $grid) {
+			margin-left: 0;
+		}
+	}
+
+	.card:nth-child(3n + 1) {
+		margin-left: 0;
 	}
 }

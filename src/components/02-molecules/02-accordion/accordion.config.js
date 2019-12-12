@@ -1,15 +1,28 @@
+const faker = require( 'faker' );
+const title = require( 'title' );
+
+const accordionCount = 6;
+const accordionData = [];
+
+for ( let i = 0; i < accordionCount; i++ ) {
+	accordionData.push( {
+		accordionLabel: title( faker.lorem.words( 3 ) ),
+		accordionContent: faker.lorem.paragraph()
+	} );
+}
+
 module.exports = {
 	title: 'Accordion',
 	status: 'wip',
 	context: {
 		scriptCall: 'window.pinecone.accordions();',
-		accordionTitle: 'Accordions',
-		accordionLabel: 'Accordion',
-		accordionContent: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+		accordions: accordionData,
+		standAlone: false
 	},
 	variants: [
 		{
-			name: 'Light on Dark',
+			name: 'Default (Light on Dark)',
+			label: 'Default (Light on Dark)',
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color'
 			}

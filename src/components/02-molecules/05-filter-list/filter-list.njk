@@ -1,0 +1,43 @@
+{% if not standAlone %}
+<div class="spacer"></div>
+<div class="filter-sort__filters">
+	<div class="accordions">
+{% endif %}
+		<div class="accordion">
+			<p class="accordion__heading">{{ label }}</p>
+			<div class="accordion__content">
+				<ul class="input-group input-group__parent {{ label | slugify }}">
+					{% for term in terms %}
+					<li>
+						{% if term.childrenCount or term.children %}
+							{% if term.childrenCount %}
+								{% set count = term.childrenCount %}
+							{% else %}
+								{% set count = term.children.length %}
+							{% endif %}
+							<div class="checkbox" role="checkbox" aria-checked="false" tabindex="0">{{ term.label }}<span class="screen-reader-text"> and {{ count }} subtopics</span></div>
+							<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}">
+							{% render '@filter-button', {standAlone: true, label: 'Show '+count+' subtopics for "'+term.label+'"' } %}
+							<ul class="input-group input-group__descendant">
+								{% if term.childrenCount %}
+									{% for i in range(1, term.childrenCount) %}
+									<li><input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}-{{ i }}" value="{{ term.label | slugify }}-{{ i }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}-{{ i }}">{{ term.label }} {{ i }}</label></li>
+									{% endfor %}
+								{% elseif term.children %}
+									{% for child in term.children %}
+									<li><input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ child | slugify }}" value="{{ child | slugify }}"><label for="{{ label | slugify }}-{{ child | slugify }}">{{ child }}</label></li>
+									{% endfor %}
+								{% endif %}
+							</ul>
+						{% else %}
+							<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}">{{ term.label }}</label>
+						{% endif %}
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+{% if not standAlone %}
+	</div>
+</div>
+{% endif %}

@@ -6,6 +6,11 @@
 const path = require( 'path' );
 
 /*
+* Require the slugify module
+*/
+const slugify = require( 'slugify' );
+
+/*
  * Require the Fractal module
  */
 const fractal = module.exports = require( '@frctl/fractal' ).create();
@@ -20,7 +25,13 @@ fractal.set( 'project.author', 'OCAD University' );
  * Tell Fractal where to look for components.
  */
 const nunj = require( '@frctl/nunjucks' )( {
-	paths: ['/src/assets']
+	paths: ['/src/assets'],
+	filters: {
+		/** Slugify a string. */
+		slugify: function slugifyString( str ) {
+			return slugify( str, { lower: true } );
+		}
+	}
 } );
 fractal.components.engine( nunj );
 fractal.components.set( 'ext', '.njk' );
