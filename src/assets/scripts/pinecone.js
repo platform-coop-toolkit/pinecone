@@ -77,8 +77,8 @@ const handleFilterOverlay = function() {
 	accordions.style.display = 'block';
 	overlay.classList.add( 'expanded' );
 	heading.focus();
-	Pinecone.accordions();
-	Pinecone.filterList();
+	// Pinecone.accordions();
+	// Pinecone.filterList();
 
 	closeButton.addEventListener( 'click', ( event ) => {
 		Array.prototype.forEach.call( elems, elem => {

@@ -241,9 +241,9 @@ export function dialogs() {
 export function filterList() {
 	const controls = document.querySelectorAll( '.input-group [aria-expanded]' );
 	Array.prototype.forEach.call( controls, control => {
-		control.addEventListener( 'click', ( event ) => {
-			const expanded = 'true' === event.currentTarget.getAttribute( 'aria-expanded' ) || false;
-			event.currentTarget.setAttribute( 'aria-expanded', !expanded );
+		control.addEventListener( 'click', function ( event ) {
+			const expanded = 'true' === event.target.getAttribute( 'aria-expanded' ) || false;
+			event.target.setAttribute( 'aria-expanded', !expanded );
 		} );
 	} );
 
