@@ -53,8 +53,9 @@ input[type="radio"] {
 
 input[type="search"] {
 	background-image: url("../images/search.svg");
-	background-position: rem(14) center;
+	background-position: rem(12) center;
 	background-repeat: no-repeat;
+	background-size: 1.25em;
 	padding-left: rem(40);
 	position: relative;
 }
@@ -67,9 +68,10 @@ textarea {
 
 select {
 	background: $white;
-	background-image: url("../images/chevron-s.svg");
+	background-image: url("../images/chevron-down.svg");
 	background-position: calc(100% - #{rem(16)}) center;
 	background-repeat: no-repeat;
+	background-size: 1.25em;
 	padding: rem(8) rem(40) rem(6) rem(10);
 
 	&::-ms-expand {
@@ -159,7 +161,7 @@ input[type="radio"]:checked + label::before {
 
 input[type="checkbox"]:checked + label::before {
 	background: $blue-400;
-	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23f9f9f7" stroke-linejoin="round" stroke-width="2"/></svg>');
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23f9f9f7" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	background-position: center;
 	background-repeat: no-repeat;
 	border-color: $blue-400;
@@ -229,7 +231,7 @@ input[type="checkbox"]:checked:focus + label::before {
 
 .has-dark-mint-500-background-color input[type="checkbox"]:checked + label::before {
 	background: $off-white;
-	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23000000" stroke-linejoin="round" stroke-width="2"/></svg>');
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23000000" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	background-position: center;
 	background-repeat: no-repeat;
 	border-color: $off-white;
@@ -292,7 +294,7 @@ input[type="search"]::-webkit-search-cancel-button {
 	background-image: url("../images/close.svg");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: rem(10) rem(10);
+	background-size: rem(12.5) rem(12.5);
 	border-radius: 50%;
 	height: rem(24);
 	position: absolute;
@@ -342,25 +344,11 @@ input[type="search"]::-webkit-search-cancel-button {
 	line-height: (20 / 14);
 
 	svg {
-		height: 1rem;
-		margin-right: rem(6);
-
-		.triangle {
-			fill: currentColor;
-			stroke: currentColor;
-		}
-
-		.exclamation {
-			fill: $off-white;
-		}
+		margin-right: rem(4);
 	}
 
 	.has-dark-mint-500-background-color & {
 		color: $red-200;
-
-		svg .exclamation {
-			fill: $dark-mint-500;
-		}
 	}
 }
 

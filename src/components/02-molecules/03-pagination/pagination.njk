@@ -4,6 +4,6 @@
 <nav class="navigation pagination" role="navigation" aria-label="Posts">
 	<h2 class="screen-reader-text">Posts navigation</h2>
 	<div class="nav-links">
-		<a class="previous page-numbers" href="1"><span class="screen-reader-text">Previous posts</span><svg aria-hidden="true" class="icon icon--chevron-w"><use xlink:href="/images/chevron-w.svg"/></svg></a><span aria-current="page" class="page-numbers current">2</span><a class="page-numbers" href="3">3</a><span class="page-numbers dots">…</span><a class="page-numbers" href="61">61</a><a class="next page-numbers" href="3"><span class="screen-reader-text">Next posts</span><svg aria-hidden="true" class="icon icon--chevron-w"><use xlink:href="/images/chevron-e.svg"/></svg></a>
+		<a class="previous page-numbers" href="1"><span class="screen-reader-text">Previous posts</span>{% render '@svg', {svg:'chevron-left'} %}</a><span aria-current="page" class="page-numbers current">2</span><a class="page-numbers" href="3">3</a><span class="page-numbers dots">…</span><a class="page-numbers" href="61">61</a><a class="next page-numbers" href="3"><span class="screen-reader-text">Next posts</span>{% render '@svg', {svg:'chevron-right'} %}</a>
 	</div>
 </nav>

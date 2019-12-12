@@ -4,20 +4,158 @@ module.exports = {
 	context: {
 		iconsTitle: 'Icons',
 		icons: [
-			'chevron-s',
-			'chevron-w',
-			'chevron-e',
-			'chevron-n',
-			'arrow-ne',
-			'arrow-n',
-			'arrow-s',
-			'close',
-			'add',
-			'languages',
-			'location',
-			'calendar',
-			'search',
-			'toolbox'
+			[
+				{
+					svg: 'favourite',
+				},
+				{
+					svg: 'share',
+				},
+				{
+					svg: 'edit',
+				},
+				{
+					svg: 'warning',
+				},
+				{
+					svg: 'error',
+				},
+				{
+					svg: 'location',
+				},
+				{
+					svg: 'broken-link',
+				},
+				{
+					svg: 'menu',
+				},
+				{
+					svg: 'filter',
+				},
+				{
+					svg: 'tag',
+				},
+				{
+					svg: 'delete',
+				},
+				{
+					svg: 'settings',
+				},
+				{
+					svg: 'export',
+				},
+				{
+					svg: 'external',
+				},
+			],
+			[
+				{
+					svg: 'chevron-left',
+				},
+				{
+					svg: 'chevron-right',
+				},
+				{
+					svg: 'chevron-up',
+				},
+				{
+					svg: 'chevron-down',
+				},
+				{
+					svg: 'scroll-up',
+				},
+				{
+					svg: 'scroll-down',
+				},
+				{
+					svg: 'close',
+				},
+				{
+					svg: 'add',
+				},
+				{
+					svg: 'calendar',
+				},
+				{
+					svg: 'search',
+				},
+			],
+			[
+				{
+					svg: 'audio',
+				},
+				{
+					svg: 'case-study',
+				},
+				{
+					svg: 'toolkit',
+				},
+				{
+					svg: 'educational-curriculum',
+				},
+				{
+					svg: 'video',
+				},
+				{
+					svg: 'article',
+				},
+				{
+					svg: 'book',
+				},
+				{
+					svg: 'academic-paper',
+				},
+				{
+					svg: 'report',
+				},
+				{
+					svg: 'presentation',
+				},
+				{
+					svg: 'online-training',
+				},
+			],
+			[
+				{
+					svg: 'topic',
+					class: 'topic icon--md',
+					viewBox: '0 0 24 24',
+				},
+				{
+					svg: 'goal',
+					class: 'goal icon--md',
+					viewBox: '0 0 24 24',
+				},
+				{
+					svg: 'sector',
+					class: 'sector icon--md',
+					viewBox: '0 0 24 24',
+				},
+				{
+					svg: 'format',
+					class: 'format icon--md',
+					viewBox: '0 0 24 24',
+				},
+			],
+			[
+				{
+					svg: 'languages-lg',
+					class: 'languages icon--lg',
+					viewBox: '0 0 28 28',
+				}
+			],
+			[
+				{
+					svg: 'languages-xl',
+					class: 'languages icon--xl',
+					viewBox: '0 0 40 40',
+				},
+				{
+					svg: 'browse',
+					class: 'browse icon--xl',
+					viewBox: '0 0 40 40',
+				}
+			],
 		],
 	}
 };

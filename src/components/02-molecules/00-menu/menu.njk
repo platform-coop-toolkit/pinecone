@@ -1,11 +1,7 @@
 <nav aria-labelledby="menu-primary-label">
 	<button class="menu-toggle" aria-expanded="false">
-		<svg class="icon icon--open" aria-hidden="true">
-			<use xlink:href="/images/hamburger.svg"/>
-		</svg>
-		<svg class="icon icon--close" aria-hidden="true">
-			<use xlink:href="/images/close.svg"/>
-		</svg>
+		{% render '@svg', {svg:'menu', class:'open'} %}
+		{% render '@svg', {svg:'close'} %}
 		<span id="menu-primary-label" class="menu-toggle__label">{{ menuTitle }}</span>
 	</button>
 	<ul class="menu{% if modifier %} menu--{{ modifier }}{% endif %}">

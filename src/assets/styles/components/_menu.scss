@@ -22,11 +22,11 @@ nav {
 	z-index: 2;
 
 	svg {
+		font-size: 1rem;
+		height: 1.25em;
+		margin-bottom: 0;
 		margin-right: rem(12);
-
-		path {
-			fill: currentColor;
-		}
+		width: 1.25em;
 	}
 
 	&:focus {
@@ -37,7 +37,7 @@ nav {
 	&[aria-expanded="true"] {
 		color: $white;
 		margin-right: rem(6);
-		padding: 0 rem(12);
+		padding: 0 rem(7.5);
 
 
 		svg {
@@ -62,7 +62,7 @@ nav {
 	}
 }
 
-[aria-expanded="false"] .icon--close {
+[aria-expanded="false"] .icon-close {
 	display: none;
 }
 
@@ -70,7 +70,7 @@ nav {
 	display: none;
 }
 
-[aria-expanded="true"] .icon--open {
+[aria-expanded="true"] .icon-open {
 	display: none;
 }
 
@@ -105,10 +105,6 @@ nav {
 	/* stylelint-disable no-descending-specificity */
 	svg { /* stylelint-enable */
 		transition: transform 0.5s;
-
-		path {
-			fill: currentColor;
-		}
 
 		@media (prefers-reduced-motion: reduce) {
 			transition: none;
@@ -247,6 +243,7 @@ nav {
 		}
 
 		svg {
+			margin-bottom: 0;
 			margin-left: rem(12);
 		}
 
