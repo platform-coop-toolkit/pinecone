@@ -13,8 +13,16 @@
 
 @mixin grid-margin-left( $span, $columns ) {
 	@include grid-margin( $span, $columns, "left" );
+
+	@supports (display: grid) {
+		margin-left: 0;
+	}
 }
 
 @mixin grid-margin-right( $span, $columns ) {
 	@include grid-margin( $span, $columns, "right" );
+
+	@supports (display: grid) {
+		margin-right: 0;
+	}
 }

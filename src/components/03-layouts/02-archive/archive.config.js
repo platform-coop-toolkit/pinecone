@@ -83,7 +83,7 @@ module.exports = {
 		scriptCall: 'window.pinecone.cards(); window.pinecone.accordions(); window.pinecone.filterList();',
 		filterLists: [
 			{
-				label: 'Location of Relevance',
+				label: 'Locations of relevance',
 				terms: [
 					{label:'Bangladesh'},
 					{label:'Brazil'},
@@ -211,7 +211,7 @@ module.exports = {
 				]
 			},
 			{
-				label: 'Format',
+				label: 'Formats',
 				terms: [
 					{label: 'Academic Paper'},
 					{label: 'Article'},
@@ -228,7 +228,7 @@ module.exports = {
 				]
 			},
 			{
-				label: 'Sector',
+				label: 'Sectors',
 				terms: [
 					{
 						label:'Agriculture'
