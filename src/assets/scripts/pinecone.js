@@ -57,37 +57,72 @@ const showResults = function() {
 const applyButton = document.getElementById( 'apply-filters' );
 applyButton.addEventListener( 'click', showResults );
 
-// const elems = document.querySelectorAll( 'body > *' );
+/**
+ * Handles show/hide of the filter overlay.
+ */
+const handleFilterOverlay = function() {
+	const elems = document.querySelectorAll( 'body > *' );
+	document.body.classList.add( 'has-modal' );
+	Array.prototype.forEach.call( elems, elem => {
+		elem.setAttribute( 'inert', 'inert' );
+	} );
+	const filterContainer = document.querySelector( '.filter-sort__filters' );
+	filterContainer.parentNode.removeChild( filterContainer );
+	const overlay = filterContainer;
+	document.body.insertBefore( overlay, document.body.firstChild );
+	const heading = overlay.querySelector( 'h2' );
+	const accordions = overlay.querySelector( '.accordions' );
+	const closeButton = document.getElementById( 'hide-filters' );
+	heading.classList.remove( 'screen-reader-text' );
+	accordions.style.display = 'block';
+	overlay.classList.add( 'expanded' );
+	heading.focus();
+	Pinecone.accordions();
+	Pinecone.filterList();
+
+	closeButton.addEventListener( 'click', ( event ) => {
+		Array.prototype.forEach.call( elems, elem => {
+			elem.removeAttribute( 'inert' );
+		} );
+		const overlay = event.currentTarget.parentNode;
+		const showFilters = document.getElementById( 'show-filters' );
+		overlay.classList.remove( 'expanded' );
+		overlay.parentNode.removeChild( overlay );
+		showFilters.parentNode.insertBefore( overlay, showFilters.nextSibling );
+		document.body.classList.remove( 'has-modal' );
+		showFilters.focus();
+	} );
+};
 
 const showFilters = document.getElementById( 'show-filters' );
-showFilters.addEventListener( 'click', ( event ) => {
-	// TODO: Ensure that focus is trapped in container.
-	// Array.prototype.forEach.call( elems, elem => {
-	// 	elem.setAttribute( 'inert', 'inert' );
-	// } );
-	document.body.style.position = 'fixed';
-	document.body.style.overflow = 'hidden';
-	const filterContainer = event.currentTarget.parentNode;
-	const heading = filterContainer.querySelector( 'h2' );
-	const accordions = filterContainer.querySelector( '.accordions' );
-	filterContainer.classList.add( 'expanded' );
-	heading.classList.remove( 'screen-reader-text' );
-	heading.focus();
-	accordions.style.display = 'block';
-	window.pinecone.accordions();
-} );
+showFilters.addEventListener( 'click', handleFilterOverlay );
 
-const closeFilters = document.getElementById( 'hide-filters' );
-closeFilters.addEventListener( 'click', ( event ) => {
-	// TODO: Restore focus to main document.
-	// Array.prototype.forEach.call( elems, elem => {
-	// 	elem.removeAttribute( 'inert' );
-	// } );
-	const filterContainer = event.currentTarget.parentNode;
-	const heading = filterContainer.querySelector( 'h2' );
-	const accordions = filterContainer.querySelector( '.accordions' );
-	filterContainer.classList.remove( 'expanded' );
-	heading.classList.add( 'screen-reader-text' );
-	accordions.style.display = 'none';
-	showFilters.focus();
-} );
+/**
+ * Handle resize events
+ */
+const handleResize = function() {
+	let timeout;
+	const overlay = document.querySelector( '.filter-sort__filters.expanded' );
+	if ( overlay ) {
+		if ( !timeout ) {
+			timeout = setTimeout( function() {
+				timeout = null;
+
+				const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+				if ( 1279 < viewportWidth ) {
+					const elems = document.querySelectorAll( 'body > *' );
+					Array.prototype.forEach.call( elems, elem => {
+						elem.removeAttribute( 'inert' );
+					} );
+					const showFilters = document.getElementById( 'show-filters' );
+					overlay.classList.remove( 'expanded' );
+					overlay.parentNode.removeChild( overlay );
+					showFilters.parentNode.insertBefore( overlay, showFilters.nextSibling );
+					document.body.classList.remove( 'has-modal' );
+				}
+			}, 66 );
+		}
+	}
+} ;
+
+window.addEventListener( 'resize', handleResize, false );

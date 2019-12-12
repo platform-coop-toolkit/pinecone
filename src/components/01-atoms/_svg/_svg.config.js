@@ -6,6 +6,7 @@ module.exports = {
 		class: false,
 		attributes: {
 			ariaHidden: true,
+			focusable: false,
 			viewBox: '0 0 20 20'
 		}
 	}
