@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"><path d="m3 5.6h14v10.4h-14z"/><path d="m5 3v2.6"/><path d="m15 3v2.6"/><path d="m4 9.5h12"/></g></svg>
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path id="calendar" d="m17 4.6h-1v-1.6a1 1 0 0 0 -2 0v1.6h-8v-1.6a1 1 0 0 0 -2 0v1.6h-1a1 1 0 0 0 -1 1v10.4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-10.4a1 1 0 0 0 -1-1zm-13 2h12v1.9h-12zm12 8.4h-12v-4.5h12z" fill="currentColor"/></svg>

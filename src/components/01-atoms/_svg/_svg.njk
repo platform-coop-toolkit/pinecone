@@ -3,5 +3,5 @@
 	{% for attribute, value in attributes %}
 	{{ attribute | replace('ariaHidden', 'aria-hidden') }}="{{ value }}"
 	{% endfor %}>
-	<use href="/images/{{ svg }}.svg"/>
+	<use href="/images/{{ svg }}.svg#{{ svg }}"/>
 </svg>
