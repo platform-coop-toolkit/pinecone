@@ -74,4 +74,6 @@ class Accordion {
 	}
 }
 
-export default Accordion;
+var index = { Accordion };
+
+export default index;

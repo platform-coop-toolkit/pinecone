@@ -69,7 +69,7 @@ module.exports = {
 				]
 			},
 		],
-		scriptCall: 'window.pinecone.accordions(); window.pinecone.filterList();',
+		// scriptCall: 'window.pinecone.filterList();',
 		standAlone: false,
 	}
 };

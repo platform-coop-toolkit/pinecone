@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Accordion class.
  */
@@ -74,4 +76,6 @@ class Accordion {
 	}
 }
 
-export default Accordion;
+var index = { Accordion };
+
+module.exports = index;
