@@ -39,7 +39,7 @@ class Accordion {
 		ctrl.setAttribute( 'type', 'button' );
 		ctrl.innerHTML = `
 			${heading.textContent}
-			<svg class="icon icon--chevron-down" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path id="chevron-down" d="m10 15a1 1 0 0 1 -.71-.29l-5-5a1 1 0 0 1 1.42-1.42l4.29 4.3 4.29-4.3a1 1 0 0 1 1.42 1.42l-5 5a1 1 0 0 1 -.71.29z" fill="currentColor"/></svg>
+			<svg class="icon icon--chevron-down" viewBox="0 0 20 20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path id="chevron-down" d="m10 15a1 1 0 0 1 -.71-.29l-5-5a1 1 0 0 1 1.42-1.42l4.29 4.3 4.29-4.3a1 1 0 0 1 1.42 1.42l-5 5a1 1 0 0 1 -.71.29z" fill="currentColor"/></svg>
 		`;
 		heading.parentNode.insertBefore( ctrl, heading.nextElementSibling );
 		heading.parentNode.removeChild( heading );
@@ -50,19 +50,18 @@ class Accordion {
 	 * @param {Event} event
 	 */
 	handleClicks( event ) {
-		if ( ! ( event.target.matches || event.target.matchesSelector || event.target.msMatchesSelector || event.target.mozMatchesSelector || event.target.webkitMatchesSelector || event.target.oMatchesSelector ).call( event.target, this.config.controlSelector ) ) {
-			return;
-		}
+		if ( ! event.target.closest( this.config.controlSelector ) ) return;
 
-		const expanded = 'true' === event.target.getAttribute( 'aria-expanded' ) || false;
-		Array.prototype.forEach.call( this.container.querySelectorAll( '.accordion__control' ), ctrl => {
-			ctrl.setAttribute( 'aria-expanded', false );
+		const ctrl = event.target.closest( this.config.controlSelector );
+		const expanded = 'true' === ctrl.getAttribute( 'aria-expanded' ) || false;
+		Array.prototype.forEach.call( this.container.querySelectorAll( '.accordion__control' ), el => {
+			el.setAttribute( 'aria-expanded', false );
 		} );
-		event.target.setAttribute( 'aria-expanded', !expanded );
+		ctrl.setAttribute( 'aria-expanded', !expanded );
 		if ( expanded ) {
-			event.target.parentNode.classList.remove( 'accordion__pane--expanded' );
+			ctrl.parentNode.classList.remove( 'accordion__pane--expanded' );
 		} else {
-			event.target.parentNode.classList.add( 'accordion__pane--expanded' );
+			ctrl.parentNode.classList.add( 'accordion__pane--expanded' );
 		}
 	}
 
