@@ -6,6 +6,5 @@ module.exports = {
 	context: {
 		dialogTitle: 'Dialog',
 		dialogContent: faker.lorem.paragraphs( 1 ),
-		scriptCall: 'window.pinecone.dialogs()'
 	}
 };

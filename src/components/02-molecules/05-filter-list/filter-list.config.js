@@ -69,7 +69,6 @@ module.exports = {
 				]
 			},
 		],
-		// scriptCall: 'window.pinecone.filterList();',
 		standAlone: false,
 	}
 };

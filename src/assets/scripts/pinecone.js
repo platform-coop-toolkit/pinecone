@@ -15,6 +15,13 @@ if ( cards ) {
 	} );
 }
 
+const icons = document.querySelectorAll( 'svg' );
+
+if ( icons ) {
+	Array.prototype.forEach.call( icons, icon => {
+		new Pinecone.Icon( icon );
+	} );
+}
 
 const accordions = document.querySelectorAll( '.accordion' );
 

@@ -49,10 +49,5 @@
   		</footer>
 		<script src="{{ '/scripts/pinecone.umd.js' | path }}"></script>
 		<script src="{{ '/scripts/pinecone.js' | path }}"></script>
-		{% if _target.context.scriptCall or _target.context.hasMenu %}
-		<script>
-			{% if _target.context.scriptCall %}{{ _target.context.scriptCall }}{% endif %}
-		</script>
-		{% endif %}
 	</body>
 </html>
