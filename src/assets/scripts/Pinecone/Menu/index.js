@@ -14,7 +14,6 @@ class Menu {
 		this.toggle = toggle;
 		this.config = {
 			...{
-				// TODO: Defaults?
 				menuToggleSelector: '.menu-toggle',
 				dropdownButtonSelector: '.menu__item',
 				parentMenuSelector: '.menu__submenu-wrapper',
@@ -31,7 +30,8 @@ class Menu {
 
 		this.handleToggle = this.handleToggle.bind( this );
 		this.handleDropdown = this.handleDropdown.bind( this );
-		this.handleDropdownFocusOut = this.handleDropdownFocusOut.bind( this );
+		this.handleDropdownFocus = this.handleDropdownFocus.bind( this );
+		this.handleKeyDown = this.handleKeyDown.bind( this );
 		this.addEventListeners();
 	}
 
@@ -59,7 +59,6 @@ class Menu {
 	 */
 	handleToggle( event ) {
 		if ( ! event.target.closest( this.config.menuToggleSelector ) ) return;
-		// TODO: Closest polyfill
 
 		const btn = event.target.closest( this.config.menuToggleSelector );
 		const expanded = 'true' === btn.getAttribute( 'aria-expanded' ) || false;
@@ -87,29 +86,28 @@ class Menu {
 	 *
 	 * @param {Event} event
 	 */
-	handleDropdownFocusOut( event ) {
+	handleDropdownFocus( event ) {
 		const openDropDown = this.menu.querySelector( '[aria-expanded="true"]' );
 		if ( ! openDropDown ) return false;
 
-		const el = event.target;
+		const openDropDownParent = openDropDown.closest( this.config.parentMenuSelector );
 
-		const subMenu = el.closest( this.config.childMenuSelector );
-		// Last focus was on an item in a submenu; maybe we need to close it
-		if ( subMenu ) {
-			// const items = subMenu.querySelectorAll( 'li' );
-			// const itemCount = items.length;
-			// const item = el.parentNode;
-			// console.log( Array.prototype.indexOf.call( items, item ) );
-			// const parentMenu = subMenu.closest( this.config.parentMenuSelector );
-			// Focus is still within the parent menu; we should leave it open.
-			// if ( document.activeElement.closest( this.config.parentMenuSelector ) === parentMenu ) return false;
-			// Last focus was on last item in the submenu.
-			// if ( ! el.parentNode.nextElementSibling ) {
-			// openDropDown.setAttribute( 'aria-expanded', false );
-			// }
-			// openDropDown.setAttribute( 'aria-expanded', false );
+		// Focus is not in the parent menu
+		if ( ! openDropDownParent.contains( event.target ) ) {
+			openDropDown.setAttribute( 'aria-expanded', false );
 		}
-		// openDropDown.setAttribute( 'aria-expanded', false );
+	}
+
+	/**
+	 * @param {Event} event
+	 */
+	handleKeyDown( event ) {
+		const openDropDown = this.menu.querySelector( '[aria-expanded="true"]' );
+		if ( ! openDropDown ) return false;
+
+		if ( 27 === event.keyCode ) {
+			openDropDown.setAttribute( 'aria-expanded', false );
+		}
 	}
 
 	/**
@@ -118,68 +116,9 @@ class Menu {
 	addEventListeners() {
 		document.addEventListener( 'click', this.handleToggle, false );
 		document.addEventListener( 'click', this.handleDropdown, false );
-		document.addEventListener( 'focusout', this.handleDropdownFocusOut, false );
+		document.addEventListener( 'focusin', this.handleDropdownFocus, false );
+		document.addEventListener( 'keydown', this.handleKeyDown, false );
 	}
 }
 
 export default Menu;
-
-/*
-export function menu() {
-	const menuToggle = document.querySelector( '.menu-toggle' );
-	const primaryMenu = document.querySelector( '.menu' );
-
-	if ( menuToggle && primaryMenu ) {
-		const topLevelMenuItems = document.querySelectorAll( '.menu > li > *' );
-		const parentMenus = primaryMenu.querySelectorAll( '.menu__submenu-wrapper' );
-
-		menuToggle.onclick = () => {
-			const currentState = menuToggle.getAttribute( 'aria-expanded' );
-			const newState = ( 'true' !== currentState );
-			menuToggle.setAttribute( 'aria-expanded', newState );
-		};
-
-		Array.prototype.forEach.call( parentMenus, parentMenu => {
-			const linkEl = parentMenu.querySelector( 'a' );
-			const menuButton = document.createElement( 'button' );
-			menuButton.className = 'menu__item';
-			menuButton.setAttribute( 'aria-expanded', false );
-			menuButton.innerHTML = `${linkEl.innerHTML}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon icon-chevron-down"><path d="m15 9-5 5-5-5" fill="none" stroke="#203131" stroke-linecap="round" stroke-linejoin="round" class="stroke" stroke-width="2"></path></svg>`;
-			parentMenu.insertBefore( menuButton, parentMenu.firstChild );
-			parentMenu.removeChild( linkEl );
-			menuButton.addEventListener( 'click', () => {
-				const currentState = menuButton.getAttribute( 'aria-expanded' );
-				const newState = ( 'true' !== currentState );
-				menuButton.setAttribute( 'aria-expanded', newState );
-			} );
-			document.addEventListener( 'click', event => {
-				if ( ! parentMenu.contains( event.target ) ) {
-					menuButton.setAttribute( 'aria-expanded', false );
-				}
-			} );
-			document.onkeydown = function( evt ) {
-				evt = evt || window.event;
-				let isEscape = false;
-				if ( 'key' in evt ) {
-					isEscape = 'Escape' == evt.key || 'Esc' == evt.key;
-				} else {
-					isEscape = 27 == evt.keyCode;
-				}
-				if ( isEscape ) {
-					menuButton.setAttribute( 'aria-expanded', false );
-				}
-			};
-		} );
-
-		Array.prototype.forEach.call( topLevelMenuItems, topLevelMenuItem => {
-			topLevelMenuItem.addEventListener( 'focus', () => {
-				const openDropDown = primaryMenu.querySelector( '[aria-expanded="true"]' );
-				if ( ! openDropDown ) {
-					return;
-				}
-				openDropDown.setAttribute( 'aria-expanded', false );
-			} );
-		} );
-	}
-}
-*/
