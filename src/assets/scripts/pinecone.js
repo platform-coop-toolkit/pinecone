@@ -7,6 +7,15 @@ if ( menu && menuToggle ) {
 	new Pinecone.Menu( menu, menuToggle );
 }
 
+const cards = document.querySelectorAll( '.card' );
+
+if ( cards ) {
+	Array.prototype.forEach.call( cards, card => {
+		new Pinecone.Card( card );
+	} );
+}
+
+
 const accordions = document.querySelectorAll( '.accordion' );
 
 if ( accordions ) {

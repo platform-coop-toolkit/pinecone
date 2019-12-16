@@ -52,7 +52,6 @@
 		{% if _target.context.scriptCall or _target.context.hasMenu %}
 		<script>
 			{% if _target.context.scriptCall %}{{ _target.context.scriptCall }}{% endif %}
-			{% if _target.context.hasMenu %}window.pinecone.menu();{% endif %}
 		</script>
 		{% endif %}
 	</body>
