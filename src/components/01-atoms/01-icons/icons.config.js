@@ -137,19 +137,19 @@ module.exports = {
 					viewBox: '0 0 24 24',
 				},
 			],
-			/* [
-				{
-					svg: 'languages-lg',
-					class: 'languages icon--lg',
-					viewBox: '0 0 28 28',
-				}
-			], */
 			[
-				/* {
-					svg: 'languages-xl',
-					class: 'languages icon--xl',
-					viewBox: '0 0 40 40',
-				}, */
+				{
+					svg: 'language',
+					class: 'language icon--lg',
+					viewBox: '0 0 32 32',
+				},
+				{
+					svg: 'pcc',
+					class: 'pcc icon--lg',
+					viewBox: '0 0 32 32',
+				},
+			],
+			[
 				{
 					svg: 'browse',
 					class: 'browse icon--xl',
