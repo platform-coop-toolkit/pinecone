@@ -75,7 +75,7 @@
 }
 
 @include breakpoint-down(md) {
-	.filter-sort__filters.expanded {
+	.filter-sort__filters--expanded {
 		background-color: $white;
 		display: block;
 		height: 100%;
