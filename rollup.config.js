@@ -1,3 +1,4 @@
+import babel from 'rollup-plugin-babel';
 import pkg from './package.json';
 
 export default [
@@ -8,7 +9,9 @@ export default [
 			name: 'Pinecone',
 			file: pkg.browser,
 			format: 'umd',
-		}
+		},
+		plugins: [babel()],
+		external: [ 'wicg-inert' ]
 	},
 
 	// CommonJS (for Node) and ES module (for bundlers) build.
@@ -18,5 +21,6 @@ export default [
 			{ file: pkg.main, format: 'cjs' },
 			{ file: pkg.module, format: 'es' },
 		],
+		external: [ 'wicg-inert' ]
 	},
 ];

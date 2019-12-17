@@ -13,25 +13,15 @@
 				<ul class="input-group input-group__parent {{ label | slugify }}">
 					{% for term in terms %}
 					<li>
-						{% if term.childrenCount or term.children %}
-							{% if term.childrenCount %}
-								{% set count = term.childrenCount %}
-							{% else %}
-								{% set count = term.children.length %}
-							{% endif %}
-							<div class="checkbox" role="checkbox" aria-checked="false" tabindex="0">{{ term.label }}<span class="screen-reader-text"> and {{ count }} subtopics</span></div>
-							<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}">
-							{# {% render '@filter-button', {standAlone: true, label: 'Show '+count+' subtopics for "'+term.label+'"' } %} #}
+						{% if term.children %}
+							{% set count = term.children.length %}
+							{% render '@checkbox', {label: term.label, value: term.label | slugify, name: label | slugify, standAlone: false}, true %}
+							<span id="{{ term.label | slugify }}-disclosure-label" hidden>show {{ count }} subtopics for "{{ term.label }}"</span>
+							<span hidden> (and {{ count }} subtopics)</span>
 							<ul class="input-group input-group__descendant">
-								{% if term.childrenCount %}
-									{% for i in range(1, term.childrenCount) %}
-									<li><input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}-{{ i }}" value="{{ term.label | slugify }}-{{ i }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}-{{ i }}">{{ term.label }} {{ i }}</label></li>
-									{% endfor %}
-								{% elseif term.children %}
-									{% for child in term.children %}
-									<li><input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ child | slugify }}" value="{{ child | slugify }}"><label for="{{ label | slugify }}-{{ child | slugify }}">{{ child }}</label></li>
-									{% endfor %}
-								{% endif %}
+								{% for child in term.children %}
+								<li>{% render '@checkbox', {label: child, value: child | slugify, name: label | slugify, standAlone: false}, true %}</li>
+								{% endfor %}
 							</ul>
 						{% else %}
 							<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}">{{ term.label }}</label>

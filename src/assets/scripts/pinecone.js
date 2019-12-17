@@ -39,6 +39,17 @@ if ( showFilters && hideFilters && filterContainer ) {
 	new Pinecone.FilterList( filterContainer, showFilters, hideFilters );
 }
 
+const nestedCheckboxContainers = document.querySelectorAll( '.input-group__parent > li' );
+if ( nestedCheckboxContainers ) {
+	Array.prototype.forEach.call( nestedCheckboxContainers, container => {
+		const input = container.querySelector( 'li > input' );
+		const subInputs = container.querySelectorAll( '.input-group__descendant input' );
+		if ( 0 < subInputs.length ) {
+			new Pinecone.NestedCheckbox( container, input, subInputs );
+		}
+	} );
+}
+
 /**
  * Show results.
  */

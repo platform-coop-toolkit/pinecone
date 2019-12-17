@@ -1,4 +1,4 @@
-.filter-button {
+.disclosure-button {
 	align-items: center;
 	background: $blue-100;
 	border: solid rem(2) transparent;
@@ -16,6 +16,11 @@
 
 	svg {
 		margin-bottom: 0;
+		transition: transform 0.5s;
+
+		@media (prefers-reduced-motion: reduce) {
+			transition: none;
+		}
 	}
 
 	&:hover {
@@ -31,13 +36,13 @@
 	}
 
 	&[aria-expanded="true"] {
-		svg .vert {
-			display: none;
+		svg {
+			transform: rotate(-180deg);
 		}
 	}
 }
 
-.has-dark-mint-500-background-color .filter-button {
+.has-dark-mint-500-background-color .disclosure-button {
 	background: $blue-700;
 	color: $off-white;
 
