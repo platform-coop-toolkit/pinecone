@@ -40,13 +40,22 @@ if ( showFilters && hideFilters && filterContainer ) {
 }
 
 const nestedCheckboxContainers = document.querySelectorAll( '.input-group__parent > li' );
-if ( nestedCheckboxContainers ) {
+if ( 0 < nestedCheckboxContainers.length ) {
 	Array.prototype.forEach.call( nestedCheckboxContainers, container => {
-		const input = container.querySelector( 'li > input' );
+		const input = Array.prototype.filter.call( container.children, function ( child ) {
+			return child.matches( 'input' );
+		} ).shift();
 		const subInputs = container.querySelectorAll( '.input-group__descendant input' );
 		if ( 0 < subInputs.length ) {
 			new Pinecone.NestedCheckbox( container, input, subInputs );
 		}
+	} );
+}
+
+const deselectButtons = document.querySelectorAll( 'button[id^="deselect-"]' );
+if ( 0 < deselectButtons.length ) {
+	Array.prototype.forEach.call( deselectButtons, btn => {
+		new Pinecone.DeselectAll( btn );
 	} );
 }
 

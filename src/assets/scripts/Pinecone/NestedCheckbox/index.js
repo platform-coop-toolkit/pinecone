@@ -167,7 +167,7 @@ class NestedCheckbox {
 	}
 
 	/**
-	 * Add click event listeners.
+	 * Add event listeners.
 	 */
 	addEventListeners() {
 		this.container.addEventListener( 'change', this.handleChange, false );
