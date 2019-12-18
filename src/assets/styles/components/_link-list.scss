@@ -95,3 +95,8 @@
 		}
 	}
 }
+
+.link-list__item a:active:focus {
+	border-bottom-color: $blue-400;
+	text-decoration: none;
+}
