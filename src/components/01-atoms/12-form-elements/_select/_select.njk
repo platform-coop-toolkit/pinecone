@@ -2,7 +2,7 @@
 	<label for="{{ name }}">{{ label }}</label>
 	<select id="{{ name }}" name="{{ name }}"{% if disabled %} disabled{% endif %}>
 		{% for value, label in options %}
-		<option val="{{ value }}">{{ label }}</option>
+		<option val="{{ value }}">{{ label | safe }}</option>
 		{% endfor %}
 	</select>
 	{% if description %}

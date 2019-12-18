@@ -218,13 +218,13 @@ class FilterList {
 			const accordion = this.container.querySelector( '.accordion' );
 			heading.classList.remove( 'screen-reader-text' );
 			accordion.style.display = 'block';
-			this.container.classList.add( 'filter-sort__filters--expanded' );
+			this.container.classList.add( 'filters--expanded' );
 			heading.focus();
 		} else {
 			Array.prototype.forEach.call( elems, elem => {
 				elem.removeAttribute( 'inert' );
 			} );
-			this.container.classList.remove( 'filter-sort__filters--expanded' );
+			this.container.classList.remove( 'filters--expanded' );
 			this.container.parentNode.removeChild( this.container );
 			this.showCtrl.parentNode.insertBefore( this.container, this.showCtrl.nextSibling );
 			document.body.classList.remove( 'has-modal' );
@@ -237,7 +237,7 @@ class FilterList {
 	 */
 	handleResize() {
 		let timeout;
-		if ( this.container.classList.contains( 'filter-sort__filters--expanded' ) ) {
+		if ( this.container.classList.contains( 'filters--expanded' ) ) {
 			if ( !timeout ) {
 				timeout = setTimeout( this.removeOverlay( timeout ), 66 );
 			}
@@ -256,7 +256,7 @@ class FilterList {
 			Array.prototype.forEach.call( elems, elem => {
 				elem.removeAttribute( 'inert' );
 			} );
-			this.container.classList.remove( 'filter-sort__filters--expanded' );
+			this.container.classList.remove( 'filters--expanded' );
 			this.container.parentNode.removeChild( this.container );
 			this.showCtrl.parentNode.insertBefore( this.container, this.showCtrl.nextSibling );
 			document.body.classList.remove( 'has-modal' );

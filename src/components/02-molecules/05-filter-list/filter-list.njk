@@ -1,7 +1,7 @@
 {% if not standAlone %}
 <div class="spacer"></div>
 {% render '@button', {standAlone: true, id: 'show-filters'}, true %}
-<div class="filter-sort__filters">
+<div class="filters">
 	{% render '@button', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
 	<form action="/">
 	<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>

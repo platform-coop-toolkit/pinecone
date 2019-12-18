@@ -31,7 +31,7 @@ if ( accordions ) {
 	} );
 }
 
-const filterContainer = document.querySelector( '.filter-sort__filters' );
+const filterContainer = document.querySelector( '.filters' );
 const showFilters = document.querySelector( '#show-filters' );
 const hideFilters = document.querySelector( '#hide-filters' );
 

@@ -2,23 +2,24 @@
 	{% render '@breadcrumb-link', {label: 'Home', href: '/home'} %}
 	<h1>{{ title }}</h1>
 </div>
-<div class="filter-sort">
+<div class="filter-wrapper">
 	{% render '@button', {standAlone: true, id: 'show-filters'}, true %}
-		<div class="filter-sort__filters">
-			{% render '@button', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
-			<form action="/">
-			<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
-			<div class="accordion">
-			{% for filterList in filterLists %}
-				{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
-			{% endfor %}
-			</div>
-			{% render '@submit', {standAlone: true, value: 'Apply filters', id: 'apply-filters'} %}
-			</form>
+	<form class="filters" action="/">
+		{% render '@button', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
+		<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
+		<div class="accordion">
+		{% for filterList in filterLists %}
+			{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
+		{% endfor %}
 		</div>
-		<div class="filter-sort__sorts">
-			{% render '@select', {name: 'orderby', label: 'Sort by', description: false, options: {recency: 'Most recently added'}, standAlone: true} %}
-		</div>
+		{% render '@submit', {standAlone: true, value: 'Apply filters', id: 'apply-filters'} %}
+	</form>
+</div>
+<div class="sort-wrapper">
+	<form class="sort" action="/">
+		{% render '@select', {name: 'orderby', label: 'Sort by', description: false, options: {addedDate: 'Most recently added', publicationDate: 'Most recently published', popularity: 'Most favourited'}, standAlone: true} %}
+		{# {% render '@submit', {standAlone: true, value: 'Sort', id: 'sort'} %} #}
+	</form>
 </div>
 <div class="resource-list">
 <ul class="cards">
