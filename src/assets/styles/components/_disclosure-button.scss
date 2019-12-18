@@ -1,6 +1,6 @@
 .disclosure-button {
 	align-items: center;
-	background: $blue-100;
+	background: $blue-50;
 	border: solid rem(2) transparent;
 	border-radius: 50%;
 	color: $blue-500;
@@ -28,6 +28,11 @@
 		background: $blue-150;
 	}
 
+	&:active {
+		background: $blue-100;
+		color: $blue-500;
+	}
+
 	&:focus {
 		border-color: $blue-500;
 		box-shadow:
@@ -51,15 +56,20 @@
 		background: $true-black;
 	}
 
+	&:active {
+		background: $blue-500;
+		color: $off-white;
+	}
+
 	&:focus {
 		border-color: $off-white;
 		box-shadow:
 			0 0 0 rem(2) $black,
 			0 0 0 rem(4) $off-white;
 	}
+}
 
-	&:active {
-		background: $blue-500;
-		color: $off-white;
-	}
+.disclosure-button:active:focus {
+	border-color: transparent;
+	box-shadow: none;
 }
