@@ -135,12 +135,12 @@
 button:not([class]) {
 	background-color: $white;
 	border: solid rem(3) transparent;
+	border-radius: rem(3);
 	color: $blue-500;
 	font-family: $font-family-sans;
 	font-size: rem(16);
 	font-weight: $font-weight-semibold;
 	height: rem(40);
-	margin-left: rem(-15);
 	padding: 0 rem(12);
 
 	svg + * {
@@ -152,18 +152,19 @@ button:not([class]) {
 	}
 
 	&:hover {
-		background-color: $off-white;
-		border-color: $blue-100;
-		color: $blue-600;
+		background-color: $grey-200;
+		color: $dark-mint-500;
 	}
 
 	&:active {
-		border-color: $blue-400;
 		color: $blue-400;
 	}
 
 	&:focus {
-		border-color: $blue-500;
+		background-color: $grey-200;
+		border-color: $white;
+		box-shadow: 0 0 0 rem(3) $dark-mint-500;
+		color: $dark-mint-500;
 		outline: none;
 	}
 }
