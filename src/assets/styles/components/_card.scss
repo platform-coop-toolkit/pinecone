@@ -133,14 +133,14 @@
 .card__date,
 .card__locality {
 	svg {
-		height: 1em;
+		height: 1.125em;
 		margin-bottom: rem(-2);
-		margin-right: rem(2);
+		margin-right: 0;
 	}
 }
 
 .card__tags {
-	margin-top: rem(20);
+	margin-top: rem(2);
 
 	.badges {
 		display: inline-flex;
