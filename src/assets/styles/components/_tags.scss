@@ -49,4 +49,9 @@
 			0 0 0 rem(4) $blue-500;
 		outline: none;
 	}
+
+	&:active:focus {
+		background: $white;
+		box-shadow: none;
+	}
 }
