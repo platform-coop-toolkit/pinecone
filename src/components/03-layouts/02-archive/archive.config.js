@@ -80,7 +80,6 @@ module.exports = {
 		bodyClass: 'archive',
 		hasMenu: true,
 		title: 'Browse all',
-		scriptCall: 'window.pinecone.cards(); window.pinecone.accordions(); window.pinecone.filterList();',
 		filterLists: [
 			{
 				label: 'Locations of relevance',
@@ -112,7 +111,6 @@ module.exports = {
 					{
 						label: 'Build a co-op',
 						children: [
-							'General build a co-op resources',
 							'Write bylaws',
 							'Build a business model',
 							'Establish a governance structure',
@@ -125,7 +123,6 @@ module.exports = {
 					{
 						label: 'Build a platform',
 						children: [
-							'General build a platform resources',
 							'Understand the design process',
 							'Design for privacy',
 							'Design for inclusion',

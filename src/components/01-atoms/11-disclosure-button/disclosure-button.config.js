@@ -1,5 +1,5 @@
 module.exports = {
-	title: 'Filter Button',
+	title: 'Disclosure Button',
 	status: 'wip',
 	context: {
 		label: 'Show',

@@ -2,7 +2,6 @@ module.exports = {
 	title: 'Card',
 	status: 'wip',
 	context: {
-		scriptCall: 'window.pinecone.cards();',
 		title: 'Card',
 		format: 'Card',
 		name: 'Generic Card',

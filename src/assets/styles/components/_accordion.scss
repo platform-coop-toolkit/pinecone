@@ -1,4 +1,4 @@
-.accordion {
+.accordion__pane {
 	margin-bottom: 0;
 	position: relative;
 }
@@ -43,14 +43,11 @@
 		height: rem(20);
 		margin-bottom: 0;
 		margin-right: rem(10);
+		transition: transform 0.5s;
 		width: rem(20);
 
-		.stroke {
-			stroke-width: 0.125rem;
-		}
-
-		line {
-			stroke: currentColor;
+		@media (prefers-reduced-motion: reduce) {
+			transition: none;
 		}
 	}
 }
@@ -61,21 +58,15 @@
 	color: $white;
 
 	svg {
-		line {
-			stroke: $white;
-		}
-
-		.vert {
-			display: none;
-		}
+		transform: rotate(-180deg); // TODO: Decide on rotation
 	}
 }
 
 .accordion__control:hover {
 	color: $blue-400;
 
-	svg line {
-		stroke: $blue-300;
+	svg {
+		color: $blue-300;
 	}
 
 	&::before {
@@ -89,17 +80,13 @@
 	box-shadow: 0 0 0 rem(3) $white inset;
 	color: $white;
 	outline: 0;
-
-	svg line {
-		stroke: currentColor;
-	}
 }
 
 .accordion__control[aria-expanded="true"]:hover {
 	color: $white;
 
-	svg line {
-		stroke: currentColor;
+	svg {
+		color: inherit;
 	}
 
 	&::before {
@@ -109,6 +96,10 @@
 
 .accordion__control:focus:hover {
 	color: $white;
+
+	svg {
+		color: inherit;
+	}
 
 	&::before {
 		display: none;
@@ -129,10 +120,6 @@
 		border-color: $blue-200;
 		color: $dark-mint-500;
 
-		svg line {
-			stroke: currentColor;
-		}
-
 		&::before {
 			background: $blue-200;
 		}
@@ -148,22 +135,18 @@
 		box-shadow: 0 0 0 rem(3) $dark-mint-500 inset;
 		color: $dark-mint-500;
 
-		svg line {
-			stroke: $dark-mint-500;
-		}
-
 		&::before {
 			background: $blue-200;
 		}
 	}
 }
 
-.accordion--expanded + .accordion .accordion__control::before {
+.accordion__pane--expanded + .accordion__pane .accordion__control::before {
 	display: none;
 }
 
-.accordion:focus-within + .accordion .accordion__heading::before,
-.accordion:focus-within + .accordion .accordion__control::before {
+.accordion__pane:focus-within + .accordion__pane .accordion__heading::before,
+.accordion__pane:focus-within + .accordion__pane .accordion__control::before {
 	display: none;
 }
 
@@ -171,9 +154,14 @@
 	margin-top: rem(20);
 }
 
+.accordion__control[aria-expanded] + .accordion__content {
+	display: none;
+}
+
 .accordion__control[aria-expanded="true"] + .accordion__content {
 	background: $blue-500;
 	color: $white;
+	display: block;
 	margin-left: rem(-15);
 	margin-right: rem(-15);
 	margin-top: 0;

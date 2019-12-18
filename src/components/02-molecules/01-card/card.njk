@@ -11,7 +11,7 @@
 			{% if format %}
 				<span class="card__format">
 					{% if modifier === 'resource' %}
-						{% render '@svg', {svg:formatIcon} %}
+						{% render '@svg', {svg:formatIcon}, true %}
 					{% endif %}{{ format }}</span>{% endif %}
 			{% if language %}
 			<span class="card__sep"> &middot; </span>
@@ -39,7 +39,7 @@
 			<p class="card__description">{{ description }}</p>{% endif %}
 			{% if locality %}
 				<p class="card__locality">
-					{% render '@svg', {svg:'location'} %}{{ locality }}</p>
+					{% render '@svg', {svg:'location'}, true %}{{ locality }}</p>
 			{% endif %}
 			{% if topics %}
 				<div class="card__tags">

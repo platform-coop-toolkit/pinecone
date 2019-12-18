@@ -3,7 +3,6 @@ module.exports = {
 	status: 'wip',
 	context: {
 		inBanner: true,
-		scriptCall: 'window.pinecone.menu();',
 		menuTitle: 'Menu',
 		menuItems:  {
 			'menu-item-1': {
