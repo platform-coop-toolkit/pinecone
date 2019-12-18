@@ -26,7 +26,7 @@ class Accordion {
 		Array.prototype.forEach.call( this.panes, pane => {
 			this.initPane( pane );
 		} );
-		this.handleClicks = this.handleClicks.bind( this );
+		this.handleClick = this.handleClick.bind( this );
 		this.addEventListeners();
 	}
 
@@ -53,7 +53,7 @@ class Accordion {
 	 *
 	 * @param {Event} event
 	 */
-	handleClicks( event ) {
+	handleClick( event ) {
 		if ( ! event.target.closest( this.config.controlSelector ) ) return;
 
 		const ctrl = event.target.closest( this.config.controlSelector );
@@ -73,7 +73,7 @@ class Accordion {
 	 * Add click event listeners.
 	 */
 	addEventListeners() {
-		this.container.addEventListener( 'click', this.handleClicks, false );
+		this.container.addEventListener( 'click', this.handleClick, false );
 	}
 }
 
