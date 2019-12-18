@@ -1,7 +1,7 @@
 {% if not standAlone %}
 <ul class="cards">
 {% endif %}
-	<li class="card card--{{ modifier }}" data-format="{{ format | slugify }}">
+	<li class="card{% if modifier %} card--{{ modifier }}{% endif %}" data-format="{{ format | slugify }}">
 		{% if image %}
 			<figure class="card__image">
 				<img src="{{ image }}" alt="Image for this {{ modifier }}."/>
@@ -18,7 +18,7 @@
 			<span class="card__language">{{ language }}</span>
 			{% endif %}
 			{% if href %}
-				<h2 id="{{ modifier }}-{{ id }}" class="card__title" >
+				<h2 class="card__title" >
 					<a {% if externalLink %}rel="external" {% endif %}href="{{ href }}">{{ title | safe }}</a>
 				</h2>
 			{% endif %}

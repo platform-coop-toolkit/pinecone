@@ -168,8 +168,9 @@ button:not([class]) {
 	}
 
 	&:hover {
-		background-color: $grey-200;
-		color: $dark-mint-500;
+		background-color: $off-white;
+		border-color: $blue-50;
+		color: $blue-600;
 	}
 
 	&:active {
