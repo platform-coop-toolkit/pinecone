@@ -13,10 +13,11 @@
 				{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
 			{% endfor %}
 			</div>
-			{# {% render '@submit', {standAlone: true, value: 'Apply filters', id: 'apply-filters'} %} #}
+			{% render '@submit', {standAlone: true, value: 'Apply filters', id: 'apply-filters'} %}
 			</form>
 		</div>
 		<div class="filter-sort__sorts">
+			{% render '@select', {name: 'orderby', label: 'Sort by', description: false, options: {recency: 'Most recently added'}, standAlone: true} %}
 		</div>
 </div>
 <div class="resource-list">

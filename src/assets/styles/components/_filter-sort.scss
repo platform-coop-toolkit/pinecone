@@ -10,12 +10,9 @@
 	@include grid-column-span(4, 4);
 }
 
-.filter-sort__filters,
-.filter-sort__sorts {
-	display: none;
-}
-
 .filter-sort__filters {
+	display: none;
+
 	.accordion__control svg {
 		margin-right: rem(7);
 	}
@@ -122,6 +119,10 @@
 	.filter-sort__filters {
 		h2 {
 			@include visually-hidden();
+		}
+
+		h2 + * {
+			margin-top: 0;
 		}
 
 		.accordions {
