@@ -30,6 +30,8 @@
 		box-shadow: 0 0 rem(25) transparentize($blue-500, 0.75);
 		padding: rem(22) rem(19) rem(19);
 	}
+
+	@include card($blue-500, $white, true);
 }
 
 .card + .card {
@@ -222,14 +224,6 @@
 	}
 }
 
-// @include breakpoint-up(md) {
-// 	.cards {
-// 		@supports (display: $grid) {
-// 			grid-template-columns: repeat(3, 1fr);
-// 		}
-// 	}
-// }
-
 @include breakpoint-up(lg) {
 	.resource-list {
 		@include grid-column-span(8, 12, 5);
@@ -241,7 +235,6 @@
 		}
 	}
 }
-
 
 @include breakpoint-up(xl) {
 	.resource-list {
