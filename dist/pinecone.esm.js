@@ -117,6 +117,60 @@ class Card {
 }
 
 /**
+ * Deselect All button class.
+ */
+class DeselectAll {
+	/**
+	 * Constructor.
+	 *
+	 * @param {DomNode} btn
+	 * @param {Object} options
+	 */
+	constructor( btn, options ) {
+		this.btn = btn;
+		this.config = {
+			...{},
+			...options
+		};
+
+		this.handleClick = this.handleClick.bind( this );
+		this.addEventListeners();
+	}
+
+	/**
+	 * Handle click.
+	 *
+	 * @param {Event} event
+	 */
+	handleClick() {
+		const inputGroup = this.btn.parentNode.querySelector( '.input-group__parent' );
+		const checkboxes = inputGroup.querySelectorAll( '[type="checkbox"]' );
+		const customCheckboxes = inputGroup.querySelectorAll( '[role="checkbox"]' );
+		const hiddenInputs = inputGroup.querySelectorAll( '[type="hidden"]' );
+		Array.prototype.forEach.call( checkboxes, checkbox => {
+			checkbox.checked = false;
+		} );
+		if ( 0 < customCheckboxes.length ) {
+			Array.prototype.forEach.call( customCheckboxes, customCheckbox => {
+				customCheckbox.setAttribute( 'aria-checked', false );
+			} );
+		}
+		if ( 0 < hiddenInputs.length ) {
+			Array.prototype.forEach.call( hiddenInputs, hiddenInput => {
+				hiddenInput.setAttribute( 'value', '' );
+			} );
+		}
+	}
+
+	/**
+	 * Add event listeners.
+	 */
+	addEventListeners() {
+		this.btn.addEventListener( 'click', this.handleClick, false );
+	}
+}
+
+/**
  * Filter List Handler.
  */
 class FilterList {
@@ -162,13 +216,13 @@ class FilterList {
 			const accordion = this.container.querySelector( '.accordion' );
 			heading.classList.remove( 'screen-reader-text' );
 			accordion.style.display = 'block';
-			this.container.classList.add( 'filter-sort__filters--expanded' );
+			this.container.classList.add( 'filters--expanded' );
 			heading.focus();
 		} else {
 			Array.prototype.forEach.call( elems, elem => {
 				elem.removeAttribute( 'inert' );
 			} );
-			this.container.classList.remove( 'filter-sort__filters--expanded' );
+			this.container.classList.remove( 'filters--expanded' );
 			this.container.parentNode.removeChild( this.container );
 			this.showCtrl.parentNode.insertBefore( this.container, this.showCtrl.nextSibling );
 			document.body.classList.remove( 'has-modal' );
@@ -181,7 +235,7 @@ class FilterList {
 	 */
 	handleResize() {
 		let timeout;
-		if ( this.container.classList.contains( 'filter-sort__filters--expanded' ) ) {
+		if ( this.container.classList.contains( 'filters--expanded' ) ) {
 			if ( !timeout ) {
 				timeout = setTimeout( this.removeOverlay( timeout ), 66 );
 			}
@@ -200,7 +254,7 @@ class FilterList {
 			Array.prototype.forEach.call( elems, elem => {
 				elem.removeAttribute( 'inert' );
 			} );
-			this.container.classList.remove( 'filter-sort__filters--expanded' );
+			this.container.classList.remove( 'filters--expanded' );
 			this.container.parentNode.removeChild( this.container );
 			this.showCtrl.parentNode.insertBefore( this.container, this.showCtrl.nextSibling );
 			document.body.classList.remove( 'has-modal' );
@@ -410,7 +464,7 @@ class NestedCheckbox {
 	constructor( container, input, subInputs, options ) {
 		this.container = container;
 		this.input = input;
-		this.inputId = this.input.getAttribute( 'id' );
+		this.inputId = this.input.id;
 		this.customCheckbox = false;
 		this.value = this.input.getAttribute( 'value' );
 		this.label = this.input.nextElementSibling;
@@ -437,7 +491,7 @@ class NestedCheckbox {
 	 */
 	initDisclosure() {
 		const disclosureLabel = this.label.nextElementSibling;
-		const disclosureLabelId = disclosureLabel.getAttribute( 'id' );
+		const disclosureLabelId = disclosureLabel.id;
 		const disclosureBtn = document.createElement( 'button' );
 		disclosureBtn.classList.add( 'disclosure-button' );
 		disclosureBtn.setAttribute( 'type', 'button' );
@@ -564,7 +618,7 @@ class NestedCheckbox {
 	}
 
 	/**
-	 * Add click event listeners.
+	 * Add event listeners.
 	 */
 	addEventListeners() {
 		this.container.addEventListener( 'change', this.handleChange, false );
@@ -573,6 +627,6 @@ class NestedCheckbox {
 	}
 }
 
-var index = { Accordion, Card, FilterList, Icon, Menu, NestedCheckbox };
+var index = { Accordion, Card, DeselectAll, FilterList, Icon, Menu, NestedCheckbox };
 
 export default index;

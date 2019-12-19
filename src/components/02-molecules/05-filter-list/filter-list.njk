@@ -1,7 +1,7 @@
 {% if not standAlone %}
 <div class="spacer"></div>
 {% render '@button', {standAlone: true, id: 'show-filters'}, true %}
-<div class="filter-sort__filters">
+<div class="filters">
 	{% render '@button', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
 	<form action="/">
 	<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
@@ -10,7 +10,8 @@
 		<div class="accordion__pane">
 			<p class="accordion__heading">{{ label }}</p>
 			<div class="accordion__content">
-				<ul class="input-group input-group__parent {{ label | slugify }}">
+				{% render '@button', {label: 'Deselect All', id: 'deselect-'+ label | slugify, icon: false, standAlone: true}, true %}
+				<ul id="{{ label | slugify }}" class="input-group input-group__parent {{ label | slugify }}">
 					{% for term in terms %}
 					<li>
 						{% if term.children %}

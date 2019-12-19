@@ -13,7 +13,7 @@ class NestedCheckbox {
 	constructor( container, input, subInputs, options ) {
 		this.container = container;
 		this.input = input;
-		this.inputId = this.input.getAttribute( 'id' );
+		this.inputId = this.input.id;
 		this.customCheckbox = false;
 		this.value = this.input.getAttribute( 'value' );
 		this.label = this.input.nextElementSibling;
@@ -40,7 +40,7 @@ class NestedCheckbox {
 	 */
 	initDisclosure() {
 		const disclosureLabel = this.label.nextElementSibling;
-		const disclosureLabelId = disclosureLabel.getAttribute( 'id' );
+		const disclosureLabelId = disclosureLabel.id;
 		const disclosureBtn = document.createElement( 'button' );
 		disclosureBtn.classList.add( 'disclosure-button' );
 		disclosureBtn.setAttribute( 'type', 'button' );
@@ -167,7 +167,7 @@ class NestedCheckbox {
 	}
 
 	/**
-	 * Add click event listeners.
+	 * Add event listeners.
 	 */
 	addEventListeners() {
 		this.container.addEventListener( 'change', this.handleChange, false );
