@@ -24,7 +24,7 @@ body {
 	width: 100%;
 
 	@supports (display: $grid) {
-		column-gap: rem(30);
+		column-gap: $gutter;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 	}

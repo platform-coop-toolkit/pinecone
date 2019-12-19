@@ -10,16 +10,19 @@
 	padding: rem(90) 0;
 
 	@include full-width-background($white);
+	@include grid-column-span(4, 4);
+}
+
+.archive main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 @include breakpoint-up(sm) {
 	.archive main {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-
 		@supports (display: $grid) {
-			column-gap: rem(30);
+			column-gap: $gutter;
 			display: grid;
 			grid-template-columns: repeat(8, 1fr);
 		}

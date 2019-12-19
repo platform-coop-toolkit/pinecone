@@ -5,15 +5,17 @@
 
 .filter-wrapper,
 .sort-wrapper {
-	@include grid-column-span(4, 4);
+	padding: rem(20) 0 rem(24);
+	position: relative;
 }
 
 .filter-wrapper {
-	padding-top: rem(20);
+	width: 50%;
 }
 
 .sort-wrapper {
-	padding: rem(20) 0 rem(24);
+	text-align: right;
+	width: 50%;
 }
 
 .filters {
@@ -150,7 +152,7 @@
 	}
 
 	.sort-wrapper {
-		padding-top: rem(30);
+		padding: rem(30) 0 0;
 
 		@include grid-column-span(8, 12, 5);
 	}

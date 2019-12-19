@@ -15,10 +15,10 @@
 		{% render '@submit', {standAlone: true, value: 'Apply filters', id: 'apply-filters'} %}
 	</form>
 </div>
+{# <div class="filter-summary"></div> #}
 <div class="sort-wrapper">
 	<div class="sort">
-		{# {% render '@select', {name: 'orderby', label: 'Sort by', description: false, options: {addedDate: 'Most recently added', publicationDate: 'Most recently published', popularity: 'Most favourited'}, standAlone: true} %} #}
-		{# {% render '@submit', {standAlone: true, value: 'Sort', id: 'sort'} %} #}
+		{% render '@button', {standAlone: true, label: 'Sort by', id: 'sort', icon: 'sort'}, true %}
 	</div>
 </div>
 <div class="resource-list">

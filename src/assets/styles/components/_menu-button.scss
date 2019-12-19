@@ -1,0 +1,45 @@
+.menu-button {
+	// TODO
+}
+
+.menu-button button {
+	// TODO
+}
+
+.menu-button__menu {
+	background: $white;
+	border-radius: rem(3);
+	box-shadow: 0 rem(3) rem(10) rgba(0, 0, 0, 0.19);
+	list-style: none;
+}
+
+.menu-button__menu li {
+	margin: 0;
+}
+
+.menu-button__menu li + li {
+	border-top: solid rem(1) $grey-400;
+}
+
+.menu-button__menu li:focus-within + li,
+.menu-button__menu li + li:focus-within {
+	border-top-color: $blue-500;
+}
+
+.menu-button__menu a {
+	color: $black;
+	display: block;
+	font-family: $font-family-serif;
+	font-weight: $font-weight-normal;
+	padding: rem(10) rem(14);
+	text-decoration: none;
+	width: 100%;
+
+	&::after {
+		display: none;
+	}
+}
+
+.menu-button [aria-expanded="true"] + .menu-button__menu {
+	// TODO
+}

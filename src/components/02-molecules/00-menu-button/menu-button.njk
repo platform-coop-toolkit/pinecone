@@ -1,0 +1,11 @@
+{% if not standAlone %}<div class="spacer"></div>{% endif %}
+<div class="menu-button">
+	<button type="button" aria-expanded="false">
+		{% render '@svg', {svg: 'sort'}, true %}
+		<span class="button__label">Sort by</span></button>
+	<ul class="menu-button__menu">
+		<li><a href="/?date-added">Date added</a></li>
+		<li><a href="/?date-published">Date published</a></li>
+		<li><a href="/?favorites">Most favorites</a></li>
+	</ul>
+</div>

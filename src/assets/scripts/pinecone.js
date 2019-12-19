@@ -59,6 +59,13 @@ if ( 0 < deselectButtons.length ) {
 	} );
 }
 
+const menuButtons = document.querySelectorAll( '.menu-button button' );
+if ( 0 < menuButtons.length ) {
+	Array.prototype.forEach.call( menuButtons, btn => {
+		new Pinecone.MenuButton( btn );
+	} );
+}
+
 /**
  * Show results.
  */
