@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@10up/eslint-config": "^1.0.9",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
     "@frctl/fractal": "^1.2.1",
     "@frctl/nunjucks": "^2.0.1",
     "babel-eslint": "^10.0.3",
