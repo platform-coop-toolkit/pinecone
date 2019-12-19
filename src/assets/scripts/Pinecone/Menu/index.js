@@ -23,7 +23,7 @@ class Menu {
 		};
 
 
-		this.parents = this.menu.querySelectorAll( this.config.parentMenuSelector );
+		this.parents = document.querySelectorAll( this.config.parentMenuSelector );
 		Array.prototype.forEach.call( this.parents, parent => {
 			this.initDropdown( parent );
 		} );
