@@ -5,7 +5,6 @@
 
 .filter-wrapper,
 .sort-wrapper {
-	@include full-width-background($white);
 	@include grid-column-span(4, 4);
 }
 
@@ -83,6 +82,11 @@
 }
 
 @include breakpoint-down(md) {
+	.filter-wrapper,
+	.sort-wrapper {
+		@include full-width-background($white);
+	}
+
 	.filters--expanded {
 		background-color: $white;
 		display: block;
@@ -157,6 +161,8 @@
 	}
 
 	.filters {
+		display: block;
+
 		h2 {
 			@include visually-hidden();
 		}

@@ -23,7 +23,7 @@ class Menu {
 		};
 
 
-		this.parents = this.menu.querySelectorAll( this.config.parentMenuSelector );
+		this.parents = document.querySelectorAll( this.config.parentMenuSelector );
 		Array.prototype.forEach.call( this.parents, parent => {
 			this.initDropdown( parent );
 		} );
@@ -41,7 +41,7 @@ class Menu {
 	 * @param {DomNode} parent
 	 */
 	initDropdown( parent ) {
-		const link = parent.querySelector( 'a' );
+		const link = parent.parentNode.querySelector( `${this.config.parentMenuSelector} > a` );
 		const btn = document.createElement( 'button' );
 		btn.className = 'menu__item';
 		btn.setAttribute( 'aria-expanded', false );
