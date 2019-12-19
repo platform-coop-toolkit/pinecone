@@ -1,11 +1,12 @@
-.filter-button {
+.disclosure-button {
 	align-items: center;
-	background: $blue-100;
+	background: $blue-50;
 	border: solid rem(2) transparent;
 	border-radius: 50%;
 	color: $blue-500;
 	display: inline-block;
 	display: inline-flex;
+	flex-direction: column;
 	font-size: rem(16);
 	height: rem(34);
 	justify-content: center;
@@ -16,10 +17,20 @@
 
 	svg {
 		margin-bottom: 0;
+		transition: transform 0.5s;
+
+		@media (prefers-reduced-motion: reduce) {
+			transition: none;
+		}
 	}
 
 	&:hover {
 		background: $blue-150;
+	}
+
+	&:active {
+		background: $blue-100;
+		color: $blue-500;
 	}
 
 	&:focus {
@@ -31,18 +42,23 @@
 	}
 
 	&[aria-expanded="true"] {
-		svg .vert {
-			display: none;
+		svg {
+			transform: rotate(-180deg);
 		}
 	}
 }
 
-.has-dark-mint-500-background-color .filter-button {
+.has-dark-mint-500-background-color .disclosure-button {
 	background: $blue-700;
 	color: $off-white;
 
 	&:hover {
 		background: $true-black;
+	}
+
+	&:active {
+		background: $blue-500;
+		color: $off-white;
 	}
 
 	&:focus {
@@ -51,9 +67,9 @@
 			0 0 0 rem(2) $black,
 			0 0 0 rem(4) $off-white;
 	}
+}
 
-	&:active {
-		background: $blue-500;
-		color: $off-white;
-	}
+.disclosure-button:active:focus {
+	border-color: transparent;
+	box-shadow: none;
 }

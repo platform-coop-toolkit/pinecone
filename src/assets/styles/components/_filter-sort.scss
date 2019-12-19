@@ -3,19 +3,22 @@
 	position: fixed;
 }
 
-.filter-sort {
-	padding: rem(20) 0 rem(24);
-
-	@include full-width-background($white);
+.filter-wrapper,
+.sort-wrapper {
 	@include grid-column-span(4, 4);
 }
 
-.filter-sort__filters,
-.filter-sort__sorts {
-	display: none;
+.filter-wrapper {
+	padding-top: rem(20);
 }
 
-.filter-sort__filters {
+.sort-wrapper {
+	padding: rem(20) 0 rem(24);
+}
+
+.filters {
+	display: none;
+
 	.accordion__control svg {
 		margin-right: rem(7);
 	}
@@ -58,15 +61,19 @@
 		padding: rem(12) 0;
 	}
 
-	.accordion--expanded .accordion__content {
+	.accordion__pane--expanded .accordion__content {
 		background: transparent;
 		color: $black;
 	}
 }
 
 @include breakpoint-up(sm) {
-	.filter-sort {
-		@include grid-column-span(8, 8);
+	.filter-wrapper {
+		@include grid-column-span(4, 8);
+	}
+
+	.sort-wrapper {
+		@include grid-column-span(4, 8, 5);
 	}
 }
 
@@ -75,7 +82,12 @@
 }
 
 @include breakpoint-down(md) {
-	.filter-sort__filters.expanded {
+	.filter-wrapper,
+	.sort-wrapper {
+		@include full-width-background($white);
+	}
+
+	.filters--expanded {
 		background-color: $white;
 		display: block;
 		height: 100%;
@@ -97,9 +109,32 @@
 	}
 }
 
+@include breakpoint-between(sm, md) {
+	.sort-wrapper {
+		text-align: right;
+
+		label,
+		select {
+			display: inline;
+		}
+
+		label {
+			margin-right: rem(8);
+		}
+
+		select {
+			margin-top: 0;
+		}
+	}
+}
+
 @include breakpoint-up(lg) {
-	.filter-sort {
+	.filter-wrapper {
 		@include grid-margin-right(1, 12);
+
+		@supports (display: $grid) {
+			grid-row: 2 / 5;
+		}
 
 		padding-top: rem(30);
 
@@ -114,14 +149,26 @@
 		@include grid-column-span(3, 12);
 	}
 
+	.sort-wrapper {
+		padding-top: rem(30);
+
+		@include grid-column-span(8, 12, 5);
+	}
+
 	#show-filters,
 	#hide-filters {
 		display: none;
 	}
 
-	.filter-sort__filters {
+	.filters {
+		display: block;
+
 		h2 {
 			@include visually-hidden();
+		}
+
+		h2 + * {
+			margin-top: 0;
 		}
 
 		.accordions {
@@ -134,16 +181,20 @@
 		}
 	}
 
-	.filter-sort__filters,
-	.filter-sort__sorts {
+	.filter,
+	.sort {
 		display: block;
 	}
 }
 
 
 @include breakpoint-up(xl) {
-	.filter-sort {
+	.filter-wrapper {
 		@include grid-margin-right(1, 16);
 		@include grid-column-span(3, 16);
+	}
+
+	.sort-wrapper {
+		@include grid-column-span(12, 16, 5);
 	}
 }

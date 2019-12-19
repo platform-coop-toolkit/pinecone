@@ -73,6 +73,19 @@ a:not([class]) {
 		}
 	}
 
+	&:active:focus {
+		background: unset;
+		color: $blue-400;
+		text-decoration: underline;
+		text-decoration-color: $blue-400;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: $blue-400;
+			}
+		}
+	}
+
 	@supports (mask: url("../images/add.svg")) {
 		&[rel="external"] {
 			&::after {

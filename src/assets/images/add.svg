@@ -1,1 +1,1 @@
-<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g stroke="none" fill="currentColor"><rect class="vert" x="9" y="4" width="2" height="12" rx="1"/><rect transform="translate(10.000000, 10.000000) rotate(-270.000000) translate(-10.000000, -10.000000)" x="9" y="4" width="2" height="12" rx="1"/></g></svg>
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path id="add" d="m15 9h-4v-4a1 1 0 0 0 -2 0v4h-4a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0v-4h4a1 1 0 0 0 0-2z" fill="currentColor"/></svg>

@@ -25,6 +25,10 @@ fractal.set( 'project.author', 'OCAD University' );
  * Tell Fractal where to look for components.
  */
 const nunj = require( '@frctl/nunjucks' )( {
+	env: {
+		trimBlocks: true,
+		lstripBlocks: true,
+	},
 	paths: ['/src/assets'],
 	filters: {
 		/** Slugify a string. */

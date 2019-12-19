@@ -1,13 +1,13 @@
 const faker = require( 'faker' );
 const title = require( 'title' );
 
-const accordionCount = 6;
-const accordionData = [];
+const paneCount = 6;
+const paneData = [];
 
-for ( let i = 0; i < accordionCount; i++ ) {
-	accordionData.push( {
-		accordionLabel: title( faker.lorem.words( 3 ) ),
-		accordionContent: faker.lorem.paragraph()
+for ( let i = 0; i < paneCount; i++ ) {
+	paneData.push( {
+		label: title( faker.lorem.words( 3 ) ),
+		content: faker.lorem.paragraph()
 	} );
 }
 
@@ -15,8 +15,7 @@ module.exports = {
 	title: 'Accordion',
 	status: 'wip',
 	context: {
-		scriptCall: 'window.pinecone.accordions();',
-		accordions: accordionData,
+		panes: paneData,
 		standAlone: false
 	},
 	variants: [

@@ -44,6 +44,11 @@ module.exports = {
 				{
 					color: 'blue-100',
 					contrast: 'aaa',
+					hex: '#edf5f3'
+				},
+				{
+					color: 'blue-50',
+					contrast: 'aaa',
 					hex: '#e3eae8'
 				}
 			],

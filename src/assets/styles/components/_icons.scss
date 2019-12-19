@@ -4,12 +4,17 @@
 	width: 1.25em;
 }
 
-.icon.icon--large {
+.icon.icon--md {
 	height: 1.5em;
 	width: 1.5em;
 }
 
-.icon .stroke {
-	stroke: currentColor;
-	stroke-width: 0.125em;
+.icon.icon--lg {
+	height: 2em;
+	width: 2em;
+}
+
+.icon.icon--xl {
+	height: 2.5em;
+	width: 2.5em;
 }

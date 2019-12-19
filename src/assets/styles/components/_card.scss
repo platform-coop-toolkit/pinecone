@@ -30,6 +30,8 @@
 		box-shadow: 0 0 rem(25) transparentize($blue-500, 0.75);
 		padding: rem(22) rem(19) rem(19);
 	}
+
+	@include card($blue-500, $white, true);
 }
 
 .card + .card {
@@ -58,7 +60,7 @@
 }
 
 .card__image + * {
-	margin-top: rem(16);
+	margin-top: rem(22);
 }
 
 .card__format {
@@ -131,14 +133,14 @@
 .card__date,
 .card__locality {
 	svg {
-		height: 1em;
+		height: 1.125em;
 		margin-bottom: rem(-2);
-		margin-right: rem(2);
+		margin-right: 0;
 	}
 }
 
 .card__tags {
-	margin-top: rem(20);
+	margin-top: rem(2);
 
 	.badges {
 		display: inline-flex;
@@ -222,14 +224,6 @@
 	}
 }
 
-// @include breakpoint-up(md) {
-// 	.cards {
-// 		@supports (display: $grid) {
-// 			grid-template-columns: repeat(3, 1fr);
-// 		}
-// 	}
-// }
-
 @include breakpoint-up(lg) {
 	.resource-list {
 		@include grid-column-span(8, 12, 5);
@@ -241,7 +235,6 @@
 		}
 	}
 }
-
 
 @include breakpoint-up(xl) {
 	.resource-list {
