@@ -5,41 +5,95 @@
 .menu-button__menu {
 	z-index: 1;
 
+	.menu-button__menu__arrow {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+
+		&::after {
+			background: $white;
+			box-shadow: rem(2) rem(2) rem(6) rgba(0, 0, 0, 0.19);
+			content: "";
+			position: absolute;
+		}
+	}
+
+	&[x-placement^="bottom"],
+	&[x-placement^="top"] {
+		.menu-button__menu__arrow {
+			height: rem(20);
+			width: rem(40);
+
+			&::after {
+				height: rem(20);
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%) rotate(45deg);
+				width: rem(20);
+			}
+		}
+	}
+
 	&[x-placement^="bottom"] {
 		margin-top: rem(20);
+
+		.menu-button__menu__arrow {
+			top: rem(-20);
+
+			&::after {
+				top: rem(20);
+			}
+		}
 	}
 
 	&[x-placement^="top"] {
 		margin-bottom: rem(20);
+
+		.menu-button__menu__arrow {
+			bottom: rem(-20);
+
+			&::after {
+				top: rem(0);
+			}
+		}
+	}
+
+	&[x-placement^="left"],
+	&[x-placement^="right"] {
+		.menu-button__menu__arrow {
+			height: rem(40);
+			width: rem(20);
+
+			&::after {
+				height: rem(20);
+				top: 50%;
+				transform: translateX(-50%) translateY(-50%) rotate(45deg);
+				width: rem(20);
+			}
+		}
 	}
 
 	&[x-placement^="left"] {
 		margin-right: rem(20);
+
+		.menu-button__menu__arrow {
+			right: rem(-20);
+
+			&::after {
+				right: 0;
+			}
+		}
 	}
 
 	&[x-placement^="right"] {
 		margin-left: rem(20);
-	}
-}
 
-.menu-button__menu__arrow {
-	display: block;
-	height: rem(20);
-	overflow: hidden;
-	position: absolute;
-	top: rem(-20);
-	width: rem(40);
+		.menu-button__menu__arrow {
+			left: rem(-20);
 
-	&::after {
-		background: $white;
-		box-shadow: rem(2) rem(2) rem(6) rgba(0, 0, 0, 0.19);
-		content: "";
-		height: rem(20);
-		left: 50%;
-		position: absolute;
-		top: rem(20);
-		transform: translateX(-50%) translateY(-50%) rotate(45deg);
-		width: rem(20);
+			&::after {
+				left: rem(20);
+			}
+		}
 	}
 }
 
