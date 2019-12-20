@@ -2,13 +2,13 @@
 <div class="menu-button">
 	<button type="button" aria-expanded="false">
 		{% render '@svg', {svg: 'sort'}, true %}
-		<span class="button__label">Sort by</span></button>
+		<span class="button__label">{{ label }}</span></button>
 	<div class="menu-button__menu">
 		<span class="menu-button__menu__arrow" x-arrow=""></span>
 		<ul>
-			<li><a href="/?date-added">Date added</a></li>
-			<li><a href="/?date-published">Date published</a></li>
-			<li><a href="/?most-favorited">Most favorited</a></li>
+			{% for item in items %}
+			<li><a href="{{ item.href }}"{{ ' aria-current=true' if item.current }}>{{ item.label }}</a></li>
+			{% endfor %}
 		</ul>
 	</div>
 </div>
