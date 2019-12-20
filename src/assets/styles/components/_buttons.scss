@@ -149,7 +149,7 @@
 }
 
 button:not([class]) {
-	background-color: $white;
+	background-color: transparent;
 	border: solid rem(3) transparent;
 	border-radius: rem(3);
 	color: $blue-500;

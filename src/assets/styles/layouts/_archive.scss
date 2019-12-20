@@ -10,22 +10,38 @@
 	padding: rem(90) 0;
 
 	@include full-width-background($white);
+	@include grid-column-span(4, 4);
+}
+
+.archive .current-filters {
+	@include grid-column-span(4, 4);
+
+	@include breakpoint-down(md) {
+		@include full-width-background($white);
+	}
+
+	* + .tag-buttons {
+		margin-top: rem(12);
+	}
+}
+
+.archive main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 @include breakpoint-up(sm) {
 	.archive main {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-
 		@supports (display: $grid) {
-			column-gap: rem(30);
+			column-gap: $gutter;
 			display: grid;
 			grid-template-columns: repeat(8, 1fr);
 		}
 	}
 
-	.archive .page-header {
+	.archive .page-header,
+	.archive .current-filters {
 		@include grid-column-span(8, 8, 1);
 	}
 }
@@ -49,6 +65,10 @@
 
 		@include grid-column-span(12, 12, 1);
 	}
+
+	.archive .current-filters {
+		@include grid-column-span(8, 12, 5);
+	}
 }
 
 @include breakpoint-up(xl) {
@@ -60,5 +80,9 @@
 
 	.archive .page-header {
 		@include grid-column-span(16, 16, 1);
+	}
+
+	.archive .current-filters {
+		@include grid-column-span(12, 16, 5);
 	}
 }

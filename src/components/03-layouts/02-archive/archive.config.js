@@ -80,6 +80,10 @@ module.exports = {
 		bodyClass: 'archive',
 		hasMenu: true,
 		title: 'Browse all',
+		currentTags: [
+			{label: 'Platform cooperativism'},
+			{label: 'Establish a governance structure'}
+		],
 		filterLists: [
 			{
 				label: 'Locations of relevance',
