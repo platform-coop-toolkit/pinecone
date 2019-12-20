@@ -3082,14 +3082,12 @@ class MenuButton {
 		this.links = btn.parentNode.querySelectorAll( 'a' );
 		this.config = {
 			...{
-				placement: 'bottom-start'
+				placement: 'auto',
+				preventOverflow: true,
+				boundariesElement: document.querySelector( 'main' )
 			},
 			...options
 		};
-
-		new Popper( this.btn, this.menu, {
-			placement: this.config.placement
-		} );
 
 		this.handleClick = this.handleClick.bind( this );
 		this.handleKeyDown = this.handleKeyDown.bind( this );
@@ -3106,6 +3104,20 @@ class MenuButton {
 		if ( event.target.closest( '.menu-button button' ) ) {
 			const expanded = 'true' === this.btn.getAttribute( 'aria-expanded' ) || false;
 			this.btn.setAttribute( 'aria-expanded', !expanded );
+			if ( false === expanded ) {
+				new Popper( this.btn, this.menu, {
+					placement: this.config.placement,
+					preventOverflow:
+						( true === this.config.preventOverflow ) ?
+							{
+								enabled: true,
+								boundariesElement: this.config.boundariesElement
+							} :
+							{
+								enabled: false
+							}
+				} );
+			}
 		} else {
 			this.btn.setAttribute( 'aria-expanded', false );
 

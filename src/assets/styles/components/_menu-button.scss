@@ -1,16 +1,53 @@
 .menu-button {
-	// TODO
-}
-
-.menu-button button {
-	// TODO
+	position: relative;
 }
 
 .menu-button__menu {
+	&[x-placement^="bottom"] {
+		margin-top: rem(20);
+	}
+
+	&[x-placement^="top"] {
+		margin-bottom: rem(20);
+	}
+
+	&[x-placement^="left"] {
+		margin-right: rem(20);
+	}
+
+	&[x-placement^="right"] {
+		margin-left: rem(20);
+	}
+}
+
+.menu-button__menu__arrow {
+	display: block;
+	height: rem(20);
+	overflow: hidden;
+	position: absolute;
+	top: rem(-20);
+	width: rem(40);
+
+	&::after {
+		background: $white;
+		box-shadow: rem(2) rem(2) rem(6) rgba(0, 0, 0, 0.19);
+		content: "";
+		height: rem(20);
+		left: 50%;
+		position: absolute;
+		top: rem(20);
+		transform: translateX(-50%) translateY(-50%) rotate(45deg);
+		width: rem(20);
+	}
+}
+
+.menu-button__menu ul {
 	background: $white;
 	border-radius: rem(3);
 	box-shadow: 0 rem(3) rem(10) rgba(0, 0, 0, 0.19);
 	list-style: none;
+	margin-top: 0;
+	text-align: left;
 }
 
 .menu-button__menu li {
@@ -41,5 +78,5 @@
 }
 
 .menu-button [aria-expanded="true"] + .menu-button__menu {
-	// TODO
+	display: block;
 }
