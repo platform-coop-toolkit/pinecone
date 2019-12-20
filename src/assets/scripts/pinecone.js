@@ -59,11 +59,16 @@ if ( 0 < deselectButtons.length ) {
 	} );
 }
 
-const menuButtonContainers = document.querySelectorAll( '.menu-button' );
+const menuButtonContainers = document.querySelectorAll( 'main > .menu-button' );
 if ( 0 < menuButtonContainers.length ) {
 	Array.prototype.forEach.call( menuButtonContainers, container => {
 		new Pinecone.MenuButton( container );
 	} );
+}
+
+const sortMenuButtonContainer = document.querySelector( '.sort .menu-button' );
+if ( sortMenuButtonContainer ) {
+	new Pinecone.MenuButton( sortMenuButtonContainer, { placement: 'bottom' } );
 }
 
 /**

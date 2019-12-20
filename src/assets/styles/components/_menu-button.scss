@@ -3,6 +3,8 @@
 }
 
 .menu-button__menu {
+	z-index: 1;
+
 	&[x-placement^="bottom"] {
 		margin-top: rem(20);
 	}
@@ -64,12 +66,13 @@
 }
 
 .menu-button__menu a {
-	align-items: flex-start;
+	align-items: center;
 	color: $black;
 	display: flex;
 	flex-direction: row;
 	font-weight: $font-weight-normal;
 	justify-content: flex-start;
+	line-height: 1.5;
 	padding: rem(10) rem(14);
 	text-decoration: none;
 	width: 100%;
