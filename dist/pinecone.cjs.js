@@ -463,28 +463,66 @@ class MenuButton {
 	 */
 	constructor( btn, options ) {
 		this.btn = btn;
+		this.links = btn.parentNode.querySelectorAll( 'a' );
 		this.config = {
 			...{},
 			...options
 		};
 
 		this.handleClick = this.handleClick.bind( this );
+		this.handleKeyDown = this.handleKeyDown.bind( this );
+		this.handleBlur = this.handleBlur.bind( this );
 		this.addEventListeners();
 	}
 
 	/**
 	 * Handle click.
+	 *
+	 * @param {Event} event
 	 */
-	handleClick() {
-		const expanded = 'true' === this.btn.getAttribute( 'aria-expanded' ) || false;
-		this.btn.setAttribute( 'aria-expanded', !expanded );
+	handleClick( event ) {
+		if ( this.btn === event.target ) {
+			const expanded = 'true' === this.btn.getAttribute( 'aria-expanded' ) || false;
+			this.btn.setAttribute( 'aria-expanded', !expanded );
+		} else {
+			this.btn.setAttribute( 'aria-expanded', false );
+
+		}
+	}
+
+	/**
+	 * Handle blur.
+	 *
+	 * @param {Event} event
+	 */
+	handleBlur( event ) {
+		if ( event.target === this.links[this.links.length - 1] && event.relatedTarget && 'LI' !== event.relatedTarget.parentNode.nodeName ) {
+			this.btn.setAttribute( 'aria-expanded', false );
+		}
+	}
+
+	/**
+	 * Handle keydown.
+	 *
+	 * @param {Event} event
+	 */
+	handleKeyDown( event ) {
+		if ( 27 === event.keyCode ) {
+			const restoreFocus = document.activeElement.parentNode.parentNode.parentNode === this.btn.parentNode;
+			this.btn.setAttribute( 'aria-expanded', false );
+			if ( restoreFocus ) this.btn.focus();
+		}
 	}
 
 	/**
 	 * Add event listeners.
 	 */
 	addEventListeners() {
-		this.btn.addEventListener( 'click', this.handleClick, false );
+		document.addEventListener( 'click', this.handleClick, false );
+		document.addEventListener( 'keydown', this.handleKeyDown, false );
+		Array.prototype.forEach.call( this.links, link => {
+			link.addEventListener( 'blur', this.handleBlur, false );
+		} );
 	}
 }
 
