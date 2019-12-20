@@ -3140,7 +3140,7 @@ class MenuButton {
 	 */
 	handleKeyDown( event ) {
 		if ( 27 === event.keyCode ) {
-			const restoreFocus = document.activeElement.parentNode.parentNode.parentNode === this.btn.parentNode;
+			const restoreFocus = document.activeElement.closest( '.menu-button' ) === this.btn.parentNode;
 			this.btn.setAttribute( 'aria-expanded', false );
 			if ( restoreFocus ) this.btn.focus();
 		}

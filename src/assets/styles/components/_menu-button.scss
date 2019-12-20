@@ -64,16 +64,39 @@
 }
 
 .menu-button__menu a {
+	align-items: flex-start;
 	color: $black;
-	display: block;
+	display: flex;
+	flex-direction: row;
 	font-family: $font-family-serif;
 	font-weight: $font-weight-normal;
+	justify-content: flex-start;
 	padding: rem(10) rem(14);
 	text-decoration: none;
 	width: 100%;
 
 	&::after {
 		display: none;
+	}
+
+	&[aria-current]::after {
+		background-color: transparent;
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23203131" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
+		background-position: center;
+		background-repeat: no-repeat;
+		content: "";
+		display: inline-block;
+		height: 1em;
+		margin-left: rem(6);
+		width: 1em;
+
+		@supports (mask: url("../images/add.svg")) {
+			mask-image: none;
+		}
+	}
+
+	&[aria-current]:focus::after {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23fff" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	}
 }
 
