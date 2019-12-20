@@ -33,6 +33,9 @@ module.exports = {
 					svg: 'filter',
 				},
 				{
+					svg: 'sort',
+				},
+				{
 					svg: 'tag',
 				},
 				{

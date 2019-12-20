@@ -1,5 +1,5 @@
 {% if not standAlone %}<ul class="tag-buttons">{% endif %}
 	<li class="tag-button">
-		<button class="tag-button__button"><span class="screen-reader-text">Remove </span>{{ label }} {% render '@svg', {svg: 'close'}, true %}</button>
+		<button class="tag-button__button"><span class="screen-reader-text">Remove "</span>{{ label }}<span class="screen-reader-text">" from current filters</span>{% render '@svg', {svg: 'close'}, true %}</button>
 	</li>
 {% if not standAlone %}</ul>{% endif %}
