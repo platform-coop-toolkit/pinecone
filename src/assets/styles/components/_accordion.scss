@@ -106,7 +106,7 @@
 	}
 }
 
-.has-dark-mint-500-background-color {
+.accordion--inverse {
 	.accordion__heading {
 		color: $off-white;
 
@@ -119,6 +119,7 @@
 		background: $blue-200;
 		border-color: $blue-200;
 		color: $dark-mint-500;
+
 
 		&::before {
 			background: $blue-200;
@@ -137,6 +138,45 @@
 
 		&::before {
 			background: $blue-200;
+		}
+	}
+}
+
+.accordion--filter-list {
+	@include breakpoint-down(lg) {
+		.accordion__heading,
+		.accordion__control {
+			border-bottom: 0;
+			border-left: 0;
+			border-right: 0;
+			border-top: solid rem(1) $dark-mint-500;
+			color: $off-white;
+			height: rem(69);
+			margin-left: (-1 * $gutter);
+			margin-right: 0;
+			padding-left: $gutter;
+			padding-right: $gutter;
+			width: calc(100% + 2 * #{$gutter});
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.accordion__control[aria-expanded="true"] {
+			// background: $blue-200;
+			// border-color: $blue-200;
+			// color: $dark-mint-500;
+		}
+
+		.accordion__control:hover::before {
+			background-color: $blue-300;
+		}
+
+		.accordion__control:focus {
+			background: $blue-600;
+			box-shadow: none;
+			color: $off-white;
 		}
 	}
 }
@@ -169,7 +209,19 @@
 	width: calc(100% + #{rem(30)});
 }
 
-.has-dark-mint-500-background-color .accordion__control[aria-expanded="true"] + .accordion__content {
+.accordion--inverse .accordion__control[aria-expanded="true"] + .accordion__content {
 	background: $blue-200;
 	color: $dark-mint-500;
+}
+
+.accordion--filter-list .accordion__control[aria-expanded="true"] + .accordion__content {
+	@include breakpoint-down(lg) {
+		background: $blue-600;
+		color: $white;
+		margin-left: (-1 * $gutter);
+		margin-right: 0;
+		padding-left: $gutter;
+		padding-right: $gutter;
+		width: calc(100% + 2 * #{$gutter});
+	}
 }

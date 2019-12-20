@@ -18,6 +18,10 @@
 	width: 50%;
 }
 
+.accordion + .input-group {
+	margin-top: rem(24);
+}
+
 .filters {
 	display: none;
 
@@ -90,7 +94,8 @@
 	}
 
 	.filters--expanded {
-		background-color: $white;
+		background: $blue-500;
+		color: $white;
 		display: block;
 		height: 100%;
 		left: 0;
