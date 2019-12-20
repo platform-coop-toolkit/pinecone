@@ -50,25 +50,24 @@
 	text-align: left;
 }
 
-.menu-button__menu li {
+.menu-button li {
 	margin: 0;
 }
 
-.menu-button__menu li + li {
+.menu-button li + li {
 	border-top: solid rem(1) $grey-400;
 }
 
-.menu-button__menu li:focus-within + li,
-.menu-button__menu li + li:focus-within {
+.menu-button li:focus-within + li,
+.menu-button li + li:focus-within {
 	border-top-color: $blue-500;
 }
 
-.menu-button__menu a {
+.menu-button a {
 	align-items: flex-start;
 	color: $black;
 	display: flex;
 	flex-direction: row;
-	font-family: $font-family-serif;
 	font-weight: $font-weight-normal;
 	justify-content: flex-start;
 	padding: rem(10) rem(14);

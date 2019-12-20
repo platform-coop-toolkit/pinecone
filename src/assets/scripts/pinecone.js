@@ -59,10 +59,10 @@ if ( 0 < deselectButtons.length ) {
 	} );
 }
 
-const menuButtons = document.querySelectorAll( '.menu-button button' );
-if ( 0 < menuButtons.length ) {
-	Array.prototype.forEach.call( menuButtons, btn => {
-		new Pinecone.MenuButton( btn );
+const menuButtonContainers = document.querySelectorAll( '.menu-button' );
+if ( 0 < menuButtonContainers.length ) {
+	Array.prototype.forEach.call( menuButtonContainers, container => {
+		new Pinecone.MenuButton( container );
 	} );
 }
 
