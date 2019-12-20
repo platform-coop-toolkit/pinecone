@@ -5,7 +5,8 @@ const items = [];
 for ( let i = 0; i < linkCount; i++ ) {
 	items.push( {
 		label: faker.lorem.words( 3 ),
-		href: `/link-${1}`
+		href: `/link-${1}`,
+		current: ( 0 === i ) || false
 	} );
 }
 

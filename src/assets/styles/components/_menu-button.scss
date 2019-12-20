@@ -50,20 +50,20 @@
 	text-align: left;
 }
 
-.menu-button li {
+.menu-button__menu li {
 	margin: 0;
 }
 
-.menu-button li + li {
+.menu-button__menu li + li {
 	border-top: solid rem(1) $grey-400;
 }
 
-.menu-button li:focus-within + li,
-.menu-button li + li:focus-within {
+.menu-button__menu li:focus-within + li,
+.menu-button__menu li + li:focus-within {
 	border-top-color: $blue-500;
 }
 
-.menu-button a {
+.menu-button__menu a {
 	align-items: flex-start;
 	color: $black;
 	display: flex;
