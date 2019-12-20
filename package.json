@@ -12,6 +12,7 @@
     "lint:js": "eslint *.js src/assets/scripts",
     "lint:styles": "stylelint src/assets/styles",
     "lint": "npm-run-all lint:*",
+    "prepare": "npm run build",
     "test": "npm run lint",
     "start": "concurrently \"npm run watch:assets\" \"npm run watch:components\" \"npm run watch:modules\"",
     "watch:assets": "npm run assets:development -- --watch",
@@ -48,6 +49,9 @@
   "main": "dist/pinecone.cjs.js",
   "module": "dist/pinecone.esm.js",
   "browser": "public/scripts/pinecone.umd.js",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=10.16.3"
   },
@@ -85,5 +89,8 @@
     "stylelint-declaration-use-variable": "^1.7.2",
     "stylelint-order": "^3.1.1",
     "vue-template-compiler": "^2.6.11"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }

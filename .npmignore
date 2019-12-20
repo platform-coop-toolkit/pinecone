@@ -1,0 +1,16 @@
+.github
+src/assets/scripts
+src/docs
+src/components
+docs
+.babelrc
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+.npmignore
+.stylelintignore
+.stylelintrc
+fractal.js
+rollup.config.js
+webpack.mix.js
