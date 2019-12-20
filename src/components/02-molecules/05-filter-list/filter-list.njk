@@ -10,7 +10,7 @@
 		<div class="accordion__pane">
 			<p class="accordion__heading">{{ label }}</p>
 			<div class="accordion__content">
-				{% render '@button', {label: 'Deselect All', id: 'deselect-'+ label | slugify, icon: false, standAlone: true}, true %}
+				{% render '@button', {label: 'Deselect All<span class="screen-reader-text"> '+label+'</span>', id: 'deselect-'+ label | slugify, icon: false, standAlone: true}, true %}
 				<ul id="{{ label | slugify }}" class="input-group input-group__parent {{ label | slugify }}">
 					{% for term in terms %}
 					<li>
