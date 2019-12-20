@@ -13,6 +13,14 @@
 	@include grid-column-span(4, 4);
 }
 
+.archive .current-filters {
+	@include grid-column-span(4, 4);
+
+	@include breakpoint-down(md) {
+		@include full-width-background($white);
+	}
+}
+
 .archive main {
 	display: flex;
 	flex-direction: row;
@@ -28,7 +36,8 @@
 		}
 	}
 
-	.archive .page-header {
+	.archive .page-header,
+	.archive .current-filters {
 		@include grid-column-span(8, 8, 1);
 	}
 }
@@ -52,6 +61,10 @@
 
 		@include grid-column-span(12, 12, 1);
 	}
+
+	.archive .current-filters {
+		@include grid-column-span(8, 12, 5);
+	}
 }
 
 @include breakpoint-up(xl) {
@@ -63,5 +76,9 @@
 
 	.archive .page-header {
 		@include grid-column-span(16, 16, 1);
+	}
+
+	.archive .current-filters {
+		@include grid-column-span(12, 16, 5);
 	}
 }

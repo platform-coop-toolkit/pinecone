@@ -15,11 +15,19 @@
 		{% render '@submit', {standAlone: true, value: 'Apply filters', id: 'apply-filters'} %}
 	</form>
 </div>
-{# <div class="filter-summary"></div> #}
 <div class="sort-wrapper">
 	<div class="sort">
 		{% render '@menu-button', {standAlone: true}, true %}
 	</div>
+</div>
+<div class="current-filters">
+	<p class="h3">Showing 12 of 742 resources</p>
+	<ul class="tag-buttons">
+		{% for tag in currentTags %}
+			{% render '@tag-button', {standAlone: true, label: tag.label} %}
+		{% endfor %}
+	</ul>
+	<p><a href="?x">Clear all <span class="screen-reader-text">filters</span></a></p>
 </div>
 <div class="resource-list">
 <ul class="cards">

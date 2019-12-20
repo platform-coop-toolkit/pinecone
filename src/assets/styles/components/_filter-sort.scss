@@ -138,7 +138,7 @@
 			grid-row: 2 / 5;
 		}
 
-		padding-top: rem(30);
+		padding-top: rem(105);
 
 		&::before {
 			display: none;
@@ -152,7 +152,7 @@
 	}
 
 	.sort-wrapper {
-		padding: rem(30) 0 0;
+		padding: rem(30) 0;
 
 		@include grid-column-span(8, 12, 5);
 	}
