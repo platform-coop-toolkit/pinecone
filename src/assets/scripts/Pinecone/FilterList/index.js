@@ -44,10 +44,11 @@ class FilterList {
 			document.body.insertBefore( this.container, document.body.firstChild );
 			const heading = this.container.querySelector( 'h2' );
 			const accordion = this.container.querySelector( '.accordion' );
+			const firstBtn = accordion.querySelector( 'button' );
 			heading.classList.remove( 'screen-reader-text' );
 			accordion.style.display = 'block';
 			this.container.classList.add( 'filters--expanded' );
-			heading.focus();
+			firstBtn.focus();
 		} else {
 			Array.prototype.forEach.call( elems, elem => {
 				elem.removeAttribute( 'inert' );

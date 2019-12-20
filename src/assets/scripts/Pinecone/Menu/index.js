@@ -30,7 +30,7 @@ class Menu {
 
 		this.handleToggle = this.handleToggle.bind( this );
 		this.handleDropdown = this.handleDropdown.bind( this );
-		this.handleDropdownFocus = this.handleDropdownFocus.bind( this );
+		this.handleBlur = this.handleBlur.bind( this );
 		this.handleKeyDown = this.handleKeyDown.bind( this );
 		this.addEventListeners();
 	}
@@ -63,6 +63,11 @@ class Menu {
 		const btn = event.target.closest( this.config.menuToggleSelector );
 		const expanded = 'true' === btn.getAttribute( 'aria-expanded' ) || false;
 		btn.setAttribute( 'aria-expanded', !expanded );
+
+		if ( !expanded ) {
+			const firstItem = this.menu.querySelector( 'a, button' );
+			firstItem.focus();
+		}
 	}
 
 	/**
@@ -86,15 +91,18 @@ class Menu {
 	 *
 	 * @param {Event} event
 	 */
-	handleDropdownFocus( event ) {
-		const openDropDown = this.menu.querySelector( '[aria-expanded="true"]' );
-		if ( ! openDropDown ) return false;
+	handleBlur( event ) {
+		if ( ! event.relatedTarget ) return;
+		if ( 'true' === this.toggle.getAttribute( 'aria-expanded' ) && ! event.relatedTarget.closest( '.menu' ) && event.relatedTarget !== this.toggle ) {
+			this.toggle.setAttribute( 'aria-expanded', false );
+		} else {
+			const expanded = this.menu.querySelector( '[aria-expanded="true"]' );
+			if ( ! expanded ) return;
 
-		const openDropDownParent = openDropDown.closest( this.config.parentMenuSelector );
-
-		// Focus is not in the parent menu
-		if ( ! openDropDownParent.contains( event.target ) ) {
-			openDropDown.setAttribute( 'aria-expanded', false );
+			const parent = expanded.closest( this.config.parentMenuSelector );
+			if ( event.relatedTarget.parentNode.parentNode.parentNode !== parent && event.relatedTarget.parentNode !== parent ){
+				expanded.setAttribute( 'aria-expanded', false );
+			}
 		}
 	}
 
@@ -102,11 +110,16 @@ class Menu {
 	 * @param {Event} event
 	 */
 	handleKeyDown( event ) {
-		const openDropDown = this.menu.querySelector( '[aria-expanded="true"]' );
-		if ( ! openDropDown ) return false;
+		const expanded = this.menu.parentNode.querySelectorAll( '[aria-expanded="true"]' );
+		if ( ! expanded ) return false;
 
 		if ( 27 === event.keyCode ) {
-			openDropDown.setAttribute( 'aria-expanded', false );
+			Array.prototype.forEach.call( expanded, el => {
+				el.setAttribute( 'aria-expanded', false );
+				if ( el == this.toggle ) {
+					el.focus();
+				}
+			} );
 		}
 	}
 
@@ -116,7 +129,9 @@ class Menu {
 	addEventListeners() {
 		document.addEventListener( 'click', this.handleToggle, false );
 		document.addEventListener( 'click', this.handleDropdown, false );
-		document.addEventListener( 'focusin', this.handleDropdownFocus, false );
+		Array.prototype.forEach.call( this.menu.querySelectorAll( 'a, button' ), el => {
+			el.addEventListener( 'blur', this.handleBlur, false );
+		} );
 		document.addEventListener( 'keydown', this.handleKeyDown, false );
 	}
 }

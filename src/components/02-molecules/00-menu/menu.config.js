@@ -30,6 +30,20 @@ module.exports = {
 					}
 				}
 			},
+			'menu-item-5': {
+				label: 'Menu Item Five',
+				submenuItems: {
+					'submenu-item-1': {
+						label: 'Submenu Item One'
+					},
+					'submenu-item-2': {
+						label: 'Submenu Item Two'
+					},
+					'submenu-item-3': {
+						label: 'Submenu Item Three'
+					}
+				}
+			},
 		},
 	},
 	variants: [
