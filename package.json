@@ -12,6 +12,7 @@
     "lint:js": "eslint *.js src/assets/scripts",
     "lint:styles": "stylelint src/assets/styles",
     "lint": "npm-run-all lint:*",
+    "prepublish": "build",
     "test": "npm run lint",
     "start": "concurrently \"npm run watch:assets\" \"npm run watch:components\" \"npm run watch:modules\"",
     "watch:assets": "npm run assets:development -- --watch",
@@ -48,6 +49,9 @@
   "main": "dist/pinecone.cjs.js",
   "module": "dist/pinecone.esm.js",
   "browser": "public/scripts/pinecone.umd.js",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=10.16.3"
   },
