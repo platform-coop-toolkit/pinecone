@@ -185,7 +185,6 @@ input[type="checkbox"]:checked + label::before,
 	background-position: center;
 	background-repeat: no-repeat;
 	border-color: $blue-400;
-	box-shadow: none;
 }
 
 [role="checkbox"][aria-checked="mixed"]::before {
@@ -195,7 +194,6 @@ input[type="checkbox"]:checked + label::before,
 	background-repeat: no-repeat;
 	background-size: rem(10) rem(2.5);
 	border-color: $blue-400;
-	box-shadow: none;
 }
 
 .has-dark-mint-500-background-color .input-group--error label {
@@ -224,19 +222,13 @@ input[type="checkbox"]:disabled:hover + label::before {
 
 input[type="radio"]:checked:focus + label::before,
 input[type="checkbox"]:checked:focus + label::before
-[role="checkbox"][aria-checked="true"]:focus::before {
+[role="checkbox"][aria-checked="true"]:focus::before,
+[role="checkbox"][aria-checked="mixed"]:focus::before {
 	box-shadow:
 		0 0 0 rem(2) $white,
 		0 0 0 rem(4) $blue-400,
 		0 0 0 rem(1) $blue-400 inset,
 		0 0 0 rem(3) $white inset;
-}
-
-input[type="checkbox"]:checked:focus + label::before,
-[role="checkbox"][aria-checked="true"]:focus::before {
-	box-shadow:
-		0 0 0 rem(2) $white,
-		0 0 0 rem(4) $blue-400;
 }
 
 .has-dark-mint-500-background-color input[type="radio"]:hover + label::before,
@@ -268,15 +260,6 @@ input[type="checkbox"]:checked:focus + label::before,
 	background-repeat: no-repeat;
 	border-color: $off-white;
 	box-shadow: none;
-}
-
-.has-dark-mint-500-background-color input[type="checkbox"]:indeterminate + label::before {
-	background: $off-white;
-	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 2"><path fill="%23000000" d="M0,1A1,1,0,0,0,1,2H7A1,1,0,0,0,7,0H1A1,1,0,0,0,0,1Z"/></svg>');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: rem(10) rem(2.5);
-	border-color: $off-white;
 }
 
 .has-dark-mint-500-background-color input[type="radio"]:disabled label,
