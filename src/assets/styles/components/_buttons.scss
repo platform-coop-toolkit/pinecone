@@ -148,7 +148,7 @@
 	box-shadow: none;
 }
 
-button:not([class]) {
+.button {
 	background-color: transparent;
 	border: solid rem(3) transparent;
 	border-radius: rem(3);
@@ -180,8 +180,31 @@ button:not([class]) {
 	&:focus {
 		background-color: $grey-200;
 		border-color: $white;
-		box-shadow: 0 0 0 rem(3) $dark-mint-500;
+		box-shadow: 0 0 0 rem(2) $dark-mint-500;
 		color: $dark-mint-500;
+		outline: none;
+	}
+}
+
+.button--inverse {
+	color: $off-white;
+
+	&:hover {
+		background-color: $blue-500;
+		border-color: transparent;
+		color: $off-white;
+	}
+
+	&:active {
+		background-color: $blue-600;
+		color: $blue-200;
+	}
+
+	&:focus {
+		background-color: $blue-600;
+		border-color: $dark-mint-500;
+		box-shadow: 0 0 0 rem(2) $off-white;
+		color: $off-white;
 		outline: none;
 	}
 }
