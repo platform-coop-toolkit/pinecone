@@ -340,6 +340,10 @@ li + li {
 		margin-top: rem(44);
 	}
 
+	h1 + .subhead {
+		margin-top: rem(24);
+	}
+
 	h2 + *,
 	h2 + p,
 	h2 + ul,
@@ -363,6 +367,10 @@ li + li {
 	.h1 + ul,
 	.h1 + ol {
 		margin-top: rem(44);
+	}
+
+	.h1 + .subhead {
+		margin-top: rem(24);
 	}
 
 	.h2 + *,
