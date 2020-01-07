@@ -148,7 +148,7 @@
 	box-shadow: none;
 }
 
-.button {
+%button {
 	background-color: transparent;
 	border: solid rem(1) transparent;
 	border-radius: rem(3);
@@ -185,7 +185,13 @@
 	}
 }
 
+.button {
+	@extend %button;
+}
+
 .button--inverse {
+	@extend %button;
+
 	color: $off-white;
 
 	&:hover {
