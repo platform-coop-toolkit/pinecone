@@ -142,71 +142,6 @@
 	}
 }
 
-.accordion--filter-list {
-	@include breakpoint-down(lg) {
-		.accordion__heading,
-		.accordion__control {
-			border-bottom: 0;
-			border-left: 0;
-			border-right: 0;
-			border-top: solid rem(1) $dark-mint-500;
-			color: $off-white;
-			height: rem(69);
-			margin-left: (-1 * $gutter);
-			margin-right: 0;
-			padding-left: $gutter;
-			padding-right: $gutter;
-			width: calc(100% + 2 * #{$gutter});
-
-			&::before {
-				display: none;
-			}
-		}
-
-		.accordion__control[aria-expanded="true"] {
-			// background: $blue-200;
-			// border-color: $blue-200;
-			// color: $dark-mint-500;
-		}
-
-		.accordion__control:hover::before {
-			background-color: $blue-300;
-		}
-
-		.accordion__control:focus {
-			background: $blue-600;
-			box-shadow: none;
-			color: $off-white;
-		}
-
-		.button {
-			color: $off-white;
-
-			&:hover {
-				background-color: $blue-500;
-				color: $off-white;
-			}
-
-			&:active {
-				background-color: $blue-600;
-				color: $blue-200;
-			}
-
-			&:focus {
-				background-color: $blue-600;
-				border-color: $dark-mint-500;
-				box-shadow: 0 0 0 rem(2) $dark-mint-500, 0 0 0 rem(4) $off-white;
-				color: $off-white;
-				outline: none;
-			}
-
-			&:focus:active {
-				background-color: $blue-600;
-			}
-		}
-	}
-}
-
 .accordion__pane--expanded + .accordion__pane .accordion__control::before {
 	display: none;
 }
@@ -238,16 +173,4 @@
 .accordion--inverse .accordion__control[aria-expanded="true"] + .accordion__content {
 	background: $blue-200;
 	color: $dark-mint-500;
-}
-
-.accordion--filter-list .accordion__control[aria-expanded="true"] + .accordion__content {
-	@include breakpoint-down(lg) {
-		background: $blue-600;
-		color: $white;
-		margin-left: (-1 * $gutter);
-		margin-right: 0;
-		padding-left: $gutter;
-		padding-right: $gutter;
-		width: calc(100% + 2 * #{$gutter});
-	}
 }
