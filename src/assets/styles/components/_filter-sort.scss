@@ -94,6 +94,18 @@
 			padding-right: $gutter;
 			width: calc(100% + 2 * #{$gutter});
 		}
+
+		.accordion__content > .input-group li ul {
+			background-color: $black;
+			margin-bottom: rem(-15);
+			margin-left: ($gutter * -1);
+			margin-right: ($gutter * -1);
+			margin-top: rem(12);
+			padding-bottom: rem(6);
+			padding-left: rem(70);
+			padding-top: rem(6);
+			width: calc(100% + #{($gutter * 2)});
+		}
 	}
 
 	.accordion__control svg {
@@ -111,7 +123,7 @@
 	}
 
 	.accordion__content > .input-group > li + li {
-		border-top: rem(1) solid transparentize($grey-300, 0.3);
+		border-top: rem(1) solid $black;
 	}
 
 	.accordion__content > .input-group button {
@@ -123,7 +135,6 @@
 	.accordion__content > .input-group li ul {
 		margin-top: rem(12);
 		padding-left: rem(40);
-		width: 100%;
 	}
 
 	.accordion__content > .input-group li [aria-expanded="false"] + ul {
@@ -156,6 +167,7 @@
 
 #hide-filters {
 	float: right;
+	margin-right: rem(-21);
 }
 
 @include breakpoint-down(md) {
@@ -183,6 +195,20 @@
 
 		.accordions {
 			margin-top: rem(24);
+		}
+	}
+
+	.accordion--filter-list + .input-group {
+		background: $off-white;
+		bottom: 0;
+		left: 0;
+		padding: rem(12) rem(30);
+		position: fixed;
+		text-align: center;
+		width: 100vw;
+
+		[type="submit"] {
+			display: inline-block;
 		}
 	}
 }
