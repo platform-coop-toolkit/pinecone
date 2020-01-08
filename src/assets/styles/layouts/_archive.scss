@@ -7,8 +7,6 @@
 }
 
 .archive .page-header {
-	padding: rem(90) 0;
-
 	@include full-width-background($white);
 	@include grid-column-span(4, 4);
 }

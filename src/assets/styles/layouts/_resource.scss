@@ -1,0 +1,52 @@
+.resource__header {
+	padding-bottom: rem(48);
+}
+
+.resource__format::after {
+	background-color: $red-400;
+	content: "";
+	display: block;
+	height: rem(3);
+	margin-top: rem(14);
+	width: rem(45);
+}
+
+.resource__format svg {
+	color: $red-400;
+}
+
+.resource__format + h1 {
+	margin-top: rem(32);
+}
+
+h1 + .resource__meta {
+	margin-top: rem(24);
+}
+
+.resource__abstract h2 + * {
+	margin-top: rem(24);
+}
+
+@include breakpoint-up(sm) {
+	.single-lc_resource {
+		main {
+			@include grid-column-span(6, 8, 2);
+		}
+	}
+}
+
+@include breakpoint-up(lg) {
+	.single-lc_resource {
+		main {
+			@include grid-column-span(8, 12, 3);
+		}
+	}
+}
+
+@include breakpoint-up(xl) {
+	.single-lc_resource {
+		main {
+			@include grid-column-span(8, 16, 5);
+		}
+	}
+}
