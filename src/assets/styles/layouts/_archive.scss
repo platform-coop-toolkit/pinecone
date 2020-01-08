@@ -16,10 +16,6 @@
 .archive .current-filters {
 	@include grid-column-span(4, 4);
 
-	@include breakpoint-down(md) {
-		@include full-width-background($white);
-	}
-
 	* + .tag-buttons {
 		margin-top: rem(12);
 	}

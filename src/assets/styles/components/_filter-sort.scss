@@ -171,11 +171,6 @@
 }
 
 @include breakpoint-down(md) {
-	.filter-wrapper,
-	.sort-wrapper {
-		@include full-width-background($white);
-	}
-
 	.filters--expanded {
 		background: $blue-500;
 		color: $white;
