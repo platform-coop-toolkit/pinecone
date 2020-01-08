@@ -6,5 +6,6 @@ import Icon from './Icon/index.js';
 import Menu from './Menu/index.js';
 import MenuButton from './MenuButton/index.js';
 import NestedCheckbox from './NestedCheckbox/index.js';
+import Notification from './Notification/index.js';
 
-export default { Accordion, Card, DeselectAll, FilterList, Icon, Menu, MenuButton, NestedCheckbox };
+export default { Accordion, Card, DeselectAll, FilterList, Icon, Menu, MenuButton, NestedCheckbox, Notification };
