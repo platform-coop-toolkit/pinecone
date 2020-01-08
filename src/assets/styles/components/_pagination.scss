@@ -1,6 +1,6 @@
 .pagination {
-	margin-top: rem(60);
-	padding-bottom: rem(80);
+	height: auto;
+	margin-top: rem(64);
 	text-align: center;
 
 	@include grid-column-span(8, 8);
@@ -119,6 +119,8 @@
 	.pagination {
 		@include grid-margin-left(4, 12);
 		@include grid-column-span(8, 12, 5);
+
+		margin-top: rem(72);
 	}
 }
 
@@ -126,5 +128,7 @@
 	.pagination {
 		@include grid-margin-left(4, 16);
 		@include grid-column-span(12, 16, 5);
+
+		margin-top: rem(80);
 	}
 }
