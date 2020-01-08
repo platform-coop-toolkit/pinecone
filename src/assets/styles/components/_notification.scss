@@ -1,11 +1,11 @@
 .notification {
 	background-color: $white;
-	border-left: solid rem(3) $blue-400;
+	border-left: solid rem(4) $blue-400;
 	border-radius: rem(3);
 	box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.16);
 	font-family: $font-family-serif;
 	font-size: rem(16);
-	padding: rem(16) rem(28) rem(18);
+	padding: rem(28);
 	position: relative;
 	width: 100%;
 
