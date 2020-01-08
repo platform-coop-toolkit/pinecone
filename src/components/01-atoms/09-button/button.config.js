@@ -3,6 +3,7 @@ module.exports = {
 	status: 'wip',
 	context: {
 		label: 'Filter',
+		labelVisuallyHidden: false,
 		className: false,
 		icon: 'filter',
 		iconPosition: 'start',

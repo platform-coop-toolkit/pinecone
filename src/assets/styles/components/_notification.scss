@@ -1,0 +1,60 @@
+.notification {
+	background-color: $white;
+	border-left: solid rem(3) $blue-400;
+	border-radius: rem(3);
+	box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.16);
+	font-family: $font-family-serif;
+	font-size: rem(16);
+	padding: rem(16) rem(28) rem(18);
+	position: relative;
+
+	button {
+		padding: 0 rem(8);
+		position: absolute;
+		right: rem(12);
+		top: rem(12);
+	}
+
+	.notification__title {
+		color: $blue-400;
+		font-weight: $font-weight-semibold;
+		margin-top: 0;
+	}
+
+	.notification__content {
+		margin-top: rem(12);
+		padding-right: rem(32);
+	}
+
+	a {
+		display: inline;
+	}
+
+	a::after {
+		display: none;
+	}
+}
+
+.notification--success {
+	border-left-color: $green-300;
+
+	.notification__title {
+		color: $green-500;
+	}
+}
+
+.notification--warning {
+	border-left-color: $yellow-500;
+
+	.notification__title {
+		color: $black;
+	}
+}
+
+.notification--error {
+	border-left-color: $red-300;
+
+	.notification__title {
+		color: $red-500;
+	}
+}

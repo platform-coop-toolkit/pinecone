@@ -1,0 +1,11 @@
+{% if not standalone %}<div class="spacer"></div>{% endif %}
+<div class="notification{% if modifier %} notification--{{ modifier }}{% endif %}">
+	{% render '@button', {
+		label: 'Close',
+		labelVisuallyHidden: true,
+		icon: 'close',
+		standAlone: true
+	}, true %}
+	<p class="notification__title">{% if icon %}{% render '@svg', {svg: icon}, true %}{% endif %}{{ title }}</p>
+	<div class="notification__content">{{ content | safe }}</div>
+</div>
