@@ -63,7 +63,7 @@ p small {
 // Blockquotes
 blockquote {
 	margin-left: rem(48);
-	margin-right: rem(48);
+	margin-right: 0;
 }
 
 blockquote::before {
@@ -85,8 +85,9 @@ blockquote * {
 }
 
 blockquote cite {
+	font-family: $font-family-serif;
 	font-size: rem(16);
-	font-style: normal;
+	font-style: italic;
 	font-weight: $font-weight-normal;
 }
 
@@ -234,6 +235,11 @@ li + li {
 		line-height: (32 / 20);
 	}
 
+	// Blockquotes
+	blockquote {
+		margin-right: rem(48);
+	}
+
 	// Vertical Spacing
 	* + h1,
 	* + .h1 {
@@ -260,16 +266,6 @@ li + li {
 	}
 
 	h2 + h3 {
-		margin-top: rem(32);
-	}
-
-	blockquote + p,
-	blockquote + ul,
-	blockquote + ol {
-		margin-top: rem(32);
-	}
-
-	* + blockquote {
 		margin-top: rem(32);
 	}
 }
