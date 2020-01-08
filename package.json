@@ -51,7 +51,8 @@
   "browser": "public/scripts/pinecone.umd.js",
   "sass": "src/assets/styles/pinecone.scss",
   "files": [
-    "dist"
+    "dist",
+    "src/assets/styles"
   ],
   "engines": {
     "node": ">=10.16.3"
