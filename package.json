@@ -49,6 +49,7 @@
   "main": "dist/pinecone.cjs.js",
   "module": "dist/pinecone.esm.js",
   "browser": "public/scripts/pinecone.umd.js",
+  "sass": "src/assets/styles/pinecone.scss",
   "files": [
     "dist"
   ],
