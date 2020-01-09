@@ -16,6 +16,10 @@
 .sort-wrapper {
 	text-align: right;
 	width: 50%;
+
+	.menu-button .button {
+		margin-right: rem(-8);
+	}
 }
 
 .accordion + .input-group {
@@ -167,7 +171,7 @@
 
 #hide-filters {
 	float: right;
-	margin-right: rem(-21);
+	margin-right: rem(-8);
 }
 
 @include breakpoint-down(md) {
