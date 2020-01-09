@@ -71,6 +71,8 @@ if ( sortMenuButtonContainer ) {
 	new Pinecone.MenuButton( sortMenuButtonContainer, { placement: 'bottom' } );
 }
 
+new Pinecone.Notification();
+
 /**
  * Show results.
  */
