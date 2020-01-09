@@ -8,6 +8,8 @@
 }
 
 .page-header {
+	padding-bottom: rem(100);
+	padding-top: rem(100);
 	position: relative;
 
 	@include grid-column-span(4, 4);
@@ -16,6 +18,9 @@
 @include breakpoint-up(sm) {
 	.page-header {
 		@include grid-column-span(6, 8, 2);
+
+		padding-bottom: rem(130);
+		padding-top: rem(130);
 	}
 }
 

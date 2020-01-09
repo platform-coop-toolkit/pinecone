@@ -66,17 +66,14 @@ class MenuButton {
 
 	/**
 	 * Handle click.
-	 *
-	 * @param {Event} event
 	 */
-	handleClick( event ) {
-		if ( event.target.closest( '.menu-button button' ) ) {
-			const expanded = 'true' === this.btn.getAttribute( 'aria-expanded' ) || false;
-			this.btn.setAttribute( 'aria-expanded', !expanded );
-			if ( false === expanded ) {
-				new Popper( this.btn, this.menu, {
-					placement: this.config.placement,
-					preventOverflow:
+	handleClick() {
+		const expanded = 'true' === this.btn.getAttribute( 'aria-expanded' ) || false;
+		this.btn.setAttribute( 'aria-expanded', !expanded );
+		if ( false === expanded ) {
+			new Popper( this.btn, this.menu, {
+				placement: this.config.placement,
+				preventOverflow:
 						( true === this.config.preventOverflow ) ?
 							{
 								enabled: true,
@@ -85,11 +82,7 @@ class MenuButton {
 							{
 								enabled: false
 							}
-				} );
-			}
-		} else {
-			this.btn.setAttribute( 'aria-expanded', false );
-
+			} );
 		}
 	}
 
@@ -121,7 +114,7 @@ class MenuButton {
 	 * Add event listeners.
 	 */
 	addEventListeners() {
-		document.addEventListener( 'click', this.handleClick, false );
+		this.btn.onclick = this.handleClick;
 		document.addEventListener( 'keydown', this.handleKeyDown, false );
 		Array.prototype.forEach.call( this.links, link => {
 			link.addEventListener( 'blur', this.handleBlur, false );

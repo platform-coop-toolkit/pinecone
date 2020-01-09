@@ -1,5 +1,5 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
 <div class="menu-button">
-	<h2 class="h3 menu-button__label">{% render '@svg', {svg: 'sort'}, true %}{{ label }}</h2>
+	<h2 class="h3 menu-button__label">{% if icon %}{% render '@svg', {svg: icon}, true %}{% endif %}{{ label }}</h2>
 	{% render '@link-list', {items: items, standAlone: true}, true %}
 </div>

@@ -4,6 +4,7 @@ module.exports = {
 	context: {
 		standAlone: false,
 		label: 'Sort by',
+		icon: 'sort',
 		items: [
 			{
 				href: '/?date-added',
