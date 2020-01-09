@@ -4,12 +4,28 @@
 	[role="banner"] {
 		background: $white;
 	}
+
+	main {
+		padding-bottom: rem(100);
+	}
+
+	.page-header {
+		padding-bottom: rem(100);
+		padding-top: rem(100);
+	}
 }
 
 @include breakpoint-up(sm) {
 	.page {
 		main {
+			padding-bottom: rem(130);
+
 			@include grid-column-span(6, 8, 2);
+		}
+
+		.page-header {
+			padding-bottom: rem(130);
+			padding-top: rem(130);
 		}
 	}
 }
@@ -25,6 +41,8 @@
 @include breakpoint-up(xl) {
 	.page {
 		main {
+			padding-bottom: rem(130);
+
 			@include grid-column-span(6, 16, 6);
 		}
 	}

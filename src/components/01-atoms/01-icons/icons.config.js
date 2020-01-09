@@ -15,6 +15,9 @@ module.exports = {
 					svg: 'edit',
 				},
 				{
+					svg: 'success',
+				},
+				{
 					svg: 'warning',
 				},
 				{

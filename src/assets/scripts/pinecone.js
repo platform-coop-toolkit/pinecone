@@ -77,6 +77,8 @@ if ( 0 < resourceActions.length ) {
 	new Pinecone.MenuButton( resourceActions[1] );
 }
 
+new Pinecone.Notification();
+
 /**
  * Show results.
  */
