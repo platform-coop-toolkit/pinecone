@@ -156,8 +156,11 @@
 	font-family: $font-family-sans;
 	font-size: rem(16);
 	font-weight: $font-weight-semibold;
-	height: rem(40);
-	padding: 0 rem(12);
+	height: rem(28);
+	margin-bottom: rem(6);
+	margin-left: rem(-8);
+	margin-top: rem(6);
+	padding: 0 rem(8);
 
 	svg + * {
 		margin-right: 0.25em;
