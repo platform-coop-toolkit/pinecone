@@ -27,6 +27,12 @@ h1 + .resource__meta {
 	margin-top: rem(24);
 }
 
+.resource__tags {
+	.tags {
+		margin-top: rem(9);
+	}
+}
+
 .resource__cta {
 	a {
 		max-width: 100%;
@@ -81,7 +87,7 @@ h1 + .resource__meta {
 	}
 
 	.resource__actions {
-		margin-top: rem(24);
+		margin-top: rem(14);
 
 		button,
 		.menu-button {
