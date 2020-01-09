@@ -11,5 +11,56 @@
 		<h2>Summary</h2>
 		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 	</div>
-	<div class="resource__actions"></div>
+	<div class="resource__tags">
+		<ul class="tags">
+			{% render '@tag', {label: 'Growing a co-op', standAlone: true}, true %}
+			{% render '@tag', {label: 'Starting a co-op', standAlone: true}, true %}
+			{% render '@tag', {label: 'Governance', standAlone: true}, true %}
+		</ul>
+		{% render '@button', {icon: 'edit', label: 'Suggest edits'}, true %}
+	</div>
+	<div class="resource__cta">
+		{% render '@call-to-action', {label: 'View full resource', hasIcon: true, standAlone: true}, true %}
+	</div>
+	<div class="resource__actions">
+		{% render '@button', {standAlone: true, icon: 'favourite', label: 'Favourite'}, true %}
+		{% render '@menu-button', {standAlone: true, icon: 'share', label: 'Share', items: [{label: 'Twitter'}, {label: 'Facebook'}, {label: 'LinkedIn'}, {label: 'Email'}]}, true %}
+		{% render '@button', {standAlone: true, icon: false, label: 'Report broken link'}, true %}
+		{% render '@menu-button', {standAlone: true, icon: false, label: 'View alternate links', items: [{label: 'View on Perma.cc'}, {label: 'View on the Wayback Machine'}]}, true %}
+	</div>
+	<div class="resource__related">
+		<h2>Related resources</h2>
+		<ul class="cards">
+			{% render '@card', {
+			modifier: 'resource',
+			id: 1,
+			format: 'Article',
+			formatIcon: 'article',
+			name: 'Resource',
+			title: 'Data as a common in the sharing economy',
+			byline: 'Centre d&rsquo;économie Paris Nord',
+			locality: 'France',
+			topics: ['Commons', 'Policy'],
+			topicCount: 4,
+			href: 'resource',
+			language: 'English',
+			standAlone: true
+			} %}
+			{% render '@card', {
+			modifier: 'resource',
+			id: 2,
+			format: 'Article',
+			formatIcon: 'article',
+			name: 'Resource',
+			title: 'Data as a common in the sharing economy',
+			byline: 'Centre d&rsquo;économie Paris Nord',
+			locality: 'France',
+			topics: ['Commons', 'Policy'],
+			topicCount: 4,
+			href: 'resource',
+			language: 'English',
+			standAlone: true
+			} %}
+		</ul>
+	</div>
 </article>

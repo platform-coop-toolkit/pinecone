@@ -13,7 +13,7 @@
 
 @mixin full-width-background($color: $white) {
 	&::before {
-		background: $white;
+		background: $color;
 		content: "";
 		display: block;
 		height: 100%;

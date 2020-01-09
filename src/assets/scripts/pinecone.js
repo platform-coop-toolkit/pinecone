@@ -71,6 +71,12 @@ if ( sortMenuButtonContainer ) {
 	new Pinecone.MenuButton( sortMenuButtonContainer, { placement: 'bottom' } );
 }
 
+const resourceActions = document.querySelectorAll( '.resource__actions .menu-button' );
+if ( 0 < resourceActions.length ) {
+	new Pinecone.MenuButton( resourceActions[0] );
+	new Pinecone.MenuButton( resourceActions[1] );
+}
+
 /**
  * Show results.
  */
