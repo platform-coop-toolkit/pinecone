@@ -58,7 +58,7 @@
 	color: $white;
 
 	svg {
-		transform: rotate(-180deg); // TODO: Decide on rotation
+		transform: rotate(-180deg);
 	}
 }
 
@@ -106,7 +106,7 @@
 	}
 }
 
-.has-dark-mint-500-background-color {
+.accordion--inverse {
 	.accordion__heading {
 		color: $off-white;
 
@@ -119,6 +119,7 @@
 		background: $blue-200;
 		border-color: $blue-200;
 		color: $dark-mint-500;
+
 
 		&::before {
 			background: $blue-200;
@@ -169,7 +170,7 @@
 	width: calc(100% + #{rem(30)});
 }
 
-.has-dark-mint-500-background-color .accordion__control[aria-expanded="true"] + .accordion__content {
+.accordion--inverse .accordion__control[aria-expanded="true"] + .accordion__content {
 	background: $blue-200;
 	color: $dark-mint-500;
 }

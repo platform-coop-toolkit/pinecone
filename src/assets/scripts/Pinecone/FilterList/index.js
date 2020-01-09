@@ -1,5 +1,3 @@
-import 'wicg-inert';
-
 /**
  * Filter List Handler.
  */
@@ -38,19 +36,20 @@ class FilterList {
 		if ( event.target.closest( this.config.showCtrlSelector ) ) {
 			document.body.classList.add( 'has-modal' );
 			Array.prototype.forEach.call( elems, elem => {
-				elem.setAttribute( 'inert', 'inert' );
+				elem.inert = true;
 			} );
 			this.container.parentNode.removeChild( this.container );
 			document.body.insertBefore( this.container, document.body.firstChild );
 			const heading = this.container.querySelector( 'h2' );
 			const accordion = this.container.querySelector( '.accordion' );
+			const firstBtn = accordion.querySelector( 'button' );
 			heading.classList.remove( 'screen-reader-text' );
 			accordion.style.display = 'block';
 			this.container.classList.add( 'filters--expanded' );
-			heading.focus();
+			firstBtn.focus();
 		} else {
 			Array.prototype.forEach.call( elems, elem => {
-				elem.removeAttribute( 'inert' );
+				elem.inert = false;
 			} );
 			this.container.classList.remove( 'filters--expanded' );
 			this.container.parentNode.removeChild( this.container );

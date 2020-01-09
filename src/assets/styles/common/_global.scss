@@ -36,6 +36,7 @@ body {
 
 main {
 	margin: 0 auto;
+	padding-bottom: rem(100);
 
 	@include grid-column-span(4, 4, 1);
 }
@@ -53,6 +54,7 @@ main {
 
 	main {
 		@include grid-column-span(8, 8, 1);
+		padding-bottom: rem(130);
 	}
 }
 

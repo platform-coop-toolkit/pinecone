@@ -48,7 +48,8 @@
 	}
 }
 
-.has-dark-mint-500-background-color .disclosure-button {
+.has-dark-mint-500-background-color .disclosure-button,
+.accordion--filter-list .disclosure-button {
 	background: $blue-700;
 	color: $off-white;
 

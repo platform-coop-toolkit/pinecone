@@ -1,6 +1,6 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
 <ul class="link-list">
 	{% for item in items %}
-	<li class="link-list__item"><a href="{{ item.href }}"{{ 'aria-current=true' if item.current }}>{{ item.label | capitalize }}</a></li>
+	<li class="link-list__item"><a href="{{ item.href }}"{{ 'aria-current=true' if item.current }}>{{ item.label }}</a></li>
 	{% endfor %}
 </ul>

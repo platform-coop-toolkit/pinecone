@@ -7,7 +7,7 @@
 	<form class="filters" action="/">
 		{% render '@button', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
 		<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
-		<div class="accordion">
+		<div class="accordion accordion--filter-list">
 		{% for filterList in filterLists %}
 			{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
 		{% endfor %}
