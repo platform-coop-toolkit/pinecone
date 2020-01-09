@@ -18,8 +18,95 @@
 	width: 50%;
 }
 
+.accordion + .input-group {
+	margin-top: rem(24);
+}
+
 .filters {
 	display: none;
+
+	@include breakpoint-down(md) {
+		.button {
+			color: $off-white;
+
+			&:hover {
+				background-color: $blue-500;
+				color: $off-white;
+			}
+
+			&:active {
+				background-color: $blue-600;
+				color: $blue-200;
+			}
+
+			&:focus {
+				background-color: $blue-600;
+				border-color: $dark-mint-500;
+				box-shadow: 0 0 0 rem(2) $dark-mint-500, 0 0 0 rem(4) $off-white;
+				color: $off-white;
+				outline: none;
+			}
+
+			&:focus:active {
+				background-color: $blue-600;
+			}
+		}
+	}
+}
+
+.accordion--filter-list {
+	@include breakpoint-down(md) {
+		.accordion__heading,
+		.accordion__control {
+			border-bottom: 0;
+			border-left: 0;
+			border-right: 0;
+			border-top: solid rem(1) $dark-mint-500;
+			color: $off-white;
+			height: rem(69);
+			margin-left: (-1 * $gutter);
+			margin-right: 0;
+			padding-left: $gutter;
+			padding-right: $gutter;
+			width: calc(100% + 2 * #{$gutter});
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.accordion__control:hover::before {
+			background-color: $blue-300;
+		}
+
+		.accordion__control:focus {
+			background: $blue-600;
+			box-shadow: none;
+			color: $off-white;
+		}
+
+		.accordion__control[aria-expanded="true"] + .accordion__content {
+			background: $blue-600;
+			color: $white;
+			margin-left: (-1 * $gutter);
+			margin-right: 0;
+			padding-left: $gutter;
+			padding-right: $gutter;
+			width: calc(100% + 2 * #{$gutter});
+		}
+
+		.accordion__content > .input-group li ul {
+			background-color: $black;
+			margin-bottom: rem(-15);
+			margin-left: ($gutter * -1);
+			margin-right: ($gutter * -1);
+			margin-top: rem(12);
+			padding-bottom: rem(6);
+			padding-left: rem(70);
+			padding-top: rem(6);
+			width: calc(100% + #{($gutter * 2)});
+		}
+	}
 
 	.accordion__control svg {
 		margin-right: rem(7);
@@ -36,7 +123,7 @@
 	}
 
 	.accordion__content > .input-group > li + li {
-		border-top: rem(1) solid transparentize($grey-300, 0.3);
+		border-top: rem(1) solid $black;
 	}
 
 	.accordion__content > .input-group button {
@@ -48,7 +135,6 @@
 	.accordion__content > .input-group li ul {
 		margin-top: rem(12);
 		padding-left: rem(40);
-		width: 100%;
 	}
 
 	.accordion__content > .input-group li [aria-expanded="false"] + ul {
@@ -81,16 +167,13 @@
 
 #hide-filters {
 	float: right;
+	margin-right: rem(-21);
 }
 
 @include breakpoint-down(md) {
-	.filter-wrapper,
-	.sort-wrapper {
-		@include full-width-background($white);
-	}
-
 	.filters--expanded {
-		background-color: $white;
+		background: $blue-500;
+		color: $white;
 		display: block;
 		height: 100%;
 		left: 0;
@@ -107,6 +190,20 @@
 
 		.accordions {
 			margin-top: rem(24);
+		}
+	}
+
+	.accordion--filter-list + .input-group {
+		background: $off-white;
+		bottom: 0;
+		left: 0;
+		padding: rem(12) rem(30);
+		position: fixed;
+		text-align: center;
+		width: 100vw;
+
+		[type="submit"] {
+			display: inline-block;
 		}
 	}
 }
@@ -130,6 +227,60 @@
 	}
 }
 
+@include breakpoint-down(md) {
+	.filters {
+		input[type="checkbox"] + label::before,
+		[role="checkbox"]::before {
+			border-color: $off-white;
+		}
+
+		input[type="checkbox"]:hover + label::before,
+		[role="checkbox"]:hover::before {
+			border-color: $blue-300;
+			box-shadow: 0 0 0 rem(1) $blue-300 inset;
+		}
+
+		input[type="checkbox"]:focus + label::before,
+		[role="checkbox"]:focus::before {
+			border-color: $blue-300;
+			box-shadow:
+				0 0 0 rem(2) $black,
+				0 0 0 rem(4) $blue-300,
+				0 0 0 rem(1) $blue-300 inset;
+		}
+
+		input[type="checkbox"]:checked + label::before,
+		[role="checkbox"][aria-checked="true"]::before,
+		[role="checkbox"][aria-checked="mixed"]::before {
+			background: $off-white;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-color: $off-white;
+			box-shadow: none;
+		}
+
+		input[type="checkbox"]:checked + label::before,
+		[role="checkbox"][aria-checked="true"]::before {
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23000000" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
+		}
+
+		[role="checkbox"][aria-checked="mixed"]::before {
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 2"><path fill="%23000000" d="M0,1A1,1,0,0,0,1,2H7A1,1,0,0,0,7,0H1A1,1,0,0,0,0,1Z"/></svg>');
+			background-size: rem(10) rem(2.5);
+		}
+
+		input[type="checkbox"]:checked:focus + label::before,
+		[role="checkbox"][aria-checked="true"]:focus::before {
+			border-color: $off-white;
+			box-shadow:
+				0 0 0 rem(2) $black,
+				0 0 0 rem(4) $blue-300;
+		}
+
+
+	}
+}
+
 @include breakpoint-up(lg) {
 	.filter-wrapper {
 		@include grid-margin-right(1, 12);
@@ -138,7 +289,7 @@
 			grid-row: 2 / 5;
 		}
 
-		padding-top: rem(105);
+		padding-top: rem(75);
 
 		&::before {
 			display: none;
@@ -152,7 +303,7 @@
 	}
 
 	.sort-wrapper {
-		padding: rem(30) 0;
+		padding: rem(30) 0 0;
 
 		@include grid-column-span(8, 12, 5);
 	}
@@ -173,14 +324,14 @@
 			margin-top: 0;
 		}
 
-		.accordions {
-			display: block;
-			margin-top: 0;
-		}
-
 		#apply-filters {
 			display: block;
 		}
+	}
+
+	.accordion--filter-list {
+		display: block;
+		margin-top: 0;
 	}
 
 	.filter,

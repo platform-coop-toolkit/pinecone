@@ -1,4 +1,6 @@
 .breadcrumb {
+	margin-top: 0;
+
 	a {
 		font-size: rem(14);
 		margin-left: rem(-8);
@@ -11,5 +13,11 @@
 }
 
 .breadcrumb + h1 {
-	margin-top: rem(20);
+	margin-top: rem(32);
+}
+
+@include breakpoint-up(lg) {
+	.breadcrumb + h1 {
+		margin-top: rem(40);
+	}
 }

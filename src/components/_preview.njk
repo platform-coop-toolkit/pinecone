@@ -10,6 +10,7 @@
 		<link rel="icon" type="image/ico" href="{{ '/themes/mandelbrot/favicon.ico' | path }}" >
 		<title>{{ _target.title }} | Pinecone</title>
 	</head>
+
 	<body{% if _target.context.bodyClass %} class="{{ _target.context.bodyClass }}"{% endif %}>
 		<header role="banner">
 			<div class="container">
@@ -47,6 +48,7 @@
 		<footer class="content-info">
   			<div class="container"></div>
   		</footer>
+		<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.inert"></script>
 		<script src="{{ '/scripts/pinecone.umd.js' | path }}"></script>
 		<script src="{{ '/scripts/pinecone.js' | path }}"></script>
 	</body>

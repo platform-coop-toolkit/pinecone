@@ -211,7 +211,8 @@ input[type="checkbox"]:disabled + label::before {
 }
 
 .has-dark-mint-500-background-color input[type="radio"] + label::before,
-.has-dark-mint-500-background-color input[type="checkbox"] + label::before {
+.has-dark-mint-500-background-color input[type="checkbox"] + label::before,
+.has-dark-mint-500-background-color [role="checkbox"]::before {
 	border-color: $off-white;
 }
 
@@ -221,18 +222,17 @@ input[type="checkbox"]:disabled:hover + label::before {
 }
 
 input[type="radio"]:checked:focus + label::before,
-input[type="checkbox"]:checked:focus + label::before
+input[type="checkbox"]:checked:focus + label::before,
 [role="checkbox"][aria-checked="true"]:focus::before,
 [role="checkbox"][aria-checked="mixed"]:focus::before {
 	box-shadow:
 		0 0 0 rem(2) $white,
-		0 0 0 rem(4) $blue-400,
-		0 0 0 rem(1) $blue-400 inset,
-		0 0 0 rem(3) $white inset;
+		0 0 0 rem(4) $blue-400;
 }
 
 .has-dark-mint-500-background-color input[type="radio"]:hover + label::before,
-.has-dark-mint-500-background-color input[type="checkbox"]:hover + label::before {
+.has-dark-mint-500-background-color input[type="checkbox"]:hover + label::before,
+.has-dark-mint-500-background-color [role="checkbox"]:hover::before {
 	border-color: $blue-300;
 	box-shadow: 0 0 0 rem(1) $blue-300 inset;
 }
@@ -253,11 +253,22 @@ input[type="checkbox"]:checked:focus + label::before
 		0 0 0 rem(3) $black inset;
 }
 
-.has-dark-mint-500-background-color input[type="checkbox"]:checked + label::before {
+.has-dark-mint-500-background-color input[type="checkbox"]:checked + label::before,
+.has-dark-mint-500-background-color [role="checkbox"][aria-checked="true"]::before {
 	background: $off-white;
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23000000" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	background-position: center;
 	background-repeat: no-repeat;
+	border-color: $off-white;
+	box-shadow: none;
+}
+
+.has-dark-mint-500-background-color [role="checkbox"][aria-checked="mixed"]::before {
+	background: $off-white;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 2"><path fill="%23000000" d="M0,1A1,1,0,0,0,1,2H7A1,1,0,0,0,7,0H1A1,1,0,0,0,0,1Z"/></svg>');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: rem(10) rem(2.5);
 	border-color: $off-white;
 	box-shadow: none;
 }
@@ -277,7 +288,8 @@ input[type="checkbox"]:checked:focus + label::before
 }
 
 .has-dark-mint-500-background-color input[type="radio"]:checked:focus + label::before,
-.has-dark-mint-500-background-color input[type="checkbox"]:checked:focus + label::before {
+.has-dark-mint-500-background-color input[type="checkbox"]:checked:focus + label::before,
+.has-dark-mint-500-background-color [role="checkbox"][aria-checked="true"]:focus::before {
 	border-color: $off-white;
 	box-shadow:
 		0 0 0 rem(2) $black,
@@ -286,7 +298,8 @@ input[type="checkbox"]:checked:focus + label::before
 		0 0 0 rem(3) $black inset;
 }
 
-.has-dark-mint-500-background-color input[type="checkbox"]:checked:focus + label::before {
+.has-dark-mint-500-background-color input[type="checkbox"]:checked:focus + label::before,
+.has-dark-mint-500-background-color [role="checkbox"][aria-checked="true"]:focus::before {
 	box-shadow:
 		0 0 0 rem(2) $black,
 		0 0 0 rem(4) $blue-300;

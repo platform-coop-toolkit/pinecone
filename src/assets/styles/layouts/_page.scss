@@ -6,35 +6,26 @@
 	}
 
 	main {
-		padding-bottom: rem(64);
+		padding-bottom: rem(100);
 	}
 
 	.page-header {
-		padding-bottom: rem(88);
-		padding-top: rem(108);
+		padding-bottom: rem(100);
+		padding-top: rem(100);
 	}
 }
 
 @include breakpoint-up(sm) {
 	.page {
 		main {
-			padding-bottom: rem(118);
+			padding-bottom: rem(130);
 
 			@include grid-column-span(6, 8, 2);
 		}
 
 		.page-header {
-			padding-bottom: rem(154);
-			padding-top: rem(154);
-		}
-	}
-}
-
-@include breakpoint-up(md) {
-	.page {
-		.page-header {
-			padding-bottom: rem(96);
-			padding-top: rem(140);
+			padding-bottom: rem(130);
+			padding-top: rem(130);
 		}
 	}
 }
@@ -50,7 +41,7 @@
 @include breakpoint-up(xl) {
 	.page {
 		main {
-			padding-bottom: rem(144);
+			padding-bottom: rem(130);
 
 			@include grid-column-span(6, 16, 6);
 		}
