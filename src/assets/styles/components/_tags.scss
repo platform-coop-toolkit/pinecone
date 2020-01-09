@@ -14,10 +14,10 @@
 }
 
 .tag__link {
-	background: $white;
-	border: solid rem(1) $blue-500;
+	background: $blue-50;
+	border: solid rem(1) transparent;
 	border-radius: rem(15);
-	color: $blue-500;
+	color: $blue-600;
 	display: inline-block;
 	font-family: $font-family-sans;
 	font-size: rem(14);
@@ -29,28 +29,33 @@
 	width: auto;
 
 	&:visited {
-		border-color: $green-400;
+		color: $green-500;
 	}
 
 	&:hover {
 		background: $grey-200;
+		color: $blue-500;
 	}
 
 	&:active {
-		background: $white;
+		background: $blue-50;
+		border-color: $blue-400;
+		color: $blue-500;
 	}
 
 	&:focus {
 		background: $grey-200;
+		border-color: $blue-500;
 		box-shadow:
 			0 0 0 rem(1) $blue-500 inset,
 			0 0 0 rem(2) $white,
 			0 0 0 rem(4) $blue-500;
+		color: $blue-500;
 		outline: none;
 	}
 
 	&:active:focus {
-		background: $white;
+		background: $blue-50;
 		box-shadow: none;
 	}
 }

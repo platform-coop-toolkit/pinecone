@@ -20,10 +20,19 @@ module.exports = {
 	},
 	variants: [
 		{
-			name: 'Default (Light on Dark)',
-			label: 'Default (Light on Dark)',
+			name: 'Inverse',
+			label: 'Inverse',
 			context: {
-				bodyClass: 'has-dark-mint-500-background-color'
+				modifier: 'inverse',
+				bodyClass: 'has-dark-mint-500-background-color',
+			}
+		},
+		{
+			name: 'Filter List',
+			label: 'Filter List',
+			context: {
+				modifier: 'filter-list',
+				bodyClass: 'has-blue-500-background-color',
 			}
 		}
 	]

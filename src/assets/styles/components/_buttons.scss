@@ -148,9 +148,9 @@
 	box-shadow: none;
 }
 
-button:not([class]) {
+%button {
 	background-color: transparent;
-	border: solid rem(3) transparent;
+	border: solid rem(1) transparent;
 	border-radius: rem(3);
 	color: $blue-500;
 	font-family: $font-family-sans;
@@ -169,7 +169,6 @@ button:not([class]) {
 
 	&:hover {
 		background-color: $off-white;
-		border-color: $blue-50;
 		color: $blue-600;
 	}
 
@@ -180,8 +179,36 @@ button:not([class]) {
 	&:focus {
 		background-color: $grey-200;
 		border-color: $white;
-		box-shadow: 0 0 0 rem(3) $dark-mint-500;
+		box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $dark-mint-500;
 		color: $dark-mint-500;
+		outline: none;
+	}
+}
+
+.button {
+	@extend %button;
+}
+
+.button--inverse {
+	@extend %button;
+
+	color: $off-white;
+
+	&:hover {
+		background-color: $blue-500;
+		color: $off-white;
+	}
+
+	&:active {
+		background-color: $blue-600;
+		color: $blue-200;
+	}
+
+	&:focus {
+		background-color: $blue-600;
+		border-color: $dark-mint-500;
+		box-shadow: 0 0 0 rem(2) $dark-mint-500, 0 0 0 rem(4) $off-white;
+		color: $off-white;
 		outline: none;
 	}
 }

@@ -39,6 +39,7 @@ class MenuButton {
 		// Create button
 		const btn = document.createElement( 'button' );
 		btn.setAttribute( 'aria-expanded', 'false' );
+		btn.classList.add( 'button' );
 		btn.innerHTML = this.label.innerHTML;
 		this.container.insertBefore( btn, this.label );
 		this.container.removeChild( this.label );
