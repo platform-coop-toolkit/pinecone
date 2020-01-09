@@ -52,7 +52,8 @@
   "sass": "src/assets/styles/pinecone.scss",
   "files": [
     "dist",
-    "src/assets/styles"
+    "src/assets/styles",
+    "src/assets/images"
   ],
   "engines": {
     "node": ">=10.16.3"
