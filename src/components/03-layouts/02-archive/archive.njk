@@ -20,8 +20,9 @@
 		{% render '@menu-button', {standAlone: true}, true %}
 	</div>
 </div>
+{% if currentTags and foundPosts %}
 <div class="current-filters">
-	<p class="h3">Showing 12 of 742 resources</p>
+	<p class="h3">Showing {{ foundPosts }} of 742 resources</p>
 	<ul class="tag-buttons">
 		{% for tag in currentTags %}
 			{% render '@tag-button', {standAlone: true, label: tag.label} %}
@@ -29,6 +30,7 @@
 	</ul>
 	<p><a href="?x">Clear all <span class="screen-reader-text">filters</span></a></p>
 </div>
+{% endif %}
 <div class="resource-list">
 <ul class="cards">
 {% for card in cards %}

@@ -334,6 +334,16 @@ module.exports = {
 				]
 			},
 		],
-		cards: resourceData
-	}
+		cards: resourceData,
+		foundPosts: 12
+	},
+	variants: [
+		{
+			name: 'Unfiltered',
+			label: 'Unfiltered',
+		context:
+		{		foundPosts: false,
+			currentTags: false
+		}}
+	]
 };
