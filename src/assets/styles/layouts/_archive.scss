@@ -67,6 +67,10 @@
 	.archive .current-filters {
 		@include grid-column-span(8, 12, 5);
 	}
+
+	.archive .sort-wrapper + .resource-list {
+		margin-top: rem(-24);
+	}
 }
 
 @include breakpoint-up(xl) {

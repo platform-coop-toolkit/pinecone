@@ -341,9 +341,11 @@ module.exports = {
 		{
 			name: 'Unfiltered',
 			label: 'Unfiltered',
-		context:
-		{		foundPosts: false,
-			currentTags: false
-		}}
+			context:
+			{
+				foundPosts: false,
+				currentTags: false
+			}
+		}
 	]
 };
