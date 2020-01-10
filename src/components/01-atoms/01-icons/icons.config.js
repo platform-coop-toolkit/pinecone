@@ -6,7 +6,7 @@ module.exports = {
 		icons: [
 			[
 				{
-					svg: 'favourite',
+					svg: 'favorite',
 				},
 				{
 					svg: 'share',
