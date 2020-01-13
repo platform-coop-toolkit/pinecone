@@ -35,7 +35,8 @@
   "homepage": "https://github.com/platform-coop-toolkit/styleguide#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -68,6 +69,8 @@
   "devDependencies": {
     "@10up/eslint-config": "^1.0.9",
     "@babel/preset-env": "^7.7.7",
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
     "@frctl/fractal": "^1.2.1",
     "@frctl/nunjucks": "^2.0.1",
     "babel-eslint": "^10.0.3",
