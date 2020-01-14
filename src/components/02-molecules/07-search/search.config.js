@@ -1,17 +1,11 @@
 module.exports = {
-	title: 'Search Input',
+	title: 'Search',
 	status: 'wip',
 	context: {
 		standAlone: false,
-		searchInputs: [
-			{
-				name: 's',
-			},
-			{
-				name: 'disabled',
-				disabled: true
-			}
-		]
+		name: 's',
+		placeholder: 'Search…',
+		label: 'Search'
 	},
 	variants: [
 		{
