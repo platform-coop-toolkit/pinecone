@@ -77,7 +77,7 @@ module.exports = {
 	title: 'Archive',
 	status: 'wip',
 	context: {
-		bodyClass: 'archive',
+		bodyClass: 'archive post-type-archive taxonomy',
 		hasMenu: true,
 		title: 'Browse all',
 		currentTags: [
@@ -343,6 +343,7 @@ module.exports = {
 			label: 'Unfiltered',
 			context:
 			{
+				bodyClass: 'archive post-type-archive',
 				foundPosts: false,
 				currentTags: false
 			}

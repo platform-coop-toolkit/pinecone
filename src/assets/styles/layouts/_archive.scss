@@ -11,10 +11,6 @@
 	@include grid-column-span(4, 4);
 }
 
-.archive .sort-wrapper + .resource-list {
-	margin-top: ($gutter * -1);
-}
-
 .archive .current-filters {
 	@include grid-column-span(4, 4);
 
@@ -68,8 +64,8 @@
 		@include grid-column-span(8, 12, 5);
 	}
 
-	.archive .sort-wrapper + .resource-list {
-		margin-top: rem(-24);
+	.archive:not([class*="taxonomy"]) .filter-wrapper {
+		margin-top: rem(24);
 	}
 }
 
