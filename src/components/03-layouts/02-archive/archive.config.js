@@ -77,7 +77,7 @@ module.exports = {
 	title: 'Archive',
 	status: 'wip',
 	context: {
-		bodyClass: 'archive',
+		bodyClass: 'archive post-type-archive taxonomy',
 		hasMenu: true,
 		title: 'Browse all',
 		currentTags: [
@@ -334,6 +334,19 @@ module.exports = {
 				]
 			},
 		],
-		cards: resourceData
-	}
+		cards: resourceData,
+		foundPosts: 12
+	},
+	variants: [
+		{
+			name: 'Unfiltered',
+			label: 'Unfiltered',
+			context:
+			{
+				bodyClass: 'archive post-type-archive',
+				foundPosts: false,
+				currentTags: false
+			}
+		}
+	]
 };
