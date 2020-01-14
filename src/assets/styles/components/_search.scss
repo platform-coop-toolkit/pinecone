@@ -1,4 +1,4 @@
-.search-input {
+.search-form {
 	display: flex;
 	flex-direction: row;
 
@@ -54,7 +54,7 @@
 	}
 }
 
-.search-input--inverse {
+.search-form.search-form--inverse {
 	[type="search"] {
 		background-color: $off-white;
 		border-right-color: $grey-300;
