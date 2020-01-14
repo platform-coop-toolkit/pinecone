@@ -48,6 +48,7 @@
 [type="submit"]:focus {
 	background: $blue-700;
 	box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
+	color: $white;
 	outline: none;
 }
 
