@@ -1,6 +1,6 @@
 {
   "name": "@platform-coop-toolkit/pinecone",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.3",
   "description": "Styleguide and pattern library for the Platform Cooperativism Consortium and the Platform Co-op Resource Library.",
   "scripts": {
     "assets:development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -35,7 +35,8 @@
   "homepage": "https://github.com/platform-coop-toolkit/styleguide#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -52,7 +53,9 @@
   "sass": "src/assets/styles/pinecone.scss",
   "files": [
     "dist",
-    "src/assets/styles"
+    "src/assets/styles",
+    "src/assets/images",
+    "src/assets/fonts"
   ],
   "engines": {
     "node": ">=10.16.3"
@@ -66,6 +69,8 @@
   "devDependencies": {
     "@10up/eslint-config": "^1.0.9",
     "@babel/preset-env": "^7.7.7",
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
     "@frctl/fractal": "^1.2.1",
     "@frctl/nunjucks": "^2.0.1",
     "babel-eslint": "^10.0.3",

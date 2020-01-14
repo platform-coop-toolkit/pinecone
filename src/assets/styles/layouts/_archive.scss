@@ -63,6 +63,10 @@
 	.archive .current-filters {
 		@include grid-column-span(8, 12, 5);
 	}
+
+	.archive:not([class*="taxonomy"]) .filter-wrapper {
+		margin-top: rem(24);
+	}
 }
 
 @include breakpoint-up(xl) {
