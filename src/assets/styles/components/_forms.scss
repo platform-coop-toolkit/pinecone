@@ -55,32 +55,6 @@ input[type="radio"] {
 	cursor: default;
 }
 
-input[type="search"] {
-	background-color: $blue-50;
-	border-color: transparent;
-	display: inline-block;
-	font-family: $font-family-sans;
-	padding-right: rem(50);
-
-	.search-input--inverse & {
-		background-color: $white;
-	}
-}
-
-input[type="search"] + [type="submit"] {
-	display: inline-block;
-	margin-left: rem(-40);
-	width: rem(40);
-
-	.icon {
-		margin-left: 0;
-	}
-
-	.search-input--inverse & {
-		background-color: $blue-50;
-	}
-}
-
 textarea {
 	height: rem(118);
 	max-width: rem(367);

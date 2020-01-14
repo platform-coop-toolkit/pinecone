@@ -1,0 +1,99 @@
+.search-input {
+	display: flex;
+	flex-direction: row;
+
+	[type="search"] {
+		background-color: $blue-50;
+		border-bottom-right-radius: 0;
+		border-color: transparent;
+		border-right-width: 0;
+		border-top-right-radius: 0;
+		font-family: $font-family-sans;
+		height: rem(50);
+
+		&:hover {
+			border-color: $blue-500;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 rem(1) $blue-500 inset, 0 0 0 rem(3) $white inset, 0 0 0 rem(5) $blue-500 inset;
+		}
+	}
+
+	[type="submit"] {
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		border-width: rem(2);
+		height: rem(50);
+		margin-left: 0;
+		position: relative;
+		width: rem(50);
+
+		.icon {
+			margin-left: 0;
+		}
+
+		&:focus {
+			border-bottom-left-radius: rem(3);
+			border-top-left-radius: rem(3);
+			box-shadow: 0 0 0 rem(2) $white inset;
+
+			&::before {
+				border-bottom: solid rem(2) $blue-700;
+				border-left: solid rem(2) $blue-700;
+				border-top: solid rem(2) $blue-700;
+				content: "";
+				display: block;
+				height: rem(46);
+				left: rem(-2);
+				position: absolute;
+				top: rem(-2);
+				width: rem(3);
+			}
+		}
+	}
+}
+
+.search-input--inverse {
+	[type="search"] {
+		background-color: $off-white;
+		border-right-color: $grey-300;
+		border-right-width: rem(1);
+
+		&:hover {
+			border-color: $blue-300;
+		}
+
+		&:focus {
+			border-color: $blue-300;
+			border-right-color: $blue-300;
+			box-shadow: 0 0 0 rem(1) $blue-300 inset, 0 0 0 rem(3) $white inset, 0 0 0 rem(5) $blue-300 inset;
+		}
+	}
+
+	[type="submit"] {
+		background-color: $blue-50;
+		border-bottom: solid rem(1) $grey-300;
+		border-right: solid rem(1) $grey-300;
+		border-top: solid rem(1) $grey-300;
+		color: $blue-500;
+
+		&:hover {
+			background-color: $blue-50;
+			color: $blue-600;
+		}
+
+		&:focus {
+			background-color: $blue-50;
+			border-color: $blue-50;
+			border-width: rem(2);
+			box-shadow: 0 0 0 rem(2) $blue-600 inset;
+
+			&::before {
+				border-bottom: solid rem(2) $blue-50;
+				border-left: solid rem(2) $blue-50;
+				border-top: solid rem(2) $blue-50;
+			}
+		}
+	}
+}
