@@ -2,10 +2,6 @@
 	background-color: $off-white;
 }
 
-.archive [role="banner"] {
-	background-color: $white;
-}
-
 .archive .page-header {
 	@include full-width-background($white);
 	@include grid-column-span(4, 4);

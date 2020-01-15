@@ -1,10 +1,11 @@
 [role="banner"] {
+	background-color: $white;
 	box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	width: 100vw;
 }
 
 .home [role="banner"] {
-	background: $blue-500;
+	background-color: $blue-500;
 }
 
 .page-header {
