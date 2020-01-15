@@ -112,33 +112,34 @@ nav {
 
 	}
 
-	&:hover {
-		background-color: $dark-mint-500;
-		border-left: solid rem(3) $red-400;
-	}
-
+	&:hover,
 	&:active {
-		background-color: $dark-mint-500;
+		background-color: $white;
+		border-left-color: transparent;
+		color: $black;
 	}
 
 	&:focus {
-		background-color: $dark-mint-500;
-		border-left: solid rem(3) $red-400;
+		background-color: $white;
+		border: solid rem(3) transparent;
+		box-shadow: 0 0 0 rem(3) $black inset;
+		color: $black;
 		outline: 0;
+		padding: rem(13) rem(13) rem(11) rem(16);
 	}
 
 	&[aria-current] {
-		background-color: $blue-400;
-		border-left-color: $off-white;
+		background-color: $black;
+		border-left-color: $red-400;
 
 		&:hover {
-			background-color: $dark-mint-500;
-			border-left: solid rem(3) $red-400;
+			background-color: $white;
+			border-left-color: transparent;
 		}
 
 		&:focus {
-			background-color: $dark-mint-500;
-			border-left: solid rem(3) $red-400;
+			background-color: $white;
+			border-left-color: transparent;
 		}
 	}
 
@@ -165,17 +166,17 @@ nav {
 .menu__submenu-wrapper.current_page_item > .menu__item,
 .menu__submenu-wrapper.current_page_ancestor > .menu__item,
 .menu__submenu-wrapper.current-menu-ancestor > .menu__item {
-	background-color: $blue-400;
-	border-left-color: $off-white;
+	background-color: $black;
+	border-left-color: $red-400;
 
 	&:hover {
-		background-color: $dark-mint-500;
-		border-left: solid rem(3) $red-400;
+		background-color: $white;
+		border-left-color: transparent;
 	}
 
 	&:focus {
-		background-color: $dark-mint-500;
-		border-left: solid rem(3) $red-400;
+		background-color: $white;
+		border-left-color: transparent;
 	}
 }
 
@@ -237,9 +238,14 @@ nav {
 
 		&:focus {
 			background-color: $blue-500;
+			border-bottom-width: 0;
 			border-left-color: transparent;
+			border-right-width: 0;
+			border-top-width: 0;
+			box-shadow: none;
 			color: $off-white;
 			outline: 0;
+			padding: rem(17) rem(16);
 		}
 
 		svg {
@@ -296,6 +302,9 @@ nav {
 
 			&:focus {
 				background-color: $blue-500;
+				border-width: rem(3);
+				box-shadow: 0 0 0 rem(3) $white inset;
+				padding: rem(14) rem(13) rem(14) rem(16);
 			}
 
 			&:hover {
