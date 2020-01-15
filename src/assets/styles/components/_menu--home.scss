@@ -45,6 +45,7 @@
 
 			&:focus {
 				background-color: $off-white;
+				box-shadow: 0 0 0 rem(3) $blue-500 inset;
 			}
 
 			&:hover {
