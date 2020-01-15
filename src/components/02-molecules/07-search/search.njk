@@ -1,6 +1,8 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
-<form class="search-input">
-	<label for="{{ name }}" class="screen-reader-text">{{ label }}</label>
-	<input id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}" type="search"{% if disabled %} disabled{% endif %} />
-	<button type="submit"{% if disabled %} disabled{% endif %}><span class="screen-reader-text">{{ submitLabel }}</span>{% render '@svg', {svg: 'search'}, true %}</button>
+<form role="search" method="get" class="search-form{% if modifier %} search-form--{{ modifier }}{% endif %}" action="/">
+	<label>
+		<span class="screen-reader-text">{{ label }}</span>
+		<input id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}" type="search"{% if disabled %} disabled{% endif %} />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">{{ submitLabel }}</span>{% render '@svg', {svg: 'search'}, true %}</button>
 </form>
