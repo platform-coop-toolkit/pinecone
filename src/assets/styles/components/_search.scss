@@ -74,9 +74,11 @@
 	[type="submit"] {
 		background-color: $blue-50;
 		border-bottom: solid rem(1) $grey-300;
+		border-left: 0;
 		border-right: solid rem(1) $grey-300;
 		border-top: solid rem(1) $grey-300;
 		color: $blue-500;
+		padding-left: rem(4);
 
 		&:hover {
 			background-color: $blue-50;
@@ -86,13 +88,13 @@
 		&:focus {
 			background-color: $blue-50;
 			border-color: $blue-50;
-			border-width: rem(2);
-			box-shadow: 0 0 0 rem(2) $blue-600 inset;
+			box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset;
 
 			&::before {
 				border-bottom: solid rem(2) $blue-50;
 				border-left: solid rem(2) $blue-50;
 				border-top: solid rem(2) $blue-50;
+				top: rem(-1);
 			}
 		}
 	}
