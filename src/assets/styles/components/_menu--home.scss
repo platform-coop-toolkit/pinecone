@@ -25,9 +25,23 @@
 			color: $blue-500;
 		}
 
-		&[aria-current] {
+		&[aria-current="page"] {
 			color: $white;
 		}
+	}
+
+	.menu--home .menu-item--languages [aria-current]::before {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23f9f9f7" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
+	}
+
+	.menu--home .menu-item--languages [aria-current]:hover::before,
+	.menu--home .menu-item--languages [aria-current]:focus::before {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%2316605d" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
+	}
+
+	.menu--home .menu-item--languages [aria-current]:active::before,
+	.menu--home .menu-item--languages [aria-current]:active:focus::before {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%2316605d" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	}
 
 	.menu--home .menu__submenu {
