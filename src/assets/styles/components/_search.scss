@@ -16,7 +16,7 @@
 		}
 
 		&:focus {
-			box-shadow: 0 0 0 rem(1) $blue-500 inset, 0 0 0 rem(3) $white inset, 0 0 0 rem(5) $blue-500 inset;
+			box-shadow: 0 0 0 rem(1) $blue-500 inset;
 		}
 	}
 
@@ -67,7 +67,7 @@
 		&:focus {
 			border-color: $blue-300;
 			border-right-color: $blue-300;
-			box-shadow: 0 0 0 rem(1) $blue-300 inset, 0 0 0 rem(3) $white inset, 0 0 0 rem(5) $blue-300 inset;
+			box-shadow: 0 0 0 rem(1) $blue-300 inset;
 		}
 	}
 
