@@ -1,5 +1,5 @@
 <svg
-	class="icon icon-{{ class if class else svg }}"
+	class="icon icon--{{ class if class else svg }}"
 	{% for attribute, value in attributes %}
 	{{ attribute | replace('ariaHidden', 'aria-hidden') }}="{{ value }}"
 	{% endfor %}>
