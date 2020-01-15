@@ -4,7 +4,6 @@ module.exports = {
 	context: {
 		standAlone: false,
 		name: 's',
-		placeholder: 'Search…',
 		label: 'search',
 		submitLabel: 'submit search'
 	},

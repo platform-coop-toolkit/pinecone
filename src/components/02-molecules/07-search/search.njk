@@ -2,7 +2,7 @@
 <form role="search" method="get" class="search-form{% if modifier %} search-form--{{ modifier }}{% endif %}" action="/">
 	<label>
 		<span class="screen-reader-text">{{ label }}</span>
-		<input id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}" type="search"{% if disabled %} disabled{% endif %} />
+		<input id="{{ name }}" name="{{ name }}" type="search"{% if disabled %} disabled{% endif %} />
 	</label>
 	<button type="submit" class="search-submit"><span class="screen-reader-text">{{ submitLabel }}</span>{% render '@svg', {svg: 'search'}, true %}</button>
 </form>
