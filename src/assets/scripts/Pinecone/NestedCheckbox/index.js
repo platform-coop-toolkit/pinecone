@@ -26,7 +26,7 @@ class NestedCheckbox {
 			...options
 		};
 
-		this.initDisclosure();
+		// this.initDisclosure();
 		this.initCustomCheckbox();
 
 		this.handleChange = this.handleChange.bind( this );
@@ -38,26 +38,9 @@ class NestedCheckbox {
 	/**
 	 * Initialize a mixed checkbox.
 	 */
-	initDisclosure() {
-		const disclosureLabel = this.label.nextElementSibling;
-		const disclosureLabelId = disclosureLabel.id;
-		const disclosureBtn = document.createElement( 'button' );
-		disclosureBtn.classList.add( 'disclosure-button' );
-		disclosureBtn.setAttribute( 'type', 'button' );
-		disclosureBtn.setAttribute( 'aria-expanded', false );
-		disclosureBtn.setAttribute( 'aria-labelledby', disclosureLabelId );
-		disclosureBtn.innerHTML = `
-			<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="icon icon-chevron-down" aria-hidden="true" focusable="false"><path id="chevron-down" d="m10 15a1 1 0 0 1 -.71-.29l-5-5a1 1 0 0 1 1.42-1.42l4.29 4.3 4.29-4.3a1 1 0 0 1 1.42 1.42l-5 5a1 1 0 0 1 -.71.29z" fill="currentColor"></path></svg>
-		`;
-		this.input.parentNode.insertBefore( disclosureBtn, this.subGroup );
-	}
-
-	/**
-	 * Initialize a mixed checkbox.
-	 */
 	initCustomCheckbox() {
 		const status = this.getCustomState();
-		const supplementaryLabel = this.container.querySelector( 'span:not([id])' );
+		const supplementaryLabel = this.container.querySelector( 'span.supplementary-label' );
 		supplementaryLabel.parentNode.removeChild( supplementaryLabel );
 		const customCheckbox = document.createElement( 'div' );
 		customCheckbox.classList.add( 'checkbox' );
@@ -132,12 +115,7 @@ class NestedCheckbox {
 	 * @param {Event} event
 	 */
 	handleClick( event ) {
-		if ( ! event.target.closest( this.config.disclosureButtonSelector ) && 'checkbox' !== event.target.getAttribute( 'role' ) ) return;
-		if ( event.target.closest( this.config.disclosureButtonSelector ) ) {
-			const ctrl = event.target.closest( this.config.disclosureButtonSelector );
-			const expanded = 'true' === ctrl.getAttribute( 'aria-expanded' ) || false;
-			ctrl.setAttribute( 'aria-expanded', !expanded );
-		}
+		if ( ! 'checkbox' !== event.target.getAttribute( 'role' ) ) return;
 		if ( 'checkbox' === event.target.getAttribute( 'role' ) ) {
 			this.toggleMixedCheckbox( event.target );
 		}
