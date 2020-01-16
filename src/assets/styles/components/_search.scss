@@ -2,6 +2,10 @@
 	display: flex;
 	flex-direction: row;
 
+	label {
+		width: 100%;
+	}
+
 	[type="search"] {
 		background-color: $blue-50;
 		border-bottom-right-radius: 0;
@@ -10,6 +14,7 @@
 		border-top-right-radius: 0;
 		font-family: $font-family-sans;
 		height: rem(50);
+		max-width: 100%;
 
 		&:hover {
 			border-color: $blue-500;
