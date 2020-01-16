@@ -8,6 +8,24 @@
 	background-color: $blue-500;
 }
 
+[role="banner"] .container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+[role="banner"] .brand {
+	color: $blue-500;
+	height: rem(26);
+	margin-left: rem(12);
+
+	svg {
+		height: 100%;
+		width: 100%;
+	}
+}
+
 .page-header {
 	padding-bottom: rem(100);
 	padding-top: rem(100);

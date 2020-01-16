@@ -49,11 +49,13 @@ nav {
 .menu {
 	background: $dark-mint-400;
 	display: block;
+	left: 0;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 	padding-top: rem(70);
-	position: relative;
+	position: absolute;
+	width: 100vw;
 	z-index: 1;
 
 	li {
@@ -236,6 +238,7 @@ nav {
 		height: rem(109.5);
 		padding-top: 0;
 		position: relative;
+		width: auto;
 
 		li {
 			border-top: 0;
