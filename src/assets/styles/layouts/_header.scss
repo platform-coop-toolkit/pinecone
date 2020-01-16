@@ -62,8 +62,13 @@
 
 @include breakpoint-up(sm) {
 	[role="banner"] .brand {
-		padding: rem(22) rem(24);
+		padding: rem(20) rem(23);
 		width: rem(74);
+
+		svg {
+			height: rem(28);
+			width: rem(28);
+		}
 	}
 
 	.page-header {
@@ -86,13 +91,8 @@
 		.brand {
 			height: rem(80);
 			margin-left: rem(0);
-			padding: rem(27);
+			padding: rem(26);
 			width: rem(80);
-
-			svg {
-				height: rem(26);
-				width: rem(26);
-			}
 		}
 	}
 }
