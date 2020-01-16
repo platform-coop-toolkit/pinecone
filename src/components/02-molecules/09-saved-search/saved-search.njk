@@ -1,0 +1,15 @@
+{% if not standAlone %}<div class="spacer"></div>{% endif %}
+<div class="saved-search">
+	<h4><a href="/?s=Cooperative%20Economy">Cooperative economy paper</a></h4>
+	<span class="disclosure-label" hidden>Show details</span>
+	<div class="saved-search__details">
+		<p><strong>Search term</strong><br />
+		&ldquo;Cooperative Economy&rdquo;</p>
+		<p><strong>Tags</strong></p>
+		<ul class="badges">
+			{% render '@badge', {standAlone: true, label: 'Cooperative economy'}, true %}
+			{% render '@badge', {standAlone: true, label: 'Australia'}, true %}
+			{% render '@badge', {standAlone: true, label: 'Academic papers'}, true %}
+		</ul>
+	</div>
+</div>
