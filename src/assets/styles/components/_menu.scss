@@ -49,11 +49,13 @@ nav {
 .menu {
 	background: $dark-mint-400;
 	display: block;
+	left: 0;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 	padding-top: rem(70);
-	position: relative;
+	position: absolute;
+	width: 100vw;
 	z-index: 1;
 
 	li {
@@ -220,7 +222,7 @@ nav {
 
 @include breakpoint-up(md) {
 	nav {
-		height: rem(109.5);
+		height: rem(80);
 	}
 
 	.menu-toggle {
@@ -233,9 +235,10 @@ nav {
 		display: flex;
 		flex-direction: row;
 		float: right;
-		height: rem(109.5);
+		height: rem(80);
 		padding-top: 0;
 		position: relative;
+		width: auto;
 
 		li {
 			border-top: 0;
@@ -252,7 +255,7 @@ nav {
 		font-size: 1rem;
 		font-weight: $font-weight-normal;
 		min-height: 0;
-		padding: rem(17) rem(16);
+		padding: rem(26) rem(16);
 
 		&::after {
 			background: transparent;
@@ -283,7 +286,7 @@ nav {
 			box-shadow: none;
 			color: $off-white;
 			outline: 0;
-			padding: rem(17) rem(16);
+			padding: rem(26) rem(16);
 		}
 
 		svg {
@@ -355,7 +358,7 @@ nav {
 
 		.menu__item {
 			background-color: $white;
-			padding-left: rem(16);
+			padding: rem(17) rem(16);
 
 			&::after {
 				display: none;

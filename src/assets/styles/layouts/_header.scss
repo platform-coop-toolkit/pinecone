@@ -8,6 +8,50 @@
 	background-color: $blue-500;
 }
 
+[role="banner"] .container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+[role="banner"] .brand {
+	color: $blue-500;
+	height: rem(70);
+	padding: rem(22) rem(12);
+	width: rem(50);
+
+	svg {
+		height: rem(26);
+		width: rem(26);
+	}
+
+	&:hover {
+		color: $black;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $blue-500;
+		color: $off-white;
+	}
+}
+
+.home [role="banner"] .brand {
+	color: $off-white;
+
+	&:hover {
+		color: $white;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $off-white;
+		color: $blue-500;
+		outline: 0;
+	}
+}
+
 .page-header {
 	padding-bottom: rem(100);
 	padding-top: rem(100);
@@ -17,6 +61,16 @@
 }
 
 @include breakpoint-up(sm) {
+	[role="banner"] .brand {
+		padding: rem(20) rem(23);
+		width: rem(74);
+
+		svg {
+			height: rem(28);
+			width: rem(28);
+		}
+	}
+
 	.page-header {
 		@include grid-column-span(6, 8, 2);
 
@@ -29,6 +83,17 @@
 	[role="banner"] {
 		padding-left: rem(30);
 		padding-right: rem(120);
+
+		.container {
+			justify-content: space-between;
+		}
+
+		.brand {
+			height: rem(80);
+			margin-left: rem(0);
+			padding: rem(26);
+			width: rem(80);
+		}
 	}
 }
 
