@@ -17,12 +17,38 @@
 
 [role="banner"] .brand {
 	color: $blue-500;
-	height: rem(26);
-	margin-left: rem(12);
+	height: rem(70);
+	padding: rem(22) rem(12);
+	width: rem(50);
 
 	svg {
-		height: 100%;
-		width: 100%;
+		height: rem(26);
+		width: rem(26);
+	}
+
+	&:hover {
+		color: $black;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $blue-500;
+		color: $off-white;
+	}
+}
+
+.home [role="banner"] .brand {
+	color: $off-white;
+
+	&:hover {
+		color: $white;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $off-white;
+		color: $blue-500;
+		outline: 0;
 	}
 }
 
@@ -35,6 +61,11 @@
 }
 
 @include breakpoint-up(sm) {
+	[role="banner"] .brand {
+		padding: rem(22) rem(24);
+		width: rem(74);
+	}
+
 	.page-header {
 		@include grid-column-span(6, 8, 2);
 
@@ -47,6 +78,22 @@
 	[role="banner"] {
 		padding-left: rem(30);
 		padding-right: rem(120);
+
+		.container {
+			justify-content: space-between;
+		}
+
+		.brand {
+			height: rem(80);
+			margin-left: rem(0);
+			padding: rem(27);
+			width: rem(80);
+
+			svg {
+				height: rem(26);
+				width: rem(26);
+			}
+		}
 	}
 }
 
