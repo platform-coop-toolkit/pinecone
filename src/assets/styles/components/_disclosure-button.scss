@@ -1,22 +1,5 @@
 .disclosure-button {
-	align-items: center;
-	background: $blue-50;
-	border: solid rem(2) transparent;
-	border-radius: 50%;
-	color: $blue-500;
-	display: inline-block;
-	display: inline-flex;
-	flex-direction: column;
-	font-size: rem(16);
-	height: rem(34);
-	justify-content: center;
-	margin: 0;
-	padding: rem(6) 0;
-	text-underline-offset: rem(8);
-	width: rem(34);
-
 	svg {
-		margin-bottom: 0;
 		transition: transform 0.5s;
 
 		@media (prefers-reduced-motion: reduce) {
@@ -24,53 +7,9 @@
 		}
 	}
 
-	&:hover {
-		background: $blue-150;
-	}
-
-	&:active {
-		background: $blue-100;
-		color: $blue-500;
-	}
-
-	&:focus {
-		border-color: $blue-500;
-		box-shadow:
-			0 0 0 rem(2) $off-white,
-			0 0 0 rem(4) $blue-500;
-		outline: 0;
-	}
-
 	&[aria-expanded="true"] {
 		svg {
 			transform: rotate(-180deg);
 		}
 	}
-}
-
-.has-dark-mint-500-background-color .disclosure-button,
-.accordion--filter-list .disclosure-button {
-	background: $blue-700;
-	color: $off-white;
-
-	&:hover {
-		background: $true-black;
-	}
-
-	&:active {
-		background: $blue-500;
-		color: $off-white;
-	}
-
-	&:focus {
-		border-color: $off-white;
-		box-shadow:
-			0 0 0 rem(2) $black,
-			0 0 0 rem(4) $off-white;
-	}
-}
-
-.disclosure-button:active:focus {
-	border-color: transparent;
-	box-shadow: none;
 }

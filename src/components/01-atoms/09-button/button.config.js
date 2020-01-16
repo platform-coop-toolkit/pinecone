@@ -15,8 +15,27 @@ module.exports = {
 			name: 'Default (Inverse)',
 			label: 'Default (Inverse)',
 			context: {
-				modifier: 'inverse',
+				modifiers: ['inverse'],
 				bodyClass: 'has-dark-mint-500-background-color'
+			}
+		},
+		{
+			name: 'Disc',
+			label: 'Disc',
+			context: {
+				modifiers: ['disc'],
+				icon: 'chevron-down',
+				labelVisuallyHidden: true,
+			}
+		},
+		{
+			name: 'Disc (Inverse)',
+			label: 'Disc (Inverse)',
+			context: {
+				modifiers: ['disc', 'inverse'],
+				bodyClass: 'has-dark-mint-500-background-color',
+				icon: 'chevron-down',
+				labelVisuallyHidden: true,
 			}
 		}
 	]

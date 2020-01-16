@@ -18,3 +18,7 @@
 	height: 2.5em;
 	width: 2.5em;
 }
+
+.screen-reader-text + svg {
+	margin-left: 0;
+}
