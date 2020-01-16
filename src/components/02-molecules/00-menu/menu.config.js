@@ -43,7 +43,7 @@ module.exports = {
 						label: 'Submenu Item Three'
 					}
 				}
-			},
+			}
 		},
 	},
 	variants: [

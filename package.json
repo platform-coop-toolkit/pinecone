@@ -1,6 +1,6 @@
 {
   "name": "@platform-coop-toolkit/pinecone",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.5",
   "description": "Styleguide and pattern library for the Platform Cooperativism Consortium and the Platform Co-op Resource Library.",
   "scripts": {
     "assets:development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@10up/eslint-config": "^1.0.9",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-env": "^7.8.3",
     "@commitlint/cli": "^8.3.4",
     "@commitlint/config-conventional": "^8.3.4",
     "@frctl/fractal": "^1.2.1",
@@ -79,7 +79,7 @@
     "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
     "faker": "^4.1.0",
-    "husky": "^4.0.1",
+    "husky": "^4.0.7",
     "laravel-mix": "^5.0.1",
     "laravel-mix-copy-watched": "^2.2.2",
     "lint-staged": "^9.5.0",
@@ -90,7 +90,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "sass": "^1.24.3",
-    "sass-loader": "^7.3.1",
+    "sass-loader": "^8.0.2",
     "stylelint": "^12.0.1",
     "stylelint-config-wordpress": "^16.0.0",
     "stylelint-declaration-use-variable": "^1.7.2",

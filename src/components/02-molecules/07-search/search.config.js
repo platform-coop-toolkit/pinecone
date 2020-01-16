@@ -4,15 +4,16 @@ module.exports = {
 	context: {
 		standAlone: false,
 		name: 's',
-		placeholder: 'Search…',
-		label: 'Search'
+		label: 'search',
+		submitLabel: 'submit search'
 	},
 	variants: [
 		{
-			name: 'Default (Light on Dark)',
-			label: 'Default (Light on Dark)',
+			name: 'Inverse',
+			label: 'Inverse',
 			context: {
-				bodyClass: 'has-dark-mint-500-background-color'
+				modifier: 'inverse',
+				bodyClass: 'has-blue-700-background-color'
 			}
 		}
 	]

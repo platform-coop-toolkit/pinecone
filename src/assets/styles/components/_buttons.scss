@@ -48,6 +48,7 @@
 [type="submit"]:focus {
 	background: $blue-700;
 	box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
+	color: $white;
 	outline: none;
 }
 
@@ -214,4 +215,71 @@
 		color: $off-white;
 		outline: none;
 	}
+}
+
+.button--disc {
+	align-items: center;
+	background: $blue-50;
+	border: solid rem(2) transparent;
+	border-radius: 50%;
+	color: $blue-500;
+	display: inline-block;
+	display: inline-flex;
+	flex-direction: column;
+	font-size: rem(16);
+	height: rem(34);
+	justify-content: center;
+	margin: 0;
+	padding: rem(6) 0;
+	text-underline-offset: rem(8);
+	width: rem(34);
+
+	svg {
+		margin-bottom: 0;
+	}
+
+	&:hover {
+		background: $blue-150;
+	}
+
+	&:active {
+		background: $blue-100;
+		color: $blue-500;
+	}
+
+	&:focus {
+		border-color: $blue-500;
+		box-shadow:
+			0 0 0 rem(2) $off-white,
+			0 0 0 rem(4) $blue-500;
+		outline: 0;
+	}
+}
+
+.button--disc.button--inverse,
+.has-dark-mint-500-background-color .button--disc,
+.accordion--filter-list .button-disc {
+	background: $blue-700;
+	color: $off-white;
+
+	&:hover {
+		background: $true-black;
+	}
+
+	&:active {
+		background: $blue-500;
+		color: $off-white;
+	}
+
+	&:focus {
+		border-color: $off-white;
+		box-shadow:
+			0 0 0 rem(2) $black,
+			0 0 0 rem(4) $off-white;
+	}
+}
+
+.button--disc:active:focus {
+	border-color: transparent;
+	box-shadow: none;
 }

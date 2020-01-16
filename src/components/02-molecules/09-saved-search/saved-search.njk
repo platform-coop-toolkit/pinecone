@@ -1,0 +1,15 @@
+{% if not standAlone %}<div class="spacer"></div>{% endif %}
+<div class="saved-search">
+	<h4><a href="/?s=Cooperative%20Economy">{{ title }}</a></h4>
+	<span class="disclosure-label" hidden>Show details</span>
+	<div class="saved-search__details">
+		<p><strong>Search term</strong><br />
+		&ldquo;{{ searchTerm }}&rdquo;</p>
+		<p><strong>Tags</strong></p>
+		<ul class="badges">
+			{% for tag in tags %}
+				{% render '@badge', {standAlone: true, label: tag.label}, true %}
+			{% endfor %}
+		</ul>
+	</div>
+</div>

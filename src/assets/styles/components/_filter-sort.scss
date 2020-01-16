@@ -55,6 +55,27 @@
 				background-color: $blue-600;
 			}
 		}
+
+		.button--disc {
+			background: $blue-700;
+			color: $off-white;
+
+			&:hover {
+				background: $true-black;
+			}
+
+			&:active {
+				background: $blue-500;
+				color: $off-white;
+			}
+
+			&:focus {
+				border-color: $off-white;
+				box-shadow:
+					0 0 0 rem(2) $black,
+					0 0 0 rem(4) $off-white;
+			}
+		}
 	}
 }
 
