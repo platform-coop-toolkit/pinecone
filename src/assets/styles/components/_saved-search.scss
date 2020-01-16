@@ -1,0 +1,15 @@
+.saved-search {
+	padding: rem(12) 0 rem(24);
+
+	p + p {
+		margin-top: rem(12);
+	}
+
+	.badges {
+		margin-top: 0;
+	}
+}
+
+.saved-search + .saved-search {
+	border-top: solid rem(1) $grey-500;
+}
