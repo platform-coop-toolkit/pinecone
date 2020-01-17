@@ -65,6 +65,10 @@
 		border-right-color: $grey-300;
 		border-right-width: rem(1);
 
+		&::placeholder {
+			color: transparent;
+		}
+
 		&:hover {
 			border-color: $blue-300;
 		}
@@ -113,6 +117,10 @@
 	@include breakpoint-up(sm) {
 		[type="search"] {
 			height: rem(60);
+
+			&::placeholder {
+				color: $grey-500;
+			}
 		}
 
 		[type="submit"] {
