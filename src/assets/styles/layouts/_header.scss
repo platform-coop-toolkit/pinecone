@@ -18,12 +18,13 @@
 [role="banner"] .brand {
 	color: $blue-500;
 	height: rem(70);
-	padding: rem(22) rem(12);
-	width: rem(50);
+	margin-left: rem(11);
+	padding: rem(19);
+	width: rem(70);
 
 	svg {
-		height: rem(26);
-		width: rem(26);
+		height: rem(32);
+		width: rem(32);
 	}
 
 	&:hover {
@@ -61,16 +62,6 @@
 }
 
 @include breakpoint-up(sm) {
-	[role="banner"] .brand {
-		padding: rem(20) rem(23);
-		width: rem(74);
-
-		svg {
-			height: rem(28);
-			width: rem(28);
-		}
-	}
-
 	.page-header {
 		@include grid-column-span(6, 8, 2);
 
@@ -91,7 +82,7 @@
 		.brand {
 			height: rem(80);
 			margin-left: rem(0);
-			padding: rem(26);
+			padding: rem(24);
 			width: rem(80);
 		}
 	}
