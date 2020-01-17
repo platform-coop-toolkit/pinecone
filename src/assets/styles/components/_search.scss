@@ -110,7 +110,8 @@
 }
 
 .home .search-form.search-form--inverse {
-	[type="search"] {
+	[type="search"],
+	[type="submit"] {
 		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	}
 
@@ -119,7 +120,7 @@
 			height: rem(60);
 
 			&:focus {
-				box-shadow: 0 0 0 rem(2) $blue-300 inset;
+				box-shadow: 0 0 0 rem(2) $blue-300 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 			}
 
 			&::placeholder {
@@ -131,6 +132,10 @@
 		[type="submit"] {
 			height: rem(60);
 			width: rem(60);
+
+			&:focus {
+				box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+			}
 
 			&::before {
 				height: rem(56);

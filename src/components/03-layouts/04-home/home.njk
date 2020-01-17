@@ -2,3 +2,39 @@
 	<h1>{{ title | safe }}</h1>
 	<p class="subhead">{{ subhead }}</p>
 </div>
+<div class="home__search">
+	{% render '@search', {standAlone: true, modifier: 'inverse', placeholder: 'Search resource name, publisher, or topic…'}, true %}
+	{# TODO: Add saved searches. #}
+</div>
+<div class="home__browse">
+	<h2>{{ browse.title }}</h2>
+	{% render '@link-list', {
+		standAlone: true,
+		modifier: 'inverse',
+		items: [
+			{
+				icon: 'topic',
+				label: 'Topics',
+				href: '/topics'
+			},
+			{
+				icon: 'goal',
+				label: 'Goals',
+				href: '/goals'
+			},
+			{
+				icon: 'format',
+				label: 'Formats',
+				href: '/formats'
+			},
+			{
+				icon: 'sector',
+				label: 'Sectors',
+				href: '/sectors'
+			}
+		]
+		},
+		true
+	%}
+	{% render '@call-to-action', {standAlone: true, href: '/browse-all', label: 'Browse all resources', class: 'wp-block-button--inverse'} %}
+</div>
