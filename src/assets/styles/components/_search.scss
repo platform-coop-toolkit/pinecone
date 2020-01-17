@@ -65,6 +65,10 @@
 		border-right-color: $grey-300;
 		border-right-width: rem(1);
 
+		&::placeholder {
+			color: transparent;
+		}
+
 		&:hover {
 			border-color: $blue-300;
 		}
@@ -100,6 +104,51 @@
 				border-left: solid rem(2) $blue-50;
 				border-top: solid rem(2) $blue-50;
 				top: rem(-1);
+			}
+		}
+	}
+}
+
+.home .search-form.search-form--inverse {
+	[type="search"] {
+		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+	}
+
+	@include breakpoint-up(sm) {
+		[type="search"] {
+			height: rem(60);
+
+			&:focus {
+				box-shadow: 0 0 0 rem(2) $blue-300 inset;
+			}
+
+			&::placeholder {
+				color: $grey-500;
+				opacity: 1;
+			}
+		}
+
+		[type="submit"] {
+			height: rem(60);
+			width: rem(60);
+
+			&::before {
+				height: rem(56);
+			}
+		}
+	}
+
+	@include breakpoint-up(lg) {
+		[type="search"] {
+			height: rem(70);
+		}
+
+		[type="submit"] {
+			height: rem(70);
+			width: rem(70);
+
+			&::before {
+				height: rem(66);
 			}
 		}
 	}
