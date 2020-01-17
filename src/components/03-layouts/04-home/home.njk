@@ -38,3 +38,28 @@
 	%}
 	{% render '@call-to-action', {standAlone: true, href: '/browse-all', label: 'Browse all resources', class: 'wp-block-button--inverse'} %}
 </div>
+<div class="home__feed">
+	<h2>{{ feed.title }}</h2>
+	<hr class="is-style-thick has-grey-200-background-color">
+	<h3><a href="/most-viewed">{{ 'Most viewed' }}</a></h3>
+	<div class="card-wrapper">
+		<ul class="cards">
+		{% for card in cards %}
+			{% if loop.index < 5 %}
+			{% render '@card--resource', card %}
+			{% endif %}
+		{% endfor %}
+		</ul>
+	</div>
+	<hr class="is-style-thick has-grey-200-background-color">
+	<h3><a href="/most-recent">{{ 'Recently published' }}</a></h3>
+	<div class="card-wrapper">
+		<ul class="cards">
+		{% for card in cards %}
+			{% if loop.index > 4 %}
+			{% render '@card--resource', card %}
+			{% endif %}
+		{% endfor %}
+		</ul>
+	</div>
+</div>

@@ -20,6 +20,7 @@
 .home__browse {
 	background: $blue-400;
 	color: $white;
+	padding-bottom: rem(40);
 	padding-top: rem(8);
 	position: relative;
 
@@ -27,11 +28,59 @@
 		margin-top: rem(20);
 	}
 
+	.wp-block-button {
+		margin-top: rem(36);
+
+		.wp-block-button__link {
+			max-width: 100%;
+		}
+	}
+
 	@include full-width-background($blue-400);
+}
+
+.home__feed {
+	padding-top: rem(50);
+
+	hr {
+		margin: rem(48) 0 0 calc(-1 * (50vw - 50%));
+		width: 100vw;
+	}
+
+	@include breakpoint-down(xs) {
+		.card-wrapper {
+			overflow-x: scroll;
+			width: calc(100% + #{$gutter});
+		}
+
+		.cards {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			width: calc((100% - #{rem(30)}) * 4 + #{rem(25)});
+
+			.card {
+				width: calc(100vw - #{rem(85)});
+			}
+
+			.card + .card {
+				margin-left: rem(25);
+				margin-top: 0;
+			}
+		}
+	}
+
 }
 
 @include breakpoint-up(sm) {
 	.home__search .search-form {
 		top: rem(-30);
+	}
+
+	.home__feed {
+		.cards {
+			display: grid;
+		}
 	}
 }
