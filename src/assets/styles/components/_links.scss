@@ -4,7 +4,6 @@
 	font-family: $font-family-sans;
 	font-weight: $font-weight-semibold;
 	line-height: 1;
-	padding-top: rem(4);
 	text-decoration: underline;
 	text-decoration-color: $blue-400;
 	text-decoration-thickness: rem(1);
@@ -26,10 +25,11 @@
 			margin-bottom: -0.3125em;
 			margin-left: 0;
 			mask: url("../images/chevron-right.svg") no-repeat center;
-			mask-size: 100%;
+			mask-position: left;
+			mask-size: 1.25em;
 			position: relative;
 			text-decoration: underline;
-			width: 1.25em;
+			width: 1em;
 		}
 	}
 
@@ -90,12 +90,14 @@
 		&[rel="external"] {
 			&::after {
 				mask-image: url("../images/external.svg");
+				width: 1.25em;
 			}
 		}
 
 		&[href^="#"] {
 			&::after {
 				mask-image: url("../images/scroll-down.svg");
+				width: 1.25em;
 			}
 		}
 	}
