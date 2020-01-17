@@ -1,7 +1,7 @@
 .wp-block-button__link,
 [type="submit"] {
 	background: $blue-500;
-	border: solid 1px transparent;
+	border: solid rem(1) transparent;
 	border-radius: rem(3);
 	color: $white;
 	display: block;
@@ -18,6 +18,10 @@
 	.icon {
 		margin-left: rem(4);
 	}
+}
+
+.wp-block-button--inverse .wp-block-button__link {
+	border-color: $white;
 }
 
 [type="submit"]::-moz-focus-inner {
@@ -75,6 +79,10 @@
 			0 0 0 rem(2) $white,
 			0 0 0 rem(4) $yellow-600;
 	}
+}
+
+.wp-block-button--inverse .wp-block-button__link:focus {
+	box-shadow: 0 0 0 rem(2) $blue-700, 0 0 0 rem(4) $white, 0 0 0 rem(1) $white inset;
 }
 
 .wp-block-button__link:active:focus {

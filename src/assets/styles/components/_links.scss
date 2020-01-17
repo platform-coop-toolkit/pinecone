@@ -1,10 +1,9 @@
-a:not([class]) {
+%link {
 	color: $blue-500;
 	display: inline-block;
 	font-family: $font-family-sans;
 	font-weight: $font-weight-semibold;
 	line-height: 1;
-	padding-top: rem(4);
 	text-decoration: underline;
 	text-decoration-color: $blue-400;
 	text-decoration-thickness: rem(1);
@@ -23,13 +22,14 @@ a:not([class]) {
 			content: "";
 			display: inline-block;
 			height: 1.25em;
-			margin-bottom: rem(-5);
+			margin-bottom: -0.3125em;
 			margin-left: 0;
 			mask: url("../images/chevron-right.svg") no-repeat center;
-			mask-size: 100%;
+			mask-position: left;
+			mask-size: 1.25em;
 			position: relative;
 			text-decoration: underline;
-			width: 1.25em;
+			width: 1em;
 		}
 	}
 
@@ -90,17 +90,85 @@ a:not([class]) {
 		&[rel="external"] {
 			&::after {
 				mask-image: url("../images/external.svg");
+				width: 1.25em;
 			}
 		}
 
 		&[href^="#"] {
 			&::after {
 				mask-image: url("../images/scroll-down.svg");
+				width: 1.25em;
 			}
 		}
 	}
+
+	&:empty::after {
+		display: none;
+	}
 }
 
-a:empty::after {
-	display: none;
+a:not([class]) {
+	@extend %link;
+}
+
+a.link--inverse,
+.has-blue-400-background-color a:not([class]) {
+	@extend %link;
+
+	color: $off-white;
+	text-decoration-color: $off-white;
+
+	@supports (mask: url("../images/add.svg")) {
+		&::after {
+			background: $off-white;
+		}
+	}
+
+	&:visited {
+		color: $blue-200;
+		text-decoration-color: $blue-200;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: $blue-200;
+			}
+		}
+	}
+
+	&:active {
+		color: $green-200;
+		text-decoration-color: $green-200;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: $green-200;
+			}
+		}
+	}
+
+	&:focus {
+		background: $blue-200;
+		color: $black;
+		outline: none;
+		text-decoration: none;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: $black;
+			}
+		}
+	}
+
+	&:active:focus {
+		background: unset;
+		color: $green-200;
+		text-decoration: underline;
+		text-decoration-color: $green-200;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: $green-200;
+			}
+		}
+	}
 }
