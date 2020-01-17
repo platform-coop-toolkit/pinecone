@@ -7,11 +7,11 @@
 }
 
 @include breakpoint-up(md) {
-	.menu--home {
+	.home .menu {
 		background-color: $blue-500;
 	}
 
-	.menu--home .menu__item {
+	.home .menu .menu__item {
 		color: $off-white;
 
 		&:hover {
@@ -27,24 +27,28 @@
 
 		&[aria-current="page"] {
 			color: $white;
+
+			&:focus {
+				color: $blue-500;
+			}
 		}
 	}
 
-	.menu--home .menu-item--languages [aria-current]::before {
+	.home .menu .menu-item--languages [aria-current]::before {
 		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23f9f9f7" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	}
 
-	.menu--home .menu-item--languages [aria-current]:hover::before,
-	.menu--home .menu-item--languages [aria-current]:focus::before {
+	.home .menu .menu-item--languages [aria-current]:hover::before,
+	.home .menu .menu-item--languages [aria-current]:focus::before {
 		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%2316605d" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	}
 
-	.menu--home .menu-item--languages [aria-current]:active::before,
-	.menu--home .menu-item--languages [aria-current]:active:focus::before {
+	.home .menu .menu-item--languages [aria-current]:active::before,
+	.home .menu .menu-item--languages [aria-current]:active:focus::before {
 		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%2316605d" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	}
 
-	.menu--home .menu__submenu {
+	.home .menu .menu__submenu {
 		background: $blue-500;
 		border-color: $blue-600;
 		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
@@ -82,9 +86,9 @@
 		}
 	}
 
-	.menu--home .menu__submenu-wrapper.current_page_item > .menu__item,
-	.menu--home .menu__submenu-wrapper.current_page_ancestor > .menu__item,
-	.menu--home .menu__submenu-wrapper.current-menu-ancestor > .menu__item {
+	.home .menu .menu__submenu-wrapper.current_page_item > .menu__item,
+	.home .menu .menu__submenu-wrapper.current_page_ancestor > .menu__item,
+	.home .menu .menu__submenu-wrapper.current-menu-ancestor > .menu__item {
 		color: $white;
 
 		&:hover {
