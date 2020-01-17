@@ -15,6 +15,15 @@ module.exports = {
 				modifier: 'inverse',
 				bodyClass: 'has-blue-700-background-color'
 			}
+		},
+		{
+			name: 'Home',
+			label: 'Home',
+			context: {
+				modifier: 'inverse',
+				placeholder: 'Search resource name, publisher, or topic…',
+				bodyClass: 'has-blue-400-background-color home'
+			}
 		}
 	]
 };
