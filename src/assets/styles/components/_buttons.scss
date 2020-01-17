@@ -20,7 +20,7 @@
 	}
 }
 
-.has-dark-mint-500-background-color .wp-block-button__link {
+.wp-block-button--inverse .wp-block-button__link {
 	border-color: $white;
 }
 
@@ -81,7 +81,7 @@
 	}
 }
 
-.has-dark-mint-500-background-color .wp-block-button__link:focus {
+.wp-block-button--inverse .wp-block-button__link:focus {
 	box-shadow: 0 0 0 rem(2) $blue-700, 0 0 0 rem(4) $white, 0 0 0 rem(1) $white inset;
 }
 
