@@ -118,6 +118,10 @@
 		[type="search"] {
 			height: rem(60);
 
+			&:focus {
+				box-shadow: 0 0 0 rem(2) $blue-300 inset;
+			}
+
 			&::placeholder {
 				color: $grey-500;
 				opacity: 1;
