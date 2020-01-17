@@ -1,0 +1,7 @@
+.page.home {
+	.page-header {
+		@include full-width-background($blue-500);
+
+		color: $white;
+	}
+}
