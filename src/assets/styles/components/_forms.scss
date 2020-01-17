@@ -212,7 +212,14 @@ input[type="checkbox"]:disabled:hover + label::before {
 	box-shadow: none;
 }
 
-input[type="radio"]:checked:focus + label::before,
+input[type="radio"]:checked:focus + label::before {
+	box-shadow:
+		0 0 0 rem(2) $white,
+		0 0 0 rem(4) $blue-400,
+		0 0 0 rem(1) $blue-400 inset,
+		0 0 0 rem(3) $white inset;
+}
+
 input[type="checkbox"]:checked:focus + label::before,
 [role="checkbox"][aria-checked="true"]:focus::before,
 [role="checkbox"][aria-checked="mixed"]:focus::before {

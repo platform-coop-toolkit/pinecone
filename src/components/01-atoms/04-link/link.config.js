@@ -18,6 +18,34 @@ module.exports = {
 			context: {
 				href: '#',
 			}
+		},
+		{
+			name: 'default-inverse',
+			label: 'Default (Inverse)',
+			context: {
+				className: 'link--inverse',
+				href: '/internal-link--inverse',
+				bodyClass: 'has-dark-mint-500-background-color'
+			}
+		},
+		{
+			name: 'external-inverse',
+			label: 'External (Inverse)',
+			context: {
+				href: 'https://example.com/inverse',
+				className: 'link--inverse',
+				rel: 'external',
+				bodyClass: 'has-dark-mint-500-background-color'
+			}
+		},
+		{
+			name: 'relative-inverse',
+			label: 'Relative (Inverse)',
+			context: {
+				href: '#inverse',
+				className: 'link--inverse',
+				bodyClass: 'has-dark-mint-500-background-color'
+			}
 		}
 	]
 };

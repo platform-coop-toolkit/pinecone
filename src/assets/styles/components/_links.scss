@@ -1,4 +1,4 @@
-a:not([class]) {
+%link {
 	color: $blue-500;
 	display: inline-block;
 	font-family: $font-family-sans;
@@ -23,7 +23,7 @@ a:not([class]) {
 			content: "";
 			display: inline-block;
 			height: 1.25em;
-			margin-bottom: rem(-5);
+			margin-bottom: -0.3125em;
 			margin-left: 0;
 			mask: url("../images/chevron-right.svg") no-repeat center;
 			mask-size: 100%;
@@ -99,8 +99,74 @@ a:not([class]) {
 			}
 		}
 	}
+
+	&:empty::after {
+		display: none;
+	}
 }
 
-a:empty::after {
-	display: none;
+a:not([class]) {
+	@extend %link;
+}
+
+a.link--inverse,
+.has-blue-400-background-color a:not([class]) {
+	@extend %link;
+
+	color: $off-white;
+	text-decoration-color: $off-white;
+
+	@supports (mask: url("../images/add.svg")) {
+		&::after {
+			background: $off-white;
+		}
+	}
+
+	&:visited {
+		color: $blue-200;
+		text-decoration-color: $blue-200;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: $blue-200;
+			}
+		}
+	}
+
+	&:active {
+		color: $green-200;
+		text-decoration-color: $green-200;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: $green-200;
+			}
+		}
+	}
+
+	&:focus {
+		background: $blue-200;
+		color: $black;
+		outline: none;
+		text-decoration: none;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: $black;
+			}
+		}
+	}
+
+	&:active:focus {
+		background: unset;
+		color: $green-200;
+		text-decoration: underline;
+		text-decoration-color: $green-200;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: $green-200;
+			}
+		}
+	}
 }
