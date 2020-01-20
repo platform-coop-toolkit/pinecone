@@ -2,27 +2,11 @@ nav {
 	height: rem(70);
 }
 
-[aria-expanded="false"] + * {
-	display: none;
-}
-
 .menu-toggle {
 	position: absolute;
 	right: rem(16);
 	top: rem(15);
 	z-index: 2;
-
-	&[aria-expanded="true"] {
-		@extend .button--inverse;
-
-		* + svg {
-			margin-left: 0;
-		}
-
-		svg + * {
-			margin-right: 0;
-		}
-	}
 }
 
 .menu {
@@ -47,12 +31,28 @@ nav {
 	display: none;
 }
 
+[aria-expanded="false"] + * {
+	display: none;
+}
+
 [aria-expanded="true"] .icon--open {
 	display: none;
 }
 
 [aria-expanded="true"] .menu-toggle__label {
 	@include visually-hidden();
+}
+
+.menu-toggle[aria-expanded="true"] {
+	@extend .button--inverse;
+
+	* + svg {
+		margin-left: 0;
+	}
+
+	svg + * {
+		margin-right: 0;
+	}
 }
 
 .menu__item {
