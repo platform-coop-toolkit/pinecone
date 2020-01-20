@@ -36,7 +36,7 @@
 		<div class="wrap container" role="document">
       		<div class="content">
 				<main>
-				{% if not _target.context.inBanner %}{{ yield | safe }}{% endif %}
+				{% if not _target.context.inBanner and not _target.context.inFooter %}{{ yield | safe }}{% endif %}
 				</main>
 				{% if _target.context.hasSidebar %}
 				<aside class="sidebar">
@@ -46,7 +46,7 @@
 		</div>
 		{% if _target.context.hasFooter %}
 		<footer class="content-info">
-  			<div class="container"></div>
+  			<div class="container">{% if _target.context.inFooter %}{{ yield | safe }}{% else %}{% render '@footer' %}{% endif %}</div>
   		</footer>
 		{% endif %}
 		<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.inert"></script>
