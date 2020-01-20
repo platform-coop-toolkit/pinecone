@@ -138,18 +138,24 @@
 	}
 
 	.home__feed {
-		.meta-card-wrapper {
+		.meta-card-wrapper,
+		> .card-wrapper {
 			display: grid;
 			grid-column-gap: $gutter;
 			grid-template-columns: repeat(3, 1fr);
 		}
 
-		.card-wrapper {
+
+		.meta-card-wrapper > .card-wrapper {
 			@include grid-column-span(2, 3);
 		}
 
 		.cards {
 			grid-template-columns: repeat(2, 1fr);
+		}
+
+		> .card-wrapper .cards {
+			@include grid-column-span(2, 3);
 		}
 	}
 }
