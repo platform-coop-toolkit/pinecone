@@ -1,5 +1,6 @@
 .page.home .page-header {
 	color: $white;
+	padding-bottom: rem(70);
 	position: relative;
 
 	@include full-width-background($blue-500);
@@ -74,13 +75,77 @@
 }
 
 @include breakpoint-up(sm) {
+	.page.home main {
+		@include grid-column-span(8, 8);
+	}
+
 	.home__search .search-form {
 		top: rem(-30);
+	}
+
+	.home__browse {
+		display: grid;
+		grid-column-gap: $gutter;
+		grid-template-columns: repeat(4, 1fr);
+
+		h2 {
+			@include grid-column-span(4, 4);
+		}
+
+		.link-list {
+			@include grid-column-span(4, 4);
+
+			display: grid;
+			grid-column-gap: $gutter;
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.wp-block-button {
+			@include grid-column-span(2, 4, 2);
+		}
 	}
 
 	.home__feed {
 		.cards {
 			display: grid;
 		}
+	}
+}
+
+@include breakpoint-up(lg) {
+	.page.home main {
+		@include grid-column-span(12, 12);
+	}
+
+	.home__browse {
+		grid-template-columns: repeat(12, 1fr);
+		padding-bottom: rem(68);
+		padding-top: rem(36);
+
+		h2 {
+			@include grid-column-span(12, 12);
+		}
+
+		.link-list {
+			@include grid-column-span(8, 12);
+		}
+
+		.wp-block-button {
+			@include grid-column-span(4, 12, 9);
+
+			margin-top: rem(24);
+		}
+	}
+
+	.home__feed {
+		.card-wrapper {
+			width: calc((2 / 3 * 100%) - (#{$gutter} / 3));
+		}
+	}
+}
+
+@include breakpoint-up(xl) {
+	.page.home main {
+		@include grid-column-span(12, 16, 3);
 	}
 }
