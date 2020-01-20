@@ -1,9 +1,5 @@
 .home .menu-toggle {
-	color: $off-white;
-
-	&:focus {
-		border-color: $off-white;
-	}
+	@extend .button--inverse;
 }
 
 @include breakpoint-up(md) {
