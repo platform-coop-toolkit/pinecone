@@ -141,6 +141,10 @@
 		.card-wrapper {
 			width: calc((2 / 3 * 100%) - (#{$gutter} / 3));
 		}
+
+		.cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 }
 
