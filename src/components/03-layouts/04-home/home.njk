@@ -42,16 +42,21 @@
 	<h2>{{ feed.title }}</h2>
 	<hr class="is-style-thick has-grey-200-background-color">
 	<h3><a href="/most-viewed">{{ 'Most viewed' }}</a></h3>
-	<div class="card-wrapper">
-		<ul class="cards">
-		{% for card in cards %}
-			{% if loop.index < 5 %}
-			{% render '@card--resource', card %}
-			{% endif %}
-		{% endfor %}
-		</ul>
+	<div class="meta-card-wrapper">
+		<div class="card-wrapper">
+			<ul class="cards">
+			{% for card in cards %}
+				{% if loop.index < 5 %}
+				{% render '@card--resource', card %}
+				{% endif %}
+			{% endfor %}
+			</ul>
+		</div>
+		<div class="info-cards">
+			{% render '@info-card', {standAlone: true}, true %}
+			{% render '@info-card', {standAlone: true, icon: false, title: 'Not sure how to use the library?', description: false, actionLabel: 'Learn how'}, true %}
+		</div>
 	</div>
-	{# TODO: Add informational cards. #}
 	<hr class="is-style-thick has-grey-200-background-color">
 	<h3><a href="/most-recent">{{ 'Recently published' }}</a></h3>
 	<div class="card-wrapper">

@@ -138,8 +138,14 @@
 	}
 
 	.home__feed {
+		.meta-card-wrapper {
+			display: grid;
+			grid-column-gap: $gutter;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
 		.card-wrapper {
-			width: calc((2 / 3 * 100%) - (#{$gutter} / 3));
+			@include grid-column-span(2, 3);
 		}
 
 		.cards {

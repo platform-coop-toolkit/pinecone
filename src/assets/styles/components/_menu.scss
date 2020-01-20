@@ -2,6 +2,10 @@ nav {
 	height: rem(70);
 }
 
+[aria-expanded="false"] + * {
+	display: none;
+}
+
 .menu-toggle {
 	position: absolute;
 	right: rem(16);
@@ -11,9 +15,13 @@ nav {
 	&[aria-expanded="true"] {
 		@extend .button--inverse;
 
-		padding-left: 0;
-		padding-right: 0;
-		right: rem(8);
+		* + svg {
+			margin-left: 0;
+		}
+
+		svg + * {
+			margin-right: 0;
+		}
 	}
 }
 
@@ -36,10 +44,6 @@ nav {
 }
 
 [aria-expanded="false"] .icon--close {
-	display: none;
-}
-
-[aria-expanded="false"] + * {
 	display: none;
 }
 

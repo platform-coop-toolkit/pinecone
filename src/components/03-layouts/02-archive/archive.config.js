@@ -79,6 +79,7 @@ module.exports = {
 	context: {
 		bodyClass: 'archive post-type-archive taxonomy',
 		hasMenu: true,
+		hasFooter: true,
 		title: 'Browse all',
 		currentTags: [
 			{label: 'Platform cooperativism'},

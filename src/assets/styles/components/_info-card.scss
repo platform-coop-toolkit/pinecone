@@ -1,0 +1,68 @@
+.info-cards {
+	margin: rem(64) (-1 * $gutter);
+	width: 100vw;
+}
+
+.info-card {
+	background-color: $grey-200;
+	padding: rem(28);
+	position: relative;
+
+	button {
+		position: absolute;
+		right: rem(12);
+		top: rem(12);
+	}
+
+	.info-card__title {
+		font-family: $font-family-sans;
+		font-size: rem(22);
+		font-weight: $font-weight-bold;
+
+		svg {
+			display: block;
+			height: rem(40);
+			margin-bottom: rem(6);
+			width: rem(40);
+		}
+	}
+
+	.info-card__description {
+		margin-top: rem(4);
+	}
+
+	.info-card__action {
+		margin-top: rem(16);
+	}
+}
+
+.info-card + .info-card {
+	border-top: solid rem(1) $grey-400;
+}
+
+
+@include breakpoint-up(sm) {
+	.info-cards {
+		display: grid;
+		grid-column-gap: $gutter;
+		grid-template-columns: repeat(2, 1fr);
+		margin: rem(100) 0 0;
+		width: 100%;
+	}
+
+	.info-card,
+	.info-card + .info-card {
+		border-top: solid rem(3) $blue-500;
+	}
+}
+
+@include breakpoint-up(lg) {
+	.info-cards {
+		display: block;
+		margin-top: $gutter;
+	}
+
+	.info-card + .info-card {
+		margin-top: $gutter;
+	}
+}
