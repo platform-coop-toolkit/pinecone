@@ -51,7 +51,6 @@ module.exports = {
 			'name': 'home',
 			'context': {
 				bodyClass: 'home',
-				modifier: 'home'
 			}
 		}
 	]

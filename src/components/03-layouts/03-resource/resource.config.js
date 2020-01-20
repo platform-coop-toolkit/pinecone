@@ -4,6 +4,7 @@ module.exports = {
 	context: {
 		bodyClass: 'single-lc_resource',
 		hasMenu: true,
+		hasFooter: true,
 		title: 'Co-op Creator'
 	}
 };

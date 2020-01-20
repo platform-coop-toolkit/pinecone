@@ -1,6 +1,6 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
-<ul class="link-list">
+<ul class="link-list{% if modifier %} link-list--{{ modifier }}{% endif %}">
 	{% for item in items %}
-	<li class="link-list__item"><a href="{{ item.href }}"{{ 'aria-current=true' if item.current }}>{{ item.label }}</a></li>
+	<li class="link-list__item"><a href="{{ item.href }}"{{ 'aria-current=true' if item.current }}>{% if item.icon %}{% render '@svg', {svg: item.icon, viewBox: '0 0 24 24'}, true %}{% endif %}{{ item.label }}</a></li>
 	{% endfor %}
 </ul>
