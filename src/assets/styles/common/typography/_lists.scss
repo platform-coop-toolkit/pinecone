@@ -1,0 +1,14 @@
+ol,
+ul {
+	counter-reset: list-counter;
+	padding-left: 0;
+}
+
+li {
+	counter-increment: list-counter;
+	margin-bottom: 0;
+}
+
+li::marker {
+	color: $grey-600;
+}

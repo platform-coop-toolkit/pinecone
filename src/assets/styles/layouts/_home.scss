@@ -43,8 +43,12 @@
 .home__feed {
 	padding-top: rem(50);
 
-	hr {
-		margin: rem(48) 0 0 calc(-1 * (50vw - 50%));
+	h3::before {
+		background-color: $grey-200;
+		content: "";
+		display: block;
+		height: rem(16);
+		margin: rem(40) 0 rem(40) calc(-1 * (50vw - 50%));
 		width: 100vw;
 	}
 
@@ -106,8 +110,20 @@
 	}
 
 	.home__feed {
+		h3::before {
+			margin: rem(48) 0 rem(48) calc(-1 * (50vw - 50%));
+		}
+
 		.cards {
 			display: grid;
+		}
+	}
+}
+
+@include breakpoint-up(md) {
+	.home__browse {
+		h3::before {
+			margin: rem(56) 0 rem(56) calc(-1 * (50vw - 50%));
 		}
 	}
 }
