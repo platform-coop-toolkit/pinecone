@@ -124,41 +124,41 @@ module.exports = {
 			[
 				{
 					svg: 'topic',
-					class: 'topic icon--md',
+					class: 'icon icon--topic icon--md',
 					viewBox: '0 0 24 24',
 				},
 				{
 					svg: 'goal',
-					class: 'goal icon--md',
+					class: 'icon icon--goal icon--md',
 					viewBox: '0 0 24 24',
 				},
 				{
 					svg: 'sector',
-					class: 'sector icon--md',
+					class: 'icon icon--sector icon--md',
 					viewBox: '0 0 24 24',
 				},
 				{
 					svg: 'format',
-					class: 'format icon--md',
+					class: 'icon icon--format icon--md',
 					viewBox: '0 0 24 24',
 				},
 			],
 			[
 				{
 					svg: 'language',
-					class: 'language icon--lg',
+					class: 'icon icon--language icon--lg',
 					viewBox: '0 0 32 32',
 				},
 				{
 					svg: 'pcc',
-					class: 'pcc icon--lg',
+					class: 'icon icon--pcc icon--lg',
 					viewBox: '0 0 32 32',
 				},
 			],
 			[
 				{
 					svg: 'browse',
-					class: 'browse icon--xl',
+					class: 'icon icon--browse icon--xl',
 					viewBox: '0 0 40 40',
 				}
 			],
