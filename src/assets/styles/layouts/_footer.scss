@@ -45,14 +45,13 @@ footer {
 	}
 
 	.nav {
-		list-style: none;
 		margin-top: rem(16);
 
-		li {
+		p {
 			line-height: rem(28);
 		}
 
-		li + li {
+		p + p {
 			margin-top: 0;
 		}
 	}
