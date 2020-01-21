@@ -1,7 +1,7 @@
 {% render '@brand' %}
 <nav aria-labelledby="menu-primary-label">
 	<button class="button menu-toggle" aria-expanded="false">
-		{% render '@svg', {svg:'menu', class:'open'}, true %}
+		{% render '@svg', {svg:'menu', class:'icon icon--open'}, true %}
 		{% render '@svg', {svg:'close'}, true %}
 		<span id="menu-primary-label" class="menu-toggle__label">{{ menuTitle }}</span>
 	</button>
@@ -21,7 +21,7 @@
 		<li class="menu-item menu-item--languages menu__submenu-wrapper">
 			<a class="menu__item" href="/en/settings/language/">
 				<span class="menu__label">Language</span>
-				{% render '@svg', {svg:'language', class:'language icon--lg', viewBox: '0 0 30 30'}, true %}
+				{% render '@svg', {svg:'language', class:'icon icon--language icon--lg', viewBox: '0 0 30 30'}, true %}
 			</a>
 			<ul class="menu__submenu">
 				<li class="menu-item"><a aria-current="true" href="/en/" class="menu__item">English</a></li>
