@@ -129,6 +129,10 @@
 		.search-toggle {
 			@extend .button--inverse;
 		}
+
+		.search-form {
+			@extend .search-form--inverse;
+		}
 	}
 }
 

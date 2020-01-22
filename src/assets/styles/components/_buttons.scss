@@ -176,8 +176,16 @@
 		margin-right: 0.25em;
 	}
 
+	svg + .screen-reader-text {
+		margin-right: 0.25em;
+	}
+
 	* + svg {
 		margin-left: 0.25em;
+	}
+
+	.screen-reader-text + svg {
+		margin-left: 0;
 	}
 
 	&:hover {
