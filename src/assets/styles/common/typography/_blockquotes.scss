@@ -1,0 +1,39 @@
+blockquote {
+	margin-left: rem(48);
+	margin-right: 0;
+}
+
+blockquote::before {
+	color: $blue-400;
+	content: "“";
+	font-family: $font-family-serif;
+	font-size: rem(64);
+	margin-left: rem(-48);
+	margin-top: rem(-18);
+	position: absolute;
+}
+
+blockquote * {
+	font-family: $font-family-sans;
+	font-size: rem(18);
+	font-style: italic;
+	font-weight: $font-weight-semibold;
+	line-height: (26 / 18);
+}
+
+blockquote cite {
+	font-family: $font-family-serif;
+	font-size: rem(16);
+	font-style: italic;
+	font-weight: $font-weight-normal;
+}
+
+blockquote cite::before {
+	content: "— ";
+}
+
+@include breakpoint-up(sm) {
+	blockquote {
+		margin-right: rem(48);
+	}
+}

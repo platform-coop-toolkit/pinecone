@@ -1,0 +1,14 @@
+p {
+	line-height: (24 / 16);
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+p strong {
+	font-weight: $font-weight-semibold;
+}
+
+p small {
+	font-size: rem(14);
+	line-height: (20 / 14);
+}

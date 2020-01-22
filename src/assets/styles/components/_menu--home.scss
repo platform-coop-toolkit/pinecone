@@ -24,8 +24,13 @@
 		&[aria-current="page"] {
 			color: $white;
 
+			&:hover,
 			&:focus {
 				color: $blue-500;
+
+				&::after {
+					background: $blue-500;
+				}
 			}
 		}
 	}
