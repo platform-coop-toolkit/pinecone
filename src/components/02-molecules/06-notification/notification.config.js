@@ -4,6 +4,7 @@ module.exports = {
 	title: 'Notification',
 	status: 'wip',
 	context: {
+		icon: 'info',
 		title: 'Notification',
 		content: faker.lorem.sentences( 3 ),
 		standAlone: false,
