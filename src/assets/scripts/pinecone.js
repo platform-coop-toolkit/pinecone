@@ -94,3 +94,8 @@ if ( disclosureLabels ) {
 		new Pinecone.DisclosureButton( label );
 	} );
 }
+
+const searchToggle = document.querySelector( '.search-toggle' );
+if ( searchToggle ) {
+	new Pinecone.SearchToggle( searchToggle );
+}
