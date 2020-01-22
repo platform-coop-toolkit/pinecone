@@ -53,7 +53,8 @@ const pineconeTheme = mandelbrot( {
 	styles: [
 		'default',
 		'/styles/mandelbrot.css'
-	]
+	],
+	favicon: '/images/favicon.png'
 } );
 
 fractal.web.theme( pineconeTheme );

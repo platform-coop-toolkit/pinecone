@@ -1,11 +1,56 @@
 [role="banner"] {
 	background-color: $white;
 	box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
-	width: 100vw;
+	width: 100%;
 }
 
 .home [role="banner"] {
 	background-color: $blue-500;
+}
+
+[role="banner"] .container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+[role="banner"] .brand {
+	color: $blue-500;
+	height: rem(70);
+	margin-left: rem(11);
+	padding: rem(19);
+	width: rem(70);
+
+	svg {
+		height: rem(32);
+		width: rem(32);
+	}
+
+	&:hover {
+		color: $black;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $blue-500;
+		color: $off-white;
+	}
+}
+
+.home [role="banner"] .brand {
+	color: $off-white;
+
+	&:hover {
+		color: $white;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $off-white;
+		color: $blue-500;
+		outline: 0;
+	}
 }
 
 .page-header {
@@ -29,6 +74,17 @@
 	[role="banner"] {
 		padding-left: rem(30);
 		padding-right: rem(120);
+
+		.container {
+			justify-content: space-between;
+		}
+
+		.brand {
+			height: rem(80);
+			margin-left: rem(0);
+			padding: rem(24);
+			width: rem(80);
+		}
 	}
 }
 

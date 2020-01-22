@@ -8,6 +8,15 @@ module.exports = {
 	},
 	variants: [
 		{
+			name: 'Default Inverse',
+			label: 'Default (Inverse)',
+			context: {
+				hasIcon: false,
+				class: 'wp-block-button--inverse',
+				bodyClass: 'has-dark-mint-500-background-color',
+			}
+		},
+		{
 			name: 'Default with Icon',
 			context: {
 				hasIcon: true

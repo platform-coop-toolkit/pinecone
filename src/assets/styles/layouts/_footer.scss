@@ -1,1 +1,75 @@
-// TODO
+footer {
+	background: $dark-mint-500;
+	color: $white;
+	height: auto;
+	margin-top: auto;
+	position: relative;
+	width: 100%;
+
+	.container {
+		margin: 0 auto;
+		max-width: rem(1630);
+	}
+
+	.columns {
+		padding: rem(40) rem(30);
+	}
+
+	.column + .column {
+		border-top: solid rem(3) $off-white;
+		margin-top: rem(60);
+		padding-top: rem(20);
+	}
+
+	.logo {
+		display: inline-block;
+		height: rem(50.5);
+		margin-left: rem(-4);
+		padding: 0 rem(4);
+
+		svg {
+			display: block;
+			height: rem(50.5);
+			margin-bottom: 0;
+			width: rem(172.77);
+		}
+
+		.brand__label {
+			display: block;
+			font-size: rem(12);
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	.nav {
+		margin-top: rem(16);
+
+		p {
+			line-height: rem(28);
+		}
+
+		p + p {
+			margin-top: 0;
+		}
+	}
+}
+
+@include breakpoint-up(lg) {
+	footer .container {
+		max-width: rem(1160);
+		padding-left: 0;
+	}
+
+	footer .columns {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding: rem(60) 0;
+
+		.column + .column {
+			margin-top: 0;
+		}
+	}
+}

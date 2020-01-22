@@ -3,6 +3,7 @@ module.exports = {
 	status: 'wip',
 	context: {
 		bodyClass: 'page',
-		hasMenu: true
+		hasMenu: true,
+		hasFooter: true
 	}
 };

@@ -17,10 +17,18 @@
 		content: "";
 		display: block;
 		height: 100%;
-		left: calc(-1 * ((100vw - 100%) / 2));
+		margin-left: 50%;
+		overflow: hidden;
 		position: absolute;
 		top: 0;
+		transform: translateX(-50%);
 		width: 100vw;
 		z-index: -1;
 	}
+}
+
+.full-bleed-blue-500 {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
 }

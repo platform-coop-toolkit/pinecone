@@ -7,7 +7,7 @@
 		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 		<link rel="stylesheet" href="{{ '/styles/pinecone.css' | path }}">
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | path }}">
-		<link rel="icon" type="image/ico" href="{{ '/themes/mandelbrot/favicon.ico' | path }}" >
+		<link rel="icon" href="{{ '/images/favicon.png' | path }}" >
 		<title>{{ _target.title }} | Pinecone</title>
 	</head>
 
@@ -16,7 +16,6 @@
 			<div class="container">
 				{% if _target.context.inBanner %}{{ yield | safe }}{% endif %}
 				{% if _target.context.hasMenu %}
-				{# <a class="brand" href="/">Pinecone</a> #}
 				{% render '@menu', {
 					menuItems: {
 						'menu-item-1': {
@@ -37,7 +36,7 @@
 		<div class="wrap container" role="document">
       		<div class="content">
 				<main>
-				{% if not _target.context.inBanner %}{{ yield | safe }}{% endif %}
+				{% if not _target.context.inBanner and not _target.context.inFooter %}{{ yield | safe }}{% endif %}
 				</main>
 				{% if _target.context.hasSidebar %}
 				<aside class="sidebar">
@@ -45,9 +44,11 @@
 				{% endif %}
 			</div>
 		</div>
+		{% if _target.context.hasFooter %}
 		<footer class="content-info">
-  			<div class="container"></div>
+  			<div class="container">{% if _target.context.inFooter %}{{ yield | safe }}{% else %}{% render '@footer' %}{% endif %}</div>
   		</footer>
+		{% endif %}
 		<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.inert"></script>
 		<script src="{{ '/scripts/pinecone.umd.js' | path }}"></script>
 		<script src="{{ '/scripts/pinecone.js' | path }}"></script>

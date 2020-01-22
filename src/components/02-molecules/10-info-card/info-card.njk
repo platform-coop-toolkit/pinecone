@@ -1,0 +1,19 @@
+{% if not standAlone %}<div class="spacer"></div>{% endif %}
+<div class="info-card">
+	{% render '@button', {
+		label: 'Close',
+		labelVisuallyHidden: true,
+		icon: 'close',
+		standAlone: true
+	}, true %}
+	<p class="info-card__title">
+		{% if icon %}{% render '@svg', {svg:icon, viewBox: '0 0 32 32'}, true %}{% endif %}
+		{{ title }}
+	</p>
+	{% if description %}
+	<p class="info-card__description">{{ description }}</p>
+	{% endif %}
+	<p class="info-card__action">
+		<a href="/settings/language">{{ actionLabel }}</a>
+	</p>
+</div>
