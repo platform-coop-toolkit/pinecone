@@ -83,6 +83,12 @@ class Menu {
 		} else {
 			const btn = event.target.closest( this.config.dropdownButtonSelector );
 			const expanded = 'true' === btn.getAttribute( 'aria-expanded' ) || false;
+			if ( !expanded ) {
+				const dropdownButtons = this.menu.querySelectorAll( 'button' );
+				Array.prototype.forEach.call( dropdownButtons, dropdownButton => {
+					dropdownButton.setAttribute( 'aria-expanded', false );
+				} );
+			}
 			btn.setAttribute( 'aria-expanded', !expanded );
 		}
 	}
