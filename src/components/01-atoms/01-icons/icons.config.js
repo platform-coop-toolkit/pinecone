@@ -15,6 +15,9 @@ module.exports = {
 					svg: 'edit',
 				},
 				{
+					svg: 'info',
+				},
+				{
 					svg: 'success',
 				},
 				{
@@ -46,6 +49,9 @@ module.exports = {
 				},
 				{
 					svg: 'settings',
+				},
+				{
+					svg: 'customize',
 				},
 				{
 					svg: 'export',
