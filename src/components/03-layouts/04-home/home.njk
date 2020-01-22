@@ -3,7 +3,6 @@
 	<p class="subhead">{{ subhead }}</p>
 </div>
 <section class="home__search">
-	<h2 class="screen-reader-text">{{ search.title }}</h2>
 	{% render '@search', {standAlone: true, modifier: 'inverse', placeholder: 'Search resource name, publisher, or topic…'}, true %}
 	{# TODO: Add saved searches. #}
 </section>
@@ -52,10 +51,10 @@
 			{% endfor %}
 			</ul>
 		</div>
-		<div class="info-cards">
+		<aside class="info-cards">
 			{% render '@info-card', {standAlone: true}, true %}
 			{% render '@info-card', {standAlone: true, icon: false, title: 'Not sure how to use the library?', description: false, actionLabel: 'Learn how'}, true %}
-		</div>
+		</aside>
 	</div>
 	<h3><a href="/most-recent">{{ 'Recently published' }}</a></h3>
 	<div class="card-wrapper">
