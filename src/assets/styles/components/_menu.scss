@@ -306,7 +306,7 @@ nav {
 	}
 
 	.menu-item--languages .menu__label {
-		display: none;
+		@include visually-hidden();
 	}
 
 	.menu-item--languages .icon--language {
