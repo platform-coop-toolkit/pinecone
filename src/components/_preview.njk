@@ -16,21 +16,12 @@
 			<div class="container">
 				{% if _target.context.inBanner %}{{ yield | safe }}{% endif %}
 				{% if _target.context.hasMenu %}
-				{% render '@menu', {
-					menuItems: {
-						'menu-item-1': {
-							current: true
-						},
-						'menu-item-4': {
-							current: false,
-							submenuItems: {
-								'submenu-item-1': {
-									current: false
-								}
-							}
-						}
-					}
-				}, true %}{% endif %}
+				{% if _target.title === 'Home: Default' %}
+					{% render '@menu', {modifier: 'home'}, true %}
+				{% else %}
+					{% render '@menu' %}
+				{% endif %}
+				{% endif %}
 			</div>
 		</header>
 		<div class="wrap container" role="document">

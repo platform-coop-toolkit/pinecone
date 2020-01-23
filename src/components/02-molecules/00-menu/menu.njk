@@ -1,37 +1,43 @@
 {% render '@brand' %}
-<nav aria-labelledby="menu-primary-label">
-	<button class="button menu-toggle" aria-expanded="false">
-		{% render '@svg', {svg:'menu', class:'icon icon--open'}, true %}
-		{% render '@svg', {svg:'close'}, true %}
-		<span id="menu-primary-label" class="menu-toggle__label">{{ menuTitle }}</span>
-	</button>
-	<ul class="menu{% if modifier %} menu--{{ modifier }}{% endif %}">
-		{% for id, menuItem in menuItems %}
-		<li{% if menuItem.submenuItems %} class="menu__submenu-wrapper{% if menuItem.current %} current_page_ancestor current-menu-ancestor{% endif %}"{% endif %}>
-			<a class="menu__item" {% if menuItem.current %}aria-current="page" {% endif %}href="#{{ id }}">{{ menuItem.label }}</a>
-			{% if menuItem.submenuItems %}
-			<ul class="menu__submenu">
-				{% for id, submenuItem in menuItem.submenuItems %}
-				<li><a {% if submenuItem.current %}aria-current="page"{% endif %}class="menu__item" href="#{{ id }}">{{ submenuItem.label }}</a></li>
-				{% endfor %}
-			</ul>
-			{% endif %}
-		</li>
-		{% endfor %}
-		<li class="menu-item menu-item--languages menu__submenu-wrapper">
-			<a class="menu__item" href="/en/settings/language/">
-				<span class="menu__label">Language</span>
-				{% render '@svg', {svg:'language', class:'icon icon--language icon--lg', viewBox: '0 0 30 30'}, true %}
-			</a>
-			<ul class="menu__submenu">
-				<li class="menu-item"><a aria-current="true" href="/en/" class="menu__item">English</a></li>
-				<li class="menu-item"><a href="/pt/" class="menu__item">Português</a></li>
-				<li class="menu-item"><a href="/sv/" class="menu__item">Svenska</a></li>
-				<li class="menu-item"><a href="/it/" class="menu__item">Italiano</a></li>
-				<li class="menu-item"><a href="/es/" class="menu__item">Español</a></li>
-				<li class="menu-item"><a href="/fr/" class="menu__item">Français</a></li>
-				<li class="menu-item"><a href="/de/" class="menu__item">Deutsch</a></li>
-			</ul>
-		</li>
-	</ul>
-</nav>
+<div class="inner">
+	{% if modifier !== 'home' %}
+	<button class="button search-toggle" aria-expanded="false"><span class="screen-reader-text">Search </span>{% render '@svg', {svg: 'search'}, true %}</button>
+	{% render '@search', {standAlone: true}, true %}
+	{% endif %}
+	<nav aria-labelledby="menu-primary-label">
+		<button class="button menu-toggle" aria-expanded="false">
+			{% render '@svg', {svg:'menu', class:'icon icon--open'}, true %}
+			{% render '@svg', {svg:'close'}, true %}
+			<span id="menu-primary-label" class="menu-toggle__label">{{ menuTitle }}</span>
+		</button>
+		<ul class="menu{% if modifier %} menu--{{ modifier }}{% endif %}">
+			{% for id, menuItem in menuItems %}
+			<li{% if menuItem.submenuItems %} class="menu__submenu-wrapper{% if menuItem.current %} current_page_ancestor current-menu-ancestor{% endif %}"{% endif %}>
+				<a class="menu__item" {% if menuItem.current %}aria-current="page" {% endif %}href="#{{ id }}">{{ menuItem.label }}</a>
+				{% if menuItem.submenuItems %}
+				<ul class="menu__submenu">
+					{% for id, submenuItem in menuItem.submenuItems %}
+					<li><a {% if submenuItem.current %}aria-current="page"{% endif %}class="menu__item" href="#{{ id }}">{{ submenuItem.label }}</a></li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</li>
+			{% endfor %}
+			<li class="menu-item menu-item--languages menu__submenu-wrapper">
+				<a class="menu__item" href="/en/settings/language/">
+					<span class="menu__label">Language</span>
+					{% render '@svg', {svg:'language', class:'icon icon--language icon--lg', viewBox: '0 0 30 30'}, true %}
+				</a>
+				<ul class="menu__submenu">
+					<li class="menu-item"><a aria-current="true" href="/en/" class="menu__item">English</a></li>
+					<li class="menu-item"><a href="/pt/" class="menu__item">Português</a></li>
+					<li class="menu-item"><a href="/sv/" class="menu__item">Svenska</a></li>
+					<li class="menu-item"><a href="/it/" class="menu__item">Italiano</a></li>
+					<li class="menu-item"><a href="/es/" class="menu__item">Español</a></li>
+					<li class="menu-item"><a href="/fr/" class="menu__item">Français</a></li>
+					<li class="menu-item"><a href="/de/" class="menu__item">Deutsch</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div>

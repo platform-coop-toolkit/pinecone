@@ -1,25 +1,30 @@
 nav {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
 	height: rem(70);
+	margin: 0 0 0 rem(16);
+	position: relative;
 }
 
 .menu-toggle {
-	position: absolute;
-	right: rem(16);
-	top: rem(15);
-	z-index: 2;
+	margin-right: rem(16);
+	position: relative;
+	z-index: 3;
 }
 
 .menu {
 	background: $dark-mint-400;
 	display: block;
-	left: 0;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 	padding-top: rem(70);
 	position: absolute;
+	right: 0;
+	top: 0;
 	width: 100vw;
-	z-index: 1;
+	z-index: 2;
 
 	li {
 		border-top: solid rem(1) $dark-mint-500;
@@ -45,6 +50,7 @@ nav {
 
 .menu-toggle[aria-expanded="true"] {
 	@extend .button--inverse;
+	margin-right: rem(6);
 
 	* + svg {
 		margin-left: 0;
@@ -198,6 +204,7 @@ nav {
 @include breakpoint-up(md) {
 	nav {
 		height: rem(80);
+		margin-left: auto;
 	}
 
 	.menu-toggle {
