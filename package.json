@@ -1,6 +1,6 @@
 {
   "name": "@platform-coop-toolkit/pinecone",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "description": "Styleguide and pattern library for the Platform Cooperativism Consortium and the Platform Co-op Resource Library.",
   "scripts": {
     "assets:development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
