@@ -16,7 +16,11 @@
 			<div class="container">
 				{% if _target.context.inBanner %}{{ yield | safe }}{% endif %}
 				{% if _target.context.hasMenu %}
-				{% render '@menu' %}
+				{% if _target.title === 'Home: Default' %}
+					{% render '@menu', {modifier: 'home'}, true %}
+				{% else %}
+					{% render '@menu' %}
+				{% endif %}
 				{% endif %}
 			</div>
 		</header>
