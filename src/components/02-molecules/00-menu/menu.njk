@@ -2,7 +2,7 @@
 <div class="inner">
 	{% if modifier !== 'home' %}
 	<button class="button search-toggle" aria-expanded="false"><span class="screen-reader-text">Search </span>{% render '@svg', {svg: 'search'}, true %}</button>
-	{% render '@search', {standAlone: true} %}
+	{% render '@search', {standAlone: true}, true %}
 	{% endif %}
 	<nav aria-labelledby="menu-primary-label">
 		<button class="button menu-toggle" aria-expanded="false">
