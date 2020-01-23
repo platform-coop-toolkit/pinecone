@@ -47,6 +47,10 @@
 		display: none;
 	}
 
+	.search-form label {
+		width: auto;
+	}
+
 	@include breakpoint-down(xs) {
 		[aria-expanded="true"] + .search-form {
 			background-color: $blue-500;
@@ -125,14 +129,6 @@
 			color: $blue-500;
 			outline: 0;
 		}
-
-		.search-toggle {
-			@extend .button--inverse;
-		}
-
-		.search-form {
-			@extend .search-form--inverse;
-		}
 	}
 }
 
@@ -184,10 +180,6 @@
 			}
 		}
 
-		.inner {
-			margin-left: 0;
-		}
-
 		.brand {
 			height: rem(80);
 			margin-left: rem(0);
@@ -198,6 +190,12 @@
 }
 
 @include breakpoint-up(lg) {
+	[role="banner"] {
+		.inner {
+			margin-left: 0;
+		}
+	}
+
 	.page-header {
 		@include grid-column-span(6, 12, 4);
 	}
