@@ -43,6 +43,18 @@
 .home__feed {
 	padding-top: rem(50);
 
+	header {
+		align-items: baseline;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		a {
+			margin-top: 0;
+		}
+	}
+
 	h3::before {
 		background-color: $grey-200;
 		content: "";

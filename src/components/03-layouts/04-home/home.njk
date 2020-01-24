@@ -39,7 +39,10 @@
 	{% render '@call-to-action', {standAlone: true, href: '/browse-all', label: 'Browse all resources', class: 'wp-block-button--inverse'} %}
 </section>
 <section class="home__feed">
-	<h2>{{ feed.title }}</h2>
+	<header>
+		<h2>{{ feed.title }}</h2>
+		<a href="/customize">Customize feed</a>
+	</header>
 	<h3><a href="/most-viewed">{{ 'Most viewed' }}</a></h3>
 	<div class="meta-card-wrapper">
 		<div class="card-wrapper">
