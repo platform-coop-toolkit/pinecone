@@ -32,6 +32,10 @@ blockquote cite::before {
 	content: "— ";
 }
 
+* + blockquote {
+	margin-top: rem(24);
+}
+
 @include breakpoint-up(sm) {
 	blockquote {
 		margin-right: rem(48);
