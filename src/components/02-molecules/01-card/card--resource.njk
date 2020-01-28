@@ -22,7 +22,7 @@
 					</div>
 				{% endif %}
 				{% if date or language %}
-				<div>{% render '@svg', {svg:'info'}, true %}{% if language %}<span class="card__language">{{ language }}</span><span class="card__sep"> &middot; </span>{% endif %}<span class="card__date">{{ date }}</span>{% if date %}{% endif %}</div>
+				<div class="card__info">{% render '@svg', {svg:'info'}, true %}{% if language %}<span class="card__language">{{ language }}</span><span class="card__sep"> &middot; </span>{% endif %}<span class="card__date">{{ date }}</span>{% if date %}{% endif %}</div>
 				{% endif %}
 				{% if topics %}
 				<div class="card__tags">
