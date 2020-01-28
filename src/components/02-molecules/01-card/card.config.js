@@ -25,6 +25,7 @@ module.exports = {
 				topics: ['Commons', 'Policy'],
 				topicCount: 4,
 				href: 'resource',
+				favorite: true,
 				language: 'English'
 			}
 		},

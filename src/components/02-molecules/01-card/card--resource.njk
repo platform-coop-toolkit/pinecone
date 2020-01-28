@@ -2,27 +2,41 @@
 <ul class="cards">
 {% endif %}
 	<li class="card__wrapper">
-		<article class="card card--resource" data-format="{{ format | slugify }}">
+		<article class="card card--resource">
 			<header>
-				{% if href %}
-				<h2 class="card__title" >
+				<h3 class="card__title" >
 					<a href="{{ href }}">{{ title | safe }}</a>
-				</h2>
-				{% endif %}
+				</h3>
 				{% if byline %}
 					<p class="card__byline">By {{ byline | safe }}</p>
 				{% endif %}
-
 			</header>
 			<aside class="card__aside">
-				<div><span class="card__format">{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>{% if publisher %}<span class="card__sep"> &middot; </span><span class="card__publisher">{{ publisher | safe }}</span>{% endif %}</div>
+				<div class="card__meta">
+					<span class="card__format">{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>
+					{% if publisher %}
+					<span class="card__sep"> &middot; </span>
+					<span class="card__publisher">{{ publisher | safe }}</span>
+					{% endif %}
+				</div>
 				{% if locality %}
-					<div class="card__locality">
-						{% render '@svg', {svg:'location'}, true %}{{ locality }}
-					</div>
+				<div class="card__meta">
+					<span class="card__locality">{% render '@svg', {svg:'location'}, true %}{{ locality }}</span>
+				</div>
 				{% endif %}
 				{% if date or language %}
-				<div class="card__info">{% render '@svg', {svg:'info'}, true %}{% if language %}<span class="card__language">{{ language }}</span><span class="card__sep"> &middot; </span>{% endif %}<span class="card__date">{{ date }}</span>{% if date %}{% endif %}</div>
+				<div class="card__meta">
+					{% render '@svg', {svg:'info'}, true %}
+					{% if language %}
+					<span class="card__language">{{ language }}</span>
+					{% endif %}
+					{% if date and language %}
+					<span class="card__sep"> &middot; </span>
+					{% endif %}
+					{% if date %}
+					<span class="card__date">{{ date }}</span>
+					{% endif %}
+				</div>
 				{% endif %}
 				{% if topics %}
 				<div class="card__tags">
@@ -34,10 +48,15 @@
 						{% endfor %}
 					</ul>
 					{% if topicCount > 2 %}
-					<p>+{{ topicCount - 2 }} more</p>
+					<span class="overflow">+{{ topicCount - 2 }} more</span>
 					{% endif %}
 				</div>
-			{% endif %}
+				{% endif %}
+				{% if favorite %}
+				<div class="card__favorite">
+					{% render '@svg', {svg:'favorite-filled'}, true %} Favorited
+				</div>
+				{% endif %}
 			</aside>
 		</article>
 	</li>
