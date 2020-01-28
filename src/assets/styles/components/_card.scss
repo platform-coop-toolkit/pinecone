@@ -11,6 +11,7 @@
 	background-color: $white;
 	border-top: rem(3) solid $blue-500;
 	box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.16);
+	height: 100%;
 	padding: rem(22);
 	position: relative;
 	transition: box-shadow 0.1s;
@@ -34,7 +35,19 @@
 	@include card($blue-500, $white, true);
 }
 
-.card + .card {
+.card__aside {
+	> * + {
+		.card__date,
+		.card__byline,
+		.card__locality,
+		.card__description,
+		.card__tags {
+			margin-top: 0.375rem;
+		}
+	}
+}
+
+.cards .card__wrapper + .card__wrapper {
 	margin-top: rem(30);
 }
 
@@ -70,12 +83,6 @@
 	font-size: rem(14);
 	font-weight: $font-weight-semibold;
 	padding: rem(2) rem(6);
-
-	svg {
-		color: $red-400;
-		margin-right: rem(4);
-		width: 1.25em;
-	}
 }
 
 .card__sep,
@@ -159,6 +166,14 @@
 .card--resource {
 	@include card($red-400, $black, false);
 
+	aside,
+	.card__format {
+		color: $grey-600;
+		font-family: $font-family-serif;
+		font-size: rem(14);
+		font-weight: $font-weight-normal;
+	}
+
 	.card__format {
 		padding: 0;
 	}
@@ -201,7 +216,7 @@
 		}
 	}
 
-	.card {
+	.cards .card__wrapper {
 		margin-bottom: rem(30);
 		width: calc(50% - #{rem(30)} / 2);
 
@@ -219,7 +234,7 @@
 		}
 	}
 
-	.card + .card {
+	.cards .card__wrapper + .card__wrapper {
 		margin-top: 0;
 	}
 }
