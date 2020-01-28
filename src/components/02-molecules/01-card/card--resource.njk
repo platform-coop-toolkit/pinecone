@@ -1,0 +1,46 @@
+{% if not standAlone %}
+<ul class="cards">
+{% endif %}
+	<li>
+		<article class="card card--resource" data-format="{{ format | slugify }}">
+			<header>
+				{% if href %}
+				<h2 class="card__title" >
+					<a href="{{ href }}">{{ title | safe }}</a>
+				</h2>
+				{% endif %}
+				{% if byline %}
+					<p class="card__byline">By {{ byline | safe }}</p>
+				{% endif %}
+
+			</header>
+			<aside class="stack">
+				<div><span class="card__format">{% render '@svg', {svg:formatIcon}, true %} {{ format }}</span>{% if publisher %}<span class="card__sep"> &middot; </span><span class="card__publisher">{{ publisher | safe }}</span>{% endif %}</div>
+				{% if locality %}
+					<div class="card__locality">
+						{% render '@svg', {svg:'location'}, true %}{{ locality }}
+					</div>
+				{% endif %}
+				{% if date or language %}
+				<div>{% render '@svg', {svg:'info'}, true %}{% if language %}<span class="card__language">{{ language }}</span><span class="card__sep"> &middot; </span>{% endif %}<span class="card__date">{{ date }}</span>{% if date %}{% endif %}</div>
+				{% endif %}
+				{% if topics %}
+				<div class="card__tags">
+					<ul class="badges" >
+						{% for tag in topics %}
+							<li class="badge">
+								<span class="screen-reader-text">Topic: </span>{{ tag | replace('-', ' ') }}
+							</li>
+						{% endfor %}
+					</ul>
+					{% if topicCount > 2 %}
+					<p>+{{ topicCount - 2 }} more</p>
+					{% endif %}
+				</div>
+			{% endif %}
+			</aside>
+		</article>
+	</li>
+	{% if not standAlone %}
+	</ul>
+	{% endif %}
