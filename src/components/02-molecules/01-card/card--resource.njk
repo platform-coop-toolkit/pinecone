@@ -13,28 +13,28 @@
 			</header>
 			<aside class="card__aside">
 				<div class="card__meta">
-					<span class="card__format">{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>
+					<span class="card__format"><span class="screen-reader-text">resource format: </span>{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>
 					{% if publisher %}
 					<span class="card__sep"> &middot; </span>
-					<span class="card__publisher">{{ publisher | safe }}</span>
+					<span class="card__publisher"><span class="screen-reader-text">publisher: </span>{{ publisher | safe }}</span>
 					{% endif %}
 				</div>
 				{% if locality %}
 				<div class="card__meta">
-					<span class="card__locality">{% render '@svg', {svg:'location'}, true %}{{ locality }}</span>
+					<span class="card__locality"><span class="screen-reader-text">location of relevance: </span>{% render '@svg', {svg:'location'}, true %}{{ locality }}</span>
 				</div>
 				{% endif %}
 				{% if date or language %}
 				<div class="card__meta">
 					{% render '@svg', {svg:'info'}, true %}
 					{% if language %}
-					<span class="card__language">{{ language }}</span>
+					<span class="card__language"><span class="screen-reader-text">language: </span>{{ language }}</span>
 					{% endif %}
 					{% if date and language %}
 					<span class="card__sep"> &middot; </span>
 					{% endif %}
 					{% if date %}
-					<span class="card__date">{{ date }}</span>
+					<span class="card__date"><span class="screen-reader-text">date published: </span>{{ date }}</span>
 					{% endif %}
 				</div>
 				{% endif %}
