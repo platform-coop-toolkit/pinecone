@@ -173,11 +173,11 @@
 	padding: 0 rem(8);
 
 	svg + * {
-		margin-right: 0.25em;
+		margin-left: 0.25em;
 	}
 
 	svg + .screen-reader-text {
-		margin-right: 0.25em;
+		margin-right: 0;
 	}
 
 	* + svg {
