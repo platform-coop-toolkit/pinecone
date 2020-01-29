@@ -99,3 +99,12 @@ const searchToggle = document.querySelector( '.search-toggle' );
 if ( searchToggle ) {
 	new Pinecone.SearchToggle( searchToggle, searchToggle.nextElementSibling );
 }
+
+const dialogBtn = document.querySelector( '.button--invoke-dialog' );
+if ( dialogBtn ) {
+	new Pinecone.Dialog( dialogBtn, {
+		question: 'Are your sure you want to remove this resource from your favorites?',
+		confirm: 'Yes, remove',
+		dismiss: 'No, don&rsquo;t remove'
+	} );
+}
