@@ -42,14 +42,16 @@
 				<div class="card__tags">
 					<ul class="badges" >
 						{% for tag in topics %}
-							<li class="badge">
-								<span class="screen-reader-text">Topic: </span>{{ tag | replace('-', ' ') }}
-							</li>
+						<li class="badge">
+							<span class="screen-reader-text">Topic: </span>{{ tag | replace('-', ' ') }}
+						</li>
 						{% endfor %}
+						{% if topicCount > 2 %}
+						<li class="overflow">
+							+{{ topicCount - 2 }} more
+						</li>
+						{% endif %}
 					</ul>
-					{% if topicCount > 2 %}
-					<span class="overflow">+{{ topicCount - 2 }} more</span>
-					{% endif %}
 				</div>
 				{% endif %}
 				{% if favorite %}
