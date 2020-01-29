@@ -8,5 +8,6 @@ import Menu from './Menu/index.js';
 import MenuButton from './MenuButton/index.js';
 import NestedCheckbox from './NestedCheckbox/index.js';
 import Notification from './Notification/index.js';
+import SearchToggle from './SearchToggle/index.js';
 
-export default { Accordion, Card, DeselectAll, DisclosureButton, FilterList, Icon, Menu, MenuButton, NestedCheckbox, Notification };
+export default { Accordion, Card, DeselectAll, DisclosureButton, FilterList, Icon, Menu, MenuButton, NestedCheckbox, Notification, SearchToggle };

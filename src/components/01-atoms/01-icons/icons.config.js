@@ -9,6 +9,9 @@ module.exports = {
 					svg: 'favorite',
 				},
 				{
+					svg: 'favorite-filled',
+				},
+				{
 					svg: 'share',
 				},
 				{

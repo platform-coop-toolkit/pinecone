@@ -5,42 +5,61 @@ module.exports = {
 		inBanner: true,
 		menuTitle: 'Menu',
 		menuItems:  {
-			'menu-item-1': {
-				label: 'Menu Item One'
-			},
-			'menu-item-2': {
-				label: 'Menu Item Two'
-			},
-			'menu-item-3': {
-				label: 'Menu Item Three'
-			},
-			'menu-item-4': {
+			'explore': {
+				label: 'Explore',
 				current: true,
-				label: 'Menu Item Four',
 				submenuItems: {
-					'submenu-item-1': {
-						current: true,
-						label: 'Submenu Item One'
+					'browse-all': {
+						label: 'Browse all',
+						current: true
 					},
-					'submenu-item-2': {
-						label: 'Submenu Item Two'
+					'topics': {
+						label: 'Topics'
 					},
-					'submenu-item-3': {
-						label: 'Submenu Item Three'
+					'goals': {
+						label: 'Goals'
+					},
+					'formats': {
+						label: 'Formats'
+					},
+					'sectors': {
+						label: 'Sectors'
 					}
 				}
 			},
-			'menu-item-5': {
-				label: 'Menu Item Five',
+			'getting-started': {
+				label: 'Getting Started',
 				submenuItems: {
-					'submenu-item-1': {
-						label: 'Submenu Item One'
+					'how-to': {
+						label: 'How to use your library'
 					},
-					'submenu-item-2': {
-						label: 'Submenu Item Two'
+					'glossary': {
+						label: 'Glossary'
+					}
+				}
+			},
+			'my-resources': {
+				label: 'My Resources',
+				submenuItems: {
+					'favorites': {
+						label: 'Favorites'
 					},
-					'submenu-item-3': {
-						label: 'Submenu Item Three'
+					'saved-searches': {
+						label: 'Saved searches'
+					}
+				}
+			},
+			'about': {
+				label: 'About',
+			},
+			'settings': {
+				label: 'Settings',
+				submenuItems: {
+					'language': {
+						label: 'Language'
+					},
+					'privacy': {
+						label: 'Privacy'
 					}
 				}
 			}
@@ -51,6 +70,7 @@ module.exports = {
 			'name': 'home',
 			'context': {
 				bodyClass: 'home',
+				modifier: 'home'
 			}
 		}
 	]

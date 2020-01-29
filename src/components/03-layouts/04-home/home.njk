@@ -2,11 +2,11 @@
 	<h1>{{ title | safe }}</h1>
 	<p class="subhead">{{ subhead }}</p>
 </div>
-<div class="home__search">
+<section class="home__search">
 	{% render '@search', {standAlone: true, modifier: 'inverse', placeholder: 'Search resource name, publisher, or topic…'}, true %}
 	{# TODO: Add saved searches. #}
-</div>
-<div class="home__browse">
+</section>
+<section class="home__browse">
 	<h2>{{ browse.title }}</h2>
 	{% render '@link-list', {
 		standAlone: true,
@@ -37,10 +37,12 @@
 		true
 	%}
 	{% render '@call-to-action', {standAlone: true, href: '/browse-all', label: 'Browse all resources', class: 'wp-block-button--inverse'} %}
-</div>
-<div class="home__feed">
-	<h2>{{ feed.title }}</h2>
-	<hr class="is-style-thick has-grey-200-background-color">
+</section>
+<section class="home__feed">
+	<header>
+		<h2>{{ feed.title }}</h2>
+		<a href="/customize">Customize feed</a>
+	</header>
 	<h3><a href="/most-viewed">{{ 'Most viewed' }}</a></h3>
 	<div class="meta-card-wrapper">
 		<div class="card-wrapper">
@@ -52,12 +54,11 @@
 			{% endfor %}
 			</ul>
 		</div>
-		<div class="info-cards">
+		<aside class="info-cards">
 			{% render '@info-card', {standAlone: true}, true %}
 			{% render '@info-card', {standAlone: true, icon: false, title: 'Not sure how to use the library?', description: false, actionLabel: 'Learn how'}, true %}
-		</div>
+		</aside>
 	</div>
-	<hr class="is-style-thick has-grey-200-background-color">
 	<h3><a href="/most-recent">{{ 'Recently published' }}</a></h3>
 	<div class="card-wrapper">
 		<ul class="cards">
@@ -68,4 +69,4 @@
 		{% endfor %}
 		</ul>
 	</div>
-</div>
+</section>

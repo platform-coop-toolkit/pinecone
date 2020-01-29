@@ -22,7 +22,7 @@ module.exports = {
 			context: {
 				modifier: 'inverse',
 				placeholder: 'Search resource name, publisher, or topic…',
-				bodyClass: 'has-blue-400-background-color home'
+				bodyClass: 'has-blue-400-background-color home home__search'
 			}
 		}
 	]

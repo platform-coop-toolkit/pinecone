@@ -2,54 +2,133 @@
 	background-color: $white;
 	box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	width: 100%;
-}
 
-.home [role="banner"] {
-	background-color: $blue-500;
-}
+	.container {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
 
-[role="banner"] .container {
-	align-items: center;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
+	.inner {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		position: relative;
+		width: 100%;
+	}
 
-[role="banner"] .brand {
-	color: $blue-500;
-	height: rem(70);
-	margin-left: rem(11);
-	padding: rem(19);
-	width: rem(70);
+	.brand {
+		color: $blue-500;
+		height: rem(70);
+		margin-left: rem(11);
+		padding: rem(19);
+		width: rem(70);
+	}
 
-	svg {
+	.brand svg {
 		height: rem(32);
 		width: rem(32);
 	}
 
-	&:hover {
+	.brand:hover {
 		color: $black;
+
 	}
 
-	&:focus,
-	&:active {
+	.brand:focus,
+	.brand:active {
 		background-color: $blue-500;
 		color: $off-white;
 	}
-}
 
-.home [role="banner"] .brand {
-	color: $off-white;
-
-	&:hover {
-		color: $white;
+	[aria-expanded="false"] + .search-form {
+		display: none;
 	}
 
-	&:focus,
-	&:active {
-		background-color: $off-white;
-		color: $blue-500;
-		outline: 0;
+	.search-form label {
+		width: auto;
+	}
+
+	@include breakpoint-down(xs) {
+		[aria-expanded="true"] + .search-form {
+			background-color: $blue-500;
+			display: flex;
+			padding: rem(10);
+			position: absolute;
+			right: 0;
+			top: rem(70);
+			width: 100vw;
+			z-index: 3;
+
+			[type="search"] {
+				background-color: $off-white;
+				border-right-color: $grey-300;
+				border-right-width: rem(1);
+
+				&::placeholder {
+					color: transparent;
+				}
+
+				&:hover {
+					border-color: $blue-300;
+				}
+
+				&:focus {
+					border-color: $blue-300;
+					border-right-color: $blue-300;
+					box-shadow: 0 0 0 rem(1) $blue-300 inset;
+				}
+			}
+
+			[type="submit"] {
+				background-color: $blue-50;
+				border-bottom: solid rem(1) $grey-300;
+				border-left: 0;
+				border-right: solid rem(1) $grey-300;
+				border-top: solid rem(1) $grey-300;
+				color: $blue-500;
+				padding-left: rem(4);
+
+				&:hover {
+					background-color: $blue-50;
+					color: $blue-600;
+				}
+
+				&:focus {
+					background-color: $blue-50;
+					border-color: $blue-50;
+					box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset;
+
+					&::before {
+						border-bottom: solid rem(2) $blue-50;
+						border-left: solid rem(2) $blue-50;
+						border-top: solid rem(2) $blue-50;
+						top: rem(-1);
+					}
+				}
+			}
+		}
+	}
+
+	.home & {
+		background-color: $blue-500;
+
+		.brand {
+			color: $off-white;
+		}
+
+		.brand:hover {
+			color: $white;
+		}
+
+		.brand:focus,
+		.brand:active {
+			background-color: $off-white;
+			color: $blue-500;
+			outline: 0;
+		}
 	}
 }
 
@@ -62,6 +141,21 @@
 }
 
 @include breakpoint-up(sm) {
+	[role="banner"] {
+		.inner {
+			justify-content: space-between;
+			margin-left: rem(12);
+		}
+
+		.search-toggle {
+			display: none;
+		}
+
+		[aria-expanded="false"] + .search-form {
+			display: flex;
+		}
+	}
+
 	.page-header {
 		@include grid-column-span(6, 8, 2);
 
@@ -72,11 +166,18 @@
 
 @include breakpoint-up(md) {
 	[role="banner"] {
-		padding-left: rem(30);
-		padding-right: rem(120);
-
 		.container {
-			justify-content: space-between;
+			margin: 0 auto;
+			max-width: rem(1160);
+		}
+
+		@supports (display: $grid) {
+			.container {
+				display: grid;
+				grid-template-columns: 1fr minmax(0, rem(1160)) 1fr;
+				margin: unset;
+				max-width: unset;
+			}
 		}
 
 		.brand {
@@ -90,8 +191,9 @@
 
 @include breakpoint-up(lg) {
 	[role="banner"] {
-		padding-left: rem(110);
-		padding-right: rem(175);
+		.inner {
+			margin-left: 0;
+		}
 	}
 
 	.page-header {
@@ -101,8 +203,18 @@
 
 @include breakpoint-up(xl) {
 	[role="banner"] {
-		padding-left: rem(110);
-		padding-right: rem(175);
+		.container {
+			margin: 0 auto;
+			max-width: rem(1570);
+		}
+
+		@supports (display: $grid) {
+			.container {
+				grid-template-columns: 1fr minmax(0, rem(1570)) 1fr;
+				margin: unset;
+				max-width: unset;
+			}
+		}
 	}
 
 	.page-header {
