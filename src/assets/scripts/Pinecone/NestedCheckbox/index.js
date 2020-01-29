@@ -26,7 +26,6 @@ class NestedCheckbox {
 			...options
 		};
 
-		// this.initDisclosure();
 		this.initCustomCheckbox();
 
 		this.handleChange = this.handleChange.bind( this );
@@ -115,7 +114,7 @@ class NestedCheckbox {
 	 * @param {Event} event
 	 */
 	handleClick( event ) {
-		if ( ! 'checkbox' !== event.target.getAttribute( 'role' ) ) return;
+		if ( 'checkbox' !== event.target.getAttribute( 'role' ) ) return;
 		if ( 'checkbox' === event.target.getAttribute( 'role' ) ) {
 			this.toggleMixedCheckbox( event.target );
 		}
