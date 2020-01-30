@@ -13,9 +13,7 @@
 			</header>
 			<aside class="card__aside">
 				<div class="card__meta">
-					<span class="card__format"><span class="screen-reader-text">resource format: </span>{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>
-					{% if publisher %}
-					{% render '@separator' %}
+					<span class="card__format"><span class="screen-reader-text">resource format: </span>{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>{% if publisher %}{% render '@separator' %}
 					<span class="card__publisher"><span class="screen-reader-text">publisher: </span>{{ publisher | safe }}</span>
 					{% endif %}
 				</div>
@@ -27,15 +25,8 @@
 				{% if date or language %}
 				<div class="card__meta">
 					{% render '@svg', {svg:'info'}, true %}
-					{% if language %}
-					<span class="card__language"><span class="screen-reader-text">language: </span>{{ language }}</span>
-					{% endif %}
-					{% if date and language %}
-					{% render '@separator' %}
-					{% endif %}
-					{% if date %}
-					<span class="card__date"><span class="screen-reader-text">date published: </span>{{ date }}</span>
-					{% endif %}
+					{% if language %}<span class="card__language"><span class="screen-reader-text">language: </span>{{ language }}</span>{% endif %}{% if date and language %}{% render '@separator' %}{% endif %}
+					{% if date %}<span class="card__date"><span class="screen-reader-text">date published: </span>{{ date }}</span>{% endif %}
 				</div>
 				{% endif %}
 				{% if topics %}
