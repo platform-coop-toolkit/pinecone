@@ -18,6 +18,9 @@ module.exports = {
 					svg: 'edit',
 				},
 				{
+					svg: 'save',
+				},
+				{
 					svg: 'info',
 				},
 				{
@@ -97,38 +100,44 @@ module.exports = {
 			],
 			[
 				{
-					svg: 'audio',
-				},
-				{
-					svg: 'case-study',
-				},
-				{
-					svg: 'toolkit',
-				},
-				{
-					svg: 'educational-curriculum',
-				},
-				{
-					svg: 'video',
+					svg: 'academic',
 				},
 				{
 					svg: 'article',
 				},
 				{
+					svg: 'audio',
+				},
+				{
+					svg: 'blog',
+				},
+				{
 					svg: 'book',
 				},
 				{
-					svg: 'academic-paper',
+					svg: 'case-study',
 				},
 				{
-					svg: 'report',
+					svg: 'curriculum',
+				},
+				{
+					svg: 'online-training',
 				},
 				{
 					svg: 'presentation',
 				},
 				{
-					svg: 'online-training',
+					svg: 'report',
 				},
+				{
+					svg: 'template',
+				},
+				{
+					svg: 'toolkit',
+				},
+				{
+					svg: 'video',
+				}
 			],
 			[
 				{
