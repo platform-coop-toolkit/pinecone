@@ -18,11 +18,14 @@ module.exports = {
 				formatIcon: 'article',
 				name: 'Resource',
 				title: 'Data as a common in the sharing economy',
-				byline: 'Centre d&rsquo;économie Paris Nord',
+				byline: 'Carballa Smichowski Bruno',
+				publisher: 'Centre d&rsquo;économie Paris Nord',
 				locality: 'France',
+				date: 2016,
 				topics: ['Commons', 'Policy'],
 				topicCount: 4,
 				href: 'resource',
+				favorite: true,
 				language: 'English'
 			}
 		},

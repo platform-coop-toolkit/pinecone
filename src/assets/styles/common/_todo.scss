@@ -11,3 +11,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .spacer {
 	height: rem(24);
 }
+
+.separator {
+	padding-left: 0.325em;
+	vertical-align: super;
+}

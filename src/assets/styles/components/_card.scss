@@ -11,6 +11,7 @@
 	background-color: $white;
 	border-top: rem(3) solid $blue-500;
 	box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.16);
+	height: 100%;
 	padding: rem(22);
 	position: relative;
 	transition: box-shadow 0.1s;
@@ -30,11 +31,9 @@
 		box-shadow: 0 0 rem(25) transparentize($blue-500, 0.75);
 		padding: rem(22) rem(19) rem(19);
 	}
-
-	@include card($blue-500, $white, true);
 }
 
-.card + .card {
+.cards .card__wrapper + .card__wrapper {
 	margin-top: rem(30);
 }
 
@@ -63,36 +62,18 @@
 	margin-top: rem(22);
 }
 
-.card__format {
-	background: $blue-500;
-	color: $white;
-	font-family: $font-family-sans;
-	font-size: rem(14);
-	font-weight: $font-weight-semibold;
-	padding: rem(2) rem(6);
-
-	svg {
-		color: $red-400;
-		margin-right: rem(4);
-		width: 1.25em;
-	}
-}
-
-.card__sep,
-.card__language {
-	font-family: $font-family-sans;
-	font-size: rem(14);
-}
-
 .card header {
 	position: relative;
 }
 
 .card__title {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
 	font-size: rem(20);
 	font-weight: $font-weight-bold;
 	line-height: (30 / 20);
-	margin-top: rem(12);
+	margin-top: 0;
 
 	a {
 		color: $black;
@@ -120,46 +101,74 @@
 	}
 }
 
-.card__date,
-.card__byline,
-.card__locality,
-.card__description,
-.card__tags {
-	color: $grey-600;
-	font-size: rem(14);
-	margin-top: rem(2);
+.card header + * {
+	margin-top: rem(9);
 }
 
-.card__date,
-.card__locality {
+.card__byline,
+.card__meta,
+.card__description,
+.card__favorite {
+	color: $grey-600;
+	font-size: rem(14);
+	margin-top: rem(9);
+}
+
+.card__byline,
+.card__meta {
 	svg {
 		height: 1.125em;
-		margin-bottom: rem(-2);
-		margin-right: 0;
 	}
 }
 
+.card__meta {
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+.card__format {
+	background: $blue-500;
+	color: $white;
+	display: inline-block;
+	font-family: $font-family-sans;
+	font-size: rem(14);
+	font-weight: $font-weight-semibold;
+	margin-bottom: rem(12);
+	padding: rem(2) rem(6);
+}
+
 .card__tags {
-	margin-top: rem(2);
+	margin-top: rem(6);
 
 	.badges {
 		display: inline-flex;
 	}
 
-	p {
-		display: inline;
-		margin-left: rem(8);
+	.overflow {
+		color: $grey-600;
+		font-size: rem(14);
+		margin-left: rem(4);
 	}
 }
 
-.card header + * {
-	margin-top: rem(6);
+.card__favorite {
+	color: $black;
+	font-weight: $font-weight-bold;
+	text-align: right;
+
+	svg {
+		color: $red-500;
+	}
 }
 
 .card--resource {
 	@include card($red-400, $black, false);
 
 	.card__format {
+		color: inherit;
+		display: inline;
+		font-family: inherit;
+		font-weight: inherit;
 		padding: 0;
 	}
 }
@@ -201,7 +210,7 @@
 		}
 	}
 
-	.card {
+	.cards .card__wrapper {
 		margin-bottom: rem(30);
 		width: calc(50% - #{rem(30)} / 2);
 
@@ -219,7 +228,7 @@
 		}
 	}
 
-	.card + .card {
+	.cards .card__wrapper + .card__wrapper {
 		margin-top: 0;
 	}
 }
@@ -247,7 +256,7 @@
 		}
 	}
 
-	.card {
+	.cards .card__wrapper {
 		margin-bottom: rem(30);
 		margin-left: rem(30);
 		width: calc((100% - (#{rem(30)} * 2)) / 3);
