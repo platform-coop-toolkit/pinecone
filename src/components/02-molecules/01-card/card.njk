@@ -13,7 +13,7 @@
 					{% if format %}<span class="card__format">{{ format }}</span><span class="screen-reader-text">: </span>{% endif %}<a {% if externalLink %}rel="external" {% endif %}href="{{ href }}">{{ title | safe }}</a>
 				</h3>
 				{% if byline %}
-					<p class="card__byline">By {{ byline | safe }}</p>
+					<p class="card__byline">{% render '@svg', {svg:'author'}, true %} By {{ byline | safe }}</p>
 				{% endif %}
 			</header>
 			<aside class="card__aside">

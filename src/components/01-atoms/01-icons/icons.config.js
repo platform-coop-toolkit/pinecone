@@ -15,6 +15,9 @@ module.exports = {
 					svg: 'share',
 				},
 				{
+					svg: 'author'
+				},
+				{
 					svg: 'edit',
 				},
 				{
