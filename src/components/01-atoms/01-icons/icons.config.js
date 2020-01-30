@@ -121,6 +121,9 @@ module.exports = {
 					svg: 'curriculum',
 				},
 				{
+					svg: 'document',
+				},
+				{
 					svg: 'online-training',
 				},
 				{
