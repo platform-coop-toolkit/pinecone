@@ -1,0 +1,58 @@
+{% if not standAlone %}
+<ul class="cards">
+{% endif %}
+	<li class="card__wrapper">
+		<article class="card card--resource">
+			<header>
+				<h3 class="card__title" >
+					<a href="{{ href }}">{{ title | safe }}</a>
+				</h3>
+				{% if byline %}
+					<p class="card__byline">By {{ byline | safe }}</p>
+				{% endif %}
+			</header>
+			<aside class="card__aside">
+				<div class="card__meta">
+					<span class="card__format"><span class="screen-reader-text">resource format: </span>{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>{% if publisher %}{% render '@separator' %}
+					<span class="card__publisher"><span class="screen-reader-text">publisher: </span>{{ publisher | safe }}</span>
+					{% endif %}
+				</div>
+				{% if locality %}
+				<div class="card__meta">
+					<span class="card__locality"><span class="screen-reader-text">location of relevance: </span>{% render '@svg', {svg:'location'}, true %}{{ locality }}</span>
+				</div>
+				{% endif %}
+				{% if date or language %}
+				<div class="card__meta">
+					{% render '@svg', {svg:'info'}, true %}
+					{% if language %}<span class="card__language"><span class="screen-reader-text">language: </span>{{ language }}</span>{% endif %}{% if date and language %}{% render '@separator' %}{% endif %}
+					{% if date %}<span class="card__date"><span class="screen-reader-text">date published: </span>{{ date }}</span>{% endif %}
+				</div>
+				{% endif %}
+				{% if topics %}
+				<div class="card__tags">
+					<ul class="badges" >
+						{% for tag in topics %}
+						<li class="badge">
+							<span class="screen-reader-text">Topic: </span>{{ tag | replace('-', ' ') }}
+						</li>
+						{% endfor %}
+						{% if topicCount > 2 %}
+						<li class="overflow">
+							+{{ topicCount - 2 }} more
+						</li>
+						{% endif %}
+					</ul>
+				</div>
+				{% endif %}
+				{% if favorite %}
+				<div class="card__favorite">
+					{% render '@svg', {svg:'favorite-filled'}, true %} Favorited
+				</div>
+				{% endif %}
+			</aside>
+		</article>
+	</li>
+	{% if not standAlone %}
+	</ul>
+	{% endif %}

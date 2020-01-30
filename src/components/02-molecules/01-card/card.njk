@@ -1,61 +1,44 @@
 {% if not standAlone %}
 <ul class="cards">
 {% endif %}
-	<li class="card{% if modifier %} card--{{ modifier }}{% endif %}" data-format="{{ format | slugify }}">
-		{% if image %}
+	<li class="card__wrapper">
+		<article class="card{% if modifier %} card--{{ modifier }}{% endif %}">
+			{% if image %}
 			<figure class="card__image">
 				<img src="{{ image }}" alt="Image for this {{ modifier }}."/>
 			</figure>
-		{% endif %}
-		<header>
-			{% if format %}
-				<span class="card__format">
-					{% if modifier === 'resource' %}
-						{% render '@svg', {svg:formatIcon}, true %}
-					{% endif %}{{ format }}</span>{% endif %}
-			{% if language %}
-			<span class="card__sep"> &middot; </span>
-			<span class="card__language">{{ language }}</span>
 			{% endif %}
-			{% if href %}
-				<h2 class="card__title" >
-					<a {% if externalLink %}rel="external" {% endif %}href="{{ href }}">{{ title | safe }}</a>
-				</h2>
-			{% endif %}
-		</header>
-		{% if date %}
-			<p class="card__date">
-				{% if modifier === 'event' %}
-					{% render '@svg', {svg:'calendar'}, true %}{{ date }}
-				{% else %}
-					{{ date }}
+			<header>
+				<h3 class="card__title" >
+					{% if format %}<span class="card__format">{{ format }}</span><span class="screen-reader-text">: </span>{% endif %}<a {% if externalLink %}rel="external" {% endif %}href="{{ href }}">{{ title | safe }}</a>
+				</h3>
+				{% if byline %}
+					<p class="card__byline">By {{ byline | safe }}</p>
 				{% endif %}
-			</p>
-		{% endif %}
-		{% if byline %}
-			<p class="card__byline">By {{ byline | safe }}</p>
-		{% endif %}
-		{% if description %}
-			<p class="card__description">{{ description }}</p>{% endif %}
-			{% if locality %}
-				<p class="card__locality">
-					{% render '@svg', {svg:'location'}, true %}{{ locality }}</p>
-			{% endif %}
-			{% if topics %}
-				<div class="card__tags">
-					<ul class="badges" >
-						{% for tag in topics %}
-							<li class="badge">
-								<span class="screen-reader-text">Topic: </span>{{ tag | replace('-', ' ') }}
-							</li>
-						{% endfor %}
-					</ul>
-					{% if topicCount > 2 %}
-					<p>+{{ topicCount - 2 }} more</p>
+			</header>
+			<aside class="card__aside">
+				{% if date %}
+				<div class="card__meta">
+					<span class="card__date">
+					{% if modifier === 'event' %}
+						<span class="screen-reader-text">event date: </span>{% render '@svg', {svg:'calendar'}, true %}{{ date }}
+					{% else %}
+						<span class="screen-reader-text">date published: </span>{{ date }}
 					{% endif %}
+					</span>
 				</div>
-			{% endif %}
-		</li>
-	{% if not standAlone %}
-	</ul>
-	{% endif %}
+				{% endif %}
+				{% if locality %}
+				<div class="card__meta">
+					<span class="card__locality"><span class="screen-reader-text">location: </span>{% render '@svg', {svg:'location'}, true %}{{ locality }}</span>
+				</div>
+				{% endif %}
+				{% if description %}
+				<div class="card__description">{{ description }}</div>
+				{% endif %}
+			</aside>
+		</article>
+	</li>
+{% if not standAlone %}
+</ul>
+{% endif %}
