@@ -15,7 +15,7 @@
 				<div class="card__meta">
 					<span class="card__format"><span class="screen-reader-text">resource format: </span>{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>
 					{% if publisher %}
-					<span class="card__sep"> &middot; </span>
+					{% render '@separator' %}
 					<span class="card__publisher"><span class="screen-reader-text">publisher: </span>{{ publisher | safe }}</span>
 					{% endif %}
 				</div>
@@ -31,7 +31,7 @@
 					<span class="card__language"><span class="screen-reader-text">language: </span>{{ language }}</span>
 					{% endif %}
 					{% if date and language %}
-					<span class="card__sep"> &middot; </span>
+					{% render '@separator' %}
 					{% endif %}
 					{% if date %}
 					<span class="card__date"><span class="screen-reader-text">date published: </span>{{ date }}</span>
