@@ -8,6 +8,12 @@ module.exports = {
 	},
 	variants: [
 		{
+			name: 'External',
+			context: {
+				external: true,
+			}
+		},
+		{
 			name: 'Inverse',
 			context: {
 				modifier: 'inverse',

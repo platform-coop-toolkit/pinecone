@@ -1,4 +1,4 @@
 {% if not standAlone %}<span></span>{% endif %}
 <p>
-	<a href="{{ href }}" class="cta{% if modifier %} cta--{{ modifier }}{% endif %}">{{ label }}{% render '@svg', {svg: 'external'}, true %}</a>
+	<a {% if external %}rel="external" {% endif %}href="{{ href }}" class="cta{% if modifier %} cta--{{ modifier }}{% endif %}">{{ label }}{% if external %}{% render '@svg', {svg: 'external'}, true %}{% endif %}</a>
 </p>
