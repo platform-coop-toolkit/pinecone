@@ -1,0 +1,21 @@
+@mixin interactive() {
+	background-color: var(--background-color, #{$blue-500});
+	border: solid var(--border-width, #{rem(2)}) transparent;
+	color: var(--color, #{$off-white});
+
+	&:hover {
+		background-color: var(--hover-background-color, #{$blue-500});
+		color: var(--hover-color, var(--color, #{$off-white}));
+	}
+
+	&:active {
+		background-color: var(--active-background-color, #{$blue-400});
+		color: var(--active-color, var(--color, #{$off-white}));
+	}
+
+	&:focus {
+		background-color: var(--focus-background-color, #{$blue-700});
+		box-shadow: var(--focus-box-shadow, 0 0 0 var(--border-width, #{rem(2)}) var(--outline-color, #{$off-white}), 0 0 0 calc(2 * var(--border-width, #{rem(2)})) var(--focus-background-color, #{$blue-700}));
+		color: var(--focus-color, var(--color, #{$off-white}));
+	}
+}
