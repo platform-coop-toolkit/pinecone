@@ -8,7 +8,7 @@
 					<a href="{{ href }}">{{ title | safe }}</a>
 				</h3>
 				{% if byline %}
-					<p class="card__byline">By {{ byline | safe }}</p>
+					<p class="card__byline">{% render '@svg', {svg:'author'}, true %} By {{ byline | safe }}</p>
 				{% endif %}
 			</header>
 			<aside class="card__aside">
