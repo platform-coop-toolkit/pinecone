@@ -1,0 +1,58 @@
+.cta {
+	background: $blue-500;
+	border: solid rem(1) transparent;
+	border-radius: rem(3);
+	color: $white;
+	display: block;
+	font-family: $font-family-sans;
+	font-size: 1rem;
+	font-weight: $font-weight-semibold;
+	height: rem(38);
+	max-width: 100%;
+	padding: rem(7) rem(6) rem(3.5);
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+
+	svg + * {
+		margin-left: 0.25em;
+	}
+
+	* + svg {
+		margin-left: 0.25em;
+	}
+
+	&:visited {
+		background: $green-400;
+	}
+
+	&:hover {
+		background: $blue-700;
+		text-decoration: underline;
+		text-decoration-skip-ink: auto;
+		text-underline-offset: rem(3);
+	}
+
+	&:active {
+		background: $blue-400;
+		text-decoration: underline;
+		text-decoration-skip-ink: auto;
+		text-underline-offset: rem(3);
+	}
+
+	&:focus {
+		background: $blue-700;
+		box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
+		color: $white;
+		outline: none;
+		text-decoration: underline;
+		text-decoration-skip-ink: auto;
+		text-underline-offset: rem(3);
+	}
+
+	&:active:focus {
+		background: $blue-400;
+		box-shadow: none;
+		color: $white;
+	}
+}

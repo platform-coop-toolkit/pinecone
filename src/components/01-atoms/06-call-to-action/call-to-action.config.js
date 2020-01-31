@@ -8,57 +8,16 @@ module.exports = {
 	},
 	variants: [
 		{
-			name: 'Default Inverse',
-			label: 'Default (Inverse)',
+			name: 'External',
 			context: {
-				hasIcon: false,
-				class: 'wp-block-button--inverse',
-				bodyClass: 'has-dark-mint-500-background-color',
+				external: true,
 			}
 		},
 		{
-			name: 'Default with Icon',
+			name: 'Inverse',
 			context: {
-				hasIcon: true
-			}
-		},
-		{
-			name: 'Secondary',
-			context: {
-				class: 'is-style-secondary'
-			}
-		},
-		{
-			name: 'Secondary with Icon',
-			context: {
-				class: 'is-style-secondary',
-				hasIcon: true
-			}
-		},
-		{
-			name: 'Off White',
-			context: {
-				class: 'is-style-off-white'
-			}
-		},
-		{
-			name: 'Off White with Icon',
-			context: {
-				class: 'is-style-off-white',
-				hasIcon: true
-			}
-		},
-		{
-			name: 'White',
-			context: {
-				class: 'is-style-white'
-			}
-		},
-		{
-			name: 'White with Icon',
-			context: {
-				class: 'is-style-white',
-				hasIcon: true
+				modifier: 'inverse',
+				bodyClass: 'has-dark-mint-500-background-color'
 			}
 		}
 	]
