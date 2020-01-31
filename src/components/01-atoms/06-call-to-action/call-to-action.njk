@@ -1,6 +1,4 @@
 {% if not standAlone %}<span></span>{% endif %}
-<p class="wp-block-button{%if class %} {{ class }}{% endif %}">
-	<a href="{{ href }}" class="wp-block-button__link">{{ label }}
-		{% if hasIcon %}{% render '@svg', {svg: 'external'}, true %}{% endif %}
-	</a>
+<p>
+	<a href="{{ href }}" class="cta{% if modifier %} cta--{{ modifier }}{% endif %}">{{ label }}{% render '@svg', {svg: 'external'}, true %}</a>
 </p>
