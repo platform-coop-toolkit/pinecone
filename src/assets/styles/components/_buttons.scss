@@ -90,6 +90,7 @@ button:-moz-focusring {
 	--border-width: #{rem(2)};
 	--hover-background-color: #{$off-white};
 	--hover-color: #{$blue-600};
+	--active-background-color: #{$grey-200};
 	--active-color: #{$blue-400};
 	--focus-color: #{$dark-mint-500};
 	--focus-background-color: #{$grey-200};

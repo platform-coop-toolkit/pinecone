@@ -138,6 +138,10 @@
 	position: relative;
 
 	@include grid-column-span(4, 4);
+
+	p + h1 {
+		margin-top: rem(32);
+	}
 }
 
 @include breakpoint-up(sm) {
@@ -198,6 +202,10 @@
 
 	.page-header {
 		@include grid-column-span(6, 12, 4);
+
+		p + h1 {
+			margin-top: rem(40);
+		}
 	}
 }
 

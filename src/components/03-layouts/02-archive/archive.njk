@@ -1,11 +1,11 @@
 <div class="page-header">
-	{% render '@breadcrumb-link', {label: 'Home', href: '/home'} %}
+	<p>{% render '@link--breadcrumb', {label: 'Home', href: '/'}, true %}</p>
 	<h1>{{ title }}</h1>
 </div>
 <div class="filter-wrapper">
-	{% render '@button', {standAlone: true, id: 'show-filters'}, true %}
+	{% render '@button--borderless', {standAlone: true, id: 'show-filters'}, true %}
 	<form class="filters" action="/">
-		{% render '@button', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
+		{% render '@button--borderless', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
 		<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
 		<div class="accordion accordion--filter-list">
 		{% for filterList in filterLists %}

@@ -46,6 +46,15 @@ module.exports = {
 				className: 'link--inverse',
 				bodyClass: 'has-dark-mint-500-background-color'
 			}
+		},
+		{
+			name: 'breadcrumb',
+			label: 'Breadcrumb',
+			context: {
+				label: 'Home',
+				href: '/',
+				className: 'link--breadcrumb',
+			}
 		}
 	]
 };
