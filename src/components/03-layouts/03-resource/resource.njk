@@ -17,15 +17,15 @@
 			{% render '@tag', {label: 'Starting a co-op', standAlone: true}, true %}
 			{% render '@tag', {label: 'Governance', standAlone: true}, true %}
 		</ul>
-		{% render '@button', {icon: 'edit', label: 'Suggest edits', standAlone: true}, true %}
+		{% render '@button--borderless', {icon: 'edit', label: 'Suggest edits', standAlone: true}, true %}
 	</div>
 	<div class="resource__cta">
 		{% render '@call-to-action', {label: 'View full resource', standAlone: true}, true %}
 	</div>
 	<div class="resource__actions">
-		{% render '@button', {standAlone: true, icon: 'favorite', label: 'Favorite'}, true %}
+		{% render '@button--borderless', {standAlone: true, icon: 'favorite', label: 'Favorite'}, true %}
 		{% render '@menu-button', {standAlone: true, icon: 'share', label: 'Share', items: [{label: 'Twitter'}, {label: 'Facebook'}, {label: 'LinkedIn'}, {label: 'Email'}]}, true %}
-		{% render '@button', {standAlone: true, icon: false, label: 'Report broken link'}, true %}
+		{% render '@button--borderless', {standAlone: true, icon: false, label: 'Report broken link'}, true %}
 		{% render '@menu-button', {standAlone: true, icon: false, label: 'View alternate links', items: [{label: 'View on Perma.cc'}, {label: 'View on the Wayback Machine'}]}, true %}
 	</div>
 	<div class="resource__related">

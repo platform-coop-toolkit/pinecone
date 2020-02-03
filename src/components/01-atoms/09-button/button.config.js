@@ -8,6 +8,7 @@ module.exports = {
 		icon: 'filter',
 		iconPosition: 'start',
 		id: 'button',
+		type: 'button',
 		standAlone: false
 	},
 	variants: [

@@ -1,10 +1,20 @@
+
+button::-moz-focus-inner {
+	outline: none;
+}
+
+button:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 $white;
+}
+
 .button {
 	@extend %interactive;
 
 	border-radius: rem(3);
 	display: block;
 	font-family: $font-family-sans;
-	font-size: 1rem;
+	font-size: rem(16);
 	font-weight: $font-weight-semibold;
 	height: rem(38);
 	max-width: rem(266);
@@ -17,8 +27,16 @@
 		margin-left: 0.25em;
 	}
 
+	svg + .screen-reader-text {
+		margin-right: 0;
+	}
+
 	* + svg {
 		margin-left: 0.25em;
+	}
+
+	.screen-reader-text + svg {
+		margin-left: 0;
 	}
 }
 
@@ -63,63 +81,34 @@
 	--focus-background-color: var(--background-color);
 }
 
-button,
-[type="submit"]::-moz-focus-inner {
-	outline: none;
-}
-
-button,
-[type="submit"]:-moz-focusring {
-	color: transparent;
-	text-shadow: 0 0 0 $white;
-}
-
 .button--borderless {
-	background-color: transparent;
-	border: solid rem(1) transparent;
-	border-radius: rem(3);
-	color: $blue-500;
-	font-family: $font-family-sans;
-	font-size: rem(16);
-	font-weight: $font-weight-semibold;
+	--color: #{$blue-500};
+	--outline-color: #{$dark-mint-500};
+	--background-color: transparent;
+	--border-width: #{rem(2)};
+	--hover-background-color: #{$off-white};
+	--hover-color: #{$blue-600};
+	--active-color: #{$blue-400};
+	--focus-color: #{$dark-mint-500};
+	--focus-background-color: #{$grey-200};
+	--focus-box-shadow: 0 0 0 var(--border-width) #{$white}, 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
+	--focus-border-color: #{$dark-mint-500};
+
 	height: rem(28);
-	margin-bottom: rem(6);
-	margin-left: rem(-8);
-	margin-top: rem(6);
+	margin: rem(6) rem(16) rem(6) rem(-8);
 	padding: 0 rem(8);
+	width: auto;
+}
 
-	svg + * {
-		margin-left: 0.25em;
-	}
-
-	svg + .screen-reader-text {
-		margin-right: 0;
-	}
-
-	* + svg {
-		margin-left: 0.25em;
-	}
-
-	.screen-reader-text + svg {
-		margin-left: 0;
-	}
-
-	&:hover {
-		background-color: $off-white;
-		color: $blue-600;
-	}
-
-	&:active {
-		color: $blue-400;
-	}
-
-	&:focus {
-		background-color: $grey-200;
-		border-color: $white;
-		box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $dark-mint-500;
-		color: $dark-mint-500;
-		outline: none;
-	}
+.button--borderless.button--inverse {
+	--color: #{$off-white};
+	--outline-color: #{$off-white};
+	--hover-background-color: #{$blue-600};
+	--hover-color: #{$blue-50};
+	--focus-color: #{$off-white};
+	--focus-background-color: transparent;
+	--focus-box-shadow: 0 0 0 var(--border-width) #{$dark-mint-500}, 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
+	--focus-border-color: #{$white};
 }
 
 // .button {
@@ -166,10 +155,9 @@ button,
 	text-underline-offset: rem(8);
 	width: rem(34);
 
-	svg {
-		margin-bottom: 0;
-	}
-
+	// svg {
+	// 	margin-bottom: 0;
+	// }
 	&:hover {
 		background: $blue-150;
 	}

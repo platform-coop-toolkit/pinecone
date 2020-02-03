@@ -3,16 +3,20 @@ module.exports = {
 	label: 'Submit Button',
 	status: 'wip',
 	context: {
-		value: 'Submit',
+		label: 'Submit',
 		id: 'submit',
+		icon: false,
+		modifiers: false,
+		type: 'submit',
 		standAlone: false
 	},
 	'variants': [
 		{
-			name: 'Default (Light on Dark)',
-			label: 'Default (Light on Dark)',
+			name: 'Default Inverse',
+			label: 'Default (Inverse)',
 			context: {
-				bodyClass: 'has-dark-mint-500-background-color'
+				modifiers: ['inverse'],
+				bodyClass: 'has-blue-500-background-color'
 			}
 		}
 	]

@@ -20,6 +20,7 @@
 
 	&:focus {
 		background-color: var(--focus-background-color, #{$blue-700});
+		border-color: var(--focus-border-color, var(--border-color));
 		box-shadow: var(--focus-box-shadow, 0 0 0 var(--border-width, #{rem(2)}) var(--outline-color, #{$off-white}), 0 0 0 calc(2 * var(--border-width, #{rem(2)})) var(--focus-background-color, #{$blue-700}));
 		color: var(--focus-color, var(--color, #{$off-white}));
 		outline: none;
