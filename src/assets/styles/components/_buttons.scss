@@ -91,12 +91,11 @@ button:-moz-focusring {
 	--active-color: #{$blue-400};
 	--focus-color: #{$dark-mint-500};
 	--focus-background-color: #{$grey-200};
-	--focus-box-shadow: 0 0 0 var(--border-width) #{$white}, 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
-	--focus-border-color: #{$dark-mint-500};
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) #{$white}, 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
 
 	height: rem(28);
-	margin: rem(6) rem(16) rem(6) rem(-8);
-	padding: 0 rem(8);
+	margin: rem(6) rem(24) rem(6) rem(-8);
+	padding: 0 rem(4);
 	width: auto;
 }
 
@@ -108,7 +107,7 @@ button:-moz-focusring {
 	--focus-color: #{$off-white};
 	--focus-background-color: transparent;
 	--focus-box-shadow: 0 0 0 var(--border-width) #{$dark-mint-500}, 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
-	--focus-border-color: #{$white};
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) #{$dark-mint-500}, 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
 }
 
 // .button {
