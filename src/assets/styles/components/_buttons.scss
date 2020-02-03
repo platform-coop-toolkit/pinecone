@@ -52,6 +52,17 @@
 	}
 }
 
+.button--secondary.button--inverse {
+	--color: #{$off-white};
+	--outline-color: #{$off-white};
+	--background-color: #{$blue-500};
+	--hover-color: #{$blue-50};
+	--hover-background-color: #{$blue-500};
+	--active-color: #{$white};
+	--active-background-color: var(--background-color);
+	--focus-background-color: var(--background-color);
+}
+
 button,
 [type="submit"]::-moz-focus-inner {
 	outline: none;
@@ -63,7 +74,7 @@ button,
 	text-shadow: 0 0 0 $white;
 }
 
-%button {
+.button--borderless {
 	background-color: transparent;
 	border: solid rem(1) transparent;
 	border-radius: rem(3);

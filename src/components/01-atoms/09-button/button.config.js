@@ -16,7 +16,7 @@ module.exports = {
 			label: 'Default (Inverse)',
 			context: {
 				modifiers: ['inverse'],
-				bodyClass: 'has-dark-mint-500-background-color'
+				bodyClass: 'has-blue-500-background-color'
 			}
 		},
 		{
@@ -27,10 +27,24 @@ module.exports = {
 		},
 		{
 			name: 'Secondary Inverse',
-			label: 'Default (Inverse)',
+			label: 'Secondary (Inverse)',
 			context: {
 				modifiers: ['secondary', 'inverse'],
-				bodyClass: 'has-dark-mint-500-background-color'
+				bodyClass: 'has-blue-500-background-color'
+			}
+		},
+		{
+			name: 'Borderless',
+			context: {
+				modifiers: ['borderless']
+			}
+		},
+		{
+			name: 'Borderless Inverse',
+			label: 'Borderless (Inverse)',
+			context: {
+				modifiers: ['borderless', 'inverse'],
+				bodyClass: 'has-blue-500-background-color'
 			}
 		},
 		{
@@ -47,7 +61,7 @@ module.exports = {
 			label: 'Disc (Inverse)',
 			context: {
 				modifiers: ['disc', 'inverse'],
-				bodyClass: 'has-dark-mint-500-background-color',
+				bodyClass: 'has-blue-500-background-color',
 				icon: 'chevron-down',
 				labelVisuallyHidden: true,
 			}
