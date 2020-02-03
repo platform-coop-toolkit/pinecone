@@ -14,7 +14,7 @@ class DisclosureButton {
 		this.config = {
 			...{
 				controlSelector: '.disclosure-button',
-				buttonVariant: false,
+				buttonVariant: 'button--borderless',
 				visuallyHiddenLabel: false,
 			},
 			...options
