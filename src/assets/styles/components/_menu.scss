@@ -10,6 +10,7 @@
 .menu-toggle {
 	margin-right: rem(16);
 	position: relative;
+	transition: margin-right 0s;
 	z-index: 3;
 }
 
@@ -49,8 +50,18 @@
 }
 
 .menu-toggle[aria-expanded="true"] {
-	@extend .button--inverse;
-	margin-right: rem(6);
+	--color: #{$off-white};
+	--outline-color: #{$off-white};
+	--hover-background-color: #{$blue-600};
+	--hover-color: #{$blue-50};
+	--active-background-color: #{$blue-600};
+	--active-color: #{$blue-200};
+	--focus-color: #{$off-white};
+	--focus-background-color: transparent;
+	--focus-box-shadow: 0 0 0 var(--border-width) #{$dark-mint-500}, 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) #{$dark-mint-500}, 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+
+	margin-right: rem(10);
 
 	* + svg {
 		margin-left: 0;
