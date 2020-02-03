@@ -1,5 +1,7 @@
 /* global Pinecone */
 
+import 'wicg-inert';
+
 const menu = document.querySelector( '.menu' );
 const menuToggle = document.querySelector( '.menu-toggle' );
 
