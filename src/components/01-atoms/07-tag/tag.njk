@@ -1,5 +1,3 @@
-{% if not standAlone %}<ul class="tags">{% endif %}
-	<li class="tag">
-		<a class="tag__link" href="#{{ label | replace(' ', '-') | lower }}">{{ label }}</a>
-	</li>
-{% if not standAlone %}</ul>{% endif %}
+{% if not standAlone %}<div class="tags">{% endif %}
+	<a class="tag" href="#{{ label | replace(' ', '-') | lower }}">{{ label }}</a>
+{% if not standAlone %}</div>{% endif %}
