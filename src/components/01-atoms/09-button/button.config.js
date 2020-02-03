@@ -13,7 +13,7 @@ module.exports = {
 	},
 	variants: [
 		{
-			name: 'Default Inverse',
+			name: 'inverse',
 			label: 'Default (Inverse)',
 			context: {
 				modifiers: ['inverse'],
