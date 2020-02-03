@@ -56,13 +56,18 @@ class Dialog {
 		const dialog = document.createElement( 'div' );
 		dialog.setAttribute( 'role', 'dialog' );
 		dialog.setAttribute( 'aria-labelledby', `q-${unique}` );
-		dialog.innerHTML = `
-        	<p id="q-${unique}">${this.config.question}</p>
-            <div class="buttons">
+		dialog.setAttribute( 'aria-describedby', `q-${unique + 1}` );
+		let innerHtml = `<h2 id="q-${unique}">${this.config.title}</h2>`;
+		if ( this.config.question ) {
+			innerHtml += `<p id="q-${unique + 1}">${this.config.question}</p>`;
+		}
+		innerHtml += `
+			<div class="buttons">
 				<button class="dismiss">${this.config.dismiss}</button>
 				<button class="confirm">${this.config.confirm}</button>
-            </div>
-		  `;
+			</div>
+		`;
+		dialog.innerHTML = innerHtml;
 		const overlay = document.createElement( 'div' );
 		overlay.setAttribute( 'inert', 'inert' );
 		overlay.classList.add( 'overlay' );
