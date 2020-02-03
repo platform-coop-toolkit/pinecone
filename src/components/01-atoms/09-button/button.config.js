@@ -66,6 +66,17 @@ module.exports = {
 				icon: 'chevron-down',
 				labelVisuallyHidden: true,
 			}
+		},
+		{
+			name: 'Tag Button',
+			label: 'Tag Button',
+			context: {
+				id: false,
+				label: '<span class="screen-reader-text">Remove </span>Blockchain<span class="screen-reader-text"> from current filters</span>',
+				modifiers: ['tag-button'],
+				icon: 'close',
+				iconPosition: 'end',
+			}
 		}
 	]
 };
