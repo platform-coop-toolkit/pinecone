@@ -6,9 +6,9 @@ module.exports = {
 	},
 	variants: [
 		{
-			name: 'Light on Dark',
+			name: 'Inverse',
 			context: {
-				bodyClass: 'has-dark-mint-500-background-color'
+				bodyClass: 'has-blue-500-background-color'
 			}
 		}
 	]
