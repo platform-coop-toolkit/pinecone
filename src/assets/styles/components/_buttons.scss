@@ -1,5 +1,5 @@
 .button {
-	@include interactive();
+	@extend %interactive;
 
 	border-radius: rem(3);
 	display: block;
@@ -12,6 +12,14 @@
 	text-align: center;
 	text-decoration: none;
 	width: 100%;
+
+	svg + * {
+		margin-left: 0.25em;
+	}
+
+	* + svg {
+		margin-left: 0.25em;
+	}
 }
 
 .button--inverse {
@@ -24,164 +32,35 @@
 	--focus-background-color: var(--background-color);
 }
 
-.wp-block-button__link,
-[type="submit"] {
-	background: $blue-500;
-	border: solid rem(1) transparent;
-	border-radius: rem(3);
-	color: $white;
-	display: block;
-	font-family: $font-family-sans;
-	font-size: 1rem;
-	font-weight: $font-weight-semibold;
-	height: rem(38);
-	max-width: rem(266);
-	padding: rem(7) rem(6) rem(3.5);
-	text-align: center;
-	text-decoration: none;
-	width: 100%;
+.button--secondary {
+	--color: #{$blue-500};
+	--outline-color: #{$blue-500};
+	--outline-width: #{rem(2)};
+	--border-color: var(--outline-color);
+	--border-width: #{rem(1)};
+	--background-color: #{$white};
+	--hover-background-color: #{$grey-200};
+	--active-color: #{$blue-400};
+	--active-background-color: var(--background-color);
+	--focus-background-color: var(--hover-background-color);
+	--focus-box-shadow:
+		0 0 0 var(--outline-width) var(--focus-background-color, #{$off-white}),
+		0 0 0 calc(2 * var(--outline-width)) var(--outline-color, #{$blue-700});
 
-	.icon {
-		margin-left: rem(4);
+	&:focus {
+		border-width: var(--outline-width);
 	}
 }
 
-.wp-block-button--inverse .wp-block-button__link {
-	background: $blue-400;
-	border-color: $white;
-}
-
+button,
 [type="submit"]::-moz-focus-inner {
 	outline: none;
 }
 
+button,
 [type="submit"]:-moz-focusring {
 	color: transparent;
 	text-shadow: 0 0 0 $white;
-}
-
-.wp-block-button__link:visited,
-[type="submit"]:visited {
-	background: $green-400;
-}
-
-.wp-block-button__link:hover,
-[type="submit"]:hover {
-	background: $blue-700;
-}
-
-.wp-block-button__link:active,
-[type="submit"]:active {
-	background: $blue-400;
-}
-
-.wp-block-button__link:focus,
-[type="submit"]:focus {
-	background: $blue-700;
-	box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
-	color: $white;
-	outline: none;
-}
-
-.is-style-secondary .wp-block-button__link,
-.has-dark-mint-500-background-color [type="submit"] {
-	background: $yellow-500;
-	color: $dark-mint-500;
-
-	&:visited {
-		background: $yellow-400;
-	}
-
-	&:hover {
-		background: $yellow-600;
-	}
-
-	&:active {
-		background: $yellow-400;
-	}
-
-	&:focus {
-		background: $yellow-600;
-		box-shadow:
-			0 0 0 rem(2) $white,
-			0 0 0 rem(4) $yellow-600;
-	}
-}
-
-.wp-block-button--inverse .wp-block-button__link:focus {
-	box-shadow: 0 0 0 rem(2) $blue-700, 0 0 0 rem(4) $white, 0 0 0 rem(1) $white inset;
-}
-
-.wp-block-button__link:active:focus {
-	background: $blue-400;
-	box-shadow: none;
-}
-
-/* stylelint-disable no-descending-specificity */
-.is-style-off-white .wp-block-button__link {
-	/* stylelint-enable */
-	background: $off-white;
-	border-color: $blue-500;
-	color: $blue-500;
-
-	&:visited {
-		border-color: $green-400;
-	}
-
-	&:hover {
-		background: $grey-200;
-	}
-
-	&:active {
-		background: $white;
-	}
-
-	&:focus {
-		background: $grey-200;
-		box-shadow:
-			0 0 0 rem(1) $blue-500 inset,
-			0 0 0 rem(2) $white,
-			0 0 0 rem(4) $blue-500;
-	}
-}
-
-/* stylelint-disable no-descending-specificity */
-.is-style-white .wp-block-button__link {
-	/* stylelint-enable */
-	background: $white;
-	border-color: $blue-500;
-	color: $blue-500;
-
-	&:visited {
-		border-color: $green-400;
-	}
-
-	&:hover {
-		background: $grey-200;
-	}
-
-	&:active {
-		background: $white;
-	}
-
-	&:focus {
-		background: $grey-200;
-		box-shadow:
-			0 0 0 rem(1) $blue-500 inset,
-			0 0 0 rem(2) $white,
-			0 0 0 rem(4) $blue-500;
-	}
-}
-
-.is-style-off-white .wp-block-button__link:active:focus,
-.is-style-white .wp-block-button__link:active:focus {
-	background: $white;
-	box-shadow: none;
-}
-
-.is-style-secondary .wp-block-button__link:active:focus {
-	background: $yellow-400;
-	box-shadow: none;
 }
 
 %button {

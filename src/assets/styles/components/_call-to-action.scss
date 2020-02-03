@@ -1,58 +1,50 @@
 .cta {
-	background: $blue-500;
-	border: solid rem(1) transparent;
+	@extend %interactive;
+
+	--visited-color: #{$off-white};
+	--visited-background-color: #{$blue-600};
+
 	border-radius: rem(3);
-	color: $white;
 	display: block;
 	font-family: $font-family-sans;
 	font-size: 1rem;
 	font-weight: $font-weight-semibold;
 	height: rem(38);
 	max-width: 100%;
-	padding: rem(7) rem(6) rem(3.5);
+	padding: rem(6) rem(6) rem(4);
 	text-align: center;
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	text-decoration-skip-ink: auto;
+	text-underline-offset: rem(3);
+
 	width: 100%;
 
-	svg + * {
-		margin-left: 0.25em;
-	}
-
-	* + svg {
+	svg {
 		margin-left: 0.25em;
 	}
 
 	&:visited {
-		background: $green-400;
+		background-color: var(--visited-background);
+		color: var(--visited-color);
 	}
 
-	&:hover {
-		background: $blue-700;
-		text-decoration: underline;
-		text-decoration-skip-ink: auto;
-		text-underline-offset: rem(3);
-	}
-
-	&:active {
-		background: $blue-400;
-		text-decoration: underline;
-		text-decoration-skip-ink: auto;
-		text-underline-offset: rem(3);
-	}
-
+	&:hover,
+	&:active,
 	&:focus {
-		background: $blue-700;
-		box-shadow: 0 0 0 rem(2) $white, 0 0 0 rem(4) $blue-700;
-		color: $white;
-		outline: none;
 		text-decoration: underline;
+		text-decoration-color: inherit;
 		text-decoration-skip-ink: auto;
 		text-underline-offset: rem(3);
 	}
+}
 
-	&:active:focus {
-		background: $blue-400;
-		box-shadow: none;
-		color: $white;
-	}
+.cta--inverse {
+	--color: #{$blue-500};
+	--outline-color: #{$blue-500};
+	--background-color: #{$off-white};
+	--hover-background-color: #{$blue-50};
+	--active-color: #{$blue-400};
+	--active-background-color: var(--background-color);
+	--focus-background-color: var(--background-color);
 }

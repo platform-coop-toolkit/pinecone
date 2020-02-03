@@ -1,10 +1,15 @@
-@mixin interactive() {
+%interactive {
 	background-color: var(--background-color, #{$blue-500});
-	border: solid var(--border-width, #{rem(2)}) transparent;
+	border: solid var(--border-width, #{rem(2)}) var(--border-color, transparent);
 	color: var(--color, #{$off-white});
+	transition: all 0.3s;
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
 
 	&:hover {
-		background-color: var(--hover-background-color, #{$blue-500});
+		background-color: var(--hover-background-color, #{$blue-700});
 		color: var(--hover-color, var(--color, #{$off-white}));
 	}
 
@@ -17,5 +22,10 @@
 		background-color: var(--focus-background-color, #{$blue-700});
 		box-shadow: var(--focus-box-shadow, 0 0 0 var(--border-width, #{rem(2)}) var(--outline-color, #{$off-white}), 0 0 0 calc(2 * var(--border-width, #{rem(2)})) var(--focus-background-color, #{$blue-700}));
 		color: var(--focus-color, var(--color, #{$off-white}));
+		outline: none;
+	}
+
+	&:active:focus {
+		box-shadow: none;
 	}
 }

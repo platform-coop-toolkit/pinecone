@@ -12,10 +12,24 @@ module.exports = {
 	},
 	variants: [
 		{
-			name: 'Default (Inverse)',
+			name: 'Default Inverse',
 			label: 'Default (Inverse)',
 			context: {
 				modifiers: ['inverse'],
+				bodyClass: 'has-dark-mint-500-background-color'
+			}
+		},
+		{
+			name: 'Secondary',
+			context: {
+				modifiers: ['secondary']
+			}
+		},
+		{
+			name: 'Secondary Inverse',
+			label: 'Default (Inverse)',
+			context: {
+				modifiers: ['secondary', 'inverse'],
 				bodyClass: 'has-dark-mint-500-background-color'
 			}
 		},
@@ -29,7 +43,7 @@ module.exports = {
 			}
 		},
 		{
-			name: 'Disc (Inverse)',
+			name: 'Disc Inverse',
 			label: 'Disc (Inverse)',
 			context: {
 				modifiers: ['disc', 'inverse'],
