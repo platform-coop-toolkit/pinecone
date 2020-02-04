@@ -55,7 +55,7 @@
 		}
 	}
 
-	h3::before {
+	> h3::before {
 		background-color: $grey-200;
 		content: "";
 		display: block;
