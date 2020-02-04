@@ -22,6 +22,22 @@
 	color: var(--color);
 	transition: all 0.3s;
 
+	svg + * {
+		margin-left: 0.25em;
+	}
+
+	svg + .screen-reader-text {
+		margin-right: 0;
+	}
+
+	* + svg {
+		margin-left: 0.25em;
+	}
+
+	.screen-reader-text + svg {
+		margin-left: 0;
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		transition: none;
 	}
