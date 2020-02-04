@@ -20,7 +20,6 @@
 	background-color: var(--background-color);
 	border: solid var(--border-width) var(--border-color);
 	color: var(--color);
-	transition: all 0.3s;
 
 	svg + * {
 		margin-left: 0.25em;
@@ -36,10 +35,6 @@
 
 	.screen-reader-text + svg {
 		margin-left: 0;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		transition: none;
 	}
 
 	&:hover {

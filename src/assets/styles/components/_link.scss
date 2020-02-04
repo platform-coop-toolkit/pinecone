@@ -1,0 +1,198 @@
+%link {
+	@extend %interactive;
+
+	--focus-box-shadow:
+		0 0 0 calc(2 * var(--border-width)) var(--focus-background-color),
+		0 0 0 calc(3 * var(--border-width)) var(--outline-color),
+		0 0 0 calc(4 * var(--border-width)) var(--focus-background-color);
+
+	display: inline-block;
+	font-family: $font-family-sans;
+	font-weight: $font-weight-semibold;
+	line-height: 1;
+	text-decoration: underline;
+	text-decoration-skip-ink: auto;
+	text-decoration-thickness: rem(1);
+	text-underline-offset: rem(3);
+
+	@supports (mask: url("../images/add.svg")) {
+		&::after {
+			background: var(--color);
+			content: "";
+			display: inline-block;
+			height: 1.25em;
+			margin-bottom: -0.3125em;
+			margin-left: 0;
+			mask: url("../images/chevron-right.svg") no-repeat center;
+			mask-position: left;
+			mask-size: 1.25em;
+			position: relative;
+			text-decoration: underline;
+			width: 1em;
+		}
+	}
+
+	&:visited {
+		color: var(--visited-color);
+		text-decoration-color: var(--visited-color);
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: var(--visited-color);
+			}
+		}
+	}
+
+	&:hover {
+		text-decoration-color: $blue-300;
+		text-decoration-thickness: rem(2);
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: var(--hover-color);
+			}
+		}
+	}
+
+	&:active {
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: var(--active-color);
+			}
+		}
+	}
+
+	&:focus {
+		text-decoration: none;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: var(--focus-color);
+			}
+		}
+	}
+
+	&:visited:hover {
+		color: var(--hover-color);
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: var(--hover-color);
+			}
+		}
+	}
+
+	&:visited:focus {
+		color: var(--focus-color);
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: var(--focus-color);
+			}
+		}
+	}
+
+	&:active:focus {
+		background-color: var(--active-background-color);
+		color: var(--active-color);
+		text-decoration: underline;
+
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: var(--active-color);
+			}
+		}
+	}
+
+	@supports (mask: url("../images/add.svg")) {
+		&[rel="external"] {
+			&::after {
+				margin-bottom: -0.25em;
+				margin-left: rem(2);
+				mask-image: url("../images/external.svg");
+				width: 1.25em;
+			}
+		}
+
+		&[href^="#"] {
+			&::after {
+				mask-image: url("../images/scroll-down.svg");
+				width: 1.25em;
+			}
+		}
+	}
+
+	&:empty::after {
+		display: none;
+	}
+}
+
+a:not([class]) {
+	@extend %link;
+
+	--background-color: transparent;
+	--border-color: transparent;
+	--border-width: #{rem(2)};
+	--color: #{$blue-500};
+	--outline-color: #{$white};
+	--hover-background-color: var(--background-color);
+	--hover-border-color: var(--border-color);
+	--hover-color: #{$dark-mint-500};
+	--visited-color: #{$blue-700};
+	--active-background-color: var(--background-color);
+	--active-border-color: var(--border-color);
+	--active-color: #{$blue-400};
+	--focus-background-color: #{$blue-500};
+	--focus-border-color: var(--border-color);
+	--focus-color: #{$white};
+}
+
+a.link--inverse {
+	@extend %link;
+
+	--background-color: transparent;
+	--border-color: transparent;
+	--border-width: #{rem(2)};
+	--color: #{$off-white};
+	--outline-color: #{$dark-mint-500};
+	--hover-background-color: var(--background-color);
+	--hover-border-color: var(--border-color);
+	--hover-color: #{$white};
+	--visited-color: #{$blue-50};
+	--active-background-color: var(--background-color);
+	--active-border-color: var(--border-color);
+	--active-color: #{$blue-200};
+	--focus-background-color: #{$blue-200};
+	--focus-border-color: var(--border-color);
+	--focus-color: #{$dark-mint-500};
+}
+
+.link--breadcrumb {
+	@extend %link;
+
+	--background-color: transparent;
+	--border-color: transparent;
+	--border-width: #{rem(2)};
+	--color: #{$blue-500};
+	--outline-color: #{$white};
+	--hover-background-color: var(--background-color);
+	--hover-border-color: var(--border-color);
+	--hover-color: #{$dark-mint-500};
+	--visited-color: #{$blue-700};
+	--active-background-color: var(--background-color);
+	--active-border-color: var(--border-color);
+	--active-color: #{$blue-400};
+	--focus-background-color: #{$blue-500};
+	--focus-border-color: var(--border-color);
+	--focus-box-shadow:
+		0 0 0 calc(2 * var(--border-width)) var(--focus-background-color),
+		0 0 0 calc(3 * var(--border-width)) var(--outline-color),
+		0 0 0 calc(4 * var(--border-width)) var(--focus-background-color);
+	--focus-color: #{$white};
+
+	font-size: rem(14);
+
+	&:not(:hover) {
+		text-decoration: none;
+	}
+}
