@@ -1,11 +1,10 @@
-const faker = require( 'faker' );
 const linkCount = 6;
 const items = [];
 
-for ( let i = 0; i < linkCount; i++ ) {
+for ( let i = 1; i <= linkCount; i++ ) {
 	items.push( {
-		label: faker.lorem.words( 3 ),
-		href: `/link-${1}`,
+		label: `Link List Item ${i}`,
+		href: `/link-${i}`,
 		current: ( 0 === i ) || false
 	} );
 }

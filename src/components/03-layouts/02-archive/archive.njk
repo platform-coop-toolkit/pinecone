@@ -23,11 +23,11 @@
 {% if currentTags and foundPosts %}
 <div class="current-filters">
 	<p class="h3">Showing {{ foundPosts }} of 742 resources</p>
-	<div class="tags">
+	<ul class="tags">
 		{% for tag in currentTags %}
 			{% render '@button--tag-button', {standAlone: true, label: tag.label}, true %}
 		{% endfor %}
-	</div>
+	</ul>
 	<p><a href="?x">Clear all <span class="screen-reader-text">filters</span></a></p>
 </div>
 {% endif %}
