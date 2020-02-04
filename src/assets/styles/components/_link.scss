@@ -127,7 +127,8 @@
 	}
 }
 
-a:not([class]) {
+a:not([class]),
+.link {
 	@extend %link;
 
 	--background-color: transparent;
@@ -147,7 +148,7 @@ a:not([class]) {
 	--focus-color: #{$white};
 }
 
-a.link--inverse {
+.link--inverse {
 	@extend %link;
 
 	--background-color: transparent;
