@@ -3,109 +3,158 @@
 	position: relative;
 }
 
-.accordion__heading {
-	background: transparent;
-	border: solid rem(3) transparent;
-	color: $blue-500;
+.accordion__heading,
+.accordion__control {
+	display: block;
 	font-family: $font-family-sans;
 	font-size: rem(20);
 	font-weight: $font-weight-bold;
-	height: rem(49);
-	line-height: (32 / 20);
-	margin-left: rem(-15);
-	margin-right: rem(-15);
-	padding: rem(5) rem(12) rem(2);
-	position: relative;
-	width: calc(100% + #{rem(30)});
-
-	&::before {
-		background: $blue-500;
-		content: "";
-		display: block;
-		height: rem(3);
-		position: absolute;
-		top: rem(-3);
-		width: calc(100% - #{rem(24)});
-	}
+	text-align: left;
+	width: 100%;
 }
 
+// .accordion__heading {
+// 	background: transparent;
+// 	border: solid rem(3) transparent;
+// 	color: $blue-500;
+// 	font-family: $font-family-sans;
+// 	font-size: rem(20);
+// 	font-weight: $font-weight-bold;
+// 	height: rem(49);
+// 	line-height: (32 / 20);
+// 	margin-left: rem(-15);
+// 	margin-right: rem(-15);
+// 	padding: rem(5) rem(12) rem(2);
+// 	position: relative;
+// 	width: calc(100% + #{rem(30)});
+
+// 	&::before {
+// 		background: $blue-500;
+// 		content: "";
+// 		display: block;
+// 		height: rem(3);
+// 		position: absolute;
+// 		top: rem(-3);
+// 		width: calc(100% - #{rem(24)});
+// 	}
+// }
 .accordion__control {
-	@extend .accordion__heading;
-	align-items: center;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 0;
-	margin-top: 0;
-	width: calc(100% + #{rem(30)});
+	@extend %interactive;
+
+	--background-color: transparent;
+	--color: #{$blue-500};
+	--active-color: #{$blue-400};
+	--visited-color: #{$blue-700};
+
+	border: 0;
+	border-bottom: solid rem(1) var(--color);
+	height: rem(54);
+	line-height: normal;
+	padding-bottom: rem(16);
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: rem(14);
+	text-decoration: none;
 
 	svg {
-		height: rem(20);
-		margin-bottom: 0;
-		margin-right: rem(10);
-		transition: transform 0.3s;
-		width: rem(20);
-
-		@media (prefers-reduced-motion: reduce) {
-			transition: none;
-		}
+		float: right;
+		margin-top: rem(2);
 	}
+
+	&[aria-expanded="true"] {
+		// TODO
+	}
+
+	&:hover {
+		// TODO
+	}
+
+	&:active {
+		// TODO
+	}
+
+	&:focus {
+		margin-left: rem(-15);
+		margin-right: rem(-15);
+		padding-left: rem(15);
+		padding-right: rem(15);
+		width: calc(100% + #{rem(30)});
+	}
+	// @extend .accordion__heading;
+	// align-items: center;
+	// display: flex;
+	// flex-direction: row;
+	// justify-content: space-between;
+	// margin-bottom: 0;
+	// margin-top: 0;
+	// width: calc(100% + #{rem(30)});
+
+	// svg {
+	// 	height: rem(20);
+	// 	margin-bottom: 0;
+	// 	margin-right: rem(10);
+	// 	transition: transform 0.3s;
+	// 	width: rem(20);
+
+	// 	@media (prefers-reduced-motion: reduce) {
+	// 		transition: none;
+	// 	}
+	// }
 }
 
-.accordion__control[aria-expanded="true"] {
-	background: $blue-500;
-	border: solid rem(3) $blue-500;
-	color: $white;
+// .accordion__control[aria-expanded="true"] {
+// 	background: $blue-500;
+// 	border: solid rem(3) $blue-500;
+// 	color: $white;
 
-	svg {
-		transform: rotate(-180deg);
-	}
-}
+// 	svg {
+// 		transform: rotate(-180deg);
+// 	}
+// }
 
-.accordion__control:hover {
-	color: $blue-400;
+// .accordion__control:hover {
+// 	color: $blue-400;
 
-	svg {
-		color: $blue-300;
-	}
+// 	svg {
+// 		color: $blue-300;
+// 	}
 
-	&::before {
-		background-color: $blue-300;
-	}
-}
+// 	&::before {
+// 		background-color: $blue-300;
+// 	}
+// }
 
-.accordion__control:focus {
-	background: $blue-500;
-	border: solid rem(3) $blue-500;
-	box-shadow: 0 0 0 rem(3) $white inset;
-	color: $white;
-	outline: 0;
-}
+// .accordion__control:focus {
+// background: $blue-500;
+// border: solid rem(3) $blue-500;
+// box-shadow: 0 0 0 rem(3) $white inset;
+// color: $white;
+// outline: 0;
+// }
 
-.accordion__control[aria-expanded="true"]:hover {
-	color: $white;
+// .accordion__control[aria-expanded="true"]:hover {
+// 	color: $white;
 
-	svg {
-		color: inherit;
-	}
+// 	svg {
+// 		color: inherit;
+// 	}
 
-	&::before {
-		display: none;
-	}
-}
+// 	&::before {
+// 		display: none;
+// 	}
+// }
 
-.accordion__control:focus:hover {
-	color: $white;
+// .accordion__control:focus:hover {
+// 	color: $white;
 
-	svg {
-		color: inherit;
-	}
+// 	svg {
+// 		color: inherit;
+// 	}
 
-	&::before {
-		display: none;
-	}
-}
-
+// 	&::before {
+// 		display: none;
+// 	}
+// }
 .accordion--inverse {
 	.accordion__heading {
 		color: $off-white;

@@ -10,6 +10,9 @@
 		--color: #{$black};
 		--active-color: #{$blue-400};
 		--visited-color: #{$blue-700};
+		--focus-box-shadow:
+			0 0 0 var(--border-width) var(--focus-background-color) inset,
+			0 0 0 calc(2 * var(--border-width)) var(--outline-color) inset;
 
 		border: 0;
 		border-bottom: solid rem(1) var(--color);
@@ -53,11 +56,11 @@
 	}
 
 	a:focus {
-		border-bottom-color: var(--focus-background-color);
-		margin-left: rem(-15);
-		margin-right: rem(-15);
-		padding-left: rem(15);
-		padding-right: rem(15);
+		border-bottom: 0;
+		margin-left: rem(-17);
+		margin-right: rem(-17);
+		padding-left: rem(17);
+		padding-right: rem(17);
 	}
 
 	a:active:focus {
