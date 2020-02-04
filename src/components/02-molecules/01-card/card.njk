@@ -10,7 +10,7 @@
 			{% endif %}
 			<header>
 				<h3 class="card__title" >
-					{% if format %}<span class="card__format">{{ format }}</span><span class="screen-reader-text">: </span>{% endif %}<a {% if externalLink %}rel="external" {% endif %}href="{{ href }}">{{ title | safe }}</a>
+					{% if format %}<span class="card__format">{{ format }}</span><span class="screen-reader-text">: </span>{% endif %}<a class="card__link" {% if externalLink %}rel="external" {% endif %}href="{{ href }}">{{ title | safe }}</a>
 				</h3>
 				{% if byline %}
 					<p class="card__byline">{% render '@svg', {svg:'author'}, true %} By {{ byline | safe }}</p>

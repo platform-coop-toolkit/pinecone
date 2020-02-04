@@ -74,30 +74,34 @@
 	font-weight: $font-weight-bold;
 	line-height: (30 / 20);
 	margin-top: 0;
+}
 
-	a {
+.card__link {
+	color: $black;
+	line-height: inherit;
+	margin-left: rem(-22);
+	margin-right: rem(-22);
+	min-width: calc(100% + #{rem(44)});
+	padding-bottom: rem(2);
+	padding-left: rem(22);
+	padding-right: rem(22);
+	text-decoration: none;
+
+	&:visited {
 		color: $black;
-		line-height: inherit;
-		margin-left: rem(-22);
-		margin-right: rem(-22);
-		min-width: calc(100% + #{rem(44)});
-		padding-bottom: rem(2);
-		padding-left: rem(22);
-		padding-right: rem(22);
-		text-decoration: none;
+	}
 
-		&:visited {
-			color: $black;
-		}
+	&:focus {
+		outline: none;
+	}
 
-		&[rel="external"]::after {
-			background-color: $black;
-		}
+	&[rel="external"]::after {
+		background-color: $black;
+	}
 
-		&:not([rel="external"])::after {
-			content: "";
-			display: none;
-		}
+	&:not([rel="external"])::after {
+		content: "";
+		display: none;
 	}
 }
 
