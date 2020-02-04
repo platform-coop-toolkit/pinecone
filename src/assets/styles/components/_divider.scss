@@ -1,0 +1,17 @@
+hr {
+	background-color: $blue-500;
+	border: 0;
+	height: rem(2);
+
+	&.is-style-hairline {
+		height: rem(1);
+	}
+
+	&.is-style-medium {
+		height: rem(3);
+	}
+
+	&.is-style-thick {
+		height: rem(16);
+	}
+}
