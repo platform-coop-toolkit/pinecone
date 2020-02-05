@@ -133,12 +133,16 @@
 
 .menu-button__menu li:focus-within + li,
 .menu-button__menu li + li:focus-within {
-	border-top-color: var(--blue-500);
+	border-top-color: transparent;
 }
 
 .menu-button__menu a {
+	--color: var(--black);
+	--focus-box-shadow:
+		0 0 0 var(--border-width) var(--outline-color) inset,
+		0 0 0 calc(2 * var(--border-width)) var(--focus-background-color) inset;
+
 	align-items: center;
-	color: var(--black);
 	display: flex;
 	flex-direction: row;
 	font-weight: $font-weight-normal;
