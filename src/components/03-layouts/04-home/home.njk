@@ -36,7 +36,9 @@
 		},
 		true
 	%}
-	{% render '@call-to-action', {standAlone: true, href: '/browse-all', label: 'Browse all resources', class: 'wp-block-button--inverse'} %}
+	<p>
+		{% render '@link--default-inverse', {standAlone: true, href: '/browse-all', label: 'Browse all resources'}, true %}
+	</p>
 </section>
 <section class="home__feed">
 	<header>

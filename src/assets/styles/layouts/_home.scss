@@ -29,12 +29,8 @@
 		margin-top: rem(20);
 	}
 
-	.wp-block-button {
+	p {
 		margin-top: rem(36);
-
-		.wp-block-button__link {
-			max-width: 100%;
-		}
 	}
 
 	@include full-width-background(var(--blue-400));
@@ -116,8 +112,8 @@
 			grid-template-columns: repeat(4, 1fr);
 		}
 
-		.wp-block-button {
-			@include grid-column-span(2, 4, 2);
+		p {
+			@include grid-column-span(4, 4);
 		}
 	}
 
@@ -155,11 +151,11 @@
 		}
 
 		.link-list {
-			@include grid-column-span(8, 12);
+			@include grid-column-span(12, 12);
 		}
 
-		.wp-block-button {
-			@include grid-column-span(4, 12, 9);
+		p {
+			@include grid-column-span(12, 12);
 
 			margin-top: rem(24);
 		}
