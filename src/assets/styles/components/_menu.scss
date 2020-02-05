@@ -15,7 +15,7 @@
 }
 
 .menu {
-	background: $dark-mint-400;
+	background: var(--dark-mint-400);
 	display: block;
 	list-style: none;
 	margin: 0;
@@ -28,7 +28,7 @@
 	z-index: 2;
 
 	li {
-		border-top: solid rem(1) $dark-mint-500;
+		border-top: solid rem(1) var(--dark-mint-500);
 		margin: 0;
 	}
 }
@@ -50,16 +50,16 @@
 }
 
 .menu-toggle[aria-expanded="true"] {
-	--color: #{$off-white};
-	--outline-color: #{$off-white};
-	--hover-background-color: #{$blue-600};
-	--hover-color: #{$blue-50};
-	--active-background-color: #{$blue-600};
-	--active-color: #{$blue-200};
-	--focus-color: #{$off-white};
+	--color: var(--off-white);
+	--outline-color: var(--off-white);
+	--hover-background-color: var(--blue-600);
+	--hover-color: var(--blue-50);
+	--active-background-color: var(--blue-600);
+	--active-color: var(--blue-200);
+	--focus-color: var(--off-white);
 	--focus-background-color: transparent;
-	--focus-box-shadow: 0 0 0 var(--border-width) #{$dark-mint-500}, 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
-	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) #{$dark-mint-500}, 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--dark-mint-500), 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--dark-mint-500), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
 
 	margin-right: rem(10);
 
@@ -74,13 +74,13 @@
 
 .menu__item {
 	align-items: center;
-	background: $dark-mint-400;
+	background: var(--dark-mint-400);
 	border-bottom: 0;
 	border-left: solid rem(3) transparent;
 	border-radius: 0;
 	border-right: 0;
 	border-top: 0;
-	color: $off-white;
+	color: var(--off-white);
 	display: flex;
 	flex-direction: row;
 	font-family: $font-family-sans;
@@ -108,31 +108,31 @@
 
 	&:hover,
 	&:active {
-		background-color: $white;
+		background-color: var(--white);
 		border-left-color: transparent;
-		color: $black;
+		color: var(--black);
 	}
 
 	&:focus {
-		background-color: $white;
+		background-color: var(--white);
 		border: solid rem(3) transparent;
-		box-shadow: 0 0 0 rem(3) $black inset;
-		color: $black;
+		box-shadow: 0 0 0 rem(3) var(--black) inset;
+		color: var(--black);
 		outline: 0;
 		padding: rem(13) rem(13) rem(11) rem(16);
 	}
 
 	&[aria-current="page"] {
-		background-color: $black;
-		border-left-color: $red-400;
+		background-color: var(--black);
+		border-left-color: var(--red-400);
 
 		&:hover {
-			background-color: $white;
+			background-color: var(--white);
 			border-left-color: transparent;
 		}
 
 		&:focus {
-			background-color: $white;
+			background-color: var(--white);
 			border-left-color: transparent;
 		}
 	}
@@ -181,7 +181,7 @@
 }
 
 .menu__submenu {
-	border-top: solid rem(1) $dark-mint-500;
+	border-top: solid rem(1) var(--dark-mint-500);
 	list-style: none;
 	margin-top: 0;
 
@@ -198,16 +198,16 @@
 .menu__submenu-wrapper.current_page_item > .menu__item,
 .menu__submenu-wrapper.current_page_ancestor > .menu__item,
 .menu__submenu-wrapper.current-menu-ancestor > .menu__item {
-	background-color: $black;
-	border-left-color: $red-400;
+	background-color: var(--black);
+	border-left-color: var(--red-400);
 
 	&:hover {
-		background-color: $white;
+		background-color: var(--white);
 		border-left-color: transparent;
 	}
 
 	&:focus {
-		background-color: $white;
+		background-color: var(--white);
 		border-left-color: transparent;
 	}
 }
@@ -224,7 +224,7 @@
 
 	.menu {
 		align-items: flex-end;
-		background: $white;
+		background-color: var(--white);
 		display: flex;
 		flex-direction: row;
 		float: right;
@@ -244,7 +244,7 @@
 
 	.menu__item {
 		background: transparent;
-		color: $blue-500;
+		color: var(--blue-500);
 		font-size: 1rem;
 		font-weight: $font-weight-normal;
 		min-height: 0;
@@ -266,18 +266,18 @@
 			border-left-color: transparent;
 
 			&::after {
-				background: $blue-500;
+				background: var(--blue-500);
 			}
 		}
 
 		&:focus {
-			background-color: $blue-500;
+			background-color: var(--blue-500);
 			border-bottom-width: 0;
 			border-left-color: transparent;
 			border-right-width: 0;
 			border-top-width: 0;
 			box-shadow: none;
-			color: $off-white;
+			color: var(--off-white);
 			outline: 0;
 			padding: rem(26) rem(16);
 		}
@@ -290,28 +290,28 @@
 		&[aria-current="page"] {
 			background: transparent;
 			border-left-color: transparent;
-			color: $dark-mint-500;
+			color: var(--dark-mint-500);
 
 			&::after {
-				background-color: $red-400;
+				background-color: var(--red-400);
 			}
 
 			&:hover {
-				background: $white;
+				background-color: var(--white);
 				border-left-color: transparent;
 
 				&::after {
-					background-color: $blue-500;
+					background-color: var(--blue-500);
 				}
 			}
 
 			&:focus {
-				background-color: $blue-500;
+				background-color: var(--blue-500);
 				border-left-color: transparent;
-				color: $off-white;
+				color: var(--off-white);
 
 				&::after {
-					background-color: $blue-500;
+					background-color: var(--blue-500);
 				}
 			}
 		}
@@ -343,14 +343,14 @@
 	.menu__submenu {
 		border:
 			1px solid
-			$white;
+			var(--white);
 		border-bottom-left-radius: rem(3);
 		border-bottom-right-radius: rem(3);
 		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 		position: absolute;
 
 		.menu__item {
-			background-color: $white;
+			background-color: var(--white);
 			padding: rem(17) rem(16);
 
 			&::after {
@@ -358,30 +358,30 @@
 			}
 
 			&:focus {
-				background-color: $blue-500;
+				background-color: var(--blue-500);
 				border-width: rem(3);
-				box-shadow: 0 0 0 rem(3) $white inset;
+				box-shadow: 0 0 0 rem(3) var(--white) inset;
 				padding: rem(14) rem(13) rem(14) rem(16);
 			}
 
 			&:hover {
-				background-color: $blue-500;
-				color: $off-white;
+				background-color: var(--blue-500);
+				color: var(--off-white);
 			}
 
 			&[aria-current="page"] {
-				border-left: solid rem(3) $red-400;
+				border-left: solid rem(3) var(--red-400);
 
 				&:focus {
-					background-color: $blue-500;
+					background-color: var(--blue-500);
 					border-left-color: transparent;
-					color: $off-white;
+					color: var(--off-white);
 				}
 
 				&:hover {
-					background-color: $blue-500;
+					background-color: var(--blue-500);
 					border-left-color: transparent;
-					color: $off-white;
+					color: var(--off-white);
 				}
 			}
 		}
@@ -392,28 +392,28 @@
 	.menu__submenu-wrapper.current-menu-ancestor > .menu__item {
 		background: transparent;
 		border-left-color: transparent;
-		color: $dark-mint-500;
+		color: var(--dark-mint-500);
 
 		&::after {
-			background-color: $red-400;
+			background-color: var(--red-400);
 		}
 
 		&:hover {
-			background: $white;
+			background-color: var(--white);
 			border-left-color: transparent;
 
 			&::after {
-				background-color: $blue-500;
+				background-color: var(--blue-500);
 			}
 		}
 
 		&:focus {
-			background-color: $blue-500;
+			background-color: var(--blue-500);
 			border-left-color: transparent;
-			color: $off-white;
+			color: var(--off-white);
 
 			&::after {
-				background-color: $blue-500;
+				background-color: var(--blue-500);
 			}
 		}
 	}

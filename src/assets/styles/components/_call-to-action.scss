@@ -1,8 +1,8 @@
 .cta {
 	@extend %interactive;
 
-	--visited-color: #{$off-white};
-	--visited-background-color: #{$blue-600};
+	--visited-color: var(--off-white);
+	--visited-background-color: var(--blue-600);
 
 	border-radius: rem(3);
 	display: block;
@@ -40,12 +40,12 @@
 }
 
 .cta--inverse {
-	--color: #{$blue-500};
-	--outline-color: #{$blue-500};
-	--background-color: #{$off-white};
-	--hover-background-color: #{$blue-50};
-	--active-color: #{$blue-400};
+	--color: var(--blue-500);
+	--outline-color: var(--blue-500);
+	--background-color: var(--off-white);
+	--hover-background-color: var(--blue-50);
+	--active-color: var(--blue-400);
 	--active-background-color: var(--background-color);
 	--focus-background-color: var(--background-color);
-	--focus-color: #{$blue-500};
+	--focus-color: var(--blue-500);
 }

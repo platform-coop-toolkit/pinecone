@@ -7,7 +7,7 @@
 	}
 
 	[type="search"] {
-		background-color: $blue-50;
+		background-color: var(--blue-50);
 		border-bottom-right-radius: 0;
 		border-color: transparent;
 		border-right-width: 0;
@@ -17,11 +17,11 @@
 		max-width: 100%;
 
 		&:hover {
-			border-color: $blue-500;
+			border-color: var(--blue-500);
 		}
 
 		&:focus {
-			box-shadow: 0 0 0 rem(1) $blue-500 inset;
+			box-shadow: 0 0 0 rem(1) var(--blue-500) inset;
 		}
 	}
 
@@ -41,12 +41,12 @@
 		&:focus {
 			border-bottom-left-radius: rem(3);
 			border-top-left-radius: rem(3);
-			box-shadow: 0 0 0 rem(2) $white inset;
+			box-shadow: 0 0 0 rem(2) var(--white) inset;
 
 			&::before {
-				border-bottom: solid rem(2) $blue-700;
-				border-left: solid rem(2) $blue-700;
-				border-top: solid rem(2) $blue-700;
+				border-bottom: solid rem(2) var(--blue-700);
+				border-left: solid rem(2) var(--blue-700);
+				border-top: solid rem(2) var(--blue-700);
 				content: "";
 				display: block;
 				height: rem(46);
@@ -61,8 +61,8 @@
 
 .search-form.search-form--inverse {
 	[type="search"] {
-		background-color: $off-white;
-		border-right-color: $grey-300;
+		background-color: var(--off-white);
+		border-right-color: var(--grey-300);
 		border-right-width: rem(1);
 
 		&::placeholder {
@@ -70,39 +70,39 @@
 		}
 
 		&:hover {
-			border-color: $blue-300;
+			border-color: var(--blue-300);
 		}
 
 		&:focus {
-			border-color: $blue-300;
-			border-right-color: $blue-300;
-			box-shadow: 0 0 0 rem(1) $blue-300 inset;
+			border-color: var(--blue-300);
+			border-right-color: var(--blue-300);
+			box-shadow: 0 0 0 rem(1) var(--blue-300) inset;
 		}
 	}
 
 	[type="submit"] {
-		background-color: $blue-50;
-		border-bottom: solid rem(1) $grey-300;
+		background-color: var(--blue-50);
+		border-bottom: solid rem(1) var(--grey-300);
 		border-left: 0;
-		border-right: solid rem(1) $grey-300;
-		border-top: solid rem(1) $grey-300;
-		color: $blue-500;
+		border-right: solid rem(1) var(--grey-300);
+		border-top: solid rem(1) var(--grey-300);
+		color: var(--blue-500);
 		padding-left: rem(4);
 
 		&:hover {
-			background-color: $blue-50;
-			color: $blue-600;
+			background-color: var(--blue-50);
+			color: var(--blue-600);
 		}
 
 		&:focus {
-			background-color: $blue-50;
-			border-color: $blue-50;
-			box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset;
+			background-color: var(--blue-50);
+			border-color: var(--blue-50);
+			box-shadow: 0 0 0 rem(1) var(--blue-50) inset, 0 0 0 rem(3) var(--blue-600) inset;
 
 			&::before {
-				border-bottom: solid rem(2) $blue-50;
-				border-left: solid rem(2) $blue-50;
-				border-top: solid rem(2) $blue-50;
+				border-bottom: solid rem(2) var(--blue-50);
+				border-left: solid rem(2) var(--blue-50);
+				border-top: solid rem(2) var(--blue-50);
 				top: rem(-1);
 			}
 		}
@@ -116,11 +116,11 @@
 	}
 
 	[type="search"]:focus {
-		box-shadow: 0 0 0 rem(1) $blue-300 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+		box-shadow: 0 0 0 rem(1) var(--blue-300) inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	}
 
 	[type="submit"]:focus {
-		box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+		box-shadow: 0 0 0 rem(1) var(--blue-50) inset, 0 0 0 rem(3) var(--blue-600) inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	}
 
 	@include breakpoint-up(sm) {
@@ -128,11 +128,11 @@
 			height: rem(60);
 
 			&:focus {
-				box-shadow: 0 0 0 rem(2) $blue-300 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+				box-shadow: 0 0 0 rem(2) var(--blue-300) inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 			}
 
 			&::placeholder {
-				color: $grey-500;
+				color: var(--grey-500);
 				opacity: 1;
 			}
 		}
@@ -142,7 +142,7 @@
 			width: rem(60);
 
 			&:focus {
-				box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+				box-shadow: 0 0 0 rem(1) var(--blue-50) inset, 0 0 0 rem(3) var(--blue-600) inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 			}
 
 			&::before {

@@ -18,7 +18,7 @@
 	align-items: center;
 	border: solid rem(2) transparent;
 	border-radius: 50%;
-	color: $blue-500;
+	color: var(--blue-500);
 	display: inline-block;
 	display: inline-flex;
 	font-family: $font-family-sans;
@@ -32,9 +32,9 @@
 	width: rem(39.25);
 
 	&:focus {
-		background-color: $off-white;
-		border-color: $blue-500;
-		box-shadow: 0 0 0 rem(2) $white inset, 0 0 0 rem(4) $blue-500 inset;
+		background-color: var(--off-white);
+		border-color: var(--blue-500);
+		box-shadow: 0 0 0 rem(2) var(--white) inset, 0 0 0 rem(4) var(--blue-500) inset;
 		font-weight: $font-weight-bold;
 		outline: 0;
 		text-decoration: none;
@@ -42,23 +42,23 @@
 
 	&:hover {
 		font-weight: $font-weight-bold;
-		text-decoration-color: $red-400;
+		text-decoration-color: var(--red-400);
 		text-decoration-thickness: rem(2);
 	}
 
 	&:active {
-		color: $blue-400;
-		text-decoration-color: $blue-400;
+		color: var(--blue-400);
+		text-decoration-color: var(--blue-400);
 	}
 
 	&:visited {
-		color: $green-400;
-		text-decoration-color: $green-300;
+		color: var(--green-400);
+		text-decoration-color: var(--green-300);
 	}
 
 	&.current {
-		background: $blue-500;
-		color: $white;
+		background: var(--blue-500);
+		color: var(--white);
 
 		&:hover {
 			font-weight: $font-weight-normal;
@@ -86,31 +86,31 @@
 
 .has-dark-mint-500-background-color {
 	.pagination .page-numbers {
-		color: $off-white;
+		color: var(--off-white);
 
 		&:focus {
-			background-color: $black;
-			border-color: $off-white;
-			box-shadow: 0 0 0 rem(2) $black inset, 0 0 0 rem(4) $off-white inset;
+			background-color: var(--black);
+			border-color: var(--off-white);
+			box-shadow: 0 0 0 rem(2) var(--black) inset, 0 0 0 rem(4) var(--off-white) inset;
 		}
 
 		&:hover {
-			text-decoration-color: $red-400;
+			text-decoration-color: var(--red-400);
 		}
 
 		&:active {
-			color: $blue-200;
-			text-decoration-color: $blue-200;
+			color: var(--blue-200);
+			text-decoration-color: var(--blue-200);
 		}
 
 		&:visited {
-			color: $green-200;
-			text-decoration-color: $green-300;
+			color: var(--green-200);
+			text-decoration-color: var(--green-300);
 		}
 
 		&.current {
-			background: $off-white;
-			color: $black;
+			background: var(--off-white);
+			color: var(--black);
 		}
 	}
 }

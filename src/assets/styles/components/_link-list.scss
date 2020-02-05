@@ -7,10 +7,10 @@
 	}
 
 	a {
-		--color: #{$black};
+		--color: var(--dark-mint-500);
 		--border-width: #{rem(1)};
-		--active-color: #{$blue-400};
-		--visited-color: #{$blue-700};
+		--active-color: var(--blue-400);
+		--visited-color: var(--blue-700);
 		--focus-box-shadow:
 			0 0 0 calc(2 * var(--border-width)) var(--outline-color),
 			0 0 0 calc(4 * var(--border-width)) var(--focus-background-color);
@@ -34,13 +34,13 @@
 	}
 
 	&--inverse a {
-		--color: #{$off-white};
+		--color: var(--off-white);
 		--hover-color: var(--color);
-		--active-color: #{$blue-200};
-		--focus-background-color: #{$blue-200};
-		--focus-color: #{$black};
+		--active-color: var(--blue-200);
+		--focus-background-color: var(--blue-200);
+		--focus-color: var(--dark-mint-500);
 		--outline-color: var(--focus-color);
-		--visited-color: #{$blue-50};
+		--visited-color: var(--blue-50);
 	}
 
 	a:visited {
@@ -48,7 +48,7 @@
 	}
 
 	a:hover {
-		border-bottom: solid rem(3) $blue-300;
+		border-bottom: solid rem(3) var(--blue-300);
 	}
 
 	a:active {
@@ -73,53 +73,3 @@
 		text-decoration: none;
 	}
 }
-
-// .link-list--inverse .link-list__item a {
-// border-bottom-color: $off-white;
-// color: $off-white;
-
-// @supports (mask: url("../images/add.svg")) {
-// 	&::after {
-// 		background-color: $off-white;
-// 	}
-// }
-
-// &:visited,
-// &.visited {
-// 	border-bottom-color: $green-200;
-// 	color: $green-200;
-
-// 	@supports (mask: url("../images/add.svg")) {
-// 		&::after {
-// 			background-color: $green-200;
-// 		}
-// 	}
-// }
-
-// &:hover {
-// 	border-bottom-color: $blue-300;
-// }
-
-// &:active {
-// 	border-bottom-color: $blue-200;
-// 	color: $blue-200;
-
-// 	@supports (mask: url("../images/add.svg")) {
-// 		&::after {
-// 			background-color: $blue-200;
-// 		}
-// 	}
-// }
-
-// &:focus {
-// 	background-color: $blue-200;
-// 	border-bottom-color: $blue-200;
-// 	color: $black;
-
-// 	@supports (mask: url("../images/add.svg")) {
-// 		&::after {
-// 			background-color: $black;
-// 		}
-// 	}
-// }
-// }

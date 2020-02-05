@@ -17,21 +17,21 @@
 .tag__link {
 	@extend %interactive;
 
-	--background-color: #{$blue-50};
+	--background-color: var(--blue-50);
 	--border-width: #{rem(1)};
-	--color: #{$blue-600};
-	--outline-color: #{$white};
-	--hover-background-color: #{$grey-200};
-	--hover-color: #{$blue-500};
-	--active-background-color: #{$blue-50};
-	--active-color: #{$blue-500};
-	--focus-background-color: #{$grey-200};
-	--focus-border-color: #{$blue-500};
+	--color: var(--blue-600);
+	--outline-color: var(--white);
+	--hover-background-color: var(--grey-200);
+	--hover-color: var(--blue-500);
+	--active-background-color: var(--blue-50);
+	--active-color: var(--blue-500);
+	--focus-background-color: var(--grey-200);
+	--focus-border-color: var(--blue-500);
 	--focus-box-shadow:
-		0 0 0 var(--border-width) $blue-500 inset,
+		0 0 0 var(--border-width) var(--blue-500) inset,
 		0 0 0 calc(2 * var(--border-width)) var(--outline-color),
-		0 0 0 calc(4 * var(--border-width)) $blue-500;
-	--focus-color: #{$blue-500};
+		0 0 0 calc(4 * var(--border-width)) var(--blue-500);
+	--focus-color: var(--blue-500);
 
 	border-radius: rem(15);
 	display: block;
@@ -47,10 +47,10 @@
 	width: auto;
 
 	&:visited {
-		color: $blue-700;
+		color: var(--blue-700);
 	}
 
 	&:active {
-		border-color: $blue-400;
+		border-color: var(--blue-400);
 	}
 }

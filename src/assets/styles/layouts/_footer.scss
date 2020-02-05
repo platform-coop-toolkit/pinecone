@@ -1,6 +1,6 @@
 footer {
-	background: $dark-mint-500;
-	color: $white;
+	background: var(--dark-mint-500);
+	color: var(--white);
 	height: auto;
 	margin-top: auto;
 	position: relative;
@@ -16,7 +16,7 @@ footer {
 	}
 
 	.column + .column {
-		border-top: solid rem(3) $off-white;
+		border-top: solid rem(3) var(--off-white);
 		margin-top: rem(60);
 		padding-top: rem(20);
 	}

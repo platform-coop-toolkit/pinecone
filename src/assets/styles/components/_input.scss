@@ -20,7 +20,7 @@ label {
 }
 
 .input-group--error label {
-	color: $red-500;
+	color: var(--red-500);
 }
 
 input:not([type="submit"]),
@@ -29,7 +29,7 @@ textarea {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
-	border: solid rem(1) $grey-500;
+	border: solid rem(1) var(--grey-500);
 	border-radius: rem(3);
 	display: block;
 	font-family: $font-family-serif;
@@ -62,7 +62,7 @@ textarea {
 }
 
 select {
-	background: $white;
+	background-color: var(--white);
 	background-image: url("../images/chevron-down.svg");
 	background-position: calc(100% - #{rem(16)}) center;
 	background-repeat: no-repeat;
@@ -86,22 +86,22 @@ select {
 input:not([type="submit"]):hover,
 textarea:hover,
 select:hover {
-	border-color: $blue-400;
+	border-color: var(--blue-400);
 }
 
 input:not([type="submit"]):focus,
 textarea:focus,
 select:focus {
-	border-color: $blue-500;
-	box-shadow: 0 0 0 rem(1) $blue-500 inset;
+	border-color: var(--blue-500);
+	box-shadow: 0 0 0 rem(1) var(--blue-500) inset;
 	outline: none;
 }
 
 input:not([type="submit"])[disabled],
 textarea[disabled],
 select[disabled] {
-	background-color: $grey-200;
-	border-color: $grey-400;
+	background-color: var(--grey-200);
+	border-color: var(--grey-400);
 }
 
 input[type="radio"] + label,
@@ -113,7 +113,7 @@ input[type="checkbox"] + label {
 input[type="radio"] + label::before,
 input[type="checkbox"] + label::before,
 [role="checkbox"]::before {
-	border: rem(1) solid $grey-500;
+	border: rem(1) solid var(--grey-500);
 	border-radius: rem(3);
 	content: "";
 	display: block;
@@ -143,8 +143,8 @@ input[type="radio"] + label::before {
 input[type="radio"]:hover + label::before,
 input[type="checkbox"]:hover + label::before,
 [role="checkbox"]:hover::before {
-	border-color: $blue-400;
-	box-shadow: 0 0 0 rem(1) $blue-400 inset;
+	border-color: var(--blue-400);
+	box-shadow: 0 0 0 rem(1) var(--blue-400) inset;
 }
 
 [role="checkbox"]:focus {
@@ -154,57 +154,57 @@ input[type="checkbox"]:hover + label::before,
 input[type="radio"]:focus + label::before,
 input[type="checkbox"]:focus + label::before,
 [role="checkbox"]:focus::before {
-	border-color: $blue-400;
+	border-color: var(--blue-400);
 	box-shadow:
-		0 0 0 rem(2) $white,
-		0 0 0 rem(4) $blue-400,
-		0 0 0 rem(1) $blue-400 inset;
+		0 0 0 rem(2) var(--white),
+		0 0 0 rem(4) var(--blue-400),
+		0 0 0 rem(1) var(--blue-400) inset;
 }
 
 input[type="radio"]:checked + label::before {
-	background: $blue-400;
-	border-color: $blue-400;
+	background: var(--blue-400);
+	border-color: var(--blue-400);
 	box-shadow:
-		0 0 0 rem(1) $blue-400 inset,
-		0 0 0 rem(3) $white inset;
+		0 0 0 rem(1) var(--blue-400) inset,
+		0 0 0 rem(3) var(--white) inset;
 }
 
 input[type="checkbox"]:checked + label::before,
 [role="checkbox"][aria-checked="true"]::before {
-	background: $blue-400;
+	background: var(--blue-400);
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23f9f9f7" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	background-position: center;
 	background-repeat: no-repeat;
-	border-color: $blue-400;
+	border-color: var(--blue-400);
 }
 
 [role="checkbox"][aria-checked="mixed"]::before {
-	background: $blue-400;
+	background: var(--blue-400);
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 2"><path fill="%23f9f9f7" d="M0,1A1,1,0,0,0,1,2H7A1,1,0,0,0,7,0H1A1,1,0,0,0,0,1Z"/></svg>');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: rem(10) rem(2.5);
-	border-color: $blue-400;
+	border-color: var(--blue-400);
 }
 
 .has-dark-mint-500-background-color .input-group--error label {
-	color: $red-200;
+	color: var(--red-200);
 }
 
 input[type="radio"]:disabled + label,
 input[type="checkbox"]:disabled + label {
-	color: $grey-400;
+	color: var(--grey-400);
 }
 
 input[type="radio"]:disabled + label::before,
 input[type="checkbox"]:disabled + label::before {
-	border-color: $grey-400;
+	border-color: var(--grey-400);
 }
 
 .has-dark-mint-500-background-color input[type="radio"] + label::before,
 .has-dark-mint-500-background-color input[type="checkbox"] + label::before,
 .has-dark-mint-500-background-color [role="checkbox"]::before {
-	border-color: $off-white;
+	border-color: var(--off-white);
 }
 
 input[type="radio"]:disabled:hover + label::before,
@@ -214,69 +214,69 @@ input[type="checkbox"]:disabled:hover + label::before {
 
 input[type="radio"]:checked:focus + label::before {
 	box-shadow:
-		0 0 0 rem(2) $white,
-		0 0 0 rem(4) $blue-400,
-		0 0 0 rem(1) $blue-400 inset,
-		0 0 0 rem(3) $white inset;
+		0 0 0 rem(2) var(--white),
+		0 0 0 rem(4) var(--blue-400),
+		0 0 0 rem(1) var(--blue-400) inset,
+		0 0 0 rem(3) var(--white) inset;
 }
 
 input[type="checkbox"]:checked:focus + label::before,
 [role="checkbox"][aria-checked="true"]:focus::before,
 [role="checkbox"][aria-checked="mixed"]:focus::before {
 	box-shadow:
-		0 0 0 rem(2) $white,
-		0 0 0 rem(4) $blue-400;
+		0 0 0 rem(2) var(--white),
+		0 0 0 rem(4) var(--blue-400);
 }
 
 .has-dark-mint-500-background-color input[type="radio"]:hover + label::before,
 .has-dark-mint-500-background-color input[type="checkbox"]:hover + label::before,
 .has-dark-mint-500-background-color [role="checkbox"]:hover::before {
-	border-color: $blue-300;
-	box-shadow: 0 0 0 rem(1) $blue-300 inset;
+	border-color: var(--blue-300);
+	box-shadow: 0 0 0 rem(1) var(--blue-300) inset;
 }
 
 .has-dark-mint-500-background-color input[type="checkbox"]:focus + label::before {
-	border-color: $blue-300;
+	border-color: var(--blue-300);
 	box-shadow:
-		0 0 0 rem(2) $black,
-		0 0 0 rem(4) $blue-300,
-		0 0 0 rem(1) $blue-300 inset;
+		0 0 0 rem(2) var(--black),
+		0 0 0 rem(4) var(--blue-300),
+		0 0 0 rem(1) var(--blue-300) inset;
 }
 
 .has-dark-mint-500-background-color input[type="radio"]:checked + label::before {
-	background: $off-white;
-	border-color: $off-white;
+	background: var(--off-white);
+	border-color: var(--off-white);
 	box-shadow:
-		0 0 0 rem(1) $off-white inset,
-		0 0 0 rem(3) $black inset;
+		0 0 0 rem(1) var(--off-white) inset,
+		0 0 0 rem(3) var(--black) inset;
 }
 
 .has-dark-mint-500-background-color input[type="checkbox"]:checked + label::before,
 .has-dark-mint-500-background-color [role="checkbox"][aria-checked="true"]::before {
-	background: $off-white;
+	background: var(--off-white);
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23000000" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	background-position: center;
 	background-repeat: no-repeat;
-	border-color: $off-white;
+	border-color: var(--off-white);
 	box-shadow: none;
 }
 
 .has-dark-mint-500-background-color [role="checkbox"][aria-checked="mixed"]::before {
-	background: $off-white;
+	background: var(--off-white);
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 2"><path fill="%23000000" d="M0,1A1,1,0,0,0,1,2H7A1,1,0,0,0,7,0H1A1,1,0,0,0,0,1Z"/></svg>');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: rem(10) rem(2.5);
-	border-color: $off-white;
+	border-color: var(--off-white);
 	box-shadow: none;
 }
 
 .has-dark-mint-500-background-color input[type="radio"]:disabled label,
 .has-dark-mint-500-background-color input[type="checkbox"]:disabled label {
-	color: $grey-400;
+	color: var(--grey-400);
 
 	&::before {
-		border-color: $grey-400;
+		border-color: var(--grey-400);
 	}
 }
 
@@ -288,39 +288,39 @@ input[type="checkbox"]:checked:focus + label::before,
 .has-dark-mint-500-background-color input[type="radio"]:checked:focus + label::before,
 .has-dark-mint-500-background-color input[type="checkbox"]:checked:focus + label::before,
 .has-dark-mint-500-background-color [role="checkbox"][aria-checked="true"]:focus::before {
-	border-color: $off-white;
+	border-color: var(--off-white);
 	box-shadow:
-		0 0 0 rem(2) $black,
-		0 0 0 rem(4) $blue-300,
-		0 0 0 rem(1) $off-white inset,
-		0 0 0 rem(3) $black inset;
+		0 0 0 rem(2) var(--black),
+		0 0 0 rem(4) var(--blue-300),
+		0 0 0 rem(1) var(--off-white) inset,
+		0 0 0 rem(3) var(--black) inset;
 }
 
 .has-dark-mint-500-background-color input[type="checkbox"]:checked:focus + label::before,
 .has-dark-mint-500-background-color [role="checkbox"][aria-checked="true"]:focus::before {
 	box-shadow:
-		0 0 0 rem(2) $black,
-		0 0 0 rem(4) $blue-300;
+		0 0 0 rem(2) var(--black),
+		0 0 0 rem(4) var(--blue-300);
 }
 
 .input-group--error input:not([type="submit"]),
 .input-group--error select,
 .input-group--error textarea {
-	border-color: $red-500;
-	color: $red-500;
+	border-color: var(--red-500);
+	color: var(--red-500);
 }
 
 .has-dark-mint-500-background-color input:not([type="submit"]):hover,
 .has-dark-mint-500-background-color textarea:hover,
 .has-dark-mint-500-background-color select:hover {
-	border-color: $blue-300;
+	border-color: var(--blue-300);
 }
 
 .has-dark-mint-500-background-color input:not([type="submit"]):focus,
 .has-dark-mint-500-background-color textarea:focus,
 .has-dark-mint-500-background-color select:focus {
-	border-color: $blue-300;
-	box-shadow: 0 0 0 rem(2) $blue-300 inset;
+	border-color: var(--blue-300);
+	box-shadow: 0 0 0 rem(2) var(--blue-300) inset;
 }
 
 .input-group__description {
@@ -332,30 +332,30 @@ input[type="checkbox"]:checked:focus + label::before,
 .input-group--error input:not([type="submit"]):hover,
 .input-group--error select:hover,
 .input-group--error textarea:hover {
-	border-color: $red-500;
+	border-color: var(--red-500);
 }
 
 .input-group--error input:not([type="submit"]):focus,
 .input-group--error select:focus,
 .input-group--error textarea:focus {
-	border-color: $red-500;
-	box-shadow: 0 0 0 rem(1) $red-500 inset;
+	border-color: var(--red-500);
+	box-shadow: 0 0 0 rem(1) var(--red-500) inset;
 }
 
 .has-dark-mint-500-background-color .input-group--error input:not([type="submit"]),
 .has-dark-mint-500-background-color .input-group--error select,
 .has-dark-mint-500-background-color .input-group--error textarea {
-	border-color: $red-200;
-	color: $red-500;
+	border-color: var(--red-200);
+	color: var(--red-500);
 
 	&:focus {
-		border-color: $red-200;
-		box-shadow: 0 0 0 rem(2) $red-200 inset;
+		border-color: var(--red-200);
+		box-shadow: 0 0 0 rem(2) var(--red-200) inset;
 	}
 }
 
 .input-group__error {
-	color: $red-500;
+	color: var(--red-500);
 	display: flex;
 	flex-direction: row;
 	font-family: $font-family-sans;
@@ -368,7 +368,7 @@ input[type="checkbox"]:checked:focus + label::before,
 	}
 
 	.has-dark-mint-500-background-color & {
-		color: $red-200;
+		color: var(--red-200);
 	}
 }
 

@@ -44,7 +44,7 @@
 	}
 
 	&:hover {
-		text-decoration-color: $blue-300;
+		text-decoration-color: var(--blue-300);
 		text-decoration-thickness: rem(2);
 
 		@supports (mask: url("../images/add.svg")) {
@@ -134,18 +134,18 @@ a:not([class]),
 	--background-color: transparent;
 	--border-color: transparent;
 	--border-width: #{rem(2)};
-	--color: #{$blue-500};
-	--outline-color: #{$white};
+	--color: var(--blue-500);
+	--outline-color: var(--white);
 	--hover-background-color: var(--background-color);
 	--hover-border-color: var(--border-color);
-	--hover-color: #{$dark-mint-500};
-	--visited-color: #{$blue-700};
+	--hover-color: var(--dark-mint-500);
+	--visited-color: var(--blue-700);
 	--active-background-color: var(--background-color);
 	--active-border-color: var(--border-color);
-	--active-color: #{$blue-400};
-	--focus-background-color: #{$blue-500};
+	--active-color: var(--blue-400);
+	--focus-background-color: var(--blue-500);
 	--focus-border-color: var(--border-color);
-	--focus-color: #{$white};
+	--focus-color: var(--white);
 }
 
 .link--inverse {
@@ -154,18 +154,18 @@ a:not([class]),
 	--background-color: transparent;
 	--border-color: transparent;
 	--border-width: #{rem(2)};
-	--color: #{$off-white};
-	--outline-color: #{$dark-mint-500};
+	--color: var(--off-white);
+	--outline-color: var(--dark-mint-500);
 	--hover-background-color: var(--background-color);
 	--hover-border-color: var(--border-color);
-	--hover-color: #{$white};
-	--visited-color: #{$blue-50};
+	--hover-color: var(--white);
+	--visited-color: var(--blue-50);
 	--active-background-color: var(--background-color);
 	--active-border-color: var(--border-color);
-	--active-color: #{$blue-200};
-	--focus-background-color: #{$blue-200};
+	--active-color: var(--blue-200);
+	--focus-background-color: var(--blue-200);
 	--focus-border-color: var(--border-color);
-	--focus-color: #{$dark-mint-500};
+	--focus-color: var(--dark-mint-500);
 }
 
 .link--breadcrumb {
@@ -174,22 +174,22 @@ a:not([class]),
 	--background-color: transparent;
 	--border-color: transparent;
 	--border-width: #{rem(2)};
-	--color: #{$blue-500};
-	--outline-color: #{$white};
+	--color: var(--blue-500);
+	--outline-color: var(--white);
 	--hover-background-color: var(--background-color);
 	--hover-border-color: var(--border-color);
-	--hover-color: #{$dark-mint-500};
-	--visited-color: #{$blue-700};
+	--hover-color: var(--dark-mint-500);
+	--visited-color: var(--blue-700);
 	--active-background-color: var(--background-color);
 	--active-border-color: var(--border-color);
-	--active-color: #{$blue-400};
-	--focus-background-color: #{$blue-500};
+	--active-color: var(--blue-400);
+	--focus-background-color: var(--blue-500);
 	--focus-border-color: var(--border-color);
 	--focus-box-shadow:
 		0 0 0 calc(2 * var(--border-width)) var(--focus-background-color),
 		0 0 0 calc(3 * var(--border-width)) var(--outline-color),
 		0 0 0 calc(4 * var(--border-width)) var(--focus-background-color);
-	--focus-color: #{$white};
+	--focus-color: var(--white);
 
 	font-size: rem(14);
 

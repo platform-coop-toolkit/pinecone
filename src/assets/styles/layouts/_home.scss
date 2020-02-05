@@ -1,16 +1,16 @@
 .page.home .page-header {
-	color: $white;
+	color: var(--white);
 	padding-bottom: rem(70);
 	position: relative;
 
-	@include full-width-background($blue-500);
+	@include full-width-background(var(--blue-500));
 }
 
 .home__search {
-	background: $blue-400;
+	background: var(--blue-400);
 	position: relative;
 
-	@include full-width-background($blue-400);
+	@include full-width-background(var(--blue-400));
 
 	.search-form {
 		position: relative;
@@ -19,8 +19,8 @@
 }
 
 .home__browse {
-	background: $blue-400;
-	color: $white;
+	background: var(--blue-400);
+	color: var(--white);
 	padding-bottom: rem(40);
 	padding-top: rem(8);
 	position: relative;
@@ -37,7 +37,7 @@
 		}
 	}
 
-	@include full-width-background($blue-400);
+	@include full-width-background(var(--blue-400));
 }
 
 .home__feed {
@@ -56,7 +56,7 @@
 	}
 
 	> h3::before {
-		background-color: $grey-200;
+		background-color: var(--grey-200);
 		content: "";
 		display: block;
 		height: rem(16);

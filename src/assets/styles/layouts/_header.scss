@@ -1,5 +1,5 @@
 [role="banner"] {
-	background-color: $white;
+	background-color: var(--white);
 	box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	width: 100%;
 
@@ -20,7 +20,7 @@
 	}
 
 	.brand {
-		color: $blue-500;
+		color: var(--blue-500);
 		height: rem(70);
 		margin-left: rem(11);
 		padding: rem(19);
@@ -33,14 +33,14 @@
 	}
 
 	.brand:hover {
-		color: $black;
+		color: var(--black);
 
 	}
 
 	.brand:focus,
 	.brand:active {
-		background-color: $blue-500;
-		color: $off-white;
+		background-color: var(--blue-500);
+		color: var(--off-white);
 	}
 
 	[aria-expanded="false"] + .search-form {
@@ -53,7 +53,7 @@
 
 	@include breakpoint-down(xs) {
 		[aria-expanded="true"] + .search-form {
-			background-color: $blue-500;
+			background-color: var(--blue-500);
 			display: flex;
 			padding: rem(10);
 			position: absolute;
@@ -63,8 +63,8 @@
 			z-index: 3;
 
 			[type="search"] {
-				background-color: $off-white;
-				border-right-color: $grey-300;
+				background-color: var(--off-white);
+				border-right-color: var(--grey-300);
 				border-right-width: rem(1);
 
 				&::placeholder {
@@ -72,39 +72,39 @@
 				}
 
 				&:hover {
-					border-color: $blue-300;
+					border-color: var(--blue-300);
 				}
 
 				&:focus {
-					border-color: $blue-300;
-					border-right-color: $blue-300;
-					box-shadow: 0 0 0 rem(1) $blue-300 inset;
+					border-color: var(--blue-300);
+					border-right-color: var(--blue-300);
+					box-shadow: 0 0 0 rem(1) var(--blue-300) inset;
 				}
 			}
 
 			[type="submit"] {
-				background-color: $blue-50;
-				border-bottom: solid rem(1) $grey-300;
+				background-color: var(--blue-50);
+				border-bottom: solid rem(1) var(--grey-300);
 				border-left: 0;
-				border-right: solid rem(1) $grey-300;
-				border-top: solid rem(1) $grey-300;
-				color: $blue-500;
+				border-right: solid rem(1) var(--grey-300);
+				border-top: solid rem(1) var(--grey-300);
+				color: var(--blue-500);
 				padding-left: rem(4);
 
 				&:hover {
-					background-color: $blue-50;
-					color: $blue-600;
+					background-color: var(--blue-50);
+					color: var(--blue-600);
 				}
 
 				&:focus {
-					background-color: $blue-50;
-					border-color: $blue-50;
-					box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset;
+					background-color: var(--blue-50);
+					border-color: var(--blue-50);
+					box-shadow: 0 0 0 rem(1) var(--blue-50) inset, 0 0 0 rem(3) var(--blue-600) inset;
 
 					&::before {
-						border-bottom: solid rem(2) $blue-50;
-						border-left: solid rem(2) $blue-50;
-						border-top: solid rem(2) $blue-50;
+						border-bottom: solid rem(2) var(--blue-50);
+						border-left: solid rem(2) var(--blue-50);
+						border-top: solid rem(2) var(--blue-50);
 						top: rem(-1);
 					}
 				}
@@ -113,20 +113,20 @@
 	}
 
 	.home & {
-		background-color: $blue-500;
+		background-color: var(--blue-500);
 
 		.brand {
-			color: $off-white;
+			color: var(--off-white);
 		}
 
 		.brand:hover {
-			color: $white;
+			color: var(--white);
 		}
 
 		.brand:focus,
 		.brand:active {
-			background-color: $off-white;
-			color: $blue-500;
+			background-color: var(--off-white);
+			color: var(--blue-500);
 			outline: 0;
 		}
 	}

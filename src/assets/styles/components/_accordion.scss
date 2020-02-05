@@ -2,20 +2,16 @@
 	position: relative;
 }
 
-* + .accordion {
-	margin-top: rem(24);
-}
-
 .accordion__pane {
-	--expanded-color: #{$white};
-	--expanded-background-color: #{$blue-500};
+	--expanded-color: var(--white);
+	--expanded-background-color: var(--blue-500);
 
 	margin-bottom: 0;
 	position: relative;
 
 	.accordion--inverse & {
-		--expanded-color: #{$dark-mint-500};
-		--expanded-background-color: #{$blue-200};
+		--expanded-color: var(--dark-mint-500);
+		--expanded-background-color: var(--blue-200);
 	}
 }
 
@@ -29,7 +25,7 @@
 
 .accordion__heading {
 	--border-width: #{rem(2)};
-	--color: #{$blue-500};
+	--color: var(--blue-500);
 
 	border: 0;
 	border-top: solid var(--border-width) var(--color);
@@ -41,7 +37,7 @@
 	width: 100%;
 
 	.accordion--inverse & {
-		--color: #{$off-white};
+		--color: var(--off-white);
 	}
 }
 
@@ -49,13 +45,13 @@
 	@extend %interactive;
 
 	--border-width: #{rem(2)};
-	--color: #{$blue-500};
+	--color: var(--blue-500);
 	--background-color: transparent;
-	--hover-color: #{$blue-400};
+	--hover-color: var(--blue-400);
 	--hover-background-color: var(--background-color);
-	--active-color: #{$blue-400};
+	--active-color: var(--blue-400);
 	--active-background-color: var(--background-color);
-	--focus-background-color: #{$blue-500};
+	--focus-background-color: var(--blue-500);
 	--focus-box-shadow:
 		0 0 0 var(--border-width) var(--outline-color),
 		0 0 0 calc(2 * var(--border-width)) var(--focus-background-color);
@@ -77,13 +73,13 @@
 	width: 100%;
 
 	.accordion--inverse & {
-		--color: #{$off-white};
+		--color: var(--off-white);
 		--background-color: transparent;
-		--outline-color: #{$dark-mint-500};
-		--hover-color: #{$off-white};
-		--active-color: #{$blue-200};
-		--focus-color: #{$dark-mint-500};
-		--focus-background-color: #{$blue-200};
+		--outline-color: var(--dark-mint-500);
+		--hover-color: var(--off-white);
+		--active-color: var(--blue-200);
+		--focus-color: var(--dark-mint-500);
+		--focus-background-color: var(--blue-200);
 	}
 
 	svg {
@@ -97,10 +93,10 @@
 	}
 
 	&:hover {
-		border-top: solid var(--border-width) $blue-300;
+		border-top: solid var(--border-width) var(--blue-300);
 
 		svg {
-			color: $blue-300;
+			color: var(--blue-300);
 		}
 	}
 

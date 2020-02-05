@@ -1,25 +1,31 @@
-@each $name, $color in $colors-light {
-	.has-#{$name}-background-color {
-		background: $color;
-		color: $black;
+:root {
+	@each $name, $color in $colors-light {
+		--#{$name}: #{$color};
 	}
-}
 
-@each $name, $color in $colors-dark {
-	.has-#{$name}-background-color {
-		background: $color;
-		color: $white;
+	@each $name, $color in $colors-dark {
+		--#{$name}: #{$color};
 	}
 }
 
 @each $name, $color in $colors-light {
 	.has-#{$name}-color {
-		color: $color;
+		color: var(--#{$name});
+	}
+
+	.has-#{$name}-background-color {
+		background: var(--#{$name});
+		color: var(--black);
 	}
 }
 
 @each $name, $color in $colors-dark {
 	.has-#{$name}-color {
-		color: $color;
+		color: var(--#{$name});
+	}
+
+	.has-#{$name}-background-color {
+		background: var(--#{$name});
+		color: var(--white);
 	}
 }

@@ -1,21 +1,21 @@
 %interactive {
-	--background-color: #{$blue-500};
+	--background-color: var(--blue-500);
 	--border-color: transparent;
 	--border-width: #{rem(2)};
-	--color: #{$off-white};
-	--outline-color: #{$off-white};
-	--hover-background-color: #{$blue-700};
+	--color: var(--off-white);
+	--outline-color: var(--off-white);
+	--hover-background-color: var(--blue-700);
 	--hover-border-color: var(--border-color);
-	--hover-color: #{$off-white};
-	--active-background-color: #{$blue-400};
+	--hover-color: var(--off-white);
+	--active-background-color: var(--blue-400);
 	--active-border-color: var(--border-color);
-	--active-color: #{$off-white};
-	--focus-background-color: #{$blue-700};
+	--active-color: var(--off-white);
+	--focus-background-color: var(--blue-700);
 	--focus-border-color: var(--border-color);
 	--focus-box-shadow:
 		0 0 0 var(--border-width) var(--outline-color),
 		0 0 0 calc(2 * var(--border-width)) var(--focus-background-color);
-	--focus-color: #{$off-white};
+	--focus-color: var(--off-white);
 
 	background-color: var(--background-color);
 	border: solid var(--border-width) var(--border-color);
@@ -52,7 +52,7 @@
 	&:focus {
 		background-color: var(--focus-background-color);
 		border-color: var(--focus-border-color);
-		box-shadow: var(--focus-box-shadow, 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--focus-background-color));
+		box-shadow: var(--focus-box-shadow);
 		color: var(--focus-color, var(--color));
 		outline: none;
 	}

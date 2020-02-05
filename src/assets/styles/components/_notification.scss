@@ -1,6 +1,6 @@
 .notification {
-	background-color: $white;
-	border-left: solid rem(4) $blue-400;
+	background-color: var(--white);
+	border-left: solid rem(4) var(--blue-400);
 	border-radius: rem(3);
 	box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.16);
 	font-family: $font-family-serif;
@@ -16,7 +16,7 @@
 	}
 
 	.notification__title {
-		color: $blue-400;
+		color: var(--blue-400);
 		font-weight: $font-weight-semibold;
 		margin-top: 0;
 	}
@@ -36,25 +36,25 @@
 }
 
 .notification--success {
-	border-left-color: $green-300;
+	border-left-color: var(--green-300);
 
 	.notification__title {
-		color: $green-500;
+		color: var(--green-500);
 	}
 }
 
 .notification--warning {
-	border-left-color: $yellow-500;
+	border-left-color: var(--yellow-500);
 
 	.notification__title {
-		color: $black;
+		color: var(--black);
 	}
 }
 
 .notification--error {
-	border-left-color: $red-300;
+	border-left-color: var(--red-300);
 
 	.notification__title {
-		color: $red-500;
+		color: var(--red-500);
 	}
 }

@@ -4,32 +4,32 @@
 
 @include breakpoint-up(md) {
 	.home .menu {
-		background-color: $blue-500;
+		background-color: var(--blue-500);
 	}
 
 	.home .menu .menu__item {
-		color: $off-white;
+		color: var(--off-white);
 
 		&:hover {
 			&::after {
-				background: $off-white;
+				background: var(--off-white);
 			}
 		}
 
 		&:focus {
-			background-color: $off-white;
-			color: $blue-500;
+			background-color: var(--off-white);
+			color: var(--blue-500);
 		}
 
 		&[aria-current="page"] {
-			color: $white;
+			color: var(--white);
 
 			&:hover,
 			&:focus {
-				color: $blue-500;
+				color: var(--blue-500);
 
 				&::after {
-					background: $blue-500;
+					background: var(--blue-500);
 				}
 			}
 		}
@@ -50,12 +50,12 @@
 	}
 
 	.home .menu .menu__submenu {
-		background: $blue-500;
-		border-color: $blue-600;
+		background: var(--blue-500);
+		border-color: var(--blue-600);
 		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 
 		.menu__item {
-			background-color: $blue-500;
+			background-color: var(--blue-500);
 			padding-left: rem(16);
 
 			&::after {
@@ -63,25 +63,25 @@
 			}
 
 			&:focus {
-				background-color: $off-white;
-				box-shadow: 0 0 0 rem(3) $blue-500 inset;
+				background-color: var(--off-white);
+				box-shadow: 0 0 0 rem(3) var(--blue-500) inset;
 			}
 
 			&:hover {
-				background-color: $off-white;
-				color: $blue-500;
+				background-color: var(--off-white);
+				color: var(--blue-500);
 			}
 
 			&[aria-current="page"] {
 				&:hover {
-					background-color: $off-white;
-					color: $blue-500;
+					background-color: var(--off-white);
+					color: var(--blue-500);
 				}
 
 				&:focus {
-					background-color: $off-white;
+					background-color: var(--off-white);
 					border-left-color: transparent;
-					color: $blue-500;
+					color: var(--blue-500);
 				}
 			}
 		}
@@ -90,19 +90,19 @@
 	.home .menu .menu__submenu-wrapper.current_page_item > .menu__item,
 	.home .menu .menu__submenu-wrapper.current_page_ancestor > .menu__item,
 	.home .menu .menu__submenu-wrapper.current-menu-ancestor > .menu__item {
-		color: $white;
+		color: var(--white);
 
 		&:hover {
 			background: transparent;
 
 			&::after {
-				background-color: $white;
+				background-color: var(--white);
 			}
 		}
 
 		&:focus {
-			background-color: $off-white;
-			color: $blue-500;
+			background-color: var(--off-white);
+			color: var(--blue-500);
 
 			&::after {
 				background-color: transparent;
