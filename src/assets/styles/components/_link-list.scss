@@ -8,14 +8,15 @@
 
 	a {
 		--color: #{$black};
+		--border-width: #{rem(1)};
 		--active-color: #{$blue-400};
 		--visited-color: #{$blue-700};
 		--focus-box-shadow:
-			0 0 0 var(--border-width) var(--focus-background-color) inset,
-			0 0 0 calc(2 * var(--border-width)) var(--outline-color) inset;
+			0 0 0 calc(2 * var(--border-width)) var(--outline-color),
+			0 0 0 calc(4 * var(--border-width)) var(--focus-background-color);
 
 		border: 0;
-		border-bottom: solid rem(1) var(--color);
+		border-bottom: solid var(--border-width) var(--color);
 		display: block;
 		font-weight: $font-weight-normal;
 		height: rem(54);
@@ -57,10 +58,10 @@
 
 	a:focus {
 		border-bottom: 0;
-		margin-left: rem(-17);
-		margin-right: rem(-17);
-		padding-left: rem(17);
-		padding-right: rem(17);
+		margin-left: rem(-16);
+		margin-right: rem(-16);
+		padding-left: rem(16);
+		padding-right: rem(16);
 	}
 
 	a:active:focus {

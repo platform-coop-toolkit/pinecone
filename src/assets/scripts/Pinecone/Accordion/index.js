@@ -56,6 +56,7 @@ class Accordion {
 		const expanded = 'true' === ctrl.getAttribute( 'aria-expanded' ) || false;
 		Array.prototype.forEach.call( this.container.querySelectorAll( '.accordion__control' ), el => {
 			el.setAttribute( 'aria-expanded', false );
+			el.parentNode.classList.remove( 'accordion__pane--expanded' );
 		} );
 		ctrl.setAttribute( 'aria-expanded', !expanded );
 		if ( expanded ) {
