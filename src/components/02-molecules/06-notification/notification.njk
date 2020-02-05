@@ -1,6 +1,6 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
 <div class="notification{% if modifier %} notification--{{ modifier }}{% endif %}" role="alert">
-	{% render '@button', {
+	{% render '@button--borderless', {
 		label: 'Close notification',
 		labelVisuallyHidden: true,
 		icon: 'close',
