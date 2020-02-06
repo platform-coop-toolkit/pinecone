@@ -2,7 +2,8 @@ module.exports = {
 	title: 'Pagination',
 	status: 'wip',
 	context: {
-		title: 'Pagination'
+		contentType: 'resources',
+		perPage: 10
 	},
 	variants: [
 		{
