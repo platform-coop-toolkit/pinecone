@@ -47,7 +47,7 @@
 			--color: var(--off-white);
 			--background-color: #{var(--blue-700)};
 			--outline-color: var(--off-white);
-			--hover-background-color: var(--true-black);
+			--hover-background-color: var(--black);
 			--active-background-color: var(--blue-500);
 		}
 	}
@@ -108,7 +108,7 @@
 		}
 
 		.accordion__content > .input-group li ul {
-			background-color: var(--black);
+			background-color: var(--dark-mint-500);
 			margin-bottom: rem(-15);
 			margin-left: ($gutter * -1);
 			margin-right: ($gutter * -1);
@@ -131,7 +131,7 @@
 	}
 
 	.accordion__content > .input-group > li + li {
-		border-top: rem(1) solid var(--black);
+		border-top: rem(1) solid var(--dark-mint-500);
 	}
 
 	.accordion__content > .input-group button {
@@ -159,7 +159,7 @@
 
 	.accordion__pane--expanded .accordion__content {
 		background: transparent;
-		color: var(--black);
+		color: var(--dark-mint-500);
 	}
 }
 
@@ -252,7 +252,7 @@
 		[role="checkbox"]:focus::before {
 			border-color: var(--blue-300);
 			box-shadow:
-				0 0 0 rem(2) var(--black),
+				0 0 0 rem(2) var(--dark-mint-500),
 				0 0 0 rem(4) var(--blue-300),
 				0 0 0 rem(1) var(--blue-300) inset;
 		}
@@ -281,7 +281,7 @@
 		[role="checkbox"][aria-checked="true"]:focus::before {
 			border-color: var(--off-white);
 			box-shadow:
-				0 0 0 rem(2) var(--black),
+				0 0 0 rem(2) var(--dark-mint-500),
 				0 0 0 rem(4) var(--blue-300);
 		}
 

@@ -238,7 +238,7 @@ input[type="checkbox"]:checked:focus + label::before,
 .has-dark-mint-500-background-color input[type="checkbox"]:focus + label::before {
 	border-color: var(--blue-300);
 	box-shadow:
-		0 0 0 rem(2) var(--black),
+		0 0 0 rem(2) var(--dark-mint-500),
 		0 0 0 rem(4) var(--blue-300),
 		0 0 0 rem(1) var(--blue-300) inset;
 }
@@ -248,7 +248,7 @@ input[type="checkbox"]:checked:focus + label::before,
 	border-color: var(--off-white);
 	box-shadow:
 		0 0 0 rem(1) var(--off-white) inset,
-		0 0 0 rem(3) var(--black) inset;
+		0 0 0 rem(3) var(--dark-mint-500) inset;
 }
 
 .has-dark-mint-500-background-color input[type="checkbox"]:checked + label::before,
@@ -290,16 +290,16 @@ input[type="checkbox"]:checked:focus + label::before,
 .has-dark-mint-500-background-color [role="checkbox"][aria-checked="true"]:focus::before {
 	border-color: var(--off-white);
 	box-shadow:
-		0 0 0 rem(2) var(--black),
+		0 0 0 rem(2) var(--dark-mint-500),
 		0 0 0 rem(4) var(--blue-300),
 		0 0 0 rem(1) var(--off-white) inset,
-		0 0 0 rem(3) var(--black) inset;
+		0 0 0 rem(3) var(--dark-mint-500) inset;
 }
 
 .has-dark-mint-500-background-color input[type="checkbox"]:checked:focus + label::before,
 .has-dark-mint-500-background-color [role="checkbox"][aria-checked="true"]:focus::before {
 	box-shadow:
-		0 0 0 rem(2) var(--black),
+		0 0 0 rem(2) var(--dark-mint-500),
 		0 0 0 rem(4) var(--blue-300);
 }
 

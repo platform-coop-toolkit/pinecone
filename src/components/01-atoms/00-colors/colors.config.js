@@ -115,7 +115,7 @@ module.exports = {
 			],
 			shades: [
 				{
-					color: 'true-black',
+					color: 'black',
 					contrast: 'aaa',
 					hex: '#000'
 				},

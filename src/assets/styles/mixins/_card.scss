@@ -17,7 +17,7 @@
 
 	&:focus-within .card__title a:focus {
 		background: unset;
-		color: var(--black);
+		color: var(--dark-mint-500);
 	}
 
 	@if $format {
@@ -28,7 +28,7 @@
 	} @else {
 		.card__format {
 			background: unset;
-			color: var(--black);
+			color: var(--dark-mint-500);
 		}
 	}
 }

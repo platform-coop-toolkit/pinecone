@@ -77,7 +77,7 @@
 }
 
 .card__link {
-	color: var(--black);
+	color: var(--dark-mint-500);
 	line-height: inherit;
 	margin-left: rem(-22);
 	margin-right: rem(-22);
@@ -88,7 +88,7 @@
 	text-decoration: none;
 
 	&:visited {
-		color: var(--black);
+		color: var(--dark-mint-500);
 	}
 
 	&:focus {
@@ -96,7 +96,7 @@
 	}
 
 	&[rel="external"]::after {
-		background-color: var(--black);
+		background-color: var(--dark-mint-500);
 	}
 
 	&:not([rel="external"])::after {
@@ -155,7 +155,7 @@
 }
 
 .card__favorite {
-	color: var(--black);
+	color: var(--dark-mint-500);
 	font-weight: $font-weight-bold;
 	text-align: right;
 
@@ -165,7 +165,7 @@
 }
 
 .card--resource {
-	@include card($red-400, var(--black), false);
+	@include card($red-400, var(--dark-mint-500), false);
 
 	.card__format {
 		color: inherit;
@@ -177,11 +177,11 @@
 }
 
 .card--project {
-	@include card($red-400, var(--black));
+	@include card($red-400, var(--dark-mint-500));
 }
 
 .card--blog {
-	@include card($red-300, var(--black));
+	@include card($red-300, var(--dark-mint-500));
 }
 
 .card--person {
@@ -189,15 +189,15 @@
 }
 
 .card--event {
-	@include card($blue-300, var(--black));
+	@include card($blue-300, var(--dark-mint-500));
 }
 
 .card--platformcoop {
-	@include card($green-300, var(--black));
+	@include card($green-300, var(--dark-mint-500));
 }
 
 .card--story {
-	@include card($yellow-500, var(--black));
+	@include card($yellow-500, var(--dark-mint-500));
 }
 
 @include breakpoint-up(sm) {

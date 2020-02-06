@@ -110,20 +110,20 @@
 	&:active {
 		background-color: var(--white);
 		border-left-color: transparent;
-		color: var(--black);
+		color: var(--dark-mint-500);
 	}
 
 	&:focus {
 		background-color: var(--white);
 		border: solid rem(3) transparent;
-		box-shadow: 0 0 0 rem(3) var(--black) inset;
-		color: var(--black);
+		box-shadow: 0 0 0 rem(3) var(--dark-mint-500) inset;
+		color: var(--dark-mint-500);
 		outline: 0;
 		padding: rem(13) rem(13) rem(11) rem(16);
 	}
 
 	&[aria-current="page"] {
-		background-color: var(--black);
+		background-color: var(--dark-mint-500);
 		border-left-color: var(--red-400);
 
 		&:hover {
@@ -198,7 +198,7 @@
 .menu__submenu-wrapper.current_page_item > .menu__item,
 .menu__submenu-wrapper.current_page_ancestor > .menu__item,
 .menu__submenu-wrapper.current-menu-ancestor > .menu__item {
-	background-color: var(--black);
+	background-color: var(--dark-mint-500);
 	border-left-color: var(--red-400);
 
 	&:hover {

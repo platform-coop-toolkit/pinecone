@@ -9,6 +9,7 @@ module.exports = {
 		{
 			name: 'Inverse',
 			context: {
+				modifier: 'inverse',
 				bodyClass: 'has-blue-500-background-color'
 			}
 		}

@@ -15,7 +15,7 @@
 
 	.has-#{$name}-background-color {
 		background: var(--#{$name});
-		color: var(--black);
+		color: var(--dark-mint-500);
 	}
 }
 
