@@ -46,6 +46,7 @@ button:-moz-focusring {
 	--hover-background-color: var(--grey-200);
 	--active-color: var(--blue-400);
 	--active-background-color: var(--background-color);
+	--focus-color: var(--blue-500);
 	--focus-background-color: var(--hover-background-color);
 	--focus-box-shadow:
 		0 0 0 var(--outline-width) var(--focus-background-color, var(--off-white)),
