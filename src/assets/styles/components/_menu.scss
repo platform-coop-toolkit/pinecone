@@ -66,7 +66,6 @@
 	--active-color: var(--blue-200);
 	--focus-color: var(--off-white);
 	--focus-background-color: transparent;
-	--focus-box-shadow: 0 0 0 var(--border-width) var(--dark-mint-500), 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
 	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--dark-mint-500), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
 
 	margin-right: rem(10);
@@ -142,6 +141,14 @@
 	&[aria-expanded="true"] svg.icon--language {
 		transform: none;
 	}
+}
+
+a.menu__item:hover,
+a.menu__item:focus,
+a.menu__item:active {
+	text-decoration: underline;
+	text-decoration-skip-ink: auto;
+	text-underline-offset: rem(2);
 }
 
 .menu-item--languages .menu__label {
@@ -239,7 +246,7 @@
 
 	.menu__item {
 		--background-color: transparent;
-		--border-width: #{rem(3)};
+		--border-width: #{rem(2)};
 		--outline-color: var(--off-white);
 		--hover-color: var(--off-white);
 		--hover-background-color: var(--blue-500);
@@ -277,7 +284,9 @@
 		&:focus,
 		&:active {
 			border: 0;
+			border-left: 0;
 			box-shadow: var(--focus-box-shadow);
+			padding: 0 rem(16);
 
 			&::after {
 				background-color: transparent;
@@ -358,7 +367,7 @@
 				--hover-color: var(--off-white);
 				--hover-background-color: var(--blue-500);
 
-				border-left: solid var(--border-width) var(--red-400);
+				border-left: solid rem(3) var(--red-400);
 				padding-left: rem(13);
 
 				&:focus,
