@@ -27,7 +27,7 @@
 			display: inline-block;
 			height: 1.25em;
 			margin-bottom: -0.3125em;
-			margin-left: 0;
+			margin-left: -0.125em;
 			mask: url("../images/chevron-right.svg") no-repeat center;
 			mask-position: left;
 			mask-size: 1.25em;
@@ -127,6 +127,7 @@
 
 		&[href^="#"] {
 			&::after {
+				margin-left: 0;
 				mask-image: url("../images/scroll-down.svg");
 				width: 1.25em;
 			}
