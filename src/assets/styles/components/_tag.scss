@@ -50,7 +50,8 @@
 		color: var(--blue-700);
 	}
 
-	&:active {
-		border-color: var(--blue-400);
+	&:active,
+	&:focus:active {
+		border: solid var(--border-width) var(--blue-400);
 	}
 }
