@@ -44,7 +44,6 @@
 		--parent-background-color: var(--off-white);
 
 		background-color: var(--off-white);
-		border-right-color: var(--grey-300);
 		border-right-width: rem(1);
 
 		&::placeholder {
@@ -64,11 +63,11 @@
 	.button--search {
 		--color: var(--blue-500);
 		--background-color: var(--blue-50);
-		--border-color: var(--grey-300);
+		--border-color: transparent;
 		--border-width: #{rem(1)};
 		--outline-color: var(--blue-600);
 		--hover-color: var(--blue-600);
-		--hover-background-color: var(--background-color);
+		--hover-background-color: var(--blue-150);
 		--active-color: var(--blue-400);
 		--active-background-color: var(--background-color);
 		--focus-color: var(--blue-600);
@@ -78,26 +77,10 @@
 			0 0 0 var(--border-width) var(--focus-background-color) inset,
 			0 0 0 calc(3 * var(--border-width)) var(--outline-color) inset;
 
-		border: 0;
-		border-bottom: solid rem(1) var(--border-color);
-		border-right: solid rem(1) var(--border-color);
-		border-top: solid rem(1) var(--border-color);
+		border: solid rem(1) var(--border-color);
 
 		&:focus {
 			border-color: var(--focus-border-color);
-
-			&::before {
-				border-bottom: solid rem(2) var(--focus-border-color);
-				border-left: solid rem(3) var(--focus-border-color);
-				border-top: solid rem(2) var(--focus-border-color);
-				content: "";
-				display: block;
-				height: rem(46);
-				left: rem(-2);
-				position: absolute;
-				top: rem(-1);
-				width: rem(3);
-			}
 		}
 	}
 }
