@@ -45,13 +45,6 @@
 		color: var(--hover-color, var(--color));
 	}
 
-	&:active {
-		background-color: var(--active-background-color);
-		border-color: var(--active-border-color);
-		box-shadow: var(--active-box-shadow);
-		color: var(--active-color, var(--color));
-	}
-
 	&:focus {
 		background-color: var(--focus-background-color);
 		border-color: var(--focus-border-color);
@@ -60,10 +53,10 @@
 		outline: none;
 	}
 
-	&:active:focus {
+	&:active {
 		background-color: var(--active-background-color);
 		border-color: var(--active-border-color);
 		box-shadow: var(--active-box-shadow);
-		color: var(--active-color);
+		color: var(--active-color, var(--color));
 	}
 }

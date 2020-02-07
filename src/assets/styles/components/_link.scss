@@ -59,20 +59,20 @@
 		}
 	}
 
-	&:active {
-		@supports (mask: url("../images/add.svg")) {
-			&::after {
-				background: var(--active-color);
-			}
-		}
-	}
-
 	&:focus {
 		text-decoration: none;
 
 		@supports (mask: url("../images/add.svg")) {
 			&::after {
 				background: var(--focus-color);
+			}
+		}
+	}
+
+	&:active {
+		@supports (mask: url("../images/add.svg")) {
+			&::after {
+				background: var(--active-color);
 			}
 		}
 	}
@@ -88,7 +88,7 @@
 	}
 
 	&:visited:focus {
-		color: var(--visited-color);
+		color: var(--focus-color);
 
 		@supports (mask: url("../images/add.svg")) {
 			&::after {
