@@ -115,6 +115,8 @@
 }
 
 .menu-button__menu ul {
+	--parent-background-color: var(--white);
+
 	background-color: var(--white);
 	border-radius: rem(3);
 	box-shadow: 0 rem(3) rem(10) rgba(0, 0, 0, 0.19);

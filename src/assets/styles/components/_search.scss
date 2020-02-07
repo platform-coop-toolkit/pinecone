@@ -41,6 +41,8 @@
 
 .search-form.search-form--inverse {
 	[type="search"] {
+		--parent-background-color: var(--off-white);
+
 		background-color: var(--off-white);
 		border-right-color: var(--grey-300);
 		border-right-width: rem(1);

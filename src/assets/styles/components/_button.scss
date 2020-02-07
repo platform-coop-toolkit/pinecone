@@ -29,6 +29,7 @@ button:-moz-focusring {
 	--color: var(--blue-500);
 	--outline-color: var(--blue-500);
 	--background-color: var(--off-white);
+	--hover-color: var(--color);
 	--hover-background-color: var(--blue-50);
 	--active-color: var(--blue-400);
 	--active-background-color: var(--background-color);
@@ -65,6 +66,7 @@ button:-moz-focusring {
 	--hover-background-color: var(--blue-500);
 	--active-color: var(--white);
 	--active-background-color: var(--background-color);
+	--focus-color: var(--off-white);
 	--focus-background-color: var(--background-color);
 }
 
@@ -79,7 +81,7 @@ button:-moz-focusring {
 	--active-color: var(--blue-400);
 	--focus-color: var(--dark-mint-500);
 	--focus-background-color: var(--grey-200);
-	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--white), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
 
 	margin: rem(6) rem(24) rem(6) rem(-8);
 	min-height: rem(28);
@@ -97,7 +99,7 @@ button:-moz-focusring {
 	--focus-color: var(--off-white);
 	--focus-background-color: transparent;
 	--focus-box-shadow: 0 0 0 var(--border-width) var(--dark-mint-500), 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
-	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--dark-mint-500), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
 }
 
 .button--tag-button {

@@ -4,6 +4,8 @@
 
 @include breakpoint-up(md) {
 	.home .menu {
+		--parent-background-color: var(--blue-500);
+
 		background-color: var(--blue-500);
 	}
 

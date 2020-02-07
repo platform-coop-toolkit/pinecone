@@ -4,6 +4,8 @@
 }
 
 .info-card {
+	--parent-background-color: var(--grey-200);
+
 	background-color: var(--grey-200);
 	padding: rem(14) rem(28) rem(28);
 	position: relative;

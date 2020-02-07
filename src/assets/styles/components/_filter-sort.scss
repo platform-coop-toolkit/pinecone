@@ -108,6 +108,8 @@
 		}
 
 		.accordion__content > .input-group li ul {
+			--parent-background-color: var(--dark-mint-500);
+
 			background-color: var(--dark-mint-500);
 			margin-bottom: rem(-15);
 			margin-left: ($gutter * -1);

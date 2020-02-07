@@ -1,4 +1,6 @@
 [role="banner"] {
+	--parent-background-color: var(--white);
+
 	background-color: var(--white);
 	box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	width: 100%;
@@ -61,6 +63,8 @@
 
 	@include breakpoint-down(xs) {
 		[aria-expanded="true"] + .search-form {
+			--parent-background-color: var(--blue-500);
+
 			background-color: var(--blue-500);
 			display: flex;
 			padding: rem(10);
@@ -75,6 +79,7 @@
 			}
 
 			[type="search"] {
+				--parent-background-color: var(--off-white);
 				background-color: var(--off-white);
 				border-right-color: var(--grey-300);
 				border-right-width: rem(1);
@@ -137,6 +142,7 @@
 
 	.home & {
 		background-color: var(--blue-500);
+		--parent-background-color: var(--blue-500);
 
 		.link--brand {
 			--color: var(--off-white);

@@ -8,6 +8,8 @@
 }
 
 .card {
+	--parent-background-color: var(--white);
+
 	background-color: var(--white);
 	border-top: rem(3) solid var(--blue-500);
 	box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.16);

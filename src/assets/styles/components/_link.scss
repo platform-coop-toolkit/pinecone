@@ -6,6 +6,10 @@
 		0 0 0 calc(3 * var(--border-width)) var(--outline-color),
 		0 0 0 calc(4 * var(--border-width)) var(--focus-background-color);
 
+	--active-box-shadow:
+		0 0 0 calc(3 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(4 * var(--border-width)) var(--active-color);
+
 	border: 0;
 	display: inline-block;
 	font-family: $font-family-sans;
@@ -94,8 +98,6 @@
 	}
 
 	&:active:focus {
-		background-color: var(--active-background-color);
-		color: var(--active-color);
 		text-decoration: underline;
 
 		@supports (mask: url("../images/add.svg")) {

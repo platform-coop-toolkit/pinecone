@@ -1,4 +1,6 @@
 .notification {
+	--parent-background-color: var(--white);
+
 	background-color: var(--white);
 	border-left: solid rem(4) var(--blue-400);
 	border-radius: rem(3);
