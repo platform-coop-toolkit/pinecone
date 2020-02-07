@@ -107,6 +107,10 @@
 		}
 	}
 
+	&:active:visited {
+		color: var(--active-color);
+	}
+
 	&:active:focus:visited {
 		color: var(--active-color);
 	}
