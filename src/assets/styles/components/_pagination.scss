@@ -27,6 +27,8 @@
 	--focus-box-shadow:
 		0 0 0 #{rem(2)} var(--outline-color) inset,
 		0 0 0 #{rem(4)} var(--focus-color) inset;
+	--active-box-shadow: none;
+
 
 	align-items: center;
 	border: solid var(--border-width) transparent;

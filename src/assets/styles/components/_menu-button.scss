@@ -15,8 +15,7 @@
 	--active-color: var(--blue-200);
 	--focus-color: var(--off-white);
 	--focus-background-color: transparent;
-	--focus-box-shadow: 0 0 0 var(--border-width) var(--dark-mint-500), 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
-	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--dark-mint-500), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
 }
 
 .menu-button__menu {
@@ -143,6 +142,7 @@
 	--focus-box-shadow:
 		0 0 0 var(--border-width) var(--outline-color) inset,
 		0 0 0 calc(2 * var(--border-width)) var(--focus-background-color) inset;
+	--active-box-shadow: var(--focus-box-shadow);
 
 	align-items: center;
 	display: flex;
