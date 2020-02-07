@@ -97,12 +97,6 @@
 		--visited-color: var(--blue-50);
 		--focus-background-color: var(--dark-mint-500);
 		--focus-color: var(--off-white);
-
-		&:focus {
-			background-color: var(--dark-mint-500);
-			border-color: var(--off-white);
-		}
-
 	}
 
 	.page {
