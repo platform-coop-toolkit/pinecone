@@ -55,18 +55,18 @@
 
 	&:hover {
 		font-weight: $font-weight-bold;
-		text-decoration-color: var(--red-400);
+		// text-decoration-color: var(--red-400);
 		text-decoration-thickness: rem(2);
 	}
 
 	&:active {
 		color: var(--blue-400);
-		text-decoration-color: var(--blue-400);
+		// text-decoration-color: var(--blue-400);
 	}
 
 	&:visited {
 		color: var(--blue-700);
-		text-decoration-color: var(--blue-700);
+		// text-decoration-color: var(--blue-700);
 	}
 
 	svg {
