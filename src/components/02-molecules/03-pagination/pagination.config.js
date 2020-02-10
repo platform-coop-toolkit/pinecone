@@ -2,13 +2,15 @@ module.exports = {
 	title: 'Pagination',
 	status: 'wip',
 	context: {
-		title: 'Pagination'
+		contentType: 'resources',
+		perPage: 10
 	},
 	variants: [
 		{
-			name: 'Light on Dark',
+			name: 'Inverse',
 			context: {
-				bodyClass: 'has-dark-mint-500-background-color'
+				modifier: 'inverse',
+				bodyClass: 'has-blue-500-background-color'
 			}
 		}
 	]

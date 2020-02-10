@@ -1,112 +1,75 @@
 .home .menu-toggle {
-	@extend .button--inverse;
+	--color: var(--off-white);
+	--outline-color: var(--off-white);
+	--hover-background-color: var(--blue-600);
+	--hover-color: var(--blue-50);
+	--active-background-color: var(--blue-600);
+	--active-color: var(--blue-200);
+	--focus-color: var(--off-white);
+	--focus-background-color: transparent;
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--dark-mint-500), 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+
 }
 
 @include breakpoint-up(md) {
 	.home .menu {
-		background-color: $blue-500;
+		--parent-background-color: var(--blue-500);
+
+		background-color: var(--blue-500);
 	}
 
 	.home .menu .menu__item {
-		color: $off-white;
-
-		&:hover {
-			&::after {
-				background: $off-white;
-			}
-		}
-
-		&:focus {
-			background-color: $off-white;
-			color: $blue-500;
-		}
+		--color: var(--off-white);
+		--outline-color: var(--blue-500);
+		--hover-color: var(--blue-500);
+		--hover-background-color: var(--off-white);
+		--active-color: var(--blue-500);
+		--active-background-color: var(--off-white);
+		--focus-color: var(--blue-500);
+		--focus-background-color: var(--off-white);
 
 		&[aria-current="page"] {
-			color: $white;
-
 			&:hover,
 			&:focus {
-				color: $blue-500;
-
 				&::after {
-					background: $blue-500;
+					background: transparent;
 				}
 			}
 		}
 	}
 
 	.home .menu .menu-item--languages [aria-current]::before {
-		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23f9f9f7" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%2316605d" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	}
 
 	.home .menu .menu-item--languages [aria-current]:hover::before,
 	.home .menu .menu-item--languages [aria-current]:focus::before {
-		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%2316605d" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23f9f9f7" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	}
 
 	.home .menu .menu-item--languages [aria-current]:active::before,
 	.home .menu .menu-item--languages [aria-current]:active:focus::before {
-		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%2316605d" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23f9f9f7" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 	}
 
 	.home .menu .menu__submenu {
-		background: $blue-500;
-		border-color: $blue-600;
-		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+		background-color: var(--white);
 
 		.menu__item {
-			background-color: $blue-500;
-			padding-left: rem(16);
-
-			&::after {
-				display: none;
-			}
-
-			&:focus {
-				background-color: $off-white;
-				box-shadow: 0 0 0 rem(3) $blue-500 inset;
-			}
-
-			&:hover {
-				background-color: $off-white;
-				color: $blue-500;
-			}
-
-			&[aria-current="page"] {
-				&:hover {
-					background-color: $off-white;
-					color: $blue-500;
-				}
-
-				&:focus {
-					background-color: $off-white;
-					border-left-color: transparent;
-					color: $blue-500;
-				}
-			}
-		}
-	}
-
-	.home .menu .menu__submenu-wrapper.current_page_item > .menu__item,
-	.home .menu .menu__submenu-wrapper.current_page_ancestor > .menu__item,
-	.home .menu .menu__submenu-wrapper.current-menu-ancestor > .menu__item {
-		color: $white;
-
-		&:hover {
-			background: transparent;
-
-			&::after {
-				background-color: $white;
-			}
-		}
-
-		&:focus {
-			background-color: $off-white;
-			color: $blue-500;
-
-			&::after {
-				background-color: transparent;
-			}
+			--background-color: transparent;
+			--border-width: #{rem(2)};
+			--outline-color: var(--off-white);
+			--hover-color: var(--off-white);
+			--hover-background-color: var(--blue-500);
+			--color: var(--blue-500);
+			--active-color: var(--off-white);
+			--active-background-color: var(--blue-500);
+			--focus-background-color: var(--blue-500);
+			--focus-color: var(--off-white);
+			--focus-box-shadow:
+				0 0 0 var(--border-width) var(--focus-background-color) inset,
+				0 0 0 calc(var(--border-width) * 2) var(--outline-color) inset;
 		}
 	}
 }

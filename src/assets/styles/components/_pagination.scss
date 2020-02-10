@@ -12,18 +12,30 @@
 	flex-direction: row;
 	justify-content: center;
 	margin-top: 0;
+
+	> * + * {
+		margin-left: rem(3);
+	}
 }
 
-.pagination .page-numbers {
+.link--pagination {
+	--background-color: transparent;
+	--color: var(--blue-500);
+	--outline-color: var(--white);
+	--focus-background-color: var(--off-white);
+	--focus-color: var(--blue-500);
+	--focus-box-shadow:
+		0 0 0 #{rem(2)} var(--outline-color) inset,
+		0 0 0 #{rem(4)} var(--focus-color) inset;
+	--active-box-shadow: none;
+
+
 	align-items: center;
-	border: solid rem(2) transparent;
+	border: solid var(--border-width) transparent;
 	border-radius: 50%;
-	color: $blue-500;
-	display: inline-block;
 	display: inline-flex;
 	font-family: $font-family-sans;
 	font-weight: $font-weight-normal;
-	height: rem(40);
 	height: rem(39.25);
 	justify-content: center;
 	margin: 0;
@@ -31,89 +43,76 @@
 	text-underline-offset: rem(8);
 	width: rem(39.25);
 
-	&:focus {
-		background-color: $off-white;
-		border-color: $blue-500;
-		box-shadow: 0 0 0 rem(2) $white inset, 0 0 0 rem(4) $blue-500 inset;
-		font-weight: $font-weight-bold;
-		outline: 0;
-		text-decoration: none;
+	&::after {
+		display: none;
 	}
 
 	&:hover {
 		font-weight: $font-weight-bold;
-		text-decoration-color: $red-400;
 		text-decoration-thickness: rem(2);
 	}
 
-	&:active {
-		color: $blue-400;
-		text-decoration-color: $blue-400;
+	&:focus {
+		border-color: var(--focus-color);
+		font-weight: $font-weight-bold;
+		text-decoration: none;
 	}
 
-	&:visited {
-		color: $green-400;
-		text-decoration-color: $green-300;
+	&:active {
+		border-color: transparent;
 	}
+
+	svg {
+		margin-bottom: 0;
+	}
+}
+
+.pagination .page {
+	align-items: center;
+	background-color: var(--background-color, transparent);
+	border: solid var(--border-width) transparent;
+	border-radius: 50%;
+	color: var(--color, var(--dark-mint-500));
+	display: inline-flex;
+	font-family: $font-family-sans;
+	font-weight: $font-weight-normal;
+	height: rem(39.25);
+	justify-content: center;
+	padding: rem(6) 0;
+	text-underline-offset: rem(8);
+	width: rem(39.25);
 
 	&.current {
-		background: $blue-500;
-		color: $white;
-
-		&:hover {
-			font-weight: $font-weight-normal;
-		}
+		--background-color: var(--blue-500);
+		--color: var(--white);
 	}
 
 	&.dots {
 		vertical-align: super;
-
-		:hover {
-			font-weight: $font-weight-normal;
-		}
-	}
-
-	svg {
-		height: rem(20);
-		margin-bottom: 0;
-		width: rem(20);
-	}
-
-	+ .page-numbers {
-		margin-left: rem(3);
 	}
 }
 
-.has-dark-mint-500-background-color {
-	.pagination .page-numbers {
-		color: $off-white;
+.pagination--inverse {
+	.link--pagination {
+		--color: var(--off-white);
+		--outline-color: var(--dark-mint-500);
+		--active-color: var(--off-white);
+		--hover-color: var(--white);
+		--visited-color: var(--blue-50);
+		--focus-background-color: var(--dark-mint-500);
+		--focus-color: var(--off-white);
+	}
 
-		&:focus {
-			background-color: $black;
-			border-color: $off-white;
-			box-shadow: 0 0 0 rem(2) $black inset, 0 0 0 rem(4) $off-white inset;
-		}
-
-		&:hover {
-			text-decoration-color: $red-400;
-		}
-
-		&:active {
-			color: $blue-200;
-			text-decoration-color: $blue-200;
-		}
-
-		&:visited {
-			color: $green-200;
-			text-decoration-color: $green-300;
-		}
+	.page {
+		--color: var(--off-white);
 
 		&.current {
-			background: $off-white;
-			color: $black;
+			--background-color: var(--off-white);
+			--color: var(--dark-mint-500);
 		}
 	}
 }
+
 
 @include breakpoint-up(lg) {
 	.pagination {

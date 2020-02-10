@@ -1,16 +1,16 @@
 .page.home .page-header {
-	color: $white;
+	color: var(--white);
 	padding-bottom: rem(70);
 	position: relative;
 
-	@include full-width-background($blue-500);
+	@include full-width-background(var(--blue-500));
 }
 
 .home__search {
-	background: $blue-400;
+	background: var(--blue-400);
 	position: relative;
 
-	@include full-width-background($blue-400);
+	@include full-width-background(var(--blue-400));
 
 	.search-form {
 		position: relative;
@@ -19,8 +19,8 @@
 }
 
 .home__browse {
-	background: $blue-400;
-	color: $white;
+	background: var(--blue-400);
+	color: var(--white);
 	padding-bottom: rem(40);
 	padding-top: rem(8);
 	position: relative;
@@ -29,15 +29,11 @@
 		margin-top: rem(20);
 	}
 
-	.wp-block-button {
+	p {
 		margin-top: rem(36);
-
-		.wp-block-button__link {
-			max-width: 100%;
-		}
 	}
 
-	@include full-width-background($blue-400);
+	@include full-width-background(var(--blue-400));
 }
 
 .home__feed {
@@ -55,8 +51,8 @@
 		}
 	}
 
-	h3::before {
-		background-color: $grey-200;
+	> h3::before {
+		background-color: var(--grey-200);
 		content: "";
 		display: block;
 		height: rem(16);
@@ -116,8 +112,8 @@
 			grid-template-columns: repeat(4, 1fr);
 		}
 
-		.wp-block-button {
-			@include grid-column-span(2, 4, 2);
+		p {
+			@include grid-column-span(4, 4);
 		}
 	}
 
@@ -155,11 +151,11 @@
 		}
 
 		.link-list {
-			@include grid-column-span(8, 12);
+			@include grid-column-span(12, 12);
 		}
 
-		.wp-block-button {
-			@include grid-column-span(4, 12, 9);
+		p {
+			@include grid-column-span(12, 12);
 
 			margin-top: rem(24);
 		}

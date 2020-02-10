@@ -5,10 +5,10 @@
 		<article class="card card--resource">
 			<header>
 				<h3 class="card__title" >
-					<a href="{{ href }}">{{ title | safe }}</a>
+					<a class="card__link" href="{{ href }}">{{ title | safe }}</a>
 				</h3>
 				{% if byline %}
-					<p class="card__byline">By {{ byline | safe }}</p>
+					<p class="card__byline">{% render '@svg', {svg:'author'}, true %} By {{ byline | safe }}</p>
 				{% endif %}
 			</header>
 			<aside class="card__aside">
@@ -30,19 +30,17 @@
 				</div>
 				{% endif %}
 				{% if topics %}
-				<div class="card__tags">
-					<ul class="badges" >
-						{% for tag in topics %}
-						<li class="badge">
-							<span class="screen-reader-text">Topic: </span>{{ tag | replace('-', ' ') }}
-						</li>
-						{% endfor %}
-						{% if topicCount > 2 %}
-						<li class="overflow">
-							+{{ topicCount - 2 }} more
-						</li>
-						{% endif %}
-					</ul>
+				<div class="card__tags tags">
+					{% for tag in topics %}
+					<div class="badge">
+						<span class="screen-reader-text">Topic: </span>{{ tag | replace('-', ' ') }}
+					</div>
+					{% endfor %}
+					{% if topicCount > 2 %}
+					<span class="overflow">
+						+{{ topicCount - 2 }} more
+					</span>
+					{% endif %}
 				</div>
 				{% endif %}
 				{% if favorite %}

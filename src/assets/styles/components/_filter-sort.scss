@@ -30,64 +30,53 @@
 	display: none;
 
 	@include breakpoint-down(md) {
-		.button {
-			color: $off-white;
-
-			&:hover {
-				background-color: $blue-500;
-				color: $off-white;
-			}
-
-			&:active {
-				background-color: $blue-600;
-				color: $blue-200;
-			}
-
-			&:focus {
-				background-color: $blue-600;
-				border-color: $dark-mint-500;
-				box-shadow: 0 0 0 rem(2) $dark-mint-500, 0 0 0 rem(4) $off-white;
-				color: $off-white;
-				outline: none;
-			}
-
-			&:focus:active {
-				background-color: $blue-600;
-			}
+		[id^="deselect"] {
+			--color: var(--off-white);
+			--outline-color: var(--off-white);
+			--hover-background-color: var(--blue-600);
+			--hover-color: var(--blue-50);
+			--active-background-color: var(--blue-600);
+			--active-color: var(--blue-200);
+			--focus-color: var(--off-white);
+			--focus-background-color: transparent;
+			--focus-box-shadow: 0 0 0 var(--border-width) var(--dark-mint-500), 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
+			--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--dark-mint-500), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
 		}
 
 		.button--disc {
-			background: $blue-700;
-			color: $off-white;
-
-			&:hover {
-				background: $true-black;
-			}
-
-			&:active {
-				background: $blue-500;
-				color: $off-white;
-			}
-
-			&:focus {
-				border-color: $off-white;
-				box-shadow:
-					0 0 0 rem(2) $black,
-					0 0 0 rem(4) $off-white;
-			}
+			--color: var(--off-white);
+			--background-color: #{var(--blue-700)};
+			--outline-color: var(--off-white);
+			--hover-background-color: var(--black);
+			--active-background-color: var(--blue-500);
 		}
 	}
 }
 
 .accordion--filter-list {
 	@include breakpoint-down(md) {
-		.accordion__heading,
+		.accordion__heading {
+			--border-width: #{rem(1)};
+			--color: var(--off-white);
+
+			border-top-color: var(--dark-mint-500);
+			margin-left: (-1 * $gutter);
+			margin-right: 0;
+			padding-left: $gutter;
+			padding-right: $gutter;
+			width: calc(100% + 2 * #{$gutter});
+		}
+
 		.accordion__control {
-			border-bottom: 0;
-			border-left: 0;
-			border-right: 0;
-			border-top: solid rem(1) $dark-mint-500;
-			color: $off-white;
+			--border-width: #{rem(1)};
+			--color: var(--off-white);
+			--hover-color: var(--off-white);
+			--active-color: var(--white);
+			--focus-background-color: var(--blue-600);
+			--focus-box-shadow: none;
+			--focus-color: var(--color);
+
+			border-top-color: var(--dark-mint-500);
 			height: rem(69);
 			margin-left: (-1 * $gutter);
 			margin-right: 0;
@@ -95,24 +84,22 @@
 			padding-right: $gutter;
 			width: calc(100% + 2 * #{$gutter});
 
-			&::before {
-				display: none;
+			svg {
+				margin-right: rem(7);
+			}
+
+			&:hover {
+				border-top-color: var(--dark-mint-500);
+
+				svg {
+					color: inherit;
+				}
 			}
 		}
 
-		.accordion__control:hover::before {
-			background-color: $blue-300;
-		}
-
-		.accordion__control:focus {
-			background: $blue-600;
-			box-shadow: none;
-			color: $off-white;
-		}
-
 		.accordion__control[aria-expanded="true"] + .accordion__content {
-			background: $blue-600;
-			color: $white;
+			background: var(--blue-600);
+			color: var(--white);
 			margin-left: (-1 * $gutter);
 			margin-right: 0;
 			padding-left: $gutter;
@@ -121,7 +108,9 @@
 		}
 
 		.accordion__content > .input-group li ul {
-			background-color: $black;
+			--parent-background-color: var(--dark-mint-500);
+
+			background-color: var(--dark-mint-500);
 			margin-bottom: rem(-15);
 			margin-left: ($gutter * -1);
 			margin-right: ($gutter * -1);
@@ -133,22 +122,18 @@
 		}
 	}
 
-	.accordion__control svg {
-		margin-right: rem(7);
-	}
-
 	.accordion__content > .input-group {
 		margin-bottom: 0;
 		margin-top: 0;
 	}
 
 	.accordion__content > .input-group > li {
-		padding: rem(14) 0;
+		padding: rem(15) 0 rem(13);
 		position: relative;
 	}
 
 	.accordion__content > .input-group > li + li {
-		border-top: rem(1) solid $black;
+		border-top: rem(1) solid var(--dark-mint-500);
 	}
 
 	.accordion__content > .input-group button {
@@ -176,7 +161,7 @@
 
 	.accordion__pane--expanded .accordion__content {
 		background: transparent;
-		color: $black;
+		color: var(--dark-mint-500);
 	}
 }
 
@@ -197,8 +182,8 @@
 
 @include breakpoint-down(md) {
 	.filters--expanded {
-		background: $blue-500;
-		color: $white;
+		background: var(--blue-500);
+		color: var(--white);
 		display: block;
 		height: 100%;
 		left: 0;
@@ -219,7 +204,7 @@
 	}
 
 	.accordion--filter-list + .input-group {
-		background: $off-white;
+		background: var(--off-white);
 		bottom: 0;
 		left: 0;
 		padding: rem(12) rem(30);
@@ -256,31 +241,31 @@
 	.filters {
 		input[type="checkbox"] + label::before,
 		[role="checkbox"]::before {
-			border-color: $off-white;
+			border-color: var(--off-white);
 		}
 
 		input[type="checkbox"]:hover + label::before,
 		[role="checkbox"]:hover::before {
-			border-color: $blue-300;
-			box-shadow: 0 0 0 rem(1) $blue-300 inset;
+			border-color: var(--blue-300);
+			box-shadow: 0 0 0 rem(1) var(--blue-300) inset;
 		}
 
 		input[type="checkbox"]:focus + label::before,
 		[role="checkbox"]:focus::before {
-			border-color: $blue-300;
+			border-color: var(--blue-300);
 			box-shadow:
-				0 0 0 rem(2) $black,
-				0 0 0 rem(4) $blue-300,
-				0 0 0 rem(1) $blue-300 inset;
+				0 0 0 rem(2) var(--dark-mint-500),
+				0 0 0 rem(4) var(--blue-300),
+				0 0 0 rem(1) var(--blue-300) inset;
 		}
 
 		input[type="checkbox"]:checked + label::before,
 		[role="checkbox"][aria-checked="true"]::before,
 		[role="checkbox"][aria-checked="mixed"]::before {
-			background: $off-white;
+			background: var(--off-white);
 			background-position: center;
 			background-repeat: no-repeat;
-			border-color: $off-white;
+			border-color: var(--off-white);
 			box-shadow: none;
 		}
 
@@ -296,10 +281,10 @@
 
 		input[type="checkbox"]:checked:focus + label::before,
 		[role="checkbox"][aria-checked="true"]:focus::before {
-			border-color: $off-white;
+			border-color: var(--off-white);
 			box-shadow:
-				0 0 0 rem(2) $black,
-				0 0 0 rem(4) $blue-300;
+				0 0 0 rem(2) var(--dark-mint-500),
+				0 0 0 rem(4) var(--blue-300);
 		}
 
 

@@ -13,6 +13,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .separator {
-	padding-left: 0.325em;
-	vertical-align: super;
+	display: inline-block;
+	padding-left: 0.5ch;
+	text-indent: 0;
+	transform: translate(0, -0.5ch);
 }

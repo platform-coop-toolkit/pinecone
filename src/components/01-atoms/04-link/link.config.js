@@ -25,7 +25,7 @@ module.exports = {
 			context: {
 				className: 'link--inverse',
 				href: '/internal-link--inverse',
-				bodyClass: 'has-dark-mint-500-background-color'
+				bodyClass: 'has-blue-500-background-color'
 			}
 		},
 		{
@@ -35,7 +35,7 @@ module.exports = {
 				href: 'https://example.com/inverse',
 				className: 'link--inverse',
 				rel: 'external',
-				bodyClass: 'has-dark-mint-500-background-color'
+				bodyClass: 'has-blue-500-background-color'
 			}
 		},
 		{
@@ -44,7 +44,16 @@ module.exports = {
 			context: {
 				href: '#inverse',
 				className: 'link--inverse',
-				bodyClass: 'has-dark-mint-500-background-color'
+				bodyClass: 'has-blue-500-background-color'
+			}
+		},
+		{
+			name: 'breadcrumb',
+			label: 'Breadcrumb',
+			context: {
+				label: 'Home',
+				href: '/',
+				className: 'link--breadcrumb',
 			}
 		}
 	]

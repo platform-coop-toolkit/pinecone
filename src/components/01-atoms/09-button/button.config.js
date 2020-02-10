@@ -8,15 +8,44 @@ module.exports = {
 		icon: 'filter',
 		iconPosition: 'start',
 		id: 'button',
+		type: 'button',
 		standAlone: false
 	},
 	variants: [
 		{
-			name: 'Default (Inverse)',
+			name: 'inverse',
 			label: 'Default (Inverse)',
 			context: {
 				modifiers: ['inverse'],
-				bodyClass: 'has-dark-mint-500-background-color'
+				bodyClass: 'has-blue-500-background-color'
+			}
+		},
+		{
+			name: 'Secondary',
+			context: {
+				modifiers: ['secondary']
+			}
+		},
+		{
+			name: 'Secondary Inverse',
+			label: 'Secondary (Inverse)',
+			context: {
+				modifiers: ['secondary', 'inverse'],
+				bodyClass: 'has-blue-500-background-color'
+			}
+		},
+		{
+			name: 'Borderless',
+			context: {
+				modifiers: ['borderless']
+			}
+		},
+		{
+			name: 'Borderless Inverse',
+			label: 'Borderless (Inverse)',
+			context: {
+				modifiers: ['borderless', 'inverse'],
+				bodyClass: 'has-blue-500-background-color'
 			}
 		},
 		{
@@ -29,13 +58,24 @@ module.exports = {
 			}
 		},
 		{
-			name: 'Disc (Inverse)',
+			name: 'Disc Inverse',
 			label: 'Disc (Inverse)',
 			context: {
 				modifiers: ['disc', 'inverse'],
-				bodyClass: 'has-dark-mint-500-background-color',
+				bodyClass: 'has-blue-500-background-color',
 				icon: 'chevron-down',
 				labelVisuallyHidden: true,
+			}
+		},
+		{
+			name: 'Tag Button',
+			label: 'Tag Button',
+			context: {
+				id: false,
+				label: '<span class="screen-reader-text">Remove </span>Blockchain<span class="screen-reader-text"> from current filters</span>',
+				modifiers: ['tag-button'],
+				icon: 'close',
+				iconPosition: 'end',
 			}
 		}
 	]

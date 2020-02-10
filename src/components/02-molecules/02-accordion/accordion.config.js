@@ -24,14 +24,6 @@ module.exports = {
 			label: 'Inverse',
 			context: {
 				modifier: 'inverse',
-				bodyClass: 'has-dark-mint-500-background-color',
-			}
-		},
-		{
-			name: 'Filter List',
-			label: 'Filter List',
-			context: {
-				modifier: 'filter-list',
 				bodyClass: 'has-blue-500-background-color',
 			}
 		}

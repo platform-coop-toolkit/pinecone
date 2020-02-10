@@ -8,8 +8,10 @@
 }
 
 .card {
-	background-color: $white;
-	border-top: rem(3) solid $blue-500;
+	--parent-background-color: var(--white);
+
+	background-color: var(--white);
+	border-top: rem(3) solid var(--blue-500);
 	box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.16);
 	height: 100%;
 	padding: rem(22);
@@ -26,7 +28,7 @@
 	}
 
 	&:focus-within {
-		border: solid rem(3) $blue-500;
+		border: solid rem(3) var(--blue-500);
 		border-radius: rem(2);
 		box-shadow: 0 0 rem(25) transparentize($blue-500, 0.75);
 		padding: rem(22) rem(19) rem(19);
@@ -74,30 +76,34 @@
 	font-weight: $font-weight-bold;
 	line-height: (30 / 20);
 	margin-top: 0;
+}
 
-	a {
-		color: $black;
-		line-height: inherit;
-		margin-left: rem(-22);
-		margin-right: rem(-22);
-		min-width: calc(100% + #{rem(44)});
-		padding-bottom: rem(2);
-		padding-left: rem(22);
-		padding-right: rem(22);
-		text-decoration: none;
+.card__link {
+	color: var(--dark-mint-500);
+	line-height: inherit;
+	margin-left: rem(-22);
+	margin-right: rem(-22);
+	min-width: calc(100% + #{rem(44)});
+	padding-bottom: rem(2);
+	padding-left: rem(22);
+	padding-right: rem(22);
+	text-decoration: none;
 
-		&:visited {
-			color: $black;
-		}
+	&:visited {
+		color: var(--dark-mint-500);
+	}
 
-		&[rel="external"]::after {
-			background-color: $black;
-		}
+	&:focus {
+		outline: none;
+	}
 
-		&:not([rel="external"])::after {
-			content: "";
-			display: none;
-		}
+	&[rel="external"]::after {
+		background-color: var(--dark-mint-500);
+	}
+
+	&:not([rel="external"])::after {
+		content: "";
+		display: none;
 	}
 }
 
@@ -109,7 +115,7 @@
 .card__meta,
 .card__description,
 .card__favorite {
-	color: $grey-600;
+	color: var(--grey-600);
 	font-size: rem(14);
 	margin-top: rem(9);
 }
@@ -127,8 +133,8 @@
 }
 
 .card__format {
-	background: $blue-500;
-	color: $white;
+	background: var(--blue-500);
+	color: var(--white);
 	display: inline-block;
 	font-family: $font-family-sans;
 	font-size: rem(14);
@@ -138,31 +144,30 @@
 }
 
 .card__tags {
+	display: inline-flex;
 	margin-top: rem(6);
 
-	.badges {
-		display: inline-flex;
-	}
-
 	.overflow {
-		color: $grey-600;
+		color: var(--grey-600);
 		font-size: rem(14);
 		margin-left: rem(4);
+		margin-top: rem(12);
+		padding-top: rem(3);
 	}
 }
 
 .card__favorite {
-	color: $black;
+	color: var(--dark-mint-500);
 	font-weight: $font-weight-bold;
 	text-align: right;
 
 	svg {
-		color: $red-500;
+		color: var(--red-500);
 	}
 }
 
 .card--resource {
-	@include card($red-400, $black, false);
+	@include card($red-400, var(--dark-mint-500), false);
 
 	.card__format {
 		color: inherit;
@@ -174,27 +179,27 @@
 }
 
 .card--project {
-	@include card($red-400, $black);
+	@include card($red-400, var(--dark-mint-500));
 }
 
 .card--blog {
-	@include card($red-300, $black);
+	@include card($red-300, var(--dark-mint-500));
 }
 
 .card--person {
-	@include card($blue-500, $white);
+	@include card($blue-500, var(--white));
 }
 
 .card--event {
-	@include card($blue-300, $black);
+	@include card($blue-300, var(--dark-mint-500));
 }
 
 .card--platformcoop {
-	@include card($green-300, $black);
+	@include card($green-300, var(--dark-mint-500));
 }
 
 .card--story {
-	@include card($yellow-500, $black);
+	@include card($yellow-500, var(--dark-mint-500));
 }
 
 @include breakpoint-up(sm) {

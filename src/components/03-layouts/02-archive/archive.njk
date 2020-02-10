@@ -1,11 +1,11 @@
 <div class="page-header">
-	{% render '@breadcrumb-link', {label: 'Home', href: '/home'} %}
+	<p>{% render '@link--breadcrumb', {label: 'Home', href: '/'}, true %}</p>
 	<h1>{{ title }}</h1>
 </div>
 <div class="filter-wrapper">
-	{% render '@button', {standAlone: true, id: 'show-filters'}, true %}
+	{% render '@button--borderless', {standAlone: true, id: 'show-filters'}, true %}
 	<form class="filters" action="/">
-		{% render '@button', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
+		{% render '@button--borderless', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
 		<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
 		<div class="accordion accordion--filter-list">
 		{% for filterList in filterLists %}
@@ -23,9 +23,9 @@
 {% if currentTags and foundPosts %}
 <div class="current-filters">
 	<p class="h3">Showing {{ foundPosts }} of 742 resources</p>
-	<ul class="tag-buttons">
+	<ul class="tags">
 		{% for tag in currentTags %}
-			{% render '@tag-button', {standAlone: true, label: tag.label} %}
+			{% render '@button--tag-button', {standAlone: true, label: tag.label}, true %}
 		{% endfor %}
 	</ul>
 	<p><a href="?x">Clear all <span class="screen-reader-text">filters</span></a></p>

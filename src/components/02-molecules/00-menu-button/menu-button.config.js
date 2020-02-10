@@ -20,5 +20,14 @@ module.exports = {
 				label: 'Most favorited'
 			}
 		]
-	}
+	},
+	variants: [
+		{
+			name: 'Inverse',
+			context: {
+				modifier: 'inverse',
+				bodyClass: 'has-blue-500-background-color'
+			}
+		}
+	]
 };

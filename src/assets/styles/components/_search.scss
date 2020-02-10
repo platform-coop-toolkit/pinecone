@@ -7,7 +7,7 @@
 	}
 
 	[type="search"] {
-		background-color: $blue-50;
+		background-color: var(--blue-50);
 		border-bottom-right-radius: 0;
 		border-color: transparent;
 		border-right-width: 0;
@@ -17,52 +17,33 @@
 		max-width: 100%;
 
 		&:hover {
-			border-color: $blue-500;
+			border-color: var(--blue-500);
 		}
 
 		&:focus {
-			box-shadow: 0 0 0 rem(1) $blue-500 inset;
+			box-shadow: 0 0 0 rem(1) var(--blue-500) inset;
 		}
 	}
 
-	[type="submit"] {
+	.button--search {
+		--border-width: #{rem(2)};
+		--outline-color: var(--white);
+		--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color) inset;
+
 		border-bottom-left-radius: 0;
 		border-top-left-radius: 0;
-		border-width: rem(2);
 		height: rem(50);
 		margin-left: 0;
 		position: relative;
 		width: rem(50);
-
-		.icon {
-			margin-left: 0;
-		}
-
-		&:focus {
-			border-bottom-left-radius: rem(3);
-			border-top-left-radius: rem(3);
-			box-shadow: 0 0 0 rem(2) $white inset;
-
-			&::before {
-				border-bottom: solid rem(2) $blue-700;
-				border-left: solid rem(2) $blue-700;
-				border-top: solid rem(2) $blue-700;
-				content: "";
-				display: block;
-				height: rem(46);
-				left: rem(-2);
-				position: absolute;
-				top: rem(-2);
-				width: rem(3);
-			}
-		}
 	}
 }
 
 .search-form.search-form--inverse {
 	[type="search"] {
-		background-color: $off-white;
-		border-right-color: $grey-300;
+		--parent-background-color: var(--off-white);
+
+		background-color: var(--off-white);
 		border-right-width: rem(1);
 
 		&::placeholder {
@@ -70,57 +51,59 @@
 		}
 
 		&:hover {
-			border-color: $blue-300;
+			border-color: var(--blue-300);
 		}
 
 		&:focus {
-			border-color: $blue-300;
-			border-right-color: $blue-300;
-			box-shadow: 0 0 0 rem(1) $blue-300 inset;
+			border-color: var(--blue-300);
+			box-shadow: 0 0 0 rem(1) var(--blue-300) inset;
 		}
 	}
 
-	[type="submit"] {
-		background-color: $blue-50;
-		border-bottom: solid rem(1) $grey-300;
-		border-left: 0;
-		border-right: solid rem(1) $grey-300;
-		border-top: solid rem(1) $grey-300;
-		color: $blue-500;
-		padding-left: rem(4);
+	.button--search {
+		--color: var(--blue-500);
+		--background-color: var(--blue-50);
+		--border-color: transparent;
+		--border-width: #{rem(1)};
+		--outline-color: var(--blue-600);
+		--hover-color: var(--blue-600);
+		--hover-background-color: var(--blue-150);
+		--active-color: var(--blue-400);
+		--active-background-color: var(--background-color);
+		--focus-color: var(--blue-600);
+		--focus-background-color: var(--background-color);
+		--focus-border-color: var(--blue-50);
+		--focus-box-shadow:
+			0 0 0 var(--border-width) var(--focus-background-color) inset,
+			0 0 0 calc(3 * var(--border-width)) var(--outline-color) inset;
 
-		&:hover {
-			background-color: $blue-50;
-			color: $blue-600;
-		}
+		border: solid rem(1) var(--border-color);
 
 		&:focus {
-			background-color: $blue-50;
-			border-color: $blue-50;
-			box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset;
-
-			&::before {
-				border-bottom: solid rem(2) $blue-50;
-				border-left: solid rem(2) $blue-50;
-				border-top: solid rem(2) $blue-50;
-				top: rem(-1);
-			}
+			border-color: var(--focus-border-color);
 		}
 	}
 }
 
 .home__search .search-form.search-form--inverse {
 	[type="search"],
-	[type="submit"] {
+	.button--search {
 		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	}
 
 	[type="search"]:focus {
-		box-shadow: 0 0 0 rem(1) $blue-300 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+		box-shadow: 0 0 0 rem(1) var(--blue-300) inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 	}
 
-	[type="submit"]:focus {
-		box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+	.button--search {
+		--focus-box-shadow:
+			0 0 0 var(--border-width) var(--focus-background-color) inset,
+			0 0 0 calc(var(--border-width) * 3) var(--outline-color) inset,
+			0 calc(var(--border-width) * 3) calc(var(--border-width) * 6) rgba(0, 0, 0, 0.16);
+
+		&:focus {
+			box-shadow: var(--focus-box-shadow);
+		}
 	}
 
 	@include breakpoint-up(sm) {
@@ -128,22 +111,18 @@
 			height: rem(60);
 
 			&:focus {
-				box-shadow: 0 0 0 rem(2) $blue-300 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+				box-shadow: 0 0 0 rem(2) var(--blue-300) inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 			}
 
 			&::placeholder {
-				color: $grey-500;
+				color: var(--grey-500);
 				opacity: 1;
 			}
 		}
 
-		[type="submit"] {
+		.button--search {
 			height: rem(60);
 			width: rem(60);
-
-			&:focus {
-				box-shadow: 0 0 0 rem(1) $blue-50 inset, 0 0 0 rem(3) $blue-600 inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
-			}
 
 			&::before {
 				height: rem(56);

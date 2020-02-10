@@ -11,7 +11,7 @@
 	word-wrap: normal !important;
 }
 
-@mixin full-width-background($color: $white) {
+@mixin full-width-background($color: var(--white)) {
 	&::before {
 		background: $color;
 		content: "";

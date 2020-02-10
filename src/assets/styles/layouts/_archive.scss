@@ -1,9 +1,10 @@
 .archive {
-	background-color: $off-white;
+	--parent-background-color: var(--off-white);
+	background-color: var(--off-white);
 }
 
 .archive .page-header {
-	@include full-width-background($white);
+	@include full-width-background(var(--white));
 	@include grid-column-span(4, 4);
 }
 
