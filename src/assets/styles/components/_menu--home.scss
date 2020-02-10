@@ -1,5 +1,15 @@
 .home .menu-toggle {
-	@extend .button--inverse;
+	--color: var(--off-white);
+	--outline-color: var(--off-white);
+	--hover-background-color: var(--blue-600);
+	--hover-color: var(--blue-50);
+	--active-background-color: var(--blue-600);
+	--active-color: var(--blue-200);
+	--focus-color: var(--off-white);
+	--focus-background-color: transparent;
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--dark-mint-500), 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
+	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+
 }
 
 @include breakpoint-up(md) {
