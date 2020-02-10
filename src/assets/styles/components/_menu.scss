@@ -296,7 +296,7 @@ a.menu__item:active {
 
 		svg {
 			margin-bottom: 0;
-			margin-left: rem(6);
+			margin-left: rem(4);
 		}
 
 		&[aria-current="page"] {
@@ -359,6 +359,7 @@ a.menu__item:active {
 			--background-color: var(--white);
 
 			display: flex;
+			height: rem(50);
 			justify-content: flex-start;
 			padding-left: rem(16);
 
