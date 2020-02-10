@@ -6,10 +6,10 @@
 		<p><strong>Search term</strong><br />
 		&ldquo;{{ searchTerm }}&rdquo;</p>
 		<p><strong>Tags</strong></p>
-		<ul class="badges">
+		<div class="tags">
 			{% for tag in tags %}
 				{% render '@badge', {standAlone: true, label: tag.label}, true %}
 			{% endfor %}
-		</ul>
+		</div>
 	</div>
 </div>

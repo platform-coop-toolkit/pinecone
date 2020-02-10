@@ -1,11 +1,11 @@
 {% render '@brand' %}
 <div class="inner">
 	{% if modifier !== 'home' %}
-	<button class="button search-toggle" aria-expanded="false"><span class="screen-reader-text">Search </span>{% render '@svg', {svg: 'search'}, true %}</button>
+	<button class="button button--borderless search-toggle" aria-expanded="false"><span class="screen-reader-text">Search </span>{% render '@svg', {svg: 'search'}, true %}</button>
 	{% render '@search', {standAlone: true}, true %}
 	{% endif %}
 	<nav aria-labelledby="menu-primary-label">
-		<button class="button menu-toggle" aria-expanded="false">
+		<button class="button button--borderless menu-toggle" aria-expanded="false">
 			{% render '@svg', {svg:'menu', class:'icon icon--open'}, true %}
 			{% render '@svg', {svg:'close'}, true %}
 			<span id="menu-primary-label" class="menu-toggle__label">{{ menuTitle }}</span>

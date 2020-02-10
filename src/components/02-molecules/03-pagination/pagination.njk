@@ -1,9 +1,16 @@
-{% if title %}
-	<h1>{{ title }}</h1>
-{% endif %}
-<nav class="navigation pagination" role="navigation" aria-label="Posts">
-	<h2 class="screen-reader-text">Posts navigation</h2>
+{% if not standAlone %}<div class="spacer"></div>{% endif %}
+<nav class="navigation pagination{% if modifier %} pagination--{{ modifier }}{% endif %}" role="navigation" aria-label="{{ contentType }}">
+	<h2 class="screen-reader-text">{{ contentType }} navigation</h2>
 	<div class="nav-links">
-		<a class="previous page-numbers" href="1"><span class="screen-reader-text">Previous posts</span>{% render '@svg', {svg:'chevron-left'}, true %}</a><span aria-current="page" class="page-numbers current">2</span><a class="page-numbers" href="3">3</a><span class="page-numbers dots">…</span><a class="page-numbers" href="61">61</a><a class="next page-numbers" href="3"><span class="screen-reader-text">Next posts</span>{% render '@svg', {svg:'chevron-right'}, true %}</a>
+		<a class="previous link link--pagination" href="1">
+			<span class="screen-reader-text">Previous {{ perPage }} {{ contentType }}</span>{% render '@svg', {svg:'chevron-left'}, true %}
+		</a>
+		<span aria-current="page" class="page current">2</span>
+		<a class="link link--pagination" href="3"><span class="screen-reader-text">page </span>3</a>
+		<span class="page dots">…</span>
+		<a class="link link--pagination" href="61"><span class="screen-reader-text">page </span>61<span class="screen-reader-text"> (last)</span></a>
+		<a class="next link link--pagination" href="3">
+			<span class="screen-reader-text">Next {{ perPage }} {{ contentType }}</span>{% render '@svg', {svg:'chevron-right'}, true %}
+		</a>
 	</div>
 </nav>

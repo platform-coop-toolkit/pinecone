@@ -4,7 +4,7 @@ blockquote {
 }
 
 blockquote::before {
-	color: $blue-400;
+	color: var(--blue-400);
 	content: "“";
 	font-family: $font-family-serif;
 	font-size: rem(64);

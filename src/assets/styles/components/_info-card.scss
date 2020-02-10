@@ -4,13 +4,15 @@
 }
 
 .info-card {
-	background-color: $grey-200;
+	--parent-background-color: var(--grey-200);
+
+	background-color: var(--grey-200);
 	padding: rem(14) rem(28) rem(28);
 	position: relative;
 
 	button {
 		position: absolute;
-		right: rem(12);
+		right: rem(-8);
 		top: rem(12);
 	}
 
@@ -38,7 +40,7 @@
 }
 
 .info-card + .info-card {
-	border-top: solid rem(1) $grey-400;
+	border-top: solid rem(1) var(--grey-400);
 }
 
 
@@ -53,7 +55,7 @@
 
 	.info-card,
 	.info-card + .info-card {
-		border-top: solid rem(3) $blue-500;
+		border-top: solid rem(3) var(--blue-500);
 	}
 }
 

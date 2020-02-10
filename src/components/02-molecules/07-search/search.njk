@@ -4,5 +4,5 @@
 		<span class="screen-reader-text">{{ label }}</span>
 		<input id="{{ name }}" name="{{ name }}" {% if placeholder %}placeholder="{{ placeholder }}" {% endif %} type="search"{% if disabled %} disabled{% endif %} />
 	</label>
-	<button type="submit" class="search-submit"><span class="screen-reader-text">{{ submitLabel }}</span>{% render '@svg', {svg: 'search'}, true %}</button>
+	<button type="submit" class="button button--search"><span class="screen-reader-text">{{ submitLabel }}</span>{% render '@svg', {svg: 'search'}, true %}</button>
 </form>

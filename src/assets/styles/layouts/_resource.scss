@@ -3,7 +3,7 @@
 }
 
 .resource__format::after {
-	background-color: $red-400;
+	background-color: var(--red-400);
 	content: "";
 	display: block;
 	height: rem(3);
@@ -12,7 +12,7 @@
 }
 
 .resource__format svg {
-	color: $red-400;
+	color: var(--red-400);
 }
 
 .resource__format + h1 {
@@ -54,7 +54,7 @@ h1 + .resource__meta {
 	padding-top: rem(64);
 	position: relative;
 
-	@include full-width-background($off-white);
+	@include full-width-background(var(--off-white));
 }
 
 .single-lc_resource main {
@@ -63,7 +63,7 @@ h1 + .resource__meta {
 
 @include breakpoint-down(xs) {
 	.resource__cta {
-		background: $off-white;
+		background: var(--off-white);
 		bottom: 0;
 		box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.16);
 		left: 0;

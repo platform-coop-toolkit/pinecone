@@ -1,0 +1,7 @@
+{% if not standAlone %}<ul class="tags">{% endif %}
+	<li class="tag">
+		<button {% if id %}id="{{ id }}" {% endif %}type="button" class="button{% if modifiers %}{% for modifier in modifiers %} button--{{ modifier }}{% endfor %}{% endif %}">
+			{% if icon and iconPosition === 'start' %}{% render '@svg', {svg:icon}, true %}{% endif %}<span class="button__label{{ ' screen-reader-text' if labelVisuallyHidden }}">{{ label | safe }}</span>{% if icon and iconPosition === 'end' %}{% render '@svg', {svg:icon}, true %}{% endif %}
+		</button>
+	</li>
+{% if not standAlone %}</ul>{% endif %}

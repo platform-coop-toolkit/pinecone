@@ -1,5 +1,7 @@
 .page {
-	background-color: $off-white;
+	--parent-background-color: var(--off-white);
+
+	background-color: var(--off-white);
 
 	main {
 		padding-bottom: rem(100);

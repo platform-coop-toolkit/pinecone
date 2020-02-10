@@ -2,11 +2,11 @@
 	--offset: #{rem(30)};
 	--columns: 4;
 	--gutter: #{rem(30)};
-	--color: #{transparentize($blue-300, 0.8)};
+	--grid-color: #{transparentize($blue-300, 0.8)};
 	--repeating-width: calc(100% / var(--columns));
 	--column-width: calc((100% / var(--columns)) - var(--gutter));
 	--background-width: calc(100% + var(--gutter));
-	--background-columns: repeating-linear-gradient(to right, var(--color), var(--color) var(--column-width), transparent var(--column-width), transparent var(--repeating-width));
+	--background-columns: repeating-linear-gradient(to right, var(--grid-color), var(--grid-color) var(--column-width), transparent var(--column-width), transparent var(--repeating-width));
 }
 
 @include breakpoint-up(sm) {
