@@ -1,0 +1,50 @@
+.button--invoke-dialog + * {
+	display: none;
+}
+
+[role="dialog"] {
+	background-color: $white;
+	border-radius: rem(3);
+	box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+	height: auto;
+	left: $gutter;
+	padding: $gutter;
+	position: fixed;
+	top: 20vh;
+	width: calc(100% - 2 * #{$gutter});
+
+	.buttons {
+		margin-top: rem(16);
+	}
+
+	.buttons button {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.buttons button + button {
+		margin-top: rem(16);
+	}
+}
+
+.overlay {
+	background: $black;
+	height: 100%;
+	left: 0;
+	opacity: 0.7;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+@include breakpoint-up(md) {
+	[role="dialog"] {
+		left: calc((100% - 32rem) / 2);
+		padding: rem(68) rem(92);
+		width: 32rem;
+
+		.buttons {
+			margin-top: $gutter;
+		}
+	}
+}

@@ -11,7 +11,6 @@ export default [
 			format: 'umd',
 		},
 		plugins: [babel()],
-		external: [ 'wicg-inert' ]
 	},
 
 	// CommonJS (for Node) and ES module (for bundlers) build.
@@ -21,6 +20,5 @@ export default [
 			{ file: pkg.main, format: 'cjs' },
 			{ file: pkg.module, format: 'es' },
 		],
-		external: [ 'wicg-inert' ]
 	},
 ];
