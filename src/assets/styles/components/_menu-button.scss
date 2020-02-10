@@ -141,8 +141,8 @@
 	--color: var(--blue-500);
 	--hover-color: var(--dark-mint-500);
 	--focus-box-shadow:
-		0 0 0 var(--border-width) var(--outline-color) inset,
-		0 0 0 calc(2 * var(--border-width)) var(--focus-background-color) inset;
+		0 0 0 var(--border-width) var(--focus-background-color) inset,
+		0 0 0 calc(2 * var(--border-width)) var(--outline-color) inset;
 	--active-box-shadow: var(--focus-box-shadow);
 
 	align-items: center;
