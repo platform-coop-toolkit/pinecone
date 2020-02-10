@@ -102,11 +102,11 @@ if ( searchToggle ) {
 	new Pinecone.SearchToggle( searchToggle, searchToggle.nextElementSibling );
 }
 
-const dialogBtn = document.querySelector( '.button--invoke-dialog' );
+const dialogBtn = document.getElementById( 'invoke-dialog' );
 if ( dialogBtn ) {
 	new Pinecone.Dialog( dialogBtn, {
 		title: 'Remove resource?',
-		question: 'Are your sure you want to remove this resource from your favorites?',
+		question: 'Are you sure you want to remove this resource from your favorites?',
 		confirm: 'Yes, remove',
 		dismiss: 'No, don&rsquo;t remove'
 	} );

@@ -63,8 +63,8 @@ class Dialog {
 		}
 		innerHtml += `
 			<div class="buttons">
-				<button class="dismiss">${this.config.dismiss}</button>
-				<button class="confirm">${this.config.confirm}</button>
+				<button class="button button--secondary dismiss">${this.config.dismiss}</button>
+				<button class="button confirm">${this.config.confirm}</button>
 			</div>
 		`;
 		dialog.innerHTML = innerHtml;
