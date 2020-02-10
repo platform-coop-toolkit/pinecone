@@ -47,15 +47,19 @@
 		display: none;
 	}
 
+	&:hover {
+		font-weight: $font-weight-bold;
+		text-decoration-thickness: rem(2);
+	}
+
 	&:focus {
 		border-color: var(--focus-color);
 		font-weight: $font-weight-bold;
 		text-decoration: none;
 	}
 
-	&:hover {
-		font-weight: $font-weight-bold;
-		text-decoration-thickness: rem(2);
+	&:active {
+		border-color: transparent;
 	}
 
 	svg {
