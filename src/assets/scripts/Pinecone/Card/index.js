@@ -12,7 +12,7 @@ class Card {
 		this.card = card;
 		this.config = {
 			...{
-				cardLinkSelector: 'h2 a'
+				cardLinkSelector: '.card__link'
 			},
 			...options
 		};
