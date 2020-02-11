@@ -182,7 +182,9 @@
 
 @include breakpoint-down(md) {
 	.filters--expanded {
-		background: var(--blue-500);
+		--parent-background-color: var(--blue-500);
+
+		background: var(--parent-background-color);
 		color: var(--white);
 		display: block;
 		height: 100%;
