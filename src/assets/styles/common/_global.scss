@@ -37,6 +37,7 @@ body {
 main {
 	margin: 0 auto;
 	padding-bottom: rem(100);
+	position: relative;
 
 	@include grid-column-span(4, 4, 1);
 }
@@ -86,4 +87,16 @@ main {
 	main {
 		@include grid-column-span(16, 16, 1);
 	}
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
 }

@@ -7,9 +7,12 @@
 	box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.16);
 	font-family: $font-family-serif;
 	font-size: rem(16);
+	margin-bottom: $gutter;
 	padding: rem(28);
-	position: relative;
+	position: sticky;
+	top: $gutter;
 	width: 100%;
+	z-index: 1;
 
 	button {
 		position: absolute;

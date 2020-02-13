@@ -2,8 +2,8 @@
 	<p>{% render '@link--breadcrumb', {label: 'Home', href: '/'}, true %}</p>
 	<h1>{{ title }}</h1>
 </div>
-<div class="remove-all">
-	{% render '@button--borderless', {label: 'Remove all', icon: 'delete', standAlone: true, className: 'remove-all-favorites'}, true %}
+<div class="align-right">
+	{% render '@button--destructive-borderless', {label: 'Remove all', icon: 'delete', standAlone: true, className: 'remove-all-favorites'}, true %}
 </div>
 <div class="resource-list">
 	<ul class="cards">

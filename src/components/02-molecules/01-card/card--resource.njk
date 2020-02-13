@@ -51,8 +51,8 @@
 			</aside>
 		</article>
 		{% if showRemoveButton %}
-		<div class="remove">
-			{% render '@button--borderless', {label: 'Remove', icon: 'delete', standAlone: true, className: 'remove-favorite'}, true %}
+		<div class="align-right">
+			{% render '@button--destructive-borderless', {label: 'Remove', icon: 'delete', standAlone: true, className: 'remove-favorite'}, true %}
 		</div>
 		{% endif %}
 	</li>
