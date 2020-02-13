@@ -6,7 +6,7 @@ module.exports = {
 		format: 'Card',
 		name: 'Generic Card',
 		href: 'https://example.com',
-		standAlone: false
+		standAlone: false,
 	},
 	variants: [
 		{
@@ -26,7 +26,8 @@ module.exports = {
 				topicCount: 4,
 				href: 'resource',
 				favorite: true,
-				language: 'English'
+				language: 'English',
+				showRemoveButton: false
 			}
 		},
 		{
