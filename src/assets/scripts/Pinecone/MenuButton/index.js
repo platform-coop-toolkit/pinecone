@@ -66,23 +66,29 @@ class MenuButton {
 
 	/**
 	 * Handle click.
+	 *
+	 * @param {Event} event
 	 */
-	handleClick() {
-		const expanded = 'true' === this.btn.getAttribute( 'aria-expanded' ) || false;
-		this.btn.setAttribute( 'aria-expanded', !expanded );
-		if ( false === expanded ) {
-			new Popper( this.btn, this.menu, {
-				placement: this.config.placement,
-				preventOverflow:
-						( true === this.config.preventOverflow ) ?
-							{
-								enabled: true,
-								boundariesElement: this.config.boundariesElement
-							} :
-							{
-								enabled: false
-							}
-			} );
+	handleClick( event ) {
+		if ( event.target.parentNode != this.container ) {
+			this.btn.setAttribute( 'aria-expanded', false );
+		} else {
+			const expanded = 'true' === this.btn.getAttribute( 'aria-expanded' ) || false;
+			this.btn.setAttribute( 'aria-expanded', !expanded );
+			if ( false === expanded ) {
+				new Popper( this.btn, this.menu, {
+					placement: this.config.placement,
+					preventOverflow:
+							( true === this.config.preventOverflow ) ?
+								{
+									enabled: true,
+									boundariesElement: this.config.boundariesElement
+								} :
+								{
+									enabled: false
+								}
+				} );
+			}
 		}
 	}
 
@@ -114,7 +120,7 @@ class MenuButton {
 	 * Add event listeners.
 	 */
 	addEventListeners() {
-		this.btn.onclick = this.handleClick;
+		document.addEventListener( 'click', this.handleClick );
 		document.addEventListener( 'keydown', this.handleKeyDown, false );
 		Array.prototype.forEach.call( this.links, link => {
 			link.addEventListener( 'blur', this.handleBlur, false );
