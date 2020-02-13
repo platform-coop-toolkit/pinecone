@@ -49,6 +49,20 @@ module.exports = {
 			}
 		},
 		{
+			name: 'Destructive Borderless',
+			context: {
+				modifiers: ['borderless', 'destructive']
+			}
+		},
+		{
+			name: 'Destructive Borderless Inverse',
+			label: 'Destructive Borderless (Inverse)',
+			context: {
+				modifiers: ['borderless', 'destructive', 'inverse'],
+				bodyClass: 'has-blue-500-background-color'
+			}
+		},
+		{
 			name: 'Disc',
 			label: 'Disc',
 			context: {
