@@ -37,7 +37,7 @@
 }
 
 .home__feed {
-	padding-top: rem(50);
+	padding-top: $gutter;
 
 	header {
 		align-items: baseline;
@@ -68,6 +68,14 @@
 		top: 0;
 		transform: translateX(-50%);
 		width: 100vw;
+	}
+
+	.meta-card-wrapper {
+		margin-top: 0;
+	}
+
+	.card-wrapper {
+		margin-top: 0;
 	}
 }
 
@@ -104,6 +112,7 @@
 
 	.home__feed {
 		> h3 {
+			margin-top: 0;
 			padding-top: rem(112);
 		}
 
