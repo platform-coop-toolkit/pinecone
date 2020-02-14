@@ -69,31 +69,6 @@
 		transform: translateX(-50%);
 		width: 100vw;
 	}
-
-	@include breakpoint-down(xs) {
-		.card-wrapper {
-			overflow-x: scroll;
-			width: calc(100% + #{$gutter});
-		}
-
-		.cards {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: flex-start;
-			width: calc((100% - #{rem(30)}) * 4 + #{rem(25)});
-
-			.card__wrapper {
-				width: calc(100vw - #{rem(85)});
-			}
-
-			.card__wrapper + .card__wrapper {
-				margin-left: rem(25);
-				margin-top: 0;
-			}
-		}
-	}
-
 }
 
 @include breakpoint-up(sm) {
