@@ -37,7 +37,7 @@
 }
 
 .home__feed {
-	padding-top: rem(50);
+	padding-top: $gutter;
 
 	header {
 		align-items: baseline;
@@ -51,39 +51,32 @@
 		}
 	}
 
+	> h3 {
+		padding-top: rem(96);
+		position: relative;
+	}
+
 	> h3::before {
 		background-color: var(--grey-200);
 		content: "";
 		display: block;
 		height: rem(16);
-		margin: rem(40) 0 rem(40) calc(-1 * (50vw - 50%));
+		left: 0;
+		margin: rem(40) 0 rem(40) 50%;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		transform: translateX(-50%);
 		width: 100vw;
 	}
 
-	@include breakpoint-down(xs) {
-		.card-wrapper {
-			overflow-x: scroll;
-			width: calc(100% + #{$gutter});
-		}
-
-		.cards {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: flex-start;
-			width: calc((100% - #{rem(30)}) * 4 + #{rem(25)});
-
-			.card {
-				width: calc(100vw - #{rem(85)});
-			}
-
-			.card + .card {
-				margin-left: rem(25);
-				margin-top: 0;
-			}
-		}
+	.meta-card-wrapper {
+		margin-top: 0;
 	}
 
+	.card-wrapper {
+		margin-top: 0;
+	}
 }
 
 @include breakpoint-up(sm) {
@@ -118,8 +111,13 @@
 	}
 
 	.home__feed {
-		h3::before {
-			margin: rem(48) 0 rem(48) calc(-1 * (50vw - 50%));
+		> h3 {
+			margin-top: 0;
+			padding-top: rem(112);
+		}
+
+		> h3::before {
+			margin: rem(48) 0 rem(48) 50%;
 		}
 
 		.cards {
@@ -129,9 +127,13 @@
 }
 
 @include breakpoint-up(md) {
-	.home__browse {
-		h3::before {
-			margin: rem(56) 0 rem(56) calc(-1 * (50vw - 50%));
+	.home__feed {
+		> h3 {
+			padding-top: rem(128);
+		}
+
+		> h3::before {
+			margin: rem(56) 0 rem(56) 50%;
 		}
 	}
 }
