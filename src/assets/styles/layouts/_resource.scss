@@ -2,25 +2,25 @@
 	padding-bottom: rem(48);
 }
 
-.resource__format::after {
-	background-color: var(--red-400);
-	content: "";
-	display: block;
-	height: rem(3);
-	margin-top: rem(14);
-	width: rem(45);
+.resource__meta {
+	font-size: rem(14);
 }
 
-.resource__format svg {
-	color: var(--red-400);
-}
-
-.resource__format + h1 {
-	margin-top: rem(32);
+.resource__meta svg {
+	color: var(--grey-500);
 }
 
 h1 + .resource__meta {
 	margin-top: rem(24);
+}
+
+.resource__meta-group {
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+.resource__meta-group a {
+	display: inline;
 }
 
 .resource__abstract h2 + * {
@@ -63,13 +63,12 @@ h1 + .resource__meta {
 
 @include breakpoint-down(xs) {
 	.resource__cta {
-		background: var(--off-white);
+		background: var(--white);
 		bottom: 0;
-		box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.16);
 		left: 0;
-		padding: rem(12) $gutter;
-		position: fixed;
-		width: 100vw;
+		padding: rem(12) 0;
+		position: sticky;
+		width: 100%;
 		z-index: 1;
 	}
 }
@@ -79,6 +78,10 @@ h1 + .resource__meta {
 		main {
 			@include grid-column-span(6, 8, 2);
 		}
+	}
+
+	.resource__meta-group + .resource__meta-group {
+		margin-left: rem(20);
 	}
 
 	.resource__cta {
@@ -92,6 +95,12 @@ h1 + .resource__meta {
 		.menu-button {
 			display: inline-block;
 		}
+	}
+}
+
+@include breakpoint-up(md) {
+	.resource__meta-group {
+		display: inline-block;
 	}
 }
 

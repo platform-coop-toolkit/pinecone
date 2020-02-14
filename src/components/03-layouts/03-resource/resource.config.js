@@ -5,6 +5,13 @@ module.exports = {
 		bodyClass: 'single-lc_resource',
 		hasMenu: true,
 		hasFooter: true,
-		title: 'Co-op Creator'
+		title: 'Co-op Creator',
+		format: 'Toolkit',
+		formatIcon: 'toolkit',
+		publisher: 'Cooperatives First',
+		publisherLink: 'https://cooperativesfirst.ca',
+		locality: 'Canada',
+		language: 'English',
+		date: 2019
 	}
 };
