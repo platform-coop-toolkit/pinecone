@@ -2,16 +2,23 @@
 	padding-bottom: rem(48);
 }
 
-.resource__meta {
+.resource__meta,
+.resource__byline {
 	font-size: rem(14);
 }
 
-.resource__meta svg {
+.resource__meta svg,
+.resource__byline svg {
 	color: var(--grey-500);
 }
 
-h1 + .resource__meta {
+h1 + .resource__meta,
+h1 + .resource__byline {
 	margin-top: rem(24);
+}
+
+.resource__byline + .resource__meta {
+	margin-top: rem(12);
 }
 
 .resource__meta-group {
@@ -118,6 +125,10 @@ h1 + .resource__meta {
 	.resource__actions {
 		margin-bottom: rem(80);
 		margin-top: rem(28);
+	}
+
+	.resource__actions + .resource__meta {
+		margin-bottom: rem(24);
 	}
 
 	.resource__related {

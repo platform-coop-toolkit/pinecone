@@ -1,6 +1,9 @@
 <article class="resource">
 	<div class="page-header resource__header">
 		<h1>{{ title }}</h1>
+		{% if byline %}
+		<div class="resource__meta resource__byline">{% render '@svg', {svg:'author'}, true %} By {{ byline | safe }}</div>
+		{% endif %}
 		<div class="resource__meta">
 			<div class="resource__meta-group">
 				<span class="resource__format"><span class="screen-reader-text">resource format: </span>{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>{% if publisher %}{% render '@separator' %}
@@ -44,6 +47,7 @@
 		{% render '@button--borderless', {standAlone: true, icon: 'broken-link', label: 'Report broken link'}, true %}
 		{% render '@menu-button', {standAlone: true, icon: false, label: 'View alternate links', items: [{label: 'View on Perma.cc'}, {label: 'View on the Wayback Machine'}]}, true %}
 	</div>
+	<div class="resource__meta"><em>Added January 7, 2020</em></div>
 	<div class="resource__related">
 		<h2>Related resources</h2>
 		<ul class="cards">

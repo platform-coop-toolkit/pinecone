@@ -12,6 +12,7 @@ module.exports = {
 		publisherLink: 'https://cooperativesfirst.ca',
 		locality: 'Canada',
 		language: 'English',
-		date: 2019
+		date: 2019,
+		byline: 'Some Co-operator'
 	}
 };
