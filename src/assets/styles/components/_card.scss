@@ -113,11 +113,16 @@
 
 .card__byline,
 .card__meta,
+.card__description {
+	margin-top: rem(9);
+}
+
+.card__byline,
+.card__meta,
 .card__description,
 .card__favorite {
 	color: var(--grey-600);
 	font-size: rem(14);
-	margin-top: rem(9);
 }
 
 .card__byline,
@@ -156,10 +161,15 @@
 	}
 }
 
+.card__tags + .card__meta {
+	margin-top: rem(14);
+}
+
 .card__favorite {
 	color: var(--dark-mint-500);
+	display: inline-block;
+	float: right;
 	font-weight: $font-weight-bold;
-	text-align: right;
 
 	svg {
 		color: var(--red-500);

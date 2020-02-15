@@ -43,11 +43,14 @@
 					{% endif %}
 				</div>
 				{% endif %}
-				{% if favorite %}
-				<div class="card__favorite">
-					{% render '@svg', {svg:'favorite-filled'}, true %} Favorited
+				<div class="card__meta">
+				    <span class="card__added">Added January 1, 2020</span>
+					{% if favorite %}
+					<span class="card__favorite">
+						{% render '@svg', {svg:'favorite-filled'}, true %} Favorited
+					</span>
+					{% endif %}
 				</div>
-				{% endif %}
 			</aside>
 		</article>
 		{% if showRemoveButton %}
