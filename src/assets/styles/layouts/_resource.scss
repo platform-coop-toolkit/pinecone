@@ -2,22 +2,19 @@
 	padding-bottom: rem(48);
 }
 
-.resource__meta,
-.resource__byline {
+.resource__meta {
 	font-size: rem(14);
 }
 
-.resource__meta svg,
-.resource__byline svg {
+.resource__meta svg {
 	color: var(--grey-500);
 }
 
-h1 + .resource__meta,
-h1 + .resource__byline {
+h1 + .resource__meta {
 	margin-top: rem(24);
 }
 
-.resource__byline + .resource__meta {
+.resource__meta + .resource__meta {
 	margin-top: rem(12);
 }
 
