@@ -121,7 +121,7 @@
 .card__meta,
 .card__description,
 .card__favorite {
-	color: var(--grey-600);
+	color: var(--dark-mint-500);
 	font-size: rem(14);
 }
 
@@ -166,6 +166,7 @@
 }
 
 .card__added {
+	color: var(--grey-600);
 	font-style: italic;
 }
 
