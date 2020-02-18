@@ -1,23 +1,42 @@
 <article class="resource">
 	<div class="page-header resource__header">
-		<p class="resource__format">{% render '@svg', {svg: 'toolkit'}, true %} Toolkit</p>
 		<h1>{{ title }}</h1>
-		<p class="resource__meta">
-			<span class="resource__publisher">By <a rel="external" href="https://cooperativesfirst.com/what-we-do/resources/">Co-operatives First</a></span><br />
-			<span class="resource__locality">{% render '@svg', {svg: 'location'}, true %} Canada</span>
-		</p>
+		{% if byline %}
+		<div class="resource__meta resource__byline">{% render '@svg', {svg:'author'}, true %} By {{ byline | safe }}</div>
+		{% endif %}
+		<div class="resource__meta">
+			<div class="resource__meta-group">
+				<span class="resource__format"><span class="screen-reader-text">resource format: </span>{% render '@svg', {svg:formatIcon}, true %}{{ format }}</span>{% if publisher %}{% render '@separator' %}
+				<span class="resource__publisher">Published by <a rel="external" href="{{ publisherLink }}">{{ publisher | safe }}</a></span>
+				{% endif %}
+			</div>
+			{% if locality %}
+			<div class="resource__meta-group">
+				<span class="resource__locality"><span class="screen-reader-text">location of relevance: </span>{% render '@svg', {svg:'location'}, true %}{{ locality }}</span>
+			</div>
+			{% endif %}
+			{% if date or language %}
+			<div class="resource__meta-group">
+				{% render '@svg', {svg:'info'}, true %}
+				{% if language %}<span class="resource__language"><span class="screen-reader-text">language: </span>{{ language }}</span>{% endif %}{% if date and language %}{% render '@separator' %}{% endif %}
+				{% if date %}<span class="resource__date"><span class="screen-reader-text">date published: </span>{{ date }}</span>{% endif %}
+			</div>
+			{% endif %}
+		</div>
 	</div>
 	<div class="resource__abstract">
 		<h2>Summary</h2>
 		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 	</div>
-	<div class="resource__tags">
+	<div class="resource__tags stack">
 		<div class="tags">
 			{% render '@tag', {label: 'Growing a co-op', standAlone: true}, true %}
 			{% render '@tag', {label: 'Starting a co-op', standAlone: true}, true %}
 			{% render '@tag', {label: 'Governance', standAlone: true}, true %}
 		</div>
+		<div>
 		{% render '@button--borderless', {icon: 'edit', label: 'Suggest edits', standAlone: true}, true %}
+		</div>
 	</div>
 	<div class="resource__cta">
 		{% render '@call-to-action', {label: 'View full resource', standAlone: true}, true %}
@@ -25,14 +44,14 @@
 	<div class="resource__actions">
 		{% render '@button--borderless', {standAlone: true, icon: 'favorite', label: 'Favorite'}, true %}
 		{% render '@menu-button', {standAlone: true, icon: 'share', label: 'Share', items: [{label: 'Twitter'}, {label: 'Facebook'}, {label: 'LinkedIn'}, {label: 'Email'}]}, true %}
-		{% render '@button--borderless', {standAlone: true, icon: false, label: 'Report broken link'}, true %}
+		{% render '@button--borderless', {standAlone: true, icon: 'broken-link', label: 'Report broken link'}, true %}
 		{% render '@menu-button', {standAlone: true, icon: false, label: 'View alternate links', items: [{label: 'View on Perma.cc'}, {label: 'View on the Wayback Machine'}]}, true %}
 	</div>
+	<div class="resource__meta"><em>Added January 7, 2020</em></div>
 	<div class="resource__related">
 		<h2>Related resources</h2>
 		<ul class="cards">
-			{% render '@card', {
-			modifier: 'resource',
+			{% render '@card--resource', {
 			id: 1,
 			format: 'Article',
 			formatIcon: 'article',
@@ -46,8 +65,7 @@
 			language: 'English',
 			standAlone: true
 			} %}
-			{% render '@card', {
-			modifier: 'resource',
+			{% render '@card--resource', {
 			id: 2,
 			format: 'Article',
 			formatIcon: 'article',
