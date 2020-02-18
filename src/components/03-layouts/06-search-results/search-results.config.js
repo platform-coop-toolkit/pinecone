@@ -83,7 +83,7 @@ for ( let i = 0; i < resourceCount; i++ ) {
 }
 
 module.exports = {
-	title: 'Archive',
+	title: 'Search Results',
 	status: 'wip',
 	context: {
 		bodyClass: 'search search-results',
@@ -354,7 +354,7 @@ module.exports = {
 			label: 'Unfiltered',
 			context:
 			{
-				bodyClass: 'archive post-type-archive',
+				bodyClass: 'search search-results',
 				foundPosts: false,
 				currentTags: false
 			}
