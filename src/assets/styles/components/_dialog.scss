@@ -25,6 +25,14 @@
 	.buttons button + button {
 		margin-top: rem(16);
 	}
+
+	p + .input-group {
+		margin-top: rem(24);
+	}
+
+	input {
+		max-width: 100%;
+	}
 }
 
 .overlay {

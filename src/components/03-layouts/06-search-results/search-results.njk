@@ -1,0 +1,41 @@
+<div class="page-header">
+	<p>{% render '@link--breadcrumb', {label: 'Home', href: '/'}, true %}</p>
+	<h1>{{ title }}</h1>
+</div>
+<div class="filter-wrapper">
+	{% render '@button--borderless', {standAlone: true, id: 'show-filters'}, true %}
+	<form class="filters" action="/">
+		{% render '@button--borderless', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
+		<h2 class="h1 screen-reader-text" tabindex="-1">Filters</h2>
+		<div class="accordion accordion--filter-list">
+		{% for filterList in filterLists %}
+			{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
+		{% endfor %}
+		</div>
+		{% render '@submit', {standAlone: true, value: 'Apply filters', id: 'apply-filters'} %}
+	</form>
+</div>
+<div class="sort-wrapper">
+	<div class="sort">
+		{% render '@menu-button', {standAlone: true}, true %}
+	</div>
+</div>
+{% if currentTags and foundPosts %}
+<div class="current-filters">
+	<p class="h3">Showing {{ foundPosts }} of 742 resources</p>
+	<ul class="tags">
+		{% for tag in currentTags %}
+			{% render '@button--tag-button', {standAlone: true, label: tag.label}, true %}
+		{% endfor %}
+	</ul>
+	<p><a href="?x">Clear all <span class="screen-reader-text">filters</span></a></p>
+</div>
+{% endif %}
+<div class="resource-list">
+<ul class="cards">
+{% for card in cards %}
+  {% render '@card--resource', card %}
+{% endfor %}
+</ul>
+</div>
+{% render '@pagination', {title: false}, true %}
