@@ -14,8 +14,12 @@
 .search-results .current-filters {
 	@include grid-column-span(4, 4);
 
-	* + .tag-buttons {
-		margin-top: rem(12);
+	h2 + p {
+		margin-top: rem(6);
+	}
+
+	* + .tags {
+		margin-top: 0;
 	}
 }
 

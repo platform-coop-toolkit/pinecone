@@ -89,7 +89,7 @@ module.exports = {
 		bodyClass: 'search search-results',
 		hasMenu: true,
 		hasFooter: true,
-		title: 'Search Results',
+		title: 'Search results',
 		searchTerm: 'platform capitalism',
 		currentTags: [
 			{label: 'Platform cooperativism'},
@@ -346,7 +346,14 @@ module.exports = {
 			},
 		],
 		cards: resourceData,
-		foundPosts: 12
+		foundPosts: 12,
+		dialogTitle: 'Save search',
+		dialogQuestion: 'Do you want to add these search results to your saved searches?',
+		dialogInput: 'label',
+		dialogInputLabel: 'Saved Search Label',
+		dialogInputDescription: 'Enter a label for these search results so you can identify them later.',
+		dialogConfirm: 'Yes, save',
+		dialogDismiss: 'No, don&rsquo;t save'
 	},
 	variants: [
 		{
@@ -355,7 +362,7 @@ module.exports = {
 			context:
 			{
 				bodyClass: 'search search-results',
-				foundPosts: false,
+				foundPosts: 12,
 				currentTags: false
 			}
 		}

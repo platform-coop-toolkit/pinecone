@@ -20,15 +20,25 @@
 		{% render '@menu-button', {standAlone: true}, true %}
 	</div>
 </div>
-{% if currentTags and foundPosts %}
+<div class="save-wrapper">
+	<div class="save">
+		{% render '@button--borderless', {standAlone: true, icon: 'save', label: 'Save my search', id: 'save-search'}, true %}
+	</div>
+</div>
+{% if searchTerm and foundPosts %}
 <div class="current-filters">
-	<p class="h3">Showing {{ foundPosts }} of 742 resources</p>
+	<p class="h3">Showing {{ foundPosts }} of 742 resources for:</p>
+	<h2 class="h4">Search term</h2>
+	<p>"{{ searchTerm }}"</p>
+	{% if currentTags %}
+	<h2 class="h4">Applied filters</h2>
 	<ul class="tags">
 		{% for tag in currentTags %}
 			{% render '@button--tag-button', {standAlone: true, label: tag.label}, true %}
 		{% endfor %}
 	</ul>
 	<p><a href="?x">Clear all <span class="screen-reader-text">filters</span></a></p>
+	{% endif %}
 </div>
 {% endif %}
 <div class="resource-list">
@@ -39,3 +49,17 @@
 </ul>
 </div>
 {% render '@pagination', {title: false}, true %}
+<script>
+	const dialogBtn = document.getElementById( 'save-search' );
+	if ( dialogBtn ) {
+		new window.Pinecone.Dialog( dialogBtn, {
+			title: "{{ dialogTitle | safe }}",
+			question: "{{ dialogQuestion | safe }}",
+			input: "{{ dialogInput }}",
+			inputLabel: "{{ dialogInputLabel | safe }}",
+			inputDescription: "{{ dialogInputDescription | safe }}",
+			confirm: "{{ dialogConfirm | safe }}",
+			dismiss: "{{ dialogDismiss | safe }}"
+		} );
+	}
+</script>

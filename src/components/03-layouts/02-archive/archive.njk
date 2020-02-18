@@ -22,7 +22,8 @@
 </div>
 {% if currentTags and foundPosts %}
 <div class="current-filters">
-	<p class="h3">Showing {{ foundPosts }} of 742 resources</p>
+	<p class="h3">Showing {{ foundPosts }} of 742 resources for:</p>
+	<h2 class="h4">Applied filters</h2>
 	<ul class="tags">
 		{% for tag in currentTags %}
 			{% render '@button--tag-button', {standAlone: true, label: tag.label}, true %}
