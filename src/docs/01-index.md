@@ -10,11 +10,13 @@ Pinecone is a pattern library for the Platform Cooperative Development Kit.
 
 1. Clone Pinecone from [https://github.com/platform-coop-toolkit/pinecone/](https://github.com/platform-coop-toolkit/pinecone/).
 
-2. Install dependencies: `npm i`
+2. Install [Node.js and npm](https://nodejs.org/en/download/).
 
-3. Start Fractal, Rollup and Webpack: `npm start`
+3. Install dependencies: `npm i`
 
-4. Visit the local development site at (probably) [http://localhost:3000](https://rollupjs.org/).
+4. Start Fractal, Rollup and Webpack: `npm start`
+
+5. Visit the local development site at (probably) [http://localhost:3000](http://localhost:3000).
 
 ## Implementation Details
 
@@ -30,7 +32,7 @@ Running the npm `start` command as above starts Fractal, Rollup and Laravel Mix 
 
 ## Building Pinecone
 
-Pinecone is built and deployed automatically to [Netlify](https://netlify.com/). If for some reason you need to build your own production copy, `npm run build` will generate a static version of the pattern library in your `build` directory.
+Pinecone is built and deployed automatically to [Netlify](https://netlify.com/) at [https://pinecone.platform.coop](https://pinecone.platform.coop). If for some reason you need to build your own production copy, `npm run build` will generate a static version of the pattern library in your `build` directory.
 
 ## Usage
 
