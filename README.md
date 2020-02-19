@@ -4,4 +4,4 @@
 
 Pinecone is a pattern library for the Platform Cooperative Development Kit.
 
-[Read the docs!](https://pinecone.platform.coop/)
+[Read the docs &rarr;](https://pinecone.platform.coop/)
