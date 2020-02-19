@@ -1,4 +1,4 @@
-# Using Pinecone in a Sage Project
+# Using Pinecone in a Sage 10 Project
 
 This document assumes that you are using [Sage 10](https://github.com/roots/sage/tree/10.0.0-dev).
 
