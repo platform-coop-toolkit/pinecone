@@ -347,13 +347,12 @@ module.exports = {
 		],
 		cards: resourceData,
 		foundPosts: 12,
-		dialogTitle: 'Save search',
-		dialogQuestion: 'Do you want to add these search results to your saved searches?',
+		dialogTitle: 'Save Search',
+		dialogQuestion: 'To save your search, please give it a name so you can identify it later.',
 		dialogInput: 'label',
-		dialogInputLabel: 'Saved Search Label',
-		dialogInputDescription: 'Enter a label for these search results so you can identify them later.',
-		dialogConfirm: 'Yes, save',
-		dialogDismiss: 'No, don&rsquo;t save'
+		dialogInputLabel: 'Name of saved search:',
+		dialogConfirm: 'Save',
+		dialogDismiss: 'Don&rsquo;t save'
 	},
 	variants: [
 		{
