@@ -1,0 +1,8 @@
+{% render '@brand' %}
+<div class="inner">
+	{% if modifier !== 'home' %}
+	{% render '@search-button' %}
+	{% render '@search-form', {standAlone: true}, true %}
+	{% endif %}
+	{% render '@nav' %}
+</div>

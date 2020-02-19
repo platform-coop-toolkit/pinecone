@@ -10,37 +10,26 @@
 		<link rel="stylesheet" href="{{ '/styles/pinecone.css' | path }}">
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | path }}">
 		<link rel="icon" href="{{ '/images/favicon.png' | path }}" >
-		<title>{{ _target.title }} | Pinecone</title>
+		<title>Pinecone</title>
 	</head>
 
-	<body{% if _target.context.bodyClass %} class="{{ _target.context.bodyClass }}"{% endif %}>
+	<body>
 		<header role="banner">
 			<div class="container">
-				{% if _target.context.inBanner %}{{ yield | safe }}{% endif %}
-				{% if _target.context.hasMenu %}
-				{% if _target.title === 'Home: Default' %}
-					{% render '@menu', {modifier: 'home'}, true %}
-				{% else %}
-					{% render '@menu' %}
-				{% endif %}
-				{% endif %}
+				<!-- Menu component goes here (brand, search button, search form, and nav) -->
 			</div>
 		</header>
 		<div class="wrap container" role="document">
       		<div class="content">
 				<main>
-				{% if not _target.context.inBanner and not _target.context.inFooter %}{{ yield | safe }}{% endif %}
+					<!-- Content goes here -->
 				</main>
-				{% if _target.context.hasSidebar %}
-				<aside class="sidebar">
-				</aside>
-				{% endif %}
 			</div>
 		</div>
-		{% if _target.context.hasFooter %}
 		<footer class="content-info">
-  			<div class="container">{% if _target.context.inFooter %}{{ yield | safe }}{% else %}{% render '@footer' %}{% endif %}</div>
+  			<div class="container">
+				<!-- Footer component goes here -->
+			</div>
   		</footer>
-		{% endif %}
 	</body>
 </html>
