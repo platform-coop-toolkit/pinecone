@@ -14,8 +14,22 @@
 .search-results .current-filters {
 	@include grid-column-span(4, 4);
 
+	margin-top: $gutter;
+
+	.h3 {
+		margin-top: rem(16);
+	}
+
 	h2 + p {
 		margin-top: rem(6);
+	}
+
+	.h4 {
+		margin-top: rem(24);
+	}
+
+	.h3 + .h4 {
+		margin-top: rem(12);
 	}
 
 	* + .tags {
@@ -74,6 +88,8 @@
 	.archive .current-filters,
 	.search-results .current-filters {
 		@include grid-column-span(8, 12, 5);
+
+		margin-top: 0;
 	}
 
 	.archive:not([class*="taxonomy"]) .filter-wrapper,
