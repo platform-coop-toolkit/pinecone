@@ -1,2 +1,22 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
-{% render '@button--borderless', {label: 'Remove favorite', id: 'invoke-dialog', icon: 'delete', iconPosition: 'start', standAlone: true}, true %}
+{% render '@button--borderless', {label: buttonLabel, id: 'invoke-dialog', icon: buttonIcon, iconPosition: 'start', standAlone: true}, true %}
+<script>
+	const dialogBtn = document.getElementById( 'invoke-dialog' );
+	if ( dialogBtn ) {
+		new window.Pinecone.Dialog( dialogBtn, {
+			title: "{{ dialogTitle | safe }}",
+			question: "{{ dialogQuestion | safe }}",
+			{% if dialogInput %}
+			input: "{{ dialogInput }}",
+			{% endif %}
+			{% if dialogInputLabel %}
+			inputLabel: "{{ dialogInputLabel | safe }}",
+			{% endif %}
+			{% if dialogInputDescription %}
+			inputDescription: "{{ dialogInputDescription | safe }}",
+			{% endif %}
+			confirm: "{{ dialogConfirm | safe }}",
+			dismiss: "{{ dialogDismiss | safe }}"
+		} );
+	}
+</script>

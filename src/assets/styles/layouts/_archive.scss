@@ -1,29 +1,52 @@
-.archive {
+.archive,
+.search-results {
 	--parent-background-color: var(--off-white);
 	background-color: var(--off-white);
 }
 
-.archive .page-header {
+.archive .page-header,
+.search-results .page-header {
 	@include full-width-background(var(--white));
 	@include grid-column-span(4, 4);
 }
 
-.archive .current-filters {
+.archive .current-filters,
+.search-results .current-filters {
 	@include grid-column-span(4, 4);
 
-	* + .tag-buttons {
+	margin-top: $gutter;
+
+	.h3 {
+		margin-top: rem(16);
+	}
+
+	h2 + p {
+		margin-top: rem(6);
+	}
+
+	.h4 {
+		margin-top: rem(24);
+	}
+
+	.h3 + .h4 {
 		margin-top: rem(12);
+	}
+
+	* + .tags {
+		margin-top: 0;
 	}
 }
 
-.archive main {
+.archive main,
+.search-results main {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
 @include breakpoint-up(sm) {
-	.archive main {
+	.archive main,
+	.search-results main {
 		@supports (display: $grid) {
 			column-gap: $gutter;
 			display: grid;
@@ -32,52 +55,64 @@
 	}
 
 	.archive .page-header,
-	.archive .current-filters {
+	.search-results .page-header,
+	.archive .current-filters,
+	.search-results .current-filters {
 		@include grid-column-span(8, 8, 1);
 	}
 }
 
 @include breakpoint-up(md) {
-	.archive .page-header {
+	.archive .page-header,
+	.search-results .page-header {
 		padding: rem(157) 0 rem(114);
 	}
 }
 
 @include breakpoint-up(lg) {
-	.archive main {
+	.archive main,
+	.search-results main {
 		@supports (display: $grid) {
 			grid-template-columns: repeat(12, 1fr);
 			grid-template-rows: auto auto auto 1fr;
 		}
 	}
 
-	.archive .page-header {
+	.archive .page-header,
+	.search-results .page-header {
 		padding: rem(148) 0 rem(154);
 
 		@include grid-column-span(12, 12, 1);
 	}
 
-	.archive .current-filters {
+	.archive .current-filters,
+	.search-results .current-filters {
 		@include grid-column-span(8, 12, 5);
+
+		margin-top: 0;
 	}
 
-	.archive:not([class*="taxonomy"]) .filter-wrapper {
+	.archive:not([class*="taxonomy"]) .filter-wrapper,
+	.search-results:not([class*="taxonomy"]) .filter-wrapper {
 		margin-top: rem(24);
 	}
 }
 
 @include breakpoint-up(xl) {
-	.archive main {
+	.archive main,
+	.search-results main {
 		@supports (display: $grid) {
 			grid-template-columns: repeat(16, 1fr);
 		}
 	}
 
-	.archive .page-header {
+	.archive .page-header,
+	.search-results .page-header {
 		@include grid-column-span(16, 16, 1);
 	}
 
-	.archive .current-filters {
+	.archive .current-filters,
+	.search-results .current-filters {
 		@include grid-column-span(12, 16, 5);
 	}
 }

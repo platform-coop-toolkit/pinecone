@@ -16,12 +16,23 @@ class Dialog {
 		this.btn = btn;
 		this.config = {
 			...{
+				title: 'Confirm action',
+				question: 'Do you want to do this?',
+				dismiss: 'No',
+				confirm: 'Yes',
+				inputLabel: false,
+				inputDescription: false,
+				input: false,
 				callback:
 					/**
 					 * Callback for when one was not provided.
 					 */
-					() => {
-						console.error( 'No callback provided.' ); // eslint-disable-line
+					( input ) => {
+						if ( input ) {
+							console.log( `Responded with "${input}".` ); // eslint-disable-line
+						} else {
+							console.error( 'Callback not provided.' ); // eslint-disable-line
+						}
 					}
 			},
 			...options
@@ -61,6 +72,15 @@ class Dialog {
 		if ( this.config.question ) {
 			innerHtml += `<p id="q-${unique + 1}">${this.config.question}</p>`;
 		}
+		if ( this.config.input && this.config.inputLabel ) {
+			innerHtml += '<div class="input-group">';
+			innerHtml += `<label for="${this.config.input}">${this.config.inputLabel}</label>`;
+			innerHtml += `<input id="${this.config.input}" type="text" name="${this.config.input}" />`;
+			if ( this.config.inputDescription ) {
+				innerHtml += `<p class="input-group__description">${this.config.inputDescription}</p>`;
+			}
+			innerHtml += '</div>';
+		}
 		innerHtml += `
 			<div class="buttons">
 				<button class="button button--secondary dismiss">${this.config.dismiss}</button>
@@ -95,9 +115,11 @@ class Dialog {
 
 		dismiss.focus();
 
+
 		confirm.onclick = () => {
+			const input = ( document.getElementById( this.config.input ) ) ? document.getElementById( this.config.input ).value : false;
 			close();
-			callback();
+			callback( input );
 		};
 		dismiss.onclick = () => close();
 		dialog.addEventListener( 'keydown', e => {

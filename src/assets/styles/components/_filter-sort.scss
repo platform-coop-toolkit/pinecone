@@ -22,6 +22,12 @@
 	}
 }
 
+.save-wrapper {
+	margin-top: rem(-20);
+	padding: 0 0 rem(24);
+	position: relative;
+}
+
 .accordion + .input-group {
 	margin-top: rem(24);
 }
@@ -173,6 +179,10 @@
 	.sort-wrapper {
 		@include grid-column-span(4, 8, 5);
 	}
+
+	.save-wrapper {
+		@include grid-column-span(8, 8);
+	}
 }
 
 #hide-filters {
@@ -320,6 +330,25 @@
 		@include grid-column-span(8, 12, 5);
 	}
 
+	.search-results .sort-wrapper {
+		@include grid-column-span(4, 12, 5);
+
+		text-align: left;
+	}
+
+	.save-wrapper {
+		@include grid-column-span(4, 12, 9);
+
+		margin-top: 0;
+		padding: $gutter 0 0;
+		text-align: right;
+
+		.button--borderless {
+			display: inline-block;
+			margin: rem(6) rem(-8) rem(6) rem(24);
+		}
+	}
+
 	#show-filters,
 	#hide-filters {
 		display: none;
@@ -352,7 +381,6 @@
 	}
 }
 
-
 @include breakpoint-up(xl) {
 	.filter-wrapper {
 		@include grid-margin-right(1, 16);
@@ -361,5 +389,15 @@
 
 	.sort-wrapper {
 		@include grid-column-span(12, 16, 5);
+	}
+
+	.search-results .sort-wrapper {
+		@include grid-column-span(6, 16, 5);
+
+		text-align: left;
+	}
+
+	.save-wrapper {
+		@include grid-column-span(6, 16, 11);
 	}
 }
