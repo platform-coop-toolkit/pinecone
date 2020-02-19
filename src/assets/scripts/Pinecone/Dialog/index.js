@@ -75,9 +75,11 @@ class Dialog {
 		if ( this.config.input && this.config.inputLabel ) {
 			innerHtml += '<div class="input-group">';
 			innerHtml += `<label for="${this.config.input}">${this.config.inputLabel}</label>`;
-			innerHtml += `<input id="${this.config.input}" type="text" name="${this.config.input}" />`;
 			if ( this.config.inputDescription ) {
-				innerHtml += `<p class="input-group__description">${this.config.inputDescription}</p>`;
+				innerHtml += `<input id="${this.config.input}" type="text" name="${this.config.input}" aria-describedby="${this.config.input}-description" />`;
+				innerHtml += `<p id="${this.config.input}-description" class="input-group__description">${this.config.inputDescription}</p>`;
+			} else {
+				innerHtml += `<input id="${this.config.input}" type="text" name="${this.config.input}" />`;
 			}
 			innerHtml += '</div>';
 		}
