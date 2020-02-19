@@ -115,8 +115,11 @@ class Dialog {
 		document.body.appendChild( overlay );
 		document.body.appendChild( dialog );
 
-		dismiss.focus();
-
+		if ( this.config.input ) {
+			document.getElementById( this.config.input ).focus();
+		} else {
+			dismiss.focus();
+		}
 
 		confirm.onclick = () => {
 			const input = ( document.getElementById( this.config.input ) ) ? document.getElementById( this.config.input ).value : false;
