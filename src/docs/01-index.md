@@ -37,4 +37,4 @@ Pinecone is built and deployed automatically to [Netlify](https://netlify.com/) 
 ## Usage
 
 - [Django](/docs/usage/django.html)
-- [Sage (WordPress)](docs/usage/wordpress.html)
+- [Sage 10 (WordPress)](docs/usage/wordpress.html)
