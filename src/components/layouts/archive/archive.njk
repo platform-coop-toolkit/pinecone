@@ -12,7 +12,7 @@
 			{% render '@filter-list', {standAlone: true, label: filterList.label, terms: filterList.terms}, true %}
 		{% endfor %}
 		</div>
-		{% render '@submit', {standAlone: true, value: 'Apply filters', id: 'apply-filters'} %}
+		{% render '@submit', {standAlone: true, label: 'Apply filters', id: 'apply-filters'}, true %}
 	</form>
 </div>
 <div class="sort-wrapper">
