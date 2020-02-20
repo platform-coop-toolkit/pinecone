@@ -49,10 +49,10 @@
 </ul>
 </div>
 {% render '@pagination', {title: false}, true %}
-<script>
+<script defer>
 	const dialogBtn = document.getElementById( 'save-search' );
 	if ( dialogBtn ) {
-		new window.Pinecone.Dialog( dialogBtn, {
+		new Pinecone.Dialog( dialogBtn, {
 			title: "{{ dialogTitle | safe }}",
 			question: "{{ dialogQuestion | safe }}",
 			input: "{{ dialogInput }}",

@@ -1,9 +1,9 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
 {% render '@button--borderless', {label: buttonLabel, id: 'invoke-dialog', icon: buttonIcon, iconPosition: 'start', standAlone: true}, true %}
-<script>
+<script defer>
 	const dialogBtn = document.getElementById( 'invoke-dialog' );
 	if ( dialogBtn ) {
-		new window.Pinecone.Dialog( dialogBtn, {
+		new Pinecone.Dialog( dialogBtn, {
 			title: "{{ dialogTitle | safe }}",
 			question: "{{ dialogQuestion | safe }}",
 			{% if dialogInput %}
