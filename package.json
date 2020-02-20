@@ -63,7 +63,7 @@
     "src/assets/fonts"
   ],
   "engines": {
-    "node": ">=10.16.3"
+    "node": ">=12.16.1"
   },
   "dependencies": {
     "popper.js": "^1.16.1",
