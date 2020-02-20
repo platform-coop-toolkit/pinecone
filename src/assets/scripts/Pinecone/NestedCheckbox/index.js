@@ -51,8 +51,8 @@ class NestedCheckbox {
 		supplementaryLabel.classList.add( 'screen-reader-text' );
 		supplementaryLabel.hidden = false;
 		this.input.parentNode.insertBefore( customCheckbox, this.input );
-		this.input.setAttribute( 'type', 'hidden' );
-		this.input.setAttribute( 'value', status ? this.value : '' );
+		this.input.classList.add( 'screen-reader-text' );
+		this.input.setAttribute( 'aria-hidden', 'true' );
 		this.label.hidden = true;
 		this.customCheckbox = customCheckbox;
 	}
@@ -72,7 +72,7 @@ class NestedCheckbox {
 	toggleMixedCheckbox( ctrl ) {
 		const state = 'true' === ctrl.getAttribute( 'aria-checked' ) || false;
 		ctrl.setAttribute( 'aria-checked', !state );
-		this.input.setAttribute( 'value', !state ? this.value : '' );
+		this.input.checked = !state;
 		Array.prototype.forEach.call( this.subInputs, checkbox => {
 			checkbox.checked = !state;
 		} );
