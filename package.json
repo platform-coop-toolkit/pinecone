@@ -17,7 +17,7 @@
     "lint:styles": "stylelint src/assets/styles",
     "lint": "npm-run-all lint:*",
     "prepublishOnly": "npm run build",
-    "release": "standard-version",
+    "release": "standard-version -t",
     "test": "npm run lint",
     "start": "concurrently \"npm run watch:assets\" \"npm run watch:components\" \"npm run watch:modules\"",
     "watch:assets": "npm run assets:development -- --watch",
