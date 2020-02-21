@@ -39,7 +39,7 @@
 .home__feed {
 	padding-top: $gutter;
 
-	header {
+	> header {
 		align-items: baseline;
 		display: flex;
 		flex-direction: row;
