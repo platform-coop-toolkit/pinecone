@@ -39,7 +39,13 @@
 .home__feed {
 	padding-top: $gutter;
 
-	header {
+	> header {
+		align-items: baseline;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
 		a {
 			margin-top: 0;
 		}
