@@ -1,5 +1,5 @@
 module.exports = {
 	title: 'Skeleton',
-	status: 'wip',
+	status: 'ready',
 	order: 1,
 };

@@ -2,7 +2,7 @@ const faker = require( 'faker' );
 
 module.exports = {
 	title: 'Notification',
-	status: 'wip',
+	status: 'ready',
 	order: 10,
 	context: {
 		icon: 'info',

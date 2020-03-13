@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'Resource',
-	status: 'wip',
+	status: 'ready',
 	order: 5,
 	context: {
 		bodyClass: 'single-lc_resource',
