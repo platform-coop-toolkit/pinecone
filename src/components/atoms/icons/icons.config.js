@@ -28,6 +28,9 @@ module.exports = {
 					svg: 'info',
 				},
 				{
+					svg: 'lock',
+				},
+				{
 					svg: 'success',
 				},
 				{
@@ -52,6 +55,9 @@ module.exports = {
 					svg: 'sort',
 				},
 				{
+					svg: 'reset',
+				},
+				{
 					svg: 'tag',
 				},
 				{
@@ -68,7 +74,7 @@ module.exports = {
 				},
 				{
 					svg: 'external',
-				},
+				}
 			],
 			[
 				{
