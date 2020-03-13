@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'Brand',
-	status: 'wip',
+	status: 'ready',
 	order: 1,
 	context: {
 		inBanner: true,
