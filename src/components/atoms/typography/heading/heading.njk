@@ -1,0 +1,8 @@
+{% if level == 'all' %}
+{% render '@h1' %}
+{% render '@h2' %}
+{% render '@h3' %}
+{% render '@h4' %}
+{% else %}
+{% render '@h' + level %}
+{% endif %}

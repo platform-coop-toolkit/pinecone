@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'Colors',
-	status: 'wip',
+	status: 'ready',
 	order: 1,
 	context: {
 		colors: {
