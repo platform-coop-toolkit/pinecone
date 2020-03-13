@@ -1,5 +1,5 @@
 module.exports = {
-	status: 'wip',
+	status: 'ready',
 	title: 'Dividers',
 	order: 4,
 	context: {
