@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'Icons',
-	status: 'wip',
+	status: 'ready',
 	order: 2,
 	context: {
 		iconsTitle: 'Icons',
