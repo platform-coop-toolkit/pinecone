@@ -1,4 +1,4 @@
-import Popper from '../../../../../node_modules/popper.js/dist/esm/popper';
+import { createPopper } from '../../../../../node_modules/@popperjs/core/dist/esm/popper';
 
 /**
  * Menu Button class.
@@ -51,7 +51,7 @@ class MenuButton {
 		const arrow = document.createElement( 'span' );
 		menu.classList.add( 'menu-button__menu' );
 		arrow.classList.add( 'menu-button__menu__arrow' );
-		arrow.setAttribute( 'x-arrow', true );
+		arrow.setAttribute( 'data-popper-arrow', '' );
 		menuList.innerHTML = linkList.innerHTML;
 		Array.prototype.forEach.call( menuList.children, menuItem => {
 			menuItem.removeAttribute( 'class' );
@@ -76,7 +76,7 @@ class MenuButton {
 			const expanded = 'true' === this.btn.getAttribute( 'aria-expanded' ) || false;
 			this.btn.setAttribute( 'aria-expanded', !expanded );
 			if ( false === expanded ) {
-				new Popper( this.btn, this.menu, {
+				createPopper( this.btn, this.menu, {
 					placement: this.config.placement,
 					preventOverflow:
 							( true === this.config.preventOverflow ) ?
@@ -86,7 +86,15 @@ class MenuButton {
 								} :
 								{
 									enabled: false
-								}
+								},
+					modifiers: [
+						{
+							name: 'offset',
+							options: {
+								offset: [0, 20],
+							}
+						}
+					],
 				} );
 			}
 		}

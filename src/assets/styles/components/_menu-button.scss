@@ -21,92 +21,86 @@
 .menu-button__menu {
 	z-index: 1;
 
-	.menu-button__menu__arrow {
-		display: block;
-		overflow: hidden;
+	[data-popper-arrow],
+	[data-popper-arrow]::before {
 		position: absolute;
-
-		&::after {
-			background-color: var(--white);
-			box-shadow: rem(2) rem(2) rem(6) rgba(0, 0, 0, 0.19);
-			content: "";
-			position: absolute;
-		}
 	}
 
-	&[x-placement^="bottom"],
-	&[x-placement^="top"] {
-		.menu-button__menu__arrow {
+	[data-popper-arrow]::before {
+		background: var(--white);
+		content: "";
+		height: rem(20);
+		width: rem(20);
+
+	}
+
+	&[data-popper-placement^="bottom"],
+	&[data-popper-placement^="top"] {
+		[data-popper-arrow] {
 			height: rem(20);
+			overflow: hidden;
 			width: rem(40);
 
-			&::after {
-				height: rem(20);
+			&::before {
+				box-shadow: rem(2) rem(2) rem(6) rgba(0, 0, 0, 0.19);
 				left: 50%;
 				transform: translateX(-50%) translateY(-50%) rotate(45deg);
-				width: rem(20);
 			}
 		}
 	}
 
-	&[x-placement^="bottom"] {
+	&[data-popper-placement^="bottom"] {
 		margin-top: rem(20);
 
-		.menu-button__menu__arrow {
+		[data-popper-arrow] {
 			top: rem(-20);
 
-			&::after {
+			&::before {
 				top: rem(20);
 			}
 		}
 	}
 
-	&[x-placement^="top"] {
+	&[data-popper-placement^="top"] {
 		margin-bottom: rem(20);
 
-		.menu-button__menu__arrow {
+		[data-popper-arrow] {
 			bottom: rem(-20);
-
-			&::after {
-				top: rem(0);
-			}
 		}
 	}
 
-	&[x-placement^="left"],
-	&[x-placement^="right"] {
-		.menu-button__menu__arrow {
+	&[data-popper-placement^="left"],
+	&[data-popper-placement^="right"] {
+		[data-popper-arrow] {
 			height: rem(40);
 			width: rem(20);
 
-			&::after {
-				height: rem(20);
+			&::before {
 				top: 50%;
 				transform: translateX(-50%) translateY(-50%) rotate(45deg);
-				width: rem(20);
 			}
 		}
 	}
 
-	&[x-placement^="left"] {
+	&[data-popper-placement^="left"] {
 		margin-right: rem(20);
 
-		.menu-button__menu__arrow {
+		[data-popper-arrow] {
 			right: rem(-20);
 
-			&::after {
+			&::before {
 				right: 0;
 			}
 		}
 	}
 
-	&[x-placement^="right"] {
+	&[data-popper-placement^="right"] {
 		margin-left: rem(20);
 
-		.menu-button__menu__arrow {
+		[data-popper-arrow] {
 			left: rem(-20);
 
-			&::after {
+			&::before {
 				left: rem(20);
 			}
 		}
