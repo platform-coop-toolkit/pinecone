@@ -1,0 +1,10 @@
+{% set altAttribute = false %}
+{% if alt !== false %}
+	{% set altAttribute = 'alt="' + alt + '"' %}
+{% endif %}
+{% set roleAttribute = false %}
+{% if role !== false %}
+	{% set roleAttribute = 'role="' + role + '"' %}
+{% endif %}
+
+<img {{ roleAttribute | safe if roleAttribute else '' }} src="{{ src }}" width="{{ width }}" height="{{ height }}" {{ altAttribute | safe if altAttribute else '' }} />
