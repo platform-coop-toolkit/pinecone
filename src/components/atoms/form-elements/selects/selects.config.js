@@ -9,8 +9,14 @@ module.exports = {
 				name: 'select'
 			},
 			{
+				name: 'error',
+				error: true,
+				modifiers: ['error']
+			},
+			{
 				name: 'disabled',
-				disabled: true
+				disabled: true,
+				modifiers: ['disabled']
 			}
 		]
 	},
@@ -19,7 +25,8 @@ module.exports = {
 			name: 'Default Inverse',
 			label: 'Default (Inverse)',
 			context: {
-				bodyClass: 'has-blue-500-background-color'
+				bodyClass: 'has-blue-500-background-color',
+				inverse: true
 			}
 		}
 	]

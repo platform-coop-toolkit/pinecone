@@ -4,17 +4,19 @@ module.exports = {
 	order: 5,
 	status: 'wip',
 	context: {
-		standAlone: false,
 		radioButtons: [
 			{
-				name: 'radio'
+				name: 'radio',
+				label: 'Radio initially unchecked'
 			},
 			{
-				name: 'radio',
+				name: 'radio checked',
+				label: 'Radio initially checked',
 				checked: true
 			},
 			{
-				name: 'radio',
+				name: 'radio disabled',
+				label: 'Radio disabled',
 				disabled: true
 			}
 		]
@@ -24,6 +26,7 @@ module.exports = {
 			name: 'Default Inverse',
 			label: 'Default (Inverse)',
 			context: {
+				inverse: true,
 				bodyClass: 'has-blue-500-background-color'
 			}
 		}

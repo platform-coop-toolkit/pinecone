@@ -12,6 +12,7 @@ module.exports = {
 		label: 'Select',
 		name: 'select',
 		description: 'Description for this select input.',
+		errorMessage: 'Please make a selection.',
 		disabled: false,
 		options: optionData
 	}

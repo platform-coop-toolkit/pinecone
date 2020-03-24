@@ -1,1 +1,4 @@
-{% if standAlone %}<p{% if className %} class="{{ className }}"{% endif %}>{% endif %}<input id="{{ value }}" type="checkbox" name="{{ name }}[]" value="{{ value }}" {% if checked %} checked{% elseif disabled %} disabled{% endif %} /><label for="{{ value }}">{{ label }}</label>{% if standAlone %}</p>{% endif %}
+<p{% if checkbox.modifiers %} class="{% for modifier in checkbox.modifiers %} input-group--{{ modifier }}{% endfor %}"{% endif %}>
+<input id="{{ checkbox.name }}" type="checkbox" name="{{ checkbox.name }}" value="{{ checkbox.name }}" {% if checkbox.checked %} checked{% elseif checkbox.disabled %} disabled{% endif %} />
+<label for="{{ checkbox.name }}">{{ checkbox.label }}</label>
+</p>

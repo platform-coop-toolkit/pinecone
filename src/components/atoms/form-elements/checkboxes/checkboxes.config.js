@@ -6,21 +6,25 @@ module.exports = {
 		standAlone: false,
 		checkboxes: [
 			{
-				name: 'checkbox',
+				name: 'unchecked',
+				label: 'Initially unchecked',
 				standAlone: false
 			},
 			{
-				name: 'checkbox',
+				name: 'checked',
+				label: 'Initially checked',
 				checked: true,
 				standAlone: false
 			},
 			{
-				name: 'checkbox',
+				name: 'indeterminate',
+				label: 'Indeterminate checkbox',
 				value: 'indeterminate',
 				standAlone: false
 			},
 			{
-				name: 'checkbox',
+				name: 'disabled',
+				label: 'Disabled checkbox',
 				disabled: true,
 				standAlone: false
 			}
@@ -31,7 +35,8 @@ module.exports = {
 			name: 'Default Inverse',
 			label: 'Default (Inverse)',
 			context: {
-				bodyClass: 'has-blue-500-background-color'
+				bodyClass: 'has-blue-500-background-color',
+				inverse: true
 			}
 		}
 	]

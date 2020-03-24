@@ -1,5 +1,5 @@
-{% if not standAlone %}<ul class="input-group">{% endif %}
+<ul class="input-group {% if inverse %} input-group--inverse{% endif %}">
 {% for radioButton in radioButtons %}
-{% render '@radio-button', radioButton, true %}
+<li><input id="{{ radioButton.name }}" type="radio" name="radio" value="{{ value }}"{% if radioButton.checked %} checked{% elseif radioButton.disabled %} disabled{% endif %} /><label for="{{ radioButton.name }}">{{ radioButton.label }}</label></li>
 {% endfor %}
-{% if not standAlone %}</ul>{% endif %}
+</ul>
