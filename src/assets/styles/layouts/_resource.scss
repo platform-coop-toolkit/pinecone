@@ -10,6 +10,14 @@
 	color: var(--grey-500);
 }
 
+.resource__meta.resource__subscription {
+	color: var(--red-500);
+
+	svg {
+		color: inherit;
+	}
+}
+
 h1 + .resource__meta {
 	margin-top: rem(24);
 }

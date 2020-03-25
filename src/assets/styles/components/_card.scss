@@ -181,6 +181,14 @@
 	}
 }
 
+.card__meta.card__subscription {
+	color: var(--red-500);
+
+	svg {
+		color: inherit;
+	}
+}
+
 .card--resource {
 	@include card($red-400, var(--dark-mint-500), false);
 

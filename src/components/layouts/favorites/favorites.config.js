@@ -67,7 +67,8 @@ for ( let i = 0; i < resourceCount; i++ ) {
 		topicCount: faker.random.number( { min: 3, max: 7 } ),
 		href: 'resource',
 		standAlone: true,
-		showRemoveButton: true
+		showRemoveButton: true,
+		requiresSubscription: i % 2 ? true : false
 	} );
 }
 

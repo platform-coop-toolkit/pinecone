@@ -28,7 +28,8 @@ module.exports = {
 				href: 'resource',
 				favorite: true,
 				language: 'English',
-				showRemoveButton: false
+				showRemoveButton: false,
+				requiresSubscription: true
 			}
 		},
 		{
