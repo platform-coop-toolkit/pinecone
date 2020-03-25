@@ -73,5 +73,159 @@ module.exports = {
 				]
 			}
 		]
-	}
+	},
+	variants: [
+		{
+			name: 'Topics',
+			context: {
+				bodyClass: 'page term-list topics',
+				label: 'Topics'
+			}
+		},
+		{
+			name: 'Goals',
+			context: {
+				bodyClass: 'page term-list goals',
+				label: 'Goals'
+			}
+		},
+		{
+			name: 'Sectors',
+			context: {
+				bodyClass: 'page term-list sectors',
+				label: 'Sectors'
+			}
+		},
+		{
+			name: 'Coop Types',
+			label: 'Co-op Types',
+			context: {
+				bodyClass: 'page term-list coop-types',
+				label: 'Co-op Types',
+				terms: [
+					{
+						label:'Agriculture'
+					},
+					{
+						label:'Art, fashion, design'
+					},
+					{
+						label:'Accounting and Finance'
+					},
+					{
+						label:'Advertising and marketing'
+					},
+					{
+						label:'Consulting'
+					},
+					{
+						label:'Co-op development'
+					},
+					{
+						label:'Community organizing'
+					},
+					{
+						label:'Construction'
+					},
+					{
+						label:'Environment'
+					},
+					{
+						label:'Education'
+					},
+					{
+						label:'Energy and mining'
+					},
+					{
+						label:'Entertainment'
+					},
+					{
+						label:'Food'
+					},
+					{
+						label:'Healthcare'
+					},
+					{
+						label:'Hospitality and tourism'
+					},
+					{
+						label:'Legal'
+					},
+					{
+						label:'Manufacturing'
+					},
+					{
+						label:'Media and communications'
+					},
+					{
+						label:'Maintenance and repair'
+					},
+					{
+						label:'Protective services and defense'
+					},
+					{
+						label:'Personal care and services'
+					},
+					{
+						label:'Public and social services'
+					},
+					{
+						label:'Property and real estate'
+					},
+					{
+						label:'Recycling and waste management'
+					},
+					{
+						label:'Sales and retail'
+					},
+					{
+						label:'Science and engineering'
+					},
+					{
+						label:'Sports fitness and recreation'
+					},
+					{
+						label:'Technology',
+						children: [
+							'Electronics and computer manufacturing',
+							'Software and hardware enginereeing',
+							'Web service providers',
+							'Data processing',
+							'Misc technology'
+						]
+					},
+					{
+						label:'Transportation and logistics'
+					},
+					{
+						label:'Translation'
+					},
+					{
+						label:'Utilities'
+					}
+				]
+			}
+		},
+		{
+			name: 'Formats',
+			context: {
+				bodyClass: 'page term-list formats',
+				label: 'Formats',
+				terms: [
+					{label: 'Academic Paper'},
+					{label: 'Article'},
+					{label: 'Audio'},
+					{label: 'Book'},
+					{label: 'Case Study'},
+					{label: 'Educational Curriculum'},
+					{label: 'Online Training'},
+					{label: 'Podcast'},
+					{label: 'Presentation Slides'},
+					{label: 'Report'},
+					{label: 'Toolkit'},
+					{label: 'Video'}
+				]
+			}
+		}
+	]
 };
