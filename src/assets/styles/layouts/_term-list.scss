@@ -1,0 +1,32 @@
+.page.term-list .link-list {
+	margin-top: 0;
+}
+
+.page.term-list .link-list h2 {
+	margin-top: 4rem;
+}
+
+.page.term-list [role="document"] {
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+}
+
+.page.term-list.topics [role="document"] {
+	background-image: url("../images/topics.svg");
+}
+
+.page.term-list.goals [role="document"] {
+	background-image: url("../images/goals.svg");
+}
+
+.page.term-list.sectors [role="document"] {
+	background-image: url("../images/sectors.svg");
+}
+
+.page.term-list.coop-types [role="document"] {
+	background-image: url("../images/coop-types.svg");
+}
+
+.page.term-list.formats [role="document"] {
+	background-image: url("../images/formats.svg");
+}

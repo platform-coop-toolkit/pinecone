@@ -1,0 +1,17 @@
+<div class="page-header">
+	<p>{% render '@link--breadcrumb', {label: 'Home', href: '/', standAlone: true}, true %}</p>
+	<h1>{{ label }}</h1>
+</div>
+<ul class="link-list">
+{% for term in terms %}
+	<li><h2>{{ term.label }}</h2></li>
+	<li>
+		<ul class="link-list">
+		<li class="link-list__item"><a href="{{ term.label | slugify }}">{{ term.label }}</a></li>
+		{% for child in term.children %}
+		<li class="link-list__item"><a href="{{ child | slugify }}">{{ child }}</a></li>
+		{% endfor %}
+		</ul>
+	</li>
+{% endfor %}
+</ul>
