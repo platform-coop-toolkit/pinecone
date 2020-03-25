@@ -1,6 +1,9 @@
 <article class="resource">
 	<div class="page-header resource__header">
 		<h1>{{ title }}</h1>
+		{% if requiresSubscription %}
+		<p class="resource__meta resource__subscription">{% render '@svg', {svg:'lock'}, true %} <span aria-hidden="true">Subscription required</span><span class="screen-reader-text">Subscription required to access this resource</span></p>
+		{% endif %}
 		{% if byline %}
 		<div class="resource__meta resource__byline">{% render '@svg', {svg:'author'}, true %} By {{ byline | safe }}</div>
 		{% endif %}
