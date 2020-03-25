@@ -10,7 +10,17 @@ module.exports = {
 		iconPosition: 'start',
 		id: 'button',
 		type: 'button',
-		standAlone: false
+		standAlone: false,
+		buttons: [
+			{
+				name: 'default',
+				disabled: false
+			},
+			{
+				name: 'disabled',
+				disabled: true
+			}
+		]
 	},
 	variants: [
 		{

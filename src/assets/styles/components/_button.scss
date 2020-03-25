@@ -27,67 +27,105 @@ button:-moz-focusring {
 
 .button--inverse {
 	--color: var(--blue-500);
-	--outline-color: var(--blue-500);
 	--background-color: var(--off-white);
-	--hover-color: var(--color);
+
+	--active-background-color: var(--blue-500);
+	--active-color: var(--off-white);
+
+	--disabled-background-color: var(--grey-200);
+	--disabled-border-color: var(--grey-200);
+	--disabled-color: var(--grey-400);
+
+	--focus-background-color: var(--off-white);
+	--focus-border-color: var(--off-white);
+	--focus-color: var(--blue-500);
+
 	--hover-background-color: var(--blue-50);
-	--active-color: var(--blue-400);
-	--active-background-color: var(--background-color);
-	--focus-background-color: var(--background-color);
-	--focus-color: var(--color);
+	--hover-color: var(--color);
 }
 
 .button--secondary {
 	--color: var(--blue-500);
-	--outline-color: var(--blue-500);
-	--outline-width: #{rem(2)};
-	--border-color: var(--outline-color);
-	--border-width: #{rem(1)};
 	--background-color: var(--white);
-	--hover-color: var(--blue-500);
-	--hover-background-color: var(--grey-200);
-	--active-color: var(--blue-400);
-	--active-background-color: var(--background-color);
-	--focus-color: var(--blue-500);
-	--focus-background-color: var(--hover-background-color);
-	--focus-box-shadow:
-		0 0 0 var(--outline-width) var(--focus-background-color, var(--off-white)),
-		0 0 0 calc(2 * var(--outline-width)) var(--outline-color, var(--blue-700));
 
-	&:focus {
-		border-width: var(--outline-width);
-	}
+	--active-background-color: var(--blue-500);
+	--active-color: var(--off-white);
+
+	--hover-background-color: var(--grey-200);
+	--hover-color: var(--blue-500);
+
+	--disabled-background-color: var(--grey-200);
+	--disabled-border-color: var(--grey-200);
+	--disabled-color: var(--grey-400);
+
+	--focus-background-color: var(--off-white);
+	--focus-border-color: var(--blue-500);
+	--focus-color: var(--blue-500);
 }
 
 .button--secondary.button--inverse {
 	--color: var(--off-white);
-	--outline-color: var(--off-white);
 	--background-color: var(--blue-500);
+	--border-color: var(--off-white);
+
+	--active-background-color: var(--off-white);
+	--active-color: var(--blue-500);
+
+	--disabled-background-color: var(--parent-background-color);
+	--disabled-border-color: var(--grey-400);
+	--disabled-color: var(--grey-400);
+
+	--focus-background-color: var(--blue-500);
+	--focus-border-color: var(--off-white);
+	--focus-color: var(--off-white);
+
 	--hover-color: var(--blue-50);
 	--hover-background-color: var(--blue-500);
-	--active-color: var(--white);
-	--active-background-color: var(--background-color);
-	--focus-color: var(--off-white);
-	--focus-background-color: var(--background-color);
+
+	&:hover:not(:disabled) {
+		--border-width: #{rem(2)};
+	}
 }
 
 .button--borderless {
 	--color: var(--blue-500);
-	--outline-color: var(--dark-mint-500);
 	--background-color: transparent;
-	--border-width: #{rem(2)};
-	--hover-background-color: var(--off-white);
-	--hover-color: var(--blue-600);
-	--active-background-color: var(--grey-200);
-	--active-color: var(--blue-500);
-	--focus-color: var(--dark-mint-500);
-	--focus-background-color: var(--grey-200);
-	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+
+	--active-background-color: var(--blue-500);
+	--active-color: var(--off-white);
+
+	--disabled-background-color: var(--parent-background-color);
+	--disabled-color: var(--grey-400);
+
+	--focus-background-color: inherit;
+	--focus-border-color: var(--color);
+	--focus-color: var(--blue-500);
+
+	--hover-background-color: var(--grey-200);
+	--hover-color: var(--dark-mint-500);
 
 	margin: rem(6) rem(24) rem(6) rem(-8);
 	min-height: rem(28);
 	padding: 0 rem(4);
 	width: auto;
+
+	&:disabled {
+		border-color: var(--parent-background-color);
+	}
+
+	&:focus {
+		border: solid var(--border-width) transparent;
+	}
+}
+
+.button[disabled] {
+	background-color: var(--disabled-background-color);
+	color: var(--disabled-color);
+
+	&:active,
+	&:focus {
+		box-shadow: none;
+	}
 }
 
 .align-right .button--borderless {
@@ -97,35 +135,57 @@ button:-moz-focusring {
 
 .button--borderless.button--inverse {
 	--color: var(--off-white);
-	--outline-color: var(--off-white);
-	--hover-background-color: var(--blue-600);
-	--hover-color: var(--blue-50);
-	--active-background-color: var(--blue-600);
-	--active-color: var(--blue-200);
-	--focus-color: var(--off-white);
+
+	--active-color: var(--blue-600);
+	--active-background-color: var(--off-white);
+
 	--focus-background-color: transparent;
-	--focus-box-shadow: 0 0 0 var(--border-width) var(--dark-mint-500), 0 0 0 calc(2 * var(--border-width)) var(--outline-color);
-	--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color), 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+	--focus-color: var(--off-white);
+
+	--hover-background-color: var(--blue-600);
+	--hover-color: var(--off-white);
 }
 
 .button--borderless.button--destructive {
 	--color: var(--red-500);
-	--outline-color: var(--red-500);
-	--hover-color: var(--dark-mint-500);
-	--focus-color: var(--red-500);
-	--active-color: var(--white);
+
 	--active-background-color: var(--red-500);
+	--active-color: var(--white);
+
+	--focus-color: var(--red-500);
+
+	--hover-color: var(--dark-mint-500);
 }
 
 .button--borderless.button--destructive.button--inverse {
-	// TODO.
+	--color: var(--red-200);
+
+	--active-background-color: var(--red-200);
+	--active-color: var(--blue-600);
+
+	--focus-border-color: var(--red-200);
+	--focus-color: var(--red-200);
+
+	--hover-color: var(--red-200);
+	--hover-background-color: var(--blue-600);
 }
 
 .button--tag-button {
-	--outline-color: var(--white);
-	--active-background-color: var(--blue-400);
-	--active-border-color: var(--border-color);
-	--active-color: var(--off-white);
+	--active-background-color: var(--off-white);
+	--active-color: var(--blue-700);
+
+	--focus-border-color: var(--blue-700);
+	--focus-background-color: var(--blue-700);
+
+	--hover-background-color: var(--blue-700);
+
+	&:focus {
+		border: solid var(--border-width) var(--focus-border-color);
+	}
+
+	&:focus:active {
+		border: solid var(--border-width) var(--active-background-color);
+	}
 
 	border-radius: rem(15);
 	font-family: $font-family-sans;
@@ -142,18 +202,21 @@ button:-moz-focusring {
 
 .button--disc {
 	--color: var(--blue-500);
-	--outline-color: var(--blue-500);
 	--background-color: var(--blue-50);
+
+	--active-background-color: var(--blue-500);
+	--active-color: var(--blue-50);
+
+	--disabled-background-color: var(--grey-200);
+	--disabled-border-color: var(--parent-background-color);
+	--disabled-color: var(--grey-400);
+
+	--focus-background-color: var(--background-color);
+	--focus-border-color: var(--color);
+	--focus-color: var(--color);
+
 	--hover-background-color: var(--blue-150);
 	--hover-color: var(--color);
-	--active-background-color: var(--blue-100);
-	--active-color: var(--color);
-	--focus-color: var(--color);
-	--focus-background-color: var(--background-color);
-	--focus-box-shadow:
-		0 0 0 var(--border-width) var(--outline-color),
-		0 0 0 calc(2 * var(--border-width)) var(--focus-background-color),
-		0 0 0 calc(3 * var(--border-width)) var(--outline-color);
 
 	align-items: center;
 	border-radius: 50%;
@@ -175,8 +238,14 @@ button:-moz-focusring {
 
 .button--disc.button--inverse {
 	--color: var(--off-white);
-	--background-color: #{var(--blue-700)};
-	--outline-color: var(--off-white);
+	--background-color: var(--blue-700);
+
+	--active-background-color: var(--off-white);
+	--active-color: var(--blue-700);
+
+	--disabled-color: var(--blue-700);
+	--disabled-background-color: var(--blue-500);
+	--disabled-border-color: var(--blue-700);
+
 	--hover-background-color: var(--black);
-	--active-background-color: var(--blue-400);
 }
