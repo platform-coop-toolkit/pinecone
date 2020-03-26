@@ -1,0 +1,11 @@
+img {
+	border-style: none;
+	display: block;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+img:not([alt]) {
+	filter: blur(rem(10));
+}
