@@ -27,7 +27,7 @@ module.exports = {
 			label: 'Default (Inverse)',
 			context: {
 				inverse: true,
-				bodyClass: 'has-blue-500-background-color'
+				bodyClass: 'has-dark-mint-500-background-color'
 			}
 		}
 	]

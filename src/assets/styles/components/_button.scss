@@ -47,6 +47,7 @@ button:-moz-focusring {
 .button--secondary {
 	--color: var(--blue-500);
 	--background-color: var(--white);
+	--border-color: var(--blue-500);
 
 	--active-background-color: var(--blue-500);
 	--active-color: var(--off-white);
@@ -82,8 +83,8 @@ button:-moz-focusring {
 	--hover-color: var(--blue-50);
 	--hover-background-color: var(--blue-500);
 
-	&:hover:not(:disabled) {
-		--border-width: #{rem(2)};
+	&:hover:not(:focus):not(:disabled) {
+		box-shadow: 0 0 0 calc(2 * var(--border-width)) var(--focus-border-color);
 	}
 }
 

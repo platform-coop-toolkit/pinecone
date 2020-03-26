@@ -56,7 +56,7 @@ module.exports = {
 			label: 'Borderless (Inverse)',
 			context: {
 				modifiers: ['borderless', 'inverse'],
-				bodyClass: 'has-blue-500-background-color'
+				bodyClass: 'has-dark-mint-500-background-color'
 			}
 		},
 		{
@@ -70,7 +70,7 @@ module.exports = {
 			label: 'Destructive Borderless (Inverse)',
 			context: {
 				modifiers: ['borderless', 'destructive', 'inverse'],
-				bodyClass: 'has-blue-500-background-color'
+				bodyClass: 'has-dark-mint-500-background-color'
 			}
 		},
 		{
@@ -87,7 +87,7 @@ module.exports = {
 			label: 'Disc (Inverse)',
 			context: {
 				modifiers: ['disc', 'inverse'],
-				bodyClass: 'has-blue-500-background-color',
+				bodyClass: 'has-dark-mint-500-background-color',
 				icon: 'chevron-down',
 				labelVisuallyHidden: true,
 			}
