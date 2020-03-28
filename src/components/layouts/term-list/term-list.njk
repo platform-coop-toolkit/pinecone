@@ -1,6 +1,8 @@
 <div class="page-header">
-	<p>{% render '@link--breadcrumb', {label: 'Home', href: '/', standAlone: true}, true %}</p>
-	<h1>{{ label }}</h1>
+	<div class="inside">
+		<p>{% render '@link--breadcrumb', {label: 'Home', href: '/', standAlone: true}, true %}</p>
+		<h1>{{ label }}</h1>
+	</div>
 </div>
 <ul class="link-list">
 {% for term in terms %}

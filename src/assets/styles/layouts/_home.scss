@@ -1,16 +1,45 @@
+.page.home .banner-pattern {
+	background: var(--blue-500);
+	background-image: url("../images/home.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: rem(500);
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 100vw;
+	z-index: -2;
+}
+
 .page.home .page-header {
 	color: var(--white);
+	display: block;
+	margin-bottom: 0;
+	margin-top: rem(140);
 	padding-bottom: rem(70);
+	padding-top: rem(25);
 	position: relative;
 
-	@include full-width-background(var(--blue-500));
+	* {
+		background-color: transparent;
+		box-shadow: none;
+		color: inherit;
+	}
+
+	@include full-width-background(transparentize($blue-700, 0.1));
+
+	&::before {
+		background-image: unset;
+		margin-left: 0;
+	}
 }
 
 .home__search {
-	background: var(--blue-400);
+	background-color: var(--blue-500);
 	position: relative;
 
-	@include full-width-background(var(--blue-400));
+	@include full-width-background(var(--blue-500));
 
 	.search-form {
 		position: relative;
@@ -19,7 +48,7 @@
 }
 
 .home__browse {
-	background: var(--blue-400);
+	background-color: var(--blue-500);
 	color: var(--white);
 	padding-bottom: rem(40);
 	padding-top: rem(8);
@@ -33,7 +62,7 @@
 		margin-top: rem(36);
 	}
 
-	@include full-width-background(var(--blue-400));
+	@include full-width-background(var(--blue-500));
 }
 
 .home__feed {
@@ -80,6 +109,15 @@
 }
 
 @include breakpoint-up(sm) {
+	.page.home .banner-pattern {
+		height: rem(608);
+	}
+
+	.page.home .page-header {
+		margin-top: rem(275);
+		padding-top: rem(60);
+	}
+
 	.page.home main {
 		@include grid-column-span(8, 8);
 	}

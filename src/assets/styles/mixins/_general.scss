@@ -13,7 +13,10 @@
 
 @mixin full-width-background($color: var(--white)) {
 	&::before {
-		background: $color;
+		background-color: $color;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
 		content: "";
 		display: block;
 		height: 100%;
