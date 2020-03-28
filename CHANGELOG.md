@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.12](https://github.com/platform-coop-toolkit/pinecone/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2020-03-28)
+
+
+### Features
+
+* add image atom, blur images with missing alt tags ([#281](https://github.com/platform-coop-toolkit/pinecone/issues/281)) ([2e89f54](https://github.com/platform-coop-toolkit/pinecone/commit/2e89f54ac72111bc862ec0ea8c23afd723bbc36d)), closes [#230](https://github.com/platform-coop-toolkit/pinecone/issues/230)
+* add reset and lock icons ([0d5f59d](https://github.com/platform-coop-toolkit/pinecone/commit/0d5f59d3cbc51ef5a3077bdf9db819d34fe2b83a))
+* add subscription indicator to resources (resolves [#268](https://github.com/platform-coop-toolkit/pinecone/issues/268)) ([#289](https://github.com/platform-coop-toolkit/pinecone/issues/289)) ([f39f099](https://github.com/platform-coop-toolkit/pinecone/commit/f39f0992fc787272238681562934a3729bba7379))
+* mark brand as ready ([6b29f65](https://github.com/platform-coop-toolkit/pinecone/commit/6b29f6583fbb0c55b91da0f300f7166eb58e0b44))
+* mark dividers as ready ([4285e35](https://github.com/platform-coop-toolkit/pinecone/commit/4285e35f9ff95da6d7b467dcb6f701415f2fa794))
+* mark icons as ready ([793db5e](https://github.com/platform-coop-toolkit/pinecone/commit/793db5e534e2bea5042877f6fccff1b898031b18))
+* mark more components as ready ([339e59f](https://github.com/platform-coop-toolkit/pinecone/commit/339e59fb316b2225c903835ef666d2e4232a14c5))
+* page graphics ([#294](https://github.com/platform-coop-toolkit/pinecone/issues/294)) ([5943abc](https://github.com/platform-coop-toolkit/pinecone/commit/5943abc87b3de418c0a7e5955d66abc714d7b5b9))
+* reorganize typography components, mark ready ([c6a87e1](https://github.com/platform-coop-toolkit/pinecone/commit/c6a87e14c1353e07c403a6dc64c3a126f5f72452))
+* switch to NPM, update docs ([#276](https://github.com/platform-coop-toolkit/pinecone/issues/276)) ([225b6c5](https://github.com/platform-coop-toolkit/pinecone/commit/225b6c573b6dd96b36f8d2b7aa308a098df1ccb1))
+* upgrade to popper 2.x (resolves [#256](https://github.com/platform-coop-toolkit/pinecone/issues/256)) ([#282](https://github.com/platform-coop-toolkit/pinecone/issues/282)) ([810608a](https://github.com/platform-coop-toolkit/pinecone/commit/810608abad4dfd6e53a34a467e7cb3aeb88315a1))
+
+
+### Bug Fixes
+
+* don't defer Pinecone bundle ([1c8b7cf](https://github.com/platform-coop-toolkit/pinecone/commit/1c8b7cf78c9707e72267ce278bcf75e130cce028))
+* don't make aria-live containers inert ([#293](https://github.com/platform-coop-toolkit/pinecone/issues/293)) ([b12d4fe](https://github.com/platform-coop-toolkit/pinecone/commit/b12d4fe069a2e193cd530f3234e38541adef9ab8))
+* resolve issue with byline appearing inline with resource ti… ([#258](https://github.com/platform-coop-toolkit/pinecone/issues/258)) ([738836b](https://github.com/platform-coop-toolkit/pinecone/commit/738836b3ffc21656b510ed2c87d252944cb5f1bf)), closes [#257](https://github.com/platform-coop-toolkit/pinecone/issues/257)
+
 ## 1.0.0-alpha.11 (2020-02-20)
 
 ### Features
