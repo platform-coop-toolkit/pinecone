@@ -31,7 +31,7 @@ class FilterList {
 	handleOverlay( event ) {
 		if ( ! event.target.closest( this.config.showCtrlSelector ) && ! event.target.closest( this.config.hideCtrlSelector ) ) return false;
 
-		const elems = document.querySelectorAll( 'body > *' );
+		const elems = document.querySelectorAll( 'body > *:not([aria-live])' );
 
 		if ( event.target.closest( this.config.showCtrlSelector ) ) {
 			document.body.classList.add( 'has-modal' );
