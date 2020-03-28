@@ -16,7 +16,7 @@
 	padding-bottom: rem(100);
 	padding-top: rem(100);
 
-	* {
+	> * {
 		background-color: var(--blue-500);
 		box-shadow: 0 0 0 rem(30) var(--blue-500);
 		color: var(--white);

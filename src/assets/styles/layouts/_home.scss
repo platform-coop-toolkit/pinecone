@@ -21,7 +21,7 @@
 	padding-top: rem(25);
 	position: relative;
 
-	* {
+	> * {
 		background-color: transparent;
 		box-shadow: none;
 		color: inherit;
