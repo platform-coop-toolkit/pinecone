@@ -6,10 +6,53 @@
 	main {
 		padding-bottom: rem(100);
 	}
+}
 
-	.page-header {
-		padding-bottom: rem(100);
-		padding-top: rem(100);
+.page .page-header {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: rem(50);
+	padding-bottom: rem(100);
+	padding-top: rem(100);
+
+	> * {
+		background-color: var(--blue-500);
+		box-shadow: 0 0 0 rem(30) var(--blue-500);
+		color: var(--white);
+	}
+
+	&::before {
+		background-image: url("../images/page.svg");
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: "";
+		display: block;
+		height: 100%;
+		left: 50%;
+		position: absolute;
+		top: 0;
+		transform: translateX(-50%);
+		width: 100vw;
+		z-index: -1;
+	}
+
+	.link--breadcrumb {
+		--background-color: transparent;
+		--border-color: transparent;
+		--color: var(--off-white);
+		--outline-color: var(--dark-mint-500);
+		--hover-background-color: var(--background-color);
+		--hover-border-color: var(--border-color);
+		--hover-color: var(--white);
+		--visited-color: var(--blue-50);
+		--active-background-color: var(--background-color);
+		--active-border-color: var(--border-color);
+		--active-color: var(--blue-200);
+		--focus-background-color: var(--blue-200);
+		--focus-border-color: var(--border-color);
+		--focus-color: var(--dark-mint-500);
 	}
 }
 
@@ -25,6 +68,12 @@
 			padding-bottom: rem(130);
 			padding-top: rem(130);
 		}
+	}
+}
+
+@include breakpoint-up(md) {
+	.page:not(.home):not(.term-list) .page-header {
+		margin-bottom: rem(65);
 	}
 }
 
