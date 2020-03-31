@@ -1,6 +1,6 @@
 {
   "name": "@platform-coop-toolkit/pinecone",
-  "version": "1.0.0-alpha.13",
+  "version": "1.0.0",
   "description": "Styleguide and pattern library for the Platform Cooperativism Consortium and the Platform Co-op Resource Library.",
   "scripts": {
     "assets:development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -17,7 +17,7 @@
     "lint:styles": "stylelint src/assets/styles",
     "lint": "npm-run-all lint:*",
     "prepublishOnly": "npm run build:modules",
-    "release": "standard-version -t",
+    "release": "standard-version -t ''",
     "test": "npm run lint",
     "start": "concurrently \"npm run watch:assets\" \"npm run watch:components\" \"npm run watch:modules\"",
     "watch:assets": "npm run assets:development -- --watch",

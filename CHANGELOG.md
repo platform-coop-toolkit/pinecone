@@ -1,3 +1,9 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.0.0](https://github.com/platform-coop-toolkit/pinecone/compare/1.0.0-alpha.13...1.0.0) (2020-03-31)
+
 # [1.0.0-alpha.13](https://github.com/platform-coop-toolkit/pinecone/compare/1.0.0-alpha.12...1.0.0-alpha.13) (2020-03-31)
 
 
@@ -193,6 +199,3 @@
 
 
 # 1.0.0-alpha.0 (2019-09-13)
-
-
-
