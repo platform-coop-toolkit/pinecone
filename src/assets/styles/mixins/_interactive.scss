@@ -46,13 +46,11 @@
 
 	&:hover {
 		background-color: var(--hover-background-color);
-		border-color: var(--hover-border-color);
 		color: var(--hover-color, var(--color));
 	}
 
 	&:focus {
 		background-color: var(--focus-background-color);
-		border: none;
 		box-shadow: var(--focus-box-shadow);
 		color: var(--focus-color, var(--color));
 		outline: none;
@@ -60,7 +58,6 @@
 
 	&:active {
 		background-color: var(--active-background-color);
-		border-color: var(--active-border-color);
 		box-shadow: var(--active-box-shadow);
 		color: var(--active-color, var(--color));
 	}

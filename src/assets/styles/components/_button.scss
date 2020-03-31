@@ -49,6 +49,7 @@ button:-moz-focusring {
 	--background-color: var(--white);
 	--border-color: var(--blue-500);
 
+	--active-border-color: transparent;
 	--active-background-color: var(--blue-500);
 	--active-color: var(--off-white);
 
@@ -62,6 +63,10 @@ button:-moz-focusring {
 	--focus-background-color: var(--off-white);
 	--focus-border-color: var(--blue-500);
 	--focus-color: var(--blue-500);
+
+	&:focus {
+		border-color: transparent;
+	}
 }
 
 .button--secondary.button--inverse {
@@ -80,12 +85,9 @@ button:-moz-focusring {
 	--focus-border-color: var(--off-white);
 	--focus-color: var(--off-white);
 
+	--hover-border-color: var(--blue-50);
 	--hover-color: var(--blue-50);
-	--hover-background-color: var(--blue-500);
-
-	&:hover:not(:focus):not(:disabled) {
-		box-shadow: 0 0 0 calc(2 * var(--border-width)) var(--focus-border-color);
-	}
+	--hover-background-color: var(--blue-700);
 }
 
 .button--borderless {
@@ -107,7 +109,7 @@ button:-moz-focusring {
 
 	margin: rem(6) rem(24) rem(6) rem(-8);
 	min-height: rem(28);
-	padding: 0 rem(4);
+	padding: rem(4) rem(6);
 	width: auto;
 
 	&:disabled {
@@ -180,14 +182,6 @@ button:-moz-focusring {
 
 	--hover-background-color: var(--blue-700);
 
-	&:focus {
-		border: solid var(--border-width) var(--focus-border-color);
-	}
-
-	&:focus:active {
-		border: solid var(--border-width) var(--active-background-color);
-	}
-
 	border-radius: rem(15);
 	font-family: $font-family-sans;
 	font-size: rem(14);
@@ -205,6 +199,7 @@ button:-moz-focusring {
 	--color: var(--blue-500);
 	--background-color: var(--blue-50);
 
+	--active-border-color: transparent;
 	--active-background-color: var(--blue-500);
 	--active-color: var(--blue-50);
 
@@ -234,6 +229,10 @@ button:-moz-focusring {
 
 	svg {
 		margin-bottom: 0;
+	}
+
+	&:focus {
+		border: none;
 	}
 }
 

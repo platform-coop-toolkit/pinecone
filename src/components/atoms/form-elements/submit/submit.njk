@@ -1,4 +1,4 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
-<div class="input-group{% if inverse %} input-group--inverse{% endif %}">
+<div class="input-group{% if modifiers %}{% for modifier in modifiers %} input-group--{{ modifier }}{% endfor %}{% endif %}">
 	{% render '@button', {label: label, id: id, icon: icon, modifiers: modifiers, type: type, standAlone: true}, true %}
 </div>

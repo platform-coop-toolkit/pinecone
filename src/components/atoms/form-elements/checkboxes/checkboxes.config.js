@@ -17,12 +17,6 @@ module.exports = {
 				standAlone: false
 			},
 			{
-				name: 'indeterminate',
-				label: 'Indeterminate checkbox',
-				value: 'indeterminate',
-				standAlone: false
-			},
-			{
 				name: 'disabled',
 				label: 'Disabled checkbox',
 				disabled: true,

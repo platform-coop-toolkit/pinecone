@@ -1,11 +1,6 @@
 <ul class="input-group{% if inverse %} input-group--inverse{% endif %}">
 	{% for checkbox in checkboxes %}
-	<li>
-		<p{% if checkbox.modifiers %} class="{% for modifier in checkbox.modifiers %} input-group--{{ modifier }}{% endfor %}"{% endif %}>
-		<input id="{{ checkbox.name }}" type="checkbox" name="{{ checkbox.name }}" value="{{ checkbox.name }}" {% if checkbox.checked %} checked{% elseif checkbox.disabled %} disabled{% endif %} />
-		<label for="{{ checkbox.name }}">{{ checkbox.label }}</label>
-		</p>
-	</li>
+	<li>{% render '@checkbox', checkbox, true %}</li>
 	{% endfor %}
 </ul>
 <script type="text/javascript">
