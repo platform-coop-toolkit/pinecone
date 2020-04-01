@@ -14,6 +14,7 @@ module.exports = {
 		locality: 'Canada',
 		language: 'English',
 		date: 2019,
-		byline: 'Some Co-operator'
+		byline: 'Some Co-operator',
+		requiresSubscription: true
 	}
 };

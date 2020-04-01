@@ -1,0 +1,69 @@
+.page.term-list .page-header {
+	> * {
+		background-color: transparent;
+		box-shadow: none;
+		color: inherit;
+	}
+
+	.link--breadcrumb {
+		--background-color: transparent;
+		--border-color: transparent;
+		--color: var(--blue-500);
+		--outline-color: var(--white);
+		--hover-background-color: var(--background-color);
+		--hover-border-color: var(--border-color);
+		--hover-color: var(--dark-mint-500);
+		--visited-color: var(--blue-700);
+		--active-background-color: var(--background-color);
+		--active-border-color: var(--border-color);
+		--active-color: var(--blue-400);
+		--focus-background-color: var(--blue-500);
+		--focus-border-color: var(--border-color);
+		--focus-box-shadow:
+			0 0 0 calc(2 * var(--border-width)) var(--focus-background-color),
+			0 0 0 calc(3 * var(--border-width)) var(--outline-color),
+			0 0 0 calc(4 * var(--border-width)) var(--focus-background-color);
+		--focus-color: var(--white);
+	}
+
+	&::before {
+		background-image: unset;
+	}
+}
+
+.page.term-list .link-list {
+	margin-top: 0;
+}
+
+.page.term-list .link-list h2 {
+	margin-top: 4rem;
+}
+
+.page.term-list .link-list .link-list {
+	margin-bottom: 4rem;
+}
+
+.page.term-list [role="document"] {
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+}
+
+.page.term-list.topics [role="document"] {
+	background-image: url("../images/topics.svg");
+}
+
+.page.term-list.goals [role="document"] {
+	background-image: url("../images/goals.svg");
+}
+
+.page.term-list.sectors [role="document"] {
+	background-image: url("../images/sectors.svg");
+}
+
+.page.term-list.coop-types [role="document"] {
+	background-image: url("../images/coop-types.svg");
+}
+
+.page.term-list.formats [role="document"] {
+	background-image: url("../images/formats.svg");
+}

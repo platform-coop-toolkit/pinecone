@@ -7,6 +7,9 @@
 				<h3 class="card__title" >
 					<a class="card__link" href="{{ href }}">{{ title | safe }}</a>
 				</h3>
+				{% if requiresSubscription %}
+				<p class="card__meta card__subscription">{% render '@svg', {svg:'lock'}, true %} <span aria-hidden="true">Subscription required</span><span class="screen-reader-text">Subscription required to access this resource</span></p>
+				{% endif %}
 				{% if byline %}
 					<p class="card__byline">{% render '@svg', {svg:'author'}, true %} By {{ byline | safe }}</p>
 				{% endif %}

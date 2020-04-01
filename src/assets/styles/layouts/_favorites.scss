@@ -1,3 +1,9 @@
+.page.page-template-page-favorites .page-header {
+	&::before {
+		background-image: url("../images/favorites.svg");
+	}
+}
+
 .page.page-template-page-favorites .cards .card__wrapper {
 	display: grid;
 	gap: rem(20);

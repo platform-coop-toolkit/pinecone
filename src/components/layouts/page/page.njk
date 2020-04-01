@@ -1,6 +1,8 @@
 <div class="page-header">
-	<p>{% render '@link--breadcrumb', {label: 'Home', href: '/'}, true %}</p>
-	<h1>Page Title</h1>
-	<p class="subhead">This is the subhead of this page.</p>
+	<div class="inside">
+		<p>{% render '@link--breadcrumb', {label: 'Home', href: '/', standAlone: true}, true %}</p>
+		<h1>Page Title</h1>
+		<p class="subhead">This is the subhead of this page.</p>
+	</div>
 </div>
 {% render '@repertoire', {title: false}, true %}

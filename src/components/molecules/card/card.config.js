@@ -28,7 +28,8 @@ module.exports = {
 				href: 'resource',
 				favorite: true,
 				language: 'English',
-				showRemoveButton: false
+				showRemoveButton: false,
+				requiresSubscription: true
 			}
 		},
 		{
@@ -78,7 +79,12 @@ module.exports = {
 				title: 'Who Owns the World?',
 				date: 'Nov 12, 2019',
 				href: 'blog',
-				image: '/images/blog.jpg'
+				image: {
+					src: '/images/blog.jpg',
+					width: 367,
+					height: 165,
+					alt: 'Photograph of Cataki workers'
+				}
 			}
 		},
 		{
@@ -91,7 +97,12 @@ module.exports = {
 				title: 'SEWA Federation',
 				locality: 'Gujarat, India',
 				href: 'story',
-				image: '/images/story.jpg'
+				image: {
+					src: '/images/story.jpg',
+					width: 367,
+					height: 165,
+					alt: 'Photograph of SEWA workers'
+				}
 			}
 		},
 		{
@@ -103,7 +114,12 @@ module.exports = {
 				title: 'Trebor Scholz',
 				description: 'Founding Director, Institute for the Cooperative Digital Economy',
 				href: 'person',
-				image: '/images/person.jpg'
+				image: {
+					src: '/images/person.jpg',
+					width: '',
+					height: '',
+					alt: 'Photograph of Trebor Scholz',
+				}
 			}
 		},
 		{

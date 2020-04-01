@@ -10,6 +10,14 @@
 	color: var(--grey-500);
 }
 
+.resource__meta.resource__subscription {
+	color: var(--red-500);
+
+	svg {
+		color: inherit;
+	}
+}
+
 h1 + .resource__meta {
 	margin-top: rem(24);
 }
@@ -51,6 +59,10 @@ h1 + .resource__meta {
 	.menu-button {
 		text-align: left;
 	}
+}
+
+.resource__actions + .resource__meta {
+	margin-bottom: rem(24);
 }
 
 .resource__related {
@@ -122,10 +134,6 @@ h1 + .resource__meta {
 	.resource__actions {
 		margin-bottom: rem(80);
 		margin-top: rem(28);
-	}
-
-	.resource__actions + .resource__meta {
-		margin-bottom: rem(24);
 	}
 
 	.resource__related {

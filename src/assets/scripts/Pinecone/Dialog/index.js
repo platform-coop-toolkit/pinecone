@@ -57,7 +57,7 @@ class Dialog {
 	 * @param {Function} callback
 	 */
 	invokeDialog( callback ) {
-		const elems = document.querySelectorAll( 'body > *' );
+		const elems = document.querySelectorAll( 'body > *:not([aria-live])' );
 		Array.prototype.forEach.call( elems, ( elem ) => {
 			elem.setAttribute( 'inert', 'inert' );
 		} );

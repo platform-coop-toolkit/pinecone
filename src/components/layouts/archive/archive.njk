@@ -1,6 +1,8 @@
 <div class="page-header">
-	<p>{% render '@link--breadcrumb', {label: 'Home', href: '/'}, true %}</p>
-	<h1>{{ title }}</h1>
+	<div class="inside">
+		<p>{% render '@link--breadcrumb', {label: 'Home', href: '/', standAlone: true}, true %}</p>
+		<h1>{{ title }}</h1>
+	</div>
 </div>
 <div class="filter-wrapper">
 	{% render '@button--borderless', {standAlone: true, id: 'show-filters'}, true %}
