@@ -6,7 +6,7 @@ module.exports = {
 		buttonIcon: 'delete',
 		buttonLabel: 'Remove favorite',
 		dialogTitle: 'Remove favorite',
-		dialogQuestion: 'Are your sure you want to remove this resource from your favorites?',
+		dialogQuestion: 'Are you sure you want to remove this resource from your favorites?',
 		dialogConfirm: 'Yes, remove',
 		dialogDismiss: 'No, don&rsquo;t remove'
 	},
