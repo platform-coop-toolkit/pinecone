@@ -1,4 +1,4 @@
-[role="banner"] nav {
+[role="banner"] .nav {
 	align-items: center;
 	display: flex;
 	flex-direction: row;
@@ -215,7 +215,7 @@ a.menu__item:active {
 }
 
 @include breakpoint-up(md) {
-	[role="banner"] nav {
+	[role="banner"] .nav {
 		height: rem(80);
 		margin-left: auto;
 	}
