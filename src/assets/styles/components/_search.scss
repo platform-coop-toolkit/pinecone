@@ -1,4 +1,6 @@
 .search-form {
+	--border-width: #{rem(1)};
+
 	display: flex;
 	flex-direction: row;
 
@@ -18,17 +20,22 @@
 
 		&:hover {
 			border-color: var(--blue-500);
+			box-shadow: 0 0 0 calc(2 * var(--border-width)) var(--blue-500) inset;
 		}
 
 		&:focus {
-			box-shadow: 0 0 0 rem(1) var(--blue-500) inset;
+			border-color: var(--blue-500);
+			box-shadow:
+				0 0 0 calc(2 * var(--border-width)) var(--blue-500) inset,
+				0 0 0 calc(3 * var(--border-width)) var(--parent-background-color) inset,
+				0 0 0 calc(5 * var(--border-width)) var(--blue-500) inset;
 		}
 	}
 
 	.button--search {
-		--border-width: #{rem(2)};
-		--outline-color: var(--white);
-		--focus-box-shadow: 0 0 0 var(--border-width) var(--outline-color) inset;
+		--focus-box-shadow:
+			0 0 0 calc(2 * var(--border-width)) var(--blue-500) inset,
+			0 0 0 calc(3 * var(--border-width)) var(--white) inset;
 
 		border-bottom-left-radius: 0;
 		border-top-left-radius: 0;
@@ -36,6 +43,10 @@
 		margin-left: 0;
 		position: relative;
 		width: rem(50);
+
+		&:focus {
+			border-color: var(--blue-500);
+		}
 	}
 }
 
@@ -52,11 +63,14 @@
 
 		&:hover {
 			border-color: var(--blue-300);
+			box-shadow: 0 0 0 calc(2 * var(--border-width)) var(--blue-300) inset;
 		}
 
 		&:focus {
-			border-color: var(--blue-300);
-			box-shadow: 0 0 0 rem(1) var(--blue-300) inset;
+			border-color: var(--white);
+			box-shadow:
+				0 0 0 calc(2 * var(--border-width)) var(--white) inset,
+				0 0 0 calc(4 * var(--border-width)) var(--blue-500) inset;
 		}
 	}
 
@@ -64,7 +78,6 @@
 		--color: var(--blue-500);
 		--background-color: var(--blue-50);
 		--border-color: transparent;
-		--border-width: #{rem(1)};
 		--outline-color: var(--blue-600);
 		--hover-color: var(--blue-600);
 		--hover-background-color: var(--blue-150);
@@ -74,10 +87,10 @@
 		--focus-background-color: var(--background-color);
 		--focus-border-color: var(--blue-50);
 		--focus-box-shadow:
-			0 0 0 var(--border-width) var(--focus-background-color) inset,
-			0 0 0 calc(3 * var(--border-width)) var(--outline-color) inset;
+			0 0 0 calc(2 * var(--border-width)) var(--focus-background-color) inset,
+			0 0 0 calc(4 * var(--border-width)) var(--outline-color) inset;
 
-		border: solid rem(1) var(--border-color);
+		border: solid var(--border-width) var(--border-color);
 
 		&:focus {
 			border-color: var(--focus-border-color);
@@ -88,18 +101,24 @@
 .home__search .search-form.search-form--inverse {
 	[type="search"],
 	.button--search {
-		box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+		box-shadow: 0 calc(3 * var(--border-width)) calc(6 * var(--border-width)) rgba(0, 0, 0, 0.16);
+	}
+
+	[type="search"]:hover {
+		box-shadow: 0 0 0 calc(3 * var(--border-width)) var(--blue-300) inset;
 	}
 
 	[type="search"]:focus {
-		box-shadow: 0 0 0 rem(1) var(--blue-300) inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+		box-shadow:
+			0 0 0 calc(2 * var(--border-width)) var(--white) inset,
+			0 0 0 calc(4 * var(--border-width)) var(--blue-500) inset;
 	}
 
 	.button--search {
 		--focus-box-shadow:
-			0 0 0 var(--border-width) var(--focus-background-color) inset,
-			0 0 0 calc(var(--border-width) * 3) var(--outline-color) inset,
-			0 calc(var(--border-width) * 3) calc(var(--border-width) * 6) rgba(0, 0, 0, 0.16);
+			0 0 0 calc(2 * var(--border-width)) var(--focus-background-color) inset,
+			0 0 0 calc(4 * var(--border-width)) var(--outline-color) inset,
+			0 calc(3 * var(--border-width)) calc(var(--border-width) * 6) rgba(0, 0, 0, 0.16);
 
 		&:focus {
 			box-shadow: var(--focus-box-shadow);
@@ -109,10 +128,6 @@
 	@include breakpoint-up(sm) {
 		[type="search"] {
 			height: rem(60);
-
-			&:focus {
-				box-shadow: 0 0 0 rem(2) var(--blue-300) inset, 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
-			}
 
 			&::placeholder {
 				color: var(--grey-500);

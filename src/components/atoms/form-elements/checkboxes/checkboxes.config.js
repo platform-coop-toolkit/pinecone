@@ -30,7 +30,8 @@ module.exports = {
 			label: 'Default (Inverse)',
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color',
-				inverse: true
+				inverse: true,
+				modifiers: ['inverse']
 			}
 		}
 	]

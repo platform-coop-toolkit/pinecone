@@ -26,17 +26,16 @@
 
 	--text-focus-box-shadow:
 		0 0 0 calc(2 * var(--border-width)) var(--text-border-color-focus) inset,
-		0 0 0 calc(3 * var(--border-width)) var(--parent-background-color) inset,
-		0 0 0 calc(5 * var(--border-width)) var(--text-border-color-focus) inset;
+		0 0 0 calc(1 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(3 * var(--border-width)) var(--text-border-color-focus);
 	--text-hover-box-shadow: 0 0 0 calc(2 * var(--border-width)) var(--text-border-color-hover) inset;
 	--text-error-hover-box-shadow: 0 0 0 calc(2 * var(--border-width)) var(--text-border-color-error-hover) inset;
 	--text-error-focus-box-shadow:
 		0 0 0 calc(2 * var(--border-width)) var(--text-border-color-error-focus) inset,
-		0 0 0 calc(3 * var(--border-width)) var(--parent-background-color) inset,
-		0 0 0 calc(5 * var(--border-width)) var(--text-border-color-error-focus) inset;
+		0 0 0 calc(1 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(3 * var(--border-width)) var(--text-border-color-error-focus);
 
 	--checkbox-radio-hover-color: var(--blue-500);
-
 	--checkbox-radio-active-color: var(--blue-150);
 	--checkbox-radio-border-color: var(--grey-500);
 	--checkbox-radio-checked-background-color: var(--blue-500);
@@ -135,7 +134,7 @@ label {
 Text input and text areas.
 */
 
-input[type="text"],
+input:not([type="submit"]),
 select,
 textarea {
 	-moz-appearance: none;
@@ -200,6 +199,13 @@ select:hover {
 	box-shadow: var(--text-hover-box-shadow);
 }
 
+.input-group--error input[type="text"],
+.input-group--error select,
+.input-group--error textarea {
+	box-shadow: var(--text-error-box-shadow);
+	color: var(--text-value-color-error);
+}
+
 input[type="text"]:focus,
 textarea:focus,
 select:focus,
@@ -222,13 +228,6 @@ select[disabled]:hover {
 	background-color: var(--text-background-color-disabled);
 	box-shadow: var(--text-disabled-box-shadow);
 	color: var(--text-value-color-disabled);
-}
-
-.input-group--error input[type="text"],
-.input-group--error select,
-.input-group--error textarea {
-	box-shadow: var(--text-error-box-shadow);
-	color: var(--text-value-color-error);
 }
 
 .input-group--error input[type="text"]:hover,

@@ -1,4 +1,4 @@
-<ul class="input-group {% if inverse %} input-group--inverse{% endif %}">
+<ul class="input-group {% if inverse %} input-group--inverse{% endif %}{% if select.modifiers %}{% for modifier in select.modifiers %} input-group--{{ modifier }}{% endfor %}{% endif %}">
 {% for radioButton in radioButtons %}
 <li><input id="{{ radioButton.name }}" type="radio" name="radio" value="{{ value }}"{% if radioButton.checked %} checked{% elseif radioButton.disabled %} disabled{% endif %} /><label for="{{ radioButton.name }}">{{ radioButton.label }}</label></li>
 {% endfor %}

@@ -90,23 +90,24 @@
 				}
 
 				&:hover {
-					border-color: var(--blue-300);
+					box-shadow: 0 0 0 rem(3) var(--blue-300) inset;
 				}
 
 				&:focus {
-					border-color: var(--blue-300);
-					box-shadow: 0 0 0 rem(1) var(--blue-300) inset;
+					box-shadow:
+						0 0 0 rem(2) var(--white) inset,
+						0 0 0 rem(4) var(--blue-500) inset;
 				}
 			}
 
 			.button--search {
 				--color: var(--blue-500);
 				--background-color: var(--blue-50);
-				--border-color: var(--grey-300);
+				--border-color: transparent;
 				--border-width: #{rem(1)};
 				--outline-color: var(--blue-600);
 				--hover-color: var(--blue-600);
-				--hover-background-color: var(--background-color);
+				--hover-background-color: var(--blue-150);
 				--active-color: var(--blue-400);
 				--active-background-color: var(--background-color);
 				--focus-color: var(--blue-600);
@@ -123,19 +124,6 @@
 
 				&:focus {
 					border-color: var(--focus-border-color);
-
-					&::before {
-						border-bottom: solid rem(2) var(--focus-border-color);
-						border-left: solid rem(3) var(--focus-border-color);
-						border-top: solid rem(2) var(--focus-border-color);
-						content: "";
-						display: block;
-						height: rem(46);
-						left: rem(-2);
-						position: absolute;
-						top: rem(-1);
-						width: rem(3);
-					}
 				}
 			}
 		}
