@@ -36,6 +36,7 @@
 	text-decoration: none;
 	vertical-align: middle;
 
+	&[rel="home"],
 	&[rel="current"] {
 		font-weight: $font-weight-semibold;
 
