@@ -10,18 +10,18 @@
 		<div class="accordion__pane">
 			<p class="accordion__heading">{{ label }}</p>
 			<div class="accordion__content">
-				{% render '@button--borderless', {label: 'Deselect All<span class="screen-reader-text"> '+label+'</span>', id: 'deselect-'+ label | slugify, icon: false, standAlone: true}, true %}
+				{% render '@button--borderless', {label: 'Deselect All<span class="screen-reader-text"> '+label+'</span>', id: 'deselect-'+ label | slugify, icon: false, standAlone: true, buttons:[{name: 'default' }]}, true %}
 				<ul id="{{ label | slugify }}" class="input-group input-group__parent {{ label | slugify }}">
 					{% for term in terms %}
 					<li>
 						{% if term.children %}
 							{% set count = term.children.length %}
-							{% render '@checkbox', {label: term.label, value: term.label | slugify, name: label | slugify, standAlone: false}, true %}
+							{% render '@checkbox', {label: term.label, value: term.label | slugify, name: label | slugify, standAlone: false, inverse: true}, true %}
 							<span class="filter-disclosure-label" hidden>show {{ count }} subtopics for "{{ term.label }}"</span>
 							<span class="supplementary-label" hidden> (and {{ count }} subtopics)</span>
 							<ul class="input-group input-group__descendant">
 								{% for child in term.children %}
-								<li>{% render '@checkbox', {label: child, value: child | slugify, name: label | slugify, standAlone: false}, true %}</li>
+								<li>{% render '@checkbox', {label: child, value: child | slugify, name: child | slugify, standAlone: false, inverse: true}, true %}</li>
 								{% endfor %}
 							</ul>
 						{% else %}

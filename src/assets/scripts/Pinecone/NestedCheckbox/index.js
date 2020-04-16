@@ -40,16 +40,18 @@ class NestedCheckbox {
 	initCustomCheckbox() {
 		const status = this.getCustomState();
 		const supplementaryLabel = this.container.querySelector( 'span.supplementary-label' );
-		supplementaryLabel.parentNode.removeChild( supplementaryLabel );
 		const customCheckbox = document.createElement( 'div' );
 		customCheckbox.classList.add( 'checkbox' );
 		customCheckbox.setAttribute( 'role', 'checkbox' );
 		customCheckbox.setAttribute( 'aria-checked', status );
 		customCheckbox.setAttribute( 'tabindex', 0 );
 		customCheckbox.textContent = this.label.innerText;
-		customCheckbox.appendChild( supplementaryLabel );
-		supplementaryLabel.classList.add( 'screen-reader-text' );
-		supplementaryLabel.hidden = false;
+		if ( supplementaryLabel ) {
+			supplementaryLabel.parentNode.removeChild( supplementaryLabel );
+			customCheckbox.appendChild( supplementaryLabel );
+			supplementaryLabel.classList.add( 'screen-reader-text' );
+			supplementaryLabel.hidden = false;
+		}
 		this.input.parentNode.insertBefore( customCheckbox, this.input );
 		this.input.classList.add( 'screen-reader-text' );
 		this.input.setAttribute( 'aria-hidden', 'true' );

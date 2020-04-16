@@ -1,7 +1,9 @@
 module.exports = {
 	title: 'Text Input',
+	label: 'Text Input',
 	status: 'wip',
 	order: 1,
+	inverse: false,
 	context: {
 		standAlone: false,
 		inputs: [
@@ -10,21 +12,24 @@ module.exports = {
 			},
 			{
 				name: 'error',
-				value: 'Incorrect input',
-				error: 'Sorry, that appears to be incorrect.'
+				error: true,
+				modifiers: ['error']
 			},
 			{
 				name: 'disabled',
-				disabled: true
-			},
+				disabled: true,
+				modifiers: ['disabled']
+			}
 		]
 	},
 	variants: [
 		{
-			name: 'Default Invers',
+			name: 'default_inverse',
 			label: 'Default (Inverse)',
 			context: {
-				bodyClass: 'has-blue-500-background-color'
+				inverse: true,
+				bodyClass: 'has-dark-mint-500-background-color',
+				modifiers: ['inverse']
 			}
 		}
 	]

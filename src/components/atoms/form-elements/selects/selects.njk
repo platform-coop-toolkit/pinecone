@@ -1,4 +1,4 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
 {% for select in selects %}
-{% render '@select', select, true %}
+{% render '@select', {select:select, inverse:inverse}, true %}
 {% endfor %}
