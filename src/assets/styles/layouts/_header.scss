@@ -10,6 +10,7 @@
 		align-items: center;
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: flex-start;
 	}
 
@@ -39,7 +40,7 @@
 		flex-direction: column;
 		height: rem(80);
 		justify-content: center;
-		margin-left: rem(11);
+		margin-left: 0;
 		width: rem(80);
 
 		&::after {
@@ -159,7 +160,6 @@
 	[role="banner"] {
 		.inner {
 			justify-content: space-between;
-			margin-left: rem(12);
 		}
 
 		.search-toggle {
