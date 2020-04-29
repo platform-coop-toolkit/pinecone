@@ -5,7 +5,7 @@
 			{% render '@checkbox', {label: item.label, value: item.label | slugify, name: item.label | slugify, standAlone: false}, true %}
 			<ul class="input-group input-group__descendant{% if inverse %} input-group--inverse{% endif %}{% if modifiers %}{% for modifier in modifiers %} input-group--{{ modifier }}{% endfor %}{% endif %}">
 				{% for child in item.children %}
-				<li>{% render '@checkbox', {label: child, value: child | slugify, name: child | slugify, standAlone: false}, true %}</li>
+				<li>{% render '@checkbox', {label: child.label, value: child.label | slugify, name: child.label | slugify, checked: child.checked, standAlone: false}, true %}</li>
 				{% endfor %}
 			</ul>
     {% endif %}
