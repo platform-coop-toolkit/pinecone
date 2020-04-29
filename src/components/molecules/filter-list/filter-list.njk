@@ -16,7 +16,7 @@
 					<li>
 						{% if term.children %}
 							{% set count = term.children.length %}
-							{% render '@checkbox', {label: term.label, value: term.label | slugify, name: label | slugify, standAlone: false, inverse: true}, true %}
+							{% render '@checkbox', {label: term.label, value: term.label | slugify, name: term.label | slugify, standAlone: false, inverse: true}, true %}
 							<span class="filter-disclosure-label" hidden>show {{ count }} subtopics for "{{ term.label }}"</span>
 							<span class="supplementary-label" hidden> (and {{ count }} subtopics)</span>
 							<ul class="input-group input-group__descendant">
