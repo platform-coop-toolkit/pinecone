@@ -16,7 +16,7 @@ const formats = [
 	},
 	{
 		label: 'Educational Curriculum',
-		svg: 'educational-curriculum',
+		svg: 'curriculum',
 	},
 	{
 		label: 'Video',
