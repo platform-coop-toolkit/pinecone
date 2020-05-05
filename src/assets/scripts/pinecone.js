@@ -101,3 +101,5 @@ const searchToggle = document.querySelector( '.search-toggle' );
 if ( searchToggle ) {
 	new Pinecone.SearchToggle( searchToggle, searchToggle.nextElementSibling );
 }
+
+new Pinecone.ToggleButton();

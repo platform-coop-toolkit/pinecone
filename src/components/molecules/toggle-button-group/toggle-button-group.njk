@@ -1,0 +1,6 @@
+<div class="niches toggle-group">
+	{% render  '@button--' + buttonVariant, {standAlone: true, label: 'All', pressed: true}, true %}
+	{% for button in buttons %}
+		{% render  '@button--' + buttonVariant, {standAlone: true, label: button}, true %}
+	{% endfor %}
+</div>
