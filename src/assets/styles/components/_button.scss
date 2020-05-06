@@ -122,12 +122,54 @@ button:-moz-focusring {
 }
 
 .button--toggle {
+	--color: var(--blue-500);
+	--background-color: var(--off-white);
+	--border-color: var(--blue-500);
+
+	--active-background-color: var(--blue-500);
+	--active-color: var(--off-white);
+	--active-box-shadow: 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(4 * var(--border-width)) var(--focus-border-color);
+
+	--focus-background-color: var(--off-white);
+	--focus-border-color: var(--color);
+	--focus-color: inherit;
+	--focus-box-shadow: 0 0 0 calc(1 * var(--border-width)) var(--focus-border-color) inset, 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(4 * var(--border-width)) var(--focus-border-color);
+
+	--hover-color: var(--color);
+	--hover-background-color: var(--grey-200);
+
 	border-radius: rem(5);
 	font-weight: $font-weight-normal;
 	margin: rem(8) rem(9);
 	min-height: rem(32);
 	padding: 0 rem(10);
 	width: auto;
+
+	&:focus {
+		border-color: var(--focus-border-color);
+	}
+
+	&[aria-pressed="true"] {
+		--color: var(--off-white);
+		--background-color: var(--blue-600);
+		--border-color: var(--background-color);
+
+		--focus-background-color: var(--background-color);
+		--focus-border-color: var(--background-color);
+		--focus-color: inherit;
+		--focus-box-shadow: 0 0 0 calc(2 * var(--border-width)) var(--parent-background-color), 0 0 0 calc(4 * var(--border-width)) var(--focus-border-color);
+
+		--hover-background-color: var(--blue-700);
+		--hover-border-color: var(--blue-700);
+
+		&:hover {
+			border-color: var(--hover-border-color);
+		}
+
+		&:active {
+			border-color: transparent;
+		}
+	}
 }
 
 .button--toggle.button--inverse {
@@ -148,10 +190,6 @@ button:-moz-focusring {
 
 	&:active {
 		border-color: transparent;
-	}
-
-	&:focus {
-		border-color: var(--focus-border-color);
 	}
 
 	&[aria-pressed="true"] {
