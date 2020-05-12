@@ -103,3 +103,12 @@ if ( searchToggle ) {
 }
 
 new Pinecone.ToggleButton();
+
+const radioGroups = document.querySelectorAll( '.radio-group' );
+
+if ( radioGroups ) {
+	Array.prototype.forEach.call( radioGroups, radioGroup => {
+		new Pinecone.RadioGroup( radioGroup );
+	} );
+}
+

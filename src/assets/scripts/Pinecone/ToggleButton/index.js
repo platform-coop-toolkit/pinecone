@@ -28,13 +28,7 @@ class ToggleButton {
 		if ( ! event.target.closest( this.config.selector ) ) return;
 
 		const btn = event.target.closest( this.config.selector );
-		const pressedSiblings = btn.parentNode.querySelectorAll( '[aria-pressed="true"]' );
 		const pressed = 'true' === btn.getAttribute( 'aria-pressed' ) || false;
-		if ( 0 < pressedSiblings.length && !pressed ) {
-			Array.prototype.forEach.call( pressedSiblings, pressedBtn => {
-				pressedBtn.setAttribute( 'aria-pressed', false );
-			} );
-		}
 		btn.setAttribute( 'aria-pressed', !pressed );
 	}
 

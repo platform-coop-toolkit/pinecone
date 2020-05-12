@@ -121,7 +121,8 @@ button:-moz-focusring {
 	}
 }
 
-.button--toggle {
+.button--toggle,
+.button--radio {
 	--color: var(--blue-500);
 	--background-color: var(--off-white);
 	--border-color: var(--blue-500);
@@ -149,7 +150,8 @@ button:-moz-focusring {
 		border-color: var(--focus-border-color);
 	}
 
-	&[aria-pressed="true"] {
+	&[aria-pressed="true"],
+	&[aria-checked="true"] {
 		--color: var(--off-white);
 		--background-color: var(--blue-600);
 		--border-color: var(--background-color);
@@ -172,7 +174,8 @@ button:-moz-focusring {
 	}
 }
 
-.button--toggle.button--inverse {
+.button--toggle.button--inverse,
+.button--radio.button--inverse {
 	--color: var(--off-white);
 	--background-color: var(--blue-500);
 	--border-color: var(--off-white);
@@ -192,7 +195,8 @@ button:-moz-focusring {
 		border-color: transparent;
 	}
 
-	&[aria-pressed="true"] {
+	&[aria-pressed="true"],
+	&[aria-checked="true"] {
 		--color: var(--blue-700);
 		--background-color: var(--blue-50);
 		--border-color: var(--background-color);
@@ -215,7 +219,7 @@ button:-moz-focusring {
 	}
 }
 
-.toggle-group {
+.radio-group {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
