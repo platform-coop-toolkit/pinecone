@@ -102,6 +102,31 @@ module.exports = {
 				icon: 'close',
 				iconPosition: 'end',
 			}
+		},
+		{
+			name: 'Toggle Button',
+			label: 'Toggle Button',
+			context: {
+				id: false,
+				label: 'Toggle',
+				modifiers: ['toggle'],
+				ariaPressed: true,
+				pressed: false,
+				icon: false
+			}
+		},
+		{
+			name: 'Toggle Button Inverse',
+			label: 'Toggle Button (Inverse)',
+			context: {
+				id: false,
+				label: 'Toggle',
+				modifiers: ['toggle', 'inverse'],
+				ariaPressed: true,
+				pressed: false,
+				bodyClass: 'has-dark-mint-500-background-color',
+				icon: false
+			}
 		}
 	]
 };

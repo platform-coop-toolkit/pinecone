@@ -1,0 +1,5 @@
+<div class="niches radio-group" role="radiogroup">
+	{% for button in buttons %}
+	<button id="{{ button.label | slugify }}" role="radio" type="button" aria-checked="{{ button.checked }}" class="button button--radio{% if modifier %} button--{{ modifier }}{% endif %}">{{ button.label | safe }}</button>
+	{% endfor %}
+</div>
