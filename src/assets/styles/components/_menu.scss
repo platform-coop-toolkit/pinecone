@@ -300,7 +300,8 @@ a.menu__item:active {
 		}
 
 		&[aria-current="page"] {
-			--color: var(--dark-mint-500);
+			--color: var(--off-white);
+			--hover-color: var(--dark-mint-500);
 
 			&::after {
 				background-color: var(--red-400);

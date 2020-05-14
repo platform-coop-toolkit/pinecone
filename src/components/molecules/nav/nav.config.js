@@ -8,7 +8,6 @@ module.exports = {
 		menuItems:  {
 			'explore': {
 				label: 'Explore',
-				current: true,
 				submenuItems: {
 					'browse-all': {
 						label: 'Browse all',
@@ -52,6 +51,7 @@ module.exports = {
 			},
 			'about': {
 				label: 'About',
+				current: true,
 			},
 			'settings': {
 				label: 'Settings',
