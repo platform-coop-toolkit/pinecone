@@ -3,6 +3,10 @@
 	flex-direction: column;
 }
 
+.blocks__block + .blocks__block {
+	margin-top: $gutter;
+}
+
 .blocks__block--divider {
 	display: flex;
 	flex-direction: row;
@@ -33,6 +37,11 @@
 @include breakpoint-up(md) {
 	.blocks {
 		flex-direction: row;
+	}
+
+	.blocks__block + .blocks__block {
+		margin-left: $gutter;
+		margin-top: 0;
 	}
 
 	.blocks__block--divider {
