@@ -1,7 +1,7 @@
 module.exports = {
 	status: 'ready',
 	title: 'Dividers',
-	order: 4,
+	order: 40,
 	context: {
 		dividers: [
 			{

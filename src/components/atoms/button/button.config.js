@@ -1,7 +1,7 @@
 module.exports = {
 	title: 'Button',
 	status: 'wip',
-	order: 9,
+	order: 90,
 	context: {
 		label: 'Filter',
 		labelVisuallyHidden: false,

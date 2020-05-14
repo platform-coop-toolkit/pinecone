@@ -1,7 +1,7 @@
 module.exports = {
 	title: 'Colors',
 	status: 'ready',
-	order: 1,
+	order: 10,
 	context: {
 		colors: {
 			brand: [

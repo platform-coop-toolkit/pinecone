@@ -1,7 +1,7 @@
 module.exports = {
 	title: 'Call to Action',
 	status: 'wip',
-	order: 6,
+	order: 60,
 	context: {
 		href: 'https://example.com/call-to-action',
 		label: 'Call to Action',

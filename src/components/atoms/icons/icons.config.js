@@ -1,7 +1,7 @@
 module.exports = {
 	title: 'Icons',
 	status: 'ready',
-	order: 2,
+	order: 20,
 	context: {
 		iconsTitle: 'Icons',
 		icons: [

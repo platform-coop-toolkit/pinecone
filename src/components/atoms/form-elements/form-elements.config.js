@@ -1,4 +1,4 @@
 module.exports = {
 	title: 'Form Elements',
-	order: 10,
+	order: 100,
 };

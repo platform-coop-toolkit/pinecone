@@ -1,7 +1,7 @@
 module.exports = {
 	title: 'Image',
 	status: 'wip',
-	order: 11,
+	order: 110,
 	context: {
 		src: '/images/person.jpg',
 		width: 367,
