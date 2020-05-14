@@ -1,0 +1,67 @@
+.blocks {
+	display: flex;
+	flex-direction: column;
+}
+
+.blocks__block + .blocks__block {
+	margin-top: $gutter;
+}
+
+.blocks__block--divider {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-family: $font-family-sans;
+	font-size: rem(18);
+	justify-content: center;
+	margin: 1rem 0;
+	position: relative;
+	width: 100%;
+
+	&::before {
+		border-bottom: solid rem(2);
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0.75em;
+		width: 100%;
+	}
+}
+
+.blocks__block--divider span {
+	background-color: var(--parent-background-color, $white);
+	padding: 0 rem(12);
+	z-index: 1;
+}
+
+@include breakpoint-up(md) {
+	.blocks {
+		flex-direction: row;
+	}
+
+	.blocks__block + .blocks__block {
+		margin-left: $gutter;
+		margin-top: 0;
+	}
+
+	.blocks__block--divider {
+		display: block;
+		margin: 0 1.5rem;
+		width: auto;
+
+		&::before {
+			border-bottom: 0;
+			border-left: solid rem(2);
+			height: 100%;
+			left: 50%;
+			top: 0;
+			width: rem(2);
+		}
+	}
+
+	.blocks__block--divider span {
+		padding: rem(12) 0;
+		position: relative;
+		top: calc(50% - 1em);
+	}
+}

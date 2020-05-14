@@ -1,7 +1,7 @@
 module.exports = {
 	title: 'Tag',
 	status: 'wip',
-	order: 7,
+	order: 70,
 	context: {
 		label: 'Platform Cooperativism',
 		standAlone: false

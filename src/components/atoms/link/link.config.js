@@ -1,7 +1,7 @@
 module.exports = {
 	title: 'Link',
 	status: 'wip',
-	order: 5,
+	order: 50,
 	context: {
 		href: '/internal-link',
 		label: 'Link'
