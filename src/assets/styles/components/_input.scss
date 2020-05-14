@@ -254,6 +254,7 @@ input[type="radio"] {
 input[type="checkbox"],
 [role="checkbox"] {
 	cursor: default;
+	margin-right: rem(40);
 
 	&::before {
 		margin-right: rem(8);
