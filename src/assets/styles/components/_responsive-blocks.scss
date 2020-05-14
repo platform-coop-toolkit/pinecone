@@ -19,7 +19,7 @@
 	width: 100%;
 
 	&::before {
-		border-bottom: solid rem(2) $dark-mint-500;
+		border-bottom: solid rem(2);
 		content: "";
 		display: block;
 		position: absolute;
@@ -51,7 +51,7 @@
 
 		&::before {
 			border-bottom: 0;
-			border-left: solid rem(2) $dark-mint-500;
+			border-left: solid rem(2);
 			height: 100%;
 			left: 50%;
 			top: 0;
