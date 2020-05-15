@@ -137,7 +137,7 @@ module.exports = {
 						]
 					},
 					{
-						label: 'Build a platform',
+						label: 'Build a platform or protocol',
 						children: [
 							'Understand the design process',
 							'Design for privacy',
