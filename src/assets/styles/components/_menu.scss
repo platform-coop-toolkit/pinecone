@@ -301,6 +301,11 @@ a.menu__item:active {
 
 		&[aria-current="page"] {
 			--color: var(--dark-mint-500);
+			--background-color: transparent;
+			--hover-color: var(--off-white);
+			--hover-background-color: var(--blue-500);
+			--focus-background-color: var(--blue-500);
+			--focus-color: var(--off-white);
 
 			&::after {
 				background-color: var(--red-400);
@@ -313,9 +318,7 @@ a.menu__item:active {
 			}
 
 			&:focus {
-				background-color: var(--blue-500);
 				border-left-color: transparent;
-				color: var(--off-white);
 
 				&::after {
 					background-color: transparent;
