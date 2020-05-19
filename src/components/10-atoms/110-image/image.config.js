@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'Image',
-	status: 'ready',
+	status: 'wip',
 	context: {
 		src: '/images/person.jpg',
 		width: 367,
