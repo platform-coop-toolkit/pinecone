@@ -12,6 +12,7 @@ import Notification from './Notification/index.js';
 import SearchToggle from './SearchToggle/index.js';
 import ToggleButton from './ToggleButton/index.js';
 import RadioGroup from './RadioGroup/index.js';
+import Tabs from './Tabs/index.js';
 
-export default { Accordion, Card, DeselectAll, Dialog, DisclosureButton, FilterList, Icon, Menu, MenuButton, NestedCheckbox, Notification, SearchToggle, ToggleButton, RadioGroup };
+export default { Accordion, Card, DeselectAll, Dialog, DisclosureButton, FilterList, Icon, Menu, MenuButton, NestedCheckbox, Notification, SearchToggle, ToggleButton, RadioGroup, Tabs };
 
