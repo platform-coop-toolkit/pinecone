@@ -153,6 +153,41 @@ module.exports = {
 			],
 			[
 				{
+					svg: 'cooperative',
+				},
+				{
+					svg: 'member'
+				},
+				{
+					svg: 'founder'
+				},
+				{
+					svg: 'service-provider'
+				},
+				{
+					svg: 'policy-maker'
+				},
+				{
+					svg: 'community-builder',
+				},
+				{
+					svg: 'support-organization'
+				},
+				{
+					svg: 'funder'
+				},
+				{
+					svg: 'researcher'
+				},
+				{
+					svg: 'pricing',
+				},
+				{
+					svg: 'licensing'
+				}
+			],
+			[
+				{
 					svg: 'topic',
 					class: 'icon icon--topic icon--md',
 					viewBox: '0 0 24 24',
@@ -184,11 +219,31 @@ module.exports = {
 					class: 'icon icon--pcc icon--lg',
 					viewBox: '0 0 32 32',
 				},
+				{
+					svg: 'resources',
+					class: 'icon icon--resources icon--lg',
+					viewBox: '0 0 32 32',
+				},
+				{
+					svg: 'tools',
+					class: 'icon icon--tools icon--lg',
+					viewBox: '0 0 32 32',
+				}
 			],
 			[
 				{
 					svg: 'browse',
 					class: 'icon icon--browse icon--xl',
+					viewBox: '0 0 40 40',
+				},
+				{
+					svg: 'see-tools',
+					class: 'icon icon--see-tools icon--xl',
+					viewBox: '0 0 40 40',
+				},
+				{
+					svg: 'share-tools',
+					class: 'icon icon--share-tools icon--xl',
 					viewBox: '0 0 40 40',
 				}
 			],
