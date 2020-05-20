@@ -1,5 +1,7 @@
 /**
  * Tabs class.
+ *
+ * @see https://github.com/zachleat/seven-minute-tabs/
  */
 class Tabs {
 	/**
@@ -13,13 +15,7 @@ class Tabs {
 		this.tablist = this.container.querySelector( '[role="tablist"]' );
 		this.buttons = this.container.querySelectorAll( '[role="tab"]' );
 		this.panels = this.container.querySelectorAll( '[role="tabpanel"]' );
-
-		this.keyCode = Object.freeze( {
-			'LEFT': 37,
-			'UP': 38,
-			'RIGHT': 39,
-			'DOWN': 40
-		} );
+		this.delay = this.determineDelay();
 
 		this.config = {
 			...{
@@ -30,14 +26,38 @@ class Tabs {
 
 		this.handleClick = this.handleClick.bind( this );
 		this.handleKeyDown = this.handleKeyDown.bind( this );
-		this.setSelectedToPreviousItem = this.setSelectedToPreviousItem.bind( this );
-		this.setSelectedToNextItem = this.setSelectedToNextItem.bind( this );
+		this.handleKeyUp = this.handleKeyUp.bind( this );
 		this.initButtons = this.initButtons.bind( this );
 		this.initPanels = this.initPanels.bind( this );
 
 		this.initButtons();
 		this.initPanels();
-		this.addEventListeners();
+	}
+
+	/**
+	 * Enumerate key codes that we need to detect.
+	 */
+	get keys() {
+		return {
+			end: 35,
+			home: 36,
+			left: 37,
+			up: 38,
+			right: 39,
+			down: 40
+		};
+	}
+
+	/**
+	 * Determine direction based on key pressed.
+	 */
+	get direction() {
+		return {
+			37: -1,
+			38: -1,
+			39: 1,
+			40: 1
+		};
 	}
 
 	/**
@@ -50,6 +70,8 @@ class Tabs {
 			button.setAttribute( 'tabindex', isSelected ? '0' : '-1' );
 
 			button.addEventListener( 'click', this.handleClick );
+			button.addEventListener( 'keydown', this.handleKeyDown );
+			button.addEventListener( 'keyup', this.handleKeyUp );
 
 			button.index = count++;
 		}
@@ -75,11 +97,65 @@ class Tabs {
 	 */
 	handleClick( event ) {
 		const button = event.target;
-		const checkedItem = this.tablist.querySelector( '[aria-selected="true"]' );
 
-		if ( 'false' === button.getAttribute( 'aria-selected' ) && checkedItem ) {
-			checkedItem.setAttribute( 'aria-selected', false );
-			button.setAttribute( 'aria-selected', true );
+		if ( 'A' === button.tagName ) {
+			event.preventDefault();
+		}
+
+		this.activateTab( button, false );
+	}
+
+	/**
+	 * Deactivate all tabs.
+	 */
+	deactivateTabs() {
+		for ( const button of this.buttons ) {
+			button.setAttribute( 'tabindex', '-1' );
+			button.setAttribute( 'aria-selected', 'false' );
+			button.removeEventListener( 'focus', this.focusEventHandler.bind( this ) );
+		}
+
+		for ( const panel of this.panels ) {
+			panel.setAttribute( 'hidden', 'hidden' );
+		}
+	}
+
+	/**
+	 * Handle focus events.
+	 *
+	 * @param {Event} event
+	 */
+	focusEventHandler( event ) {
+		const {target} = event;
+
+		setTimeout( this.checkTabFocus.bind( this ), this.delay, target );
+	}
+
+	/**
+	 * Activate a tab.
+	 *
+	 * @param {DomNode} tab
+	 * @param {Boolean} setFocus
+	 */
+	activateTab ( tab, setFocus ) {
+		if( 'tab' !== tab.getAttribute( 'role' ) ) {
+			tab = tab.closest( '[role="tab"]' );
+		}
+
+		setFocus = setFocus || true;
+
+		this.deactivateTabs();
+
+		tab.removeAttribute( 'tabindex' );
+
+		tab.setAttribute( 'aria-selected', 'true' );
+
+		const controls = tab.getAttribute( 'aria-controls' );
+
+		document.getElementById( controls ).removeAttribute( 'hidden' );
+
+		if ( setFocus ) {
+			tab.focus();
 		}
 	}
 
@@ -89,65 +165,140 @@ class Tabs {
 	 * @param {Event} event
 	 */
 	handleKeyDown( event ) {
-		if ( ! document.activeElement.closest( this.config.groupSelector ) ) return;
+		const key = event.keyCode;
 
-		switch ( event.keyCode ) {
-				case this.keyCode.UP:
-					this.setSelectedToPreviousItem( document.activeElement );
+		switch ( key ) {
+				case this.keys.end:
+					event.preventDefault();
+					this.activateTab( this.buttons[this.buttons.length - 1] );
+					break;
+				case this.keys.home:
+					event.preventDefault();
+					this.activateTab( this.buttons[0] );
 					break;
 
-				case this.keyCode.DOWN:
-					this.setSelectedToNextItem( document.activeElement );
-					break;
-
-				case this.keyCode.LEFT:
-					this.setSelectedToPreviousItem( document.activeElement );
-					break;
-
-				case this.keyCode.RIGHT:
-					this.setSelectedToNextItem( document.activeElement );
-					break;
-
-				default:
+				case this.keys.up:
+				case this.keys.down:
+					this.determineOrientation( event );
 					break;
 		}
 	}
 
 	/**
-	 * Move checked state to previous item.
+	 * Handle keyup.
+	 *
+	 * @param {Event} event
 	 */
-	setSelectedToPreviousItem( ) {
-		let previousItem = document.activeElement.previousElementSibling;
-		if ( !previousItem ) {
-			previousItem = this.buttons[this.buttons.length - 1];
-		}
-		const checkedItem = this.tablist.querySelector( '[aria-selected="true"]' );
+	handleKeyUp( event ) {
+		const key = event.keyCode;
 
-		checkedItem.setAttribute( 'aria-selected', false );
-		previousItem.setAttribute( 'aria-selected', true );
-		previousItem.focus();
+		switch ( key ) {
+				case this.keys.left:
+				case this.keys.right:
+					this.determineOrientation( event );
+					break;
+		}
 	}
 
 	/**
-	 * Move checked state to next item.
+	 * Check which orientation we're in.
+	 *
+	 * @param {Event} event
 	 */
-	setSelectedToNextItem() {
-		let nextItem = document.activeElement.nextElementSibling;
-		if ( !nextItem ) {
-			const index = 0;
-			nextItem = this.buttons[index];
+	determineOrientation( event ) {
+		const key = event.keyCode;
+		const vertical = 'vertical' == this.tablist.getAttribute( 'aria-orientation' );
+		let proceed = false;
+
+		if ( vertical ) {
+			if ( key === this.keys.up || key === this.keys.down ) {
+				event.preventDefault();
+				proceed = true;
+			}
 		}
-		const checkedItem = this.tablist.querySelector( '[aria-selected="true"]' );
-		checkedItem.setAttribute( 'aria-selected', false );
-		nextItem.setAttribute( 'aria-selected', true );
-		nextItem.focus();
+		else {
+			if ( key === this.keys.left || key === this.keys.right ) {
+				proceed = true;
+			}
+		}
+
+		if ( proceed ) {
+			this.switchTabOnArrowPress( event );
+		}
 	}
 
 	/**
-	 * Add event listeners.
+	 * Switch tab when arrow key is pressed.
+	 *
+	 * @param {Event} event
 	 */
-	addEventListeners() {
-		document.addEventListener( 'keydown', this.handleKeyDown );
+	switchTabOnArrowPress( event ) {
+		const pressed = event.keyCode;
+
+		for ( const button of this.buttons ) {
+			button.addEventListener( 'focus', this.focusEventHandler.bind( this ) );
+		}
+
+		if ( this.direction[pressed] ) {
+			const {target} = event;
+			if ( target.index !== undefined ) {
+				if ( this.buttons[target.index + this.direction[pressed]] ) {
+					this.buttons[target.index + this.direction[pressed]].focus();
+				}
+				else if ( pressed === this.keys.left || pressed === this.keys.up ) {
+					this.focusLastTab();
+				}
+				else if ( pressed === this.keys.right || pressed == this.keys.down ) {
+					this.focusFirstTab();
+				}
+			}
+		}
+	}
+
+	/**
+	 * Focus the first tab.
+	 */
+	focusFirstTab() {
+		this.buttons[0].focus();
+	}
+
+	/**
+	 * Focus the last tab.
+	 */
+	focusLastTab() {
+		this.buttons[this.buttons.length - 1].focus();
+	}
+
+	/**
+	 * Determine if there should be a delay.
+	 */
+	determineDelay() {
+		const hasDelay = this.tablist.hasAttribute( 'data-delay' );
+		let delay = 0;
+
+		if ( hasDelay ) {
+			const delayValue = this.tablist.getAttribute( 'data-delay' );
+			if ( delayValue ) {
+				delay = delayValue;
+			}
+			else {
+				delay = 300;
+			}
+		}
+
+		return delay;
+	}
+
+	/**
+	 *
+	 * @param {DomNode} target
+	 */
+	checkTabFocus( target ) {
+		const focused = document.activeElement;
+
+		if ( target === focused ) {
+			this.activateTab( target, false );
+		}
 	}
 }
 

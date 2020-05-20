@@ -1,0 +1,164 @@
+[role="tablist"] {
+	margin-bottom: rem(22);
+	margin-left: rem(-30);
+	margin-right: rem(-30);
+	width: calc(100% + #{rem(60)});
+}
+
+a.tab {
+	@extend %interactive;
+
+	--outline-color: var(--off-white);
+	--background-color: var(--white);
+	--hover-color: var(--off-white);
+	--hover-background-color: var(--blue-500);
+	--color: var(--blue-500);
+	--active-color: var(--off-white);
+	--active-background-color: var(--blue-500);
+	--focus-background-color: var(--blue-500);
+	--focus-color: var(--off-white);
+	--focus-box-shadow: 0 0 0 #{rem(3)} var(--outline-color) inset;
+
+	align-items: center;
+	border: 0;
+	border-left: solid rem(3) transparent;
+	border-radius: 0;
+	display: flex;
+	flex-direction: row;
+	font-family: $font-family-sans;
+	font-size: 1rem;
+	font-weight: $font-weight-bold;
+	justify-content: space-between;
+	line-height: 1.75;
+	margin: 0;
+	max-width: 100%;
+	padding: rem(16) rem(16) rem(14);
+	position: relative;
+	text-align: left;
+	text-decoration: none;
+	width: 100%;
+
+	&:hover,
+	&:active {
+		border-left-color: transparent;
+	}
+
+	&:focus {
+		border: solid rem(3) transparent;
+		padding: rem(13) rem(13) rem(11) rem(16);
+	}
+
+	&[aria-selected="true"] {
+		border-left-color: var(--red-400);
+
+		&:hover,
+		&:focus {
+			border-left-color: transparent;
+		}
+	}
+}
+
+[role="tabpanel"] {
+	width: 100%;
+}
+
+@include breakpoint-up(md) {
+	[role="tablist"] {
+		align-items: flex-end;
+		background-color: var(--white);
+		display: flex;
+		flex-direction: row;
+		float: right;
+		height: rem(80);
+		justify-content: flex-start;
+		margin-bottom: rem(54);
+		margin-left: rem(-16);
+		margin-right: rem(-16);
+		padding-top: 0;
+		position: relative;
+		width: calc(100% + #{rem(32)});
+
+		li {
+			border-top: 0;
+		}
+	}
+
+	a.tab {
+		--background-color: transparent;
+		--border-width: #{rem(2)};
+		--outline-color: var(--off-white);
+		--hover-color: var(--off-white);
+		--hover-background-color: var(--blue-500);
+		--color: var(--blue-500);
+		--active-color: var(--off-white);
+		--active-background-color: var(--blue-500);
+		--focus-background-color: var(--blue-500);
+		--focus-color: var(--off-white);
+		--focus-box-shadow:
+			0 0 0 var(--border-width) var(--focus-background-color) inset,
+			0 0 0 calc(var(--border-width) * 2) var(--outline-color) inset;
+		--active-box-shadow: var(--focus-box-shadow);
+
+		align-items: center;
+		border: 0;
+		display: flex;
+		flex-direction: row;
+		font-size: 1rem;
+		font-weight: $font-weight-normal;
+		height: rem(80);
+		justify-content: center;
+		margin: 0;
+		padding: 0 rem(16);
+		width: auto;
+
+		&::after {
+			background-color: transparent;
+			bottom: 0;
+			content: "";
+			height: rem(3);
+			left: 0;
+			margin-left: 1rem;
+			position: absolute;
+			width: calc(100% - 2rem);
+		}
+
+		&:focus,
+		&:active {
+			border: 0;
+			border-left: 0;
+			box-shadow: var(--focus-box-shadow);
+			padding: 0 rem(16);
+
+			&::after {
+				background-color: transparent;
+			}
+		}
+
+		&[aria-selected="true"] {
+			--color: var(--dark-mint-500);
+			--background-color: transparent;
+			--hover-color: var(--off-white);
+			--hover-background-color: var(--blue-500);
+			--focus-background-color: var(--blue-500);
+			--focus-color: var(--off-white);
+
+			&::after {
+				background-color: var(--red-400);
+			}
+
+			&:hover {
+				&::after {
+					background-color: transparent;
+				}
+			}
+
+			&:focus {
+				border-left-color: transparent;
+
+				&::after {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}
