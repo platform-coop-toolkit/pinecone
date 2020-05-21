@@ -1,4 +1,4 @@
-<div class="tabs">
+<div class="tabs{% if modifier %} tabs--{{ modifier }}{% endif %}">
 	<div role="tablist" aria-labelledby="tabs-label">
 		<span class="screen-reader-text" id="tabs-label">{{ label }}</span>
 		{% for tab in tabs %}

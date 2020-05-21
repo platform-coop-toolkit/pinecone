@@ -1,5 +1,6 @@
 .tabs [role="tablist"] {
 	background: var(--grey-400);
+	border-bottom: solid rem(1) var(--grey-400);
 	margin-bottom: rem(22);
 	margin-left: rem(-30);
 	margin-right: rem(-30);
@@ -18,16 +19,16 @@
 	--active-background-color: var(--blue-500);
 	--focus-background-color: var(--blue-500);
 	--focus-color: var(--off-white);
-	--focus-box-shadow: 0 0 0 #{rem(3)} var(--outline-color) inset;
+	--focus-box-shadow: 0 0 0 #{rem(2)} var(--outline-color) inset;
 
 	align-items: center;
 	border: 0;
 	border-left: solid rem(3) transparent;
+	border-right: solid rem(3) transparent;
 	display: flex;
 	flex-direction: row;
 	font-family: $font-family-sans;
 	font-size: 1rem;
-	font-weight: $font-weight-bold;
 	justify-content: space-between;
 	line-height: 1.75;
 	max-width: 100%;
@@ -44,17 +45,35 @@
 
 	&:focus {
 		border: solid rem(3) transparent;
-		padding: rem(13) rem(13) rem(11) rem(16);
+		padding: rem(13) rem(16) rem(11);
 	}
 
 	&[aria-selected="true"] {
 		border-left-color: var(--red-400);
+		font-weight: $font-weight-bold;
 
 		&:hover,
 		&:focus {
 			border-left-color: transparent;
 		}
 	}
+}
+
+.tabs.tabs--inverse [role="tablist"] {
+	background: var(--dark-mint-500);
+	border-bottom-color: var(--dark-mint-500);
+}
+
+.tabs.tabs--inverse a.tab {
+	--outline-color: var(--blue-600);
+	--background-color: var(--blue-600);
+	--color: var(--white);
+	--hover-background-color: var(--off-white);
+	--hover-color: var(--dark-mint-500);
+	--active-background-color: var(--blue-50);
+	--active-color: var(--dark-mint-500);
+	--focus-background-color: var(--off-white);
+	--focus-color: var(--dark-mint-500);
 }
 
 .tabs a.tab + a.tab {
@@ -69,7 +88,6 @@
 	.tabs [role="tablist"] {
 		align-items: flex-end;
 		background-color: var(--white);
-		border-bottom: solid rem(1) var(--grey-400);
 		display: flex;
 		flex-direction: row;
 		float: right;
@@ -142,6 +160,8 @@
 			--focus-background-color: var(--blue-500);
 			--focus-color: var(--off-white);
 
+			font-weight: $font-weight-normal;
+
 			&::after {
 				background-color: var(--red-400);
 			}
@@ -164,5 +184,20 @@
 
 	.tabs a.tab + a.tab {
 		margin-top: 0;
+	}
+
+	.tabs.tabs--inverse [role="tablist"] {
+		background: var(--blue-600);
+	}
+
+	.tabs.tabs--inverse a.tab[aria-selected="true"] {
+		--color: var(--white);
+		--background-color: transparent;
+		--hover-background-color: var(--off-white);
+		--hover-color: var(--dark-mint-500);
+		--active-background-color: var(--blue-50);
+		--active-color: var(--dark-mint-500);
+		--focus-background-color: var(--off-white);
+		--focus-color: var(--dark-mint-500);
 	}
 }
