@@ -90,15 +90,14 @@
 		background-color: var(--white);
 		display: flex;
 		flex-direction: row;
-		float: right;
 		height: rem(80);
 		justify-content: flex-start;
 		margin-bottom: rem(54);
-		margin-left: rem(-16);
-		margin-right: rem(-16);
+		padding-left: rem(14);
+		padding-right: rem(14);
 		padding-top: 0;
 		position: relative;
-		width: calc(100% + #{rem(32)});
+		width: 100vw;
 	}
 
 	.tabs a.tab {
@@ -199,5 +198,21 @@
 		--active-color: var(--dark-mint-500);
 		--focus-background-color: var(--off-white);
 		--focus-color: var(--dark-mint-500);
+	}
+}
+
+@include breakpoint-up(lg) {
+	.tabs [role="tablist"] {
+		margin-left: calc((100vw - #{rem(1160)}) / 2 * -1);
+		padding-left: calc(((100vw - #{rem(1160)}) / 2) - #{rem(16)});
+		padding-right: calc(((100vw - #{rem(1160)}) / 2) - #{rem(16)});
+	}
+}
+
+@include breakpoint-up(xl) {
+	.tabs [role="tablist"] {
+		margin-left: calc((100vw - #{rem(1570)}) / 2 * -1);
+		padding-left: calc(((100vw - #{rem(1570)}) / 2) - #{rem(16)});
+		padding-right: calc(((100vw - #{rem(1570)}) / 2) - #{rem(16)});
 	}
 }
