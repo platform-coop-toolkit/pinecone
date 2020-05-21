@@ -1,4 +1,4 @@
-[role="tablist"] {
+.tabs [role="tablist"] {
 	background: var(--grey-400);
 	margin-bottom: rem(22);
 	margin-left: rem(-30);
@@ -6,7 +6,7 @@
 	width: calc(100% + #{rem(60)});
 }
 
-a.tab {
+.tabs a.tab {
 	@extend %interactive;
 
 	--outline-color: var(--off-white);
@@ -30,7 +30,6 @@ a.tab {
 	font-weight: $font-weight-bold;
 	justify-content: space-between;
 	line-height: 1.75;
-	margin: rem(1) 0;
 	max-width: 100%;
 	padding: rem(16) rem(16) rem(14);
 	position: relative;
@@ -58,14 +57,19 @@ a.tab {
 	}
 }
 
-[role="tabpanel"] {
+.tabs a.tab + a.tab {
+	margin-top: rem(1);
+}
+
+.tabs [role="tabpanel"] {
 	width: 100%;
 }
 
 @include breakpoint-up(md) {
-	[role="tablist"] {
+	.tabs [role="tablist"] {
 		align-items: flex-end;
 		background-color: var(--white);
+		border-bottom: solid rem(1) var(--grey-400);
 		display: flex;
 		flex-direction: row;
 		float: right;
@@ -77,13 +81,9 @@ a.tab {
 		padding-top: 0;
 		position: relative;
 		width: calc(100% + #{rem(32)});
-
-		li {
-			border-top: 0;
-		}
 	}
 
-	a.tab {
+	.tabs a.tab {
 		--background-color: transparent;
 		--border-width: #{rem(2)};
 		--outline-color: var(--off-white);
@@ -160,5 +160,9 @@ a.tab {
 				}
 			}
 		}
+	}
+
+	.tabs a.tab + a.tab {
+		margin-top: 0;
 	}
 }
