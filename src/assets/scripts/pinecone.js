@@ -112,3 +112,10 @@ if ( radioGroups ) {
 	} );
 }
 
+const tabGroups = document.querySelectorAll( '.tabs' );
+
+if ( tabGroups ) {
+	Array.prototype.forEach.call( tabGroups, tabGroup => {
+		new Pinecone.Tabs( tabGroup );
+	} );
+}
