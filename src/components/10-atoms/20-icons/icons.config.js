@@ -188,6 +188,35 @@ module.exports = {
 			],
 			[
 				{
+					svg: 'facebook'
+				},
+				{
+					svg: 'github'
+				},
+				{
+					svg: 'instagram'
+				},
+				{
+					svg: 'linkedin'
+				},
+				{
+					svg: 'mastodon'
+				},
+				{
+					svg: 'medium'
+				},
+				{
+					svg: 'reddit'
+				},
+				{
+					svg: 'stack-overflow'
+				},
+				{
+					svg: 'twitter'
+				}
+			],
+			[
+				{
 					svg: 'topic',
 					class: 'icon icon--topic icon--md',
 					viewBox: '0 0 24 24',
