@@ -1,0 +1,13 @@
+<div class="tabs{% if modifier %} tabs--{{ modifier }}{% endif %}">
+	<div role="tablist" aria-labelledby="tabs-label">
+		<span class="screen-reader-text" id="tabs-label">{{ label }}</span>
+		{% for tab in tabs %}
+		<a class="tab" href="#{{ tab.title | slugify }}" id="{{ tab.title | slugify }}-btn" role="tab" aria-controls="{{ tab.title | slugify }}" aria-selected="{{ tab.selected }}">{{ tab.title }}</a>
+		{% endfor %}
+	</div>
+	{% for tab in tabs %}
+	<div id="{{ tab.title | slugify }}" role="tabpanel" aria-labelledby="{{ tab.title | slugify }}-btn">
+		{{ tab.content | safe }}
+	</div>
+	{% endfor %}
+</div>

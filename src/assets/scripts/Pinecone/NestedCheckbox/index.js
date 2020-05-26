@@ -63,7 +63,17 @@ class NestedCheckbox {
 	 * Get custom status for the top-level checkbox.
 	 */
 	getCustomState() {
-		return false;
+		const checkedSubInputs = this.subGroup.querySelectorAll( '[type="checkbox"]:checked' );
+
+		let state = false;
+
+		if ( checkedSubInputs.length === this.subInputs.length ) {
+			state = true;
+		} else if (  0 < checkedSubInputs.length ) {
+			state = 'mixed';
+		}
+
+		return state;
 	}
 
 	/**

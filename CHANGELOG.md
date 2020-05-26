@@ -1,3 +1,29 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.0.0-beta.1](https://github.com/platform-coop-toolkit/pinecone/compare/1.0.0-alpha.14...1.0.0-beta.1) (2020-05-21)
+
+
+### Features
+
+* add new icons for directory and tool library ([#349](https://github.com/platform-coop-toolkit/pinecone/issues/349)) ([c99343e](https://github.com/platform-coop-toolkit/pinecone/commit/c99343eb3b94c2b5b126c3b1f2c35468b20b4b65))
+* add split dividers (resolves [#328](https://github.com/platform-coop-toolkit/pinecone/issues/328)) ([#344](https://github.com/platform-coop-toolkit/pinecone/issues/344)) ([ba390aa](https://github.com/platform-coop-toolkit/pinecone/commit/ba390aa3c3576f2eee8bd6e249132c11c77eb6cb))
+* add Toggle Button component (resolves [#336](https://github.com/platform-coop-toolkit/pinecone/issues/336)) ([#338](https://github.com/platform-coop-toolkit/pinecone/issues/338)) ([b3915e1](https://github.com/platform-coop-toolkit/pinecone/commit/b3915e184f8c31c4f32398be2f278159580efcd8))
+* reorganize atoms, update status ([319c5e3](https://github.com/platform-coop-toolkit/pinecone/commit/319c5e3447c58822b5bbe0ed44ee9198daf8bfb2))
+* tabs (resolves [#337](https://github.com/platform-coop-toolkit/pinecone/issues/337)) ([#350](https://github.com/platform-coop-toolkit/pinecone/issues/350)) ([d3d8ccf](https://github.com/platform-coop-toolkit/pinecone/commit/d3d8ccfab5ec3ea9e2c279dcf07b75bfe33f7c3e))
+
+
+### Bug Fixes
+
+* class attribute in closing tag ([027176e](https://github.com/platform-coop-toolkit/pinecone/commit/027176e45c9ef1d463ab4efcd7591e93763965aa))
+* ensure that current menu text is visible (resolves [#275](https://github.com/platform-coop-toolkit/pinecone/issues/275)) ([#346](https://github.com/platform-coop-toolkit/pinecone/issues/346)) ([ee14a42](https://github.com/platform-coop-toolkit/pinecone/commit/ee14a4265cb915e8ff1c2b4fb30b2f57280618eb))
+* filter list checkbox properly hidden and has proper IDs ([#321](https://github.com/platform-coop-toolkit/pinecone/issues/321)) ([3d2d85d](https://github.com/platform-coop-toolkit/pinecone/commit/3d2d85df8dcc9258ba97600d350dd482a20468fe))
+* prevent top level checkbox overlap (fixes [#292](https://github.com/platform-coop-toolkit/pinecone/issues/292)) ([#347](https://github.com/platform-coop-toolkit/pinecone/issues/347)) ([57f14f7](https://github.com/platform-coop-toolkit/pinecone/commit/57f14f7e448083d34a8102a292c0a197c3864c97))
+* resolve 404 errors for icons ([#335](https://github.com/platform-coop-toolkit/pinecone/issues/335)) ([9f60c79](https://github.com/platform-coop-toolkit/pinecone/commit/9f60c79dce7241232a9bf3a700aee3d3680a0cd0))
+* resolve 404 on favorites, adjust favorites spacing ([0d270cb](https://github.com/platform-coop-toolkit/pinecone/commit/0d270cb0636ffdf3ebd2aff4cee83c7d9c35fe80))
+* update footer with new email address ([5672789](https://github.com/platform-coop-toolkit/pinecone/commit/56727894c743eec818f46afc906ccedcbeb80c4b))
+
 # [1.0.0-alpha.14](https://github.com/platform-coop-toolkit/pinecone/compare/1.0.0-alpha.13...1.0.0-alpha.14) (2020-04-17)
 
 
@@ -209,6 +235,3 @@
 
 
 # 1.0.0-alpha.0 (2019-09-13)
-
-
-

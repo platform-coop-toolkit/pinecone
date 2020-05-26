@@ -101,3 +101,21 @@ const searchToggle = document.querySelector( '.search-toggle' );
 if ( searchToggle ) {
 	new Pinecone.SearchToggle( searchToggle, searchToggle.nextElementSibling );
 }
+
+new Pinecone.ToggleButton();
+
+const radioGroups = document.querySelectorAll( '.radio-group' );
+
+if ( radioGroups ) {
+	Array.prototype.forEach.call( radioGroups, radioGroup => {
+		new Pinecone.RadioGroup( radioGroup );
+	} );
+}
+
+const tabGroups = document.querySelectorAll( '.tabs' );
+
+if ( tabGroups ) {
+	Array.prototype.forEach.call( tabGroups, tabGroup => {
+		new Pinecone.Tabs( tabGroup );
+	} );
+}

@@ -10,5 +10,9 @@ import MenuButton from './MenuButton/index.js';
 import NestedCheckbox from './NestedCheckbox/index.js';
 import Notification from './Notification/index.js';
 import SearchToggle from './SearchToggle/index.js';
+import ToggleButton from './ToggleButton/index.js';
+import RadioGroup from './RadioGroup/index.js';
+import Tabs from './Tabs/index.js';
 
-export default { Accordion, Card, DeselectAll, Dialog, DisclosureButton, FilterList, Icon, Menu, MenuButton, NestedCheckbox, Notification, SearchToggle };
+export default { Accordion, Card, DeselectAll, Dialog, DisclosureButton, FilterList, Icon, Menu, MenuButton, NestedCheckbox, Notification, SearchToggle, ToggleButton, RadioGroup, Tabs };
+
