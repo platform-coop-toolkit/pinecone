@@ -264,10 +264,6 @@ input[type="checkbox"] + label
 	font-weight: $font-weight-normal;
 }
 
-input[type="radio"]::before {
-	border-radius: 100%;
-}
-
 input[type="radio"]::before,
 input[type="checkbox"]::before,
 [role="checkbox"]::before {
@@ -282,13 +278,19 @@ input[type="checkbox"]::before,
 	transition: border 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
 	width: rem(18);
 
-	&:focus {
-		outline: none;
-	}
-
 	@media (prefers-reduced-motion: reduce) {
 		transition: none;
 	}
+}
+
+input[type="radio"]::before {
+	border-radius: 100%;
+}
+
+input[type="radio"]::before:focus,
+input[type="checkbox"]::before:focus,
+[role="checkbox"]::before:focus {
+	outline: none;
 }
 
 input[type="radio"]:disabled + label,
