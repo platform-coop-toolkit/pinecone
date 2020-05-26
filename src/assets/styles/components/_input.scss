@@ -134,7 +134,7 @@ label {
 Text input and text areas.
 */
 
-input:not([type="submit"]),
+input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
 	-moz-appearance: none;
@@ -165,7 +165,7 @@ textarea {
 	resize: none;
 }
 
-select {
+select:not([multiple]) {
 	background-image: url("../images/chevron-down.svg");
 	background-position: calc(100% - #{rem(8)}) center;
 	background-repeat: no-repeat;
@@ -188,19 +188,19 @@ select {
 }
 
 .input-group--inverse input[type="text"],
-.input-group--inverse select,
+.input-group--inverse select:not([multiple]),
 .input-group--inverse textarea {
 	border-color: var(--parent-background-color);
 }
 
 input[type="text"]:hover,
 textarea:hover,
-select:hover {
+select:not([multiple]):hover {
 	box-shadow: var(--text-hover-box-shadow);
 }
 
 .input-group--error input[type="text"],
-.input-group--error select,
+.input-group--error select:not([multiple]),
 .input-group--error textarea {
 	box-shadow: var(--text-error-box-shadow);
 	color: var(--text-value-color-error);
@@ -208,7 +208,7 @@ select:hover {
 
 input[type="text"]:focus,
 textarea:focus,
-select:focus,
+select:not([multiple]):focus,
 input[type="text"]:focus:hover,
 textarea:focus:hover,
 select:focus:hover {
@@ -219,12 +219,12 @@ select[disabled] {
 	background-image: none;
 }
 
-select[disabled],
+select:not([multiple])[disabled],
 input[type="text"][disabled],
 textarea[disabled],
 input[type="text"][disabled]:hover,
 textarea[disabled]:hover,
-select[disabled]:hover {
+select:not([multiple])[disabled]:hover {
 	background-color: var(--text-background-color-disabled);
 	box-shadow: var(--text-disabled-box-shadow);
 	color: var(--text-value-color-disabled);
@@ -232,13 +232,13 @@ select[disabled]:hover {
 
 .input-group--error input[type="text"]:hover,
 .input-group--error textarea:hover,
-.input-group--error select:hover {
+.input-group--error select:not([multiple]):hover {
 	box-shadow: var(--text-error-hover-box-shadow);
 }
 
 .input-group--error input[type="text"]:focus,
 .input-group--error textarea:focus,
-.input-group--error select:focus {
+.input-group--error select:not([multiple]):focus {
 	box-shadow: var(--text-error-focus-box-shadow);
 }
 
@@ -248,21 +248,8 @@ Checkboxes and radios.
 
 input[type="checkbox"],
 input[type="radio"] {
-	@include visually-hidden();
-}
-
-input[type="checkbox"],
-[role="checkbox"] {
-	cursor: default;
-	margin-right: rem(40);
-
-	&::before {
-		margin-right: rem(8);
-	}
-
-	&:focus {
-		outline: none;
-	}
+	appearance: none;
+	margin: 0;
 }
 
 [role="checkbox"] + input[type="checkbox"] {
@@ -272,11 +259,10 @@ input[type="checkbox"],
 input[type="radio"] + label,
 input[type="checkbox"] + label {
 	font-weight: $font-weight-normal;
-	padding-left: rem(8);
 }
 
-input[type="radio"] + label::before,
-input[type="checkbox"] + label::before,
+input[type="radio"]::before,
+input[type="checkbox"]::before,
 [role="checkbox"]::before {
 	border: rem(1) solid;
 	border-color: var(--checkbox-radio-border-color);
@@ -285,9 +271,13 @@ input[type="checkbox"] + label::before,
 	display: block;
 	float: left;
 	height: rem(18);
-	margin-top: rem(1);
+	margin: 0 rem(8) rem(-4) 0;
 	transition: border 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
 	width: rem(18);
+
+	&:focus {
+		outline: none;
+	}
 
 	@media (prefers-reduced-motion: reduce) {
 		transition: none;
@@ -299,11 +289,11 @@ input[type="checkbox"]:disabled + label {
 	color: var(--text-value-color-disabled);
 }
 
-input[type="radio"] + label::before {
+input[type="radio"]::before {
 	border-radius: 100%;
 }
 
-input[type="checkbox"]:checked + label::before,
+input[type="checkbox"]:checked::before,
 [role="checkbox"][aria-checked="true"]::before {
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23f9f9f7" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 }
@@ -313,30 +303,30 @@ input[type="checkbox"]:checked + label::before,
 	background-size: rem(10) rem(2.5);
 }
 
-input[type="radio"]:hover + label::before,
-input[type="checkbox"]:hover + label::before,
+input[type="radio"]:hover::before,
+input[type="checkbox"]:hover::before,
 [role="checkbox"]:hover::before {
 	background-color: var(--checkbox-radio-focus-hover-background-color);
 	border-color: var(--checkbox-radio-hover-color);
 	box-shadow: var(--checkbox-radio-hover-box-shadow);
 }
 
-input[type="radio"]:active + label::before,
-input[type="checkbox"]:active + label::before,
+input[type="radio"]:active::before,
+input[type="checkbox"]:active::before,
 [role="checkbox"]:active::before {
 	background-color: var(--checkbox-radio-active-color);
 	border-color: var(--checkbox-radio-hover-color);
 	box-shadow: var(--checkbox-radio-hover-box-shadow);
 }
 
-input[type="radio"]:focus + label::before,
-input[type="checkbox"]:focus + label::before,
+input[type="radio"]:focus::before,
+input[type="checkbox"]:focus::before,
 [role="checkbox"]:focus::before {
 	border-color: var(--checkbox-radio-focus-border-color);
 	box-shadow: var(--checkbox-radio-focus-box-shadow);
 }
 
-input[type="checkbox"]:checked + label::before,
+input[type="checkbox"]:checked::before,
 [role="checkbox"][aria-checked="mixed"]::before,
 [role="checkbox"][aria-checked="true"]::before {
 	background-color: var(--checkbox-radio-checked-background-color);
@@ -345,37 +335,37 @@ input[type="checkbox"]:checked + label::before,
 	border: rem(1) solid var(--checkbox-radio-checked-background-color);
 }
 
-input[type="radio"]:checked + label::before {
+input[type="radio"]:checked::before {
 	background: var(--checkbox-radio-checked-background-color);
 	border-color: var(--checkbox-radio-focus-border-color);
 	box-shadow: var(--radio-checked-box-shadow);
 }
 
-input[type="radio"]:disabled + label::before,
-input[type="checkbox"]:disabled + label::before {
+input[type="radio"]:disabled::before,
+input[type="checkbox"]:disabled::before {
 	border-color: var(--text-border-color-disabled);
 }
 
-input[type="radio"]:disabled:hover + label::before,
-input[type="checkbox"]:disabled:hover + label::before,
+input[type="radio"]:disabled:hover::before,
+input[type="checkbox"]:disabled:hover::before,
 [role="checkbox"]:disabled:hover::before {
 	background: initial;
 	box-shadow: none;
 }
 
-input[type="radio"]:disabled:active + label::before,
-input[type="checkbox"]:disabled:active + label::before,
+input[type="radio"]:disabled:active::before,
+input[type="checkbox"]:disabled:active::before,
 [role="checkbox"]:disabled:active::before {
 	background: initial;
 	box-shadow: none;
 }
 
-input[type="radio"]:checked:hover + label::before {
+input[type="radio"]:checked:hover::before {
 	border-color: var(--checkbox-radio-hover-color);
 	box-shadow: var(--radio-checked-hover-box-shadow);
 }
 
-input[type="radio"]:checked:focus + label::before {
+input[type="radio"]:checked:focus::before {
 	box-shadow: var(--radio-checked-focus-box-shadow);
 }
 
@@ -383,12 +373,12 @@ input[type="radio"]:checked:focus + label::before {
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 2"><path fill="%23000000" d="M0,1A1,1,0,0,0,1,2H7A1,1,0,0,0,7,0H1A1,1,0,0,0,0,1Z"/></svg>');
 }
 
-.input-group--inverse input[type="checkbox"]:checked + label::before,
+.input-group--inverse input[type="checkbox"]:checked::before,
 .input-group--inverse [role="checkbox"][aria-checked="true"]::before {
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23000000" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
 }
 
-.input-group--inverse input[type="checkbox"]:checked:focus + label::before,
+.input-group--inverse input[type="checkbox"]:checked:focus::before,
 .input-group--inverse [role="checkbox"][aria-checked="true"]:focus::before {
 	box-shadow:
 		0 0 0 calc(2 * var(--border-width)) var(--parent-background-color),
