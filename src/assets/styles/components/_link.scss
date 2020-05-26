@@ -49,7 +49,7 @@
 	}
 
 	&:hover {
-		text-decoration-color: var(--blue-300);
+		text-decoration-color: var(--hover-underline-color);
 		text-decoration-thickness: rem(2);
 
 		@supports (mask: url("../images/add.svg")) {
@@ -149,6 +149,7 @@ a:not([class]),
 	--outline-color: var(--white);
 	--hover-background-color: var(--background-color);
 	--hover-border-color: var(--border-color);
+	--hover-underline-color: var(--blue-300);
 	--hover-color: var(--dark-mint-500);
 	--visited-color: var(--blue-700);
 	--active-background-color: var(--background-color);
@@ -157,6 +158,55 @@ a:not([class]),
 	--focus-background-color: var(--blue-500);
 	--focus-border-color: var(--border-color);
 	--focus-color: var(--white);
+}
+
+ul a:not([class]),
+p a:not([class]) {
+	@extend %link;
+
+	--background-color: transparent;
+	--border-color: transparent;
+	--color: var(--blue-500);
+	--hover-background-color: var(--background-color);
+	--hover-border-color: var(--border-color);
+	--hover-color: var(--dark-mint-500);
+	--hover-underline-color: var(--blue-300);
+	--visited-color: var(--blue-700);
+	--outline-color: var(--blue-500);
+
+	--active-background-color: var(--blue-500);
+	--active-border-color: var(--blue-500);
+	--active-box-shadow:
+		0 0 0 calc(2 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+	--active-color: var(--parent-background-color);
+
+	--focus-background-color: var(--parent-background-color);
+	--focus-border-color: var(--blue-500);
+	--focus-box-shadow:
+		0 0 0 calc(2 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+	--focus-color: var(--blue-500);
+}
+
+ul a:not([class]):focus,
+p a:not([class]):focus {
+	text-decoration: underline;
+	text-decoration-skip-ink: auto;
+	text-decoration-thickness: rem(1);
+	text-underline-offset: rem(3);
+}
+
+ul a:not([class]):active,
+p a:not([class]):active,
+ul a:not([class]):active:focus,
+p a:not([class]):active:focus {
+	text-decoration: none;
+}
+
+ul a:not([class]):focus:hover,
+p a:not([class]):focus:hover {
+	text-decoration-color: var(--hover-underline-color);
 }
 
 .link--inverse {
@@ -176,6 +226,43 @@ a:not([class]),
 	--focus-background-color: var(--blue-200);
 	--focus-border-color: var(--border-color);
 	--focus-color: var(--dark-mint-500);
+}
+
+ul a.link--inverse,
+p a.link--inverse {
+	--hover-underline-color: var(--blue-200);
+	--outline-color: var(--blue-200);
+
+	--active-background-color: var(--blue-200);
+	--active-border-color: var(--blue-200);
+	--active-box-shadow:
+		0 0 0 calc(1 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(2 * var(--border-width)) var(--outline-color);
+	--active-color: var(--parent-background-color);
+
+	--focus-background-color: transparent;
+	--focus-box-shadow:
+		0 0 0 calc(2 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(3 * var(--border-width)) var(--outline-color);
+	--focus-color: var(--off-white);
+}
+
+ul .link--inverse:focus,
+p .link--inverse:focus {
+	text-decoration: underline;
+	text-decoration-skip-ink: auto;
+	text-decoration-thickness: rem(1);
+	text-underline-offset: rem(3);
+}
+
+ul .link--inverse:active,
+p .link--inverse:active {
+	text-decoration: none;
+}
+
+ul .link--inverse:focus:hover,
+p .link--inverse:focus:hover {
+	text-decoration-color: var(--hover-underline-color);
 }
 
 .link--breadcrumb {

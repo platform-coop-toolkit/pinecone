@@ -17,7 +17,7 @@ module.exports = {
 		{
 			name: 'Relative',
 			context: {
-				href: '#',
+				href: '#'
 			}
 		},
 		{
