@@ -256,9 +256,16 @@ input[type="radio"] {
 	display: none;
 }
 
+label.label--radio,
 input[type="radio"] + label,
-input[type="checkbox"] + label {
+label.label--checkbox,
+input[type="checkbox"] + label
+[role="checkbox"] {
 	font-weight: $font-weight-normal;
+}
+
+input[type="radio"]::before {
+	border-radius: 100%;
 }
 
 input[type="radio"]::before,
@@ -287,10 +294,6 @@ input[type="checkbox"]::before,
 input[type="radio"]:disabled + label,
 input[type="checkbox"]:disabled + label {
 	color: var(--text-value-color-disabled);
-}
-
-input[type="radio"]::before {
-	border-radius: 100%;
 }
 
 input[type="checkbox"]:checked::before,
