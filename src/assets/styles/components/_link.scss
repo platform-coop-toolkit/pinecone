@@ -219,6 +219,7 @@ p a:not([class]):focus:hover {
 	--hover-background-color: var(--background-color);
 	--hover-border-color: var(--border-color);
 	--hover-color: var(--white);
+	--hover-underline-color: var(--blue-300);
 	--visited-color: var(--blue-50);
 	--active-background-color: var(--background-color);
 	--active-border-color: var(--border-color);
@@ -230,7 +231,7 @@ p a:not([class]):focus:hover {
 
 ul a.link--inverse,
 p a.link--inverse {
-	--hover-underline-color: var(--blue-200);
+	--hover-underline-color: var(--blue-300);
 	--outline-color: var(--blue-200);
 
 	--active-background-color: var(--blue-200);
@@ -256,7 +257,9 @@ p .link--inverse:focus {
 }
 
 ul .link--inverse:active,
-p .link--inverse:active {
+p .link--inverse:active,
+ul .link--inverse:active:focus,
+p .link--inverse:active:focus {
 	text-decoration: none;
 }
 
