@@ -101,6 +101,13 @@
 	margin-top: rem(12);
 }
 
+@import "inputs/input";
+@import "inputs/textarea";
+@import "inputs/select";
+@import "inputs/checkbox";
+@import "inputs/radio";
+@import "inputs/submit";
+
 label {
 	font-family: $font-family-serif;
 	font-weight: $font-weight-bold;
@@ -135,7 +142,6 @@ Text input and text areas.
 */
 
 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
-select,
 textarea {
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -165,42 +171,17 @@ textarea {
 	resize: none;
 }
 
-select:not([multiple]) {
-	background-image: url("../images/chevron-down.svg");
-	background-position: calc(100% - #{rem(8)}) center;
-	background-repeat: no-repeat;
-	background-size: 1.25em;
-	line-height: normal;
-	padding: rem(6.5) rem(40) rem(6) rem(10);
-
-	&::-ms-expand {
-		display: none;
-	}
-
-	&::-moz-focus-inner {
-		outline: none;
-	}
-
-	&:-moz-focusring {
-		color: transparent;
-		text-shadow: 0 0 0 #000;
-	}
-}
-
 .input-group--inverse input[type="text"],
-.input-group--inverse select:not([multiple]),
 .input-group--inverse textarea {
 	border-color: var(--parent-background-color);
 }
 
 input[type="text"]:hover,
-textarea:hover,
-select:not([multiple]):hover {
+textarea:hover {
 	box-shadow: var(--text-hover-box-shadow);
 }
 
 .input-group--error input[type="text"],
-.input-group--error select:not([multiple]),
 .input-group--error textarea {
 	box-shadow: var(--text-error-box-shadow);
 	color: var(--text-value-color-error);
@@ -208,23 +189,15 @@ select:not([multiple]):hover {
 
 input[type="text"]:focus,
 textarea:focus,
-select:not([multiple]):focus,
 input[type="text"]:focus:hover,
-textarea:focus:hover,
-select:focus:hover {
+textarea:focus:hover {
 	box-shadow: var(--text-focus-box-shadow);
 }
 
-select[disabled] {
-	background-image: none;
-}
-
-select:not([multiple])[disabled],
 input[type="text"][disabled],
 textarea[disabled],
 input[type="text"][disabled]:hover,
-textarea[disabled]:hover,
-select:not([multiple])[disabled]:hover {
+textarea[disabled]:hover {
 	background-color: var(--text-background-color-disabled);
 	box-shadow: var(--text-disabled-box-shadow);
 	color: var(--text-value-color-disabled);
