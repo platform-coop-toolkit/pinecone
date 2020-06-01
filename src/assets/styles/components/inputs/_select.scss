@@ -66,6 +66,10 @@ select:not([multiple]):focus:hover {
 	box-shadow: var(--text-focus-box-shadow);
 }
 
+.input-group--error select:not([multiple]):focus {
+	box-shadow: var(--text-error-focus-box-shadow);
+}
+
 select:not([multiple])[disabled],
 select:not([multiple])[disabled]:hover {
 	background-color: var(--text-background-color-disabled);

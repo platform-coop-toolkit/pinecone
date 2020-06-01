@@ -1,1 +1,104 @@
-// TODO
+input[type="radio"] {
+	appearance: none;
+	background-color: transparent;
+	border: 0;
+	box-shadow: none;
+	display: inline-block;
+	height: auto;
+	margin: 0;
+	max-width: 100%;
+	padding: 0;
+	width: auto;
+}
+
+label.label--radio,
+input[type="radio"] + label {
+	font-weight: $font-weight-normal;
+}
+
+input[type="radio"]::before {
+	border: rem(1) solid;
+	border-color: var(--checkbox-radio-border-color);
+	border-radius: 100%;
+	content: "";
+	display: block;
+	float: left;
+	height: rem(18);
+	margin: 0 rem(8) rem(-4) 0;
+	transition: border 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
+	width: rem(18);
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}
+
+input[type="radio"]::before:focus {
+	outline: none;
+}
+
+input[type="radio"]:disabled + label {
+	color: var(--text-value-color-disabled);
+}
+
+input[type="radio"]:hover::before {
+	background-color: var(--checkbox-radio-focus-hover-background-color);
+	border-color: var(--checkbox-radio-hover-color);
+	box-shadow: var(--checkbox-radio-hover-box-shadow);
+}
+
+input[type="radio"]:active::before {
+	background-color: var(--checkbox-radio-active-color);
+	border-color: var(--checkbox-radio-hover-color);
+	box-shadow: var(--checkbox-radio-hover-box-shadow);
+}
+
+input[type="radio"]:focus::before {
+	border-color: var(--checkbox-radio-focus-border-color);
+	box-shadow: var(--checkbox-radio-focus-box-shadow);
+}
+
+input[type="radio"]:checked::before {
+	background: var(--checkbox-radio-checked-background-color);
+	border-color: var(--checkbox-radio-focus-border-color);
+	box-shadow: var(--radio-checked-box-shadow);
+}
+
+input[type="radio"]:disabled::before {
+	border-color: var(--text-border-color-disabled);
+}
+
+input[type="radio"]:disabled:hover::before {
+	background: initial;
+	box-shadow: none;
+}
+
+input[type="radio"]:disabled:active::before {
+	background: initial;
+	box-shadow: none;
+}
+
+input[type="radio"]:checked:hover::before {
+	border-color: var(--checkbox-radio-hover-color);
+	box-shadow: var(--radio-checked-hover-box-shadow);
+}
+
+input[type="radio"]:checked:focus::before {
+	box-shadow: var(--radio-checked-focus-box-shadow);
+}
+
+.form--inverse [role="checkbox"][aria-checked="mixed"]::before {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 2"><path fill="%23000000" d="M0,1A1,1,0,0,0,1,2H7A1,1,0,0,0,7,0H1A1,1,0,0,0,0,1Z"/></svg>');
+}
+
+.form--inverse input[type="checkbox"]:checked::before,
+.form--inverse [role="checkbox"][aria-checked="true"]::before {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23000000" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
+}
+
+.form--inverse input[type="checkbox"]:checked:focus::before,
+.form--inverse [role="checkbox"][aria-checked="true"]:focus::before {
+	box-shadow:
+		0 0 0 calc(2 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(4 * var(--border-width)) var(--checkbox-radio-focus-border-color);
+}

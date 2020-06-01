@@ -1,0 +1,6 @@
+<label for="{{ input.name }}">{{ input.label }}{% if input.error %} (Error){% elseif input.disabled %} (Disabled){% endif %}</label>
+<input {% if input.error %}class="input--error" {% endif %}id="{{ input.name }}" name="{{ input.name }}" placeholder="{{ input.placeholder }}" type="{{ input.type }}" value="{{ input.errorValue if input.error or input.value }}"{{ ' disabled' if input.disabled }}{{ ' required' if input.required }} />
+{% if input.error %}<p class="input-group__error">{% render '@svg', {svg: 'error'}, true %}{{ input.errorMessage | safe }}</p>{% endif %}
+{% if input.description %}
+<span class="helptext">{{ input.description }}</span>
+{% endif %}

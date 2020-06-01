@@ -1,1 +1,59 @@
-// TODO
+textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: solid var(--border-width) transparent;
+	border-radius: rem(3.5);
+	box-shadow: var(--text-default-box-shadow);
+	display: block;
+	font-family: $font-family-serif;
+	font-size: rem(16);
+	line-height: (24 / 16);
+	max-width: 100%;
+	min-height: rem(118);
+	outline: none;
+	padding: rem(10) rem(10) rem(7);
+	resize: vertical;
+	transition: border 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
+	width: 100%;
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}
+
+.form--inverse textarea {
+	border-color: var(--parent-background-color);
+}
+
+textarea:hover {
+	box-shadow: var(--text-hover-box-shadow);
+}
+
+.input-group--error textarea,
+textarea.input--error {
+	box-shadow: var(--text-error-box-shadow);
+	color: var(--text-value-color-error);
+}
+
+textarea:focus,
+textarea:focus:hover {
+	box-shadow: var(--text-focus-box-shadow);
+}
+
+textarea[disabled],
+textarea[disabled]:hover {
+	background-color: var(--text-background-color-disabled);
+	box-shadow: var(--text-disabled-box-shadow);
+	color: var(--text-value-color-disabled);
+}
+
+.input-group--error textarea:hover,
+textarea.input--error:hover {
+	box-shadow: var(--text-error-hover-box-shadow);
+}
+
+.input-group--error textarea:focus,
+textarea.input--error:focus {
+	box-shadow: var(--text-error-focus-box-shadow);
+}

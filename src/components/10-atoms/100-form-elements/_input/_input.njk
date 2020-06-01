@@ -1,6 +1,8 @@
-<div class="input-group{% if inverse %} input-group--inverse{% endif %}{% if input.modifiers %}{% for modifier in input.modifiers %} input-group--{{ modifier }}{% endfor %}{% endif %}">
-	<label for="{{ input.name }}">{{ label }}{% if input.error %} (Error){% elseif input.disabled %} (Disabled){% endif %}</label>
-	<input id="{{ input.name }}" name="{{ input.name }}" placeholder="{{ placeholder }}" type="text" value="{{ value or '' }}" {% if input.disabled %} disabled {% endif %}/>
-	{% if input.error %}<p class="input-group__error">{% render '@svg', {svg: 'error'}, true %}{{ errorMessage | safe }}</p>{% endif %}
-	<p class="input-group__description">{{ description }}</p>
+<div class="input-group{% if input.error %} input-group--error{% endif %}">
+	<label for="{{ input.name }}">{{ input.label }}{% if input.error %} (Error){% elseif input.disabled %} (Disabled){% endif %}</label>
+	<input id="{{ input.name }}" name="{{ input.name }}" placeholder="{{ input.placeholder if input.placeholder else '' }}" type="{{ input.type }}" value="{{ input.errorValue if input.error or input.value }}"{{ ' disabled' if input.disabled }}{{ ' required' if input.required }} />
+	{% if input.error %}<p class="input-group__error">{% render '@svg', {svg: 'error'}, true %}{{ input.errorMessage | safe }}</p>{% endif %}
+	{% if input.description %}
+	<p class="input-group__description">{{ input.description }}</p>
+	{% endif %}
 </div>

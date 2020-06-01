@@ -27,7 +27,22 @@ module.exports = {
 			context: {
 				inverse: true,
 				bodyClass: 'has-dark-mint-500-background-color',
-				modifiers: ['inverse']
+			}
+		},
+		{
+			name: 'Unwrapped',
+			label: 'Unwrapped',
+			context: {
+				component: 'textarea--unwrapped'
+			}
+		},
+		{
+			name: 'Unwrapped Inverse',
+			label: 'Unwrapped (Inverse)',
+			context: {
+				component: 'textarea--unwrapped',
+				inverse: true,
+				bodyClass: 'has-dark-mint-500-background-color',
 			}
 		}
 	]

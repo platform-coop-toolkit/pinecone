@@ -1,1 +1,64 @@
-// TODO
+input {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: solid var(--border-width) transparent;
+	border-radius: rem(3.5);
+	box-shadow: var(--text-default-box-shadow);
+	display: block;
+	font-family: $font-family-serif;
+	font-size: rem(16);
+	height: rem(40);
+	line-height: (24 / 16);
+	max-width: 100%;
+	outline: none;
+	padding: rem(10) rem(10) rem(7);
+	transition: border 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
+	width: 100%;
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}
+
+input[type="number"] {
+	@include breakpoint-up(sm) {
+		max-width: 50%;
+	}
+}
+
+.form--inverse input {
+	border-color: var(--parent-background-color);
+}
+
+input:hover {
+	box-shadow: var(--text-hover-box-shadow);
+}
+
+.input-group--error input,
+input.input--error {
+	box-shadow: var(--text-error-box-shadow);
+	color: var(--text-value-color-error);
+}
+
+input:focus,
+input:focus:hover {
+	box-shadow: var(--text-focus-box-shadow);
+}
+
+input[disabled],
+input[disabled]:hover {
+	background-color: var(--text-background-color-disabled);
+	box-shadow: var(--text-disabled-box-shadow);
+	color: var(--text-value-color-disabled);
+}
+
+.input-group--error input:hover,
+input.input--error:hover {
+	box-shadow: var(--text-error-hover-box-shadow);
+}
+
+.input-group--error input:focus,
+input.input--error:focus {
+	box-shadow: var(--text-error-focus-box-shadow);
+}

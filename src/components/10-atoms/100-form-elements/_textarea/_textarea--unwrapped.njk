@@ -1,0 +1,4 @@
+<label for="{{ textarea.name }}">{{ textarea.label }}{% if textarea.required %} (Required){% endif %}</label>
+<textarea {% if textarea.error %}class="input--error" {% endif %}id="{{ textarea.name }}" name="{{ textarea.name }}" placeholder="{{ textarea.placeholder }}"{{ ' disabled' if textarea.disabled }}{{ ' required' if textarea.required }}>{% if textarea.error %}{{ textarea.errorValue | safe }}{% endif %}</textarea>
+{% if textarea.error %}<p class="input-group__error">{% render '@svg', {svg: 'error'}, true %}{{ textarea.errorMessage | safe }}</p>{% endif %}
+<span class="helptext">{{ textarea.description }}</span>
