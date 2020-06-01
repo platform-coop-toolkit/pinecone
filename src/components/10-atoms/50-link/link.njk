@@ -1,2 +1,21 @@
 {% if not standAlone %}<div class="spacer"></div>{% endif %}
+<h1>Stand Alone Links</h1>
+
+<h2><a{% if className %} class="{{ className }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %} href="{{ href }}">Example Header 2</a></h2>
 <a{% if className %} class="{{ className }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %} href="{{ href }}">{{ label }}</a>
+
+<h1>Inline Links</h1>
+<p>
+  <a{% if className %} class="{{ className }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %} href="{{ href }}">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Fusce viverra
+  sollicitudin ante nec pellentesque. Nullam id lectus tristique felis fermentum
+  sagittis. Nam in tincidunt diam, <a{% if className %} class="{{ className }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %} href="{{ href }}">non egestas</a> velit. Fusce aliquet sapien eu
+  lacus placerat porta. Proin rutrum risus bibendum, tincidunt sapien vel, congue
+  diam. Nulla nibh metus, dictum ac faucibus cursus, convallis quis lacus. Integer
+  quis est viverra, luctus enim ac, <a{% if className %} class="{{ className }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %} href="{{ href }}">dictum nisi</a>.
+</p>
+<ul>
+  <li><a{% if className %} class="{{ className }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %} href="{{ href }}">This whole item is a link.</a></li>
+  <li><a{% if className %} class="{{ className }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %} href="{{ href }}">This is</a> a list item with a link.</li>
+  <li>This is a <a{% if className %} class="{{ className }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %} href="{{ href }}">list item</a> with a link.</li>
+  <li>This is a list item <a{% if className %} class="{{ className }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %} href="{{ href }}">with a link</a>.</li>
+</ul>
