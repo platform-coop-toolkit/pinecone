@@ -4,6 +4,7 @@ module.exports = {
 	status: 'wip',
 	inverse: false,
 	context: {
+		component: 'input',
 		inputs: [
 			{
 				name: 'input'

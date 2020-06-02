@@ -3,19 +3,20 @@ module.exports = {
 	label: 'Radio Buttons',
 	status: 'ready',
 	context: {
+		component: 'radio-button',
 		radioButtons: [
 			{
-				name: 'radio',
-				label: 'Radio initially unchecked'
+				label: 'Radio initially unchecked',
+				value: 'radio-initially-unchecked'
 			},
 			{
-				name: 'radio checked',
 				label: 'Radio initially checked',
+				value: 'radio-initially-checked',
 				checked: true
 			},
 			{
-				name: 'radio disabled',
 				label: 'Radio disabled',
+				value: 'radio-disabled',
 				disabled: true
 			}
 		]
@@ -27,7 +28,22 @@ module.exports = {
 			context: {
 				inverse: true,
 				bodyClass: 'has-dark-mint-500-background-color',
-				modifiers: ['inverse']
+			}
+		},
+		{
+			name: 'Unwrapped',
+			label: 'Unwrapped',
+			context: {
+				component: 'radio-button--unwrapped',
+			}
+		},
+		{
+			name: 'Unwrapped Inverse',
+			label: 'Unwrapped (Inverse)',
+			context: {
+				component: 'radio-button--unwrapped',
+				inverse: true,
+				bodyClass: 'has-dark-mint-500-background-color',
 			}
 		}
 	]

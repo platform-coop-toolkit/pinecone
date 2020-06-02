@@ -1,7 +1,3 @@
 {% for textarea in textareas %}
-	{% if component %}
-		{% render '@' + component, {textarea: textarea}, true %}
-	{% else %}
-		{% render '@textarea', {textarea: textarea}, true %}
-	{% endif %}
+	{% render '@' + component, textarea, true %}
 {% endfor%}

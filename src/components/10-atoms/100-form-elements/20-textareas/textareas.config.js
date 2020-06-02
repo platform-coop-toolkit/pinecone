@@ -3,7 +3,7 @@ module.exports = {
 	status: 'wip',
 	context: {
 		name: 'text',
-		standAlone: false,
+		component: 'textarea',
 		textareas: [
 			{
 				name: 'textarea'

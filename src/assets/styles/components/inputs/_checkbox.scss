@@ -15,7 +15,7 @@ input[type="checkbox"] {
 	display: none;
 }
 
-label.label--checkbox,
+.checkbox label,
 input[type="checkbox"] + label,
 [role="checkbox"] {
 	font-weight: $font-weight-normal;
@@ -114,6 +114,22 @@ input[type="checkbox"]:disabled:active::before,
 [role="checkbox"]:disabled:active::before {
 	background: initial;
 	box-shadow: none;
+}
+
+.form--inverse [role="checkbox"][aria-checked="mixed"]::before {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 2"><path fill="%23000000" d="M0,1A1,1,0,0,0,1,2H7A1,1,0,0,0,7,0H1A1,1,0,0,0,0,1Z"/></svg>');
+}
+
+.form--inverse input[type="checkbox"]:checked::before,
+.form--inverse [role="checkbox"][aria-checked="true"]::before {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.572" height="7.742" viewBox="0 0 10.572 7.742"><path d="M.681 3.812l3.148 2.931L9.864.708" fill="none" stroke="%23000000" stroke-linejoin="round" class="stroke" stroke-width="2"/></svg>');
+}
+
+.form--inverse input[type="checkbox"]:checked:focus::before,
+.form--inverse [role="checkbox"][aria-checked="true"]:focus::before {
+	box-shadow:
+		0 0 0 calc(2 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(4 * var(--border-width)) var(--checkbox-radio-focus-border-color);
 }
 
 .input-group__descendant {

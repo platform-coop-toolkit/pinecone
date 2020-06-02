@@ -1,0 +1,1 @@
+<input {% if className %}class="{{ className }}"{% endif %} id="{{ value if value else label | slugify }}" type="checkbox" name="{{ name }}" value="{{ value if value else label | slugify }}"{{ ' checked' if checked }}{{ ' disabled' if disabled }} /><label for="{{ value if value else label | slugify }}">{{ label }}</label>

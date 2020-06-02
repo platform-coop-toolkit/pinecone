@@ -1,6 +1,6 @@
 <div class="input-group">
-	<label for="{{ textarea.name }}">{{ textarea.label }}{% if textarea.required %} (Required){% endif %}</label>
-	<textarea {% if textarea.error %}class="input--error" {% endif %}id="{{ textarea.name }}" name="{{ textarea.name }}" placeholder="{{ textarea.placeholder }}"{{ ' disabled' if textarea.disabled }}{{ ' required' if textarea.required }}>{% if textarea.error %}{{ textarea.errorValue | safe }}{% endif %}</textarea>
-	{% if textarea.error %}<p class="input-group__error">{% render '@svg', {svg: 'error'}, true %}{{ textarea.errorMessage | safe }}</p>{% endif %}
-	<p class="input-group__description">{{ textarea.description }}</p>
+	<label for="{{ name }}">{{ label }}{% if required %} (Required){% endif %}</label>
+	<textarea {% if error %}class="input--error" {% endif %}id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}"{{ ' disabled' if disabled }}{{ ' required' if required }}>{% if error %}{{ errorValue | safe }}{% endif %}</textarea>
+	{% if error %}<p class="input-group__error">{% render '@svg', {svg: 'error'}, true %}{{ errorMessage | safe }}</p>{% endif %}
+	<p class="input-group__description">{{ description }}</p>
 </div>

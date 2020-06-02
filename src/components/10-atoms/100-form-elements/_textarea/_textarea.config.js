@@ -3,15 +3,13 @@ module.exports = {
 	label: 'Text Area',
 	status: 'wip',
 	context: {
-		textarea: {
-			label: 'Text Area',
-			name: 'text',
-			description: 'Description for this text area.',
-			placeholder: 'Content goes here.',
-			errorMessage: 'Sorry, that appears to be incorrect.',
-			errorValue: 'Incorrect input',
-			required: false,
-			value: ''
-		}
+		label: 'Text Area',
+		name: 'text',
+		description: 'Description for this text area.',
+		placeholder: 'Content goes here.',
+		errorMessage: 'Sorry, that appears to be incorrect.',
+		errorValue: 'Incorrect input',
+		required: false,
+		value: ''
 	}
 };

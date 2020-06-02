@@ -1,7 +1,3 @@
 {% for input in inputs %}
-	{% if component %}
-		{% render '@' + component, {input: input}, true %}
-	{% else %}
-		{% render '@input', {input: input}, true %}
-	{% endif %}
+	{% render '@' + component, input, true %}
 {% endfor %}
