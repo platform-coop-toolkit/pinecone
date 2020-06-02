@@ -9,13 +9,17 @@
 	a {
 		--color: var(--dark-mint-500);
 		--border-width: #{rem(1)};
-		--active-color: var(--blue-400);
+		--active-color: var(--off-white);
 		--visited-color: var(--blue-700);
 		--focus-box-shadow:
-			0 0 0 calc(2 * var(--border-width)) var(--outline-color),
-			0 0 0 calc(4 * var(--border-width)) var(--focus-background-color);
-		--active-box-shadow: none;
+			0 0 0 calc(2 * var(--border-width)) var(--parent-background-color),
+			0 0 0 calc(4 * var(--border-width)) var(--focus-border-color);
 
+		--active-box-shadow:
+			0 0 0 calc(2 * var(--border-width)) var(--parent-background-color),
+			0 0 0 calc(4 * var(--border-width)) var(--active-border-color);
+
+		background-color: transparent;
 		border: 0;
 		border-bottom: solid var(--border-width) var(--color);
 		display: block;
@@ -37,40 +41,41 @@
 	&--inverse a {
 		--color: var(--off-white);
 		--hover-color: var(--color);
-		--active-color: var(--blue-200);
-		--focus-background-color: var(--blue-200);
-		--focus-color: var(--dark-mint-500);
+		--hover-underline-color: var(--blue-300);
+		--active-background-color: var(--blue-200);
+		--active-border-color: var(--blue-200);
+		--active-color: var(--parent-background-color);
+		--focus-background-color: var(--parent-background-color);
+		--focus-border-color: var(--blue-200);
+		--focus-color: var(--off-white);
 		--outline-color: var(--focus-color);
 		--visited-color: var(--blue-50);
 	}
 
-	a:visited {
-		border-bottom-color: var(--visited-color);
-	}
-
 	a:hover {
-		border-bottom: solid rem(3) var(--blue-300);
+		background-color: transparent;
+		border-bottom: solid rem(3) var(--hover-underline-color);
 	}
 
-	a:active {
-		border-bottom: solid rem(3) var(--active-color);
+	a:active,
+	a:active:hover,
+	a:active:focus {
+		background-color: var(--active-background-color);
+		border-bottom: 0;
+		color: var(--active-color);
+		margin-left: rem(-16);
+		margin-right: rem(-16);
+		padding-left: rem(16);
+		padding-right: rem(16);
 		text-decoration: none;
 	}
 
 	a:focus {
+		background-color: var(--focus-background-color);
 		border-bottom: 0;
 		margin-left: rem(-16);
 		margin-right: rem(-16);
 		padding-left: rem(16);
 		padding-right: rem(16);
-	}
-
-	a:active:focus {
-		border-bottom: solid rem(3) var(--active-color);
-		margin-left: 0;
-		margin-right: 0;
-		padding-left: 0;
-		padding-right: 0;
-		text-decoration: none;
 	}
 }

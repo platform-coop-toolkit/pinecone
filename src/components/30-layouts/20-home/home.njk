@@ -9,7 +9,7 @@
 	{% render '@search-form', {standAlone: true, modifier: 'inverse', placeholder: 'Search resource name, publisher, or topic…'}, true %}
 	{# TODO: Add saved searches. #}
 </section>
-<section class="home__browse">
+<section class="home__browse has-blue-500-background-color">
 	<h2>{{ browse.title }}</h2>
 	{% render '@link-list', {
 		standAlone: true,
@@ -40,7 +40,7 @@
 		true
 	%}
 	<p>
-		{% render '@link--default-inverse', {standAlone: true, href: '/browse-all', label: 'Browse all resources'}, true %}
+		{% render '@link--breadcrumb', {standAlone: true, href: '/browse-all', label: 'Browse all resources', className: 'link--breadcrumb link--inverse'}, true %}
 	</p>
 </section>
 <section class="home__feed">
