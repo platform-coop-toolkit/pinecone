@@ -8,7 +8,6 @@ module.exports = {
 		icon: false,
 		modifiers: false,
 		type: 'submit',
-		standAlone: false
 	},
 	'variants': [
 		{

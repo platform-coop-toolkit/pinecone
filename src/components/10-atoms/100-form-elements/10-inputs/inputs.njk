@@ -1,4 +1,3 @@
-{% if not standAlone %}<div class="spacer"></div>{% endif %}
 {% for input in inputs %}
-{% render '@input', {input:input, inverse:inverse}, true %}
+	{% render '@' + component, input, true %}
 {% endfor %}

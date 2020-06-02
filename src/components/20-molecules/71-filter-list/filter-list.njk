@@ -1,9 +1,8 @@
 {% if not standAlone %}
-<div class="spacer"></div>
 {% render '@button--borderless', {standAlone: true, id: 'show-filters'}, true %}
 <div class="filters">
 	{% render '@button--borderless-inverse', {standAlone: true, id: 'hide-filters', label: 'Close', iconPosition: 'end', icon: 'close'}, true %}
-	<form action="/">
+	<form class="form" action="/">
 	<h2 class="h1 screen-reader-text">Filters</h2>
 	<div class="accordion accordion--filter-list">
 {% endif %}
@@ -16,14 +15,10 @@
 					<li>
 						{% if term.children %}
 							{% set count = term.children.length %}
-							{% render '@checkbox', {label: term.label, value: term.label | slugify, name: term.label | slugify, standAlone: false, inverse: true}, true %}
+							{% render '@checkbox', {label: term.label, value: term.label | slugify, name: term.label | slugify, standAlone: false, inverse: true, className: 'input--parent'}, true %}
 							<span class="filter-disclosure-label" hidden>show {{ count }} subtopics for "{{ term.label }}"</span>
 							<span class="supplementary-label" hidden> (and {{ count }} subtopics)</span>
-							<ul class="input-group input-group__descendant">
-								{% for child in term.children %}
-								<li>{% render '@checkbox', {label: child, value: child | slugify, name: child | slugify, standAlone: false, inverse: true}, true %}</li>
-								{% endfor %}
-							</ul>
+							{% render '@checkboxes', {checkboxes: term.children, className: 'input-group__descendant'}, true %}
 						{% else %}
 							<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}">{{ term.label }}</label>
 						{% endif %}

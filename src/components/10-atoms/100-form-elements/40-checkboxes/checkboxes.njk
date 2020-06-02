@@ -1,8 +1,7 @@
-<ul class="input-group{% if inverse %} input-group--inverse{% endif %}{% if select.modifiers %}{% for modifier in select.modifiers %} input-group--{{ modifier }}{% endfor %}{% endif %}">
+<ul class="input-group checkbox{{ ' ' + className if className }}">
 	{% for checkbox in checkboxes %}
-	<li>{% render '@checkbox', checkbox, true %}</li>
+	<li>
+		{% render '@' + component, checkbox, true %}
+	</li>
 	{% endfor %}
 </ul>
-<script type="text/javascript">
-	document.getElementById('indeterminate').indeterminate = true;
-</script>

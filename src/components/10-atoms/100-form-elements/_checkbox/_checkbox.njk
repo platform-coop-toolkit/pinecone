@@ -1,4 +1,3 @@
-{% if standAlone %}<p{% if modifiers %} class="{% for modifier in modifiers %} input-group--{{ modifier }}{% endfor %}"{% endif %}>{% endif %}
-<input id="{{ name | slugify }}" type="checkbox" name="{{ name }}" value="{{ value }}"{% if checked %} checked{% endif %}{% if disabled %} disabled{% endif %} />
-<label for="{{ name | slugify }}">{{ label }}</label>
-{% if standAlone %}</p>{% endif %}
+<label for="{{ value if value else label | slugify }}">
+	<input {% if className %}class="{{ className }}"{% endif %} id="{{ value if value else label | slugify }}" type="checkbox" name="{{ name }}" value="{{ value if value else label | slugify }}"{{ ' checked' if checked }}{{ ' disabled' if disabled }} />{{ label }}
+</label>

@@ -1,0 +1,3 @@
+<label for="{{ value if value else label | slugify }}">
+	<input {% if className %}class="{{ className }}"{% endif %} id="{{ value if value else label | slugify }}" type="radio" name="{{ name }}" value="{{ value if value else label | slugify }}"{{ ' checked' if checked }}{{ ' disabled' if disabled }} />{{ label }}
+</label>

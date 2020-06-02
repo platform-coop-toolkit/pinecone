@@ -2,24 +2,21 @@ module.exports = {
 	title: 'Checkboxes',
 	status: 'ready',
 	context: {
-		standAlone: false,
+		component: 'checkbox',
 		checkboxes: [
 			{
-				name: 'unchecked',
+				name: 'checkboxes',
 				label: 'Initially unchecked',
-				standAlone: false
 			},
 			{
-				name: 'checked',
+				name: 'checkboxes',
 				label: 'Initially checked',
 				checked: true,
-				standAlone: false
 			},
 			{
-				name: 'disabled',
+				name: 'checkboxes',
 				label: 'Disabled checkbox',
 				disabled: true,
-				standAlone: false
 			}
 		]
 	},
@@ -30,7 +27,22 @@ module.exports = {
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color',
 				inverse: true,
-				modifiers: ['inverse']
+			}
+		},
+		{
+			name: 'Unwrapped ',
+			label: 'Unwrapped',
+			context: {
+				component: 'checkbox--unwrapped'
+			}
+		},
+		{
+			name: 'Unwrapped Inverse',
+			label: 'Unwrapped (Inverse)',
+			context: {
+				component: 'checkbox--unwrapped',
+				bodyClass: 'has-dark-mint-500-background-color',
+				inverse: true,
 			}
 		}
 	]

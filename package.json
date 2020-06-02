@@ -1,6 +1,6 @@
 {
   "name": "@platform-coop-toolkit/pinecone",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Styleguide and pattern library for the Platform Cooperativism Consortium and the Platform Co-op Resource Library.",
   "scripts": {
     "assets:development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -99,7 +99,7 @@
     "sass-loader": "^8.0.2",
     "standard-version": "^8.0.0",
     "stylelint": "^12.0.1",
-    "stylelint-config-wordpress": "^16.0.0",
+    "stylelint-config-wordpress": "^17.0.0",
     "stylelint-declaration-use-variable": "^1.7.2",
     "stylelint-order": "^4.0.0",
     "vue-template-compiler": "^2.6.11"

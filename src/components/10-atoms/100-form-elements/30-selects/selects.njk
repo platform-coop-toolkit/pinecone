@@ -1,4 +1,7 @@
-{% if not standAlone %}<div class="spacer"></div>{% endif %}
 {% for select in selects %}
-{% render '@select', {select:select, inverse:inverse}, true %}
+	{% if component %}
+		{% render '@' + component, {select: select, multiple: multiple}, true %}
+	{% else %}
+		{% render '@select', {select: select, multiple: multiple}, true %}
+	{% endif %}
 {% endfor %}

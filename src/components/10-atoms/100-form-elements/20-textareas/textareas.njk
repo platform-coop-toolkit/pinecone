@@ -1,4 +1,3 @@
-{% if not standAlone %}<div class="spacer"></div>{% endif %}
 {% for textarea in textareas %}
-{% render '@textarea', {textarea:textarea, inverse:inverse}, true %}
+	{% render '@' + component, textarea, true %}
 {% endfor%}

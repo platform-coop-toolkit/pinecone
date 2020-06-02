@@ -8,6 +8,8 @@ module.exports = {
 		description: 'Description for this text area.',
 		placeholder: 'Content goes here.',
 		errorMessage: 'Sorry, that appears to be incorrect.',
-		errorValue: 'Incorrect input'
+		errorValue: 'Incorrect input',
+		required: false,
+		value: ''
 	}
 };
