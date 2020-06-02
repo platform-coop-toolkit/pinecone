@@ -115,3 +115,8 @@ input[type="checkbox"]:disabled:active::before,
 	background: initial;
 	box-shadow: none;
 }
+
+.input-group__descendant {
+	margin-left: rem(10);
+	margin-top: rem(12);
+}

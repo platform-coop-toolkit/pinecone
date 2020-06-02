@@ -5,21 +5,18 @@ module.exports = {
 		standAlone: false,
 		checkboxes: [
 			{
-				name: 'unchecked',
+				name: 'checkboxes',
 				label: 'Initially unchecked',
-				standAlone: false
 			},
 			{
-				name: 'checked',
+				name: 'checkboxes',
 				label: 'Initially checked',
 				checked: true,
-				standAlone: false
 			},
 			{
-				name: 'disabled',
+				name: 'checkboxes',
 				label: 'Disabled checkbox',
 				disabled: true,
-				standAlone: false
 			}
 		]
 	},
@@ -30,7 +27,6 @@ module.exports = {
 			context: {
 				bodyClass: 'has-dark-mint-500-background-color',
 				inverse: true,
-				modifiers: ['inverse']
 			}
 		}
 	]

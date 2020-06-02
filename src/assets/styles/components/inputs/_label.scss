@@ -4,3 +4,11 @@ label {
 	font-weight: $font-weight-bold;
 	line-height: (24 / 16);
 }
+
+label[hidden] {
+	display: none;
+}
+
+.checkbox label {
+	font-weight: $font-weight-normal;
+}
