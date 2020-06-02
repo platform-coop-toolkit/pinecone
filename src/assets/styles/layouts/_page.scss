@@ -42,17 +42,24 @@
 		--background-color: transparent;
 		--border-color: transparent;
 		--color: var(--off-white);
-		--outline-color: var(--dark-mint-500);
+		--outline-color: var(--blue-500);
 		--hover-background-color: var(--background-color);
 		--hover-border-color: var(--border-color);
 		--hover-color: var(--white);
 		--visited-color: var(--blue-50);
-		--active-background-color: var(--background-color);
-		--active-border-color: var(--border-color);
-		--active-color: var(--blue-200);
-		--focus-background-color: var(--blue-200);
-		--focus-border-color: var(--border-color);
-		--focus-color: var(--dark-mint-500);
+		--active-background-color: var(--blue-200);
+		--active-border-color: var(--blue-200);
+		--active-box-shadow:
+			0 0 0 calc(1 * var(--border-width)) var(--active-border-color),
+			0 0 0 calc(3 * var(--border-width)) var(--outline-color),
+			0 0 0 calc(5 * var(--border-width)) var(--active-border-color);
+		--active-color: var(--blue-500);
+		--focus-background-color: var(--background-color);
+		--focus-border-color: var(--blue-200);
+		--focus-box-shadow:
+			0 0 0 calc(3 * var(--border-width)) var(--outline-color),
+			0 0 0 calc(5 * var(--border-width)) var(--focus-border-color);
+		--focus-color: var(--color);
 	}
 }
 
