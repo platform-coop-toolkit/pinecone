@@ -18,6 +18,7 @@ input[type="checkbox"] {
 .checkbox label,
 input[type="checkbox"] + label,
 [role="checkbox"] {
+	cursor: default;
 	font-weight: $font-weight-normal;
 }
 
