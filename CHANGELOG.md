@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.2](https://github.com/platform-coop-toolkit/pinecone/compare/1.0.0-beta.1...1.0.0-beta.2) (2020-06-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* add comprehensive Django support to inputs (#376)
+
+### Features
+
+* add comprehensive Django support to inputs ([#376](https://github.com/platform-coop-toolkit/pinecone/issues/376)) ([675b165](https://github.com/platform-coop-toolkit/pinecone/commit/675b165f8442a734a9e63130a36914a5b271354f))
+* add social icons (resolves [#269](https://github.com/platform-coop-toolkit/pinecone/issues/269)) ([#351](https://github.com/platform-coop-toolkit/pinecone/issues/351)) ([2e2be16](https://github.com/platform-coop-toolkit/pinecone/commit/2e2be16316ae0ed6d4b8aba3322a0ee3708166ae))
+* use appearance to style radio buttons and checkboxes ([#357](https://github.com/platform-coop-toolkit/pinecone/issues/357)) ([06d95df](https://github.com/platform-coop-toolkit/pinecone/commit/06d95df9218f4db7adc092568f34d82e81b3ed05))
+
 ## [1.0.0-beta.1](https://github.com/platform-coop-toolkit/pinecone/compare/1.0.0-alpha.14...1.0.0-beta.1) (2020-05-21)
 
 
