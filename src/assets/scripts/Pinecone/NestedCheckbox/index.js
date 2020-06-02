@@ -16,7 +16,7 @@ class NestedCheckbox {
 		this.inputId = this.input.id;
 		this.customCheckbox = false;
 		this.value = this.input.getAttribute( 'value' );
-		this.label = this.input.nextElementSibling;
+		this.label = this.container.querySelector( `label[for="${this.inputId}"]` );
 		this.subInputs = subInputs;
 		this.subGroup = this.container.querySelector( '.input-group__descendant' );
 		this.config = {
@@ -52,7 +52,7 @@ class NestedCheckbox {
 			supplementaryLabel.classList.add( 'screen-reader-text' );
 			supplementaryLabel.hidden = false;
 		}
-		this.input.parentNode.insertBefore( customCheckbox, this.input );
+		this.label.parentNode.insertBefore( customCheckbox, this.label );
 		this.input.classList.add( 'screen-reader-text' );
 		this.input.setAttribute( 'aria-hidden', 'true' );
 		this.label.hidden = true;

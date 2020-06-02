@@ -1,0 +1,16 @@
+label {
+	display: block;
+	font-family: $font-family-serif;
+	font-weight: $font-weight-bold;
+	line-height: (24 / 16);
+}
+
+label[hidden] {
+	display: none;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	display: inline-block;
+	margin-top: 0;
+}

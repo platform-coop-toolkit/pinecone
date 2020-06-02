@@ -1,0 +1,95 @@
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-image: url("../images/chevron-down.svg");
+	background-position: calc(100% - #{rem(8)}) center;
+	background-repeat: no-repeat;
+	background-size: 1.25em;
+	border: solid var(--border-width) transparent;
+	border-radius: rem(3.5);
+	box-shadow: var(--text-default-box-shadow);
+	display: block;
+	font-family: $font-family-serif;
+	font-size: rem(16);
+	height: rem(40);
+	line-height: (24 / 16);
+	line-height: normal;
+	max-width: 100%;
+	min-width: 50%;
+	outline: none;
+	padding: rem(6.5) rem(40) rem(6) rem(10);
+	transition: border 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
+	width: auto;
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	&::-moz-focus-inner {
+		outline: none;
+	}
+
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 var(--dark-mint-500);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}
+
+select[multiple] {
+	background-image: none;
+	height: auto;
+	padding: rem(10) rem(10) rem(7);
+}
+
+.form--inverse select {
+	border-color: var(--parent-background-color);
+}
+
+select.input--error {
+	background-image: url("../images/chevron-down--error.svg");
+	box-shadow: var(--text-error-box-shadow);
+	color: var(--text-value-color-error);
+
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 var(--text-value-color-error);
+	}
+}
+
+select.input--error[multiple] {
+	background-image: none;
+}
+
+select:hover {
+	box-shadow: var(--text-hover-box-shadow);
+}
+
+select:focus,
+select:focus:hover {
+	box-shadow: var(--text-focus-box-shadow);
+}
+
+select.input--error:hover {
+	box-shadow: var(--text-error-hover-box-shadow);
+}
+
+select.input--error:focus {
+	box-shadow: var(--text-error-focus-box-shadow);
+}
+
+select[disabled],
+select[disabled]:hover {
+	background-color: var(--text-background-color-disabled);
+	background-image: url("../images/chevron-down--disabled.svg");
+	box-shadow: var(--text-disabled-box-shadow);
+	color: var(--text-value-color-disabled);
+}
+
+select[multiple][disabled] {
+	background-image: none;
+}

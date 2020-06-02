@@ -73,6 +73,7 @@ class Dialog {
 			innerHtml += `<p id="q-${unique + 1}">${this.config.question}</p>`;
 		}
 		if ( this.config.input && this.config.inputLabel ) {
+			dialog.classList.add( 'form' );
 			innerHtml += '<div class="input-group">';
 			innerHtml += `<label for="${this.config.input}">${this.config.inputLabel}</label>`;
 			if ( this.config.inputDescription ) {

@@ -2,10 +2,10 @@ module.exports = {
 	title: 'Checkbox',
 	status: 'wip',
 	context: {
-		label: 'Checkbox',
-		value: 'checkbox',
+		label: 'Radio Button',
+		value: 'radiobutton',
 		name: 'name',
 		checked: false,
-		disabled: false
+		disabled: false,
 	}
 };

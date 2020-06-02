@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+		<script src="{{ '/scripts/pinecone.umd.js' | path }}"></script>
+		<script src="{{ '/scripts/pinecone.js' | path }}" defer></script>
+		<link rel="stylesheet" href="{{ '/styles/pinecone.css' | path }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | path }}">
+		<link rel="icon" href="{{ '/images/favicon.png' | path }}" >
+		<title>{{ _target.title }} | Pinecone</title>
+	</head>
+
+	<body{% if _target.context.bodyClass %} class="{{ _target.context.bodyClass }}"{% endif %}>
+		<div class="wrap container" role="document">
+      		<div class="content">
+				<main>
+					<form class="form{% if _target.context.inverse %} form--inverse{% endif %}" action="">
+						{{ yield | safe }}
+					</form>
+				</main>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,10 +1,10 @@
-<div class="input-group{% if inverse %} input-group--inverse{% endif %}{% if select.modifiers %}{% for modifier in select.modifiers %} input-group--{{ modifier }}{% endfor %}{% endif %}">
-	<label for="{{ select.name }}">{{ label }}{% if select.error %} (Error){% elseif select.disabled %} (Disabled){% endif %}</label>
-	<select id="{{ select.name }}" name="{{ select.name }}"{% if select.disabled %} disabled{% endif %}>
-		{% for value, label in options %}
+<div class="input-group">
+	<label for="{{ select.name }}">{{ select.label }}{{ ' (Required)' if select.required }}</label>
+	<select {% if select.error %}class="input--error"{% endif %} id="{{ select.name }}" name="{{ select.name }}"{{ ' multiple' if multiple }}{{ ' disabled' if select.disabled }}{{ ' required' if select.required }}>
+		{% for value, label in select.options %}
 		<option val="{{ value }}">{{ label | safe }}</option>
 		{% endfor %}
 	</select>
-	{% if select.error %}<p class="input-group__error">{% render '@svg', {svg: 'error'}, true %}{{ errorMessage | safe }}</p>{% endif %}
-	<p class="input-group__description">{{ description }}</p>
+	{% if select.error %}<p class="input-group__error">{% render '@svg', {svg: 'error'}, true %}{{ select.errorMessage | safe }}</p>{% endif %}
+	<p class="input-group__description">{{ select.description }}</p>
 </div>

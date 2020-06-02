@@ -44,9 +44,7 @@ if ( showFilters && hideFilters && filterContainer ) {
 const nestedCheckboxContainers = document.querySelectorAll( '.input-group__parent > li' );
 if ( 0 < nestedCheckboxContainers.length ) {
 	Array.prototype.forEach.call( nestedCheckboxContainers, container => {
-		const input = Array.prototype.filter.call( container.children, function ( child ) {
-			return child.matches( 'input' );
-		} ).shift();
+		const input = container.querySelector( '.input--parent' );
 		const subInputs = container.querySelectorAll( '.input-group__descendant input' );
 		if ( 0 < subInputs.length ) {
 			new Pinecone.NestedCheckbox( container, input, subInputs );

@@ -1,0 +1,8 @@
+<label for="{{ select.name }}">{{ select.label }}{{ ' (Required)' if select.required }}</label>
+<select {% if select.error %}class="input--error"{% endif %} id="{{ select.name }}" name="{{ select.name }}"{{ ' multiple' if multiple }}{{ ' disabled' if select.disabled }}{{ ' required' if select.required }}>
+	{% for value, label in select.options %}
+	<option val="{{ value }}">{{ label | safe }}</option>
+	{% endfor %}
+</select>
+{% if select.error %}<p class="input-group__error">{% render '@svg', {svg: 'error'}, true %}{{ select.errorMessage | safe }}</p>{% endif %}
+<span class="helptext">{{ select.description }}</span>
