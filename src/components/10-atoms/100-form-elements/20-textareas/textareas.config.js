@@ -11,12 +11,10 @@ module.exports = {
 			{
 				name: 'error',
 				error: true,
-				modifiers: ['error']
 			},
 			{
 				name: 'disabled',
 				disabled: true,
-				modifiers: ['disabled']
 			}
 		]
 	},

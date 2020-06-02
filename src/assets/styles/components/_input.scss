@@ -8,7 +8,7 @@
 	--text-border-color-error-hover: var(--red-500);
 	--text-border-color-error-focus: var(--red-500);
 
-	--text-value-color-disabled: var(--grey-400);
+	--text-value-color-disabled: var(--grey-500);
 	--text-value-color-error: var(--red-500);
 
 	--text-background-color-disabled: var(--grey-200);
@@ -104,6 +104,7 @@
 
 label + input,
 label + textarea,
+label + select,
 .input-group__error,
 * + .helptext {
 	margin-top: rem(12);
@@ -111,6 +112,7 @@ label + textarea,
 
 input + label,
 textarea + label,
+select + label,
 .helptext + label {
 	margin-top: rem(60);
 }
@@ -134,7 +136,6 @@ textarea + label,
 .input-group__error {
 	color: var(--input-group--error-color);
 	display: flex;
-
 	flex-direction: row;
 	font-family: $font-family-sans;
 	font-size: rem(14);

@@ -2,6 +2,10 @@ select {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
+	background-image: url("../images/chevron-down.svg");
+	background-position: calc(100% - #{rem(8)}) center;
+	background-repeat: no-repeat;
+	background-size: 1.25em;
 	border: solid var(--border-width) transparent;
 	border-radius: rem(3.5);
 	box-shadow: var(--text-default-box-shadow);
@@ -10,11 +14,13 @@ select {
 	font-size: rem(16);
 	height: rem(40);
 	line-height: (24 / 16);
-	max-width: rem(268);
+	line-height: normal;
+	max-width: 100%;
+	min-width: 50%;
 	outline: none;
-	padding: rem(10) rem(10) rem(7);
+	padding: rem(6.5) rem(40) rem(6) rem(10);
 	transition: border 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
-	width: 100%;
+	width: auto;
 
 	&::-ms-expand {
 		display: none;
@@ -26,7 +32,7 @@ select {
 
 	&:-moz-focusring {
 		color: transparent;
-		text-shadow: 0 0 0 var(--text-value-color-error);
+		text-shadow: 0 0 0 var(--dark-mint-500);
 	}
 
 	@media (prefers-reduced-motion: reduce) {
@@ -34,20 +40,18 @@ select {
 	}
 }
 
-select:not([multiple]) {
-	background-image: url("../images/chevron-down.svg");
-	background-position: calc(100% - #{rem(8)}) center;
-	background-repeat: no-repeat;
-	background-size: 1.25em;
-	line-height: normal;
-	padding: rem(6.5) rem(40) rem(6) rem(10);
+select[multiple] {
+	background-image: none;
+	height: auto;
+	padding: rem(10) rem(10) rem(7);
 }
 
-.input-group--inverse select {
+.form--inverse select {
 	border-color: var(--parent-background-color);
 }
 
-.input-group--error select {
+select.input--error {
+	background-image: url("../images/chevron-down--error.svg");
 	box-shadow: var(--text-error-box-shadow);
 	color: var(--text-value-color-error);
 
@@ -57,23 +61,35 @@ select:not([multiple]) {
 	}
 }
 
-select:not([multiple]):hover {
+select.input--error[multiple] {
+	background-image: none;
+}
+
+select:hover {
 	box-shadow: var(--text-hover-box-shadow);
 }
 
-select:not([multiple]):focus,
-select:not([multiple]):focus:hover {
+select:focus,
+select:focus:hover {
 	box-shadow: var(--text-focus-box-shadow);
 }
 
-.input-group--error select:not([multiple]):focus {
+select.input--error:hover {
+	box-shadow: var(--text-error-hover-box-shadow);
+}
+
+select.input--error:focus {
 	box-shadow: var(--text-error-focus-box-shadow);
 }
 
-select:not([multiple])[disabled],
-select:not([multiple])[disabled]:hover {
+select[disabled],
+select[disabled]:hover {
 	background-color: var(--text-background-color-disabled);
-	background-image: none;
+	background-image: url("../images/chevron-down--disabled.svg");
 	box-shadow: var(--text-disabled-box-shadow);
 	color: var(--text-value-color-disabled);
+}
+
+select[multiple][disabled] {
+	background-image: none;
 }

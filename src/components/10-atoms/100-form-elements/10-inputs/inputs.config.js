@@ -51,7 +51,6 @@ module.exports = {
 			{
 				name: 'disabled',
 				disabled: true,
-				modifiers: ['disabled']
 			}
 		]
 	},

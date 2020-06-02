@@ -35,7 +35,6 @@ input:hover {
 	box-shadow: var(--text-hover-box-shadow);
 }
 
-.input-group--error input,
 input.input--error {
 	box-shadow: var(--text-error-box-shadow);
 	color: var(--text-value-color-error);
@@ -53,12 +52,10 @@ input[disabled]:hover {
 	color: var(--text-value-color-disabled);
 }
 
-.input-group--error input:hover,
 input.input--error:hover {
 	box-shadow: var(--text-error-hover-box-shadow);
 }
 
-.input-group--error input:focus,
 input.input--error:focus {
 	box-shadow: var(--text-error-focus-box-shadow);
 }

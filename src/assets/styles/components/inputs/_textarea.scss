@@ -30,7 +30,6 @@ textarea:hover {
 	box-shadow: var(--text-hover-box-shadow);
 }
 
-.input-group--error textarea,
 textarea.input--error {
 	box-shadow: var(--text-error-box-shadow);
 	color: var(--text-value-color-error);
@@ -48,12 +47,10 @@ textarea[disabled]:hover {
 	color: var(--text-value-color-disabled);
 }
 
-.input-group--error textarea:hover,
 textarea.input--error:hover {
 	box-shadow: var(--text-error-hover-box-shadow);
 }
 
-.input-group--error textarea:focus,
 textarea.input--error:focus {
 	box-shadow: var(--text-error-focus-box-shadow);
 }

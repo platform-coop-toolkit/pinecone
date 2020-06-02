@@ -9,11 +9,14 @@ module.exports = {
 	title: 'Select',
 	status: 'wip',
 	context: {
-		label: 'Select',
-		name: 'select',
-		description: 'Description for this select input.',
-		errorMessage: 'Please make a selection.',
-		disabled: false,
-		options: optionData
+		select: {
+			label: 'Select',
+			name: 'select',
+			description: 'Description for this select input.',
+			errorMessage: 'Please make a selection.',
+			disabled: false,
+			options: optionData,
+			required: false
+		}
 	}
 };
