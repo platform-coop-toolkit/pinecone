@@ -10,7 +10,7 @@ li {
 }
 
 li::marker {
-	color: var(--grey-600);
+	color: var(--parent-color);
 }
 
 li + li {
