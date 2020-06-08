@@ -23,14 +23,18 @@
 	--outline-color: var(--white);
 	--hover-background-color: var(--grey-200);
 	--hover-color: var(--blue-500);
-	--active-background-color: var(--blue-50);
-	--active-color: var(--blue-500);
+	--active-background-color: var(--blue-700);
+	--active-border-color: var(--blue-700);
+	--active-box-shadow:
+		0 0 0 calc(2 * var(--border-width)) var(--outline-color),
+		0 0 0 calc(4 * var(--border-width)) var(--active-border-color);
+	--active-color: var(--white);
 	--focus-background-color: var(--grey-200);
 	--focus-border-color: var(--blue-500);
 	--focus-box-shadow:
-		0 0 0 var(--border-width) var(--blue-500) inset,
+		0 0 0 calc(2 * var(--border-width)) var(--focus-border-color) inset,
 		0 0 0 calc(2 * var(--border-width)) var(--outline-color),
-		0 0 0 calc(4 * var(--border-width)) var(--blue-500);
+		0 0 0 calc(4 * var(--border-width)) var(--focus-border-color);
 	--focus-color: var(--blue-500);
 
 	border-radius: rem(15);
