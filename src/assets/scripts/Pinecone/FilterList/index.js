@@ -74,7 +74,7 @@ class FilterList {
 	/**
 	 * Resize function.
 	 */
-	removeOverlay( timeout ) { // eslint-disable-line no-unused-vars
+	removeOverlay( timeout ) {
 		timeout = null;
 
 		const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -89,6 +89,8 @@ class FilterList {
 			this.showCtrl.parentNode.insertBefore( this.container, this.showCtrl.nextSibling );
 			document.body.classList.remove( 'has-modal' );
 		}
+
+		return timeout;
 	}
 
 	/**
