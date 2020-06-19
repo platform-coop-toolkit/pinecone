@@ -1,7 +1,7 @@
 .form {
 	--border-width: #{rem(1)};
 	--text-border-color-default: var(--grey-500);
-	--text-border-color-disabled: var(--grey-300);
+	--text-border-color-disabled: var(--grey-400);
 	--text-border-color-hover: var(--blue-500);
 	--text-border-color-focus: var(--blue-500);
 	--text-border-color-error: var(--red-500);
@@ -68,7 +68,7 @@
 	--text-value-color-disabled: var(--grey-500);
 	--text-value-color-error: var(--red-500);
 
-	--text-background-color-disabled: var(--grey-200);
+	--text-background-color-disabled: var(--grey-300);
 	--input-group--error-color: var(--red-200);
 
 	--text-focus-box-shadow:
