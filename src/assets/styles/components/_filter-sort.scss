@@ -33,6 +33,10 @@
 }
 
 .filters {
+	label {
+		font-weight: $font-weight-normal;
+	}
+
 	@include breakpoint-down(md) {
 		display: none;
 
