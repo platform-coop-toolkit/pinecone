@@ -63,6 +63,12 @@ module.exports = {
 					svg: 'delete',
 				},
 				{
+					svg: 'archive'
+				},
+				{
+					svg: 'notification'
+				},
+				{
 					svg: 'settings',
 				},
 				{
@@ -156,6 +162,9 @@ module.exports = {
 					svg: 'cooperative',
 				},
 				{
+					svg: 'converting'
+				},
+				{
 					svg: 'member'
 				},
 				{
@@ -180,10 +189,19 @@ module.exports = {
 					svg: 'researcher'
 				},
 				{
+					svg: 'language-small'
+				},
+				{
 					svg: 'pricing',
 				},
 				{
 					svg: 'licensing'
+				},
+				{
+					svg: 'sector-small'
+				},
+				{
+					svg: 'coop-type'
 				}
 			],
 			[
@@ -251,6 +269,11 @@ module.exports = {
 				{
 					svg: 'resources',
 					class: 'icon icon--resources icon--lg',
+					viewBox: '0 0 32 32',
+				},
+				{
+					svg: 'directory',
+					class: 'icon icon--directory icon--lg',
 					viewBox: '0 0 32 32',
 				},
 				{

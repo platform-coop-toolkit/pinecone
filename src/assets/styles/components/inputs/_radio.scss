@@ -33,6 +33,11 @@ input[type="radio"]::before {
 	}
 }
 
+input[type="radio"]:focus {
+	box-shadow: none;
+	outline: none;
+}
+
 input[type="radio"]::before:focus {
 	outline: none;
 }
@@ -40,7 +45,6 @@ input[type="radio"]::before:focus {
 input[type="radio"]:disabled + label {
 	color: var(--text-value-color-disabled);
 }
-
 
 input[type="radio"]:hover::before {
 	background-color: var(--checkbox-radio-focus-hover-background-color);
