@@ -1,9 +1,6 @@
 .cta {
 	@extend %interactive;
-
-	--visited-color: var(--off-white);
-	--visited-background-color: var(--blue-600);
-
+	
 	border-radius: rem(3);
 	display: block;
 	font-family: $font-family-sans;
@@ -22,11 +19,6 @@
 
 	svg {
 		margin-left: 0.25em;
-	}
-
-	&:visited {
-		background-color: var(--visited-background);
-		color: var(--visited-color);
 	}
 
 	&:hover,
@@ -58,5 +50,4 @@
 	--focus-box-shadow:
 		0 0 0 calc(1 * var(--border-width)) var(--parent-background-color),
 		0 0 0 calc(3 * var(--border-width)) var(--focus-border-color);
-	--visited-color: var(--blue-500);
 }
