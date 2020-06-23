@@ -1,6 +1,10 @@
 const slugify = require( 'slugify' );
 
 const terms = [
+	{label:'Bangladesh'},
+	{label:'Brazil'},
+	{label:'Canada'},
+	{label:'France'},
 	{
 		label: 'Cooperative essentials',
 		children: [
@@ -69,13 +73,15 @@ const terms = [
 
 terms.forEach( term => {
 	const name = slugify( term.label, { lower: true } );
-	term.children = term.children.map( child => {
-		return {
-			value: slugify( child, { lower: true } ),
-			label: child,
-			name
-		};
-	} );
+	if (term.children) {
+		term.children = term.children.map( child => {
+			return {
+				value: slugify( child, { lower: true } ),
+				label: child,
+				name
+			};
+		} );
+	}
 } );
 
 module.exports = {
