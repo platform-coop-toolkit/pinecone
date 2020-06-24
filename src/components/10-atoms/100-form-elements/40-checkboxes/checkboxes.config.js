@@ -6,18 +6,15 @@ module.exports = {
 		checkboxes: [
 			{
 				name: 'checkboxes',
-				value: 'Initially unchecked value',
 				label: 'Initially unchecked',
 			},
 			{
 				name: 'checkboxes',
-				value: 'Initially checked value',
 				label: 'Initially checked',
 				checked: true,
 			},
 			{
 				name: 'checkboxes',
-				value: 'Disabled checkbox value',
 				label: 'Disabled checkbox',
 				disabled: true,
 			}
