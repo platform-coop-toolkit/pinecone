@@ -1,7 +1,7 @@
 <ul class="input-group checkbox{{ ' ' + className if className }}">
 	{% for checkbox in checkboxes %}
 	<li>
-		{% render '@' + component, checkbox, true %}
+		{% render '@' + component, checkbox %}
 	</li>
 	{% endfor %}
 </ul>
