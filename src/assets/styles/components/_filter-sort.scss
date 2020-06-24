@@ -289,7 +289,8 @@
 }
 
 @include breakpoint-down(md) {
-	.filters {
+	.filters,
+	.filters .form {
 		--text-border-color-default: var(--grey-500);
 		--text-border-color-disabled: var(--grey-500);
 		--text-border-color-hover: var(--blue-300);
