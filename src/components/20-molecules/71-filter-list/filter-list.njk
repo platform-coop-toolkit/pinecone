@@ -20,7 +20,7 @@
 							<span class="supplementary-label" hidden> (and {{ count }} subtopics)</span>
 							{% render '@checkboxes', {checkboxes: term.children, className: 'input-group__descendant'}, true %}
 						{% else %}
-							<input type="checkbox" name="{{ label | slugify }}[]" id="{{ label | slugify }}-{{ term.label | slugify }}" value="{{ term.label | slugify }}"><label for="{{ label | slugify }}-{{ term.label | slugify }}">{{ term.label }}</label>
+							{% render '@checkbox', {label: term.label, value: term.label | slugify, name: term.label | slugify, standAlone: false}, true %}
 						{% endif %}
 					</li>
 					{% endfor %}

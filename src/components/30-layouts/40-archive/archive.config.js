@@ -126,23 +126,23 @@ module.exports = {
 					{
 						label: 'Build a co-op',
 						children: [
-							'Write bylaws',
-							'Build a business model',
-							'Establish a governance structure',
-							'Incorporate a co-op',
-							'Build a marketing plan',
-							'Pick a co-op type',
-							'Make decisions collaboratively'
+							{label: 'Write bylaws'},
+							{label: 'Build a business model'},
+							{label: 'Establish a governance structure'},
+							{label: 'Incorporate a co-op'},
+							{label: 'Build a marketing plan'},
+							{label: 'Pick a co-op type'},
+							{label: 'Make decisions collaboratively'}
 						]
 					},
 					{
 						label: 'Build a platform or protocol',
 						children: [
-							'Understand the design process',
-							'Design for privacy',
-							'Design for inclusion',
-							'Build accessible digital tools',
-							'Build open source software'
+							{label: 'Understand the design process'},
+							{label: 'Design for privacy'},
+							{label: 'Design for inclusion'},
+							{label: 'Build accessible digital tools'},
+							{label: 'Build open source software'}
 						]
 					},
 					{
@@ -159,65 +159,65 @@ module.exports = {
 					{
 						label: 'Cooperative essentials',
 						children: [
-							'Governance',
-							'Ownership',
-							'Cooperative best practices',
-							'Diversity and inclusion',
-							'Bylaws',
+							{label: 'Governance'},
+							{label: 'Ownership'},
+							{label: 'Cooperative best practices'},
+							{label: 'Diversity and inclusion'},
+							{label: 'Bylaws'},
 						]
 					},
 					{
 						label: 'Business operations',
 						children: [
-							'Human resources',
-							'Marketing',
-							'Social media',
-							'Incorporation',
-							'Business model',
-							'Income, benefits, and compensation'
+							{label: 'Human resources'},
+							{label: 'Marketing'},
+							{label: 'Social media'},
+							{label: 'Incorporation'},
+							{label: 'Business model'},
+							{label: 'Income, benefits, and compensation'}
 						]
 					},
 					{
 						label: 'Technology & Platforms',
 						children: [
-							'Software development',
-							'Platforms',
-							'Design',
-							'Free software',
-							'Data',
-							'Algorithms',
-							'Automation',
-							'Blockchain',
-							'Search engines'
+							{label:'Software development'},
+							{label:'Platforms'},
+							{label:'Design'},
+							{label:'Free software'},
+							{label:'Data'},
+							{label:'Algorithms'},
+							{label:'Automation'},
+							{label:'Blockchain'},
+							{label:'Search engines'}
 						]
 					},
 					{
 						label: 'Law & Policy',
 						children: [
-							'Anti-trust',
-							'Labor law',
-							'Policy',
-							'Co-op law'
+							{label: 'Anti-trust'},
+							{label: 'Labor law'},
+							{label: 'Policy'},
+							{label: 'Co-op law'}
 						]
 					},
 					{
 						label: 'Fair labour',
 						children: [
-							'Unions',
-							'Workplace safety',
-							'Social security',
+							{label: 'Unions'},
+							{label: 'Workplace safety'},
+							{label: 'Social security'},
 						]
 					},
 					{
 						label: 'Platform co-op theory',
 						children: [
-							'Platform cooperativism',
-							'Platform capitalism',
-							'Gig economy',
-							'Sharing economy',
-							'Solidarity economy',
-							'Information economy',
-							'Peer-to-peer'
+							{label: 'Platform cooperativism'},
+							{label: 'Platform capitalism'},
+							{label: 'Gig economy'},
+							{label: 'Sharing economy'},
+							{label: 'Solidarity economy'},
+							{label: 'Information economy'},
+							{label: 'Peer-to-peer'}
 						]
 					},
 				]
@@ -326,11 +326,11 @@ module.exports = {
 					{
 						label:'Technology',
 						children: [
-							'Electronics and computer manufacturing',
-							'Software and hardware enginereeing',
-							'Web service providers',
-							'Data processing',
-							'Misc technology'
+							{label: 'Electronics and computer manufacturing'},
+							{label: 'Software and hardware enginereeing'},
+							{label: 'Web service providers'},
+							{label: 'Data processing'},
+							{label: 'Misc technology'}
 						]
 					},
 					{

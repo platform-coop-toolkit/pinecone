@@ -1,9 +1,6 @@
 .cta {
 	@extend %interactive;
-
-	--visited-color: var(--off-white);
-	--visited-background-color: var(--blue-600);
-
+	
 	border-radius: rem(3);
 	display: block;
 	font-family: $font-family-sans;
@@ -24,11 +21,6 @@
 		margin-left: 0.25em;
 	}
 
-	&:visited {
-		background-color: var(--visited-background);
-		color: var(--visited-color);
-	}
-
 	&:hover,
 	&:active,
 	&:focus {
@@ -43,9 +35,19 @@
 	--color: var(--blue-500);
 	--outline-color: var(--blue-500);
 	--background-color: var(--off-white);
+	--hover-color: var(--color);
 	--hover-background-color: var(--blue-50);
-	--active-color: var(--blue-400);
-	--active-background-color: var(--background-color);
+	--active-color: var(--off-white);
+	--active-background-color: var(--parent-background-color);
+	--active-border-color: var(--off-white);
+	--active-box-shadow:
+		0 0 0 calc(2 * var(--border-width)) var(--active-border-color) inset,
+		0 0 0 calc(1 * var(--border-width)) var(--active-background-color),
+		0 0 0 calc(3 * var(--border-width)) var(--active-border-color);
 	--focus-background-color: var(--background-color);
 	--focus-color: var(--blue-500);
+	--focus-border-color: var(--background-color);
+	--focus-box-shadow:
+		0 0 0 calc(1 * var(--border-width)) var(--parent-background-color),
+		0 0 0 calc(3 * var(--border-width)) var(--focus-border-color);
 }

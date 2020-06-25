@@ -57,6 +57,15 @@
 		border-bottom: solid rem(3) var(--hover-underline-color);
 	}
 
+	a:focus {
+		background-color: var(--focus-background-color);
+		border-bottom: 0;
+		margin-left: rem(-16);
+		margin-right: rem(-16);
+		padding-left: rem(16);
+		padding-right: rem(16);
+	}
+
 	a:active,
 	a:active:hover,
 	a:active:focus {
@@ -68,14 +77,5 @@
 		padding-left: rem(16);
 		padding-right: rem(16);
 		text-decoration: none;
-	}
-
-	a:focus {
-		background-color: var(--focus-background-color);
-		border-bottom: 0;
-		margin-left: rem(-16);
-		margin-right: rem(-16);
-		padding-left: rem(16);
-		padding-right: rem(16);
 	}
 }

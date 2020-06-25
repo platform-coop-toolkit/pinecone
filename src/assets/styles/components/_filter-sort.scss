@@ -33,6 +33,10 @@
 }
 
 .filters {
+	label {
+		font-weight: $font-weight-normal;
+	}
+
 	@include breakpoint-down(md) {
 		display: none;
 
@@ -82,10 +86,13 @@
 			--border-width: #{rem(1)};
 			--color: var(--off-white);
 			--hover-color: var(--off-white);
-			--active-color: var(--white);
-			--focus-background-color: var(--blue-600);
-			--focus-box-shadow: none;
-			--focus-color: var(--color);
+			--hover-underline-color: var(--blue-300);
+			--active-color: var(--parent-background-color);
+			--active-background-color: var(--blue-200);
+			--active-border-color: var(--blue-200);
+			--focus-background-color: var(--parent-background-color);
+			--focus-border-color: var(--blue-200);
+			--focus-color: var(--off-white);
 
 			border-top-color: var(--dark-mint-500);
 			height: rem(69);
@@ -95,17 +102,49 @@
 			padding-right: $gutter;
 			width: calc(100% + 2 * #{$gutter});
 
+			--focus-box-shadow:
+				0 0 0 calc(3 * var(--border-width)) var(--focus-background-color) inset,
+				0 0 0 calc(5 * var(--border-width)) var(--focus-border-color) inset;
+
+			--active-box-shadow:
+				0 0 0 calc(3 * var(--border-width)) var(--parent-background-color) inset,
+				0 0 0 calc(5 * var(--border-width)) var(--active-border-color) inset,
+				0 0 0 calc(7 * var(--border-width)) var(--parent-background-color) inset;
+
 			svg {
 				margin-right: rem(7);
 			}
 
+			&:active,
+			&:focus {
+				border-top-color: var(--parent-background-color);
+			}
+
 			&:hover {
-				border-top-color: var(--dark-mint-500);
+				border-top-color: var(--hover-underline-color);
 
 				svg {
 					color: inherit;
 				}
+
+				&:active,
+				&:focus {
+					border-top-color: var(--parent-background-color);
+				}
 			}
+		}
+
+		.accordion__control[aria-expanded="true"]:active {
+			box-shadow: var(--active-box-shadow);
+		}
+
+		.accordion__control[aria-expanded="true"]:active:focus {
+			border-top-color: var(--parent-background-color);
+			margin-left: (-1 * $gutter);
+			margin-right: 0;
+			padding-left: $gutter;
+			padding-right: $gutter;
+			width: calc(100% + 2 * #{$gutter});
 		}
 
 		.accordion__control[aria-expanded="true"] + .accordion__content {
@@ -250,6 +289,7 @@
 }
 
 @include breakpoint-down(md) {
+	.filters,
 	.filters .form {
 		--text-border-color-default: var(--grey-500);
 		--text-border-color-disabled: var(--grey-500);
