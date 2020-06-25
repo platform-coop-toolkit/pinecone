@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.3](https://github.com/platform-coop-toolkit/pinecone/compare/1.0.0-beta.2...1.0.0-beta.3) (2020-06-25)
+
+
+### Features
+
+* add directory icons, rename some SVGs to reduce ambiguity ([#393](https://github.com/platform-coop-toolkit/pinecone/issues/393)) ([0233d96](https://github.com/platform-coop-toolkit/pinecone/commit/0233d96203eca625ebce8e602a52da9416715e0a))
+* updated breadcrumb styles and link styling ([#379](https://github.com/platform-coop-toolkit/pinecone/issues/379)) ([c2ed697](https://github.com/platform-coop-toolkit/pinecone/commit/c2ed697cfdb3830a797a06667bc849c7b61f11d4))
+
+
+### Bug Fixes
+
+* adjust disabled input border and background ([61d0cc7](https://github.com/platform-coop-toolkit/pinecone/commit/61d0cc7605694eeb451398c3b452b85d2a1a1321)), closes [#361](https://github.com/platform-coop-toolkit/pinecone/issues/361)
+* call-to-action, accordion, tags, and filter list state styling ([#380](https://github.com/platform-coop-toolkit/pinecone/issues/380)) ([08b017a](https://github.com/platform-coop-toolkit/pinecone/commit/08b017a93ba9aadd313a9b9853da46a35a32d4c4))
+* remove additional border on radio buttons (fix [#378](https://github.com/platform-coop-toolkit/pinecone/issues/378)) ([2c01ecd](https://github.com/platform-coop-toolkit/pinecone/commit/2c01ecdbc34d522560bf3e9b10ff0441fd6600fa))
+* remove unused variable ([308e763](https://github.com/platform-coop-toolkit/pinecone/commit/308e763ea8a78fc6dc209e84fde07ba86d2e823e))
+* replace small language icon ([abe5acb](https://github.com/platform-coop-toolkit/pinecone/commit/abe5acbe4b8eded19ba1eeed3fc7796ee342734a))
+* restore [#347](https://github.com/platform-coop-toolkit/pinecone/issues/347) to refactored checkboxes ([2326e76](https://github.com/platform-coop-toolkit/pinecone/commit/2326e7666e0202b00e67092c9929112f67886477))
+
 ## [1.0.0-beta.2](https://github.com/platform-coop-toolkit/pinecone/compare/1.0.0-beta.1...1.0.0-beta.2) (2020-06-02)
 
 
