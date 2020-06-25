@@ -11,6 +11,10 @@ input[type="checkbox"] {
 	width: auto;
 }
 
+[role="checkbox"] {
+	margin-right: rem(40);
+}
+
 [role="checkbox"] + input[type="checkbox"] {
 	display: none;
 }
