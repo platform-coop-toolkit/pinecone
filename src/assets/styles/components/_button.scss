@@ -153,7 +153,7 @@ button:-moz-focusring {
 	&[aria-pressed="true"],
 	&[aria-checked="true"] {
 		--color: var(--off-white);
-		--background-color: var(--blue-600);
+		--background-color: var(--blue-400);
 		--border-color: var(--background-color);
 
 		--focus-background-color: var(--background-color);

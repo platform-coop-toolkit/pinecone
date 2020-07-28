@@ -72,6 +72,7 @@
 	font-weight: $font-weight-bold;
 	height: rem(54);
 	line-height: normal;
+	margin: calc(2 * var(--border-width)) 0;
 	padding-bottom: rem(14);
 	padding-left: 0;
 	padding-right: 0;
